@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><![endif]-->
+<html>
+<head>
+	<title>会员中心</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=9,IE=10">
+	<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <script src="js/jquery-1.8.2.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <link rel="stylesheet" href="css/style.css"> 
+  <script type="text/javascript" src="js/myJs.js"></script>
+</head>
+<body>
+
+
+
+<!-- 整个容器 -->
+<div id="container">
+  <!-- 商标，搜索栏，购物车，电话 -->
+<div class="header">
+
+  <div class="topbor"><!-- 最顶部导航 -->
+    <div class="top">
+      <p>欢迎光临华大尚田[<a href="#">登录</a>/<a href="#">免费注册</a>]</p>
+      <ul>
+        <li><a href="#">首页</a></li>
+        <li><a href="#">收藏</a></li>
+        <li><a href="#">会员专区</a></li>
+      </ul>
+    </div>
+  </div> <!-- 最顶部导航结束 -->
+    <!-- 页面头部背景 -->
+    <div class="bg">
+      <button class="bg_button"></button>
+
+    </div>
+  <div class="head_one">
+        <div class="brand"></div>
+        <!-- 搜索栏 -->
+        <div class="searchdiv">
+          <form class="searchform" method="get"> 
+          <input class="search-submit" type="submit" value=""/>
+          <input id="search-input" class="search-input" type="text" name="" size="30px">
+          <input class="search-button" id="search-button" value="搜 索"></input>
+          </form>
+          <div id="hot_search">
+            <span>热门搜索：</span>
+            <span>小龙虾 蓝莓 虾 进口奶 进口肉 大枣</span>
+          </div>
+        </div>
+
+        <div class="tel"></div>
+  </div>
+      <div class="clear"></div>
+      <!-- 导航栏 -->
+      <div class="nav">
+        <div class="all_classify">
+          <a href="#">全部商品分类</a>
+          <img class="boult" src="images/boult.png"/>
+        </div>
+        <div class="navitem">
+          <ul >
+            <li class="navitem-first">
+              <a href="#">首页</a>
+          <span class="border"><img src="images/border.png" /></span>              
+            </li>
+            <li><a href="#">菜品选购</a>
+          <span class="border"><img src="images/border.png" /></span>
+            </li>
+
+            <li><a href="#">华农特产</a>
+          <span class="border"><img src="images/border.png" /></span>            
+            </li>
+
+            <li><a href="#">礼品专区</a>
+          <span class="border"><img src="images/border.png" /></span>
+            </li>
+
+            <li><a href="#">会员专区</a>
+          <span class="border"><img src="images/border.png" /></span>
+            </li>
+           
+            <li><a href="#">生产基地</a>
+          <span class="border"><img src="images/border.png" /></span>
+            </li>
+
+            <li><a href="#">公司介绍</a>
+          <span class="border"><img src="images/border.png" /></span>
+            </li>
+
+            <li><a href="#">蔬菜百科</a>
+          <span class="border"><img src="images/border.png" /></span>
+            </li>
+          </ul>
+        </div>
+      </div>    <!-- end nav   --> 
+</div><!-- header部分 -->
+<!-- 内容区域 -->
+<div id="content">
+
+
+       <!-- 以下"全部商品分类部分，在首页中显示，在其它页中鼠标滑过才显示" -->
+      <div id="list_menu" class="no-mainpage">
+        <div id="YMenu">
+             <div id="YMenu-side">       
+                  <ul class="YM-mainmnu">
+                    <li class="YM-Tab">               
+                      <a href="#">大家电</a>
+                        <span><img src="images/expand.png"/></span>
+                        <ul class="YM-submnu">
+                             <li><a href="#1">洗衣机</a></li>
+                             <li><a href="#1">平板电视</a></li>
+                             <li><a href="#1">电热水器</a></li>
+                             <li><a href="#1">家庭音响</a></li>
+                             <li><a href="#1">燃气热水器</a></li>
+                               <li><a href="#1">空调</a></li>
+                             <li><a href="#1">冰箱冷柜</a></li>
+                             <li><a href="#1">DVD播放器</a></li>
+                             <li><a href="#1">电视附件</a></li>
+                             <li><a href="#1">家电服务</a></li>
+                             <li><a href="#1">家电下乡</a></li>
+                        </ul> 
+                    </li>
+
+                      <li class="YM-Tab">               
+                      <a href="#">大家电</a>
+                        <span><img src="images/expand.png"/></span>
+                        <ul class="YM-submnu">
+                             <li><a href="#1">洗衣机</a></li>
+                             <li><a href="#1">平板电视</a></li>
+                             <li><a href="#1">电热水器</a></li>
+                             <li><a href="#1">家庭音响</a></li>
+                             <li><a href="#1">燃气热水器</a></li>
+                               <li><a href="#1">空调</a></li>
+                             <li><a href="#1">冰箱冷柜</a></li>
+                             <li><a href="#1">DVD播放器</a></li>
+                             <li><a href="#1">电视附件</a></li>
+                             <li><a href="#1">家电服务</a></li>
+                             <li><a href="#1">家电下乡</a></li>
+                        </ul> 
+                     </li>
+
+                       <li class="YM-Tab">               
+                      <a href="#">大家电</a>
+                        <span><img src="images/expand.png"/></span>
+                        <ul class="YM-submnu">
+                             <li><a href="#1">洗衣机</a></li>
+                             <li><a href="#1">平板电视</a></li>
+                             <li><a href="#1">电热水器</a></li>
+                             <li><a href="#1">家庭音响</a></li>
+                             <li><a href="#1">燃气热水器</a></li>
+                               <li><a href="#1">空调</a></li>
+                             <li><a href="#1">冰箱冷柜</a></li>
+                             <li><a href="#1">DVD播放器</a></li>
+                             <li><a href="#1">电视附件</a></li>
+                             <li><a href="#1">家电服务</a></li>
+                             <li><a href="#1">家电下乡</a></li>
+                        </ul> 
+                     </li>
+
+                      <li class="YM-Tab">               
+                      <a href="#">大家电</a>
+                        <span><img src="images/expand.png"/></span>
+                        <ul class="YM-submnu">
+                             <li><a href="#1">洗衣机</a></li>
+                             <li><a href="#1">平板电视</a></li>
+                             <li><a href="#1">电热水器</a></li>
+                             <li><a href="#1">家庭音响</a></li>
+                             <li><a href="#1">燃气热水器</a></li>
+                               <li><a href="#1">空调</a></li>
+                             <li><a href="#1">冰箱冷柜</a></li>
+                             <li><a href="#1">DVD播放器</a></li>
+                             <li><a href="#1">电视附件</a></li>
+                             <li><a href="#1">家电服务</a></li>
+                             <li><a href="#1">家电下乡</a></li>
+                        </ul> 
+                     </li> 
+
+                       <li class="YM-Tab">               
+                      <a href="#">大家电</a>
+                        <span><img src="images/expand.png"/></span>
+                        <ul class="YM-submnu">
+                             <li><a href="#1">洗衣机</a></li>
+                             <li><a href="#1">平板电视</a></li>
+                             <li><a href="#1">电热水器</a></li>
+                             <li><a href="#1">家庭音响</a></li>
+                             <li><a href="#1">燃气热水器</a></li>
+                               <li><a href="#1">空调</a></li>
+                             <li><a href="#1">冰箱冷柜</a></li>
+                             <li><a href="#1">DVD播放器</a></li>
+                             <li><a href="#1">电视附件</a></li>
+                             <li><a href="#1">家电服务</a></li>
+                             <li><a href="#1">家电下乡</a></li>
+                        </ul> 
+                     </li> 
+
+                       <li class="YM-Tab">               
+                      <a href="#">大家电</a>
+                        <span><img src="images/expand.png"/></span>
+                        <ul class="YM-submnu">
+                             <li><a href="#1">洗衣机</a></li>
+                             <li><a href="#1">平板电视</a></li>
+                             <li><a href="#1">电热水器</a></li>
+                             <li><a href="#1">家庭音响</a></li>
+                             <li><a href="#1">燃气热水器</a></li>
+                               <li><a href="#1">空调</a></li>
+                             <li><a href="#1">冰箱冷柜</a></li>
+                             <li><a href="#1">DVD播放器</a></li>
+                             <li><a href="#1">电视附件</a></li>
+                             <li><a href="#1">家电服务</a></li>
+                             <li><a href="#1">家电下乡</a></li>
+                        </ul> 
+                     </li> 
+
+                      <li class="YM-Tab">               
+                      <a href="#">大家电</a>
+                        <span><img src="images/expand.png"/></span>
+                        <ul class="YM-submnu">
+                             <li><a href="#1">洗衣机</a></li>
+                             <li><a href="#1">平板电视</a></li>
+                             <li><a href="#1">电热水器</a></li>
+                             <li><a href="#1">家庭音响</a></li>
+                             <li><a href="#1">燃气热水器</a></li>
+                               <li><a href="#1">空调</a></li>
+                             <li><a href="#1">冰箱冷柜</a></li>
+                             <li><a href="#1">DVD播放器</a></li>
+                             <li><a href="#1">电视附件</a></li>
+                             <li><a href="#1">家电服务</a></li>
+                             <li><a href="#1">家电下乡</a></li>
+                        </ul> 
+                     </li>      
+                                              
+                 </ul>     
+            </div>   
+        </div>
+      </div>  <!-- end .list_menu --><!-- 此部分在首页固定，在其它页面鼠标滑过时出现 -->
+
+
+ 
+
+      <div class="breadcrumb">
+        <div><img src="images/house.png" /></div>
+        <a href="#">首页</a>
+        &gt;
+        <a href="#">会员专区</a>
+        &gt;
+        <a href="#">新手教程</a>
+      </div>
+
+      <!-- 个人中心和新手教程 -->
+      <div class="center_course">
+        <div class="per_center">
+          <h2>个人中心</h2>
+          <div class="current">
+            <h4>配送方式</h4>
+            <ul>
+              <li><a href="#">自营全程冷链配送</a></li>
+              <li><a href="#">配送范围、运费</a></li>
+              <li><a href="#">先验货后付款</a></li>
+            </ul>
+          </div>
+          <div class="current">
+            <h4>其它方式</h4>
+            <ul>
+              <li><a href="#">新手教程送</a></li>
+              <li><a href="#">配送范围、运费</a></li>
+              <li><a href="#">先验货后付款</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="new_course">
+          <h1>新手教程</h1>
+          <span class="new_course_underline"></span>
+          <div class="inner_text">
+            <h3>一、积分种类</h3>
+            <p>沱沱工社账户积分分为消费积分和行为积分两种：</p>
+             <p>1、消费积分：通过在沱沱工社网站上购物消费，获得的积分为消费积分。</p>
+             <p>2、行为积分：通过在沱沱工社网站购物后，对所购买的商品进行评论，晒单；或参加相关活动所赠送积分。</p>
+             <p>&nbsp;</p>
+            <h3>二、积分的获取和使用</h3>
+            <p>1、如何获得消费积分</p>
+             <p>1）当您订单完成交易后，相应的消费金额（不包含运费）会成为您的消费积分，在会员的个人中心/我的积分查询相应消费积分。</p>
+             <p>2）人民币1元积1分，积分如计算后出现小数点，将自动取用整数，不满1元的部分将不赠送消费积分。</p>
+             <p>3）购买礼品卡、宅配卡、提货券、采摘券消费金额不计入消费积分。</p>
+            <p>2、如何获得积分</p>
+             <p>1）评论积分：当您成功发表1条商品评论，即赠送10分评论积分。</p>
+             <p>A）所有评价一律由系统自动赠送积分。只能对在180天内购买的商品进行评价，赠品可参与评价并赠送积分。</p>
+             <p>B）根据订单购买商品进行评论，同此购买不同商品分别评论时，分别奖励积分；同张订单购买多个，只能评论一次。</p>
+             <p>2、晒单积分（即将上线）：通过晒单贴向其他网友分享所购商品的购物经历、使用心得、真是照片等，通过审核后可获得50个积分奖励；晒单贴须包含一定的介绍文字及三张以上真实拍摄的原创商品照片；一件商品购买多个只能发表一个晒单贴。</p>
+             <p>3）推荐好友积分：推荐好友成功注册后，且好友完成了第一个有效订单，7个工作日内推荐者即可获赠奖励100积分</p>
+
+             <p>&nbsp;</p>
+            <h3>三、积分使用规则</h3>
+             <p>1）消费积分和评论积分均不得进行任何转让，不同账户积分不可合并使用。</p>
+             <p>2）消费积分和评论积分不能抵运费，不能直接兑换现金。</p>
+             <p>3）消费积分和评论积分可直接兑换沱沱公社优惠券；也可进入兑换平台兑换其他商家提供的各种优惠产品。</p>
+             <p>4）使用积分兑换的优惠券，请切记优惠券的有效期，并在有效期内使用；优惠券每张订单可使用1张，与其他优惠券不能同时使用，优惠券仅限本ID使用，也不能再次兑换积分。</p>
+             <p>5）消费积分和评论积分可参加直接兑换沱沱公社提供的商品。</p>
+             <p>6）您所兑换的商品部支持直接退货；积分商品如因质量问题当场拒收时（需整单拒收），会自动返还所消耗的兑换积分。</p>
+             <p>7）积分政策从2013年9月7日零点生效，会员账户之前的积分也将迁入新的积分账户。</p>
+             <p>8）沱沱公社对积分使用有最终解释权。</p>
+              <p>&nbsp;</p>
+               <p>&nbsp;</p>
+          </div>
+        </div>
+      </div>
+  <!-- 会员页面    冰、升 -->
+</div>
+<!-- 内容区域结束 -->
+<!-- 页脚部分 -->
+<div id="footer">
+  <div class="cwidth h-center teleg">
+    <div class="column icon_g1">
+    <h3>关于我们</h3>
+    <ul>
+      <li><a href="#">关于华大尚田</a></li>
+	  <li><a href="#">公司架构</a></li>
+	  <li><a href="#">生产基地</a></li>
+	  <li><a href="#">招贤纳士</a></li>
+    </ul>
+  </div>
+    <div class="column icon_g2">
+    <h3>新手教程</h3>
+    <ul>
+      <li><a href="#">新手教程</a></li>
+      <li><a href="#">购物流程</a></li>
+      <li><a href="#">注册登录</a></li>
+      <li><a href="#">账户充值</a></li>
+      <li><a href="#">如何提货</a></li>
+      <li><a href="#">会员政策</a></li>
+    </ul>
+  </div>
+  <div class="column icon_g3">
+    <h3>配送方式</h3>
+    <ul>
+      <li><a href="#">自营全程冷链配送</a></li>
+      <li><a href="#">配送范围</a></li>
+      <li><a href="#">运送标准</a></li>      
+    </ul>
+  </div>
+  <div class="column icon_g4">
+    <h3>支付方式</h3>
+    <ul>
+      <li><a href="#">货到付款</a></li>
+      <li><a href="#">在线支付</a></li>
+      <li><a href="#">账户余额支付</a></li>
+      <li><a href="#">雅高E卡</a></li>
+      <li><a href="#">多种福利卡</a></li>
+    </ul>
+  </div>
+  <div class="column icon_g5">
+    <h3>售后服务</h3>
+    <ul>
+      <li><a href="#">退换货政策</a></li>
+      <li><a href="#">退换货流程</a></li>
+      <li><a href="#">退款</a></li>
+      <li><a href="#">投诉建议</a></li>
+    </ul>
+  </div>
+   <div class="column icon_g6">
+    <h3>帮助信息</h3>
+    <ul>
+      <li><a href="#">安全食品购物指南</a></li>
+      <li><a href="#">常见问题</a></li>
+      <li><a href="#">电子优惠券的使用</a></li>
+      <li><a href="#">礼品卡</a></li>
+    </ul>
+  </div>
+</div>
+
+<div id="powered">
+Copyright © 广州新富农农业科技有限公司
+<br>
+地址：广州市天河区五山华南农业大学信息学院936室 邮编：510642 联系方式：85280321 粤ICP备13088624号-2
+</div>
+</div>
+<!-- 页脚部分结束 -->
+
+
+</div>
+
+<!-- 整个容器部分结束 -->
+</body>
+</html>

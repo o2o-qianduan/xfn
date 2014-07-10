@@ -1,0 +1,140 @@
+/************************新闻资讯修改Jquery插件tabs样式部分*****june**********/
+.tabs{
+	border: none;
+}
+
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus { 
+	border: none;
+	background: none;
+	color: #ffffff;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default { 
+	border: none;
+	background: none;
+}
+.ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl { -moz-border-radius-topleft: 0px/*{cornerRadius}*/; -webkit-border-top-left-radius: 0px/*{cornerRadius}*/; -khtml-border-top-left-radius: 0px/*{cornerRadius}*/; border-top-left-radius: 0px/*{cornerRadius}*/; }
+.ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr { -moz-border-radius-topright: 0px/*{cornerRadius}*/; -webkit-border-top-right-radius: 0px/*{cornerRadius}*/; -khtml-border-top-right-radius: 0px/*{cornerRadius}*/; border-top-right-radius: 0px/*{cornerRadius}*/; }
+.ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl { -moz-border-radius-bottomleft: 0px/*{cornerRadius}*/; -webkit-border-bottom-left-radius: 0px/*{cornerRadius}*/; -khtml-border-bottom-left-radius: 0px/*{cornerRadius}*/; border-bottom-left-radius: 0px/*{cornerRadius}*/; }
+.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br { -moz-border-radius-bottomright: 0px/*{cornerRadius}*/; -webkit-border-bottom-right-radius: 0px/*{cornerRadius}*/; -khtml-border-bottom-right-radius: 0px/*{cornerRadius}*/; border-bottom-right-radius: 0px/*{cornerRadius}*/; }
+.ui-widget-content { border:none/*{borderColorContent}*/; background: #ffffff/*{bgColorContent}*/ url(images/ui-bg_flat_75_ffffff_40x100.png)/*{bgImgUrlContent}*/ 50%/*{bgContentXPos}*/ 50%/*{bgContentYPos}*/ repeat-x/*{bgContentRepeat}*/;  }
+.ui-widget-content a { color: #ffffff/*{fcContent}*/; }
+.ui-widget-header { border:none/*{borderColorHeader}*/; background: #cccccc/*{bgColorHeader}*/ url(images/ui-bg_highlight-soft_75_cccccc_1x100.png)/*{bgImgUrlHeader}*/ 50%/*{bgHeaderXPos}*/ 50%/*{bgHeaderYPos}*/ repeat-x/*{bgHeaderRepeat}*/; color: #ffffff/*{fcHeader}*/; font-weight: bold; }
+.ui-widget-header a { color: #ffffff/*{fcHeader}*/; }
+.tabs-list{
+	background: repeat-x scroll center top #60b800;
+	font-family: "新宋体";
+    font-size: 14px;
+    font-weight: bold;
+    padding-left: 5px ;
+}
+	 
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active { 
+	border: none;
+	background: repeat-x scroll center top #ffffff;
+}
+.ui-tabs .ui-tabs-nav li a {
+    float: left;
+    text-decoration: none;
+    font-family: "新宋体";
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+}
+.ui-tabs-nav li.ui-tabs-active a{
+	color: #000000;
+}
+.tab a{
+	color:#ffffff;
+	padding:5px 15px;
+}
+.ui-tabs .ui-tabs-nav li {
+    border-bottom: 0 none;
+    float: left;
+    list-style: none outside none;
+    margin: 1px 3px 0 10px;
+    padding: 0;
+    position: relative;
+    top: 0;
+    white-space: nowrap;
+}
+.tab-more{
+	float: right;
+	padding-top:5px;
+	padding-right: 5px;
+}
+/**************新闻资讯修改Jquery插件tabs样式部分结束**************june****************/
+
+
+/******************************特惠专区、新鲜蔬菜部分修改Jquery插件tabs样式**************june***************/
+.shelf-02-right{
+	background: none;
+	font-family: "微软雅黑";
+    font-size: 16px;
+    padding-left: 5px ; 
+    width: 975px;
+	float: left;
+	top: 0px;
+	margin-left: 200px;
+	display: block;
+	position: absolute; 
+/*	clear: both;*/
+}
+
+.tabBox {
+	position: relative;
+	margin-left: 0px;
+	display: block;
+	height: 30px;
+	line-height: 30px;
+}
+.shelf-02-tab .tabBox li {
+	float: left;
+	width: 196px;
+	text-align: center;
+}
+
+
+.tab-0,.tab-1 {
+	display: none;
+	border:1px solid #bebebe;
+	border-top: 1px solid #77be22; 
+	width: 100%;
+	top: 0px;
+	position: relative;
+}
+
+.tabOption a{
+	text-decoration: none;
+	color: #4b4b4b;
+	width: 100%;
+}
+
+.thzq,.xxsc{
+	text-align: center;
+}
+.tabOn0,.tabOn1  {
+	background: repeat-x scroll center top #e0f8c3;
+}
+
+.sbox{
+	width: 194px;
+	height: 357px;
+	float: left;
+	border-right:1px solid #bebebe;
+	border-bottom:1px solid #bebebe;
+}
+.s0-01-img{
+	margin: 7px;
+	float: left;
+	
+}
+.s0-01-img img{
+	width: 180px;
+	height: 180px;
+}
+.tabOn-0,.tabOn-1{
+	display: block;
+}
+/******************************特惠专区、新鲜蔬菜部分修改Jquery插件tabs样式结束************june***************/
+
+

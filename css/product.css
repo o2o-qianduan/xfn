@@ -1,0 +1,400 @@
+.product{
+	height: 653px;
+	margin-top: 20px;
+
+}
+.left_banner{
+	float: left;
+}
+.left_product{
+	width: 960px;
+	height: 653px;
+	background-color: #F5F5F5;
+	margin-right: 5px;
+	float: left;
+}
+
+img#left_picture {
+	margin: 10px 0 0 10px;
+}
+
+.small_list{
+	position: relative;
+	margin-left: 10px;
+	margin-top: 21px;
+	width: 400px;
+}
+.small_ctrl{
+	top: 0px;
+	background-color: #fff;
+	width:12px;
+	height: 61px;
+	border:1px solid #E1E1E1;
+	position: absolute;
+	z-index: 1;
+	cursor: pointer;
+}
+#prev_small{
+	left: 0px;
+}
+#next_small{
+	right: 0px;
+}
+
+#prev_small b,#next_small b{
+	display: block;
+	width: 4px;
+	height: 7px;
+	margin: 25px auto 0;
+
+}
+#prev_small b{
+	background: url(../images/prev2.png) no-repeat;
+}
+#next_small b{
+	background: url(../images/next2.png) no-repeat;
+}
+.pic_carousel{
+	width: 370px;
+	height: 61px;
+	background-color: green;
+}
+
+.bottom_link{
+	margin: 49px 0 0 26px;
+}
+
+.bottom_link a{
+	text-decoration: none;
+	color: #000;
+	font-family: "宋体" "MicroSoft YeHei";	
+}
+.center_state{
+	float: left;
+}
+.center_state h3{
+	padding: 16px 0 10px 14px;
+	font-size: 19px;
+	font-family: "MicroSoft YeHei";
+}
+
+.center_state p{
+	padding-left: 14px;
+	line-height: 20px;
+	font-family: "宋体" "MicroSoft YeHei";
+	font-size: 12px;
+	color: #666; 
+}
+
+.price_place{
+	width: 548px;
+	height: 104px;
+	background-color: #008C1A;
+	margin-top: 17px;
+}
+.price{
+	height: 76px;
+	width: 548px;
+	background: url(../images/price_bg.png) no-repeat;
+}
+
+.p-price{
+	height: 52px;
+}
+
+.price #cuxiao{
+	padding: 23px 18px 0 24px;
+	color: #fff;
+	float: left;
+}
+
+#price2 {
+	font-size: 36px;
+	color: #fff;
+	font-weight: bold;
+	font-family: Arial;
+	margin-top: 18px;
+	width: 128px;
+	height: 29px;
+	float: left;
+}
+
+#one_price{
+	color: #D4F9DB;
+	margin-left: 82px;
+
+}
+#activity_price{
+	background: url(../images/activity_price.png) no-repeat;
+	width: 57px;
+	height: 20px;
+	color: #626262;
+	display: block;
+	float: right;
+	text-align: center;
+	margin:11px 270px 0 0 ;
+}
+.place{
+	margin-left: 82px;
+	
+}
+.place p{
+	color: #fff;
+	line-height: 28px;
+}
+img.o-place {
+	cursor: pointer;
+	margin-right: 3px;
+}
+.detail{
+	margin-left: 9px;
+	margin-right: 2px;
+}
+.myfont{
+	font-family: "宋体" "MicroSoft Yahei";
+	font-size: 12px;
+}
+.weight{
+	height: 36px;
+	border-bottom: 1px solid #DADADA;
+}
+.weight p{
+	line-height:36px;
+
+}
+
+.detail_info{
+	height: 83px;
+	border-bottom: 1px solid #DADADA;
+}
+.detail_info div{
+	float: left;
+	margin-top: 24px;
+}
+.info1{
+	margin-left: 72px;
+}
+.info2,.info3{
+	margin-left: 100px;
+}
+.info1 .num1{
+	color: #1790D6;
+	font-size: 18px;
+	font-family: "MicroSoft Yahei";
+}
+.info2 .num2{
+	color: #D9A929;
+	font-size: 18px;
+	font-family: "MicroSoft Yahei";
+}
+.info3 .num3{
+	color: #009933;
+	font-size: 18px;
+	font-family: "MicroSoft Yahei";
+}
+/*数量*/
+.account{
+	height: 62px;
+	border-bottom: 1px solid #DADADA;
+}
+.account p{
+	line-height: 62px;
+	float: left;
+}
+.shopping_button{
+	height: 94px;
+	border-bottom: 1px solid #DADADA;
+}
+.shopping_button a{
+	text-decoration: none;
+	color: #fff;
+	display: block;
+	width: 164px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	float: left;
+	border-radius:2px;
+}
+.buy_btn{
+	background-color: #64B800;
+	margin: 32px 0 0 94px;
+}
+.cart_btn{
+	background-color: #FF6600;
+	margin: 32px 0 0 20px;
+}
+.promise p{
+	padding-top: 11px;
+	float: left;
+}
+.promise .afford_way{
+	float: right;
+	padding-right: 32px;
+}
+/*右边小产品图*/
+.right_product{
+	width: 215px;
+	height: 653px;
+	float: left;
+	background-color: #F5F5F5;
+}
+.recommend{
+	height: 27px;
+	margin-bottom: 28px;
+	border-bottom: 1px solid #C7C7C7;
+}
+.recommend p{
+	position: relative;
+	background-color: #F5F5F5;
+	font-size: 14px;
+	font-family: "MicroSoft YeHei";
+	color: #7D7D7D;
+	top: 19px;
+	left: 65px;
+	width: 84px;
+}
+.pro ul{
+	margin: 0 37px 0 38px;
+}
+img{border:0;}
+
+.pro ul li+li{
+	margin-top: 30px;
+}
+.btn{
+	height: 32px;
+	width: 215px;
+	margin: 17px 0 20px 60px;
+	overflow: hidden;
+
+}
+
+.btn a{
+	margin-right: 30px;
+	display: block;
+	float: left;
+
+}
+
+/*更多商品*/
+.more_pro{
+	height: 40px;
+	border-top: 1px dashed #BBB;
+}
+
+.more_pro a{
+	display: block;
+	float: right;
+	padding-right: 15px;
+	padding-top: 10px;
+	background: url(../images/triangle.png) no-repeat scroll 59px 14px;
+	font-family: "MicroSoft YeHei";
+	font-size: 14px;
+	color: #666;
+	text-decoration: none;
+}
+
+/*搭配套餐*/
+.combo{
+	margin-top: 10px;
+	width: 1180px;
+	height: 330px;
+	border:1px solid #eee;
+}
+.main{
+	/*background-color: #eee;*/
+	margin-top:10px;
+	width:1182px;
+	height:1500px;
+}
+.left_list{
+	float:left;
+	height:485px;
+	width:210px;
+	margin-bottom: 10px;
+	border:1px solid #dfdfdf;
+	background-color: #fff;
+}
+.list_title{
+	background:#f2f2f2;
+	font-size:14px;
+	font-family:宋体;
+	font-weight:bold;
+	color:#4a4a4a;
+/*	height:40px;*/
+	padding-left: 10px;
+	padding-top: 13px;
+	padding-bottom: 13px;
+}
+.pro_detail{
+	float:right;
+	height:1370px;
+	width:960px;
+	background-color: #fff;
+	border:1px solid #dfdfdf;
+}
+.list_content{
+	height:8 0px;
+	border-bottom: 1px dotted #ebebeb;
+	display: block;
+	padding: 7px 0;
+	overflow: hidden;
+}
+
+.content_icon{
+	margin-left: 10px;
+	display: inline-block;
+	position: relative;
+}
+.pro_click{
+	display: inline-block;
+	line-height: 20px;
+	position: relative;
+	width: 135px;
+}
+.pro_click a{
+	text-decoration:none;
+	color:#666;
+	font-size: 12px;
+	width: 135px;
+	height: 16px;
+	overflow: hidden;
+	display: inline-block;
+	word-break: normal;
+}
+.list_price{
+	color:#c00;
+	font-family: Arial;
+	font-size: 14px;
+}
+.list_saled{
+	font-size: 12px;
+	color: #999;
+	font-family: 宋体；
+
+}
+.saled_num{
+	color:#c97;
+	font-family: Arial;
+	font-size: 14px;
+}
+.list_more{
+	height:25px;
+	width: 115px;
+	border-radius: 2px;
+	background-color: #e5e5e5;
+	margin-top:15px;
+	margin-left:48px;
+	color:#666;
+
+}	
+.list_text{
+	line-height: 22px;
+	height: 100%;
+	font-size: 12px;
+}
+.list_more img{
+	position: relative;
+	top: 3.5px;
+}
