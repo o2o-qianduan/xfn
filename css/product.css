@@ -16,6 +16,8 @@
 
 img#left_picture {
 	margin: 10px 0 0 10px;
+	width: 400px;
+	height: 400px;
 }
 
 .small_list{
@@ -28,7 +30,7 @@ img#left_picture {
 	top: 0px;
 	background-color: #fff;
 	width:12px;
-	height: 61px;
+	height: 59px;
 	border:1px solid #E1E1E1;
 	position: absolute;
 	z-index: 1;
@@ -55,11 +57,23 @@ img#left_picture {
 	background: url(../images/next2.png) no-repeat;
 }
 .pic_carousel{
-	width: 370px;
+	margin: 0 17px;
 	height: 61px;
-	background-color: green;
+	overflow: hidden;
 }
 
+.small_carousel .pro_img{
+	float: left;
+}
+.small_carousel .pro_img li{
+	float: left;
+	margin: 0 5px;
+}
+.small_carousel .pro_img img{
+	border:1px solid #E1E1E1;
+	width: 61px;
+	height: 61px;
+}
 .bottom_link{
 	margin: 49px 0 0 26px;
 }
@@ -73,9 +87,9 @@ img#left_picture {
 	float: left;
 }
 .center_state h3{
-	padding: 16px 0 10px 14px;
-	font-size: 19px;
-	font-family: "MicroSoft YeHei";
+	padding: 16px 0 10px 14px ;
+	font-size: 19px ;
+	font-family: "MicroSoft YeHei" ;
 }
 
 .center_state p{
@@ -114,7 +128,7 @@ img#left_picture {
 	font-weight: bold;
 	font-family: Arial;
 	margin-top: 18px;
-	width: 128px;
+	width: 150px;
 	height: 29px;
 	float: left;
 }
@@ -130,9 +144,9 @@ img#left_picture {
 	height: 20px;
 	color: #626262;
 	display: block;
-	float: right;
+	float: left;
 	text-align: center;
-	margin:11px 270px 0 0 ;
+	margin:11px 0 0 ;
 }
 .place{
 	margin-left: 82px;
@@ -252,7 +266,7 @@ img.o-place {
 	color: #7D7D7D;
 	top: 19px;
 	left: 65px;
-	width: 84px;
+	width: 90px;
 }
 .pro ul{
 	margin: 0 37px 0 38px;
@@ -305,8 +319,8 @@ img{border:0;}
 .main{
 	/*background-color: #eee;*/
 	margin-top:10px;
-	width:1182px;
-	height:1500px;
+	width:1180px;
+/*	height:1500px;*/
 }
 .left_list{
 	float:left;
