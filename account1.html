@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><![endif]-->
+<html>
+<head>
+	<title>结算页面</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=9,IE=10">
+	<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <script src="js/jquery-1.8.2.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <link rel="stylesheet" href="css/style.css"> 
+  <script type="text/javascript" src="js/myJs.js"></script>
+  <script type="text/javascript" src="js/cart.js"></script>
+</head>
+<body>
+
+
+
+<!-- 整个容器 -->
+<div id="container">
+  <!-- 商标，搜索栏，购物车，电话 -->
+<div class="header">
+
+  <div class="topbor"><!-- 最顶部导航 -->
+    <div class="top">
+      <p>欢迎光临华大尚田[<a href="#">登录</a>/<a href="#">免费注册</a>]</p>
+      <ul>
+        <li><a href="#">首页</a></li>
+        <li><a href="#">收藏</a></li>
+        <li><a href="#">会员专区</a></li>
+      </ul>
+    </div>
+  </div> <!-- 最顶部导航结束 -->
+    <!-- 页面头部背景 -->
+    <div class="bg">
+      <button class="bg_button"></button>
+
+    </div>
+  <div class="head_one">
+        <div class="brand"></div>
+        <!-- 搜索栏 -->
+        <div class="searchdiv">
+          <form class="searchform" method="get"> 
+          <input class="search-submit" type="submit" value=""/>
+          <input id="search-input" class="search-input" type="text" name="" size="30px">
+          <input class="search-button" id="search-button" value="搜 索"></input>
+          </form>
+          <div id="hot_search">
+            <span>热门搜索：</span>
+            <span>小龙虾 蓝莓 虾 进口奶 进口肉 大枣</span>
+          </div>
+        </div>
+
+        <div class="tel"></div>
+  </div>
+      <div class="clear"></div>
+      <!-- 导航栏 -->
+      <div class="nav">
+        <div class="all_classify">
+          <a href="#">全部商品分类</a>
+          <img class="boult" src="images/boult.png"/>
+        </div>
+        <div class="navitem">
+          <ul >
+            <li class="navitem-first">
+              <a href="#">首页</a>
+          <span class="border"><img src="images/border.png" /></span>              
+            </li>
+            <li><a href="#">菜品选购</a>
+          <span class="border"><img src="images/border.png" /></span>
+            </li>
+
+            <li><a href="#">华农特产</a>
+          <span class="border"><img src="images/border.png" /></span>            
+            </li>
+
+            <li><a href="#">礼品专区</a>
+          <span class="border"><img src="images/border.png" /></span>
+            </li>
+
+            <li><a href="#">会员专区</a>
+          <span class="border"><img src="images/border.png" /></span>
+            </li>
+           
+            <li><a href="#">生产基地</a>
+          <span class="border"><img src="images/border.png" /></span>
+            </li>
+
+            <li><a href="#">公司介绍</a>
+          <span class="border"><img src="images/border.png" /></span>
+            </li>
+
+            <li><a href="#">蔬菜百科</a>
+          <span class="border"><img src="images/border.png" /></span>
+            </li>
+          </ul>
+        </div>
+      </div>    <!-- end nav   --> 
+</div><!-- header部分 -->
+<!-- 内容区域 -->
+<div id="content">
+
+
+       <!-- 以下"全部商品分类部分，在首页中显示，在其它页中鼠标滑过才显示" -->
+      <div id="list_menu" class="no-mainpage">
+        <div id="YMenu">
+             <div id="YMenu-side">       
+                  <ul class="YM-mainmnu">
+                    <li class="YM-Tab">               
+                      <a href="#">大家电</a>
+                        <span><img src="images/expand.png"/></span>
+                        <ul class="YM-submnu">
+                             <li><a href="#1">洗衣机</a></li>
+                             <li><a href="#1">平板电视</a></li>
+                             <li><a href="#1">电热水器</a></li>
+                             <li><a href="#1">家庭音响</a></li>
+                             <li><a href="#1">燃气热水器</a></li>
+                               <li><a href="#1">空调</a></li>
+                             <li><a href="#1">冰箱冷柜</a></li>
+                             <li><a href="#1">DVD播放器</a></li>
+                             <li><a href="#1">电视附件</a></li>
+                             <li><a href="#1">家电服务</a></li>
+                             <li><a href="#1">家电下乡</a></li>
+                        </ul> 
+                    </li>
+
+                      <li class="YM-Tab">               
+                      <a href="#">大家电</a>
+                        <span><img src="images/expand.png"/></span>
+                        <ul class="YM-submnu">
+                             <li><a href="#1">洗衣机</a></li>
+                             <li><a href="#1">平板电视</a></li>
+                             <li><a href="#1">电热水器</a></li>
+                             <li><a href="#1">家庭音响</a></li>
+                             <li><a href="#1">燃气热水器</a></li>
+                               <li><a href="#1">空调</a></li>
+                             <li><a href="#1">冰箱冷柜</a></li>
+                             <li><a href="#1">DVD播放器</a></li>
+                             <li><a href="#1">电视附件</a></li>
+                             <li><a href="#1">家电服务</a></li>
+                             <li><a href="#1">家电下乡</a></li>
+                        </ul> 
+                     </li>
+
+                       <li class="YM-Tab">               
+                      <a href="#">大家电</a>
+                        <span><img src="images/expand.png"/></span>
+                        <ul class="YM-submnu">
+                             <li><a href="#1">洗衣机</a></li>
+                             <li><a href="#1">平板电视</a></li>
+                             <li><a href="#1">电热水器</a></li>
+                             <li><a href="#1">家庭音响</a></li>
+                             <li><a href="#1">燃气热水器</a></li>
+                               <li><a href="#1">空调</a></li>
+                             <li><a href="#1">冰箱冷柜</a></li>
+                             <li><a href="#1">DVD播放器</a></li>
+                             <li><a href="#1">电视附件</a></li>
+                             <li><a href="#1">家电服务</a></li>
+                             <li><a href="#1">家电下乡</a></li>
+                        </ul> 
+                     </li>
+
+                      <li class="YM-Tab">               
+                      <a href="#">大家电</a>
+                        <span><img src="images/expand.png"/></span>
+                        <ul class="YM-submnu">
+                             <li><a href="#1">洗衣机</a></li>
+                             <li><a href="#1">平板电视</a></li>
+                             <li><a href="#1">电热水器</a></li>
+                             <li><a href="#1">家庭音响</a></li>
+                             <li><a href="#1">燃气热水器</a></li>
+                               <li><a href="#1">空调</a></li>
+                             <li><a href="#1">冰箱冷柜</a></li>
+                             <li><a href="#1">DVD播放器</a></li>
+                             <li><a href="#1">电视附件</a></li>
+                             <li><a href="#1">家电服务</a></li>
+                             <li><a href="#1">家电下乡</a></li>
+                        </ul> 
+                     </li> 
+
+                       <li class="YM-Tab">               
+                      <a href="#">大家电</a>
+                        <span><img src="images/expand.png"/></span>
+                        <ul class="YM-submnu">
+                             <li><a href="#1">洗衣机</a></li>
+                             <li><a href="#1">平板电视</a></li>
+                             <li><a href="#1">电热水器</a></li>
+                             <li><a href="#1">家庭音响</a></li>
+                             <li><a href="#1">燃气热水器</a></li>
+                               <li><a href="#1">空调</a></li>
+                             <li><a href="#1">冰箱冷柜</a></li>
+                             <li><a href="#1">DVD播放器</a></li>
+                             <li><a href="#1">电视附件</a></li>
+                             <li><a href="#1">家电服务</a></li>
+                             <li><a href="#1">家电下乡</a></li>
+                        </ul> 
+                     </li> 
+
+                       <li class="YM-Tab">               
+                      <a href="#">大家电</a>
+                        <span><img src="images/expand.png"/></span>
+                        <ul class="YM-submnu">
+                             <li><a href="#1">洗衣机</a></li>
+                             <li><a href="#1">平板电视</a></li>
+                             <li><a href="#1">电热水器</a></li>
+                             <li><a href="#1">家庭音响</a></li>
+                             <li><a href="#1">燃气热水器</a></li>
+                               <li><a href="#1">空调</a></li>
+                             <li><a href="#1">冰箱冷柜</a></li>
+                             <li><a href="#1">DVD播放器</a></li>
+                             <li><a href="#1">电视附件</a></li>
+                             <li><a href="#1">家电服务</a></li>
+                             <li><a href="#1">家电下乡</a></li>
+                        </ul> 
+                     </li> 
+
+                      <li class="YM-Tab">               
+                      <a href="#">大家电</a>
+                        <span><img src="images/expand.png"/></span>
+                        <ul class="YM-submnu">
+                             <li><a href="#1">洗衣机</a></li>
+                             <li><a href="#1">平板电视</a></li>
+                             <li><a href="#1">电热水器</a></li>
+                             <li><a href="#1">家庭音响</a></li>
+                             <li><a href="#1">燃气热水器</a></li>
+                               <li><a href="#1">空调</a></li>
+                             <li><a href="#1">冰箱冷柜</a></li>
+                             <li><a href="#1">DVD播放器</a></li>
+                             <li><a href="#1">电视附件</a></li>
+                             <li><a href="#1">家电服务</a></li>
+                             <li><a href="#1">家电下乡</a></li>
+                        </ul> 
+                     </li>      
+                                              
+                 </ul>     
+            </div>   
+        </div>
+      </div>  
+      <!-- end .list_menu -->
+      <!-- 此部分在首页固定，在其它页面鼠标滑过时出现 -->
+  <!-- 结算页面主体 -->
+  <div class="cart_main">
+    <!-- 结算流程图 -->
+    <div class="acc_pic">
+      <img src="images/account.jpg">
+    </div>
+    <!-- 购物车标题 -->
+    <div class="cart_title">
+      <span style="background: url(images/cart_title.jpg) no-repeat;width: 20px;height: 28px;display: inline;margin-right: 7px;">&nbsp;&nbsp;</span>
+      <span>购物车</span>
+    </div>
+    <!-- 购物车表单、删除、全选、结算都实现了 -->
+    <div class="cart_table">
+      <table id="cartTable">
+      <thead>
+          <tr>
+              <th style="width:34px;"><input class="check-all check" type="checkbox"/></th>
+              <th style="width:114px;">全选</th>
+              <th style="width:549px;">名称规则</th>
+              <th style="width:119px;">单价</th>
+              <th style="width:94px;">积分</th>
+              <th style="width:144px;">数量</th>
+              <th>操作</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td class="checkbox"><input class="check-one check" type="checkbox"/></td>
+              <td><img src="images/cart_pro.jpg" /></td>
+              <td class="goods"><span>新西兰佳沛阳光花菜加介篮 16个 </span></td>
+              <td class="price">￥84.00</td>
+              <td class="integral">84</td>
+              <td class="count">
+                  <span class="reduce"></span>
+                  <input class="count-input" type="text" value="1"/>
+                  <span class="add"></span></td>
+              <td><div class="delete">删除</div></td>
+          </tr>
+          <tr>
+              <td class="checkbox"><input class="check-one check" type="checkbox"/></td>
+              <td><img src="images/cart_pro.jpg" /></td>
+              <td class="goods"><span>新西兰佳沛阳光花菜加介篮 16个 </span></td>
+              <td class="price">￥184.00</td>
+              <td class="integral">184</td>
+              <td class="count">
+                  <span class="reduce"></span>
+                  <input class="count-input" type="text" value="1"/>
+                  <span class="add"></span></td>
+              <td><div class="delete">删除</div></td>
+          </tr>
+          <tr>
+              <td class="checkbox"><input class="check-one check" type="checkbox"/></td>
+              <td><img src="images/cart_pro.jpg" /></td>
+              <td class="goods"><span>新西兰佳沛阳光花菜加介篮 16个 </span></td>
+              <td class="price">￥184.00</td>
+              <td class="integral">184</td>
+              <td class="count">
+                  <span class="reduce"></span>
+                  <input class="count-input" type="text" value="1"/>
+                  <span class="add"></span></td>
+              <td><div class="delete">删除</div></td>
+          </tr>
+          <tr>
+              <td class="checkbox"><input class="check-one check" type="checkbox"/></td>
+              <td><img src="images/cart_pro.jpg" /></td>
+              <td class="goods"><span>新西兰佳沛阳光花菜加介篮 16个 </span></td>
+              <td class="price">￥184.00</td>
+              <td class="integral">184</td>
+              <td class="count">
+                  <span class="reduce"></span>
+                  <input class="count-input" type="text" value="1"/>
+                  <span class="add"></span></td>
+              <td><div class="delete">删除</div></td>
+          </tr>
+          <tr>
+              <td class="checkbox"><input class="check-one check" type="checkbox"/></td>
+              <td><img src="images/cart_pro.jpg" /></td>
+              <td class="goods"><span>新西兰佳沛阳光花菜加介篮 16个 </span></td>
+              <td class="price">￥184.00</td>
+              <td class="integral">184</td>
+              <td class="count">
+                  <span class="reduce"></span>
+                  <input class="count-input" type="text" value="1"/>
+                  <span class="add"></span></td>
+              <td><div class="delete">删除</div></td>
+          </tr>
+          <tr>
+              <td class="checkbox"><input class="check-one check" type="checkbox"/></td>
+              <td><img src="images/cart_pro.jpg" /></td>
+              <td class="goods"><span>新西兰佳沛阳光花菜加介篮 16个 </span></td>
+              <td class="price">￥184.00</td>
+              <td class="integral">184</td>
+              <td class="count">
+                  <span class="reduce"></span>
+                  <input class="count-input" type="text" value="1"/>
+                  <span class="add"></span>
+              </td>
+              <td><div class="delete">删除</div></td>
+          </tr>
+          </tbody>
+      </table>
+      <!-- 购物车小计、结算 -->
+      <div class="cart_foot" id="cart_foot">
+          <div class=" fl deleteAll"><a id="deleteAll" href="javascript:;">删除选中商品</a></div>
+          <div class="fr total">购物车小计：<span id="priceTotal">￥184.00</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;积分小计:
+          <span id="intergralTotal">￥184</span>
+        </div>
+      </div>
+       <div class="fr selected" id="selected">
+        <span id="selectedTotal"></span>
+    </div>
+      <div class="sum">
+        <div class="fl back"><a href="">&nbsp;返回购物</a>
+        </div>
+        <div class="fr closing">去结算</div>
+        <span class="fr tip" id="tip">满<span class="tip_red">118</span>包邮，您还差<span class="tip_red" id="diff"></span>元&nbsp;&nbsp;</span>
+      </div>
+    </div>
+  </div>
+</div>
+    
+<!-- 内容区域结束 -->
+<!-- 页脚部分 -->
+<div id="footer">
+  <div class="cwidth h-center teleg">
+    <div class="column icon_g1">
+    <h3>关于我们</h3>
+    <ul>
+      <li><a href="#">关于华大尚田</a></li>
+	  <li><a href="#">公司架构</a></li>
+	  <li><a href="#">生产基地</a></li>
+	  <li><a href="#">招贤纳士</a></li>
+    </ul>
+  </div>
+    <div class="column icon_g2">
+    <h3>新手教程</h3>
+    <ul>
+      <li><a href="#">新手教程</a></li>
+      <li><a href="#">购物流程</a></li>
+      <li><a href="#">注册登录</a></li>
+      <li><a href="#">账户充值</a></li>
+      <li><a href="#">如何提货</a></li>
+      <li><a href="#">会员政策</a></li>
+    </ul>
+  </div>
+  <div class="column icon_g3">
+    <h3>配送方式</h3>
+    <ul>
+      <li><a href="#">自营全程冷链配送</a></li>
+      <li><a href="#">配送范围</a></li>
+      <li><a href="#">运送标准</a></li>      
+    </ul>
+  </div>
+  <div class="column icon_g4">
+    <h3>支付方式</h3>
+    <ul>
+      <li><a href="#">货到付款</a></li>
+      <li><a href="#">在线支付</a></li>
+      <li><a href="#">账户余额支付</a></li>
+      <li><a href="#">雅高E卡</a></li>
+      <li><a href="#">多种福利卡</a></li>
+    </ul>
+  </div>
+  <div class="column icon_g5">
+    <h3>售后服务</h3>
+    <ul>
+      <li><a href="#">退换货政策</a></li>
+      <li><a href="#">退换货流程</a></li>
+      <li><a href="#">退款</a></li>
+      <li><a href="#">投诉建议</a></li>
+    </ul>
+  </div>
+   <div class="column icon_g6">
+    <h3>帮助信息</h3>
+    <ul>
+      <li><a href="#">安全食品购物指南</a></li>
+      <li><a href="#">常见问题</a></li>
+      <li><a href="#">电子优惠券的使用</a></li>
+      <li><a href="#">礼品卡</a></li>
+    </ul>
+  </div>
+</div>
+
+<div id="powered">
+Copyright © 广州新富农农业科技有限公司
+<br>
+地址：广州市天河区五山华南农业大学信息学院936室 邮编：510642 联系方式：85280321 粤ICP备13088624号-2
+</div>
+</div>
+<!-- 页脚部分结束 -->
+
+
+
+</div>
+
+<!-- 整个容器部分结束 -->
+</body>
+</html>

@@ -1253,3 +1253,229 @@ img{
 
 
 /******************首页最顶部轮播部分**************june****end********/
+
+
+
+/*啊颖写的开始了哈*/
+.cart_main{
+	width:1180px;
+	margin:10px auto;
+}/*结算页面主体*/
+.acc_pic{
+	width:1180px;
+	margin:auto;
+	margin-left: 12px;
+}/*结算流程图*/
+.cart_title{
+	width:1180px;
+	height:35px;
+	line-height: 35px;
+	border-bottom:1px solid #51ab58; 
+	color:#666;
+	font-family: Microsoft YaHei;
+	font-size: 20px;
+}/*标题*/
+/*下面是结算表格*/
+.cart_table{
+	margin-top: 10px;
+}
+.fl{
+    float: left;
+}
+.fr {
+    float: right;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid #fff;
+    text-align: center;
+    width:1180px;;
+}
+th, td {
+    border: 1px solid #fff;
+}
+th {
+    background: #e8e9e8;
+    height: 35px;
+    color:#3c3c3c;
+    font-family: "Microsoft Yahei";
+}
+td {
+    padding: 10px;
+    color: #5e5e5e;
+    background:#effae3;
+    font-size: 14px; 
+    vertical-align : middle;
+}
+/*tbody tr:hover {
+    background: RGB(238,246,255);
+}*/
+
+.goods {
+    width: 300px;
+    overflow: hidden;
+}
+.goods span {
+    /*width: 180px;*/
+    text-align: left;
+    float: left;
+    color:#5e5e5e;
+    font-size: 14px;
+    font-weight: bold;
+}
+.price {
+    
+    color:#2f9900;
+    font-size: 16px;
+    font-family: "Microsoft YaHei";
+}
+.count{
+	padding-left:28px;
+}
+.add, .count input{
+    float: left;
+    margin-right: 2px;
+    position: relative;
+
+}
+.add{
+	background: url(../images/plus.jpg) no-repeat;
+	width:25px ;
+	height: 30px;
+	cursor: pointer;
+}
+.reduce {
+   	background: url(../images/minus.jpg) no-repeat;
+	width:25px ;
+	height: 30px;
+	cursor: pointer;
+	float: left;
+    margin-right: 1px;
+    position: relative;
+
+}
+.count input {
+    width:31px;
+    height:30px;
+    background: url(../images/input.jpg) no-repeat;
+    border:0;
+    text-align: center;
+    font-size: 16px;
+    color:#666;
+    font-weight: bold;
+}
+.integral {
+    font-size:16px;
+    color:#808080;
+    font-family: "Microsoft YaHei";
+}
+.operation span:hover, a:hover {
+    cursor: pointer;
+    color: red;
+    text-decoration: underline;
+}
+.cart_table img {
+   border:1px solid #fff;
+}
+
+.cart_foot {
+    width:1180px;
+    height:50px;
+    margin-top: 10px;
+    color: #666;
+    border-bottom: 1px solid #c8c8c8;  
+    z-index: 8;
+    font-size: 20px;
+    font-family: "Microsoft YaHei";
+}
+.cart_foot div, .foot a {
+    line-height: 48px;
+    height: 48px;
+}
+.closing {
+	line-height: 50px;
+	width:190px;
+	height: 50px;
+    text-align: center;
+    color: #fff;
+    font-size: 26px;
+    font-family: "Microsoft YaHei";
+    cursor: pointer;
+    background: url(../images/sum.jpg) no-repeat;
+}
+/*.cart_foot .total{
+    margin: 0 20px;
+    cursor: pointer;
+}*/
+.cart_foot  #priceTotal, .cart_foot #intergralTotal {
+    color: #2f9900;
+    font-size: 20px;
+    font-family: "Microsoft Yahei";
+}
+.delete{
+	background: url(../images/delbtn.jpg) no-repeat;
+	width:76px;
+	height: 30px;
+	margin:auto; 
+	line-height: 30px;
+	font-size: 14px;
+	font-family: "新宋体";
+	color:#464646;
+	cursor: pointer;
+}
+.deleteAll{
+	margin-top: 10px;
+	background:url(../images/delete.jpg) no-repeat;
+	width:150px;
+	height: 30px;
+	display:inline-block;
+}
+.deleteAll a{
+	line-height: 30px;
+	font-size: 14px;
+	color:#fff;
+	text-decoration: none;
+	margin-left:30px;
+	position: absolute;
+}
+
+.sum{
+	width:1180px;
+	height:50px;
+	margin-top: 15px;
+}
+.back{
+	margin-top:15px;
+	background:url(../images/back.jpg) no-repeat;
+	width:150px;
+	height:20px;
+	display:inline-block;
+}
+.back a{
+	margin-top: -5px;
+	line-height: 20px;
+	font-size: 20px;
+	color:#2f9900;
+	font-family:"Microsoft YaHei"; 
+	text-decoration: none;
+	margin-left: 10px;
+	position: absolute;
+}
+.tip{
+	color:#666;
+	font-family:"Microsoft YaHei";
+	font-size: 20px;
+	margin-top: 10px;
+	display: none;
+}
+.tip_show{
+	color:#666;
+	font-family:"Microsoft YaHei";
+	font-size: 20px;
+	margin-top: 10px;
+}
+.tip_red{
+	color: #c00;
+}
+/************龚颖结算页面*********end*******************/
