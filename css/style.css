@@ -65,7 +65,7 @@
 /**************新闻资讯修改Jquery插件tabs样式部分结束**************june****************/
 
 
-/******************************特惠专区、新鲜蔬菜部分修改Jquery插件tabs样式**************june***************/
+/******************************特惠专区、新鲜蔬菜部分修改Jquery插件tabs样式**************june******start*********/
 .shelf-02-right{
 	background: none;
 	font-family: "微软雅黑";
@@ -123,6 +123,19 @@
 	border-right:1px solid #bebebe;
 	border-bottom:1px solid #bebebe;
 }
+.s0-01-title{
+/*	padding-left: 0px;*/
+}
+.s0-01-detail{
+	font-family: "宋体";
+	font-size: 12px;
+	height: 50px;
+	line-height: 50px;
+}
+.s0-01-price span{
+	color: red;
+	font-weight: bold;
+}
 .s0-01-img{
 	margin: 7px;
 	float: left;
@@ -135,6 +148,115 @@
 .tabOn-0,.tabOn-1{
 	display: block;
 }
-/******************************特惠专区、新鲜蔬菜部分修改Jquery插件tabs样式结束************june***************/
+.num-option{
+	display: inline-block;
+	width: 21px;
+	height: 28px;
+	text-align: center;
+	background:#efefef url(../image/alick.gif) repeat-x;
+	vertical-align: middle;
+	line-height:28px;
+	color:#6ab312;
+	border-radius: 4px;
+	font-size: 30px;
+	border:solid 1px #a7a6ab;
+	cursor: pointer;
+}
+.num-option:hover{
+	background:url(../image/alick.gif) 0 -28px repeat-x; color:#149d0e;
+}
+input.num-each{
+	display: inline-block;
+	vertical-align: middle;
+	width:35px;
+	height: 25px;
+	background:#fff;
+	text-align: center;
+	padding: 0 2px;
+}
+.s0-buy{
+	display: block;
+	width: 34px;
+	position: relative;
+}
+.s0-buyNum{
+	float: left;
+	margin-left: 10px;
+	width: 100px;
+	height: 32px;
+	display: inline;
+}
+.buy-cart{
+	float: left;
+	width: 84px;
+	height: 32px;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	background:repeat scroll top center #64b800;
+}
+.buyBtn{
+	text-decoration: none;
+	color: #ffffff;
+}
+/******************************特惠专区、新鲜蔬菜部分修改Jquery插件tabs样式结束************june*********end******/
+
+/******************************最新活动、最新资讯部分修改Jquery插件tabs样式**************june********start*******/
+.newsBox {
+	position: relative;
+	margin-left: 0px;
+	display: block;
+	height: 30px;
+	line-height: 30px;
+}
+#news .newsBox li {
+	float: left;
+	width: 50%;
+	text-align: center;
+}
+
+
+.news-0,.news-1 {
+	display: none;
+	border:1px solid #bebebe;
+	border-top: 1px solid #77be22; 
+	width: 100%;
+	top: 0px;
+	position: relative;
+}
+.news-ul{
+	margin: 10px auto;
+	display: block;
+}
+.news-ul li{
+
+	margin-left: 10px;
+}
+.news-ul a{
+	color: #000000;
+	text-decoration: none;	
+	font-size: 12px;
+	font-family: "宋体";
+}
+.news-ul a:hover{
+	color: red;
+}
+.newsOption a{
+	text-decoration: none;
+	color: #4b4b4b;
+	width: 100%;
+}
+/*
+.thzq,.xxsc{
+	text-align: center;
+}*/
+.newsOn0,.newsOn1  {
+	background: repeat-x scroll center top #e0f8c3;
+}
+
+.newsOn-0,.newsOn-1{
+	display: block;
+}
+/******************************特惠专区、新鲜蔬菜部分修改Jquery插件tabs样式结束************june***********end****/
 
 
