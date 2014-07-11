@@ -20,12 +20,23 @@ img#left_picture {
 	height: 400px;
 }
 
+.pro_img b{
+	background: url(../images/green.png) no-repeat ;
+	position: absolute;
+	width: 9px;
+	height: 5px;
+	top: -10px;
+	left: 50px;
+
+
+}
 .small_list{
 	position: relative;
 	margin-left: 10px;
 	margin-top: 21px;
 	width: 400px;
 }
+
 .small_ctrl{
 	top: 0px;
 	background-color: #fff;
@@ -246,6 +257,7 @@ img.o-place {
 	float: right;
 	padding-right: 32px;
 }
+
 /*右边小产品图*/
 .right_product{
 	width: 215px;
@@ -255,7 +267,7 @@ img.o-place {
 }
 .recommend{
 	height: 27px;
-	margin-bottom: 28px;
+	margin-bottom: 20px;
 	border-bottom: 1px solid #C7C7C7;
 }
 .recommend p{
@@ -268,28 +280,81 @@ img.o-place {
 	left: 65px;
 	width: 90px;
 }
-.pro ul{
-	margin: 0 37px 0 38px;
-}
-img{border:0;}
 
-.pro ul li+li{
-	margin-top: 30px;
+.pro{
+	height: 510px;
+	/*margin: 15px 0;*/
+	overflow: hidden;
+	position: relative;
+}
+.pro2 ul{
+	margin: 0 37px 0 38px;
+
+}
+.pro img{
+	border:0;
+	
+}
+
+.pro ul li{
+	padding: 15px 0;
+	width: 140px;
+	height: 140px;
+}
+
+.pro li a {
+	text-decoration: none;
+	color: #313131;
+}
+
+.pro .price_p{
+	background-color: #fff;
+	position: relative;
+	opacity: 0.5;
+	z-index:3px;
+	display: block;
+	float: left;
+	height: 21px;
+	width: 141px;
+	top:-25px;
+}
+
+.pro .price_p span{
+	font-family: Arial;
+	font-size: 12px;
+	line-height: 21px;
+}
+.pro2{
+	height: 1600px;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 .btn{
 	height: 32px;
 	width: 215px;
-	margin: 17px 0 20px 60px;
+	margin: 3px 0 20px 53px;
 	overflow: hidden;
 
 }
+.btn div{
+	float: left;
+	padding-left: 15px;
+}
 
+.btn img{
+	width: 32px;
+	height: 32px;
+	cursor: pointer;
+}
 .btn a{
 	margin-right: 30px;
 	display: block;
 	float: left;
 
 }
+
+
 
 /*更多商品*/
 .more_pro{

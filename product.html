@@ -12,7 +12,9 @@
   <script src="js/jquery-ui.js"></script>
   <link rel="stylesheet" href="css/style.css"> 
   <script type="text/javascript" src="js/myJs.js"></script>
-    <script type="text/javascript" src="js/picture.js"></script>
+  <script type="text/javascript" src="js/picture.js"></script>
+ <script type="text/javascript" src="js/jquery.imagezoom.min.js"></script>
+
   <link rel="stylesheet" type="text/css" href="css/layout.css" />
   <link rel="stylesheet" type="text/css" href="css/product.css" />
 </head>
@@ -258,23 +260,25 @@
 
           <!-- 左边大图 -->
           <div class="left_banner">
-            <img id="left_picture" src="images/product.png" />
+            <a href="images/product.png" >
+              <img id="left_picture" class="jqzoom" src="images/pro_01_mid.png" rel="images/pro_01.png" />
+            </a>
             <div class="small_list">
-            <div id="prev_small" class="small_ctrl"><b></b></div>
-            <!-- 底部图片切换 -->
-            <div class="pic_carousel">
-              <div class="small_carousel">
-                <ul class="pro_img">
-                  <li><a href="images/product.png"><img src="images/pro_01.png" /></a></li>
-                  <li><a href="images/pro_01.png"><img src="images/pro_01.png" /></a></li>
-                  <li><a href="images/product.png"><img src="images/pro_01.png" /></a></li>
-                  <li><a href="#"><img src="images/pro_01.png" /></a></li>
-                  <li><a href="#"><img src="images/pro_01.png" /></a></li>
-                  <li><a href="#"><img src="images/pro_01.png" /></a></li>
-                </ul>
-              </div>
+             <div id="prev_small" class="small_ctrl"><b></b></div>
+             <!-- 底部图片的放大镜效果 -->
+              <div class="pic_carousel">
+               <div class="small_carousel">
+                  <ul class="pro_img " id="thumblist">
+                   <li><a href="#"><b></b><img src="images/pro_01_small.png" mid="images/pro_01_mid.png" big="images/pro_01.png"/></a></li>
+                   <li><a href="#"><img src="images/pro_03_small.png" mid="images/pro_03_mid.png" big="images/pro_03.png"/></a></li>
+                   <li><a href="#"><img src="images/pro_02_small.png" mid="images/pro_02_mid.png" big="images/pro_02.png"/></a></li>
+                   <li><a href="#"><img src="images/pro_01_small.png" mid="images/pro_01_mid.png" big="images/pro_01.png"/></a></li>
+                   <li><a href="#"><img src="images/pro_03_small.png" mid="images/pro_03_mid.png" big="images/pro_03.png"/></a></li>
+                   <li><a href="#"><img src="images/pro_01.png" /></a></li>
+                  </ul>
+               </div>
             </div>
-            <div id="next_small" class="small_ctrl"><b></b></div>
+              <div id="next_small" class="small_ctrl"><b></b></div>
             </div>
 
             <div class="bottom_link">
@@ -347,22 +351,59 @@
             <p>华大尚田推荐</p>           
           </div>
           <div class="pro">
-            <ul>
-              <li>
-                <a href="#"><img src="images/pro1.png" /></a>
-              </li>
-              <li>
-                <a href="#"><img src="images/pro1.png" /></a>
-              </li>
-              <li>
-                <a href="#"><img src="images/pro1.png" /></a>
-              </li>
-            </ul>
-            <div class="btn">
-              <a href="#"><img id="img1" src="images/bottom.png"/></a>
-              <a href="#"><img src="images/top.png"/></a>
-            </div>      
+            <div class="pro2">
+              <ul>
+               <li>
+                 <a href="#">
+                   <img src="images/pro2.png" />
+                   <span class="price_p"><span>￥46.00</span></span>
+                 </a>
+               </li>
+               <li>
+                  <a href="#"><img src="images/pro2.png" /></a>
+                 <span class="price_p"><span>￥46.00</span></span>
+                </li>
+                <li>
+                  <a href="#"><img src="images/pro1.png" /></a>
+                 <span class="price_p"><span>￥46.00</span></span>
+                </li>
+                <li>
+                  <a href="#">
+                  <img src="images/pro1.png" />
+                  <span class="price_p"><span>￥46.00</span></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/pro1.png" /></a>
+                  <span class="price_p"><span>￥46.00</span></span>
+                </li>
+                <li>
+                  <a href="#"><img src="images/pro2.png" /></a>
+                  <span class="price_p"><span>￥46.00</span></span>
+                </li>
+                 <li>
+                  <a href="#">
+                  <img src="images/pro2.png" />
+                  <span class="price_p"><span>￥46.00</span></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/pro1.png" /></a>
+                  <span class="price_p"><span>￥46.00</span></span>
+                </li>
+                <li>
+                  <a href="#"><img src="images/pro2.png" /></a>
+                  <span class="price_p"><span>￥46.00</span></span>
+                </li>
+              </ul>
+            </div>
           </div>
+
+          <div class="btn">
+            <div><img id="img1" src="images/bottom.png"/></div>
+             <div><img id="img2" src="images/top.png"/></div>
+          </div>      
+       
 
           <!-- 更多商品 -->
           <div class="more_pro"><a href="#">更多商品</a></div>
@@ -630,7 +671,23 @@ Copyright © 广州新富农农业科技有限公司
 
 <!-- 整个容器部分结束 -->
 
+<script type="text/javascript">
+$(document).ready(function(){
 
+  $(".jqzoom").imagezoom();
+
+  $("#thumblist li a").click(function () {
+    
+    $(".jqzoom").attr('src',$(this).find("img").attr("mid"));
+    $(".jqzoom").attr('rel',$(this).find("img").attr("big"));
+  });
+
+
+
+
+});
+
+</script>
 
 </body>
 </html>
