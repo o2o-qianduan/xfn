@@ -43,4 +43,41 @@ $(function(){
     	}
     });
 
+    $("#img1").click(function(){
+
+        $parent = $(this).parents("div.right_product");
+        $v_out = $parent.find("div.pro");
+        $v_show = $parent.find("div.pro2");
+        var v_height = $v_out.height();
+        var len = $v_show.find("li").length;
+        var page_count = Math.ceil(len / i);
+        if(!$v_show.is(":animated")){
+            if(page==page_count){
+                 $v_show.animate({top : '0px'},"slow");
+                page=1;
+            }else{
+                 $v_show.animate({top : '-='+v_height},"slow");
+                page++;
+            }
+        }
+    });
+
+      $("#img2").click(function(){
+        $parent = $(this).parents("div.right_product");
+        $v_out = $parent.find("div.pro");
+        $v_show = $parent.find("div.pro2");
+        var v_height = $v_out.height();
+        var len = $v_show.find("li").length;
+        var page_count = Math.ceil(len / i);
+        if(!$v_show.is(":animated")){
+            if(page==1){
+                 $v_show.animate({top :  "-="+v_height*(page_count-1)},"slow");
+                page=page_count;
+            }else{
+                 $v_show.animate({top : '+='+v_height},"slow");
+                page--;
+            }
+        }
+    });
+
 })
