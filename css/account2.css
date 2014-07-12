@@ -1,0 +1,205 @@
+.write_indent{
+	background: url(../images/account2.png) no-repeat;
+	width: 925px;
+	height: 229px;
+	margin: 0 auto;
+}
+
+.indent_title{
+	margin-top: 25px;
+
+	height: 42px;
+	border-bottom: 2px solid #51AB58;
+}
+.indent_title span{
+	background: url(../images/cart_title.jpg) no-repeat;
+	display: block;
+	float: left;
+	width: 14px;
+	height: 27px;
+	margin-top: 8px;
+	margin-left: 2px;
+}
+.indent_title p{
+	line-height: 42px;
+	font-family: "MicroSoft Yehei";
+	font-size: 20px;
+}
+
+.border_indent{
+	height: 1963px;
+	border:1px solid #BFE6B4;
+	box-shadow: 0 17px 10px #EAF5DE inset ;
+	margin-top: 10px;
+	padding: 0 23px;
+}
+
+.delivery_address{
+	border-bottom: 2px solid #DCDCDC;
+	margin-top: 28px;
+	height: 39px;
+}
+.delivery_address p{
+	line-height: 39px;
+	float: left;
+	/*padding-left: 6px;*/
+	font-family: "MicroSoft Yehei";
+	font-size: 18px;
+}
+
+#save_btn{
+	float: left;
+	width: 64px;
+	border:none;
+	height: 30px;
+	background: repeat scroll 0 0 #77BE22;
+	text-align: center;
+	font-size: 14px;
+	color: #fff;
+	font-family: "宋体";
+	font-weight: bold;
+	cursor: pointer;
+	border-radius: 2px;
+	margin-left: 36px;
+}
+
+#bot{
+	width: 99px;
+	position: relative;
+	height: 0;
+	float: left;
+	top: 39px;
+	left: -182px;
+	border: 1px solid #77BE22;
+}
+
+.rail{
+	margin: 15px 0;
+	line-height: 29px;
+	height: 29px;
+	background-color: #F2F2F2;
+}
+
+.old_address ul li,.rr{
+	line-height: 29px;
+	margin-left: 13px;
+}
+.old_address ul li a{
+	position: absolute;
+	text-decoration: none;
+	color: #fff;
+	width: 64px;
+	height: 24px;
+	text-align: center;
+	border-radius: 2px;
+	margin-top: 3px;
+
+}
+.old_address ul li .modify{
+	right: 250px;
+	background: repeat scroll 0 0 #77BE22;
+
+}
+
+.old_address ul li .save{
+	right: 172px;
+	background-color: #F60;
+}
+
+.new_address{
+	margin-left: 13px;
+}
+
+.new_address .add_tit{
+	height: 50px;
+	/*line-height: 50px;*/
+}
+.add_tit input{
+
+	display: block;
+	float: left;
+}
+.new_address div{
+	height: 42px;
+
+}
+
+.fontway{
+	font-size: 14px;
+	font-family: "宋体";
+	text-indent: 27px;
+}
+
+.default,.new_use{
+	font-weight: bold;
+	padding-left: 14px;
+}
+
+.new_address input, .select_place select{
+	height: 26px;
+}
+
+.green_bg{
+	text-decoration: none !important;
+	color: #fff !important;
+	background-color: #77BE22; 
+	text-align: center;
+	display: block;
+}
+
+.save_send{
+	border-radius: 2px;
+	line-height: 35px;
+	width: 219px;
+	margin-left: 37px;
+	margin-bottom: 45px;
+}
+.send_method{
+	height: 36px;
+}
+.pay_met{
+	margin-bottom: 17px;
+}
+.pay_met a{
+	width: 77px;
+	height: 20px;
+	font-size: 14px;
+	font-family: "宋体";
+	margin-left: 37px;
+	float: left;
+}
+
+.bank,.bank2{
+	/*width: 817px;*/
+	margin-left: 55px;
+}
+
+.bank img,.bank2 img{
+	width: 130px;
+	height: 40px;
+	margin: 4px 14px;
+}
+
+.bank input,.bank2 input{
+	line-height: 40px;
+	height: 40px;
+}
+.send_met{
+	margin-top: 28px;
+
+}
+.express{
+	margin-left: 55px;
+	height: 41px;
+	line-height: 41px;
+}
+
+.bott {
+	left: -80px !important;
+}
+
+.goods{
+	height: 320px;
+	width: 1131px;
+	border-bottom: 1px dashed #B7B7B7;
+}
