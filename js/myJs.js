@@ -4,11 +4,11 @@
 
 
 /*****新品推荐、特惠专区、新鲜蔬菜部分 *************june**---start*/
-var tabOptionIndex=0;
+var tabOptionIndex1=0;
 $(function(){
 	$(".tabOption span").mouseover(function(){
-		tabOptionIndex=$(".tabOption span").index(this);
-		tabOptionHover1(tabOptionIndex);
+		tabOptionIndex1=$(".tabOption span").index(this);
+		tabOptionHover1(tabOptionIndex1);
 
 	});
 });
@@ -20,17 +20,18 @@ function tabOptionHover1(tabOptionIndex){
 	$(".tabOption").eq(tabOptionIndex).addClass('tabOn'+tabOptionIndex);
 	$(".tab-0").eq(tabOptionIndex).addClass('tabOn-'+tabOptionIndex);
 }
+/*****新品推荐、特惠专区、新鲜蔬菜部分 *************june**---end*/
 
-/**************首页顶部广告可关闭部分******************june****************************/
+/**************首页顶部广告可关闭部分******************june**************start**************/
 $(function(){
 $(".bg_button").bind("click",function(){
     $(".bg").css({"display":"none"});
   });	
 })
-/*************首页顶部广告可关闭部分结束***************june*********************************/
+/*************首页顶部广告可关闭部分结束***************june**************end*******************/
 
 
-/*首页"全部产品分类"部分在首页时其菜单固定显示，在其它页面时鼠标一移过才显示*/
+/*首页"全部产品分类"部分在首页时其菜单固定显示，在其它页面时鼠标一移过才显示**********start******/
 $(function(){
 	$(".no-mainpage").css({"display":"none"});
 });
@@ -55,15 +56,16 @@ $(function(){
 	});
 	
 })
-/*首页"全部产品分类"部分**************************june*/
+/*******************首页"全部产品分类"部分**************************june*******end********/
 
 
 
 /*****超值抢购、本季热卖、本周推荐、新品上市、限时抢购 *************june**---start*/
+var tabOptionIndex2=0;
  $(function(){
      $(".SmenuTitle ul li").mouseover(function(){
-         tabOptionIndex=$(".SmenuTitle ul li").index(this);
-         tabOptionHover2(tabOptionIndex);
+         tabOptionIndex2=$(".SmenuTitle ul li").index(this);
+         tabOptionHover2(tabOptionIndex2);
 
      });
  });
@@ -77,7 +79,7 @@ $(function(){
  }
  /*****超值抢购、本季热卖、本周推荐、新品上市、限时抢购 *************june**---end*/
 
- /*----轮播----start*/
+ /***********************首页最顶部轮播******june******start*/
 $(function(){
 	var banner=$("#banner-left");
 	var imgs=$("#banner-left a");
@@ -106,4 +108,188 @@ function showImg(index){
 	$(".points").removeClass('cupoint')
 	            .eq(index).addClass('cupoint');
 }
-/*----轮播----end*/
+ /***********************首页最顶部轮播*****june******end*/
+
+  /***********************首页【最新活动、最新资讯】切换******june******start*/
+var tabOptionIndex3=0;
+$(function(){
+	$(".newsOption span").mouseover(function(){
+		tabOptionIndex3=$(".newsOption span").index(this);
+		tabOptionHover3(tabOptionIndex3);
+
+	});
+});
+function tabOptionHover3(tabOptionIndex){
+	for(var i=0;i<2;i++){
+		$(".newsOption").removeClass('newsOn'+i);
+		$(".news-0").removeClass('newsOn-'+i);
+		}
+	$(".newsOption").eq(tabOptionIndex).addClass('newsOn'+tabOptionIndex);
+	$(".news-0").eq(tabOptionIndex).addClass('newsOn-'+tabOptionIndex);
+}
+ /***********************首页【最新活动、最新资讯】切换******june******end*/
+
+ /******************结算页面1*****龚颖******start*********/
+window.onload = function () {
+    if (!document.getElementsByClassName) {
+        document.getElementsByClassName = function (cls) {
+            var ret = [];
+            var els = document.getElementsByTagName('*');
+            for (var i = 0, len = els.length; i < len; i++) {
+                if (els[i].className === cls
+                    || els[i].className.indexOf(cls + ' ') >= 0
+                    || els[i].className.indexOf(' ' + cls + ' ') >= 0
+                    || els[i].className.indexOf(' ' + cls) >= 0) {
+                    ret.push(els[i]);
+                }
+            }
+            return ret;
+        }
+    }
+
+    var cartTable = document.getElementById('cartTable');
+    var tr = cartTable.children[1].rows;
+    var checkInputs = document.getElementsByClassName('check');
+    var checkAllInputs = document.getElementsByClassName('check-all');
+    var selectedTotal = document.getElementById('selectedTotal');
+    var priceTotal = document.getElementById('priceTotal');
+    var intergralTotal = document.getElementById('intergralTotal');
+    var selected = document.getElementById('selected');
+    var cart_foot = document.getElementById('cart_foot');
+    var deleteAll = document.getElementById('deleteAll');
+    var tip = document.getElementById('tip');
+    var diff = document.getElementById('diff');
+    var sum = 0;
+
+
+    //计算
+    function getTotal() {
+        var seleted = 0;
+        var price = 0;
+        var HTMLstr = '';
+        var trprice =0;
+        var trcount=0;
+        var SubTotal=0;
+        for (var i = 0, len = tr.length; i < len; i++) {
+            if (tr[i].getElementsByTagName('input')[0].checked) {
+                tr[i].className = 'on';
+                trprice = parseFloat(tr[i].cells[4].innerHTML);
+                trcount = parseInt(tr[i].getElementsByTagName('input')[1].value);
+                SubTotal = parseFloat(trprice * trcount);
+                seleted += trcount;
+                price += SubTotal;
+            }
+            else {
+                tr[i].className = '';
+            }
+        }
+  
+
+        priceTotal.innerHTML = "￥"+price.toFixed(2);
+        sum = price;
+        intergralTotal.innerHTML = "￥"+price.toFixed(0);
+
+        if (seleted == 0) {
+            cart_foot.className = 'cart_foot';
+        }
+    }
+    // 判定是否出现满118包邮
+    function isShowTip(){
+        getTotal();
+        var differ = 0;
+        if(sum < 118){
+            differ = 118 - sum;
+            diff.innerHTML = differ.toFixed(2);
+            tip.className="fr tip_show";
+        }
+        else{
+            tip.className="fr tip";
+        }
+    }
+
+    for (var i = 0 , len = checkInputs.length; i < len; i++) {
+        checkInputs[i].onclick = function () {
+            if (this.className === 'check-all check') {
+                for (var j = 0; j < checkInputs.length; j++) {
+                    checkInputs[j].checked = this.checked;
+                }
+            }
+            if (this.checked == false) {
+                for (var k = 0; k < checkAllInputs.length; k++) {
+                    checkAllInputs[k].checked = false;
+                }
+            }
+            getTotal();
+        }
+    }
+
+    for (var i = 0; i < tr.length; i++) {
+        tr[i].onclick = function (e) {
+            e = e || window.event;
+            var el = e.srcElement;
+            var cls = el.className;
+            var input = this.getElementsByTagName('input')[1];
+            var val = parseInt(input.value);
+            var reduce = this.getElementsByTagName('span')[1];
+            switch (cls) {
+                case 'add':
+                    input.value = val + 1;
+                    break;
+                case 'reduce':
+                    if (val > 1) {
+                        input.value = val - 1;
+                    }
+                    break;
+                case 'delete':
+                    var conf = confirm('确定要删除吗？');
+                    if (conf) {
+                        this.parentNode.removeChild(this);
+                    }
+                    break
+                default :
+                    break;
+            }
+            getTotal();
+            isShowTip();
+        }
+        tr[i].getElementsByTagName('input')[1].onkeyup = function () {
+            var val = parseInt(this.value);
+            var tr = this.parentNode.parentNode
+            var reduce = tr.getElementsByTagName('span')[1];
+            if (isNaN(val) || val < 1) {
+                val = 1;
+            }
+            this.value = val;
+            if (val <= 1) {
+                reduce.innerHTML = '';
+            }
+            else {
+                reduce.innerHTML = '-';
+            }
+            getSubTotal(tr);
+            getTotal();
+            isShowTip();
+        }
+    }
+
+    deleteAll.onclick = function () {
+        if (selectedTotal.innerHTML != '0') {
+            var conf = confirm('确定删除吗？');
+            if (conf) {
+                for (var i = 0; i < tr.length; i++) {
+                    var input = tr[i].getElementsByTagName('input')[0];
+                    if (input.checked) {
+                        tr[i].parentNode.removeChild(tr[i]);
+                        i--;
+                    }
+                }
+            }
+        }
+    }
+
+    checkAllInputs[0].checked = true;
+    checkAllInputs[0].onclick();
+    isShowTip();
+}
+
+ /*******************结算页面1****龚颖*************end*****/

@@ -265,6 +265,7 @@
       </div>
 <!-- 首页第一个模块最顶端轮播部分结束  june -->
   
+  <!-- 首页第一个模块最顶端轮播部分下面三小图一组的切换  bing -->
         <div id="slider_bottom" class="jscroll">
           <div id="prev_pic" class="ctrl"><b></b></div>
           <div id="next_pic" class="ctrl"><b></b></div>
@@ -286,14 +287,6 @@
         </div>
       </div>
 
-      <div id="right_content">
-        <div id="news"></div>
-        <div id="ava"></div>
-        <div id="veg"></div>
-      </div>
-
-
-
 <script type="text/javascript" src="js/yao.js"></script>
 <script type="text/javascript">
 
@@ -304,6 +297,45 @@ YAO.YTabs({
   });
 
 </script>
+<!-- 首页第一个模块最顶端轮播部分下面三小图一组的切换结束  bing -->
+
+      <div id="right_content">
+        <div id="news">
+         <!-- 首页第一个模块最顶端轮播部分右边“最新活动、最新资讯”的切换  june -->
+          <ul class="newsBox">
+          <li class="newsOption newsOn0"><span id="activity" class="activity"><a href="#news-0">最新活动</a></span></li>
+          <li class="newsOption"><span id="zixun" class="zixun"><a href="#news-1">最新资讯</a></span></li>
+          </ul>
+          <div class="news-area">
+            <div id="news-0" class="news-0 newsOn-0" >
+              <ul  class="news-ul">
+                <li><a href="#"><span class="news-img"><img src="images/left-triangle.png"></span>【屋顶】在屋顶唱着你的歌</a></li>
+                <li><a href="#"><span class="news-img"><img src="images/left-triangle.png"></span>【农场直播】透明生产过程实时</a></li>
+                <li><a href="#"><span class="news-img"><img src="images/left-triangle.png"></span>【农场直播】透明生产过程实时</a></li>
+                <li><a href="#"><span class="news-img"><img src="images/left-triangle.png"></span>【农场直播】透明生产过程实时</a></li>
+                <li><a href="#"><span class="news-img"><img src="images/left-triangle.png"></span>【农场直播】透明生产过程实时</a></li>
+              </ul>
+            </div>
+            <div id="news-1" class="news-0">
+               <ul  class="news-ul">
+                <li><a href="#"><span class="news-img"><img src="images/left-triangle.png"></span>【无与伦比】天空灰得像哭过</a></li>
+                <li><a href="#"><span class="news-img"><img src="images/left-triangle.png"></span>【退后】离开你以后</a></li>
+                <li><a href="#"><span class="news-img"><img src="images/left-triangle.png"></span>【黑色毛衣】抽屉泛黄的日记</a></li>
+                <li><a href="#"><span class="news-img"><img src="images/left-triangle.png"></span>【农场直播】翻开了回忆</a></li>
+                <li><a href="#"><span class="news-img"><img src="images/left-triangle.png"></span>【农场直播】缺氧过后的爱情</a></li>
+              </ul>
+              
+            </div>
+          </div>
+
+
+        <!-- 首页第一个模块最顶端轮播部分右边“最新活动、最新资讯”的切换结束  june --> 
+        </div>
+        <div id="ava"></div>
+        <div id="veg"></div>
+      </div>
+
+
 
 
 
@@ -674,7 +706,7 @@ YAO.YTabs({
 <div id="shelf-02-right" class="shelf-02-right shelf-02-tab">
 
           <ul class="tabBox">
-            <li class="tabOption tabOn0"><span id="#" class="thzq"><a href="#tab-0">特惠专区</a></span>   
+            <li class="tabOption tabOn0"><span id="#thzq" class="thzq"><a href="#tab-0">特惠专区</a></span>   
              </li> <!--特惠专区end-->
 
             <li class="tabOption"><span id="xxsc" class="xxsc"><a href="#tab-1">新鲜蔬菜</a></span> 
@@ -686,166 +718,391 @@ YAO.YTabs({
               <!-- 每个区域都会放上图片、名称、描述、价格、购物数量及加入购物车 -->
               	<span class="s0-01-img"><img src="images/s0-01.png"></span>
                     <p class="s0-01-title">佛手瓜 300g/包</p>
-                    <p>每100g鲜南瓜含淀粉10.2g，钙39mg</p>
+                    <p class="s0-01-detail">每100g鲜南瓜含淀粉10.2g，钙39mg</p>
                     <p class="s0-01-price">￥<span>15.00</span>元</p>
+                    <div class="s0-buy">
+                      <div class="s0-buyNum">
+                      <span class="num-option minus">-</span>
+                      <input type="text" class="num-each" value="1">
+                      <span class="num-option add">+</span>
+                    </div>
+                    <div class="buy-cart"><!-- 此处为每个商品的购物车按钮 -->
+                      <a class="buyBtn" href="#" title="加入购物车" onclick="">加入购物车</a>
+                    </div>
+                    </div>
+                    
               <!-- 每个区域都会放上图片、名称、描述、价格、购物数量及加入购物车 -->
               </div>
               <div class="sbox sbox-0">
               <!-- 每个区域都会放上图片、名称、描述、价格、购物数量及加入购物车 -->
                 <span class="s0-01-img"><img src="images/s0-01.png"></span>
                     <p class="s0-01-title">佛手瓜 300g/包</p>
-                    <p>每100g鲜南瓜含淀粉10.2g，钙39mg</p>
+                    <p class="s0-01-detail">每100g鲜南瓜含淀粉10.2g，钙39mg</p>
                     <p class="s0-01-price">￥<span>15.00</span>元</p>
+                                        <div class="s0-buy">
+                      <div class="s0-buyNum">
+                      <span class="num-option minus">-</span>
+                      <input type="text" class="num-each" value="1">
+                      <span class="num-option add">+</span>
+                    </div>
+                    <div class="buy-cart"><!-- 此处为每个商品的购物车按钮 -->
+                     <a class="buyBtn" href="#" title="加入购物车" onclick="">加入购物车</a>
+                    </div>
+                    </div>
+                    
               <!-- 每个区域都会放上图片、名称、描述、价格、购物数量及加入购物车 -->
               </div>
               <div class="sbox sbox-0">
               <!-- 每个区域都会放上图片、名称、描述、价格、购物数量及加入购物车 -->
                 <span class="s0-01-img"><img src="images/s0-01.png"></span>
                     <p class="s0-01-title">佛手瓜 300g/包</p>
-                    <p>每100g鲜南瓜含淀粉10.2g，钙39mg</p>
+                    <p class="s0-01-detail">每100g鲜南瓜含淀粉10.2g，钙39mg</p>
                     <p class="s0-01-price">￥<span>15.00</span>元</p>
+                                        <div class="s0-buy">
+                      <div class="s0-buyNum">
+                      <span class="num-option minus">-</span>
+                      <input type="text" class="num-each" value="1">
+                      <span class="num-option add">+</span>
+                    </div>
+                    <div class="buy-cart"><!-- 此处为每个商品的购物车按钮 -->
+                     <a class="buyBtn" href="#" title="加入购物车" onclick="">加入购物车</a>
+                    </div>
+                    </div>
+                    
               <!-- 每个区域都会放上图片、名称、描述、价格、购物数量及加入购物车 -->
               </div>
               <div class="sbox sbox-0">
               <!-- 每个区域都会放上图片、名称、描述、价格、购物数量及加入购物车 -->
                 <span class="s0-01-img"><img src="images/s0-01.png"></span>
                     <p class="s0-01-title">佛手瓜 300g/包</p>
-                    <p>每100g鲜南瓜含淀粉10.2g，钙39mg</p>
+                    <p class="s0-01-detail">每100g鲜南瓜含淀粉10.2g，钙39mg</p>
                     <p class="s0-01-price">￥<span>15.00</span>元</p>
+                                        <div class="s0-buy">
+                      <div class="s0-buyNum">
+                      <span class="num-option minus">-</span>
+                      <input type="text" class="num-each" value="1">
+                      <span class="num-option add">+</span>
+                    </div>
+                    <div class="buy-cart"><!-- 此处为每个商品的购物车按钮 -->
+                       <a class="buyBtn" href="#" title="加入购物车" onclick="">加入购物车</a>
+                    </div>
+                    </div>
+                    
               <!-- 每个区域都会放上图片、名称、描述、价格、购物数量及加入购物车 -->
               </div>
               <div class="sbox sbox-0">
               <!-- 每个区域都会放上图片、名称、描述、价格、购物数量及加入购物车 -->
                 <span class="s0-01-img"><img src="images/s0-01.png"></span>
                     <p class="s0-01-title">佛手瓜 300g/包</p>
-                    <p>每100g鲜南瓜含淀粉10.2g，钙39mg</p>
+                    <p class="s0-01-detail">每100g鲜南瓜含淀粉10.2g，钙39mg</p>
                     <p class="s0-01-price">￥<span>15.00</span>元</p>
+                                        <div class="s0-buy">
+                      <div class="s0-buyNum">
+                      <span class="num-option minus">-</span>
+                      <input type="text" class="num-each" value="1">
+                      <span class="num-option add">+</span>
+                    </div>
+                    <div class="buy-cart"><!-- 此处为每个商品的购物车按钮 -->
+                       <a class="buyBtn" href="#" title="加入购物车" onclick="">加入购物车</a>
+                    </div>
+                    </div>
+                    
               <!-- 每个区域都会放上图片、名称、描述、价格、购物数量及加入购物车 -->
               </div>
               <div class="sbox sbox-0">
               <!-- 每个区域都会放上图片、名称、描述、价格、购物数量及加入购物车 -->
                 <span class="s0-01-img"><img src="images/s0-01.png"></span>
                     <p class="s0-01-title">佛手瓜 300g/包</p>
-                    <p>每100g鲜南瓜含淀粉10.2g，钙39mg</p>
+                    <p class="s0-01-detail">每100g鲜南瓜含淀粉10.2g，钙39mg</p>
                     <p class="s0-01-price">￥<span>15.00</span>元</p>
+                                        <div class="s0-buy">
+                      <div class="s0-buyNum">
+                      <span class="num-option minus">-</span>
+                      <input type="text" class="num-each" value="1">
+                      <span class="num-option add">+</span>
+                    </div>
+                    <div class="buy-cart"><!-- 此处为每个商品的购物车按钮 -->
+                       <a class="buyBtn" href="#" title="加入购物车" onclick="">加入购物车</a>
+                    </div>
+                    </div>
+                    
               <!-- 每个区域都会放上图片、名称、描述、价格、购物数量及加入购物车 -->
               </div>
               <div class="sbox sbox-0">
               <!-- 每个区域都会放上图片、名称、描述、价格、购物数量及加入购物车 -->
                 <span class="s0-01-img"><img src="images/s0-01.png"></span>
                     <p class="s0-01-title">佛手瓜 300g/包</p>
-                    <p>每100g鲜南瓜含淀粉10.2g，钙39mg</p>
+                    <p class="s0-01-detail">每100g鲜南瓜含淀粉10.2g，钙39mg</p>
                     <p class="s0-01-price">￥<span>15.00</span>元</p>
-              <!-- 每个区域都会放上图片、名称、描述、价格、购物数量及加入购物车 -->v
+                                        <div class="s0-buy">
+                      <div class="s0-buyNum">
+                      <span class="num-option minus">-</span>
+                      <input type="text" class="num-each" value="1">
+                      <span class="num-option add">+</span>
+                    </div>
+                    <div class="buy-cart"><!-- 此处为每个商品的购物车按钮 -->
+                       <a class="buyBtn" href="#" title="加入购物车" onclick="">加入购物车</a>
+                    </div>
+                    </div>
+                    
+              <!-- 每个区域都会放上图片、名称、描述、价格、购物数量及加入购物车 -->
               </div>
               <div class="sbox sbox-0">
               <!-- 每个区域都会放上图片、名称、描述、价格、购物数量及加入购物车 -->
                 <span class="s0-01-img"><img src="images/s0-01.png"></span>
                     <p class="s0-01-title">佛手瓜 300g/包</p>
-                    <p>每100g鲜南瓜含淀粉10.2g，钙39mg</p>
+                    <p class="s0-01-detail">每100g鲜南瓜含淀粉10.2g，钙39mg</p>
                     <p class="s0-01-price">￥<span>15.00</span>元</p>
+                                        <div class="s0-buy">
+                      <div class="s0-buyNum">
+                      <span class="num-option minus">-</span>
+                      <input type="text" class="num-each" value="1">
+                      <span class="num-option add">+</span>
+                    </div>
+                    <div class="buy-cart"><!-- 此处为每个商品的购物车按钮 -->
+                       <a class="buyBtn" href="#" title="加入购物车" onclick="">加入购物车</a>
+                    </div>
+                    </div>
+                    
               <!-- 每个区域都会放上图片、名称、描述、价格、购物数量及加入购物车 -->
               </div>
               <div class="sbox sbox-0">
               <!-- 每个区域都会放上图片、名称、描述、价格、购物数量及加入购物车 -->
                 <span class="s0-01-img"><img src="images/s0-01.png"></span>
                     <p class="s0-01-title">佛手瓜 300g/包</p>
-                    <p>每100g鲜南瓜含淀粉10.2g，钙39mg</p>
+                    <p class="s0-01-detail">每100g鲜南瓜含淀粉10.2g，钙39mg</p>
                     <p class="s0-01-price">￥<span>15.00</span>元</p>
+                                        <div class="s0-buy">
+                      <div class="s0-buyNum">
+                      <span class="num-option minus">-</span>
+                      <input type="text" class="num-each" value="1">
+                      <span class="num-option add">+</span>
+                    </div>
+                    <div class="buy-cart"><!-- 此处为每个商品的购物车按钮 -->
+                       <a class="buyBtn" href="#" title="加入购物车" onclick="">加入购物车</a>
+                    </div>
+                    </div>
+                    
+
               <!-- 每个区域都会放上图片、名称、描述、价格、购物数量及加入购物车 -->
               </div>
               <div class="sbox sbox-0">
               <!-- 每个区域都会放上图片、名称、描述、价格、购物数量及加入购物车 -->
                 <span class="s0-01-img"><img src="images/s0-01.png"></span>
                     <p class="s0-01-title">佛手瓜 300g/包</p>
-                    <p>每100g鲜南瓜含淀粉10.2g，钙39mg</p>
+                    <p class="s0-01-detail">每100g鲜南瓜含淀粉10.2g，钙39mg</p>
                     <p class="s0-01-price">￥<span>15.00</span>元</p>
+                                        <div class="s0-buy">
+                      <div class="s0-buyNum">
+                      <span class="num-option minus">-</span>
+                      <input type="text" class="num-each" value="1">
+                      <span class="num-option add">+</span>
+                    </div>
+                    <div class="buy-cart"><!-- 此处为每个商品的购物车按钮 -->
+                       <a class="buyBtn" href="#" title="加入购物车" onclick="">加入购物车</a>
+                    </div>
+                    </div>
+                    
               <!-- 每个区域都会放上图片、名称、描述、价格、购物数量及加入购物车 -->
               </div>
               </div>
           <!-- 第一个list项结束-->
+
+          <!-- 第二个list项 -->
               <div id="tab-1" class="tab-0">
                 <div class="sbox sbox-0">
               <!-- 每个区域都会放上图片、名称、描述、价格、购物数量及加入购物车 -->
-                <span class="s0-01-img"><img src="images/s0-01.png"></span>
+                <span class="s0-01-img"><img src="images/s0-02.jpg"></span>
                     <p class="s0-01-title">佛手瓜 300g/包</p>
-                    <p>每100g鲜南瓜含淀粉10.2g，钙39mg</p>
+                    <p class="s0-01-detail">每100g鲜南瓜含淀粉10.2g，钙39mg</p>
                     <p class="s0-01-price">￥<span>15.00</span>元</p>
+                                        <div class="s0-buy">
+                      <div class="s0-buyNum">
+                      <span class="num-option minus">-</span>
+                      <input type="text" class="num-each" value="1">
+                      <span class="num-option add">+</span>
+                    </div>
+                    <div class="buy-cart"><!-- 此处为每个商品的购物车按钮 -->
+                       <a class="buyBtn" href="#" title="加入购物车" onclick="">加入购物车</a>
+                    </div>
+                    </div>
+                    
               <!-- 每个区域都会放上图片、名称、描述、价格、购物数量及加入购物车 -->
               </div>
               <div class="sbox sbox-0">
               <!-- 每个区域都会放上图片、名称、描述、价格、购物数量及加入购物车 -->
-                <span class="s0-01-img"><img src="images/s0-01.png"></span>
+                <span class="s0-01-img"><img src="images/s0-02.jpg"></span>
                     <p class="s0-01-title">佛手瓜 300g/包</p>
-                    <p>每100g鲜南瓜含淀粉10.2g，钙39mg</p>
+                    <p class="s0-01-detail">每100g鲜南瓜含淀粉10.2g，钙39mg</p>
                     <p class="s0-01-price">￥<span>15.00</span>元</p>
+                                        <div class="s0-buy">
+                      <div class="s0-buyNum">
+                      <span class="num-option minus">-</span>
+                      <input type="text" class="num-each" value="1">
+                      <span class="num-option add">+</span>
+                    </div>
+                    <div class="buy-cart"><!-- 此处为每个商品的购物车按钮 -->
+                       <a class="buyBtn" href="#" title="加入购物车" onclick="">加入购物车</a>
+                    </div>
+                    </div>
+                    
               <!-- 每个区域都会放上图片、名称、描述、价格、购物数量及加入购物车 -->
               </div>
               <div class="sbox sbox-0">
               <!-- 每个区域都会放上图片、名称、描述、价格、购物数量及加入购物车 -->
-                <span class="s0-01-img"><img src="images/s0-01.png"></span>
+                <span class="s0-01-img"><img src="images/s0-02.jpg"></span>
                     <p class="s0-01-title">佛手瓜 300g/包</p>
-                    <p>每100g鲜南瓜含淀粉10.2g，钙39mg</p>
+                    <p class="s0-01-detail">每100g鲜南瓜含淀粉10.2g，钙39mg</p>
                     <p class="s0-01-price">￥<span>15.00</span>元</p>
+                                        <div class="s0-buy">
+                      <div class="s0-buyNum">
+                      <span class="num-option minus">-</span>
+                      <input type="text" class="num-each" value="1">
+                      <span class="num-option add">+</span>
+                    </div>
+                    <div class="buy-cart"><!-- 此处为每个商品的购物车按钮 -->
+                       <a class="buyBtn" href="#" title="加入购物车" onclick="">加入购物车</a>
+                    </div>
+                    </div>
+                    
               <!-- 每个区域都会放上图片、名称、描述、价格、购物数量及加入购物车 -->
               </div>
               <div class="sbox sbox-0">
               <!-- 每个区域都会放上图片、名称、描述、价格、购物数量及加入购物车 -->
-                <span class="s0-01-img"><img src="images/s0-01.png"></span>
+                <span class="s0-01-img"><img src="images/s0-02.jpg"></span>
                     <p class="s0-01-title">佛手瓜 300g/包</p>
-                    <p>每100g鲜南瓜含淀粉10.2g，钙39mg</p>
+                    <p class="s0-01-detail">每100g鲜南瓜含淀粉10.2g，钙39mg</p>
                     <p class="s0-01-price">￥<span>15.00</span>元</p>
+                                        <div class="s0-buy">
+                      <div class="s0-buyNum">
+                      <span class="num-option minus">-</span>
+                      <input type="text" class="num-each" value="1">
+                      <span class="num-option add">+</span>
+                    </div>
+                    <div class="buy-cart"><!-- 此处为每个商品的购物车按钮 -->
+                       <a class="buyBtn" href="#" title="加入购物车" onclick="">加入购物车</a>
+                    </div>
+                    </div>
+                    
               <!-- 每个区域都会放上图片、名称、描述、价格、购物数量及加入购物车 -->
               </div>
               <div class="sbox sbox-0">
               <!-- 每个区域都会放上图片、名称、描述、价格、购物数量及加入购物车 -->
-                <span class="s0-01-img"><img src="images/s0-01.png"></span>
+                <span class="s0-01-img"><img src="images/s0-02.jpg"></span>
                     <p class="s0-01-title">佛手瓜 300g/包</p>
-                    <p>每100g鲜南瓜含淀粉10.2g，钙39mg</p>
+                    <p class="s0-01-detail">每100g鲜南瓜含淀粉10.2g，钙39mg</p>
                     <p class="s0-01-price">￥<span>15.00</span>元</p>
+                                        <div class="s0-buy">
+                      <div class="s0-buyNum">
+                      <span class="num-option minus">-</span>
+                      <input type="text" class="num-each" value="1">
+                      <span class="num-option add">+</span>
+                    </div>
+                    <div class="buy-cart"><!-- 此处为每个商品的购物车按钮 -->
+                       <a class="buyBtn" href="#" title="加入购物车" onclick="">加入购物车</a>
+                    </div>
+                    </div>
+                    
               <!-- 每个区域都会放上图片、名称、描述、价格、购物数量及加入购物车 -->
               </div>
               <div class="sbox sbox-0">
               <!-- 每个区域都会放上图片、名称、描述、价格、购物数量及加入购物车 -->
-                <span class="s0-01-img"><img src="images/s0-01.png"></span>
+                <span class="s0-01-img"><img src="images/s0-02.jpg"></span>
                     <p class="s0-01-title">佛手瓜 300g/包</p>
-                    <p>每100g鲜南瓜含淀粉10.2g，钙39mg</p>
+                    <p class="s0-01-detail">每100g鲜南瓜含淀粉10.2g，钙39mg</p>
                     <p class="s0-01-price">￥<span>15.00</span>元</p>
+                                        <div class="s0-buy">
+                      <div class="s0-buyNum">
+                      <span class="num-option minus">-</span>
+                      <input type="text" class="num-each" value="1">
+                      <span class="num-option add">+</span>
+                    </div>
+                    <div class="buy-cart"><!-- 此处为每个商品的购物车按钮 -->
+                       <a class="buyBtn" href="#" title="加入购物车" onclick="">加入购物车</a>
+                    </div>
+                    </div>
+                    
               <!-- 每个区域都会放上图片、名称、描述、价格、购物数量及加入购物车 -->
               </div>
               <div class="sbox sbox-0">
               <!-- 每个区域都会放上图片、名称、描述、价格、购物数量及加入购物车 -->
-                <span class="s0-01-img"><img src="images/s0-01.png"></span>
+                <span class="s0-01-img"><img src="images/s0-02.jpg"></span>
                     <p class="s0-01-title">佛手瓜 300g/包</p>
-                    <p>每100g鲜南瓜含淀粉10.2g，钙39mg</p>
+                    <p class="s0-01-detail">每100g鲜南瓜含淀粉10.2g，钙39mg</p>
                     <p class="s0-01-price">￥<span>15.00</span>元</p>
+                                        <div class="s0-buy">
+                      <div class="s0-buyNum">
+                      <span class="num-option minus">-</span>
+                      <input type="text" class="num-each" value="1">
+                      <span class="num-option add">+</span>
+                    </div>
+                    <div class="buy-cart"><!-- 此处为每个商品的购物车按钮 -->
+                       <a class="buyBtn" href="#" title="加入购物车" onclick="">加入购物车</a>
+                    </div>
+                    </div>
+                    
               <!-- 每个区域都会放上图片、名称、描述、价格、购物数量及加入购物车 -->
               </div>
               <div class="sbox sbox-0">
               <!-- 每个区域都会放上图片、名称、描述、价格、购物数量及加入购物车 -->
-                <span class="s0-01-img"><img src="images/s0-01.png"></span>
+                <span class="s0-01-img"><img src="images/s0-02.jpg"></span>
                     <p class="s0-01-title">佛手瓜 300g/包</p>
-                    <p>每100g鲜南瓜含淀粉10.2g，钙39mg</p>
+                    <p class="s0-01-detail">每100g鲜南瓜含淀粉10.2g，钙39mg</p>
                     <p class="s0-01-price">￥<span>15.00</span>元</p>
+                                        <div class="s0-buy">
+                      <div class="s0-buyNum">
+                      <span class="num-option minus">-</span>
+                      <input type="text" class="num-each" value="1">
+                      <span class="num-option add">+</span>
+                    </div>
+                    <div class="buy-cart"><!-- 此处为每个商品的购物车按钮 -->
+                       <a class="buyBtn" href="#" title="加入购物车" onclick="">加入购物车</a>
+                    </div>
+                    </div>
+                    
               <!-- 每个区域都会放上图片、名称、描述、价格、购物数量及加入购物车 -->
               </div>
               <div class="sbox sbox-0">
               <!-- 每个区域都会放上图片、名称、描述、价格、购物数量及加入购物车 -->
-                <span class="s0-01-img"><img src="images/s0-01.png"></span>
+                <span class="s0-01-img"><img src="images/s0-02.jpg"></span>
                     <p class="s0-01-title">佛手瓜 300g/包</p>
-                    <p>每100g鲜南瓜含淀粉10.2g，钙39mg</p>
+                    <p class="s0-01-detail">每100g鲜南瓜含淀粉10.2g，钙39mg</p>
                     <p class="s0-01-price">￥<span>15.00</span>元</p>
+                                       <div class="s0-buy">
+                      <div class="s0-buyNum">
+                      <span class="num-option minus">-</span>
+                      <input type="text" class="num-each" value="1">
+                      <span class="num-option add">+</span>
+                    </div>
+                    <div class="buy-cart"><!-- 此处为每个商品的购物车按钮 -->
+                      <a class="buyBtn" href="#" title="加入购物车" onclick="">加入购物车</a>
+                    </div>
+                    </div>
+                    
               <!-- 每个区域都会放上图片、名称、描述、价格、购物数量及加入购物车 -->
               </div>
               <div class="sbox sbox-0">
               <!-- 每个区域都会放上图片、名称、描述、价格、购物数量及加入购物车 -->
-                <span class="s0-01-img"><img src="images/s0-01.png"></span>
+                <span class="s0-01-img"><img src="images/s0-02.jpg"></span>
                     <p class="s0-01-title">佛手瓜 300g/包</p>
-                    <p>每100g鲜南瓜含淀粉10.2g，钙39mg</p>
+                    <p class="s0-01-detail">每100g鲜南瓜含淀粉10.2g，钙39mg</p>
                     <p class="s0-01-price">￥<span>15.00</span>元</p>
+                                       <div class="s0-buy">
+                      <div class="s0-buyNum">
+                      <span class="num-option minus">-</span>
+                      <input type="text" class="num-each" value="1">
+                      <span class="num-option add">+</span>
+                    </div>
+                    <div class="buy-cart"><!-- 此处为每个商品的购物车按钮 -->
+                       <a class="buyBtn" href="#" title="加入购物车" onclick="">加入购物车</a>
+                    </div>
+                    </div>
+                    
               <!-- 每个区域都会放上图片、名称、描述、价格、购物数量及加入购物车 -->
               </div>
               </div>
+            <!--第二个list项结束  -->
+
 </div>
 
 <!-- 右边结束 -->
