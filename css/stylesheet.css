@@ -1,4 +1,4 @@
-*************全局设置部分*******june******************************/
+/*************全局设置部分*******june******************************/
 html{
 	overflow-y: scroll;
 	margin: 0; 
@@ -1358,6 +1358,7 @@ td {
 .count input {
     width:31px;
     height:30px;
+    line-height: 30px;
     background: url(../images/input.jpg) no-repeat;
     border:0;
     text-align: center;
@@ -1484,7 +1485,7 @@ td {
 }
 .succ_content{
 	width:725px;
-	margin-left: 227px;
+	margin-left: 300px;
 	margin-top: 100px;
 	background: url(../images/succ.jpg) no-repeat;
 
@@ -1533,13 +1534,13 @@ td {
 	text-align: center;
 	font-family:"Microsoft YaHei";
 	background: url(../images/paybtn.jpg) no-repeat;
-	margin-left: 200px;
+	margin-left: 152px;
 	margin-top:35px;
 	margin-bottom: 80px;
 }
 .paybtn a{
 	text-decoration: none;
 	color: #fff;
-	/**********龚颖***订单提交成功页面********end********/
+	
 }
-
+/**********龚颖***订单提交成功页面********end********/
