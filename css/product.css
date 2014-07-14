@@ -382,10 +382,8 @@ img.o-place {
 	border:1px solid #eee;
 }
 .main{
-	/*background-color: #eee;*/
 	margin-top:10px;
 	width:1180px;
-/*	height:1500px;*/
 }
 .left_list{
 	float:left;
@@ -401,7 +399,6 @@ img.o-place {
 	font-family:宋体;
 	font-weight:bold;
 	color:#4a4a4a;
-/*	height:40px;*/
 	padding-left: 10px;
 	padding-top: 13px;
 	padding-bottom: 13px;
@@ -476,4 +473,161 @@ img.o-place {
 .list_more img{
 	position: relative;
 	top: 3.5px;
+}
+/**龚颖**排行榜*******end**********/
+/*悬浮购物车*/
+.cart{
+	width:390px;
+	border:1px solid #a3d36a;
+	font-family:"新宋体";
+	height: 495px;
+	position: fixed;
+	right: 0;
+	top: 240px;
+}
+#fullcart{
+	/*display:none;*/
+}
+#emptycart{
+	display: none;
+}
+
+.go_acc{
+	background: #ecf6e0;
+	height: 60px;
+}
+.cart_close{
+	position: relative;
+	top:-2px;
+	margin-left: 350px;
+}
+.acc{
+	color:#fff;
+	font-size: 16px;
+	line-height: 35px;
+	width:230px;
+	height: 35px;
+	background: url(../images/accbtn.jpg
+		);
+	text-align:center;
+	font-weight: bold;
+	margin:-3px auto 10px 80px;
+}
+.cart_title{
+	margin-top: 1px;
+	background: #f2f0f0;
+	height: 30px;
+	line-height: 30px;
+	color: #666;
+	font-size:12px;
+}
+.tit_black{
+	color: #333;
+}
+.tit_red{
+	color:#fe1212;
+	font-size:13px;
+	font-weight: bold;
+}
+.cart_content{
+	overflow-y: scroll;
+	height: 403px;
+	margin-top: 1px;
+}
+table{
+	border-spacing:0;
+}
+tr{
+		height: 80px;
+}
+td{
+	border-bottom: 1px dotted #ebebeb;
+
+	margin-top: 5px;
+}
+.count{
+	padding-left:10px;
+	width: 90px;
+}
+.add, .count input{
+    float: left;
+    margin-right: 2px;
+    position: relative;
+
+}
+.add{
+	background: url(../images/plus.jpg) no-repeat;
+	width:25px ;
+	height: 30px;
+	cursor: pointer;
+}
+.reduce {
+   	background: url(../images/minus.jpg) no-repeat;
+	width:25px ;
+	height: 30px;
+	cursor: pointer;
+	float: left;
+    margin-right: 1px;
+    position: relative;
+
+}
+.count input {
+    width:31px;
+    height:30px;
+    line-height: 30px;
+    background: url(../images/input.jpg) no-repeat;
+    border:0;
+    text-align: center;
+    font-size: 16px;
+    color:#666;
+    font-weight: bold;
+}
+.pro_icon{
+	width:65px;
+}
+.cart_click{
+	color:#333;
+	font-size: 12px;
+	line-height: 15px;
+}
+.cart_click a{
+	text-decoration:none;
+	width: auto;
+	overflow: hidden;
+	display: inline-block;
+	word-break: normal;
+}
+.cart_click span{
+	color: #f60;
+}
+.delete{
+	width:20px;
+	cursor: pointer;
+}
+.delete img{
+	margin-bottom: 40px;
+}
+.empty img{
+	margin-top: 90px;
+	margin-left: 48px;
+}
+.cart_icon{
+	background: url(../images/cart.png) no-repeat;
+	filter:alpha(opacity=60);
+	opacity:1;
+	width:75px;
+	height: 60px;
+	position: fixed;
+	right: 0;
+	top: 180px;
+	cursor: pointer;
+}
+.cart_icon span{
+	font-size: 12px;
+	color: #f00;
+	font-family: "宋体";
+	margin-left: 16px;
+	width: 20px;
+	display: inline-block;
+	text-align: center;
 }
