@@ -1,13 +1,15 @@
 <!DOCTYPE html>
+<!--[if lt IE 9]><![endif]-->
 <html>
 <head>
-	<title>结算页面</title>
-	<meta charset="utf-8">
+  <title>提交成功</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=9,IE=10">
   <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
-  <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
   <script src="js/jquery-1.8.2.js"></script>
   <script src="js/jquery-ui.js"></script>
-  <link rel="stylesheet" type="text/css" href="css/style.css"> 
+  <link rel="stylesheet" href="css/style.css"> 
   <script type="text/javascript" src="js/myJs.js"></script>
 </head>
 <body>
@@ -41,7 +43,7 @@
           <form class="searchform" method="get"> 
           <input class="search-submit" type="submit" value=""/>
           <input id="search-input" class="search-input" type="text" name="" size="30px">
-          <input class="search-button" id="search-button" value="搜 索" />
+          <input class="search-button" id="search-button" value="搜 索"></input>
           </form>
           <div id="hot_search">
             <span>热门搜索：</span>
@@ -240,119 +242,29 @@
   <div class="cart_main">
     <!-- 结算流程图 -->
     <div class="acc_pic">
-      <img src="images/account.jpg">
+      <img src="images/account3.jpg">
     </div>
     <!-- 购物车标题 -->
     <div class="cart_title">
       <span style="background: url(images/cart_title.jpg) no-repeat;width: 20px;height: 28px;display: inline;margin-right: 7px;">&nbsp;&nbsp;</span>
-      <span>购物车</span>
-    </div>
-    <!-- 购物车表单、删除、全选、结算都实现了 -->
-    <div class="cart_table">
-      <table id="cartTable">
-      <thead>
-          <tr>
-              <th style="width:34px;"><input class="check-all check" type="checkbox"/></th>
-              <th style="width:114px;">全选</th>
-              <th style="width:549px;">名称规则</th>
-              <th style="width:119px;">单价</th>
-              <th style="width:94px;">积分</th>
-              <th style="width:144px;">数量</th>
-              <th>操作</th>
-          </tr>
-      </thead>
-      <tbody>
-          <tr>
-              <td class="checkbox"><input class="check-one check" type="checkbox"/></td>
-              <td><img src="images/cart_pro.jpg" /></td>
-              <td class="goods"><span>新西兰佳沛阳光花菜加介篮 16个 </span></td>
-              <td class="price">￥84.00</td>
-              <td class="integral">84</td>
-              <td class="count">
-                  <span class="reduce"></span>
-                  <input class="count-input" type="text" value="1"/>
-                  <span class="add"></span></td>
-              <td><div class="delete">删除</div></td>
-          </tr>
-          <tr>
-              <td class="checkbox"><input class="check-one check" type="checkbox"/></td>
-              <td><img src="images/cart_pro.jpg" /></td>
-              <td class="goods"><span>新西兰佳沛阳光花菜加介篮 16个 </span></td>
-              <td class="price">￥184.00</td>
-              <td class="integral">184</td>
-              <td class="count">
-                  <span class="reduce"></span>
-                  <input class="count-input" type="text" value="1"/>
-                  <span class="add"></span></td>
-              <td><div class="delete">删除</div></td>
-          </tr>
-          <tr>
-              <td class="checkbox"><input class="check-one check" type="checkbox"/></td>
-              <td><img src="images/cart_pro.jpg" /></td>
-              <td class="goods"><span>新西兰佳沛阳光花菜加介篮 16个 </span></td>
-              <td class="price">￥184.00</td>
-              <td class="integral">184</td>
-              <td class="count">
-                  <span class="reduce"></span>
-                  <input class="count-input" type="text" value="1"/>
-                  <span class="add"></span></td>
-              <td><div class="delete">删除</div></td>
-          </tr>
-          <tr>
-              <td class="checkbox"><input class="check-one check" type="checkbox"/></td>
-              <td><img src="images/cart_pro.jpg" /></td>
-              <td class="goods"><span>新西兰佳沛阳光花菜加介篮 16个 </span></td>
-              <td class="price">￥184.00</td>
-              <td class="integral">184</td>
-              <td class="count">
-                  <span class="reduce"></span>
-                  <input class="count-input" type="text" value="1"/>
-                  <span class="add"></span></td>
-              <td><div class="delete">删除</div></td>
-          </tr>
-          <tr>
-              <td class="checkbox"><input class="check-one check" type="checkbox"/></td>
-              <td><img src="images/cart_pro.jpg" /></td>
-              <td class="goods"><span>新西兰佳沛阳光花菜加介篮 16个 </span></td>
-              <td class="price">￥184.00</td>
-              <td class="integral">184</td>
-              <td class="count">
-                  <span class="reduce"></span>
-                  <input class="count-input" type="text" value="1"/>
-                  <span class="add"></span></td>
-              <td><div class="delete">删除</div></td>
-          </tr>
-          <tr>
-              <td class="checkbox"><input class="check-one check" type="checkbox"/></td>
-              <td><img src="images/cart_pro.jpg" /></td>
-              <td class="goods"><span>新西兰佳沛阳光花菜加介篮 16个 </span></td>
-              <td class="price">￥184.00</td>
-              <td class="integral">184</td>
-              <td class="count">
-                  <span class="reduce"></span>
-                  <input class="count-input" type="text" value="1"/>
-                  <span class="add"></span>
-              </td>
-              <td><div class="delete">删除</div></td>
-          </tr>
-          </tbody>
-      </table>
-      <!-- 购物车小计、结算 -->
-      <div class="cart_foot" id="cart_foot">
-          <div class=" fl deleteAll"><a id="deleteAll" href="javascript:;">删除选中商品</a></div>
-          <div class="fr total">购物车小计：<span id="priceTotal">￥184.00</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;积分小计:
-          <span id="intergralTotal">￥184</span>
-        </div>
+      <span>订单提交成功</span>
+    </div>    
+  </div>
+  <div class="succ_main">
+    <div class="succ_content">
+      <span class="succ_tip">订单已完成提交，请尽快完成支付！</span>
+      <p>订单号：2014070935681 应付金额：<span class="succ_price">￥207.00</span>&nbsp;元<br />
+        <span style="line-height:14px;"><br /></span>
+      请您在提交订单后24小时内完成支付，否则订单会自动取消；<br />
+      如需修改订单支付方式请在尚田农品》订单管理》我的订单点击立即支付进行修改。<br />
+      </p>
+      <div class="pay_menthod">
+        <span style="vertical-align: top;">您已选择的支付方式：</span>
+        <span class="bank_icon">
+          <img src="images/bank.jpg" alt="">
+        </span>
       </div>
-       <div class="fr selected" id="selected">
-        <span id="selectedTotal"></span>
-    </div>
-      <div class="sum">
-        <div class="fl back"><a href="">&nbsp;返回购物</a>
-        </div>
-        <div class="fr closing">去结算</div>
-        <span class="fr tip" id="tip">满<span class="tip_red">118</span>包邮，您还差<span class="tip_red" id="diff"></span>元&nbsp;&nbsp;</span>
-      </div>
+      <div class="paybtn"><a href="">立即支付</a></div>
     </div>
   </div>
 </div>
@@ -365,9 +277,9 @@
     <h3>关于我们</h3>
     <ul>
       <li><a href="#">关于华大尚田</a></li>
-	  <li><a href="#">公司架构</a></li>
-	  <li><a href="#">生产基地</a></li>
-	  <li><a href="#">招贤纳士</a></li>
+    <li><a href="#">公司架构</a></li>
+    <li><a href="#">生产基地</a></li>
+    <li><a href="#">招贤纳士</a></li>
     </ul>
   </div>
     <div class="column icon_g2">
