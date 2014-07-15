@@ -786,9 +786,10 @@ div.zoomMask {
 #cart_table .cart_delete img{
 	margin-bottom: 40px;
 }
-#cart_table .empty img{
-	margin-top: 90px;
-	margin-left: 48px;
+.empty img{
+	width:65%;
+	margin-top: 35px;
+	margin-left: 78px;
 }
 .cart_icon{
 	background: url(../images/cart.png) no-repeat;
