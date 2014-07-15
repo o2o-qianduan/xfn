@@ -12,6 +12,125 @@
   <script src="js/jquery-ui.js"></script>
   <script type="text/javascript" src="js/myJs.js"></script>
   <script type="text/javascript" src="js/account.js"></script>
+  <script type="text/javascript" src="js/jquery.XYTipsWindow.min.2.8.js"></script>
+  <style type="text/css">
+.XYTipsWindow .boxLoading {
+  position: absolute;
+  display: block;
+  width: 90px;
+  height: 30px;
+  line-height: 30px;
+  margin-left: -45px;
+  margin-top: -15px;
+  left: 50%;
+  top: 50%;
+  color: #f00;
+}
+.XYTipsWindow .boxLoading {
+  width: 28px;
+  margin-left: -14px;
+  background: url("images/loading.gif") no-repeat;
+  text-indent: -999em;
+  text-align: center;
+}
+.XYTipsWindow .boxTitle, .XYTipsWindow .boxTitle span, .XYTipsWindow .boxTitle span.hover, .XYTipsWindow .loadinglayer, .XYTipsWindow .tipslayer, .XYTipsWindow .arrowLeft, .XYTipsWindow .colseBtn, .XYTipsWindow .boxError em, .XYTipsWindow .dialogBtn, .XYTipsWindow .dialogBtn.hover {
+  background-image: url("images/ico.png");
+  background-repeat: no-repeat;
+}
+.XYTipsWindow .boxTitle {
+  position: relative;
+  border: 1px solid #A6C9E1;
+  border-bottom: none;
+  background-position: 0 0;
+  background-repeat: repeat-x;
+  height: 30px;
+  line-height: 30px;
+}
+.XYTipsWindow .boxTitle h3 {
+  float: left;
+  font-weight: normal;
+  color: #666;
+  font-size: 14px;
+  margin: 0;
+  text-indent: 10px;
+}
+.XYTipsWindow .boxTitle span {
+  position: absolute;
+  width: 10px;
+  background-position: -80px -40px;
+  text-indent: -10em;
+  right: 10px;
+  top: 10px;
+  height: 16px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.XYTipsWindow .boxTitle span.hover {
+  background-position: -90px -40px;
+}
+.XYTipsWindow .loadinglayer {
+  line-height: 40px;
+  background-position: 0 -100px !important;
+}
+.XYTipsWindow .tipslayer {
+  line-height: 20px;
+  text-align: left;
+}
+.XYTipsWindow .arrowLeft {
+  position: absolute;
+  width: 8px;
+  height: 16px;
+  background-position: -20px -170px;
+  text-indent: -9999em;
+  z-index: 20591;
+  overflow: hidden;
+}
+.XYTipsWindow .colseBtn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 8px;
+  height: 8px;
+  background-position: -55px -170px;
+  text-indent: -9999em;
+  cursor: pointer;
+  z-index: 20591;
+  overflow: hidden;
+}
+.XYTipsWindow .boxError {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -60px;
+  margin-top: -15px;
+  width: 120px;
+  height: 30px;
+  line-height: 30px;
+  color: #f00;
+}
+.XYTipsWindow .boxError em {
+  float: left;
+  width: 30px;
+  height: 30px;
+  background-position: -35px -140px;
+}
+.XYTipsWindow .dialogBtn {
+  margin: 5px 5px 0 0;
+  width: 80px;
+  height: 35px;
+  background-position: 0 -30px;
+  border: none;
+  color: #333;
+}
+.XYTipsWindow .dialogBtn.hover {
+  background-position: 0 -65px;
+}
+.XYTipsWindow.shadow {
+  box-shadow: 2px 2px 5px #C0BBB5;
+  -moz-box-shadow: 2px 2px 5px #C0BBB5;
+  -webkit-box-shadow: 2px 2px 5px #C0BBB5;
+}
+</style>
   <link rel="stylesheet" href="css/style.css"> 
   <link rel="stylesheet" href="css/account2.css"> 
  
@@ -263,14 +382,23 @@
       <div class="old_address rail">
         <ul>
           <li>
-            <a class="modify" href="#">修改</a>
-            <a href="#" class="del">删除</a>
-           <input name="address" class="ss" type="radio"  />
-           <label class="default fontway">Bingo 华南农业大学华山公寓9栋
-            18825165243
-           </label>
-           <em class="tip">默认地址</em>
+            <a class="modify_address" href="#">修改</a>
+            <a href="#" class="del_address" >删除</a>
+            <input name="address" class="ss" type="radio"  />
+            <label class="default fontway">Bingo 广东省广州市天河区 华南农业大学华山公寓9栋 18825165243
+           </label>         
+            <em class="tip">默认地址</em>
           </li>
+
+          <li>
+            <a class="modify_address" href="#">修改</a>
+            <a href="#" class="del_address" >删除</a>
+            <input name="address" class="ss" type="radio"  />
+            <label class="default fontway">huangwnebing 广东省广州市天河区 华南农业大学华山公寓9栋 18825165243
+           </label>         
+            <em class="tip">默认地址</em>
+          </li>
+
         </ul>
       </div>
         <div class="new_address">
@@ -279,32 +407,36 @@
            <label class="fontway new_use">使用新地址</label>
           </div>
           <div class="per_name fontway">
-            <label for="username">收 货 人：</label>
-            <input id="username" type="text" />
+            <label for="consignee">收 货 人：</label>
+            <input id="consignee" type="text" />
           </div>
           <div class="select_place fontway">
             <label>所在地区：</label>
             <select id="selProvince" >
-               <option>请选择...</option>
+               <option selected="selected">请选择...</option>
+               <option>广东</option>
             </select>
 
             <select name="selCity" id="selCity" >
-              <option>请选择...</option>
+              <option selected="selected">请选择...</option>
+              <option>广州</option>
             </select>
 
               <select name="selRegion" id="selRegion" >
-              <option>请选择...</option>
+              <option selected="selected">请选择...</option>
+              <option>天河区</option>
+              <option>越秀区</option>
             </select>
 
             <label id="cant">此区域有无法送达的商品，请回到购物车修改商品</label>
           </div>
            <div class="detail_add fontway">
-            <label for="username">详细地址：</label>
-            <input id="username" type="text" />
+            <label for="detail_address">详细地址：</label>
+            <input id="detail_address" type="text" />
           </div>
            <div class="mobile_phone fontway">
-            <label for="username">手机号码：</label>
-            <input id="username" type="text" />
+            <label for="phone_num">手机号码：</label>
+            <input id="phone_num" type="text" />
           </div>
           <a href="#" class="save_send green_bg">保存并配送到这个地址</a>
         </div>
@@ -326,7 +458,7 @@
               <label class="fontway new_use">配送方式</label>
             </div>
 
-            <div class="pay_met">
+            <div class="pay_met online_pay">
                <a class="green_bg  met" href="#">支付方式</a>
                <p class="pcant">在线支付 请您在提交订单后24小时内完成支付，否则订单会自动取消</p>
             </div>
@@ -394,7 +526,7 @@
                <label class="fontway">礼品卡可在个人中心进行</label>
                <a href="#">激活</a>
               </div>
-              <div id="gift_bg">
+              <div id="gift_bg" class="fontway">
                 <label>礼品卡</label>
                 <label>面值</label>
                 <label>余额</label>
@@ -422,9 +554,9 @@
             <div class="same_bg" id="invoice_border">
               <div id="inner_four">
                <input id="need" type="radio" name="need" />
-                <label for="need">需要</label>
-                <input id="notneed" type="radio" name="need" />
-                <label>不需要</label>
+                <label class="fontway" for="need">需要</label>
+                <input  id="notneed" type="radio" name="need" />
+                <label class="fontway">不需要</label>
               </div>
                <a href="#" class="green_bg">确认发票信息</a>
             </div>

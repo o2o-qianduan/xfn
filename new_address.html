@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>修改地址</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=9,IE=10">
+  <link rel="stylesheet" href="css/account2.css"> 
+  <style type="text/css">
+  #mod_add{
+  	margin: 20px 10px;
+  }
+  
+  </style>
+ </head>
+ <body>
+ 	<div class="new_address" id="mod_add">
+          <div class="per_name fontway">
+            <label for="username">收 货 人：</label>
+            <input id="username" type="text" />
+          </div>
+          <div class="select_place fontway">
+            <label>所在地区：</label>
+            <select id="selProvince" >
+               <option>请选择...</option>
+            </select>
+
+            <select name="selCity" id="selCity" >
+              <option>请选择...</option>
+            </select>
+
+              <select name="selRegion" id="selRegion" >
+              <option>请选择...</option>
+            </select>
+
+            <label id="cant">此区域有无法送达的商品，请回到购物车修改商品</label>
+          </div>
+           <div class="detail_add fontway">
+            <label for="username">详细地址：</label>
+            <input id="username" type="text" />
+          </div>
+           <div class="mobile_phone fontway">
+            <label for="username">手机号码：</label>
+            <input id="username" type="text" />
+          </div>
+          <a href="#" class="save_send green_bg">保存并配送到这个地址</a>
+        </div>
+ </body>
+ </html>
