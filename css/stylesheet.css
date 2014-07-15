@@ -10,6 +10,7 @@ body {
 	font-family:'微软雅黑';
 	margin: 0px;
 	padding: 0px;
+	min-height: 705px;
 }
 body, td, th, input, textarea, select, {
 	font-size: 12px;
@@ -17,6 +18,10 @@ body, td, th, input, textarea, select, {
 p{
 	text-indent: 0.25em;
 }
+a{
+	text-decoration: none;
+}
+
 /***************全局设置部分结束*******june*******************/
 
 
@@ -139,8 +144,6 @@ li {list-style-type: none;}
 	*font-family: Arial;/*防止非utf-8引起的hack失效问题 */
 	width: 30px;
 	height: 31px;
-	
-
 }
 
 .search-submit{
@@ -177,14 +180,20 @@ li {list-style-type: none;}
 	font-weight: bold;
 	cursor: pointer;
 }
-.searchdiv .hot_search{
+.searchdiv #hot_search{
 	height: 22px;
 	font-family: "新宋体";
 	font-size: 12px;
 	color: #636363;
 	padding-top: 5px;
 }	
-
+#hot_search a{
+	text-decoration: none;
+	color: #000000;
+}
+#hot_search a:hover{
+	color: red;
+}
 /*我的尚田*/
 
 .tel{
@@ -222,6 +231,9 @@ li {list-style-type: none;}
 	font-family: "微软雅黑" "MicroSoft Yehei";
 	text-decoration: none;
 }
+.all_classify a:hover{
+	text-decoration: none;
+}
 
 /*导航栏*/
 .navitem ul{
@@ -251,7 +263,6 @@ li {list-style-type: none;}
     position: relative;
     float: left;
     top: 10px;/**/
-
 }
 
 /*.navitem li+li a{
@@ -372,7 +383,6 @@ li {list-style-type: none;}
 	width: 3000px;
 	top: 0px;
 	left: 0px;
-	
 }
 .v-bot-list ul{
 	float: left;
@@ -380,7 +390,6 @@ li {list-style-type: none;}
 .v-bot-list ul li {
 	float: left;
 	padding: 2px;
-
 }
 .v-bot-list ul li a {
 	display: block;
@@ -406,14 +415,14 @@ li {list-style-type: none;}
 #ava{
 	width: 215px;
 	height: 135px;
-	background: url(../images/ava.png) no-repeat;
+/*	background: url(../images/ava.png) no-repeat;*/
 }
 
 #veg{
 	width: 215px;
 	height: 135px;
 	margin-top: 5px;
-	background: url(../images/veg.png) no-repeat;
+/*	background: url(../images/veg.png) no-repeat;*/
 }
 
 
@@ -523,6 +532,10 @@ li {list-style-type: none;}
 	float: left;
 	margin-left: 20px;
 }
+.rpsp-content a{
+	color: #000000;
+	font-size: 12px;
+}
 .rpsp-01,.rpsp-02,.rpsp-03,.rpsp-04{
 	width: 295px;
 	margin-top: 23px;
@@ -547,7 +560,7 @@ li {list-style-type: none;}
 	font-family: "新宋体";
 	display: block;
 	padding-bottom: 4px;
-
+	color: #000000;
 }
 .rpsp-01-title,.rpsp-01-star,.rpsp-01-date,.rpsp-01-appraisal,
 .rpsp-02-title,.rpsp-02-star,.rpsp-02-date,.rpsp-02-appraisal,
@@ -676,6 +689,10 @@ li {list-style-type: none;}
 	font-family: "宋体";
 	margin-left: 220px;
 }
+.tabs-right-up{
+	margin-bottom: 15px;
+	height: 100%;
+}
 .tabs-right-up-title{
 	font-size: 16px  !important;
 	font-weight: bold;
@@ -703,7 +720,7 @@ li {list-style-type: none;}
 .tabs-right-down{
 	display: block;
 	position: relative;
-	margin: 10px auto;
+	margin: 0px auto;
 	width: 100%;
 }
 .tabs-right-down a{
@@ -715,19 +732,18 @@ li {list-style-type: none;}
 
 .tabs-list-left{
 	float: left;
-	width: 290px;
+	width: 620px;
 	margin-left: 10px;
-	padding-bottom: 15px;
+	display: inline-block;
+	height: 100%;
+	text-align: left;
+	margin-top: 20px;
 }
-.tabs-list-right{
-	float: left;
-	position: absolute;
-	margin-left: 330px;
-	width: 290px;
-	padding-bottom: 15px;
-}
-.tabs-right-down-li{
+.tabs-list-left li{
 	padding-left: 10px;
+	float: left;
+	padding-top: 10px;
+	width: 280px;
 }
 
 
@@ -1254,12 +1270,8 @@ img{
 
 /******************首页最顶部轮播部分**************june****end********/
 
-<<<<<<< HEAD
 
-
-=======
 /**********首页三个图片一次性轮播部分***bing******/
->>>>>>> 8e1a603c797d08cd17c6dc2a15550717a50ae3b6
 /*啊颖写的开始了哈*/
 .cart_main{
 	width:1180px;
@@ -1280,7 +1292,7 @@ img{
 	font-size: 20px;
 }/*标题*/
 /*下面是结算表格*/
-.cart_table{
+.carttable{
 	margin-top: 10px;
 }
 .fl{
@@ -1289,34 +1301,34 @@ img{
 .fr {
     float: right;
 }
-table {
+#cartTable{
     border-collapse: collapse;
     border-spacing: 0;
     border: 1px solid #fff;
     text-align: center;
     width:1180px;;
 }
-th, td {
+#cartTable th, td {
     border: 1px solid #fff;
 }
-th {
+#cartTable th {
     background: #e8e9e8;
     height: 35px;
     color:#3c3c3c;
     font-family: "Microsoft Yahei";
 }
-td {
+#cartTable  td {
     padding: 10px;
     color: #5e5e5e;
     background:#effae3;
     font-size: 14px; 
     vertical-align : middle;
 }
-.goods {
+ #cartTable .goods {
     width: 300px;
     overflow: hidden;
 }
-.goods span {
+ #cartTable .goods span {
     /*width: 180px;*/
     text-align: left;
     float: left;
@@ -1324,28 +1336,28 @@ td {
     font-size: 14px;
     font-weight: bold;
 }
-.price {
+#cartTable .price {
     
     color:#2f9900;
     font-size: 16px;
     font-family: "Microsoft YaHei";
 }
-.count{
+#cartTable .count{
 	padding-left:28px;
 }
-.add, .count input{
+#cartTable .add, .count input{
     float: left;
     margin-right: 2px;
     position: relative;
 
 }
-.add{
+#cartTable .add{
 	background: url(../images/plus.jpg) no-repeat;
 	width:25px ;
 	height: 30px;
 	cursor: pointer;
 }
-.reduce {
+#cartTable .reduce {
    	background: url(../images/minus.jpg) no-repeat;
 	width:25px ;
 	height: 30px;
@@ -1355,7 +1367,7 @@ td {
     position: relative;
 
 }
-.count input {
+#cartTable .count input {
     width:31px;
     height:30px;
     line-height: 30px;
@@ -1366,17 +1378,28 @@ td {
     color:#666;
     font-weight: bold;
 }
-.integral {
+#cartTable .integral {
     font-size:16px;
     color:#808080;
     font-family: "Microsoft YaHei";
 }
-.operation span:hover, a:hover {
+#cartTable .operation span:hover {
     cursor: pointer;
     color: red;
     text-decoration: underline;
 }
-.cart_table img {
+#cartTable .delete{
+	background: url(../images/delbtn.jpg) no-repeat;
+	width:76px;
+	height: 30px;
+	margin:auto; 
+	line-height: 30px;
+	font-size: 14px;
+	font-family: "新宋体";
+	color:#464646;
+	cursor: pointer;
+}
+#cartTable .carttable img {
    border:1px solid #fff;
 }
 
@@ -1394,7 +1417,33 @@ td {
     line-height: 48px;
     height: 48px;
 }
-.closing {
+.cart_foot  #priceTotal, .cart_foot #intergralTotal {
+    color: #2f9900;
+    font-size: 20px;
+    font-family: "Microsoft Yahei";
+}
+
+.cart_foot .deleteAll{
+	margin-top: 10px;
+	background:url(../images/delete.jpg) no-repeat;
+	width:150px;
+	height: 30px;
+	display:inline-block;
+}
+.cart_foot .deleteAll a{
+	line-height: 30px;
+	font-size: 14px;
+	color:#fff;
+	text-decoration: none;
+	margin-left:30px;
+	position: absolute;
+}
+.acc_sum{
+	width:1180px;
+	height:50px;
+	margin-top: 15px;
+}
+.acc_sum .closing {
 	line-height: 50px;
 	width:190px;
 	height: 50px;
@@ -1405,51 +1454,15 @@ td {
     cursor: pointer;
     background: url(../images/sum.jpg) no-repeat;
 }
-.cart_foot  #priceTotal, .cart_foot #intergralTotal {
-    color: #2f9900;
-    font-size: 20px;
-    font-family: "Microsoft Yahei";
-}
-.delete{
-	background: url(../images/delbtn.jpg) no-repeat;
-	width:76px;
-	height: 30px;
-	margin:auto; 
-	line-height: 30px;
-	font-size: 14px;
-	font-family: "新宋体";
-	color:#464646;
-	cursor: pointer;
-}
-.deleteAll{
-	margin-top: 10px;
-	background:url(../images/delete.jpg) no-repeat;
-	width:150px;
-	height: 30px;
-	display:inline-block;
-}
-.deleteAll a{
-	line-height: 30px;
-	font-size: 14px;
-	color:#fff;
-	text-decoration: none;
-	margin-left:30px;
-	position: absolute;
-}
 
-.sum{
-	width:1180px;
-	height:50px;
-	margin-top: 15px;
-}
-.back{
+.acc_sum .back{
 	margin-top:15px;
 	background:url(../images/back.jpg) no-repeat;
 	width:150px;
 	height:20px;
 	display:inline-block;
 }
-.back a{
+.acc_sum .back a{
 	margin-top: -5px;
 	line-height: 20px;
 	font-size: 20px;
@@ -1459,24 +1472,77 @@ td {
 	margin-left: 10px;
 	position: absolute;
 }
-.tip{
+.acc_sum .tip{
 	color:#666;
 	font-family:"Microsoft YaHei";
 	font-size: 20px;
 	margin-top: 10px;
 	display: none;
 }
-.tip_show{
+.acc_sum .tip_show{
 	color:#666;
 	font-family:"Microsoft YaHei";
 	font-size: 20px;
 	margin-top: 10px;
 }
-.tip_red{
+.acc_sum .tip_red{
 	color: #c00;
 }
 /************龚颖结算页面*********end*******************/
+/****产品详情页部分样式修改**********june****start**/
+.afford_way{
+	height: 25px;
+	display:inline-block;
+}
+.afford_way a{
+	text-decoration: none;
+	color: #666666;
+	float: left;
+/*	padding-top: 10px;*/
+}
+.afford_way img{
+	margin-top: 3px;
+	float: right;
+}
+.pay-how{
+	width: 180px;
+	height: 105px;
+	display: block;
+	position: relative;
+	float: right;
+	margin-top: 35px;
+	right: -90px;
+	border:1px solid #e2e2e4;
+	background: repeat-x scroll top center #ffffff;
+}
+.pay-list{
+	display: inline-block;
+	list-style:none; 
+	float: left;
+	margin-top: 15px;
 
+}
+.pay-list li{
+	float: left;
+	font-size: 12px;
+	margin-left: 30px;
+	text-align: left;
+	width: 60px;
+}
+.pay-list a{
+	text-decoration: none;
+	color: #444444;
+}
+.pay-list a:hover{
+	color: red;
+}
+.pay-how .cashCart{
+	position: absolute;
+	left: 7px;
+	top: 13px;
+}
+
+/****产品详情页部分样式修改**********june******end**************/
 /*************订单提交成功页面****************/
 .succ_main{
 	width:1180px;
@@ -1502,6 +1568,7 @@ td {
 .succ_tip{
 	font-size: 25px;
 	font-family:"Microsoft YaHei";
+	font-family: "方正正中黑简体";
 	color: #60b100;
 	margin-left: 105px;
 	}

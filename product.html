@@ -258,28 +258,92 @@
       <div class="product">
         <div class="left_product"> <!-- 左中 -->
 
-          <!-- 左边大图 -->
-          <div class="left_banner">
-            <a href="images/product.png" >
-              <img id="left_picture" class="jqzoom" src="images/pro_01_mid.png" rel="images/pro_01.png" />
-            </a>
-            <div class="small_list">
-             <div id="prev_small" class="small_ctrl"><b></b></div>
-             <!-- 底部图片的放大镜效果 -->
-              <div class="pic_carousel">
-               <div class="small_carousel">
-                  <ul class="pro_img " id="thumblist">
-                   <li><a href="#"><b></b><img src="images/pro_01_small.png" mid="images/pro_01_mid.png" big="images/pro_01.png"/></a></li>
-                   <li><a href="#"><img src="images/pro_03_small.png" mid="images/pro_03_mid.png" big="images/pro_03.png"/></a></li>
-                   <li><a href="#"><img src="images/pro_02_small.png" mid="images/pro_02_mid.png" big="images/pro_02.png"/></a></li>
-                   <li><a href="#"><img src="images/pro_01_small.png" mid="images/pro_01_mid.png" big="images/pro_01.png"/></a></li>
-                   <li><a href="#"><img src="images/pro_03_small.png" mid="images/pro_03_mid.png" big="images/pro_03.png"/></a></li>
-                   <li><a href="#"><img src="images/pro_01.png" /></a></li>
-                  </ul>
-               </div>
-            </div>
-              <div id="next_small" class="small_ctrl"><b></b></div>
-            </div>
+<!-- 左边大图 -->
+<div class="left_banner">
+
+
+<div id="image-choice" class="i-list">
+
+<div class="tb-booth tb-pic tb-s310">
+<a href="./images//pro_03.png" target="_blank"><img  src="./images/pro_03_mid.png" alt="蔬菜" rel="./images//pro_03.png" class="jqzoom"></a>
+</div>
+ <div id="left-choice" class="ctrl"><img src="images/prev.png" alt="左切换"></div>
+ <div class="i-bot-list">
+<ul class="tb-thumb" id="thumblist">
+<li>  <!-- 第一个li -->
+ <div class="tb-pic tb-s40">
+<a href="#"><img  class="small-img" src="./images/pro_01_small.png" mid="./images/pro_01_mid.png" big="./images//pro_01.png"></a>
+</div>
+</li>
+
+<li><!-- 第二个li -->
+ <div class="tb-pic tb-s40">
+<a href="#"><img  class="small-img"  class="small-img"  src="./images/pro_02_small.jpg" mid="./images/pro_02_mid.jpg" big="./images//pro_02.jpg"></a>
+</div>
+</li>
+
+<li class="tb-selected"><!-- 第三个li -->
+ <div class="tb-pic tb-s40">
+<a href="#"><img  class="small-img" src="./images/pro_03_small.png" mid="./images/pro_03_mid.png" big="./images//pro_03.png"></a>
+</div>
+</li>
+
+<li><!-- 第四个li -->
+ <div class="tb-pic tb-s40">
+<a href="#"><img  class="small-img" src="./images/pro_04_small.png" mid="./images/pro_04_mid.png" big="./images//pro_04.png"></a>
+</div>
+</li>
+
+<li><!-- 第五个li -->
+ <div class="tb-pic tb-s40">
+<a href="#"><img class="small-img" src="./images//pro_05_small.png" mid="./images/pro_05_mid.png" big="./images//pro_05.png"></a>
+</div>
+</li>
+
+<li><!-- 第六个li -->
+ <div class="tb-pic tb-s40">
+<a href="#"><img  class="small-img" src="./images/pro_03_small.png" mid="./images/pro_03_mid.png" big="./images//pro_03.png"></a>
+</div>
+</li>
+
+
+<li><!-- 第七个li -->
+ <div class="tb-pic tb-s40">
+<a href="#"><img  class="small-img" src="./images/pro_05_small.png" mid="./images/pro_05_mid.png" big="./images//pro_05.png"></a>
+</div>
+</li>
+
+
+
+</ul>
+</div> 
+
+<div id="right-choice" class="ctrl"><img src="images/next.png" alt="右切换"></div></div>
+
+
+
+
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+  $(".jqzoom").imagezoom();
+
+  $("#thumblist li a").mouseover(function () {
+      $(this).parents("li").addClass("tb-selected").siblings().removeClass("tb-selected");
+    $(".jqzoom").attr('src',$(this).find("img").attr("mid"));
+    $(".jqzoom").attr('rel',$(this).find("img").attr("big"));
+  });
+
+
+
+
+});
+
+</script>
+
+
 
             <div class="bottom_link">
               <img src="images/share.png" />
@@ -331,6 +395,11 @@
               </div>
               <div class="account">
                 <p class="myfont">数量</p>
+                <div class="s0-buyNum account-num">
+                      <span class="num-option minus">-</span>
+                      <input type="text" class="num-each" value="0">
+                      <span class="num-option add">+</span>
+                </div>
                 <p>库存34123件</p>
               </div>
               <div class="shopping_button">
@@ -339,8 +408,21 @@
               </div>
               <div class="promise">
                 <p class="myfont">服务承诺</p>
-                <p class="afford_way">支付方式</p>
+                <p class="afford_way"><a href="#"  class="pay-way">支付方式<img src="images/down.png"></a></p>
               </div>
+             
+              <div class="pay-how"> <!-- 此处加入具体支付方式 默认隐藏june-->
+              <span class="cashCart"><img src="images/cashCart.png" alt="支付方式图标"></span>
+                <ul  class="pay-list">
+                  <li><a href="#">信用卡分期</a></li>
+                  <li><a href="#">快捷支付</a></li>
+                  <li><a href="#">网银支付</a></li>
+                  <li><a href="#">找人支付</a></li>
+                  <li><a href="#">消费卡</a></li>
+                  <li><a href="#">网点支付</a></li>
+                  <li><a href="#">支付宝余额</a></li>
+                </ul>
+              </div><!-- 此处加入具体支付方式 默认隐藏june-->
             </div>
           </div>
         </div><!-- 左中结束 -->
@@ -412,11 +494,67 @@
 
 
 
-    <!-- 搭配套餐 -->
+    <!-- 搭配套餐 --> <!-- 产品详情页“搭配、套餐”的切换  june -->
     <div class="combo">     
+      
+          <ul class="daBox">
+          <li class="daOption daOn0"><span id="dapei" class="dapei"><a href="#da-0">搭配</a></span></li>
+          <li class="daOption"><span id="taocan" class="taocan"><a href="#da-1">套餐</a></span></li>
+          </ul>
+          <div class="da-area">
+            <div id="da-0" class="da-0 daOn-0" >
+             <div class="da-0-pro">
+               <span class="da-0-img"><img src="images/s1-01.png"></span>
+               <p class="da-0-title">樱桃番茄 300g/包</p>
+               <p class="da-0-price">￥<span>46.00</span>元</p>
+               <p class="da-0-ad">搭配省140.00元</p>
+             </div>
+             
+             <div class="da-0-add">+</div><!-- 第一项产品后面会跟个“+” -->
 
-    </div>
+             <div class="da-0-pro">
+               <span class="da-0-img"><img src="images/s1-01.png"></span>
+               <p class="da-0-title">樱桃番茄 300g/包</p>
+               <p class="da-0-price">￥<span>46.00</span>元</p>
+               <p class="da-0-ad">搭配省140.00元</p>
+             </div>
+             <div class="da-0-pro">
+               <span class="da-0-img"><img src="images/s1-01.png"></span>
+               <p class="da-0-title">樱桃番茄 300g/包</p>
+               <p class="da-0-price">￥<span>46.00</span>元</p>
+               <p class="da-0-ad">搭配省140.00元</p>
+             </div>
+             <div class="da-0-pro">
+               <span class="da-0-img"><img src="images/s1-01.png"></span>
+               <p class="da-0-title">樱桃番茄 300g/包</p>
+               <p class="da-0-price">￥<span>46.00</span>元</p>
+               <p class="da-0-ad">搭配省140.00元</p>
+             </div>
+             <div class="da-0-pro">
+               <span class="da-0-img"><img src="images/s1-01.png"></span>
+               <p class="da-0-title">樱桃番茄 300g/包</p>
+               <p class="da-0-price">￥<span>46.00</span>元</p>
+               <p class="da-0-ad">搭配省140.00元</p>
+             </div>
 
+             <!-- 价格、立即购买 -->
+             <div class="da-all">
+               <p class="da-why">搭配买共省140.00元</p>
+               <p class="da-money">套餐价：￥<span class="da-price">268.00</span>X</p>
+               <input type="text" value="1" class="da-num">
+               <span class="da-buy"><a href="#">立即购买套餐</a></span>
+               <span class="da-cart"><a href="#">加入购物车</a></span>
+             </div>
+            </div>
+            <div id="da-1" class="da-0">
+               aaa
+              
+            </div>
+          </div>       
+    </div>  <!-- 产品详情页“搭配、套餐”的切换结束  june -->
+<!-- 产品详情页广告位 june-->
+        <div class="product-ad">广告位</div>
+        <!-- 产品详情页广告位 june-->
     <!-- 产品详情+下左侧栏 -->
     <div class="main">
       <!-- 左侧栏 -->
@@ -473,7 +611,7 @@
           </div>
         </div>
         <div class="list_more">
-          <span class="list_text">&nbsp&nbsp查看更多宝贝</span>
+          <span class="list_text">&nbsp;&nbsp;查看更多宝贝</span>
           <img src="images/checkMore.jpg" alt="" />
         </div>
       </div>
@@ -587,12 +725,36 @@
           </div>
         </div>
         <div class="list_more">
-          <span class="list_text">&nbsp&nbsp查看更多宝贝</span>
+          <span class="list_text">&nbsp;&nbsp;查看更多宝贝</span>
           <img src="images/checkMore.jpg" alt="" />
         </div>
       </div>
-      <!-- 产品详情 -->
-      <div class="pro_detail"></div>
+
+      <!-- 产品详情页“商品详情、评价、成交记录”的切换 june-->
+      <div class="pro_detail">
+        
+         <ul class="proBox">
+          <li class="proOption proOn0"><span id="spxq" class="spxq"><a href="#pro-0">商品详情</a></span></li>
+          <li class="proOption"><span id="pj" class="pj"><a href="#pro-1">评价</a></span></li>
+          <li class="proOption"><span id="cjjl" class="cjjl"><a href="#pro-2">成交记录</a></span></li>
+          </ul>
+          <div class="pro-area">
+            <div id="pro-0" class="pro-0 proOn-0" >
+             <img src="images/hdst.png" alt="华大尚田" class="hdst">
+            </div>
+            <div id="pro-1" class="pro-0">
+               aaa
+              
+            </div>
+            <div id="pro-2" class="pro-0">
+              bbbbbbbb
+              
+            </div>
+          </div>       
+
+      </div>
+      <!-- 产品详情页“商品详情、评价、成交记录”的切换 june-->
+
     </div>
 
 </div>
@@ -667,6 +829,193 @@ Copyright © 广州新富农农业科技有限公司
 <!-- 页脚部分结束 -->
 
 <!-- 内容区域结束 -->
+  <div class="cart_icon" id="cart_icon">
+    <span id="pro_count">0</span>
+  </div>
+  <div class="cart" id="cart">
+    <div class="go_acc">
+      <div class="cart_close">
+        <a href="javascript:closeCart()">
+          <img src="images/cart_close.jpg" />
+        </a>
+      </div>
+      <div class="acc">去结算</div>
+    </div>
+    <div class="cart_title">
+      <div style="float:left;">
+        <span class="tit_black">&nbsp;预估金额</span>
+        (
+        <span class="tit_red" id="priceAll">￥0</span>
+        )
+      </div>
+      <div style="float:right;">
+        <span class="tit_black" >商品数量</span>
+        (
+        <span class="tit_red" id="pro_num">0</span>
+        )&nbsp;
+      </div>
+    </div>
+    <div class="cart_content" id="fullcart">
+      <table id="cart_table">
+        <tr>
+          <td class="count">
+            <span class="reduce"></span>
+            <input class="count-input" type="text" value="1"/>
+            <span class="add"></span>
+          </td>
+          <td >
+            <div class="pro_icon">
+              <img src="images/icon55.jpg"></div>
+          </td>
+          <td>
+            <div class="cart_click">
+              <a href="#">
+                春盛达】生态大态态态大态态
+态大态态约500g/份
+              </a>
+              <div style="margin-top:10px;">
+                促销价：
+                <span>
+                  ￥ <em>9.90</em>
+                </span>
+                /份
+              </div>
+            </div>
+          </td>
+          <td class="cart_delete">
+            <img src="images/deletebtn.jpg"  />
+          </td>
+        </tr>
+
+        <tr>
+          <td class="count">
+            <span class="reduce"></span>
+            <input class="count-input" type="text" value="1"/>
+            <span class="add"></span>
+          </td>
+          <td >
+            <div class="pro_icon">
+              <img src="images/icon55.jpg"></div>
+          </td>
+          <td>
+            <div class="cart_click">
+              <a href="#">
+                春盛达】生态大态态态大态态
+态大态态约500g/份
+              </a>
+              <div style="margin-top:10px;">
+                促销价：
+                <span>
+                  ￥ <em>9.90</em>
+                </span>
+                /份
+              </div>
+            </div>
+          </td>
+          <td class="cart_delete">
+            <img src="images/deletebtn.jpg"  />
+          </td>
+        </tr>
+        <tr>
+          <td class="count">
+            <span class="reduce"></span>
+            <input class="count-input" type="text" value="1"/>
+            <span class="add"></span>
+          </td>
+          <td >
+            <div class="pro_icon">
+              <img src="images/icon55.jpg"></div>
+          </td>
+          <td>
+            <div class="cart_click">
+              <a href="#">
+                春盛达】生态大态态态大态态
+态大态态约500g/份
+              </a>
+              <div style="margin-top:10px;">
+                促销价：
+                <span>
+                  ￥
+                  <em>9.90</em>
+                </span>
+                /份
+              </div>
+            </div>
+          </td>
+          <td class="cart_delete">
+            <img src="images/deletebtn.jpg"  />
+          </td>
+        </tr>
+        <tr>
+          <td class="count">
+            <span class="reduce"></span>
+            <input class="count-input" type="text" value="1"/>
+            <span class="add"></span>
+          </td>
+          <td >
+            <div class="pro_icon">
+              <img src="images/icon55.jpg"></div>
+          </td>
+          <td>
+            <div class="cart_click">
+              <a href="#">
+                春盛达】生态大态态态大态态
+态大态态约500g/份
+              </a>
+              <div style="margin-top:10px;">
+                促销价：
+                <span>
+                  ￥
+                  <em>9.90</em>
+                </span>
+                /份
+              </div>
+            </div>
+          </td>
+          <td class="cart_delete">
+            <img src="images/deletebtn.jpg"  />
+          </td>
+        </tr>
+        <tr>
+          <td class="count">
+            <span class="reduce"></span>
+            <input class="count-input" type="text" value="1"/>
+            <span class="add"></span>
+          </td>
+          <td >
+            <div class="pro_icon">
+              <img src="images/icon55.jpg"></div>
+          </td>
+          <td>
+            <div class="cart_click">
+              <a href="#">
+                春盛达】生态大态态态大态态
+态大态态约500g/份
+              </a>
+              <div style="margin-top:10px;">
+                促销价：
+                <span>
+                  ￥
+                  <em>9.90</em>
+                </span>
+                /份
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="cart_delete">
+              <img src="images/deletebtn.jpg"  />
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="cart_content" id="emptycart">
+      <span class="empty">
+        <img src="images/emptycart.png" />
+      </span>
+    </div>
+  </div>
 </div>
 
 <!-- 整个容器部分结束 -->

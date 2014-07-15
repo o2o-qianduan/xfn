@@ -86,7 +86,7 @@ img#left_picture {
 	height: 61px;
 }
 .bottom_link{
-	margin: 49px 0 0 26px;
+	margin: 149px 0 0 26px;
 }
 
 .bottom_link a{
@@ -95,7 +95,7 @@ img#left_picture {
 	font-family: "宋体" "MicroSoft YeHei";	
 }
 .center_state{
-	float: left;
+	float: right;
 }
 .center_state h3{
 	padding: 16px 0 10px 14px ;
@@ -229,6 +229,12 @@ img.o-place {
 .shopping_button{
 	height: 94px;
 	border-bottom: 1px solid #DADADA;
+	   background-color: #f5f5f5;
+    border-bottom: 1px solid #dadada;
+    height: 108px;
+    left: -15px;
+    position: relative;
+    top: 3px;
 }
 .shopping_button a{
 	text-decoration: none;
@@ -375,12 +381,7 @@ img.o-place {
 }
 
 /*搭配套餐*/
-.combo{
-	margin-top: 10px;
-	width: 1180px;
-	height: 330px;
-	border:1px solid #eee;
-}
+
 .main{
 	margin-top:10px;
 	width:1180px;
@@ -405,8 +406,9 @@ img.o-place {
 }
 .pro_detail{
 	float:right;
-	height:1370px;
+	height:100%;
 	width:960px;
+	top: -10px;
 	background-color: #fff;
 	border:1px solid #dfdfdf;
 }
@@ -447,7 +449,7 @@ img.o-place {
 .list_saled{
 	font-size: 12px;
 	color: #999;
-	font-family: 宋体；
+	font-family: "宋体";
 
 }
 .saled_num{
@@ -474,21 +476,191 @@ img.o-place {
 	position: relative;
 	top: 3.5px;
 }
+
+
+.account-num{
+	float: left;
+	margin-top: 20px;
+	margin-left: 16px;
+}
+.pro_img_mid{
+	width: 350px;
+	height: 100%;
+}
+/***********产品详情页宝贝预览图******june***************start***********************/
+.i-list .ctrl{
+	background: none repeat scroll center top #ffffff;
+    border: 1px solid #CCCCCC;
+    float: left;
+    height: 68px;
+	position: absolute;
+	z-index: 199;
+	cursor: pointer;
+}
+.i-list #left-choice{
+	 left: 0;
+    position: relative;
+    top: 20px;
+    width: 15px;
+    z-index: 1;
+}
+
+.i-list #right-choice {
+    left: 389px;
+    position: relative;
+    top: -80px;
+    width: 15px;
+    z-index: 1;
+}
+.i-bot-list{
+	width: 1500px;
+	position: relative;
+}
+/*.right-choice{
+	margin-left: 387px;
+    margin-top: -80px;
+}*/
+#left-choice img,#right-choice img{
+ 	margin-top: 25px;
+ 	width: 8px;
+ 	padding-left: 2px;
+}
+.i-list{
+	float: left;
+	width: 410px;
+	position: relative;
+	overflow: hidden;
+}
+
+.tb-pic a {
+    display:table-cell;
+    text-align:center;
+    vertical-align:middle;
+}
+.tb-pic a img {
+    vertical-align:middle;
+}
+
+
+.tb-pic a{
+    *display:block;
+	*font-family:Arial;
+	*line-height:1;
+}
+.tb-selected .small-img{
+	background: url('../images/green.png') no-repeat 10px -10px;
+}
+.tb-thumb {
+  	margin:0 25px ;
+	overflow:hidden;
+	height: 100px;
+/*	width: 3000px;*/
+}
+.small-img{
+	height: 62px;
+	max-width: 62px;
+}
+
+
+.tb-thumb li {
+	float:left;
+	margin:20px 3px 0 2px;
+	overflow:hidden;
+	padding:1px;
+	border:1px solid #666666;
+	width: 63px;
+	height: 63px;
+}
+
+
+.tb-s310, .tb-s310 a {
+    height:403px;
+    width:403px;
+}
+
+.tb-s310, .tb-s310 img {
+    max-height:403px;
+    max-width:403px;
+}
+
+.tb-s310 a{
+    *font-size:271px;
+}
+
+
+.tb-s40 a{
+    *font-size:35px;
+}
+
+.tb-s40, .tb-s40 a {
+    height:40px;
+	width:40px;
+}
+
+
+.tb-booth {
+    border:1px solid #CDCDCD;
+	position:relative;
+	z-index:1;
+}
+
+
+.tb-thumb .tb-selected {
+    border:1px solid #C30008;
+	padding:2px;
+}
+
+.tb-thumb .tb-selected div {
+    background-color:#FFFFFF;
+	border:medium none;
+}
+
+.tb-thumb li div {
+    border:1px solid #CDCDCD;
+}
+
+div.zoomDiv {
+    z-index:999;
+	position: absolute;
+	top:0px;
+	left:0px;
+	width:200px;
+	height:200px;
+	background: #ffffff;
+	border:1px solid #CCCCCC;
+	display:none;
+	text-align: center;
+	overflow: hidden;
+}
+
+
+
+
+div.zoomMask {
+    position:absolute;
+    background:url("./images/mask.png") repeat scroll 0 0 transparent;
+	cursor:move;
+	z-index:1;
+}
+
+/*
+.box{
+    float: left;
+}*/
+
+/************产品详情页宝贝预览图******june***************end************************/
+
 /**龚颖**排行榜*******end**********/
 /*悬浮购物车*/
 .cart{
 	width:390px;
 	border:1px solid #a3d36a;
 	font-family:"新宋体";
-	height: 495px;
+	height: 423px;
 	position: fixed;
 	right: 0;
 	top: 240px;
-}
-#fullcart{
-	/*display:none;*/
-}
-#emptycart{
+	background: #fff;
 	display: none;
 }
 
@@ -520,6 +692,7 @@ img.o-place {
 	line-height: 30px;
 	color: #666;
 	font-size:12px;
+	width: auto;
 }
 .tit_black{
 	color: #333;
@@ -531,37 +704,37 @@ img.o-place {
 }
 .cart_content{
 	overflow-y: scroll;
-	height: 403px;
+	height: 330px;
 	margin-top: 1px;
 }
-table{
+#cart_table table{
 	border-spacing:0;
 }
-tr{
+#cart_table tr{
 		height: 80px;
 }
-td{
+#cart_table td{
 	border-bottom: 1px dotted #ebebeb;
 
 	margin-top: 5px;
 }
-.count{
+#cart_table .count{
 	padding-left:10px;
 	width: 90px;
 }
-.add, .count input{
+#cart_table .add, .count input{
     float: left;
     margin-right: 2px;
     position: relative;
 
 }
-.add{
+#cart_table .add{
 	background: url(../images/plus.jpg) no-repeat;
 	width:25px ;
 	height: 30px;
 	cursor: pointer;
 }
-.reduce {
+#cart_table .reduce {
    	background: url(../images/minus.jpg) no-repeat;
 	width:25px ;
 	height: 30px;
@@ -571,7 +744,7 @@ td{
     position: relative;
 
 }
-.count input {
+#cart_table .count input {
     width:31px;
     height:30px;
     line-height: 30px;
@@ -582,32 +755,37 @@ td{
     color:#666;
     font-weight: bold;
 }
-.pro_icon{
+#cart_table .pro_icon{
 	width:65px;
 }
-.cart_click{
+#cart_table .cart_click{
 	color:#333;
 	font-size: 12px;
 	line-height: 15px;
+
 }
-.cart_click a{
+#cart_table .cart_click a{
 	text-decoration:none;
 	width: auto;
 	overflow: hidden;
 	display: inline-block;
 	word-break: normal;
+	color: #333;
 }
-.cart_click span{
+#cart_table .cart_click em{
+	font-style: normal;
+}
+#cart_table .cart_click span{
 	color: #f60;
 }
-.delete{
+#cart_table .cart_delete{
 	width:20px;
 	cursor: pointer;
 }
-.delete img{
+#cart_table .cart_delete img{
 	margin-bottom: 40px;
 }
-.empty img{
+#cart_table .empty img{
 	margin-top: 90px;
 	margin-left: 48px;
 }
@@ -623,10 +801,10 @@ td{
 	cursor: pointer;
 }
 .cart_icon span{
-	font-size: 12px;
+	font-size: 13px;
 	color: #f00;
 	font-family: "宋体";
-	margin-left: 16px;
+	margin-left: 17px;
 	width: 20px;
 	display: inline-block;
 	text-align: center;
