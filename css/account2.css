@@ -242,12 +242,81 @@
 	height: 41px;
 	line-height: 41px;
 }
-
-.goods{
-	height: 320px;
+/*****商品清单***龚颖*******start************************/
+.goods_list{
 	width: 1131px;
 	border-bottom: 1px dashed #B7B7B7;
+	border-spacing:0;
+	margin-top: 10px;
 }
+.goods_list table{
+	border-spacing: 0;
+	text-align: center;
+}
+.goods_list th{
+	height:30px ;
+	line-height: 30px;
+	background: #e3e3e3;
+}
+.goods_list td{
+	height: 110px;
+	background: #eefae2;
+}
+.goods_list img{
+	border:1px solid #fff;
+	margin-top: 12px;
+}
+.goods_list .goods_name span{
+	width: 300px;
+	text-align: left;
+	text-indent: 10px;
+    float: left;
+    color:#5e5e5e;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: "宋体";
+}
+.goods_list .goods_name em{
+ font-style: normal;
+ color:#f60;
+ word-break :break-all;
+}
+
+.goods_list .price,.goods_list .goods_integral{
+	width:160px;
+	color: #2f9900;
+    font-size: 16px;
+    font-family: "Microsoft Yahei";
+    text-align: center;
+}
+.goods_list .count{
+	color: #808080;
+    font-size: 16px;
+    font-family: "Microsoft Yahei";
+    text-align: center;
+}
+.goods_list .summary{
+	width:auto;
+	line-height: 30px;
+	height:30px;
+	text-align: right;
+	color:#4d4d4d;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: "宋体";
+    margin: 10px;
+
+}
+.goods_list .summary span{
+	color:#47a51c;
+	font-size: 24px;
+	font-weight: normal;
+	font-family: "Arial";
+
+}
+
+
+/*****商品清单***龚颖*******start************************/
 .goods_tit{
 	margin-top: 38px;
 }
@@ -380,4 +449,3 @@
 	font-size: 30px;
 	line-height: 51px;
 }
-

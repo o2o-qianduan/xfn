@@ -1,4 +1,4 @@
-/*************全局设置部分*******june******************************/
+/**************全局设置部分*******june******************************/*/
 html{
 	overflow-y: scroll;
 	margin: 0; 
@@ -10,7 +10,6 @@ body {
 	font-family:'微软雅黑';
 	margin: 0px;
 	padding: 0px;
-	min-height: 705px;
 }
 body, td, th, input, textarea, select, {
 	font-size: 12px;
@@ -46,7 +45,7 @@ li {list-style-type: none;}
 	top: 0;
 	left: 0;
 	width: 100%;
-	z-index: 200;
+	z-index: 99999;
 }
 
 .top p{
@@ -502,6 +501,9 @@ li {list-style-type: none;}
 .mwsp{
 	width: 345px;
 	float: left;
+}
+.mwsp a:hover{
+	color: red;
 }
 .mwsp-title,.rpsp-title,.gzhdst-title{
 	display: block;
@@ -1270,7 +1272,6 @@ img{
 
 /******************首页最顶部轮播部分**************june****end********/
 
-
 /**********首页三个图片一次性轮播部分***bing******/
 /*啊颖写的开始了哈*/
 .cart_main{
@@ -1301,22 +1302,14 @@ img{
 .fr {
     float: right;
 }
-#cartTable{
-    border-collapse: collapse;
-    border-spacing: 0;
-    border: 1px solid #fff;
-    text-align: center;
-    width:1180px;;
-}
-#cartTable th, td {
-    border: 1px solid #fff;
-}
+
 #cartTable th {
     background: #e8e9e8;
     height: 35px;
     color:#3c3c3c;
     font-family: "Microsoft Yahei";
 }
+
 #cartTable  td {
     padding: 10px;
     color: #5e5e5e;
@@ -1324,7 +1317,11 @@ img{
     font-size: 14px; 
     vertical-align : middle;
 }
- #cartTable .goods {
+/*tbody tr:hover {
+    background: RGB(238,246,255);
+}*/
+
+.goods {
     width: 300px;
     overflow: hidden;
 }
@@ -1370,7 +1367,6 @@ img{
 #cartTable .count input {
     width:31px;
     height:30px;
-    line-height: 30px;
     background: url(../images/input.jpg) no-repeat;
     border:0;
     text-align: center;
@@ -1417,6 +1413,22 @@ img{
     line-height: 48px;
     height: 48px;
 }
+.closing {
+	line-height: 50px;
+	width:190px;
+	height: 50px;
+    text-align: center;
+    color: #fff;
+    font-size: 26px;
+    font-family: "Microsoft YaHei";
+    cursor: pointer;
+    background: url(../images/sum.jpg) no-repeat;
+}
+/*.cart_foot .total{
+    margin: 0 20px;
+    cursor: pointer;
+}*/
+
 .cart_foot  #priceTotal, .cart_foot #intergralTotal {
     color: #2f9900;
     font-size: 20px;
@@ -1543,6 +1555,8 @@ img{
 }
 
 /****产品详情页部分样式修改**********june******end**************/
+
+/****产品详情页部分样式修改**********june******end**************/
 /*************订单提交成功页面****************/
 .succ_main{
 	width:1180px;
@@ -1611,3 +1625,4 @@ img{
 	
 }
 /**********龚颖***订单提交成功页面********end********/
+

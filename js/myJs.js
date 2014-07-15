@@ -601,4 +601,26 @@ function isEmpty(){
         $("#emptycart").show();
     }
 }
+/****结算2商品清单*************************/ 
+$(document).ready(function(){
+        function account(){
+          var $item = $("#list_table").children('tbody').children('tr');
+          var total = 0, temp, len = $item.length;
+          var sum = 0;
 
+          for(var i=0; i<len;i++){
+             temp = $item.eq(i).find('.price').children('span').text()*$item.eq(i).find('.count').text();
+            $item.eq(i).find('.subTotal').text("￥"+temp.toFixed(2));
+            $item.eq(i).find('.goods_integral').text(parseInt(temp));
+            sum += temp;
+
+          }
+          $('.summary').children('span').text("￥"+sum.toFixed(2));
+          return total;
+
+        }
+
+        account();
+
+
+      })
