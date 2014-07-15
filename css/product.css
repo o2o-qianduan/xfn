@@ -564,7 +564,7 @@ img.o-place {
 
 .tb-thumb li {
 	float:left;
-	margin:20px 3px 0 2px;
+	margin:20px 3px 0 3px;
 	overflow:hidden;
 	padding:1px;
 	border:1px solid #666666;
@@ -599,7 +599,7 @@ img.o-place {
 
 
 .tb-booth {
-    border:1px solid #CDCDCD;
+/*    border:1px solid #CDCDCD;*/
 	position:relative;
 	z-index:1;
 }
@@ -616,7 +616,7 @@ img.o-place {
 }
 
 .tb-thumb li div {
-    border:1px solid #CDCDCD;
+/*    border:1px solid #CDCDCD;*/
 }
 
 div.zoomDiv {
