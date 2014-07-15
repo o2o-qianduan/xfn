@@ -1277,7 +1277,7 @@ img{
 	font-size: 20px;
 }/*标题*/
 /*下面是结算表格*/
-.cart_table{
+.carttable{
 	margin-top: 10px;
 }
 .fl{
@@ -1286,34 +1286,34 @@ img{
 .fr {
     float: right;
 }
-.cartTable table {
+#cartTable{
     border-collapse: collapse;
     border-spacing: 0;
     border: 1px solid #fff;
     text-align: center;
     width:1180px;;
 }
-.cartTable th, td {
+#cartTable th, td {
     border: 1px solid #fff;
 }
-.cartTable th {
+#cartTable th {
     background: #e8e9e8;
     height: 35px;
     color:#3c3c3c;
     font-family: "Microsoft Yahei";
 }
-.cartTable  td {
+#cartTable  td {
     padding: 10px;
     color: #5e5e5e;
     background:#effae3;
     font-size: 14px; 
     vertical-align : middle;
 }
-.goods {
+ #cartTable .goods {
     width: 300px;
     overflow: hidden;
 }
-.goods span {
+ #cartTable .goods span {
     /*width: 180px;*/
     text-align: left;
     float: left;
@@ -1321,28 +1321,28 @@ img{
     font-size: 14px;
     font-weight: bold;
 }
-.price {
+#cartTable .price {
     
     color:#2f9900;
     font-size: 16px;
     font-family: "Microsoft YaHei";
 }
-.count{
+#cartTable .count{
 	padding-left:28px;
 }
-.add, .count input{
+#cartTable .add, .count input{
     float: left;
     margin-right: 2px;
     position: relative;
 
 }
-.add{
+#cartTable .add{
 	background: url(../images/plus.jpg) no-repeat;
 	width:25px ;
 	height: 30px;
 	cursor: pointer;
 }
-.reduce {
+#cartTable .reduce {
    	background: url(../images/minus.jpg) no-repeat;
 	width:25px ;
 	height: 30px;
@@ -1352,7 +1352,7 @@ img{
     position: relative;
 
 }
-.count input {
+#cartTable .count input {
     width:31px;
     height:30px;
     line-height: 30px;
@@ -1363,17 +1363,28 @@ img{
     color:#666;
     font-weight: bold;
 }
-.integral {
+#cartTable .integral {
     font-size:16px;
     color:#808080;
     font-family: "Microsoft YaHei";
 }
-.operation span:hover, a:hover {
+#cartTable .operation span:hover, a:hover {
     cursor: pointer;
     color: red;
     text-decoration: underline;
 }
-.cart_table img {
+#cartTable .delete{
+	background: url(../images/delbtn.jpg) no-repeat;
+	width:76px;
+	height: 30px;
+	margin:auto; 
+	line-height: 30px;
+	font-size: 14px;
+	font-family: "新宋体";
+	color:#464646;
+	cursor: pointer;
+}
+#cartTable .carttable img {
    border:1px solid #fff;
 }
 
@@ -1391,7 +1402,33 @@ img{
     line-height: 48px;
     height: 48px;
 }
-.closing {
+.cart_foot  #priceTotal, .cart_foot #intergralTotal {
+    color: #2f9900;
+    font-size: 20px;
+    font-family: "Microsoft Yahei";
+}
+
+.cart_foot .deleteAll{
+	margin-top: 10px;
+	background:url(../images/delete.jpg) no-repeat;
+	width:150px;
+	height: 30px;
+	display:inline-block;
+}
+.cart_foot .deleteAll a{
+	line-height: 30px;
+	font-size: 14px;
+	color:#fff;
+	text-decoration: none;
+	margin-left:30px;
+	position: absolute;
+}
+.acc_sum{
+	width:1180px;
+	height:50px;
+	margin-top: 15px;
+}
+.acc_sum .closing {
 	line-height: 50px;
 	width:190px;
 	height: 50px;
@@ -1402,51 +1439,15 @@ img{
     cursor: pointer;
     background: url(../images/sum.jpg) no-repeat;
 }
-.cart_foot  #priceTotal, .cart_foot #intergralTotal {
-    color: #2f9900;
-    font-size: 20px;
-    font-family: "Microsoft Yahei";
-}
-.delete{
-	background: url(../images/delbtn.jpg) no-repeat;
-	width:76px;
-	height: 30px;
-	margin:auto; 
-	line-height: 30px;
-	font-size: 14px;
-	font-family: "新宋体";
-	color:#464646;
-	cursor: pointer;
-}
-.deleteAll{
-	margin-top: 10px;
-	background:url(../images/delete.jpg) no-repeat;
-	width:150px;
-	height: 30px;
-	display:inline-block;
-}
-.deleteAll a{
-	line-height: 30px;
-	font-size: 14px;
-	color:#fff;
-	text-decoration: none;
-	margin-left:30px;
-	position: absolute;
-}
 
-.sum{
-	width:1180px;
-	height:50px;
-	margin-top: 15px;
-}
-.back{
+.acc_sum .back{
 	margin-top:15px;
 	background:url(../images/back.jpg) no-repeat;
 	width:150px;
 	height:20px;
 	display:inline-block;
 }
-.back a{
+.acc_sum .back a{
 	margin-top: -5px;
 	line-height: 20px;
 	font-size: 20px;
@@ -1456,20 +1457,20 @@ img{
 	margin-left: 10px;
 	position: absolute;
 }
-.tip{
+.acc_sum .tip{
 	color:#666;
 	font-family:"Microsoft YaHei";
 	font-size: 20px;
 	margin-top: 10px;
 	display: none;
 }
-.tip_show{
+.acc_sum .tip_show{
 	color:#666;
 	font-family:"Microsoft YaHei";
 	font-size: 20px;
 	margin-top: 10px;
 }
-.tip_red{
+.acc_sum .tip_red{
 	color: #c00;
 }
 /************龚颖结算页面*********end*******************/
@@ -1542,3 +1543,7 @@ img{
 	
 }
 /**********龚颖***订单提交成功页面********end********/
+
+
+
+
