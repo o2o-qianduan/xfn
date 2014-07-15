@@ -1255,12 +1255,8 @@ img{
 
 /******************首页最顶部轮播部分**************june****end********/
 
-<<<<<<< HEAD
 
-
-=======
 /**********首页三个图片一次性轮播部分***bing******/
->>>>>>> 8e1a603c797d08cd17c6dc2a15550717a50ae3b6
 /*啊颖写的开始了哈*/
 .cart_main{
 	width:1180px;
@@ -1503,6 +1499,7 @@ img{
 .succ_tip{
 	font-size: 25px;
 	font-family:"Microsoft YaHei";
+	font-family: "方正正中黑简体";
 	color: #60b100;
 	margin-left: 105px;
 	}
