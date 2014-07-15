@@ -94,6 +94,7 @@
 	background-color: #F2F2F2;
 	line-height: 29px;
 	padding-left: 13px;
+	margin-bottom: 5px;
 }
 .rr{
 	line-height: 29px;
@@ -113,13 +114,13 @@
 	margin-top: 3px;
 
 }
-.old_address ul li .modify{
+.old_address ul li .modify_address{
 	right: 200px;
 	background: repeat scroll 0 0 #77BE22;
 
 }
 
-.old_address ul li .del{
+.old_address ul li .del_address{
 	right: 120px;
 	background-color: #F60;
 }
@@ -199,8 +200,8 @@
 	left: 110px;
 
 }
-}
-.pay_met{
+
+.online_pay{
 	margin-bottom: 17px;
 }
 .pay_met a{
