@@ -17,6 +17,10 @@ body, td, th, input, textarea, select, {
 p{
 	text-indent: 0.25em;
 }
+a{
+	text-decoration: none;
+}
+
 /***************全局设置部分结束*******june*******************/
 
 
@@ -139,8 +143,6 @@ li {list-style-type: none;}
 	*font-family: Arial;/*防止非utf-8引起的hack失效问题 */
 	width: 30px;
 	height: 31px;
-	
-
 }
 
 .search-submit{
@@ -177,14 +179,20 @@ li {list-style-type: none;}
 	font-weight: bold;
 	cursor: pointer;
 }
-.searchdiv .hot_search{
+.searchdiv #hot_search{
 	height: 22px;
 	font-family: "新宋体";
 	font-size: 12px;
 	color: #636363;
 	padding-top: 5px;
 }	
-
+#hot_search a{
+	text-decoration: none;
+	color: #000000;
+}
+#hot_search a:hover{
+	color: red;
+}
 /*我的尚田*/
 
 .tel{
@@ -222,6 +230,9 @@ li {list-style-type: none;}
 	font-family: "微软雅黑" "MicroSoft Yehei";
 	text-decoration: none;
 }
+.all_classify a:hover{
+	text-decoration: none;
+}
 
 /*导航栏*/
 .navitem ul{
@@ -251,7 +262,6 @@ li {list-style-type: none;}
     position: relative;
     float: left;
     top: 10px;/**/
-
 }
 
 /*.navitem li+li a{
@@ -372,7 +382,6 @@ li {list-style-type: none;}
 	width: 3000px;
 	top: 0px;
 	left: 0px;
-	
 }
 .v-bot-list ul{
 	float: left;
@@ -380,7 +389,6 @@ li {list-style-type: none;}
 .v-bot-list ul li {
 	float: left;
 	padding: 2px;
-
 }
 .v-bot-list ul li a {
 	display: block;
@@ -406,14 +414,14 @@ li {list-style-type: none;}
 #ava{
 	width: 215px;
 	height: 135px;
-	background: url(../images/ava.png) no-repeat;
+/*	background: url(../images/ava.png) no-repeat;*/
 }
 
 #veg{
 	width: 215px;
 	height: 135px;
 	margin-top: 5px;
-	background: url(../images/veg.png) no-repeat;
+/*	background: url(../images/veg.png) no-repeat;*/
 }
 
 
@@ -523,6 +531,10 @@ li {list-style-type: none;}
 	float: left;
 	margin-left: 20px;
 }
+.rpsp-content a{
+	color: #000000;
+	font-size: 12px;
+}
 .rpsp-01,.rpsp-02,.rpsp-03,.rpsp-04{
 	width: 295px;
 	margin-top: 23px;
@@ -547,7 +559,7 @@ li {list-style-type: none;}
 	font-family: "新宋体";
 	display: block;
 	padding-bottom: 4px;
-
+	color: #000000;
 }
 .rpsp-01-title,.rpsp-01-star,.rpsp-01-date,.rpsp-01-appraisal,
 .rpsp-02-title,.rpsp-02-star,.rpsp-02-date,.rpsp-02-appraisal,
@@ -676,6 +688,10 @@ li {list-style-type: none;}
 	font-family: "宋体";
 	margin-left: 220px;
 }
+.tabs-right-up{
+	margin-bottom: 15px;
+	height: 100%;
+}
 .tabs-right-up-title{
 	font-size: 16px  !important;
 	font-weight: bold;
@@ -703,7 +719,7 @@ li {list-style-type: none;}
 .tabs-right-down{
 	display: block;
 	position: relative;
-	margin: 10px auto;
+	margin: 0px auto;
 	width: 100%;
 }
 .tabs-right-down a{
@@ -715,19 +731,18 @@ li {list-style-type: none;}
 
 .tabs-list-left{
 	float: left;
-	width: 290px;
+	width: 620px;
 	margin-left: 10px;
-	padding-bottom: 15px;
+	display: inline-block;
+	height: 100%;
+	text-align: left;
+	margin-top: 20px;
 }
-.tabs-list-right{
-	float: left;
-	position: absolute;
-	margin-left: 330px;
-	width: 290px;
-	padding-bottom: 15px;
-}
-.tabs-right-down-li{
+.tabs-list-left li{
 	padding-left: 10px;
+	float: left;
+	padding-top: 10px;
+	width: 280px;
 }
 
 
@@ -1369,7 +1384,7 @@ td {
     color:#808080;
     font-family: "Microsoft YaHei";
 }
-.operation span:hover, a:hover {
+.operation span:hover{
     cursor: pointer;
     color: red;
     text-decoration: underline;
@@ -1478,3 +1493,69 @@ td {
 	color: #c00;
 }
 /************龚颖结算页面*********end*******************/
+
+/****产品详情页部分样式修改**********june****start**/
+.afford_way{
+	height: 25px;
+	display:inline-block;
+}
+.afford_way a{
+	text-decoration: none;
+	color: #666666;
+	float: left;
+/*	padding-top: 10px;*/
+}
+.afford_way img{
+	margin-top: 3px;
+	float: right;
+}
+.pay-how{
+	width: 180px;
+	height: 105px;
+	display: block;
+	position: relative;
+	float: right;
+	margin-top: 35px;
+	right: -90px;
+	border:1px solid #e2e2e4;
+	background: repeat-x scroll top center #ffffff;
+}
+.pay-list{
+	display: inline-block;
+	list-style:none; 
+	float: left;
+	margin-top: 15px;
+
+}
+.pay-list li{
+	float: left;
+	font-size: 12px;
+	margin-left: 30px;
+	text-align: left;
+	width: 60px;
+}
+.pay-list a{
+	text-decoration: none;
+	color: #444444;
+}
+.pay-list a:hover{
+	color: red;
+}
+.pay-how .cashCart{
+	position: absolute;
+	left: 7px;
+	top: 13px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/****产品详情页部分样式修改**********june******end**************/
