@@ -502,6 +502,9 @@ li {list-style-type: none;}
 	width: 345px;
 	float: left;
 }
+.mwsp a:hover{
+	color: red;
+}
 .mwsp-title,.rpsp-title,.gzhdst-title{
 	display: block;
 	padding:5px 10px; 
