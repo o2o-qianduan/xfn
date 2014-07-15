@@ -10,6 +10,7 @@ body {
 	font-family:'微软雅黑';
 	margin: 0px;
 	padding: 0px;
+	min-height: 705px;
 }
 body, td, th, input, textarea, select, {
 	font-size: 12px;
@@ -1289,23 +1290,23 @@ img{
 .fr {
     float: right;
 }
-table {
+.cartTable table {
     border-collapse: collapse;
     border-spacing: 0;
     border: 1px solid #fff;
     text-align: center;
     width:1180px;;
 }
-th, td {
+.cartTable th, td {
     border: 1px solid #fff;
 }
-th {
+.cartTable th {
     background: #e8e9e8;
     height: 35px;
     color:#3c3c3c;
     font-family: "Microsoft Yahei";
 }
-td {
+.cartTable  td {
     padding: 10px;
     color: #5e5e5e;
     background:#effae3;

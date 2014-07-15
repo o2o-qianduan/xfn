@@ -342,7 +342,7 @@ $(function(){
 
     }
 
-    $(".delete").children("img").click(function(){
+    $(".cart_delete").children("img").click(function(){
         var c = confirm("确定删除？");
         if(c == false){
             return;

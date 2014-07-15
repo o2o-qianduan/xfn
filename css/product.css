@@ -480,17 +480,14 @@ img.o-place {
 	width:390px;
 	border:1px solid #a3d36a;
 	font-family:"新宋体";
-	height: 495px;
+	height: 423px;
 	position: fixed;
 	right: 0;
 	top: 240px;
-}
-#fullcart{
-	/*display:none;*/
-}
-#emptycart{
+	background: #fff;
 	display: none;
 }
+
 
 .go_acc{
 	background: #ecf6e0;
@@ -520,6 +517,7 @@ img.o-place {
 	line-height: 30px;
 	color: #666;
 	font-size:12px;
+	width: auto;
 }
 .tit_black{
 	color: #333;
@@ -531,16 +529,16 @@ img.o-place {
 }
 .cart_content{
 	overflow-y: scroll;
-	height: 403px;
+	height: 330px;
 	margin-top: 1px;
 }
-table{
+#cart_table table{
 	border-spacing:0;
 }
-tr{
+#cart_table tr{
 		height: 80px;
 }
-td{
+#cart_table td{
 	border-bottom: 1px dotted #ebebeb;
 
 	margin-top: 5px;
@@ -589,6 +587,7 @@ td{
 	color:#333;
 	font-size: 12px;
 	line-height: 15px;
+
 }
 .cart_click a{
 	text-decoration:none;
@@ -596,15 +595,19 @@ td{
 	overflow: hidden;
 	display: inline-block;
 	word-break: normal;
+	color: #333;
+}
+.cart_click em{
+	font-style: normal;
 }
 .cart_click span{
 	color: #f60;
 }
-.delete{
+.cart_delete{
 	width:20px;
 	cursor: pointer;
 }
-.delete img{
+.cart_delete img{
 	margin-bottom: 40px;
 }
 .empty img{
@@ -623,10 +626,10 @@ td{
 	cursor: pointer;
 }
 .cart_icon span{
-	font-size: 12px;
+	font-size: 13px;
 	color: #f00;
 	font-family: "宋体";
-	margin-left: 16px;
+	margin-left: 17px;
 	width: 20px;
 	display: inline-block;
 	text-align: center;
