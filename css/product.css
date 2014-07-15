@@ -86,7 +86,7 @@ img#left_picture {
 	height: 61px;
 }
 .bottom_link{
-	margin: 49px 0 0 26px;
+	margin: 149px 0 0 26px;
 }
 
 .bottom_link a{
@@ -95,7 +95,7 @@ img#left_picture {
 	font-family: "宋体" "MicroSoft YeHei";	
 }
 .center_state{
-	float: left;
+	float: right;
 }
 .center_state h3{
 	padding: 16px 0 10px 14px ;
@@ -229,6 +229,12 @@ img.o-place {
 .shopping_button{
 	height: 94px;
 	border-bottom: 1px solid #DADADA;
+	   background-color: #f5f5f5;
+    border-bottom: 1px solid #dadada;
+    height: 108px;
+    left: -15px;
+    position: relative;
+    top: 3px;
 }
 .shopping_button a{
 	text-decoration: none;
@@ -375,12 +381,7 @@ img.o-place {
 }
 
 /*搭配套餐*/
-.combo{
-	margin-top: 10px;
-	width: 1180px;
-	height: 330px;
-	border:1px solid #eee;
-}
+
 .main{
 	margin-top:10px;
 	width:1180px;
@@ -405,8 +406,9 @@ img.o-place {
 }
 .pro_detail{
 	float:right;
-	height:1370px;
+	height:100%;
 	width:960px;
+	top: -10px;
 	background-color: #fff;
 	border:1px solid #dfdfdf;
 }
@@ -447,7 +449,7 @@ img.o-place {
 .list_saled{
 	font-size: 12px;
 	color: #999;
-	font-family: 宋体；
+	font-family: "宋体";
 
 }
 .saled_num{
@@ -474,6 +476,180 @@ img.o-place {
 	position: relative;
 	top: 3.5px;
 }
+
+
+.account-num{
+	float: left;
+	margin-top: 20px;
+	margin-left: 16px;
+}
+.pro_img_mid{
+	width: 350px;
+	height: 100%;
+}
+/***********产品详情页宝贝预览图******june***************start***********************/
+.i-list .ctrl{
+	background: none repeat scroll center top #ffffff;
+    border: 1px solid #CCCCCC;
+    float: left;
+    height: 68px;
+	position: absolute;
+	z-index: 199;
+	cursor: pointer;
+}
+.i-list #left-choice{
+	 left: 0;
+    position: relative;
+    top: 20px;
+    width: 15px;
+    z-index: 1;
+}
+
+.i-list #right-choice {
+    left: 389px;
+    position: relative;
+    top: -80px;
+    width: 15px;
+    z-index: 1;
+}
+.i-bot-list{
+	width: 1500px;
+	position: relative;
+}
+/*.right-choice{
+	margin-left: 387px;
+    margin-top: -80px;
+}*/
+#left-choice img,#right-choice img{
+ 	margin-top: 25px;
+ 	width: 8px;
+ 	padding-left: 2px;
+}
+.i-list{
+	float: left;
+	width: 410px;
+	position: relative;
+	overflow: hidden;
+}
+
+.tb-pic a {
+    display:table-cell;
+    text-align:center;
+    vertical-align:middle;
+}
+.tb-pic a img {
+    vertical-align:middle;
+}
+
+
+.tb-pic a{
+    *display:block;
+	*font-family:Arial;
+	*line-height:1;
+}
+.tb-selected .small-img{
+	background: url('../images/green.png') no-repeat 10px -10px;
+}
+.tb-thumb {
+  	margin:0 25px ;
+	overflow:hidden;
+	height: 100px;
+/*	width: 3000px;*/
+}
+.small-img{
+	height: 62px;
+	max-width: 62px;
+}
+
+
+.tb-thumb li {
+	float:left;
+	margin:20px 3px 0 2px;
+	overflow:hidden;
+	padding:1px;
+	border:1px solid #666666;
+	width: 63px;
+	height: 63px;
+}
+
+
+.tb-s310, .tb-s310 a {
+    height:403px;
+    width:403px;
+}
+
+.tb-s310, .tb-s310 img {
+    max-height:403px;
+    max-width:403px;
+}
+
+.tb-s310 a{
+    *font-size:271px;
+}
+
+
+.tb-s40 a{
+    *font-size:35px;
+}
+
+.tb-s40, .tb-s40 a {
+    height:40px;
+	width:40px;
+}
+
+
+.tb-booth {
+    border:1px solid #CDCDCD;
+	position:relative;
+	z-index:1;
+}
+
+
+.tb-thumb .tb-selected {
+    border:1px solid #C30008;
+	padding:2px;
+}
+
+.tb-thumb .tb-selected div {
+    background-color:#FFFFFF;
+	border:medium none;
+}
+
+.tb-thumb li div {
+    border:1px solid #CDCDCD;
+}
+
+div.zoomDiv {
+    z-index:999;
+	position: absolute;
+	top:0px;
+	left:0px;
+	width:200px;
+	height:200px;
+	background: #ffffff;
+	border:1px solid #CCCCCC;
+	display:none;
+	text-align: center;
+	overflow: hidden;
+}
+
+
+
+
+div.zoomMask {
+    position:absolute;
+    background:url("./images/mask.png") repeat scroll 0 0 transparent;
+	cursor:move;
+	z-index:1;
+}
+
+/*
+.box{
+    float: left;
+}*/
+
+/************产品详情页宝贝预览图******june***************end************************/
+
 /**龚颖**排行榜*******end**********/
 /*悬浮购物车*/
 .cart{

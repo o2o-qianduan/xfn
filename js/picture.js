@@ -1,5 +1,5 @@
 
-
+/***********首页最顶端图片向左向右切换**********bing********start************/
 $(function(){
 	var page = 1;
     var i = 3; //每版放3个图片
@@ -81,3 +81,59 @@ $(function(){
     });
 
 })
+/***********首页最顶端图片向左向右切换**********bing********end************/
+
+/***产品详情页中图片预览向左向右轮播部分*****june*******start****/
+$(function(){
+    var page = 1;
+    var i = 5; //每版放5个图片
+
+    // 点击向后按钮
+    $("#right-choice").click(function(){
+        var $parent = $(this).parents("div.left_banner");//寻找当前元素的父元素
+        var $v_out = $parent.find("div.i-list");//视频外围
+        var $v_show = $parent.find("div.i-bot-list");//视频播放区域
+        var v_width = $v_out.width();//外围宽度
+        var len = $v_show.find("li").length; //图片数量
+        var page_count = Math.ceil(len / i) ; //页面数目
+        var yushu=parseInt(i/5);//每5个li为一组，判断出现的组数，觉得空余宽度
+        var wid;//空余的宽度
+        wid=yushu*40;
+         if( !$v_show.is(":animated") ){    //判断“视频内容展示区域”是否正在处于动画
+              if( page == page_count ){  //已经到最后一个版面了,如果再向后，必须跳转到第一个版面。
+                $v_show.animate({ left : '0px'}, "slow"); //通过改变left值，跳转到第一个版面
+                page = 1;
+              }else{
+                $v_show.animate({ left : '-='+(v_width-wid )}, "slow");  //通过改变left值，达到每次换一个版面
+                page++;
+             }
+         }
+
+    });
+
+    //点击向前按钮
+    $("#left-choice").click(function(){
+        var $parent = $(this).parents("div.left_banner");
+        var $v_out = $parent.find("div.i-list");
+        var $v_show = $parent.find("div.i-bot-list");
+        var v_width = $v_out.width();
+        var len = $v_show.find("li").length;
+        var page_count = Math.ceil(len / i);
+         var yushu=parseInt(i/5);//每5个li为一组，判断出现的组数，觉得空余宽度
+        var wid;//空余的宽度
+        wid=yushu*40;
+        if(!$v_show.is(":animated")){
+            if (page == 1) {
+                $v_show.animate({left : "0px"},"slow");
+                page = page_count;
+            }else{
+                $v_show.animate({left : '+='+(v_width-wid)},"slow");
+                page--;
+            }
+        }
+    });
+
+})
+
+
+/***产品详情页中图片预览向左向右轮播部分*****june*********end*****/
