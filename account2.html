@@ -1,22 +1,26 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-	<title>结算页面</title>
-	<meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>填写订单</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=9,IE=10">
   <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
-  <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
   <script src="js/jquery-1.8.2.js"></script>
   <script src="js/jquery-ui.js"></script>
-  <link rel="stylesheet" type="text/css" href="css/style.css"> 
   <script type="text/javascript" src="js/myJs.js"></script>
+  <script type="text/javascript" src="js/account.js"></script>
+  <link rel="stylesheet" href="css/style.css"> 
+  <link rel="stylesheet" href="css/account2.css"> 
+ 
+
+  <link rel="stylesheet" type="text/css" href="css/layout.css" />
+  <link rel="stylesheet" type="text/css" href="css/product.css" />
 </head>
 <body>
-
-
-
-<!-- 整个容器 -->
-<div id="container">
-  <!-- 商标，搜索栏，购物车，电话 -->
+     <!-- 商标，搜索栏，购物车，电话 -->
 <div class="header">
 
   <div class="topbor"><!-- 最顶部导航 -->
@@ -29,35 +33,40 @@
       </ul>
     </div>
   </div> <!-- 最顶部导航结束 -->
+
     <!-- 页面头部背景 -->
     <div class="bg">
       <button class="bg_button"></button>
-
     </div>
-  <div class="head_one">
+
+    <div class="head_one">
         <div class="brand"></div>
         <!-- 搜索栏 -->
         <div class="searchdiv">
           <form class="searchform" method="get"> 
           <input class="search-submit" type="submit" value=""/>
           <input id="search-input" class="search-input" type="text" name="" size="30px">
-          <input class="search-button" id="search-button" value="搜 索" />
+          <input class="search-button" id="search-button" value="搜 索">
           </form>
           <div id="hot_search">
             <span>热门搜索：</span>
             <span>小龙虾 蓝莓 虾 进口奶 进口肉 大枣</span>
           </div>
         </div>
+          <div class="tel"></div>
+    </div>
 
-        <div class="tel"></div>
-  </div>
+   
+
+
       <div class="clear"></div>
       <!-- 导航栏 -->
       <div class="nav">
         <div class="all_classify">
           <a href="#">全部商品分类</a>
           <img class="boult" src="images/boult.png"/>
-        </div>
+       </div>
+
         <div class="navitem">
           <ul >
             <li class="navitem-first">
@@ -94,17 +103,19 @@
           </ul>
         </div>
       </div>    <!-- end nav   --> 
-</div><!-- header部分 -->
-<!-- 内容区域 -->
-<div id="content">
+  </div><!-- header部分 -->
 
 
+
+     <!-- 主内容区域 -->
+    <div id="content" class="content">
+      <!-- 商品分类-->       
        <!-- 以下"全部商品分类部分，在首页中显示，在其它页中鼠标滑过才显示" -->
-      <div id="list_menu" class="no-mainpage">
+      <div id="list_menu"  class="no-mainpage">
         <div id="YMenu">
              <div id="YMenu-side">       
                   <ul class="YM-mainmnu">
-                    <li class="YM-Tab">               
+                      <li class="YM-Tab">               
                       <a href="#">大家电</a>
                         <span><img src="images/expand.png"/></span>
                         <ul class="YM-submnu">
@@ -113,14 +124,14 @@
                              <li><a href="#1">电热水器</a></li>
                              <li><a href="#1">家庭音响</a></li>
                              <li><a href="#1">燃气热水器</a></li>
-                               <li><a href="#1">空调</a></li>
+                             <li><a href="#1">空调</a></li>
                              <li><a href="#1">冰箱冷柜</a></li>
                              <li><a href="#1">DVD播放器</a></li>
                              <li><a href="#1">电视附件</a></li>
                              <li><a href="#1">家电服务</a></li>
                              <li><a href="#1">家电下乡</a></li>
                         </ul> 
-                    </li>
+                       </li>
 
                       <li class="YM-Tab">               
                       <a href="#">大家电</a>
@@ -230,144 +241,223 @@
                         </ul> 
                      </li>      
                                               
-                 </ul>     
+                  </ul>     
             </div>   
         </div>
-      </div>  
-      <!-- end .list_menu -->
-      <!-- 此部分在首页固定，在其它页面鼠标滑过时出现 -->
-  <!-- 结算页面主体 -->
-  <div class="cart_main">
-    <!-- 结算流程图 -->
-    <div class="acc_pic">
-      <img src="images/account.jpg">
+      </div>  <!-- end .list_menu --><!-- 此部分在首页固定，在其它页面鼠标滑过时出现 -->
+
+
+      <!-- 订单部分 -->
+    <div class="write_indent"></div>
+    <div class="indent_title">
+      <p><span></span>填写订单信息</p>
     </div>
-    <!-- 购物车标题 -->
-    <div class="cart_title">
-      <span style="background: url(images/cart_title.jpg) no-repeat;width: 20px;height: 28px;display: inline;margin-right: 7px;">&nbsp;&nbsp;</span>
-      <span>购物车</span>
-    </div>
-    <!-- 购物车表单、删除、全选、结算都实现了 -->
-    <div class="cart_table">
-      <table id="cartTable">
-      <thead>
-          <tr>
-              <th style="width:34px;"><input class="check-all check" type="checkbox"/></th>
-              <th style="width:114px;">全选</th>
-              <th style="width:549px;">名称规则</th>
-              <th style="width:119px;">单价</th>
-              <th style="width:94px;">积分</th>
-              <th style="width:144px;">数量</th>
-              <th>操作</th>
-          </tr>
-      </thead>
-      <tbody>
-          <tr>
-              <td class="checkbox"><input class="check-one check" type="checkbox"/></td>
-              <td><img src="images/cart_pro.jpg" /></td>
-              <td class="goods"><span>新西兰佳沛阳光花菜加介篮 16个 </span></td>
-              <td class="price">￥84.00</td>
-              <td class="integral">84</td>
-              <td class="count">
-                  <span class="reduce"></span>
-                  <input class="count-input" type="text" value="1"/>
-                  <span class="add"></span></td>
-              <td><div class="delete">删除</div></td>
-          </tr>
-          <tr>
-              <td class="checkbox"><input class="check-one check" type="checkbox"/></td>
-              <td><img src="images/cart_pro.jpg" /></td>
-              <td class="goods"><span>新西兰佳沛阳光花菜加介篮 16个 </span></td>
-              <td class="price">￥184.00</td>
-              <td class="integral">184</td>
-              <td class="count">
-                  <span class="reduce"></span>
-                  <input class="count-input" type="text" value="1"/>
-                  <span class="add"></span></td>
-              <td><div class="delete">删除</div></td>
-          </tr>
-          <tr>
-              <td class="checkbox"><input class="check-one check" type="checkbox"/></td>
-              <td><img src="images/cart_pro.jpg" /></td>
-              <td class="goods"><span>新西兰佳沛阳光花菜加介篮 16个 </span></td>
-              <td class="price">￥184.00</td>
-              <td class="integral">184</td>
-              <td class="count">
-                  <span class="reduce"></span>
-                  <input class="count-input" type="text" value="1"/>
-                  <span class="add"></span></td>
-              <td><div class="delete">删除</div></td>
-          </tr>
-          <tr>
-              <td class="checkbox"><input class="check-one check" type="checkbox"/></td>
-              <td><img src="images/cart_pro.jpg" /></td>
-              <td class="goods"><span>新西兰佳沛阳光花菜加介篮 16个 </span></td>
-              <td class="price">￥184.00</td>
-              <td class="integral">184</td>
-              <td class="count">
-                  <span class="reduce"></span>
-                  <input class="count-input" type="text" value="1"/>
-                  <span class="add"></span></td>
-              <td><div class="delete">删除</div></td>
-          </tr>
-          <tr>
-              <td class="checkbox"><input class="check-one check" type="checkbox"/></td>
-              <td><img src="images/cart_pro.jpg" /></td>
-              <td class="goods"><span>新西兰佳沛阳光花菜加介篮 16个 </span></td>
-              <td class="price">￥184.00</td>
-              <td class="integral">184</td>
-              <td class="count">
-                  <span class="reduce"></span>
-                  <input class="count-input" type="text" value="1"/>
-                  <span class="add"></span></td>
-              <td><div class="delete">删除</div></td>
-          </tr>
-          <tr>
-              <td class="checkbox"><input class="check-one check" type="checkbox"/></td>
-              <td><img src="images/cart_pro.jpg" /></td>
-              <td class="goods"><span>新西兰佳沛阳光花菜加介篮 16个 </span></td>
-              <td class="price">￥184.00</td>
-              <td class="integral">184</td>
-              <td class="count">
-                  <span class="reduce"></span>
-                  <input class="count-input" type="text" value="1"/>
-                  <span class="add"></span>
-              </td>
-              <td><div class="delete">删除</div></td>
-          </tr>
-          </tbody>
-      </table>
-      <!-- 购物车小计、结算 -->
-      <div class="cart_foot" id="cart_foot">
-          <div class=" fl deleteAll"><a id="deleteAll" href="javascript:;">删除选中商品</a></div>
-          <div class="fr total">购物车小计：<span id="priceTotal">￥184.00</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;积分小计:
-          <span id="intergralTotal">￥184</span>
+
+    <div class="border_indent">
+      <div class="delivery_address bottom_border">
+        <p id="pp" class="bigfont">配送地址</p>
+        <input type="button" id="save_btn" value="保存" />
+        <span id="bot" class="bott" ></span>
+      </div>
+
+      <div class="old_address rail">
+        <ul>
+          <li>
+            <a class="modify" href="#">修改</a>
+            <a href="#" class="del">删除</a>
+           <input name="address" class="ss" type="radio"  />
+           <label class="default fontway">Bingo 华南农业大学华山公寓9栋
+            18825165243
+           </label>
+           <em class="tip">默认地址</em>
+          </li>
+        </ul>
+      </div>
+        <div class="new_address">
+          <div class="add_tit">
+           <input name="address" class="ss"  type="radio"/>
+           <label class="fontway new_use">使用新地址</label>
+          </div>
+          <div class="per_name fontway">
+            <label for="username">收 货 人：</label>
+            <input id="username" type="text" />
+          </div>
+          <div class="select_place fontway">
+            <label>所在地区：</label>
+            <select id="selProvince" >
+               <option>请选择...</option>
+            </select>
+
+            <select name="selCity" id="selCity" >
+              <option>请选择...</option>
+            </select>
+
+              <select name="selRegion" id="selRegion" >
+              <option>请选择...</option>
+            </select>
+
+            <label id="cant">此区域有无法送达的商品，请回到购物车修改商品</label>
+          </div>
+           <div class="detail_add fontway">
+            <label for="username">详细地址：</label>
+            <input id="username" type="text" />
+          </div>
+           <div class="mobile_phone fontway">
+            <label for="username">手机号码：</label>
+            <input id="username" type="text" />
+          </div>
+          <a href="#" class="save_send green_bg">保存并配送到这个地址</a>
+        </div>
+
+        <div class="payment_way">
+          <div class="pay_send bottom_border">
+             <p class="bigfont">支付方式以及配送方式</p>
+              <span class="bott"></span>
+             <label>如需修改，请先保存收货人信息</label>
+            
+          </div>
+            <div class=" rail online">
+              <input class="rr" name="method " type="radio"/>
+              <label class="fontway new_use">在线支付</label>
+            </div>
+
+            <div class=" send_method">
+              <input class="rr" name="method " type="radio"/>
+              <label class="fontway new_use">配送方式</label>
+            </div>
+
+            <div class="pay_met">
+               <a class="green_bg  met" href="#">支付方式</a>
+               <p class="pcant">在线支付 请您在提交订单后24小时内完成支付，否则订单会自动取消</p>
+            </div>
+            <div class="bank">
+              <input type="radio" name="bankname" />
+              <img src="images/alipay.png" />
+              <input type="radio" name="bankname" />
+              <img src="images/alipay.png" />
+              <input type="radio" name="bankname" />
+              <img src="images/alipay.png" />
+              <input type="radio" name="bankname" />
+              <img src="images/alipay.png" />         
+              <input type="radio" name="bankname" />
+              <img src="images/alipay.png" />
+            </div>
+            <div class="bank2">
+              <input type="radio" name="bankname" />
+              <img src="images/alipay.png" />
+              <input type="radio" name="bankname" />
+              <img src="images/alipay.png" />
+              <input type="radio" name="bankname" />
+              <img src="images/alipay.png" />
+              <input type="radio" name="bankname" />
+              <img src="images/alipay.png" />
+            </div>
+
+            <div class="pay_met send_met">
+               <a class="green_bg met" href="#">配送方式</a>             
+            </div>
+            <div class="clear"></div>
+            <div class="express">
+                <input type="radio" name="send_m" />
+                <label>顺丰快递</label>
+            </div>
+             <a href="#" class="save_send green_bg">确认支付及配送方式</a>
+        </div>
+
+        <div class="good_list">
+           <div class="goods_tit bottom_border">
+             <p class="bigfont">商品清单</p>
+             <span class="bott"></span>
+          </div>
+          <div class="goods"></div>
+          <!-- 优惠券 -->
+          <div class="coupon offset">          
+            <p class="fontway pfont"> <img class="apimg"  src="images/add.png" />使用优惠券抵消部分金额</p>
+            <div class="same_bg" id="coupon_border">
+              <div id="inner_one">
+                <label class="fontway">当前可用优惠券</label>
+                <select>
+                  <option>不使用优惠券</option>
+                  <option>使用优惠券</option>
+                </select>
+              </div>
+
+              <a href="#" class="green_bg">使用</a>
+            </div>
+          </div>
+
+          <!-- 礼品卡 -->
+          <div class="gift_card offset">         
+            <p class="fontway pfont">  <img class="apimg" src="images/add.png" />使用礼品卡抵消部分金额</p>
+            <div class="same_bg" id="gift_border">
+              <div id="inner_two">
+               <label class="fontway">礼品卡可在个人中心进行</label>
+               <a href="#">激活</a>
+              </div>
+              <div id="gift_bg">
+                <label>礼品卡</label>
+                <label>面值</label>
+                <label>余额</label>
+                <label>有效期</label>
+              </div>
+              <a href="#" class="green_bg">使用</a>
+            </div>
+          </div>
+
+          <!-- 积分 -->
+          <div class="integral offset">           
+            <p class="fontway pfont"><img class="apimg"  src="images/add.png" />使用积分抵消部分金额</p>
+            <div class="same_bg" id="integral_border">
+              <div id="inner_three">
+                <p>积分兑换：使用<input type="text" />积分， 可抵消</p>
+                <p>本次最多可使用使用积分<span>22700</span>, 您目前的积分值为<span> 100</span></p>
+              </div>
+              <a href="#" class="green_bg">使用</a>
+            </div>
+          </div>
+
+          <!-- 发票 -->
+          <div class="invoice offset">           
+            <p class="fontway pfont"><img class="apimg" src="images/add.png" />发票信息</p>
+            <div class="same_bg" id="invoice_border">
+              <div id="inner_four">
+               <input id="need" type="radio" name="need" />
+                <label for="need">需要</label>
+                <input id="notneed" type="radio" name="need" />
+                <label>不需要</label>
+              </div>
+               <a href="#" class="green_bg">确认发票信息</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="settle">
+          <div class="settel_tit bottom_border">
+             <p class="bigfont">结算信息</p>
+             <span class="bott"></span>
+          </div>
+          <label class="settle_info">商品总价:<span>￥227.00</span> + 运费:<span>￥0.00</span> + 发票运费:<span>￥0.00</span> - 优惠券:<span>￥0.00</span> - 礼品卡:<span>￥0.00</span> - 积分兑换:<span>￥0.00</span></label>
+          <label class="total_fee">应付总金额:<span>￥227.00</span></label>
+        </div>
+
+        <div class="remark">
+          <label>备注</label>
+          <input type="text" />
+          <a class="green_bg" href="#">提交订单</a>
         </div>
       </div>
-       <div class="fr selected" id="selected">
-        <span id="selectedTotal"></span>
     </div>
-      <div class="sum">
-        <div class="fl back"><a href="">&nbsp;返回购物</a>
-        </div>
-        <div class="fr closing">去结算</div>
-        <span class="fr tip" id="tip">满<span class="tip_red">118</span>包邮，您还差<span class="tip_red" id="diff"></span>元&nbsp;&nbsp;</span>
-      </div>
-    </div>
-  </div>
-</div>
-    
-<!-- 内容区域结束 -->
-<!-- 页脚部分 -->
+
+    <!-- 页脚部分 -->
 <div id="footer">
   <div class="cwidth h-center teleg">
     <div class="column icon_g1">
     <h3>关于我们</h3>
     <ul>
       <li><a href="#">关于华大尚田</a></li>
-	  <li><a href="#">公司架构</a></li>
-	  <li><a href="#">生产基地</a></li>
-	  <li><a href="#">招贤纳士</a></li>
+    <li><a href="#">公司架构</a></li>
+    <li><a href="#">生产基地</a></li>
+    <li><a href="#">招贤纳士</a></li>
     </ul>
   </div>
     <div class="column icon_g2">
@@ -427,10 +517,11 @@ Copyright © 广州新富农农业科技有限公司
 </div>
 <!-- 页脚部分结束 -->
 
-
-
+<!-- 内容区域结束 -->
 </div>
 
 <!-- 整个容器部分结束 -->
+
+
 </body>
 </html>

@@ -10,6 +10,7 @@ body {
 	font-family:'微软雅黑';
 	margin: 0px;
 	padding: 0px;
+	min-height: 705px;
 }
 body, td, th, input, textarea, select, {
 	font-size: 12px;
@@ -1269,6 +1270,7 @@ img{
 
 /******************首页最顶部轮播部分**************june****end********/
 
+
 /**********首页三个图片一次性轮播部分***bing******/
 /*啊颖写的开始了哈*/
 .cart_main{
@@ -1299,33 +1301,29 @@ img{
 .fr {
     float: right;
 }
-table {
+.cartTable table {
     border-collapse: collapse;
     border-spacing: 0;
     border: 1px solid #fff;
     text-align: center;
     width:1180px;;
 }
-th, td {
+.cartTable th, td {
     border: 1px solid #fff;
 }
-th {
+.cartTable th {
     background: #e8e9e8;
     height: 35px;
     color:#3c3c3c;
     font-family: "Microsoft Yahei";
 }
-td {
+.cartTable  td {
     padding: 10px;
     color: #5e5e5e;
     background:#effae3;
     font-size: 14px; 
     vertical-align : middle;
 }
-/*tbody tr:hover {
-    background: RGB(238,246,255);
-}*/
-
 .goods {
     width: 300px;
     overflow: hidden;
@@ -1372,6 +1370,7 @@ td {
 .count input {
     width:31px;
     height:30px;
+    line-height: 30px;
     background: url(../images/input.jpg) no-repeat;
     border:0;
     text-align: center;
@@ -1418,10 +1417,6 @@ td {
     cursor: pointer;
     background: url(../images/sum.jpg) no-repeat;
 }
-/*.cart_foot .total{
-    margin: 0 20px;
-    cursor: pointer;
-}*/
 .cart_foot  #priceTotal, .cart_foot #intergralTotal {
     color: #2f9900;
     font-size: 20px;
@@ -1494,6 +1489,7 @@ td {
 }
 /************龚颖结算页面*********end*******************/
 
+<<<<<<< HEAD
 /****产品详情页部分样式修改**********june****start**/
 .afford_way{
 	height: 25px;
@@ -1548,3 +1544,73 @@ td {
 }
 
 /****产品详情页部分样式修改**********june******end**************/
+=======
+/*************订单提交成功页面****************/
+.succ_main{
+	width:1180px;
+	background: url(../images/acc_bg.jpg) no-repeat;
+	border:1px solid #daefd9; 
+}
+.succ_content{
+	width:725px;
+	margin-left: 300px;
+	margin-top: 100px;
+	background: url(../images/succ.jpg) no-repeat;
+
+}
+.succ_content p{
+	color: #666;
+	font-family: "新宋体";
+	font-size: 14px;
+	line-height: 26px;
+	margin-left: 105px;
+	margin-top: 5px;
+}
+/*提交成功信息*/
+.succ_tip{
+	font-size: 25px;
+	font-family:"Microsoft YaHei";
+	font-family: "方正正中黑简体";
+	color: #60b100;
+	margin-left: 105px;
+	}
+.succ_price{
+	color:#57a900;
+	font-weight:bold;
+}
+.pay_menthod{
+	margin-left: 105px;
+	margin-top: 20px;
+}
+.pay_menthod span{
+	color: #666;
+	font-family: "新宋体";
+	font-size: 14px;
+}
+.bank_icon{
+	border:1px solid #dadada;
+	height:40px;
+	width:130px;
+	display: inline-block;
+}
+/*立即支付按钮*/
+.paybtn{
+	width:275px;
+	height:65px;
+	line-height: 65px;
+	color: #fff;
+	font-size: 33px;
+	text-align: center;
+	font-family:"Microsoft YaHei";
+	background: url(../images/paybtn.jpg) no-repeat;
+	margin-left: 152px;
+	margin-top:35px;
+	margin-bottom: 80px;
+}
+.paybtn a{
+	text-decoration: none;
+	color: #fff;
+	
+}
+/**********龚颖***订单提交成功页面********end********/
+>>>>>>> 50287ba9a1b1689d6524fa006f7a6be9fb4bbed6

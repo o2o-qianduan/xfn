@@ -160,6 +160,7 @@ window.onload = function () {
     var tip = document.getElementById('tip');
     var diff = document.getElementById('diff');
     var sum = 0;
+    var count=0;
 
 
     //计算
@@ -187,6 +188,7 @@ window.onload = function () {
 
         priceTotal.innerHTML = "￥"+price.toFixed(2);
         sum = price;
+        count = seleted;
         intergralTotal.innerHTML = "￥"+price.toFixed(0);
 
         if (seleted == 0) {
@@ -293,6 +295,7 @@ window.onload = function () {
 }
 
  /*******************结算页面1****龚颖*************end*****/
+
 
  /********首页购物车加减***************************june*/
 
@@ -514,3 +517,88 @@ function MouseEvent(e) {
 }
 
   /**************产品详情页宝贝预览图放大效果******june****end**************/
+
+/*悬浮购物车*/ 
+$(function(){
+
+    $(".count").each(function(){
+        var $reduce = $(this).children('.reduce');
+        var $countInput = $(this).children('input');
+        var $add = $(this).children('.add');
+        $add.click(function(){
+            //绑定添加按钮事件
+            var val = parseInt($countInput.val()) + 1;
+            $countInput.val(val);
+            getTotal()
+        });
+
+        $reduce.click(function(){
+            //绑定减少按钮事件
+            var val = parseInt($countInput.val()) - 1;
+            if(val < 1){
+                val = 1;
+            }
+            $countInput.val(val);
+            getTotal()
+        })
+    })
+
+    function getTotal(){
+        //设置总价
+        var $items = $("#cart_table").find("tr");
+        var $item;
+        var len = $items.length;
+        var num,price,total = 0, totalNum = 0;
+        for(var i=0; i<len; i++){
+            $item = $items.eq(i);
+            num = $item.find("input.count-input").val();
+            price = $item.find("div.cart_click").find("em").text();
+            total += num*price;
+            totalNum += parseInt(num);
+        }
+        total = total.toFixed(2);
+        $("#pro_num").text(totalNum);
+        $("#pro_count").text(totalNum);
+        $("#priceTotal").text("￥" + total);
+        $("#priceAll").text("￥" + total);
+        return total;
+
+    }
+
+    $(".cart_delete").children("img").click(function(){
+        var c = confirm("确定删除？");
+        if(c == false){
+            return;
+        }
+        $(this).parents("tr").remove();
+        getTotal();
+        isEmpty();
+    })
+
+    $("#cart_icon").click(function(){
+        showCart();
+    })
+
+    getTotal();
+})
+
+function closeCart(){
+    $("#cart").hide();
+}
+function showCart(){
+    isEmpty();
+    $("#cart").show();
+}
+function isEmpty(){
+    var num = $("#cart_table").find("tr").length;
+    if(num > 0){
+        $("#cart").show();
+        $("#fullcart").show();
+        $("#emptycart").hide();
+    }else {
+        $("#cart").show();
+        $("#fullcart").hide();
+        $("#emptycart").show();
+    }
+}
+
