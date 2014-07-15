@@ -664,7 +664,6 @@ div.zoomMask {
 	display: none;
 }
 
-
 .go_acc{
 	background: #ecf6e0;
 	height: 60px;
@@ -719,23 +718,23 @@ div.zoomMask {
 
 	margin-top: 5px;
 }
-.count{
+#cart_table .count{
 	padding-left:10px;
 	width: 90px;
 }
-.add, .count input{
+#cart_table .add, .count input{
     float: left;
     margin-right: 2px;
     position: relative;
 
 }
-.add{
+#cart_table .add{
 	background: url(../images/plus.jpg) no-repeat;
 	width:25px ;
 	height: 30px;
 	cursor: pointer;
 }
-.reduce {
+#cart_table .reduce {
    	background: url(../images/minus.jpg) no-repeat;
 	width:25px ;
 	height: 30px;
@@ -745,7 +744,7 @@ div.zoomMask {
     position: relative;
 
 }
-.count input {
+#cart_table .count input {
     width:31px;
     height:30px;
     line-height: 30px;
@@ -756,16 +755,16 @@ div.zoomMask {
     color:#666;
     font-weight: bold;
 }
-.pro_icon{
+#cart_table .pro_icon{
 	width:65px;
 }
-.cart_click{
+#cart_table .cart_click{
 	color:#333;
 	font-size: 12px;
 	line-height: 15px;
 
 }
-.cart_click a{
+#cart_table .cart_click a{
 	text-decoration:none;
 	width: auto;
 	overflow: hidden;
@@ -773,20 +772,20 @@ div.zoomMask {
 	word-break: normal;
 	color: #333;
 }
-.cart_click em{
+#cart_table .cart_click em{
 	font-style: normal;
 }
-.cart_click span{
+#cart_table .cart_click span{
 	color: #f60;
 }
-.cart_delete{
+#cart_table .cart_delete{
 	width:20px;
 	cursor: pointer;
 }
-.cart_delete img{
+#cart_table .cart_delete img{
 	margin-bottom: 40px;
 }
-.empty img{
+#cart_table .empty img{
 	margin-top: 90px;
 	margin-left: 48px;
 }

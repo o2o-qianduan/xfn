@@ -1290,7 +1290,7 @@ img{
 	font-size: 20px;
 }/*标题*/
 /*下面是结算表格*/
-.cart_table{
+.carttable{
 	margin-top: 10px;
 }
 .fl{
@@ -1299,23 +1299,15 @@ img{
 .fr {
     float: right;
 }
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    border: 1px solid #fff;
-    text-align: center;
-    width:1180px;;
-}
-th, td {
-    border: 1px solid #fff;
-}
-th {
+
+#cartTable th {
     background: #e8e9e8;
     height: 35px;
     color:#3c3c3c;
     font-family: "Microsoft Yahei";
 }
-td {
+
+#cartTable  td {
     padding: 10px;
     color: #5e5e5e;
     background:#effae3;
@@ -1330,7 +1322,7 @@ td {
     width: 300px;
     overflow: hidden;
 }
-.goods span {
+ #cartTable .goods span {
     /*width: 180px;*/
     text-align: left;
     float: left;
@@ -1338,28 +1330,28 @@ td {
     font-size: 14px;
     font-weight: bold;
 }
-.price {
+#cartTable .price {
     
     color:#2f9900;
     font-size: 16px;
     font-family: "Microsoft YaHei";
 }
-.count{
+#cartTable .count{
 	padding-left:28px;
 }
-.add, .count input{
+#cartTable .add, .count input{
     float: left;
     margin-right: 2px;
     position: relative;
 
 }
-.add{
+#cartTable .add{
 	background: url(../images/plus.jpg) no-repeat;
 	width:25px ;
 	height: 30px;
 	cursor: pointer;
 }
-.reduce {
+#cartTable .reduce {
    	background: url(../images/minus.jpg) no-repeat;
 	width:25px ;
 	height: 30px;
@@ -1369,7 +1361,7 @@ td {
     position: relative;
 
 }
-.count input {
+#cartTable .count input {
     width:31px;
     height:30px;
     background: url(../images/input.jpg) no-repeat;
@@ -1379,17 +1371,28 @@ td {
     color:#666;
     font-weight: bold;
 }
-.integral {
+#cartTable .integral {
     font-size:16px;
     color:#808080;
     font-family: "Microsoft YaHei";
 }
-.operation span:hover{
+#cartTable .operation span:hover {
     cursor: pointer;
     color: red;
     text-decoration: underline;
 }
-.cart_table img {
+#cartTable .delete{
+	background: url(../images/delbtn.jpg) no-repeat;
+	width:76px;
+	height: 30px;
+	margin:auto; 
+	line-height: 30px;
+	font-size: 14px;
+	font-family: "新宋体";
+	color:#464646;
+	cursor: pointer;
+}
+#cartTable .carttable img {
    border:1px solid #fff;
 }
 
@@ -1422,30 +1425,21 @@ td {
     margin: 0 20px;
     cursor: pointer;
 }*/
+
 .cart_foot  #priceTotal, .cart_foot #intergralTotal {
     color: #2f9900;
     font-size: 20px;
     font-family: "Microsoft Yahei";
 }
-.delete{
-	background: url(../images/delbtn.jpg) no-repeat;
-	width:76px;
-	height: 30px;
-	margin:auto; 
-	line-height: 30px;
-	font-size: 14px;
-	font-family: "新宋体";
-	color:#464646;
-	cursor: pointer;
-}
-.deleteAll{
+
+.cart_foot .deleteAll{
 	margin-top: 10px;
 	background:url(../images/delete.jpg) no-repeat;
 	width:150px;
 	height: 30px;
 	display:inline-block;
 }
-.deleteAll a{
+.cart_foot .deleteAll a{
 	line-height: 30px;
 	font-size: 14px;
 	color:#fff;
@@ -1453,20 +1447,31 @@ td {
 	margin-left:30px;
 	position: absolute;
 }
-
-.sum{
+.acc_sum{
 	width:1180px;
 	height:50px;
 	margin-top: 15px;
 }
-.back{
+.acc_sum .closing {
+	line-height: 50px;
+	width:190px;
+	height: 50px;
+    text-align: center;
+    color: #fff;
+    font-size: 26px;
+    font-family: "Microsoft YaHei";
+    cursor: pointer;
+    background: url(../images/sum.jpg) no-repeat;
+}
+
+.acc_sum .back{
 	margin-top:15px;
 	background:url(../images/back.jpg) no-repeat;
 	width:150px;
 	height:20px;
 	display:inline-block;
 }
-.back a{
+.acc_sum .back a{
 	margin-top: -5px;
 	line-height: 20px;
 	font-size: 20px;
@@ -1476,24 +1481,23 @@ td {
 	margin-left: 10px;
 	position: absolute;
 }
-.tip{
+.acc_sum .tip{
 	color:#666;
 	font-family:"Microsoft YaHei";
 	font-size: 20px;
 	margin-top: 10px;
 	display: none;
 }
-.tip_show{
+.acc_sum .tip_show{
 	color:#666;
 	font-family:"Microsoft YaHei";
 	font-size: 20px;
 	margin-top: 10px;
 }
-.tip_red{
+.acc_sum .tip_red{
 	color: #c00;
 }
 /************龚颖结算页面*********end*******************/
-
 /****产品详情页部分样式修改**********june****start**/
 .afford_way{
 	height: 25px;
@@ -1548,3 +1552,74 @@ td {
 }
 
 /****产品详情页部分样式修改**********june******end**************/
+
+/****产品详情页部分样式修改**********june******end**************/
+/*************订单提交成功页面****************/
+.succ_main{
+	width:1180px;
+	background: url(../images/acc_bg.jpg) no-repeat;
+	border:1px solid #daefd9; 
+}
+.succ_content{
+	width:725px;
+	margin-left: 300px;
+	margin-top: 100px;
+	background: url(../images/succ.jpg) no-repeat;
+
+}
+.succ_content p{
+	color: #666;
+	font-family: "新宋体";
+	font-size: 14px;
+	line-height: 26px;
+	margin-left: 105px;
+	margin-top: 5px;
+}
+/*提交成功信息*/
+.succ_tip{
+	font-size: 25px;
+	font-family:"Microsoft YaHei";
+	font-family: "方正正中黑简体";
+	color: #60b100;
+	margin-left: 105px;
+	}
+.succ_price{
+	color:#57a900;
+	font-weight:bold;
+}
+.pay_menthod{
+	margin-left: 105px;
+	margin-top: 20px;
+}
+.pay_menthod span{
+	color: #666;
+	font-family: "新宋体";
+	font-size: 14px;
+}
+.bank_icon{
+	border:1px solid #dadada;
+	height:40px;
+	width:130px;
+	display: inline-block;
+}
+/*立即支付按钮*/
+.paybtn{
+	width:275px;
+	height:65px;
+	line-height: 65px;
+	color: #fff;
+	font-size: 33px;
+	text-align: center;
+	font-family:"Microsoft YaHei";
+	background: url(../images/paybtn.jpg) no-repeat;
+	margin-left: 152px;
+	margin-top:35px;
+	margin-bottom: 80px;
+}
+.paybtn a{
+	text-decoration: none;
+	color: #fff;
+	
+}
+/**********龚颖***订单提交成功页面********end********/
+
