@@ -7,7 +7,6 @@
 
 .indent_title{
 	margin-top: 25px;
-
 	height: 42px;
 	border-bottom: 2px solid #51AB58;
 }
@@ -22,12 +21,12 @@
 }
 .indent_title p{
 	line-height: 42px;
-	font-family: "MicroSoft Yehei";
+	font-family: "MicroSoft Yahei";
 	font-size: 20px;
 }
 
 .border_indent{
-	height: 1963px;
+	height: 100%;
 	border:1px solid #BFE6B4;
 	box-shadow: 0 17px 10px #EAF5DE inset ;
 	margin-top: 10px;
@@ -35,16 +34,22 @@
 }
 
 .delivery_address{
-	border-bottom: 2px solid #DCDCDC;
 	margin-top: 28px;
-	height: 39px;
 }
-.delivery_address p{
-	line-height: 39px;
+
+.delivery_address #pp{
 	float: left;
-	/*padding-left: 6px;*/
-	font-family: "MicroSoft Yehei";
+}
+
+.bottom_border{
+	border-bottom: 2px solid #DCDCDC;
+	height: 39px;
+	line-height: 39px;
+}
+.bigfont{
+	font-family: "MicroSoft Yahei";
 	font-size: 18px;
+	font-weight: bold;
 }
 
 #save_btn{
@@ -64,23 +69,33 @@
 }
 
 #bot{
+	top: 39px;
+	left: -175px;
+}
+
+.bott {
 	width: 99px;
 	position: relative;
 	height: 0;
 	float: left;
-	top: 39px;
-	left: -182px;
 	border: 1px solid #77BE22;
 }
+
 
 .rail{
 	margin: 15px 0;
 	line-height: 29px;
-	height: 29px;
+
+}
+.online{
 	background-color: #F2F2F2;
 }
-
-.old_address ul li,.rr{
+.old_address ul li{
+	background-color: #F2F2F2;
+	line-height: 29px;
+	padding-left: 13px;
+}
+.rr{
 	line-height: 29px;
 	margin-left: 13px;
 }
@@ -90,19 +105,22 @@
 	color: #fff;
 	width: 64px;
 	height: 24px;
-	text-align: center;
+	line-height: 24px;
+	text-align: center ;
+	font-family: "宋体";
+	font-size: 14px;
 	border-radius: 2px;
 	margin-top: 3px;
 
 }
 .old_address ul li .modify{
-	right: 250px;
+	right: 200px;
 	background: repeat scroll 0 0 #77BE22;
 
 }
 
-.old_address ul li .save{
-	right: 172px;
+.old_address ul li .del{
+	right: 120px;
 	background-color: #F60;
 }
 
@@ -111,8 +129,15 @@
 }
 
 .new_address .add_tit{
-	height: 50px;
+	height: 35px;
 	/*line-height: 50px;*/
+}
+
+#cant{
+	font-size: 12px;
+	color: #F60;
+	font-family: "宋体";
+	padding-left: 88px;
 }
 .add_tit input{
 
@@ -128,6 +153,7 @@
 	font-size: 14px;
 	font-family: "宋体";
 	text-indent: 27px;
+	color: #585858;
 }
 
 .default,.new_use{
@@ -146,7 +172,9 @@
 	text-align: center;
 	display: block;
 }
-
+.met{
+	line-height: 20px;
+}
 .save_send{
 	border-radius: 2px;
 	line-height: 35px;
@@ -155,7 +183,22 @@
 	margin-bottom: 45px;
 }
 .send_method{
-	height: 36px;
+	height: 35px;
+}
+
+.pay_send{
+	margin-top: 46px;
+}
+
+.pay_send label{
+	font-size:12px;
+	font-family: "宋体";
+	color: #1890BC;
+	position: relative;
+	top:-40px;
+	left: 110px;
+
+}
 }
 .pay_met{
 	margin-bottom: 17px;
@@ -169,15 +212,20 @@
 	float: left;
 }
 
+.pcant{
+	color: #666;
+	font-size: 12px;
+	font-family: "宋体";
+	line-height: 20px;
+}
 .bank,.bank2{
-	/*width: 817px;*/
 	margin-left: 55px;
 }
 
 .bank img,.bank2 img{
 	width: 130px;
 	height: 40px;
-	margin: 4px 14px;
+	margin: 0 14px 2px;
 }
 
 .bank input,.bank2 input{
@@ -185,7 +233,7 @@
 	height: 40px;
 }
 .send_met{
-	margin-top: 28px;
+	margin-top: 25px;
 
 }
 .express{
@@ -194,12 +242,141 @@
 	line-height: 41px;
 }
 
-.bott {
-	left: -80px !important;
-}
-
 .goods{
 	height: 320px;
 	width: 1131px;
 	border-bottom: 1px dashed #B7B7B7;
 }
+.goods_tit{
+	margin-top: 38px;
+}
+.apimg{
+	position: relative;
+	top: 3px;
+	left: -25px;
+	cursor: pointer;
+}
+.pfont{
+	line-height: 34px;
+}
+
+.offset{
+	margin-top: 7px;
+}
+.same_bg{
+	border:1px solid #77B422;
+	background-color: #EFFAE3;
+}
+
+#inner_one{
+	line-height: 46px;
+	margin-left: 17px;
+}
+#coupon_border{
+	height: 92px;
+}
+
+.same_bg a{
+	width: 71px;
+	height: 26px;
+	line-height: 26px;
+	margin-left: 15px;
+}
+#gift_border{
+	height: 122px;
+}
+
+#inner_two{
+	line-height: 40px;
+	padding-left: 15px;
+}
+
+#gift_bg{
+	height: 31px;
+	margin: 0 15px 14px;
+	background-color: #D3EDB4;
+}
+
+#gift_bg label{
+	padding: 0 40px;
+	line-height:31px;
+}
+
+#integral_border{
+	height: 109px;
+}
+
+#inner_three{
+	margin-top: 12px;
+}
+#inner_three p{
+	color: #676767 !important;
+	padding: 0 0 10px 15px;
+	font-size: 14px;
+	font-family: "宋体";
+}
+
+#inner_three p input{
+	width: 59px;
+	height: 23px;
+	border:1px solid #ABADB3;
+	margin: 0 9px;
+}
+#invoice_border{
+	height: 77px;
+	/*padding: 15px 0 0 13px;*/
+}
+
+#inner_four{
+	margin: 10px 0 0 16px;
+}
+
+#invoice_border a{
+	width: 115px !important;
+	margin-top: 10px;
+}
+.settel_tit{
+	margin-top: 23px;
+}
+.settle_info,.total_fee{
+	height: 57px;
+	line-height: 57px;
+	font-family: "MicroSoft Yahei";
+	font-size: 14px;
+}
+.total_fee{
+	float: right;
+}
+.total_fee span{
+	font-family: Arial;
+	font-size: 31px;
+	color: #F60;
+}
+.settle_info span{
+	color: #549A00;
+}
+.remark{
+	height: 62px;
+	line-height: 62px;
+	width: 1178px;
+	margin-left: -23px;
+	background-color: #F2F2F2;
+}
+.remark label{
+	padding: 0 27px;
+}
+.remark input{
+	height: 31px;
+	width: 261px;
+	border:1px solid #B2B2B2;
+}
+.remark a{
+	display: block;
+	float: right;
+	width: 238px;
+	height: 51px;
+	margin: 6px 7px 0 0;
+	font-size: 30px;
+	line-height: 51px;
+}
+
