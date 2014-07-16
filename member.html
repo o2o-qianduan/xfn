@@ -11,6 +11,7 @@
   <script src="js/jquery-ui.js"></script>
   <link rel="stylesheet" href="css/style.css"> 
   <script type="text/javascript" src="js/myJs.js"></script>
+  <script type="text/javascript" src="js/member.js"></script>
 </head>
 <body>
 
@@ -249,7 +250,7 @@
         <a href="#">新手教程</a>
       </div>
 
-      <!-- 个人中心和新手教程 -->
+      <!-- 个人中心 -->
       <div class="center_course">
         <div class="per_center">
           <h2>个人中心</h2>
@@ -289,10 +290,10 @@
             </ul>
           </div>
         </div>
-        <div class="new_course">
+        <div class="right_div"  style="display:none;">
           <h1>新手教程</h1>
-          <span class="new_course_underline"></span>
-          <div class="inner_text">
+          <span class="right_div_underline"></span>
+          <div class="right_inner_text">
             <h3>一、积分种类</h3>
             <p>沱沱工社账户积分分为消费积分和行为积分两种：</p>
              <p>1、消费积分：通过在沱沱工社网站上购物消费，获得的积分为消费积分。</p>
@@ -325,7 +326,124 @@
           </div>
         </div>
 
-        
+        <!-- 个人资料 -->
+        <div class="right_div" style="display:none">
+          <h1>我的资料</h1>
+          <span class="right_div_underline"></span>
+
+          <div class="member_div">
+            <div id="info1" class="every_line_height">
+              <label for="nick_name">昵称：</label>
+              <input  id="nick_name" type="text" />
+            </div>
+            <div id="info2" class="every_line_height">
+              <label for="birth_day">出生日期：</label>
+              <input type="date" id="birth_day" />
+            </div>
+            <div id="info3" class="every_line_height">
+              <label>手机号码：</label>
+              <img src="images/unlock.png" />
+              <label id="lock_img1">未绑定</label>
+              <a id="binding_mobile" href="#mobile_info">绑定手机</a>
+            </div>
+            <div id="info4" class="every_line_height">
+              <label>邮箱：</label>
+              <img src="images/unlock.png" />
+              <label id="lock_img2">未绑定</label>
+              <a id="binding_email" href="#Email_info">绑定邮箱</a>
+            </div>
+            <button class="btn_info" id="save_myinfo">保存</button>
+          
+
+            <div class="mobile_info" style="display:none;"> <!-- 绑定手机号 -->
+             <div id="mobilephone_num" class="every_line_height">
+                <label for="phoneNum">手机号：</label>
+                <input id="phoneNum" type="text" />
+              </div>
+              <div id="auth_code" class="every_line_height">
+                <label for="authCode">验证码：</label>
+                <input type="text" />
+                <a href="#">发送验证码</a>
+              </div>
+              <button class="btn_info" id="confirm_info">确定</button>
+            </div>
+
+            <div class="Email_info" style="display:none;">  <!-- 绑定电子邮件 -->
+              <div id="email_detail" class="every_line_height">
+               <label for="emailInfo">电子邮件：</label>
+                <input id="emailInfo"  type="text" />
+              </div>
+              <button class="btn_info" id="send_email">发送邮件</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 修改地址 -->
+        <div class="right_div" style="display:none;">
+          <h1>修改地址</h1>
+          <span class="right_div_underline"></span>
+          <div class="member_div">
+             <div id="myAddress1" class="every_line_height">
+              <label for="con_per">收货人：</label>
+              <input id="con_per" type="text" />
+            </div>
+            <div id="myAddress2" class="every_line_height">
+              <label>省市区：</label>
+              <select id="sel_pro" name="sel_pro" >
+                <option selected="selected">请选择...</option>
+                <option>广东</option>
+              </select>
+
+              <select name="sel_city" id="sel_city" >
+                <option selected="selected">请选择...</option>
+                <option>广州</option>
+              </select>
+
+              <select name="sel_zoom" id="sel_zoom" >
+                <option selected="selected">请选择...</option>
+                <option>天河区</option>
+                <option>越秀区</option>
+              </select>
+            </div>
+            <div id="myAddress3" class="every_line_height">
+              <label for="detAddress">详细地址：</label>
+              <input id="detAddress" type="text" />
+            </div>
+            <div id="myAddress4" class="every_line_height">
+              <label for="touch_num">联系电话：</label>
+              <input id="touch_num" type="text" />
+            </div>
+            <div id="myAddress5">
+              <input type="checkbox" />
+              <label>设为默认地址</label>
+            </div>
+            <button class="btn_info" id="addressBtnSave">保存</button>
+          </div>
+        </div>
+
+        <!-- 密码管理 -->
+        <div class="right_div" style="display:none;">
+          <h1>密码管理</h1>
+          <span class="right_div_underline"></span>
+          <div class="member_div">
+            <div id="pass1" class="every_line_height">
+             <label for="original_psw">原密码：</label>
+              <input  id="original_psw" type="text" />
+            </div>
+            <div id="pass2" class="every_line_height">
+              <label for="new_psw">新密码：</label>
+              <input type="text" id="new_psw" />
+            </div>
+            <div id="pass3" class="every_line_height">
+              <label for="confirm_newpsw">确认密码：</label>
+              <input  id="confirm_newpsw" type="text" />
+            </div>
+            <button class="btn_info" id="savePassword">保存</button>
+          </div>
+        </div>
+
+        <div></div>
+
       </div>
   <!-- 会员页面    冰、升 -->
 </div>

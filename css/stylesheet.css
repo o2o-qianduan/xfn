@@ -264,22 +264,6 @@ li {list-style-type: none;}
     top: 10px;/**/
 }
 
-/*.navitem li+li a{
-	border-left: 1px solid #CCC;
-}*/
-/*.navitem li span {
-	position: relative;
-	right: 113px;
-	top: 0;
-}
-
-.navitem li span img{
-	position: absolute;
-
-	width: 2px;
-	height: 20px;
-	background: url(../images/border.png) no-repeat;
-}*/
 .navitem li:hover{
 	background-color:#77BE22;
 }
@@ -911,15 +895,16 @@ ul, li {
 	color: red;
 }
 
-/*新手教程*/
-.new_course{
-	width: 881px;
+/*右边详细信息*/
+.right_div{          /*可重用，右部div布局*/
+	width: 917px;
 	float: right;
-	margin-right: 23px;
-	margin-top: 28px;
+	margin-top: 23px;
 	position: relative;
+	font-family: "宋体";
+	font-size: 14px;
 }
-.new_course_underline{
+.right_div_underline{    /*可重用，绿色下划线*/
 	border:1px solid #00a11b;
 	width: 118px;
 	height: 0px;
@@ -927,7 +912,7 @@ ul, li {
 	position: absolute;
 	top: 35px;
 }
-.new_course h1{
+.right_div h1{       /*可重用，标题字体*/
 	border-bottom: 2px solid #DEDEDE;
 	color: #666666;
 	text-shadow:1px 1px 1px #959595;
@@ -936,29 +921,96 @@ ul, li {
 	padding-bottom: 5px;
 }
 
-.inner_text{
+.right_inner_text{
 	margin-top: 24px;
 	color:grey;
 }
 
-.inner_text h3{
+.right_inner_text h3{
 	color: #666;
 	font-size: 12px;
 	line-height: 36px;
 	font-family: "新宋体" "MicroSoft YeHei";
 }
-.inner_text h3{
-/*	padding-right: 20px;*/
+.right_inner_text h3{
+
 }
-.inner_text + h3,.inner_text + h3 +h3{
-	margin-top: 30px;
-}
-.inner_text p{
+
+.right_inner_text p{
 	font-size: 12px;
 	font-family: "新宋体" "MicroSoft YeHei";
 	line-height: 24px;
 }
 
+/*个人资料*/
+.member_div{
+	margin: 22px 0 0 32px;
+}
+
+.member_div input{       /*可利用，输入框样式*/
+	width: 290px;
+	height: 33px;
+	box-shadow: 0 3px 10px #E9E9E9 inset;
+	border:1px solid #ADADAD;
+	border-radius: 3px;
+
+}
+.member_div label{      /* 可利用，标签样式*/
+	display: inline-block;
+	text-align: right;
+	width: 70px;
+	margin-top: 15px;
+}
+.every_line_height{  
+	/*可利用，输入框、标签行高*/
+	height: 50px;
+}
+
+#info3 #lock_img1,#info4 #lock_img2{
+	text-align: left !important;
+	padding-left: 10px;
+}
+.btn_info{   /*可重用，绿色保存按钮*/
+	background-color: #77BE22;
+	width: 95px;
+	height: 35px;
+	cursor: pointer;
+	color: #fff;
+	border-radius: 7px;
+	font-weight: bold;
+	margin-left: 75px;
+}
+
+.mobile_info{
+	margin-top: 35px;
+}
+.auth_code input{
+	width: 143px;
+}
+.auth_code a{
+	text-decoration: underline;
+}
+.Email_info{
+	margin-top: 60px;
+}
+
+
+/*修改地址*/
+#myAddress2 select{
+	height: 25px;
+	width: 97px;
+}
+#myAddress5 input{
+	width: 13px !important;
+	height: 13px;
+	margin-left: 85px;
+}
+#myAddress5 label{
+	width: 90px !important;
+}
+#addressBtnSave{
+	margin-top: 19px;
+}
 /*******************会员页面整理结束*******************************/
 
 
