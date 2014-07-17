@@ -88,7 +88,6 @@ li {list-style-type: none;}
 .header{
 	width: 1180px;
 	top: 30px;
-/*	position:relative;*/
 	margin: 35px auto;
 	display: block;
 	z-index: 190;
@@ -97,13 +96,14 @@ li {list-style-type: none;}
 .bg{
 	height: 70px;
 	margin: 5px auto;
-/*	float: left;*/
 	background:url(../images/head.png) no-repeat;
+	position: relative;
 }
 .bg button{
 	background: url(../images/close.png) no-repeat;
 	float: right;
-	 margin: 5px 10px -10px -25px;
+	right: 5px;
+	bottom: 48px;
 	width: 18px;
 	height: 18px;
 	position: absolute;
@@ -147,13 +147,13 @@ li {list-style-type: none;}
 }
 
 .search-submit{
-			float:left;
-			cursor:pointer;
-			height: 34px;
-			width: 34px;
-			border: none;
-			background: transparent url(../images/search-submit.png) no-repeat 0px 0px;
-			border-right: 1px solid #cccccc;
+	float:left;
+	cursor:pointer;
+	height: 34px;
+	width: 34px;
+	border: none;
+	background: transparent url(../images/search-submit.png) no-repeat 0px 0px;
+	border-right: 1px solid #cccccc;
 }
 .search-input{
 	background: none repeat scroll 0 0 #ffffff;
@@ -1066,11 +1066,11 @@ ul, li {
 }
 
 /*个人资料*/
-.member_div{
+.member_div{   /*可重用*/
 	margin: 22px 0 0 32px;
 }
 
-.member_div input{       /*可利用，输入框样式*/
+.member_div input,.referrerNum input{       /*可利用，输入框样式*/
 	width: 290px;
 	height: 33px;
 	box-shadow: 0 3px 10px #E9E9E9 inset;
@@ -1081,12 +1081,12 @@ ul, li {
 .member_div label{      /* 可利用，标签样式*/
 	display: inline-block;
 	text-align: right;
-	width: 70px;
+	width: 90px;
 	margin-top: 15px;
 }
 .every_line_height{  
 	/*可利用，输入框、标签行高*/
-	height: 50px;
+	height: 52px;
 }
 
 #info3 #lock_img1,#info4 #lock_img2{
@@ -1101,7 +1101,8 @@ ul, li {
 	color: #fff;
 	border-radius: 7px;
 	font-weight: bold;
-	margin-left: 75px;
+	margin-left: 95px;
+	border:0;
 }
 
 .mobile_info{
@@ -1134,6 +1135,209 @@ ul, li {
 #addressBtnSave{
 	margin-top: 19px;
 }
+
+/*激活优惠券*/
+#discount2{
+	height: 52px;
+	position: relative;
+	float: left;
+	width: 100%;
+}
+#discount2 img{
+	top: 10px;
+	position: absolute;
+
+}
+#discount2 a{
+	padding-left: 120px;
+}
+/*激活礼品卡*/
+#giftCard1 #activiteTip{
+	width: 190px;
+	color: #999;
+}
+
+#giftCard2 span {
+	line-height: 35px;
+}
+/*推荐人会员号*/
+.referrerNum{
+	margin-top: 22px;
+}
+#memNum1 label{
+	width: 150px;
+}
+#memNum1 span{
+	color: #F60;
+}
+#commitBtn{
+	margin-left: 100px;
+}
+
+/*我的尚田*/
+
+.myDetailInfo{
+	height: 114px;
+	margin: 4px 0 30px ;
+}
+.myDetailInfo img{
+	float: left;
+}
+#myDetail{
+	float: left;
+	height: 114px;
+	width: 640px;
+	margin-left: 20px;
+}
+#myDetail #myDetail1{
+	height: 26px;
+	line-height: 26px;
+}
+
+#myDetail #myDetail2{
+	height: 58px;
+}
+#myDetail #myDetail2 p{
+	border:1px solid #B1D881;
+	height: 35px;
+	line-height: 35px;
+	margin-top: 20px;
+	text-align: center;
+	float: left;
+	font-family: "新宋体";
+}
+
+#myDetail label,#myDetail p{
+	font-weight: bold;
+}
+#myDetail span{
+	font-family: Arial;
+	color: #689F31;
+
+}
+
+#myDetail #myDetail2 #deti1{
+	width: 400px;
+}
+#myDetail #myDetail2 #deti2{
+	width: 202px;
+	margin-left: 20px;
+}
+#myDetail #myDetail3{
+	height: 21px;
+	margin-top: 14px;
+}
+#bind_mobile{
+	font-weight: normal !important;
+	padding-left: 25px;
+}
+#bind_email{
+	font-weight: normal !important;
+	padding-left: 50px;
+
+}
+#bind_mobile img{
+	position: relative;
+	top:3px;
+	left: 115px;
+}
+#bind_email img{
+	position: relative;
+	top: 0;
+	left: 300px;
+}
+.clear{
+	clear: both;
+}
+.all_info{
+	height: 120px;
+	margin-bottom: 28px;
+	position: relative;
+}
+.all_info p{
+	width: 200px;
+	height: 50px;
+	line-height: 50px;
+	margin: 5px 10px 5px 0;
+	background-color: #77BE22;
+	font-family: "新宋体";
+	font-weight: 600;
+	color: #fff;
+	float: left;
+}
+.all_info p span{
+	color: #FFF600;
+}
+.all_info img{
+	margin: 13px 10px 0 19px;
+	float: left;
+}
+#point_tit p{
+	font-family: "Microsoft Yahei";
+	font-size: 18px;
+	font-weight: 500;
+	height: 39px;
+	line-height: 39px;
+	float: left;
+}
+#point_tit{
+	height: 39px;
+	border-bottom: 2px solid #DCDCDC;
+}
+.point_underline{
+	position: relative !important;
+	left: -60px;
+	top: 41px;
+	width: 80px !important;
+}
+.earn_points label{
+	position: relative;
+	top: 11px;
+	left: 20px;
+	padding-left: 20px;
+	font-family: "新宋体";
+}
+
+#point_tit span{
+	color: #218717;
+	font-weight: bold;
+}
+
+#earnPointWay{
+	border:1px solid #B1D881;
+	height: 200px;
+	margin-top: 10px;
+}
+
+#earnPointWay .earnWay{
+	float: left;
+	margin: 36px 0 36px 50px;
+}
+
+#earnPointWay .boxImg{
+	display: table-cell;
+	width: 91px;
+	height: 91px;
+	border-radius: 4px;
+	border:2px solid #A6D56E;
+
+	vertical-align: middle;
+	text-align: center;
+}
+
+.earnWay p{
+	height: 39px;
+	line-height: 39px;
+	font-size: 12px;
+	/*width: 95px;*/
+	/*text-align: center;*/
+}
+.earnWay p span{
+	color: #FF7300;
+	font-family: Arial;
+	font-size: 16px;
+}
+
 /*******************会员页面整理结束*******************************/
 
 
@@ -1436,13 +1640,6 @@ img{
 	margin: 0 auto;
 	height: 354px;
 }
-
-
-
-
-
-
-
 
 
 
@@ -1924,4 +2121,8 @@ box-shadow: 2px 2px 5px #C0BBB5;
 -moz-box-shadow: 2px 2px 5px #C0BBB5;
 -webkit-box-shadow: 2px 2px 5px #C0BBB5;
 }
-/********弹出框**********bing*****edn********/
+/********弹出框**********bing*****end********/
+.mh_date{
+	height: 26px !important;
+}
+

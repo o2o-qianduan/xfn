@@ -49,15 +49,18 @@ $(function(){
 })
 })
 
-$(function() {
-    $('.no-mainpage').mouseover(function(){
+
+    $('.no-mainpage').live("mouseleave",function(){
     if($('.no-mainpage').is(":visible")){
-        $('.no-mainpage').hide();
+        stc = setTimeout(function (){           
+                $(".no-mainpage").hide();
+                clearTimeout(stc);
+            },100); 
     } else {
         $('.no-mainpage').show();
     }
    });
-})
+
 /*******************首页"全部产品分类"部分**************************june*******end********/
 
 
