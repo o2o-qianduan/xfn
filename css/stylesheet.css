@@ -1617,6 +1617,7 @@ img{
 	width:150px;
 	height: 30px;
 	display:inline-block;
+	position: relative;
 }
 .cart_foot .deleteAll a{
 	line-height: 30px;
@@ -1644,21 +1645,23 @@ img{
 }
 
 .acc_sum .back{
-	margin-top:15px;
-	background:url(../images/back.jpg) no-repeat;
-	width:150px;
-	height:20px;
-	display:inline-block;
+	background: url("../images/back.jpg") no-repeat scroll 0 0 ;
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    margin-top: 15px;
+    position: relative;
+    width: 100px;
 }
 .acc_sum .back a{
-	margin-top: -5px;
-	line-height: 20px;
-	font-size: 20px;
-	color:#2f9900;
-	font-family:"Microsoft YaHei"; 
-	text-decoration: none;
-	margin-left: 10px;
-	position: absolute;
+	 color: #2f9900;
+    font-family: "Microsoft YaHei";
+    font-size: 20px;
+    left: 10px;
+    line-height: 20px;
+    margin-top: -5px;
+    position: absolute;
+    text-decoration: none;
 }
 .acc_sum .tip{
 	color:#666;

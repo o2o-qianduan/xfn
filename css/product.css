@@ -12,6 +12,7 @@
 	background-color: #F5F5F5;
 	margin-right: 5px;
 	float: left;
+	position: relative;
 }
 
 img#left_picture {
@@ -86,8 +87,9 @@ img#left_picture {
 	height: 61px;
 }
 .bottom_link{
-	margin: 149px 0 0 26px;
-}
+  bottom: 100px;
+    float: left;
+    position: absolute;}
 
 .bottom_link a{
 	text-decoration: none;
@@ -551,7 +553,7 @@ img.o-place {
 	background: url('../images/green.png') no-repeat 10px -10px;
 }
 .tb-thumb {
-  	margin:0 25px ;
+  	margin:0 20px ;
 	overflow:hidden;
 	height: 100px;
 /*	width: 3000px;*/

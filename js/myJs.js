@@ -301,12 +301,12 @@ window.onload = function () {
 
  /********首页购物车加减***************************june*/
 
-$(function(){
+/*$(function(){
    $(".num-each").each(function(index){ //取得整个页面的input值
 $(this).attr("value","0");
  }); 
 })
- 
+ */
 $(function(){
     $(".num-option").click(function(){
 var num=0;
