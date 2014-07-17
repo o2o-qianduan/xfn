@@ -88,7 +88,6 @@ li {list-style-type: none;}
 .header{
 	width: 1180px;
 	top: 30px;
-/*	position:relative;*/
 	margin: 35px auto;
 	display: block;
 	z-index: 190;
@@ -97,13 +96,14 @@ li {list-style-type: none;}
 .bg{
 	height: 70px;
 	margin: 5px auto;
-/*	float: left;*/
 	background:url(../images/head.png) no-repeat;
+	position: relative;
 }
 .bg button{
 	background: url(../images/close.png) no-repeat;
 	float: right;
-	 margin: 5px 10px -10px -25px;
+	right: 5px;
+	bottom: 48px;
 	width: 18px;
 	height: 18px;
 	position: absolute;
