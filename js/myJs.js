@@ -588,12 +588,13 @@ $(function(){
     $('.current').find('h4').toggle(function(){
         var $parent = $(this).parents('.current');
         var $dips = $parent.find('.current_list');                
-        $dips.css("display","block");
-        $parent.find('img').attr("src","images/boult3.png");
-    },function(){
-        var $parent = $(this).parents('.current');
-        var $dips = $parent.find('.current_list');                               
         $dips.css("display","none");
         $parent.find('img').attr("src","images/triangle.png");
+    },function(){
+        var $parent = $(this).parents('.current');
+        var $dips = $parent.find('.current_list');
+        $dips.css("display","block");
+        $parent.find('img').attr("src","images/boult3.png");                               
+        
     });
 })

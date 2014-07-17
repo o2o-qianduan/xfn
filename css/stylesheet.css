@@ -1012,9 +1012,6 @@ ul, li {
 .current ul li a:hover{
 	color: red;
 }
-.current .current_list{
-	display: none;
-}
 
 /*右边详细信息*/
 .right_div{          /*可重用，右部div布局*/
