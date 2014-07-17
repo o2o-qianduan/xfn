@@ -1,3 +1,4 @@
+
 $(function(){
 
 	// 删除地址
@@ -10,6 +11,7 @@ $(function(){
 	})
 
 	// 修改地址
+
 	$(".modify_address").live('click',function(){
 		$.XYTipsWindow({
 		___title:"修改地址",

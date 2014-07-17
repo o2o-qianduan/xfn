@@ -2,13 +2,18 @@
 <html>
 <head>
 	<title>结算页面</title>
-	<meta charset="utf-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=9,IE=10">
   <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
-  <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
   <script src="js/jquery-1.8.2.js"></script>
   <script src="js/jquery-ui.js"></script>
-  <link rel="stylesheet" type="text/css" href="css/style.css"> 
+  <link rel="stylesheet" href="css/style.css"> 
   <script type="text/javascript" src="js/myJs.js"></script>
+  <script type="text/javascript" src="js/picture.js"></script>
+ <script type="text/javascript" src="js/jquery.imagezoom.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/product.css" />
+    <script language="javascript" type="text/javascript" src="js/yao.js"></script>
 </head>
 <body>
 
@@ -31,8 +36,8 @@
   </div> <!-- 最顶部导航结束 -->
     <!-- 页面头部背景 -->
     <div class="bg">
+         <img src="images/head.png" alt="顶部背景宣传图">
       <button class="bg_button"></button>
-
     </div>
   <div class="head_one">
         <div class="brand"></div>
@@ -44,8 +49,8 @@
           <input class="search-button" id="search-button" value="搜 索" />
           </form>
           <div id="hot_search">
-            <span>热门搜索：</span>
-            <span>小龙虾 蓝莓 虾 进口奶 进口肉 大枣</span>
+             <span>热门搜索：</span>
+            <span><a href="">小龙虾</a> <a href="">蓝莓</a> <a href="">虾</a>  <a href="">进口奶</a> <a href="">进口肉</a> <a href="">大枣</a></span>
           </div>
         </div>
 
@@ -95,16 +100,17 @@
         </div>
       </div>    <!-- end nav   --> 
 </div><!-- header部分 -->
+
+
+
 <!-- 内容区域 -->
-<div id="content">
-
-
+<div id="content" class="content">
        <!-- 以下"全部商品分类部分，在首页中显示，在其它页中鼠标滑过才显示" -->
-      <div id="list_menu" class="no-mainpage">
+      <div id="list_menu"  class="no-mainpage">
         <div id="YMenu">
              <div id="YMenu-side">       
                   <ul class="YM-mainmnu">
-                    <li class="YM-Tab">               
+                      <li class="YM-Tab">               
                       <a href="#">大家电</a>
                         <span><img src="images/expand.png"/></span>
                         <ul class="YM-submnu">
@@ -113,14 +119,14 @@
                              <li><a href="#1">电热水器</a></li>
                              <li><a href="#1">家庭音响</a></li>
                              <li><a href="#1">燃气热水器</a></li>
-                               <li><a href="#1">空调</a></li>
+                             <li><a href="#1">空调</a></li>
                              <li><a href="#1">冰箱冷柜</a></li>
                              <li><a href="#1">DVD播放器</a></li>
                              <li><a href="#1">电视附件</a></li>
                              <li><a href="#1">家电服务</a></li>
                              <li><a href="#1">家电下乡</a></li>
                         </ul> 
-                    </li>
+                       </li>
 
                       <li class="YM-Tab">               
                       <a href="#">大家电</a>
@@ -230,12 +236,12 @@
                         </ul> 
                      </li>      
                                               
-                 </ul>     
+                  </ul>     
             </div>   
         </div>
-      </div>  
-      <!-- end .list_menu -->
-      <!-- 此部分在首页固定，在其它页面鼠标滑过时出现 -->
+      </div>  <!-- end .list_menu --><!-- 此部分在首页固定，在其它页面鼠标滑过时出现 -->
+
+      
   <!-- 结算页面主体 -->
   <div class="cart_main">
     <!-- 结算流程图 -->

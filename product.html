@@ -1,6 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!DOCTYPE html>
+<html>
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <title>产品页</title>
@@ -14,9 +13,9 @@
   <script type="text/javascript" src="js/myJs.js"></script>
   <script type="text/javascript" src="js/picture.js"></script>
   <script type="text/javascript" src="js/jquery.imagezoom.min.js"></script>
-
   <link rel="stylesheet" type="text/css" href="css/layout.css" />
   <link rel="stylesheet" type="text/css" href="css/product.css" />
+  <script language="javascript" type="text/javascript" src="js/yao.js"></script>
 </head>
 <body>
      <!-- 商标，搜索栏，购物车，电话 -->
@@ -35,6 +34,7 @@
 
     <!-- 页面头部背景 -->
     <div class="bg">
+     <img src="images/head.png" alt="顶部背景宣传图">
       <button class="bg_button"></button>
     </div>
 
@@ -48,8 +48,8 @@
           <input class="search-button" id="search-button" value="搜 索">
           </form>
           <div id="hot_search">
-            <span>热门搜索：</span>
-            <span>小龙虾 蓝莓 虾 进口奶 进口肉 大枣</span>
+             <span>热门搜索：</span>
+            <span><a href="">小龙虾</a> <a href="">蓝莓</a> <a href="">虾</a>  <a href="">进口奶</a> <a href="">进口肉</a> <a href="">大枣</a></span>
           </div>
         </div>
           <div class="tel"></div>
@@ -104,12 +104,12 @@
       </div>    <!-- end nav   --> 
 </div><!-- header部分 -->
 
-
+       
 
      <!-- 主内容区域 -->
     <div id="content" class="content">
       <!-- 商品分类-->       
-       <!-- 以下"全部商品分类部分，在首页中显示，在其它页中鼠标滑过才显示" -->
+<!-- 以下"全部商品分类部分，在首页中显示，在其它页中鼠标滑过才显示" -->
       <div id="list_menu"  class="no-mainpage">
         <div id="YMenu">
              <div id="YMenu-side">       
@@ -1071,24 +1071,4 @@ Copyright © 广州新富农农业科技有限公司
 </div>
 
 <!-- 整个容器部分结束 -->
-
-<script type="text/javascript">
-$(document).ready(function(){
-
-  $(".jqzoom").imagezoom();
-
-  $("#thumblist li a").click(function () {
-    
-    $(".jqzoom").attr('src',$(this).find("img").attr("mid"));
-    $(".jqzoom").attr('rel',$(this).find("img").attr("big"));
-  });
-
-
-
-
-});
-
-</script>
-
-</body>
 </html>

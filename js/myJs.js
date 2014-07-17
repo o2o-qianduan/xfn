@@ -31,30 +31,32 @@ $(".bg_button").bind("click",function(){
 /*************首页顶部广告可关闭部分结束***************june**************end*******************/
 
 
-/*首页"全部产品分类"部分在首页时其菜单固定显示，在其它页面时鼠标一移过才显示**********start******/
+/*首页"全部产品分类"部分在首页时其菜单固定显示，在其它页面时鼠标一移过才显示***june*******start******/
 $(function(){
 	$(".no-mainpage").css({"display":"none"});
 });
 $(function(){
 	$(".all_classify").mouseover(function(){
-		$(".no-mainpage").css({"display":"block",
-								"z-index":"230",
-								"background-color":"#ffffff",
-								"position":"absolute"})
-	});
-	$("#YMenu").mouseover(function(){
-		 $(this).find(">ul").css({"display":"block",
-							 "z-index":"2300",
-							 "background-color":"#ffffff",
-							 "position":"absolute"})
-	});
-	$(".no-mainpage >li").mouseover(function(){
-		 $(".no-mainpage >li>ul").css({"display":"block"})
-	});
-	$("#YMenu").mouseout(function(){
-		 $(".no-mainpage").css({"display":"none"})
-	});
-	
+            $(".no-mainpage").css({"display":"block",
+                                "z-index":"230",
+                                "background-color":"#ffffff",
+                                "position":"absolute"});
+    YAO.YTabs({
+    tabs: YAO.getElByClassName('YM-Tab', 'li', 'YMenu-side'),
+    contents: YAO.getElByClassName('YM-submnu', 'ul', 'YMenu-side'),
+    hideAll: true
+  });
+})
+})
+
+$(function() {
+    $('.no-mainpage').mouseover(function(){
+    if($('.no-mainpage').is(":visible")){
+        $('.no-mainpage').hide();
+    } else {
+        $('.no-mainpage').show();
+    }
+   });
 })
 /*******************首页"全部产品分类"部分**************************june*******end********/
 
@@ -372,9 +374,7 @@ function tabOptionHover5(tabOptionIndex){
 
  /**************产品详情页宝贝预览图放大效果******june****start**************/
 (function($){
-
     $.fn.imagezoom = function(options){
-
         var settings = {
             xzoom: 310,
             yzoom: 310,
@@ -382,39 +382,26 @@ function tabOptionHover5(tabOptionIndex){
             position: "BTR",
             preload: 1
         };
-
         if(options) {
             $.extend(settings, options);
         }
-
         var noalt = '';
-
         var self = this;
-
         $(this).bind("mouseenter", function(ev){
-
             var imageLeft = $(this).offset().left;//元素左边距
             var imageTop = $(this).offset().top;//元素顶边距
-
-
             var imageWidth = $(this).get(0).offsetWidth;//图片宽度
             var imageHeight = $(this).get(0).offsetHeight;//图片高度
-
             var boxLeft = $(this).parent().offset().left;//父框左边距
             var boxTop = $(this).parent().offset().top;//父框顶边距
             var boxWidth = $(this).parent().width();//父框宽度
             var boxHeight = $(this).parent().height();//父框高度
-
             noalt= $(this).attr("alt");//图片标题
             var bigimage = $(this).attr("rel");//大图地址
             $(this).attr("alt",'');//清空图片alt
-
-
             if($("div.zoomDiv").get().length == 0){
                 $(document.body).append("<div class='zoomDiv'><img class='bigimg' src='"+bigimage+"'/></div><div class='zoomMask'>&nbsp;</div>");//放大镜框及遮罩
             }
-
-
             if(settings.position == "BTR"){
                 //如果超过了屏幕宽度 将放大镜放在右边
                 if(boxLeft + boxWidth + settings.offset + settings.xzoom > screen.width){
@@ -428,29 +415,21 @@ function tabOptionHover5(tabOptionIndex){
                     leftpos = imageLeft + imageWidth  + settings.offset;
                 }
             }
-
             $("div.zoomDiv").css({ top: boxTop,left: leftpos });
             $("div.zoomDiv").width(settings.xzoom);
             $("div.zoomDiv").height(settings.yzoom);
             $("div.zoomDiv").show();
-
             $(this).css('cursor','crosshair');
-
             $(document.body).mousemove(function(e){
-
                 mouse = new MouseEvent(e);
                 if(mouse.x<imageLeft || mouse.x>imageLeft+imageWidth || mouse.y<imageTop || mouse.y>imageTop+imageHeight){
                     mouseOutImage();
                     return;
                 }
-
                 var bigwidth = $(".bigimg").get(0).offsetWidth;
                 var bigheight = $(".bigimg").get(0).offsetHeight;
-
                 var scaley ='x';
                 var scalex ='y';
-
-
                 //设置遮罩层尺寸
                 if(isNaN(scalex)|isNaN(scaley)){
                     var scalex = (bigwidth/imageWidth);
@@ -459,68 +438,51 @@ function tabOptionHover5(tabOptionIndex){
                     $("div.zoomMask").height((settings.yzoom)/scaley);
                     $("div.zoomMask").css('visibility','visible');
                 }
-
-
-
                 xpos = mouse.x- $("div.zoomMask").width()/2 ;
-                ypos = mouse.y- $("div.zoomMask").height()/2 ;
-                
+                ypos = mouse.y- $("div.zoomMask").height()/2 ;               
                 xposs = mouse.x- $("div.zoomMask").width()/2 - imageLeft;
-                yposs = mouse.y- $("div.zoomMask").height()/2 - imageTop ;
-                
+                yposs = mouse.y- $("div.zoomMask").height()/2 - imageTop ;                
                 xpos = (mouse.x - $("div.zoomMask").width()/2 < imageLeft ) ? imageLeft : (mouse.x + $("div.zoomMask").width()/2 > imageWidth + imageLeft ) ?  (imageWidth + imageLeft -$("div.zoomMask").width()): xpos;
                 ypos = (mouse.y - $("div.zoomMask").height()/2 < imageTop ) ? imageTop : (mouse.y + $("div.zoomMask").height()/2  > imageHeight + imageTop ) ?  (imageHeight + imageTop - $("div.zoomMask").height()) : ypos;
-
-
                 $("div.zoomMask").css({ top:ypos,left:xpos});
                 $("div.zoomDiv").get(0).scrollLeft = xposs * scalex;
                 $("div.zoomDiv").get(0).scrollTop  = yposs * scaley;
-
-
             });
-
         });
-
-
         function mouseOutImage(){
             $(self).attr("alt",noalt);
             $(document.body).unbind("mousemove");
             $("div.zoomMask").remove();
             $("div.zoomDiv").remove();
         }
-
         //预加载
         count = 0;
         if(settings.preload){
             $('body').append("<div style='display:none;' class='jqPreload"+count+"'></div>");
-
             $(this).each(function(){
-
                 var imagetopreload= $(this).attr("rel");
-
                 var content = jQuery('div.jqPreload'+count+'').html();
-
                 jQuery('div.jqPreload'+count+'').html(content+'<img src=\"'+imagetopreload+'\">');
-
             });
-
         }
-
     }
-
 })(jQuery);
-
-
 function MouseEvent(e) {
     this.x = e.pageX;
     this.y = e.pageY;
 }
 
+$(function(){
+  $(".jqzoom").imagezoom();
+  $("#thumblist li a").click(function () {  
+    $(".jqzoom").attr('src',$(this).find("img").attr("mid"));
+    $(".jqzoom").attr('rel',$(this).find("img").attr("big"));
+  });
+});
   /**************产品详情页宝贝预览图放大效果******june****end**************/
 
 /*悬浮购物车*/ 
 $(function(){
-
     $(".count").each(function(){
         var $reduce = $(this).children('.cart_reduce');
         var $countInput = $(this).children('input');
@@ -578,7 +540,6 @@ $(function(){
     $("#cart_icon").click(function(){
         showCart();
     })
-
     getTotal();
 })
 
@@ -607,20 +568,16 @@ $(document).ready(function(){
           var $item = $("#list_table").children('tbody').children('tr');
           var total = 0, temp, len = $item.length;
           var sum = 0;
-
           for(var i=0; i<len;i++){
              temp = $item.eq(i).find('.price').children('span').text()*$item.eq(i).find('.count').text();
             $item.eq(i).find('.subTotal').text("￥"+temp.toFixed(2));
             $item.eq(i).find('.goods_integral').text(parseInt(temp));
             sum += temp;
-
           }
           $('.summary').children('span').text("￥"+sum.toFixed(2));
-          return total;
-
+         return total;
         }
-
         account();
-
-
       })
+/*************************************************************************************************/
+
