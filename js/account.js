@@ -11,7 +11,8 @@ $(function(){
 	})
 
 	// 修改地址
-	$(".modify_address").live("click",function(){
+
+	$(".modify_address").live('click',function(){
 		$.XYTipsWindow({
 		___title:"修改地址",
 		___content:"iframe:new_address.html",
