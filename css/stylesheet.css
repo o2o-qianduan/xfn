@@ -968,7 +968,7 @@ ul, li {
 /*个人中心*/
 .per_center{
 	width: 213px;
-	height: 701px;
+	/*height: 701px;*/
 	border:1px solid #EFEFEF;
 	background-color: #FAFAFA;
 	margin:20px 0 0 10px;
@@ -989,14 +989,14 @@ ul, li {
 	cursor: pointer;
 	font-family: "新宋体", "MicroSoft YeHei";
 	font-size: 14px;
-	line-height: 35px;
+	line-height: 33px;
 	padding-left: 10px;
 	color: #333333;
 	background: url(../images/layer.png) no-repeat scroll -8px -3px;
 }
 .current ul li{
 	line-height: 35px;
-	background: url(../images/triangle.png) no-repeat scroll 12px 16px transparent;
+	/*background: url(../images/triangle.png) no-repeat scroll 12px 16px transparent;*/
 	padding-left: 26px;
 	height: 35px;
 	border-bottom:1px dashed #E7E6E6;
@@ -1011,6 +1011,9 @@ ul, li {
 }
 .current ul li a:hover{
 	color: red;
+}
+.current .current_list{
+	display: none;
 }
 
 /*右边详细信息*/
@@ -1922,4 +1925,3 @@ box-shadow: 2px 2px 5px #C0BBB5;
 -webkit-box-shadow: 2px 2px 5px #C0BBB5;
 }
 /********弹出框**********bing*****edn********/
-
