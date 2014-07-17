@@ -1,8 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <title>填写订单</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=9,IE=10">
@@ -10,133 +8,21 @@
   <link rel="stylesheet" href="css/jquery-ui.css">
   <script src="js/jquery-1.8.2.js"></script>
   <script src="js/jquery-ui.js"></script>
+  <link rel="stylesheet" href="css/style.css"> 
   <script type="text/javascript" src="js/myJs.js"></script>
-  <script type="text/javascript" src="js/account.js"></script>
-  <script type="text/javascript" src="js/jquery.XYTipsWindow.min.2.8.js"></script>
-  <style type="text/css">
-.XYTipsWindow .boxLoading {
-  position: absolute;
-  display: block;
-  width: 90px;
-  height: 30px;
-  line-height: 30px;
-  margin-left: -45px;
-  margin-top: -15px;
-  left: 50%;
-  top: 50%;
-  color: #f00;
-}
-.XYTipsWindow .boxLoading {
-  width: 28px;
-  margin-left: -14px;
-  background: url("images/loading.gif") no-repeat;
-  text-indent: -999em;
-  text-align: center;
-}
-.XYTipsWindow .boxTitle, .XYTipsWindow .boxTitle span, .XYTipsWindow .boxTitle span.hover, .XYTipsWindow .loadinglayer, .XYTipsWindow .tipslayer, .XYTipsWindow .arrowLeft, .XYTipsWindow .colseBtn, .XYTipsWindow .boxError em, .XYTipsWindow .dialogBtn, .XYTipsWindow .dialogBtn.hover {
-  background-image: url("images/ico.png");
-  background-repeat: no-repeat;
-}
-.XYTipsWindow .boxTitle {
-  position: relative;
-  border: 1px solid #A6C9E1;
-  border-bottom: none;
-  background-position: 0 0;
-  background-repeat: repeat-x;
-  height: 30px;
-  line-height: 30px;
-}
-.XYTipsWindow .boxTitle h3 {
-  float: left;
-  font-weight: normal;
-  color: #666;
-  font-size: 14px;
-  margin: 0;
-  text-indent: 10px;
-}
-.XYTipsWindow .boxTitle span {
-  position: absolute;
-  width: 10px;
-  background-position: -80px -40px;
-  text-indent: -10em;
-  right: 10px;
-  top: 10px;
-  height: 16px;
-  overflow: hidden;
-  cursor: pointer;
-}
-.XYTipsWindow .boxTitle span.hover {
-  background-position: -90px -40px;
-}
-.XYTipsWindow .loadinglayer {
-  line-height: 40px;
-  background-position: 0 -100px !important;
-}
-.XYTipsWindow .tipslayer {
-  line-height: 20px;
-  text-align: left;
-}
-.XYTipsWindow .arrowLeft {
-  position: absolute;
-  width: 8px;
-  height: 16px;
-  background-position: -20px -170px;
-  text-indent: -9999em;
-  z-index: 20591;
-  overflow: hidden;
-}
-.XYTipsWindow .colseBtn {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  width: 8px;
-  height: 8px;
-  background-position: -55px -170px;
-  text-indent: -9999em;
-  cursor: pointer;
-  z-index: 20591;
-  overflow: hidden;
-}
-.XYTipsWindow .boxError {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin-left: -60px;
-  margin-top: -15px;
-  width: 120px;
-  height: 30px;
-  line-height: 30px;
-  color: #f00;
-}
-.XYTipsWindow .boxError em {
-  float: left;
-  width: 30px;
-  height: 30px;
-  background-position: -35px -140px;
-}
-.XYTipsWindow .dialogBtn {
-  margin: 5px 5px 0 0;
-  width: 80px;
-  height: 35px;
-  background-position: 0 -30px;
-  border: none;
-  color: #333;
-}
-.XYTipsWindow .dialogBtn.hover {
-  background-position: 0 -65px;
-}
-.XYTipsWindow.shadow {
-  box-shadow: 2px 2px 5px #C0BBB5;
-  -moz-box-shadow: 2px 2px 5px #C0BBB5;
-  -webkit-box-shadow: 2px 2px 5px #C0BBB5;
-}
-</style>
+  <script type="text/javascript" src="js/picture.js"></script>
+ <script type="text/javascript" src="js/jquery.imagezoom.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/product.css" />
+    <script type="text/javascript" src="js/yao.js"></script>
+    <script type="text/javascript" src="js/account.js"></script>
+    <script type="text/javascript" src="js/jquery.XYTipsWindow.min.2.8.js"></script>
   <link rel="stylesheet" href="css/style.css"> 
   <link rel="stylesheet" href="css/account2.css"> 
  
 
   <link rel="stylesheet" type="text/css" href="css/layout.css" />
   <link rel="stylesheet" type="text/css" href="css/product.css" />
+
 </head>
 <body>
      <!-- 商标，搜索栏，购物车，电话 -->
@@ -155,6 +41,7 @@
 
     <!-- 页面头部背景 -->
     <div class="bg">
+       <img src="images/head.png" alt="顶部背景宣传图">
       <button class="bg_button"></button>
     </div>
 
@@ -168,8 +55,8 @@
           <input class="search-button" id="search-button" value="搜 索">
           </form>
           <div id="hot_search">
-            <span>热门搜索：</span>
-            <span>小龙虾 蓝莓 虾 进口奶 进口肉 大枣</span>
+              <span>热门搜索：</span>
+            <span><a href="">小龙虾</a> <a href="">蓝莓</a> <a href="">虾</a>  <a href="">进口奶</a> <a href="">进口肉</a> <a href="">大枣</a></span>
           </div>
         </div>
           <div class="tel"></div>
@@ -224,12 +111,14 @@
       </div>    <!-- end nav   --> 
   </div><!-- header部分 -->
 
+ 
+
 
 
      <!-- 主内容区域 -->
     <div id="content" class="content">
       <!-- 商品分类-->       
-       <!-- 以下"全部商品分类部分，在首页中显示，在其它页中鼠标滑过才显示" -->
+      <!-- 以下"全部商品分类部分，在首页中显示，在其它页中鼠标滑过才显示" -->
       <div id="list_menu"  class="no-mainpage">
         <div id="YMenu">
              <div id="YMenu-side">       
@@ -364,8 +253,6 @@
             </div>   
         </div>
       </div>  <!-- end .list_menu --><!-- 此部分在首页固定，在其它页面鼠标滑过时出现 -->
-
-
       <!-- 订单部分 -->
     <div class="write_indent"></div>
     <div class="indent_title">

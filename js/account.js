@@ -1,17 +1,18 @@
+
 $(function(){
 
 	// 删除地址
-	$(".del_address").click(function(){
+	$(".del_address").live('click',function(){
 		var r = confirm("确定删除吗？");
 		if(r){
 			var $parent = $(this).parent("li");
 			$parent.css("display","none");
 		}
-	});
+	})
 
 	// 修改地址
-	$(".modify_address").click(function(){
-	$.XYTipsWindow({
+	$(".modify_address").live("click",function(){
+		$.XYTipsWindow({
 		___title:"修改地址",
 		___content:"iframe:new_address.html",
 		___width:"780",
