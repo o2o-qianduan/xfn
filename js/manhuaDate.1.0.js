@@ -1,41 +1,41 @@
 /***
- * Âş»­JqueryÊ±¼ä²å¼ş
- * ±àĞ´Ê±¼ä£º2012Äê7ÔÂ14ºÅ
+ * æ¼«ç”»Jqueryæ—¶é—´æ’ä»¶
+ * ç¼–å†™æ—¶é—´ï¼š2012å¹´7æœˆ14å·
  * version:manhuaDate.1.0.js
 ***/
 $(function() {
 	$.fn.manhuaDate = function(options) {
 		var defaults = {
-			Event : "click",		//²å¼ş°ó¶¨µÄÏìÓ¦ÊÂ¼ş
-			Left : 0,				//µ¯³öÊ±¼äÍ£¿¿µÄ×ó±ßÎ»ÖÃ
-			Top : 22,				//µ¯³öÊ±¼äÍ£¿¿µÄÉÏ±ßÎ»ÖÃ
-			fuhao : "-",			//ÈÕÆÚÖ®¼äµÄÁ¬½Ó·ûºÅ
-			isTime : false,			//ÊÇ·ñ¿ªÆôÊ±¼äÖµÄ¬ÈÏÎªfalse
-			beginY : 1949,			//Äê·İµÄ¿ªÊ¼Ä¬ÈÏÎª1949
-			endY : 2049				//Äê·İµÄ½áÊøÄ¬ÈÏÎª2049
+			Event : "click",		//æ’ä»¶ç»‘å®šçš„å“åº”äº‹ä»¶
+			Left : 0,				//å¼¹å‡ºæ—¶é—´åœé çš„å·¦è¾¹ä½ç½®
+			Top : 22,				//å¼¹å‡ºæ—¶é—´åœé çš„ä¸Šè¾¹ä½ç½®
+			fuhao : "-",			//æ—¥æœŸä¹‹é—´çš„è¿æ¥ç¬¦å·
+			isTime : false,			//æ˜¯å¦å¼€å¯æ—¶é—´å€¼é»˜è®¤ä¸ºfalse
+			beginY : 1949,			//å¹´ä»½çš„å¼€å§‹é»˜è®¤ä¸º1949
+			endY : 2049				//å¹´ä»½çš„ç»“æŸé»˜è®¤ä¸º2049
 		};
 		var options = $.extend(defaults,options);		
 		var stc;
 		if($("#calender").length<=0){
-			$("body").prepend("<div class='calender'><div class='calenderContent'><div class='calenderTable'><div class='getyear'><a class='preMonth' id='preMonth'>ÉÏÒ»ÔÂ</a><select id='year'></select><select id='month'></select><a class='nextMonth' id='nextMonth'>ÏÂÒ»ÔÂ</a></div><div class='tablebg'><table id='calender' class='calendertb' cellpadding='0' cellspacing='1'><tr bgcolor='#D6D6D6'><th class='weekend'>ÈÕ</th><th>Ò»</th><th>¶ş</th><th>Èı</th><th>ËÄ</th><th>Îå</th><th class='weekend noborder'>Áù</th></tr><tr><td class='weekend2'></td><td></td><td></td><td></td><td></td><td></td><td class='weekend2 noborder'></td></tr><tr><td class='weekend2'></td><td></td><td></td><td></td><td></td><td></td><td class='weekend2 noborder'></td></tr><tr><td class='weekend2'></td><td></td><td></td><td></td><td></td><td></td><td class='weekend2 noborder'></td></tr><tr><td class='weekend2'></td><td></td><td></td><td></td><td></td><td></td><td class='weekend2 noborder'></td></tr><tr><td class='weekend2'></td><td></td><td></td><td></td><td></td><td></td><td class='weekend2'></td></tr><tr><td class='weekend2'></td><td></td><td></td><td></td><td></td><td></td><td class='weekend2'></td></tr></table></div></div></div></div>");	
+			$("body").prepend("<div class='calender'><div class='calenderContent'><div class='calenderTable'><div class='getyear'><a class='preMonth' id='preMonth'>ä¸Šä¸€æœˆ</a><select id='year'></select><select id='month'></select><a class='nextMonth' id='nextMonth'>ä¸‹ä¸€æœˆ</a></div><div class='tablebg'><table id='calender' class='calendertb' cellpadding='0' cellspacing='1'><tr bgcolor='#D6D6D6'><th class='weekend'>æ—¥</th><th>ä¸€</th><th>äºŒ</th><th>ä¸‰</th><th>å››</th><th>äº”</th><th class='weekend noborder'>å…­</th></tr><tr><td class='weekend2'></td><td></td><td></td><td></td><td></td><td></td><td class='weekend2 noborder'></td></tr><tr><td class='weekend2'></td><td></td><td></td><td></td><td></td><td></td><td class='weekend2 noborder'></td></tr><tr><td class='weekend2'></td><td></td><td></td><td></td><td></td><td></td><td class='weekend2 noborder'></td></tr><tr><td class='weekend2'></td><td></td><td></td><td></td><td></td><td></td><td class='weekend2 noborder'></td></tr><tr><td class='weekend2'></td><td></td><td></td><td></td><td></td><td></td><td class='weekend2'></td></tr><tr><td class='weekend2'></td><td></td><td></td><td></td><td></td><td></td><td class='weekend2'></td></tr></table></div></div></div></div>");	
 		}
 		var $mhInput = $(this);
-		var isToday = true;//ÊÇ·ñÎª½ñÌìÄ¬ÈÏÎªÊÇ	
-		var date = new Date();//»ñµÃÊ±¼ä¶ÔÏó
-		var nowYear = date.getFullYear();//»ñµÃµ±Ç°Äê·İ
-		var nowMonth = date.getMonth() + 1;//»ñµÃµ±Ç°ÔÂ·İ
-		var today = date.getDate();//»ñµÃµ±Ç°ÌìÊı
-		var nowWeek = new Date(nowYear, nowMonth - 1, 1).getDay();//»ñµÃµ±Ç°ĞÇÆÚ
-		var nowLastday = getMonthNum(nowMonth, nowYear);//»ñµÃ×îºóÒ»Ìì
-		//Äê¡¢ÔÂÏÂÀ­¿òµÄ³õÊ¼»¯
+		var isToday = true;//æ˜¯å¦ä¸ºä»Šå¤©é»˜è®¤ä¸ºæ˜¯	
+		var date = new Date();//è·å¾—æ—¶é—´å¯¹è±¡
+		var nowYear = date.getFullYear();//è·å¾—å½“å‰å¹´ä»½
+		var nowMonth = date.getMonth() + 1;//è·å¾—å½“å‰æœˆä»½
+		var today = date.getDate();//è·å¾—å½“å‰å¤©æ•°
+		var nowWeek = new Date(nowYear, nowMonth - 1, 1).getDay();//è·å¾—å½“å‰æ˜ŸæœŸ
+		var nowLastday = getMonthNum(nowMonth, nowYear);//è·å¾—æœ€åä¸€å¤©
+		//å¹´ã€æœˆä¸‹æ‹‰æ¡†çš„åˆå§‹åŒ–
 		for(var i=options.beginY; i<=options.endY; i++){
-			$("<option value='"+i+"'>"+i+"Äê</option>").appendTo($("#year"));
+			$("<option value='"+i+"'>"+i+"å¹´</option>").appendTo($("#year"));
 		}
 		for(var i=1; i<=12; i++){
-			$("<option value='"+i+"'>"+i+"ÔÂ</option>").appendTo($("#month"));
+			$("<option value='"+i+"'>"+i+"æœˆ</option>").appendTo($("#month"));
 		}		
-		ManhuaDate(nowYear, nowMonth, nowWeek, nowLastday);//³õÊ¼»¯Îªµ±Ç°ÈÕÆÚ		
-		//ÉÏÒ»ÔÂ°ó¶¨µã»÷ÊÂ¼ş
+		ManhuaDate(nowYear, nowMonth, nowWeek, nowLastday);//åˆå§‹åŒ–ä¸ºå½“å‰æ—¥æœŸ		
+		//ä¸Šä¸€æœˆç»‘å®šç‚¹å‡»äº‹ä»¶
 		$("#preMonth").click(function() {
 			isToday = false;
 			var year = parseInt($("#year").val());
@@ -52,7 +52,7 @@ $(function() {
 			var lastday = getMonthNum(month, year);
 			ManhuaDate(year, month, week, lastday);
 		});		
-		//ÄêÏÂÀ­¿òµÄ¸Ä±äÊÂ¼ş
+		//å¹´ä¸‹æ‹‰æ¡†çš„æ”¹å˜äº‹ä»¶
 		$("#year").change(function() {	
 			isToday = false;				   
 			var year = parseInt($(this).val());		
@@ -64,7 +64,7 @@ $(function() {
 			var lastday = getMonthNum(month, year);
 			ManhuaDate(year, month, week, lastday);
 		});		
-		//ÔÂÏÂÀ­¿òµÄ¸Ä±äÊÂ¼ş
+		//æœˆä¸‹æ‹‰æ¡†çš„æ”¹å˜äº‹ä»¶
 		$("#month").change(function() {
 			isToday = false;
 			var year = parseInt($("#year").val());		
@@ -76,7 +76,7 @@ $(function() {
 			var lastday = getMonthNum(month, year);
 			ManhuaDate(year, month, week, lastday);
 		});		
-		//ÏÂÒ»¸öÔÂµÄµã»÷ÊÂ¼ş
+		//ä¸‹ä¸€ä¸ªæœˆçš„ç‚¹å‡»äº‹ä»¶
 		 $("#nextMonth").click(function() {
 			isToday = false;
 			var year = parseInt($("#year").val());
@@ -95,7 +95,7 @@ $(function() {
 			ManhuaDate(year, month, week, lastday);
 		});
 		 
-		 //³õÊ¼»¯ÈÕÀú
+		 //åˆå§‹åŒ–æ—¥å†
 		 function ManhuaDate(year, month, week, lastday) {
 			$("#year").val(year);
 			$("#month").val(month)
@@ -130,7 +130,7 @@ $(function() {
 				}
 			}
 		}
-		//»ñµÃÔÂ·İµÄÌìÊı
+		//è·å¾—æœˆä»½çš„å¤©æ•°
 		function getMonthNum(month, year) {
 			month = month - 1;
 			var LeapYear = ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) ? true: false;
@@ -156,13 +156,13 @@ $(function() {
 			}
 			return monthNum;
 		}		
-		//Ã¿Ò»ÁĞµÄĞü¹ÒÊÂ¼ş¸Ä±äµ±Ç°ÑùÊ½
+		//æ¯ä¸€åˆ—çš„æ‚¬æŒ‚äº‹ä»¶æ”¹å˜å½“å‰æ ·å¼
 		$("#calender td:not(.tdtoday)").hover(function() {
 			$(this).addClass("hover")
 		},function() {
 			$(this).removeClass("hover");
 		});		
-		//µã»÷Ê±¼äÁĞ±íÊÂ¼ş
+		//ç‚¹å‡»æ—¶é—´åˆ—è¡¨äº‹ä»¶
 		$("#calender td").die().live("click",function() {	
 			var dv = $(this).html();
 			if (dv != "&nbsp;"){
@@ -178,40 +178,40 @@ $(function() {
 				$(".calender").hide();
 			}
 		});
-		//ÎÄ±¾¿ò°ó¶¨ÊÂ¼ş
+		//æ–‡æœ¬æ¡†ç»‘å®šäº‹ä»¶
 		$mhInput.live(options.Event,function(e){											
 			$(this).addClass("dateVisited");
 			if(stc){
-				clearTimeout(stc);//Çå³ı¶¨Ê±Æ÷
+				clearTimeout(stc);//æ¸…é™¤å®šæ—¶å™¨
 			}
 			var iof = $(this).offset();
 			$(".calender").css({ "left" : iof.left+options.Left,"top" : iof.top+options.Top });
 			$(".calender").show();	
 		});		
-		//µ±Êó±êÀë¿ª¿Ø¼şÉÏÃæµÄÊ±ºòÑÓ³Ù3Ãë¹Ø±Õ
+		//å½“é¼ æ ‡ç¦»å¼€æ§ä»¶ä¸Šé¢çš„æ—¶å€™å»¶è¿Ÿ3ç§’å…³é—­
 		$(".calender").live("mouseleave",function(){ 
 			stc = setTimeout(function (){			
 				$(".calender").hide();
 				clearTimeout(stc);
 			},3000);	
 		});
-		//µ±Êó±êÒÆµ½¿Ø¼şÉÏÃæµÄÊ±ºòÏÔÊ¾
+		//å½“é¼ æ ‡ç§»åˆ°æ§ä»¶ä¸Šé¢çš„æ—¶å€™æ˜¾ç¤º
 		$(".calender").live("mousemove",function(){     
 			if(stc){
-				clearTimeout(stc);//Çå³ı¶¨Ê±Æ÷
+				clearTimeout(stc);//æ¸…é™¤å®šæ—¶å™¨
 			}
 			$(this).show();
 		});	
-		//µã»÷ÄêÑ¡ÔñÏÂÀ­¿òµÄÊ±ºòÇå³ı¶¨Ê±Æ÷×èÖ¹¿Ø¼ş²ã¹Ø±Õ
+		//ç‚¹å‡»å¹´é€‰æ‹©ä¸‹æ‹‰æ¡†çš„æ—¶å€™æ¸…é™¤å®šæ—¶å™¨é˜»æ­¢æ§ä»¶å±‚å…³é—­
 		$("#year").die().live("click",function(){     
 			if(stc){
-				clearTimeout(stc);//Çå³ı¶¨Ê±Æ÷
+				clearTimeout(stc);//æ¸…é™¤å®šæ—¶å™¨
 			}			
 		});	
-		//µã»÷ÔÂÑ¡ÔñÏÂÀ­¿òµÄÊ±ºòÇå³ı¶¨Ê±Æ÷×èÖ¹¿Ø¼ş²ã¹Ø±Õ
+		//ç‚¹å‡»æœˆé€‰æ‹©ä¸‹æ‹‰æ¡†çš„æ—¶å€™æ¸…é™¤å®šæ—¶å™¨é˜»æ­¢æ§ä»¶å±‚å…³é—­
 		$("#month").die().live("click",function(){     
 			if(stc){
-				clearTimeout(stc);//Çå³ı¶¨Ê±Æ÷
+				clearTimeout(stc);//æ¸…é™¤å®šæ—¶å™¨
 			}			
 		});	
 	};
