@@ -7,11 +7,41 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=9,IE=10">
 	<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
   <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" href="css/manhuaDate.1.0.css">
+  <link rel="stylesheet" href="css/style.css"> 
+ <!--[if IE]>
+<style type="text/css">?
+
+#earnPointWay .boxImg i{
+  display: inline-block;
+  height: 100%;
+  vertical-align:middle;
+}
+#earnPointWay .boxImg img{
+  vertical-align: middle;
+}
+</style>
+<![endif]-->
   <script src="js/jquery-1.8.2.js"></script>
   <script src="js/jquery-ui.js"></script>
-  <link rel="stylesheet" href="css/style.css"> 
   <script type="text/javascript" src="js/myJs.js"></script>
   <script type="text/javascript" src="js/member.js"></script>
+  <script type="text/javascript" src="js/manhuaDate.1.0.js"></script>
+
+  <script type="text/javascript">
+  $(function (){
+   $("input.mh_date").manhuaDate({                
+     Event : "click",//可选               
+     Left : 0,//弹出时间停靠的左边位置
+     Top : -16,//弹出时间停靠的顶部边位置
+     fuhao : "-",//日期连接符默认为-
+     isTime : false,//是否开启时间值默认为false
+     beginY : 1949,//年份的开始默认为1949
+     endY :2015//年份的结束默认为2049
+   });
+  
+});
+</script>
 </head>
 <body>
 
@@ -291,7 +321,7 @@
           </div>
         </div>
         <div class="right_div"  style="display:none;">
-          <h1>新手教程</h1>
+          <p>新手教程</p>
           <span class="right_div_underline"></span>
           <div class="right_inner_text">
             <h3>一、积分种类</h3>
@@ -327,8 +357,8 @@
         </div>
 
         <!-- 个人资料 -->
-        <div class="right_div" style="display:none">
-          <h1>我的资料</h1>
+        <div class="right_div" style="display:none;">
+          <p>我的资料</p>
           <span class="right_div_underline"></span>
 
           <div class="member_div">
@@ -338,7 +368,7 @@
             </div>
             <div id="info2" class="every_line_height">
               <label for="birth_day">出生日期：</label>
-              <input type="date" id="birth_day" />
+              <input type="text" id="birth_day" class="mh_date" readonly="true" />
             </div>
             <div id="info3" class="every_line_height">
               <label>手机号码：</label>
@@ -380,7 +410,7 @@
 
         <!-- 修改地址 -->
         <div class="right_div" style="display:none;">
-          <h1>修改地址</h1>
+          <p>修改地址</p>
           <span class="right_div_underline"></span>
           <div class="member_div">
              <div id="myAddress1" class="every_line_height">
@@ -422,8 +452,8 @@
         </div>
 
         <!-- 密码管理 -->
-        <div class="right_div" style="display:none;">
-          <h1>密码管理</h1>
+        <div class="right_div" style="display:none">
+          <p>密码管理</p>
           <span class="right_div_underline"></span>
           <div class="member_div">
             <div id="pass1" class="every_line_height">
@@ -440,10 +470,176 @@
             </div>
             <button class="btn_info" id="savePassword">保存</button>
           </div>
+
         </div>
 
-        <div></div>
+        <!-- 激活礼品卡 -->
+        <div class="right_div"  style="display:none">
+          <p>激活礼品卡</p>
+          <span class="right_div_underline"></span>
+          <div class="member_div">
+            <div id="giftCard1" class="every_line_height">
+             <label for="acti_code">输入激活码：</label>
+              <input  id="acti_code" type="text" />
+              <span id="activiteTip">(请刮开卡背面覆盖的激活码)</span>
+            </div>
+            <div id="giftCard2" class="every_line_height">
+              <label for="security_code">输入验证码：</label>
+              <input type="text" id="security_code" />
+              <span><img src="images/code.png" /></span>
+              <a href="#">换一张</a>
+            </div>
+            <button class="btn_info" id="activiteBtn">激活</button>
+          </div>
+        </div>
 
+        <!-- 激活优惠券 -->
+        <div class="right_div" style="display:none;">
+          <p>激活优惠券</p>
+          <span class="right_div_underline"></span>
+          <div class="member_div">
+            <div id="discount1" class="every_line_height">
+             <label for="cardID">输入卡号：</label>
+              <input  id="cardID" type="text" />
+            </div>
+            <div id="discount2" class="every_line_height">
+              <label for="sec_code">输入验证码：</label>
+              <input type="text" id="sec_code" />
+              <img src="images/code.png" />
+              <a href="#">换一张</a>
+            </div>
+            <button class="btn_info" id="activiteBtn">激活</button>
+          </div>
+        </div>
+
+        <!-- 推荐人会员号 -->
+        <div class="right_div" style="display:none">
+          <p>推荐人会员号</p>
+          <span class="right_div_underline"></span>
+          <div class="referrerNum">
+             <div id="memNum1" class="every_line_height">
+              <label for="mem_num">推荐人会员号：</label>
+              <input type="text" id="mem_num" />
+              <span>(会员号一旦填写成功，一律不能修改)</span>
+            </div>
+            <button class="btn_info" id="commitBtn">提交</button>
+          </div>
+        </div>
+
+        <!-- 我的尚田 -->
+        <div class="right_div" >
+          <div class="myDetailInfo">
+            <img src="images/mem1.png" />
+            <div id="myDetail">
+              <div id="myDetail1">
+                <label>欢迎您，<span>fhioldjos@163.com</span></label>
+                <a href="#">完善个人资料获得积分</a>
+              </div>
+              <div id="myDetail2">
+                <p id="deti1">您成为尚田会员已经<span>  127  </span>天     消费记录<span>￥69483</span></p>
+                <p id="deti2">账户余额：<span>  ￥2000000.00</span></p>
+              </div>
+              <div id="myDetail3">
+                <label>账户安全：</label>
+                <label id="bind_mobile"><img src="images/alert.png"/>手机</label>
+                <span>  验证可获得50积分</span>
+                <label id="bind_email"><img src="images/right.png"/>邮箱</label>
+                <span> 验证可获得50积分</span>
+              </div>
+            </div>
+           </div>  
+
+           <div class="all_info">
+            <div id="all_info1">
+               <p>
+                <img src="images/white_pic1.png" />
+                待支付的订单
+                <span>(0)</span>
+               </p>
+               <p>
+                <img src="images/white_pic2.png" />
+                待收货的订单
+                <span>(0)</span>
+               </p>
+               <p>
+                <img src="images/white_pic3.png" />
+                待评价的商品
+                <span>(12333)</span>
+               </p>
+               <p>
+                <img src="images/white_pic4.png" />
+                签到换积分
+               </p>
+             </div>
+             <div class="clear"></div>
+             <div id="all_info2">
+                <p>
+                 <img src="images/white_pic5.png" />
+                 收货地址
+                </p>
+                <p>
+                 <img src="images/white_pic6.png" />
+                 邀请有礼
+                </p>
+                <p>
+                 <img src="images/white_pic7.png" />
+                 优惠券
+                </p>
+                <p>
+                 <img src="images/white_pic8.png" />
+                 礼品卡
+                </p>
+             </div>
+            </div>
+
+            <div class="earn_points">
+              <div id="point_tit">
+                <p>赚积分</p>
+                <span class="point_underline right_div_underline"></span>
+                <label>我的积分<span>  100</span></label>
+                <label>积分抵消部分金额</label>
+              </div>
+              <div id="earnPointWay">
+                <div id="earnWay1" class="earnWay">
+                   <div class="boxImg">
+                     <i></i><img src="images/info.png" alt="" />
+                   </div>
+                   <p>完善基本资料<span> +70</span></p>
+                </div>
+                <div id="earnWay2" class="earnWay">
+                  <div class="boxImg">
+                     <i></i><img src="images/mobile.png" alt="" />
+                   </div>
+                   <p>绑定手机<span> +150</span></p>
+                </div>
+                <div id="earnWay3" class="earnWay">
+                  <div class="boxImg">
+                     <i></i><img src="images/email.png" alt="" />
+                   </div>
+                   <p>验证邮箱<span> +70</span></p>
+                </div>
+                <div id="earnWay4" class="earnWay">
+                  <div class="boxImg">
+                     <i></i><img src="images/sign.png" alt="" />
+                   </div>
+                   <p>每日签到<span> +70</span></p>
+                </div>
+                <div id="earnWay5" class="earnWay">
+                  <div class="boxImg">
+                     <i></i><img src="images/buy.png" alt="" />
+                   </div>
+                   <p>推荐购买<span> +70</span></p>
+                </div>
+                <div id="earnWay6" class="earnWay">
+                  <div class="boxImg">
+                     <i></i><img src="images/commemt.png" alt="" />
+                   </div>
+                   <p>商品评论<span> +100</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+       
       </div>
   <!-- 会员页面    冰、升 -->
 </div>

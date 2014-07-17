@@ -27,4 +27,14 @@ $(function(){
 		$("#info4 a").css("display","none");
 
 	});
+
+	// 提交推荐人会员号
+	$("#commitBtn").click(function(){
+		$("#memNum1 input#mem_num").css("background-color","#ECECEC")
+								   .attr("disabled","disabled");
+		$(this).css("background-color","#B8B8B8");
+	});
+
+
+
 })

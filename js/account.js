@@ -61,8 +61,8 @@ $(function(){
 		var  $append_li =  $(".old_address ul").append("<li></li>");
 		var $two_li = $(".old_address ul li:last");   //获取最后一个li元素
 
-		var $append_a1 = $two_li.append( "<a class='modify_address' href='#'>修改</a>");
-		var $append_a2 = $two_li.append( "<a class='del_address' href='#'>删除</a>");
+		var $append_a1 = $two_li.append( "<a class='modify_address' href='#old_address'>修改</a>");
+		var $append_a2 = $two_li.append( "<a class='del_address' href='#old_address'>删除</a>");
 		var $append_input = $two_li.append("<input name='address' class='ss' type='radio'  />")
 		var $append_label = $two_li.append("<label class='default fontway'>"+$name_val+"  "+$province+$city+$region+$detail_val+"  "+$phone_val+"</label>");	 
 	});
