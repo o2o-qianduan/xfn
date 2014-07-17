@@ -3,9 +3,9 @@
 <html>
 <head>
 	<title>会员中心</title>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=9,IE=10">
-	<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=9,IE=10">
+  <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
   <link rel="stylesheet" href="css/jquery-ui.css">
   <link rel="stylesheet" type="text/css" href="css/manhuaDate.1.0.css">
   <link rel="stylesheet" href="css/style.css"> 
@@ -25,6 +25,10 @@
   <script src="js/jquery-1.8.2.js"></script>
   <script src="js/jquery-ui.js"></script>
   <script type="text/javascript" src="js/myJs.js"></script>
+  <script type="text/javascript" src="js/picture.js"></script>
+  <script type="text/javascript" src="js/jquery.imagezoom.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/product.css" />
+  <script language="javascript" type="text/javascript" src="js/yao.js"></script>
   <script type="text/javascript" src="js/member.js"></script>
   <script type="text/javascript" src="js/manhuaDate.1.0.js"></script>
 
@@ -64,8 +68,8 @@
   </div> <!-- 最顶部导航结束 -->
     <!-- 页面头部背景 -->
     <div class="bg">
+     <img src="images/head.png" alt="顶部背景宣传图">
       <button class="bg_button"></button>
-
     </div>
   <div class="head_one">
         <div class="brand"></div>
@@ -74,11 +78,11 @@
           <form class="searchform" method="get"> 
           <input class="search-submit" type="submit" value=""/>
           <input id="search-input" class="search-input" type="text" name="" size="30px">
-          <input class="search-button" id="search-button" value="搜 索"></input>
+          <input class="search-button" id="search-button" value="搜 索" />
           </form>
           <div id="hot_search">
-            <span>热门搜索：</span>
-            <span>小龙虾 蓝莓 虾 进口奶 进口肉 大枣</span>
+             <span>热门搜索：</span>
+            <span><a href="">小龙虾</a> <a href="">蓝莓</a> <a href="">虾</a>  <a href="">进口奶</a> <a href="">进口肉</a> <a href="">大枣</a></span>
           </div>
         </div>
 
@@ -128,8 +132,10 @@
         </div>
       </div>    <!-- end nav   --> 
 </div><!-- header部分 -->
+
+
 <!-- 内容区域 -->
-<div id="content">
+<div id="content" class="content">
 
 
        <!-- 以下"全部商品分类部分，在首页中显示，在其它页中鼠标滑过才显示" -->
@@ -355,9 +361,86 @@
                <p>&nbsp;</p>
           </div>
         </div>
-
-        <!-- 个人资料 -->
+        <!-- 签到记录 -->
         <div class="right_div" style="display:none;">
+          <p>签到记录</p>
+          <span class="right_div_underline"></span>
+            <div class="right_div_up">
+              <div class="fl sign_in_left">
+                <span class="green_font">签到奖励<br /></span>
+                <span>每次签到一次可获得10积分</span>
+              </div>
+              <div class="fr sign_in_right">
+                <a href=""><img src="images/signIn2.png" ></a>
+              </div>
+          </div>
+          <div class="right_div_table">
+            <table style="width: 530px;">
+              <caption>签到积分记录</caption>
+              <tr>
+                <th style="width:180px;">签到日期</th>
+                <th style="width:350px;">奖励积分</th>
+              </tr>
+              <tr>
+                <td class="first_td">2014-08-11</td>
+                <td class="reward_in">1000</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <!-- 我的积分 -->
+        <div class="right_div" style="display:none;;">
+          <p>我的积分</p>
+          <span class="right_div_underline"></span>
+
+            <div class="right_div_up">
+              <div class="my_integral">
+                <div class="recent_inte">您当前的积分是：<span>225</span></div>
+              </div>
+            </div>
+            <div class="right_div_table">
+              <table class="integral_table">
+                <caption>积分变动详单</caption>
+                <tr>
+                  <th>签到日期</th>
+                  <th>等级积分变动</th>
+                  <th>消费积分变动 </th>
+                  <th>账户余额变动</th>
+                  <th>原因</th>
+                </tr>
+                <tr>
+                  <td class="first_td">2014-08-11</td>
+                  <td>+1000</td>
+                  <td>+1000</td>
+                  <td>0.00</td>
+                  <td class="first_td changeReason">每日签到</td>
+                </tr>
+                <tr>
+                  <td class="first_td">2014-08-11</td>
+                  <td>+1000</td>
+                  <td>+1000</td>
+                  <td>0.00</td>
+                  <td class="first_td changeReason">每日签到</td>
+                </tr>
+                <tr>
+                  <td class="first_td">2014-08-11</td>
+                  <td>+1000</td>
+                  <td>+1000</td>
+                  <td>0.00</td>
+                  <td class="first_td changeReason">每日签到</td>
+                </tr>
+                <tr>
+                  <td class="first_td">2014-08-11</td>
+                  <td>+1000</td>
+                  <td>+1000</td>
+                  <td>0.00</td>
+                  <td class="first_td changeReason">每日签到</td>
+                </tr>
+              </table>
+            </div>
+        </div>
+        <!-- 个人资料 -->
+        <div class="right_div" >
           <p>我的资料</p>
           <span class="right_div_underline"></span>
 
@@ -527,7 +610,7 @@
         </div>
 
         <!-- 我的尚田 -->
-        <div class="right_div" >
+        <div class="right_div" style="display:none;">
           <div class="myDetailInfo">
             <img src="images/mem1.png" />
             <div id="myDetail">
@@ -592,7 +675,7 @@
              </div>
             </div>
 
-            <div class="earn_points">
+            <div class="earn_points" >
               <div id="point_tit">
                 <p>赚积分</p>
                 <span class="point_underline right_div_underline"></span>

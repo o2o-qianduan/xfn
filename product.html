@@ -1,6 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!DOCTYPE html>
+<html>
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <title>产品页</title>
@@ -14,9 +13,9 @@
   <script type="text/javascript" src="js/myJs.js"></script>
   <script type="text/javascript" src="js/picture.js"></script>
   <script type="text/javascript" src="js/jquery.imagezoom.min.js"></script>
-
   <link rel="stylesheet" type="text/css" href="css/layout.css" />
   <link rel="stylesheet" type="text/css" href="css/product.css" />
+  <script language="javascript" type="text/javascript" src="js/yao.js"></script>
 </head>
 <body>
      <!-- 商标，搜索栏，购物车，电话 -->
@@ -35,6 +34,7 @@
 
     <!-- 页面头部背景 -->
     <div class="bg">
+     <img src="images/head.png" alt="顶部背景宣传图">
       <button class="bg_button"></button>
     </div>
 
@@ -48,8 +48,8 @@
           <input class="search-button" id="search-button" value="搜 索">
           </form>
           <div id="hot_search">
-            <span>热门搜索：</span>
-            <span>小龙虾 蓝莓 虾 进口奶 进口肉 大枣</span>
+             <span>热门搜索：</span>
+            <span><a href="">小龙虾</a> <a href="">蓝莓</a> <a href="">虾</a>  <a href="">进口奶</a> <a href="">进口肉</a> <a href="">大枣</a></span>
           </div>
         </div>
           <div class="tel"></div>
@@ -104,12 +104,12 @@
       </div>    <!-- end nav   --> 
 </div><!-- header部分 -->
 
-
+       
 
      <!-- 主内容区域 -->
     <div id="content" class="content">
       <!-- 商品分类-->       
-       <!-- 以下"全部商品分类部分，在首页中显示，在其它页中鼠标滑过才显示" -->
+<!-- 以下"全部商品分类部分，在首页中显示，在其它页中鼠标滑过才显示" -->
       <div id="list_menu"  class="no-mainpage">
         <div id="YMenu">
              <div id="YMenu-side">       
@@ -342,16 +342,16 @@ $(document).ready(function(){
 });
 
 </script>
-
-
-
-            <div class="bottom_link">
+   <div class="bottom_link">
               <img src="images/share.png" />
               <a href="#">分享</a>
               <img src="images/collect.png" />
               <a href="#">收藏</a>
             </div>
-          </div>
+   </div>
+
+         
+       
 
           <!-- 中间说明块 -->
           <div class="center_state">
@@ -611,15 +611,15 @@ $(document).ready(function(){
           </div>
         </div>
         <div class="list_more">
-          <span class="list_text">&nbsp;&nbsp;查看更多宝贝</span>
-          <img src="images/checkMore.jpg" alt="" />
+          <a href=""><span class="list_text">&nbsp;&nbsp;查看更多宝贝</span>
+          <img src="images/checkMore.jpg" alt="" /></a>
         </div>
       </div>
       <div class="left_list" style="margin-top:499px;margin-left:-212px;">
         <div class="list_title">尚田推荐</div>
           <div class="list_content">
             <div class="content_icon">
-              <img src="images/littleIcon.jpg">
+              <a href=""><img src="images/littleIcon.jpg"></a>
             </div>
             <div class="pro_click">
               <a href="">2斤59元 顺丰包 海南</a>
@@ -629,7 +629,7 @@ $(document).ready(function(){
         </div>
         <div class="list_content">
           <div class="content_icon">
-              <img src="images/littleIcon.jpg">
+              <a href=""><img src="images/littleIcon.jpg"></a>
           </div>
           <div class="pro_click">
             <a href="">2斤59元 顺丰包 海南</a>
@@ -639,7 +639,7 @@ $(document).ready(function(){
         </div>
         <div class="list_content">
           <div class="content_icon">
-              <img src="images/littleIcon.jpg">
+              <a href=""><img src="images/littleIcon.jpg"></a>
           </div>
           <div class="pro_click">
             <a href="">2斤59元 顺丰包 海南</a>
@@ -649,7 +649,7 @@ $(document).ready(function(){
         </div>
         <div class="list_content">
           <div class="content_icon">
-            <img src="images/littleIcon.jpg">
+            <a href=""><img src="images/littleIcon.jpg"></a>
           </div>
           <div class="pro_click">
             <a href="">2斤59元 顺丰包 海南</a>
@@ -659,7 +659,7 @@ $(document).ready(function(){
         </div>
         <div class="list_content">
           <div class="content_icon">
-              <img src="images/littleIcon.jpg">
+              <a href=""><img src="images/littleIcon.jpg"></a>
           </div>
           <div class="pro_click">
             <a href="">2斤59元 顺丰包 海南</a>
@@ -668,8 +668,8 @@ $(document).ready(function(){
           </div>
         </div>
         <div class="list_more">
-          <span class="list_text">&nbsp;&nbsp;查看更多宝贝</span>
-          <img src="images/checkMore.jpg" alt="" />
+          <a href=""><span class="list_text">&nbsp;&nbsp;查看更多宝贝</span>
+          <img src="images/checkMore.jpg" alt="" /></a>
         </div>
       </div>
       <div class="left_list" style="margin-top:998px;margin-left:-212px;">
@@ -686,7 +686,7 @@ $(document).ready(function(){
         </div>
         <div class="list_content">
           <div class="content_icon">
-              <img src="images/littleIcon.jpg">
+              <a href=""><img src="images/littleIcon.jpg"></a>
           </div>
           <div class="pro_click">
             <a href="">2斤59元 顺丰包 海南</a>
@@ -696,7 +696,7 @@ $(document).ready(function(){
         </div>
         <div class="list_content">
           <div class="content_icon">
-              <img src="images/littleIcon.jpg">
+              <a href=""><img src="images/littleIcon.jpg"></a>
           </div>
           <div class="pro_click">
             <a href="">2斤59元 顺丰包 海南</a>
@@ -706,7 +706,7 @@ $(document).ready(function(){
         </div>
         <div class="list_content">
           <div class="content_icon">
-            <img src="images/littleIcon.jpg">
+            <a href=""><img src="images/littleIcon.jpg"></a>
           </div>
           <div class="pro_click">
             <a href="">2斤59元 顺丰包 海南</a>
@@ -716,7 +716,7 @@ $(document).ready(function(){
         </div>
         <div class="list_content">
           <div class="content_icon">
-              <img src="images/littleIcon.jpg">
+              <a href=""><img src="images/littleIcon.jpg"></a>
           </div>
           <div class="pro_click">
             <a href="">2斤59元 顺丰包 海南</a>
@@ -725,8 +725,8 @@ $(document).ready(function(){
           </div>
         </div>
         <div class="list_more">
-          <span class="list_text">&nbsp;&nbsp;查看更多宝贝</span>
-          <img src="images/checkMore.jpg" alt="" />
+          <a href=""><span class="list_text">&nbsp;&nbsp;查看更多宝贝</span>
+          <img src="images/checkMore.jpg" alt="" /></a>
         </div>
       </div>
 
@@ -858,40 +858,10 @@ Copyright © 广州新富农农业科技有限公司
     <div class="cart_content" id="fullcart">
       <table id="cart_table">
         <tr>
-          <td class="count">
-            <span class="reduce"></span>
-            <input class="count-input" type="text" value="1"/>
-            <span class="add"></span>
-          </td>
-          <td >
-            <div class="pro_icon">
-              <img src="images/icon55.jpg"></div>
-          </td>
-          <td>
-            <div class="cart_click">
-              <a href="#">
-                春盛达】生态大态态态大态态
-态大态态约500g/份
-              </a>
-              <div style="margin-top:10px;">
-                促销价：
-                <span>
-                  ￥ <em>9.90</em>
-                </span>
-                /份
-              </div>
-            </div>
-          </td>
-          <td class="cart_delete">
-            <img src="images/deletebtn.jpg"  />
-          </td>
-        </tr>
-
-        <tr>
-          <td class="count">
-            <span class="reduce"></span>
-            <input class="count-input" type="text" value="1"/>
-            <span class="add"></span>
+          <td class="cart_count count">
+            <span class="cart_reduce reduce"></span>
+            <input class="count_input" type="text" value="1"/>
+            <span class="cart_add add"></span>
           </td>
           <td >
             <div class="pro_icon">
@@ -917,10 +887,10 @@ Copyright © 广州新富农农业科技有限公司
           </td>
         </tr>
         <tr>
-          <td class="count">
-            <span class="reduce"></span>
-            <input class="count-input" type="text" value="1"/>
-            <span class="add"></span>
+          <td class="cart_count count">
+            <span class="cart_reduce reduce"></span>
+            <input class="count_input" type="text" value="1"/>
+            <span class="cart_add add"></span>
           </td>
           <td >
             <div class="pro_icon">
@@ -935,8 +905,7 @@ Copyright © 广州新富农农业科技有限公司
               <div style="margin-top:10px;">
                 促销价：
                 <span>
-                  ￥
-                  <em>9.90</em>
+                  ￥ <em>9.90</em>
                 </span>
                 /份
               </div>
@@ -947,10 +916,10 @@ Copyright © 广州新富农农业科技有限公司
           </td>
         </tr>
         <tr>
-          <td class="count">
-            <span class="reduce"></span>
-            <input class="count-input" type="text" value="1"/>
-            <span class="add"></span>
+          <td class="cart_count count">
+            <span class="cart_reduce reduce"></span>
+            <input class="count_input" type="text" value="1"/>
+            <span class="cart_add add"></span>
           </td>
           <td >
             <div class="pro_icon">
@@ -965,8 +934,7 @@ Copyright © 广州新富农农业科技有限公司
               <div style="margin-top:10px;">
                 促销价：
                 <span>
-                  ￥
-                  <em>9.90</em>
+                  ￥ <em>9.90</em>
                 </span>
                 /份
               </div>
@@ -977,10 +945,10 @@ Copyright © 广州新富农农业科技有限公司
           </td>
         </tr>
         <tr>
-          <td class="count">
-            <span class="reduce"></span>
-            <input class="count-input" type="text" value="1"/>
-            <span class="add"></span>
+          <td class="cart_count count">
+            <span class="cart_reduce reduce"></span>
+            <input class="count_input" type="text" value="1"/>
+            <span class="cart_add add"></span>
           </td>
           <td >
             <div class="pro_icon">
@@ -995,17 +963,101 @@ Copyright © 广州新富农农业科技有限公司
               <div style="margin-top:10px;">
                 促销价：
                 <span>
-                  ￥
-                  <em>9.90</em>
+                  ￥ <em>9.90</em>
                 </span>
                 /份
               </div>
             </div>
           </td>
+          <td class="cart_delete">
+            <img src="images/deletebtn.jpg"  />
+          </td>
+        </tr>
+        <tr>
+          <td class="cart_count count">
+            <span class="cart_reduce reduce"></span>
+            <input class="count_input" type="text" value="1"/>
+            <span class="cart_add add"></span>
+          </td>
+          <td >
+            <div class="pro_icon">
+              <img src="images/icon55.jpg"></div>
+          </td>
           <td>
-            <div class="cart_delete">
-              <img src="images/deletebtn.jpg"  />
+            <div class="cart_click">
+              <a href="#">
+                春盛达】生态大态态态大态态
+态大态态约500g/份
+              </a>
+              <div style="margin-top:10px;">
+                促销价：
+                <span>
+                  ￥ <em>9.90</em>
+                </span>
+                /份
+              </div>
             </div>
+          </td>
+          <td class="cart_delete">
+            <img src="images/deletebtn.jpg"  />
+          </td>
+        </tr>
+        <tr>
+          <td class="cart_count count">
+            <span class="cart_reduce reduce"></span>
+            <input class="count_input" type="text" value="1"/>
+            <span class="cart_add add"></span>
+          </td>
+          <td >
+            <div class="pro_icon">
+              <img src="images/icon55.jpg"></div>
+          </td>
+          <td>
+            <div class="cart_click">
+              <a href="#">
+                春盛达】生态大态态态大态态
+态大态态约500g/份
+              </a>
+              <div style="margin-top:10px;">
+                促销价：
+                <span>
+                  ￥ <em>9.90</em>
+                </span>
+                /份
+              </div>
+            </div>
+          </td>
+          <td class="cart_delete">
+            <img src="images/deletebtn.jpg"  />
+          </td>
+        </tr>
+        <tr>
+          <td class="cart_count count">
+            <span class="cart_reduce reduce"></span>
+            <input class="count_input" type="text" value="1"/>
+            <span class="cart_add add"></span>
+          </td>
+          <td >
+            <div class="pro_icon">
+              <img src="images/icon55.jpg"></div>
+          </td>
+          <td>
+            <div class="cart_click">
+              <a href="#">
+                春盛达】生态大态态态大态态
+态大态态约500g/份
+              </a>
+              <div style="margin-top:10px;">
+                促销价：
+                <span>
+                  ￥ <em>9.90</em>
+                </span>
+                /份
+              </div>
+            </div>
+          </td>
+          <td class="cart_delete">
+            <img src="images/deletebtn.jpg"  />
           </td>
         </tr>
       </table>
@@ -1019,24 +1071,4 @@ Copyright © 广州新富农农业科技有限公司
 </div>
 
 <!-- 整个容器部分结束 -->
-
-<script type="text/javascript">
-$(document).ready(function(){
-
-  $(".jqzoom").imagezoom();
-
-  $("#thumblist li a").click(function () {
-    
-    $(".jqzoom").attr('src',$(this).find("img").attr("mid"));
-    $(".jqzoom").attr('rel',$(this).find("img").attr("big"));
-  });
-
-
-
-
-});
-
-</script>
-
-</body>
 </html>

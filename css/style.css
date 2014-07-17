@@ -174,6 +174,7 @@ input.num-each{
 	vertical-align: middle;
 	width:35px;
 	height: 25px;
+	line-height: 25px;
 	background:#fff;
 	text-align: center;
 	float: left;

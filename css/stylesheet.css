@@ -88,7 +88,6 @@ li {list-style-type: none;}
 .header{
 	width: 1180px;
 	top: 30px;
-/*	position:relative;*/
 	margin: 35px auto;
 	display: block;
 	z-index: 190;
@@ -97,15 +96,17 @@ li {list-style-type: none;}
 .bg{
 	height: 70px;
 	margin: 5px auto;
-/*	float: left;*/
 	background:url(../images/head.png) no-repeat;
+	position: relative;
 }
 .bg button{
 	background: url(../images/close.png) no-repeat;
 	float: right;
-	margin: 5px 5px;
-	width: 16px;
-	height: 16px;
+	right: 5px;
+	bottom: 48px;
+	width: 18px;
+	height: 18px;
+	position: absolute;
 }
 
 .head_one{
@@ -170,7 +171,8 @@ li {list-style-type: none;}
 	right: 0;
 	width: 63px;
 	border:none;
-	height: 100%;
+	height: 35px;
+	line-height: 35px;
 	background: repeat scroll 0 0 #3dae0b;
 	text-align: center;
 	font-size: 14px;
@@ -494,6 +496,7 @@ li {list-style-type: none;}
 	padding:5px 10px; 
 	text-align:left;
 	border-bottom: 2px solid #77be22;
+	margin-top: 20px;
 }
 .mwsp-content-topic{
 	padding: 14px 5px;
@@ -547,6 +550,7 @@ li {list-style-type: none;}
 	display: block;
 	padding-bottom: 4px;
 	color: #000000;
+	margin-top: 20px;
 }
 .rpsp-01-title,.rpsp-01-star,.rpsp-01-date,.rpsp-01-appraisal,
 .rpsp-02-title,.rpsp-02-star,.rpsp-02-date,.rpsp-02-appraisal,
@@ -580,8 +584,9 @@ li {list-style-type: none;}
 /**************新闻区域部分****************june***********************/
 .shelf-04{
 	clear: both;
-	margin-top: 10px;
+	margin-top: 30px;
 	display: block;
+	position: relative;
 }
 .shelf-04 a{
 	text-decoration: none;
@@ -593,6 +598,7 @@ li {list-style-type: none;}
 	font-weight: bold;
 	display: block;
 	padding: 5px;
+	margin-top: 20px;
 }
 .news-report{
 	width: 300px;
@@ -601,6 +607,7 @@ li {list-style-type: none;}
 	font-family: "宋体";
 	color: #666666;
 	float: left;
+	margin-top: 20px;
 }
 .report{
 	position: relative;
@@ -621,6 +628,7 @@ li {list-style-type: none;}
 	margin-left: 10px;
 	top:0px;
 	left:120px; 
+	margin-top: 20px;
 }
 .report-content p{
 	height: 20px;
@@ -642,7 +650,7 @@ li {list-style-type: none;}
 	float: left;
 	width: 870px;
 	margin-left: 8px;
-	margin-top: -2px;
+	margin-top: 18px;
 }
 
 /**右边新闻部分***/
@@ -659,6 +667,7 @@ li {list-style-type: none;}
 .tabs-left-img{
 	width: 190px;
 	float: left;
+	margin-top: 20px;
 }
 .tabs-left-news{
 	float: left;
@@ -718,7 +727,7 @@ li {list-style-type: none;}
 
 .tabs-list-left{
 	float: left;
-	width: 620px;
+	width: 640px;
 	margin-left: 10px;
 	display: inline-block;
 	height: 100%;
@@ -726,10 +735,10 @@ li {list-style-type: none;}
 	margin-top: 20px;
 }
 .tabs-list-left li{
-	padding-left: 10px;
+	margin-left: 10px;
 	float: left;
-	padding-top: 10px;
-	width: 280px;
+	margin-top: 5px;
+	width: 300px;
 }
 
 
@@ -746,7 +755,7 @@ li {list-style-type: none;}
 	padding: 5px;
 	overflow: auto;
 	position: relative;
-	margin-top: 30px;
+	margin-top: 50px;
 	bottom: 0;
 	left: 0;
 	right: 0;
@@ -846,7 +855,116 @@ ul, li {
 .breadcrumb a:hover{
 	color: red;
 }
+/*签到记录*/
+.right_div .right_div_up{
+	height: 180px;
+	border-bottom: 1px dotted #b2b2b2;
+}
+.sign_in_left{
+	background: url(../images/signIn1.png) no-repeat;
+	height: 70px;
+	width:270px ;
+	margin-top: 30px;
+	margin-left: 20px;
+	color: #666;
+	font-size: 14px;
+	font-weight: bold;
+}
+.sign_in_left span{
+	position: absolute;
+	margin-top: 40px;
+	line-height: 35px;
+	margin-left: 70px;
+}
+.sign_in_left .green_font{
+	color:#74c022;
+	margin-top: 12px;
+}
+.sign_in_right{
+	width: 200px;
+	height: 60px;
+	margin-top: 40px;
+}
+.right_div_table{
+	color:#666;
+	font-size: 14px;
+	font-family: "宋体";
+	width: 917px;
+	margin-top: 10px;
+}
+.right_div_table table{
+	border-spacing:0;
+	text-align: center;
+	border-collapse:collapse; 
+}
+.right_div_table caption{
+	font-weight: bold;
+	text-align: left;
+	height: 40px;
+}
+.right_div_table tr{
+	height: 30px;
 
+
+}
+.right_div_table th{
+	font-weight:normal;
+	background: #f5f5f5;
+	line-height: 40px;
+}
+.right_div_table td{
+	border:1px solid #e1e1e1;
+	color: #579f01;
+	font-size: 16px;
+	font-weight: normal;
+	font-family: "MicroSoft YaHei";
+
+}
+.right_div_table .first_td{
+	background: #f5f5f5;
+	font-weight:bold;
+	font-size:14px;
+	color:#666;
+	line-height: 40px;
+	font-family: "宋体"；
+}
+
+/*我的积分*/
+.right_div .my_integral{
+	background: url(../images/myIntegral.png) no-repeat;
+	width: 895px;
+	height: 75px;
+	margin-top: 35px;
+	margin-left: 10px;
+}
+.right_div .recent_inte{
+	margin-left: 60px;
+	height:65px;
+	line-height: 65px;
+	color:#000;
+	font-family: "宋体";
+	font-size:14px;
+	font-weight: bold;
+}
+.right_div .recent_inte span{
+	color: #f60;
+	font-family: "Arial";
+	font-size: 24px;
+	margin-left: 10px;
+}
+.integral_table{
+	width: 917px;
+}
+.integral_table th{
+	width:183px;
+}
+.integral_table .first_td{
+	font-weight: normal;
+}
+.integral_table .changeReason{
+	background: #fff;
+	font-weight: bold;
+}
 /*个人中心*/
 .per_center{
 	width: 213px;
@@ -864,7 +982,7 @@ ul, li {
 	border-bottom: 1px solid #3DAE0B;
 	line-height:33px;
 	height: 33px;
-	text-shadow:1px 1px 1px #73C05C;
+	/*text-shadow:1px 1px 1px #73C05C;*/
 	background: url(../images/layer1.png) no-repeat -8px -3px;
 }
 .current h4{
@@ -901,7 +1019,7 @@ ul, li {
 	float: right;
 	margin-top: 23px;
 	position: relative;
-	font-family: "宋体";
+	font-family: "MicroSoft YaHei" "宋体";
 	font-size: 14px;
 }
 .right_div_underline{    /*可重用，绿色下划线*/
@@ -912,6 +1030,7 @@ ul, li {
 	position: absolute;
 	margin-top: -2px;
 }
+
 .right_div>p{       /*可重用，标题字体*/
 	border-bottom: 2px solid #DEDEDE;
 	color: #2d2d2d;
@@ -920,6 +1039,7 @@ ul, li {
 	font-size: 18px; 
 	padding-bottom: 5px;
 }
+
 
 .right_inner_text{
 	margin-top: 24px;
@@ -1243,7 +1363,7 @@ ul, li {
 }
 .YM-Tab  a{
 	font-size: 14px;
-	font-family: "新宋体" "MicroSoft Yehei ";
+	font-family: "宋体","新宋体", "MicroSoft Yehei ";
 	width: 90%;
 	margin: 0px 5px;
 	color: #000000 !important;     /*没反应！！*/
@@ -1322,15 +1442,15 @@ ul, li {
 	color: #999;
 }
 .YM-mainmnu li.current {
-	border-top: 1px solid #B0BEC7;
+/*	border-top: 1px solid #B0BEC7;*/
 	border-left: 1px solid #B0BEC7;
-	border-bottom: 2px solid #B0BEC7;
-	border-right: 1px solid #EAEFF5;
+/*	border-bottom: 2px solid #B0BEC7;*/
+/*	border-right: 1px solid #EAEFF5;*/
 	background-color: #fff;
 }
 .YM-mainmnu li.current a {
 	font-size: 14px;
-	font-weight: bold;
+/*S*/
 	color: #C80000;
 }
 .YM-mainmnu li.current span {
@@ -1387,7 +1507,7 @@ img{
 }
 .SmenuTitle ul li{
     float:left;
-    width: 116px;
+    width: 114px;
     text-align: center;
     padding-bottom: 8px;
 }
@@ -1414,9 +1534,10 @@ img{
 }
 .SmenuContentOn0,.SmenuContentOn1,.SmenuContentOn2,.SmenuContentOn3,.SmenuContentOn4{
     display: block;
+    width: 100%;
 }
 .SmenuContent ul li{
-    width: 194px;
+    width: 192px;
     float: left;
     margin-right: 3px;
 }
@@ -1519,18 +1640,11 @@ img{
 
 
 
-
-
-
-
-
-
-
 /******************首页最顶部轮播部分**************june****end********/
 
 /**********首页三个图片一次性轮播部分***bing******/
 /*啊颖写的开始了哈*/
-.cart_main{
+.main{
 	width:1180px;
 	margin:10px auto;
 }/*结算页面主体*/
@@ -1551,6 +1665,7 @@ img{
 /*下面是结算表格*/
 .carttable{
 	margin-top: 10px;
+	text-align: center;
 }
 .fl{
     float: left;
@@ -1564,6 +1679,7 @@ img{
     height: 35px;
     color:#3c3c3c;
     font-family: "Microsoft Yahei";
+
 }
 
 #cartTable  td {
@@ -1572,6 +1688,7 @@ img{
     background:#effae3;
     font-size: 14px; 
     vertical-align : middle;
+    text-align:center;
 }
 /*tbody tr:hover {
     background: RGB(238,246,255);
@@ -1595,13 +1712,12 @@ img{
     font-size: 16px;
     font-family: "Microsoft YaHei";
 }
-#cartTable .count{
-	padding-left:28px;
-}
+
 #cartTable .add, .count input{
     float: left;
     margin-right: 2px;
     position: relative;
+
 
 }
 #cartTable .add{
@@ -1623,6 +1739,7 @@ img{
 #cartTable .count input {
     width:31px;
     height:30px;
+    line-height: 30px;
     background: url(../images/input.jpg) no-repeat;
     border:0;
     text-align: center;
@@ -1697,13 +1814,14 @@ img{
 	width:150px;
 	height: 30px;
 	display:inline-block;
+	position: relative;
 }
 .cart_foot .deleteAll a{
 	line-height: 30px;
 	font-size: 14px;
 	color:#fff;
-	text-decoration: none;
-	margin-left:30px;
+	text-decoration:none; 
+	left: 30px;
 	position: absolute;
 }
 .acc_sum{
@@ -1724,21 +1842,23 @@ img{
 }
 
 .acc_sum .back{
-	margin-top:15px;
-	background:url(../images/back.jpg) no-repeat;
-	width:150px;
-	height:20px;
-	display:inline-block;
+	background: url("../images/back.jpg") no-repeat scroll 0 0 ;
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    margin-top: 15px;
+    position: relative;
+    width: 100px;
 }
 .acc_sum .back a{
-	margin-top: -5px;
-	line-height: 20px;
-	font-size: 20px;
-	color:#2f9900;
-	font-family:"Microsoft YaHei"; 
-	text-decoration: none;
-	margin-left: 10px;
-	position: absolute;
+	 color: #2f9900;
+    font-family: "Microsoft YaHei";
+    font-size: 20px;
+    left: 10px;
+    line-height: 20px;
+    margin-top: -5px;
+    position: absolute;
+    text-decoration: none;
 }
 .acc_sum .tip{
 	color:#666;
@@ -1881,4 +2001,122 @@ img{
 	
 }
 /**********龚颖***订单提交成功页面********end********/
+/************弹出框*****bing********start***/
+.XYTipsWindow .boxLoading {
+position: absolute;
+display: block;
+width: 90px;
+height: 30px;
+line-height: 30px;
+margin-left: -45px;
+margin-top: -15px;
+left: 50%;
+top: 50%;
+color: #f00;
+}
+.XYTipsWindow .boxLoading {
+width: 28px;
+margin-left: -14px;
+background: url("../images/loading.gif") no-repeat;
+text-indent: -999em;
+text-align: center;
+}
+.XYTipsWindow .boxTitle, .XYTipsWindow .boxTitle span, .XYTipsWindow .boxTitle span.hover, .XYTipsWindow .loadinglayer, .XYTipsWindow .tipslayer, .XYTipsWindow .arrowLeft, .XYTipsWindow .colseBtn, .XYTipsWindow .boxError em, .XYTipsWindow .dialogBtn, .XYTipsWindow .dialogBtn.hover {
+background-image: url("../images/ico.png");
+background-repeat: no-repeat;
+}
+.XYTipsWindow .boxTitle {
+position: relative;
+border: 1px solid #A6C9E1;
+border-bottom: none;
+background-position: 0 0;
+background-repeat: repeat-x;
+height: 30px;
+line-height: 30px;
+}
+.XYTipsWindow .boxTitle h3 {
+float: left;
+font-weight: normal;
+color: #666;
+font-size: 14px;
+margin: 0;
+text-indent: 10px;
+}
+.XYTipsWindow .boxTitle span {
+position: absolute;
+width: 10px;
+background-position: -80px -40px;
+text-indent: -10em;
+right: 10px;
+top: 10px;
+height: 16px;
+overflow: hidden;
+cursor: pointer;
+}
+.XYTipsWindow .boxTitle span.hover {
+background-position: -90px -40px;
+}
+.XYTipsWindow .loadinglayer {
+line-height: 40px;
+background-position: 0 -100px !important;
+}
+.XYTipsWindow .tipslayer {
+line-height: 20px;
+text-align: left;
+}
+.XYTipsWindow .arrowLeft {
+position: absolute;
+width: 8px;
+height: 16px;
+background-position: -20px -170px;
+text-indent: -9999em;
+z-index: 20591;
+overflow: hidden;
+}
+.XYTipsWindow .colseBtn {
+position: absolute;
+top: 5px;
+right: 5px;
+width: 8px;
+height: 8px;
+background-position: -55px -170px;
+text-indent: -9999em;
+cursor: pointer;
+z-index: 20591;
+overflow: hidden;
+}
+.XYTipsWindow .boxError {
+position: absolute;
+left: 50%;
+top: 50%;
+margin-left: -60px;
+margin-top: -15px;
+width: 120px;
+height: 30px;
+line-height: 30px;
+color: #f00;
+}
+.XYTipsWindow .boxError em {
+float: left;
+width: 30px;
+height: 30px;
+background-position: -35px -140px;
+}
+.XYTipsWindow .dialogBtn {
+margin: 5px 5px 0 0;
+width: 80px;
+height: 35px;
+background-position: 0 -30px;
+border: none;
+color: #333;
+}
+.XYTipsWindow .dialogBtn.hover {
+background-position: 0 -65px;
+}
+.XYTipsWindow.shadow {
+box-shadow: 2px 2px 5px #C0BBB5;
+-moz-box-shadow: 2px 2px 5px #C0BBB5;
+-webkit-box-shadow: 2px 2px 5px #C0BBB5;
+}
+/********弹出框**********bing*****end********/
 
