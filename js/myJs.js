@@ -522,9 +522,9 @@ function MouseEvent(e) {
 $(function(){
 
     $(".count").each(function(){
-        var $reduce = $(this).children('.reduce');
+        var $reduce = $(this).children('.cart_reduce');
         var $countInput = $(this).children('input');
-        var $add = $(this).children('.add');
+        var $add = $(this).children('.cart_add');
         $add.click(function(){
             //绑定添加按钮事件
             var val = parseInt($countInput.val()) + 1;
@@ -551,7 +551,7 @@ $(function(){
         var num,price,total = 0, totalNum = 0;
         for(var i=0; i<len; i++){
             $item = $items.eq(i);
-            num = $item.find("input.count-input").val();
+            num = $item.find("input.count_input").val();
             price = $item.find("div.cart_click").find("em").text();
             total += num*price;
             totalNum += parseInt(num);

@@ -846,7 +846,116 @@ ul, li {
 .breadcrumb a:hover{
 	color: red;
 }
+/*签到记录*/
+.right_div .right_div_up{
+	height: 180px;
+	border-bottom: 1px dotted #b2b2b2;
+}
+.sign_in_left{
+	background: url(../images/signIn1.png) no-repeat;
+	height: 70px;
+	width:270px ;
+	margin-top: 30px;
+	margin-left: 20px;
+	color: #666;
+	font-size: 14px;
+	font-weight: bold;
+}
+.sign_in_left span{
+	position: absolute;
+	margin-top: 40px;
+	line-height: 35px;
+	margin-left: 70px;
+}
+.sign_in_left .green_font{
+	color:#74c022;
+	margin-top: 12px;
+}
+.sign_in_right{
+	width: 200px;
+	height: 60px;
+	margin-top: 40px;
+}
+.right_div_table{
+	color:#666;
+	font-size: 14px;
+	font-family: "宋体";
+	width: 917px;
+	margin-top: 10px;
+}
+.right_div_table table{
+	border-spacing:0;
+	text-align: center;
+	border-collapse:collapse; 
+}
+.right_div_table caption{
+	font-weight: bold;
+	text-align: left;
+	height: 40px;
+}
+.right_div_table tr{
+	height: 30px;
 
+
+}
+.right_div_table th{
+	font-weight:normal;
+	background: #f5f5f5;
+	line-height: 40px;
+}
+.right_div_table td{
+	border:1px solid #e1e1e1;
+	color: #579f01;
+	font-size: 16px;
+	font-weight: normal;
+	font-family: "MicroSoft YaHei";
+
+}
+.right_div_table .first_td{
+	background: #f5f5f5;
+	font-weight:bold;
+	font-size:14px;
+	color:#666;
+	line-height: 40px;
+	font-family: "宋体"；
+}
+
+/*我的积分*/
+.right_div .my_integral{
+	background: url(../images/myIntegral.png) no-repeat;
+	width: 895px;
+	height: 75px;
+	margin-top: 35px;
+	margin-left: 10px;
+}
+.right_div .recent_inte{
+	margin-left: 60px;
+	height:65px;
+	line-height: 65px;
+	color:#000;
+	font-family: "宋体";
+	font-size:14px;
+	font-weight: bold;
+}
+.right_div .recent_inte span{
+	color: #f60;
+	font-family: "Arial";
+	font-size: 24px;
+	margin-left: 10px;
+}
+.integral_table{
+	width: 917px;
+}
+.integral_table th{
+	width:183px;
+}
+.integral_table .first_td{
+	font-weight: normal;
+}
+.integral_table .changeReason{
+	background: #fff;
+	font-weight: bold;
+}
 /*个人中心*/
 .per_center{
 	width: 213px;
@@ -864,7 +973,7 @@ ul, li {
 	border-bottom: 1px solid #3DAE0B;
 	line-height:33px;
 	height: 33px;
-	text-shadow:1px 1px 1px #73C05C;
+	/*text-shadow:1px 1px 1px #73C05C;*/
 	background: url(../images/layer1.png) no-repeat -8px -3px;
 }
 .current h4{
@@ -901,7 +1010,7 @@ ul, li {
 	float: right;
 	margin-top: 23px;
 	position: relative;
-	font-family: "宋体";
+	font-family: "MicroSoft YaHei" "宋体";
 	font-size: 14px;
 }
 .right_div_underline{    /*可重用，绿色下划线*/
@@ -910,16 +1019,18 @@ ul, li {
 	height: 0px;
 	float: left;
 	position: absolute;
-	top: 35px;
+	margin-top: -2px;
 }
-.right_div h1{       /*可重用，标题字体*/
+
+.right_div>p{       /*可重用，标题字体*/
 	border-bottom: 2px solid #DEDEDE;
-	color: #666666;
-	text-shadow:1px 1px 1px #959595;
-	font-family: "MicroSoft YeHei";
-	font-size: 25px; 
+	color: #2d2d2d;
+	/*text-shadow:1px 1px 1px #959595;*/
+	font-family: "MicroSoft YaHei";
+	font-size: 18px; 
 	padding-bottom: 5px;
 }
+
 
 .right_inner_text{
 	margin-top: 24px;
@@ -1368,6 +1479,7 @@ img{
     background:#effae3;
     font-size: 14px; 
     vertical-align : middle;
+    text-align:center;
 }
 /*tbody tr:hover {
     background: RGB(238,246,255);
@@ -1399,6 +1511,7 @@ img{
     margin-right: 2px;
     position: relative;
 
+
 }
 #cartTable .add{
 	background: url(../images/plus.jpg) no-repeat;
@@ -1419,6 +1532,7 @@ img{
 #cartTable .count input {
     width:31px;
     height:30px;
+    line-height: 30px;
     background: url(../images/input.jpg) no-repeat;
     border:0;
     text-align: center;
@@ -1493,13 +1607,14 @@ img{
 	width:150px;
 	height: 30px;
 	display:inline-block;
+	position:relative;
 }
 .cart_foot .deleteAll a{
 	line-height: 30px;
 	font-size: 14px;
 	color:#fff;
 	text-decoration: none;
-	margin-left:30px;
+	left:30px;
 	position: absolute;
 }
 .acc_sum{
