@@ -141,7 +141,7 @@ li {list-style-type: none;}
 	/*针对ie的hack*/
 	*display: block;
 	*font-size:27px;
-	*font-family: Arial;/*防止非utf-8引起的hack失效问题 */
+	*font-family: Arial, Helvetica, sans-serif;/*防止非utf-8引起的hack失效问题 */
 	width: 30px;
 	height: 31px;
 }
@@ -948,7 +948,7 @@ ul, li {
 }
 .right_div .recent_inte span{
 	color: #f60;
-	font-family: "Arial";
+	font-family: Arial, Helvetica, sans-serif;
 	font-size: 24px;
 	margin-left: 10px;
 }
@@ -1208,7 +1208,7 @@ ul, li {
 	font-weight: bold;
 }
 #myDetail span{
-	font-family: Arial;
+	font-family: Arial, Helvetica, sans-serif;
 	color: #689F31;
 
 }
@@ -1331,7 +1331,7 @@ ul, li {
 }
 .earnWay p span{
 	color: #FF7300;
-	font-family: Arial;
+	font-family: Arial, Helvetica, sans-serif;
 	font-size: 16px;
 }
 
