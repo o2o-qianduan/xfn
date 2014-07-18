@@ -335,17 +335,17 @@
              <label>如需修改，请先保存收货人信息</label>
             
           </div>
-            <div class=" rail online">
-              <input class="rr" name="method " type="radio"/>
+
+            <div class="rail" id="club_card">
+              <input class="rr" name="method " type="checkbox"/>
+              <label class="fontway new_use">会员支付</label>
+            </div>
+            <div class=" rail online" id="online">
+              <input class="rr" name="method " type="checkbox"/>
               <label class="fontway new_use">在线支付</label>
             </div>
 
-            <div class=" send_method">
-              <input class="rr" name="method " type="radio"/>
-              <label class="fontway new_use">配送方式</label>
-            </div>
-
-            <div class="pay_met online_pay">
+            <div class="pay_met" id="online_pay">
                <a class="green_bg  met" href="#">支付方式</a>
                <p class="pcant">在线支付 请您在提交订单后24小时内完成支付，否则订单会自动取消</p>
             </div>
@@ -372,7 +372,7 @@
               <img src="images/alipay.png" />
             </div>
 
-            <div class="pay_met send_met">
+            <div class="pay_met" id="send_met">
                <a class="green_bg met" href="#">配送方式</a>             
             </div>
             <div class="clear"></div>
