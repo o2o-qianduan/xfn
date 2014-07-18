@@ -968,7 +968,7 @@ ul, li {
 /*个人中心*/
 .per_center{
 	width: 213px;
-	height: 701px;
+	/*height: 701px;*/
 	border:1px solid #EFEFEF;
 	background-color: #FAFAFA;
 	margin:20px 0 0 10px;
@@ -989,14 +989,14 @@ ul, li {
 	cursor: pointer;
 	font-family: "新宋体", "MicroSoft YeHei";
 	font-size: 14px;
-	line-height: 35px;
+	line-height: 33px;
 	padding-left: 10px;
 	color: #333333;
 	background: url(../images/layer.png) no-repeat scroll -8px -3px;
 }
 .current ul li{
 	line-height: 35px;
-	background: url(../images/triangle.png) no-repeat scroll 12px 16px transparent;
+	/*background: url(../images/triangle.png) no-repeat scroll 12px 16px transparent;*/
 	padding-left: 26px;
 	height: 35px;
 	border-bottom:1px dashed #E7E6E6;
@@ -1134,18 +1134,18 @@ ul, li {
 }
 
 /*激活优惠券*/
-#discount2{
+.same_secCode{
 	height: 52px;
 	position: relative;
 	float: left;
 	width: 100%;
 }
-#discount2 img{
-	top: 10px;
+.same_secCode img{
+	top: 12px;
 	position: absolute;
 
 }
-#discount2 a{
+.same_secCode a{
 	padding-left: 120px;
 }
 /*激活礼品卡*/
@@ -1157,6 +1157,8 @@ ul, li {
 #giftCard2 span {
 	line-height: 35px;
 }
+
+
 /*推荐人会员号*/
 .referrerNum{
 	margin-top: 22px;
@@ -1241,7 +1243,7 @@ ul, li {
 #bind_email img{
 	position: relative;
 	top: 0;
-	left: 300px;
+	left: 295px;
 }
 .clear{
 	clear: both;
@@ -2119,9 +2121,119 @@ box-shadow: 2px 2px 5px #C0BBB5;
 -webkit-box-shadow: 2px 2px 5px #C0BBB5;
 }
 /********弹出框**********bing*****end********/
-
-
 .mh_date{
 	height: 26px !important;
 }
 
+
+/******资讯页面样式******bing******start*******/
+
+.newsList_left{     /*左边资讯*/
+	width: 868px;
+	height: 775px;
+	margin: 10px 10px 0 0;
+	border: 1px solid #C7E6BD;
+	font-family: "宋体";
+	font-size: 14px;
+	float: left;
+}
+
+#newVegtable1{
+	height: 43px;
+	border-bottom: 1px solid #C7E6BD;
+	line-height: 43px;
+	color: #77BE22;
+	background-color: #EEF7E4;
+	font-family: "Microsoft Yahei";
+	font-size: 20px;
+	text-indent: 14px;
+	font-weight: bold;
+}
+.List-o-f{
+	height: 127px;
+	padding: 22px 0 13px 27px;
+	margin: 0 13px;
+	border-bottom: 1px dashed #BCBCBC;
+}
+
+
+.List-o-f li {	
+	line-height: 25px;
+	height: 25px;
+	list-style: square;
+	position: relative;
+
+}
+
+.List-o-f li a{
+	color: #000;
+	padding-left: 10px;
+}
+.List-o-f li span{
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+
+/*选项卡*/
+.newsList_right_top{
+	width: 298px;
+	height: 294px;
+	font-family: "宋体";
+	font-size: 14px;
+	border:1px solid #D5D5D5;
+	float: left;
+	margin-top: 10px;
+}
+
+#newList_tabs li{
+	float: left;
+	height: 31px;
+	line-height: 31px;
+	text-align: center;
+	cursor: pointer;
+}
+#newList_tabs #newsTab1{
+	width: 91px;
+}
+#newList_tabs #newsTab2{
+	width: 206px;
+	border-left: 1px solid #D5D5D5;
+	border-bottom: 1px solid #D5D5D5;
+	background-color: #FAFAFA;
+}
+
+#newList_box #news_ranking{
+	margin-top: 36px;
+}
+/*热门标签*/
+.newsList_right_bottom{
+	width: 298px;
+	margin-top: 10px;
+	height: 274px;
+	border:1px solid #D5D5D5;
+	float: left;
+	font-family: "宋体";
+	font-size: 14px;
+}
+
+.newsList_right_bottom p{
+	height: 31px;
+	line-height: 31px;
+	background-color: #FAFAFA;
+	border-bottom: 1px solid #E7E6E6;
+	text-indent: 12px;
+	font-weight: bold;
+}
+
+#hot_veg_label{
+	padding: 17px 14px;
+}
+
+#hot_veg_label a{
+	color: #000;
+}
+
+#hot_veg_label a:hover{
+	color: red;
+}

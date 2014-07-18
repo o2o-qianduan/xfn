@@ -1,4 +1,4 @@
-﻿/***
+/***
  * 漫画Jquery时间插件
  * 编写时间：2012年7月14号
  * version:manhuaDate.1.0.js
