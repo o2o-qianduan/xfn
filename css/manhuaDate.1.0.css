@@ -74,7 +74,7 @@
 	width: 249px;
 	height: 20px;
 	line-height: 20px;
-	padding: 5px;
+	padding: 4px 1px;
 	border: 2px #AA9FFF solid;
 	cursor: pointer;
 	background: url(dateIco.png) no-repeat right center;

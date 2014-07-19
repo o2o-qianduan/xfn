@@ -36,5 +36,27 @@ $(function(){
 	});
 
 
+	//点击左边显示右边信息
+	$(".current_list ul li a").click(function(){
+		var $a_text = $(this).text();
+		var len = $(".center_course>div").length;
+
+	 	if($a_text == '我的尚田'){
+	 		$('#MyShangtian').css("display","block");
+	 	}else{
+	 		$('#MyShangtian').css("display","none");
+	 	}
+
+		for( var i = 0 ; i < len; i++){
+			var $p = $(".right_div>p").eq(i);
+			var $p_text = $p.text();
+			if($a_text == $p_text){
+				$p.parent().css("display","block");
+			}else{
+				$p.parent().css("display","none");
+			}
+		}			
+	});
+
 
 })

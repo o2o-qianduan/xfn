@@ -20,7 +20,6 @@ function tabOptionHover1(tabOptionIndex){
 	$(".tab-0").eq(tabOptionIndex).addClass('tabOn-'+tabOptionIndex);
 }
 /*****新品推荐、特惠专区、新鲜蔬菜部分 *************june**---end*/
-
 /**************首页顶部广告可关闭部分******************june**************start**************/
 $(function(){
 $(".bg_button").bind("click",function(){
@@ -72,6 +71,7 @@ var tabOptionIndex2=0;
          tabOptionHover2(tabOptionIndex2);
 
      });
+     $("#assess_nav").children("li").unbind();
  });
  function tabOptionHover2(tabOptionIndex){
      for(var i=0;i<5;i++){
@@ -82,12 +82,44 @@ var tabOptionIndex2=0;
      $(".SmenuCont").eq(tabOptionIndex).addClass('SmenuContentOn'+tabOptionIndex);
  }
  /*****超值抢购、本季热卖、本周推荐、新品上市、限时抢购 *************june**---end*/
+ $(function(){
+    $("#assess_nav").children('li').each(function(idx,e){
+        var index = idx;
+        $(this).mouseover(function(){
+            $all = $("#assess_nav").children('li');
+            $all.removeClass('SmenuTitleOn10');
+            $(this).addClass('SmenuTitleOn10');
+            showBox(index);
+        }).mouseout(function(){
+            $all = $("#assess_nav").children('li');
+            var index = $all.index('.selected_li');
+            
+            $all.removeClass('SmenuTitleOn10');
+            $all.eq(index).addClass('SmenuTitleOn10');
+            showBox(index);
+        })
+    })
+
+    $("#assess_nav").children('li').each(function(idx, e){
+        var index = idx;
+        $(this).click(function(){
+            $all = $("#assess_nav").children('li');
+            $all.removeClass('selected_li');
+            $(this).addClass('selected_li');
+            showBox(index);
+        })
+    })
+
+    function showBox(idx){
+        $("#assess_content").children('.SmenuConnt').hide().eq(idx).show();
+    }
+ })
 
  /***********************首页最顶部轮播******june******start*/
 $(function(){
 	var banner=$("#banner-left");
 	var imgs=$("#banner-left a");
-	var len=imgs.length;
+	var len=iFmgs.length;
 	var index=0;
 	var adTimer;
 	$(".points").mouseover(function(){

@@ -77,7 +77,7 @@
         <div class="searchdiv">
           <form class="searchform" method="get"> 
           <input class="search-submit" type="submit" value=""/>
-          <input id="search-input" class="search-input" type="text" name="" size="30px">
+          <input id="search-input" class="search-input" type="text" name="" size="30px" />
           <input class="search-button" id="search-button" value="搜 索" />
           </form>
           <div id="hot_search">
@@ -274,9 +274,6 @@
         </div>
       </div>  <!-- end .list_menu --><!-- 此部分在首页固定，在其它页面鼠标滑过时出现 -->
 
-
- 
-
       <div class="breadcrumb">
         <div><img src="images/house.png" /></div>
         <a href="#">首页</a>
@@ -294,9 +291,7 @@
             <h4><img src="images/boult3.png">&nbsp;我的尚田</h4>
             <div class="current_list">
               <ul>
-                <li><a href="#">自营全程冷链配送</a></li>
-                <li><a href="#">配送范围、运费</a></li>
-                <li><a href="#">先验货后付款</a></li>
+                <li><a href="#right_div">我的尚田</a></li>          
               </ul>
             </div>
           </div>
@@ -305,9 +300,8 @@
             <h4><img src="images/boult3.png">&nbsp;订单管理</h4>
             <div class="current_list">
               <ul>
-                <li><a href="#">我的资料</a></li>
-                <li><a href="#">收货地址</a></li>
-                <li><a href="#">密码管理</a></li>
+                <li><a href="#right_div">我的订单</a></li>
+                <li><a href="#right_div">商品评价</a></li>
               </ul>
             </div>
           </div>
@@ -316,9 +310,11 @@
             <h4><img src="images/boult3.png">&nbsp;账户中心</h4>
             <div class="current_list">
               <ul>
-                <li><a href="#">我的资料</a></li>
-                <li><a href="#">收货地址</a></li>
-                <li><a href="#">密码管理</a></li>
+                <li><a href="#right_div">签到记录</a></li>
+                <li><a href="#right_divright_divright_divright_div">我的积分</a></li>
+                <li><a href="#right_divright_divright_div">激活优惠券</a></li>
+                <li><a href="#right_divright_div">激活礼品卡</a></li>
+                <li><a href="#right_div">推荐人会员号</a></li>
               </ul>
             </div>
           </div>
@@ -327,9 +323,9 @@
             <h4><img src="images/boult3.png">&nbsp;个人信息</h4>
             <div class="current_list">
               <ul>
-                <li><a href="#">我的资料</a></li>
-                <li><a href="#">收货地址</a></li>
-                <li><a href="#">密码管理</a></li>
+                <li><a href="#right_div">我的资料</a></li>
+                <li><a href="#right_div">修改地址</a></li>
+                <li><a href="#right_div">密码管理</a></li>
               </ul>
             </div>
           </div>
@@ -379,25 +375,27 @@
                 <span>每次签到一次可获得10积分</span>
               </div>
               <div class="fr sign_in_right">
-                <a href=""><img src="images/signIn2.png" ></a>
+                <a href="#"><img src="images/signIn2.png" ></a>
               </div>
           </div>
           <div class="right_div_table">
-            <table style="width: 530px;">
-              <caption>签到积分记录</caption>
+            <span class="tb_title">签到积分记录</span>
+            <table class="tb_th" style="width: 533px;">
               <tr>
                 <th style="width:180px;">签到日期</th>
                 <th style="width:350px;">奖励积分</th>
               </tr>
+            </table>
+            <table >
               <tr>
-                <td class="first_td">2014-08-11</td>
-                <td class="reward_in">1000</td>
+                <td class="first_td" style="width:180px;">2014-08-11</td>
+                <td style="width:350px;">1000</td>
               </tr>
             </table>
           </div>
         </div>
         <!-- 我的积分 -->
-        <div class="right_div" style="display:none;;">
+        <div class="right_div" style="display:none;">
           <p>我的积分</p>
           <span class="right_div_underline"></span>
 
@@ -407,8 +405,8 @@
               </div>
             </div>
             <div class="right_div_table">
-              <table class="integral_table">
-                <caption>积分变动详单</caption>
+              <span class="tb_title">积分变动详单</span>
+              <table class="tb_th">
                 <tr>
                   <th>签到日期</th>
                   <th>等级积分变动</th>
@@ -416,6 +414,8 @@
                   <th>账户余额变动</th>
                   <th>原因</th>
                 </tr>
+              </table>
+              <table class="integral_table">
                 <tr>
                   <td class="first_td">2014-08-11</td>
                   <td>+1000</td>
@@ -446,9 +446,175 @@
                 </tr>
               </table>
             </div>
+            <div class="_page_">&nbsp;分页</div>
         </div>
+        <!-- 我的评价 -->
+         <div class="right_div">
+          <div class="SmenuTitle clearfix">
+            <ul id="assess_nav">
+                <li class="selected_li SmenuTitleOn10"><a href="javascript:void(0)">未评价</a></li>
+                <li><a href="javascript:void(0)">已评价</a></li>
+            </ul>
+          </div>
+          <div class="SmenuContent clearfix" id="assess_content">
+            <div class="SmenuConnt SmenuContentOn10" >
+              <div class="right_div_table">
+              <table class="tb_th">
+                <tr>
+                  <th style="width:220px;">购买时间</th>
+                  <th style="width:560px;">购买商品</th>
+                  <th style="width:270px">操作</th>
+                </tr>
+              </table>
+              <table class="assess_table">
+                <tr>
+                  <td class="first_td" style="width:220px;">
+                    <span>2014-08-11<br /></span>
+                    <span>订单号：728752426306487</span>
+                  </td>
+                  <td class="assess_goods" style="width:560px;">
+                    <div>
+                      <img src="images/icon55_.png" align="top" />
+                      <span>奶白菜 300g/包</span>
+                    </div>
+                  </td>
+                  <td style="width:270px;">
+                    <div class="assess_btn">评价</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="first_td">
+                    <span>2014-08-11<br /></span>
+                    <span>订单号：728752426306487</span>
+                  </td>
+                  <td class="assess_goods">
+                    <div>
+                      <img src="images/icon55_.png" align="top" />
+                      <span>奶白菜 300g/包</span>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="assess_btn">评价</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="first_td">
+                    <span>2014-08-11<br /></span>
+                    <span>订单号：728752426306487</span>
+                  </td>
+                  <td class="assess_goods">
+                    <div>
+                      <img src="images/icon55_.png" align="top" />
+                      <span>奶白菜 300g/包</span>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="assess_btn">评价</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="first_td">
+                    <span>2014-08-11<br /></span>
+                    <span>订单号：728752426306487</span>
+                  </td>
+                  <td class="assess_goods">
+                    <div>
+                      <img src="images/icon55_.png" align="top" />
+                      <span>奶白菜 300g/包</span>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="assess_btn">评价</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="first_td">
+                    <span>2014-08-11<br /></span>
+                    <span>订单号：728752426306487</span>
+                  </td>
+                  <td class="assess_goods">
+                    <div>
+                      <img src="images/icon55_.png" align="top" />
+                      <span>奶白菜 300g/包</span>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="assess_btn">评价</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="first_td">
+                    <span>2014-08-11<br /></span>
+                    <span>订单号：728752426306487</span>
+                  </td>
+                  <td class="assess_goods">
+                    <div>
+                      <img src="images/icon55_.png" align="top" />
+                      <span>奶白菜 300g/包</span>
+                    </div>
+                  </td>
+                  <td >
+                    <div class="assess_btn">评价</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            </div>
+            <div class="SmenuConnt" style="display:none">
+              <div class="right_div_table">
+                <table class="tb_th">
+                  <tr>
+                    <th style="width:220px;">购买时间</th>
+                    <th style="width:310px;">购买商品</th>
+                    <th style="width:430px">评论</th>
+                  </tr>
+                </table>
+                <table class="assessed_table">
+                  <tr>
+                    <td class="first_td" style="width:220px;">
+                      <span>2014-08-11<br /></span>
+                      <span>订单号：728752426306487</span>
+                    </td>
+                    <td class="assess_goods" style="width:310px;">
+                      <div>
+                        <img src="images/icon55_.png" align="top" />
+                        <span>奶白菜 300g/包</span>
+                      </div>
+                    </td>
+                    <td style="width:430px;">
+                      <div class="assessment">
+                        这菜这菜真心了好吃啊这菜真心了好吃啊真心了好吃啊这菜这菜真心了好吃啊这菜真心了好吃啊真心了好吃啊这菜这菜真心了好吃啊这菜真心了好吃啊真心了好吃啊真心了好吃啊这菜这菜真心了好吃啊这菜真心了好吃啊真心了好吃啊
+                      </div>
+                      <div class="reply_btn">回复</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="first_td" style="width:220px;">
+                      <span>2014-08-11<br /></span>
+                      <span>订单号：728752426306487</span>
+                    </td>
+                    <td class="assess_goods" style="width:310px;">
+                      <div>
+                        <img src="images/icon55_.png" align="top" />
+                        <span>奶白菜 300g/包</span>
+                      </div>
+                    </td>
+                    <td style="width:430px;">
+                      <div class="assessment">
+                        这菜这菜真心了好吃啊这菜真心了好吃啊真心了好吃啊这菜这菜真心了好吃啊这菜真心了好吃啊真心了好吃啊这菜这菜真心了好吃啊这菜真心了好吃啊真心了好吃啊真心了好吃啊这菜这菜真心了好吃啊这菜真心了好吃啊真心了好吃啊
+                      </div>
+                      <div class="reply_btn">回复</div>
+                    </td>
+                  </tr>
+                </table>
+            </div>
+          </div>
+          <div class="_page_">&nbsp;分页</div>
+        </div>
+
         <!-- 个人资料 -->
-        <div class="right_div" >
+        <div class="right_div" style="display:none;" >
+
           <p>我的资料</p>
           <span class="right_div_underline"></span>
 
@@ -543,7 +709,7 @@
         </div>
 
         <!-- 密码管理 -->
-        <div class="right_div" style="display:none">
+        <div class="right_div" style="display:none;">
           <p>密码管理</p>
           <span class="right_div_underline"></span>
           <div class="member_div">
@@ -561,11 +727,10 @@
             </div>
             <button class="btn_info" id="savePassword">保存</button>
           </div>
-
         </div>
 
         <!-- 激活礼品卡 -->
-        <div class="right_div"  style="display:none">
+        <div class="right_div"  style="display:none;">
           <p>激活礼品卡</p>
           <span class="right_div_underline"></span>
           <div class="member_div">
@@ -574,7 +739,7 @@
               <input  id="acti_code" type="text" />
               <span id="activiteTip">(请刮开卡背面覆盖的激活码)</span>
             </div>
-            <div id="giftCard2" class="every_line_height">
+            <div id="giftCard2" class="every_line_height same_secCode">
               <label for="security_code">输入验证码：</label>
               <input type="text" id="security_code" />
               <span><img src="images/code.png" /></span>
@@ -587,13 +752,14 @@
         <!-- 激活优惠券 -->
         <div class="right_div" style="display:none;">
           <p>激活优惠券</p>
+
           <span class="right_div_underline"></span>
           <div class="member_div">
             <div id="discount1" class="every_line_height">
              <label for="cardID">输入卡号：</label>
               <input  id="cardID" type="text" />
             </div>
-            <div id="discount2" class="every_line_height">
+            <div id="discount2" class="every_line_height  same_secCode">
               <label for="sec_code">输入验证码：</label>
               <input type="text" id="sec_code" />
               <img src="images/code.png" />
@@ -604,7 +770,7 @@
         </div>
 
         <!-- 推荐人会员号 -->
-        <div class="right_div" style="display:none">
+        <div class="right_div" style="display:none;">
           <p>推荐人会员号</p>
           <span class="right_div_underline"></span>
           <div class="referrerNum">
@@ -618,7 +784,7 @@
         </div>
 
         <!-- 我的尚田 -->
-        <div class="right_div" style="display:none;">
+        <div class="right_div" id="MyShangtian" style="display:none;">
           <div class="myDetailInfo">
             <img src="images/mem1.png" />
             <div id="myDetail">
@@ -638,10 +804,10 @@
                 <span> 验证可获得50积分</span>
               </div>
             </div>
-           </div>  
+           </div>  <!-- myDetailInfo结束 -->
 
            <div class="all_info">
-            <div id="all_info1">
+             <div id="all_info1">
                <p>
                 <img src="images/white_pic1.png" />
                 待支付的订单
@@ -680,8 +846,8 @@
                  <img src="images/white_pic8.png" />
                  礼品卡
                 </p>
-             </div>
-            </div>
+             </div>  <!-- all_info2结束 -->
+           </div>  <!-- all_info结束 -->
 
             <div class="earn_points" >
               <div id="point_tit">
@@ -727,11 +893,10 @@
                    </div>
                    <p>商品评论<span> +100</span></p>
                 </div>
-              </div>
-            </div>
-          </div>
-       
-      </div>
+              </div>  <!-- earnPointWay结束 -->
+            </div>   <!-- earn_points结束 --> 
+        </div>   <!-- 我的尚田结束 -->
+     </div>
   <!-- 会员页面    冰、升 -->
 </div>
 <!-- 内容区域结束 -->

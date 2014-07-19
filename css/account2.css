@@ -49,7 +49,7 @@
 .bigfont{
 	font-family: "MicroSoft Yahei";
 	font-size: 18px;
-	font-weight: bold;
+	font-weight: 500;
 }
 
 #save_btn{
@@ -87,7 +87,7 @@
 	line-height: 29px;
 
 }
-.online{
+#online{
 	background-color: #F2F2F2;
 }
 .old_address ul li{
@@ -183,9 +183,7 @@
 	margin-left: 37px;
 	margin-bottom: 45px;
 }
-.send_method{
-	height: 35px;
-}
+
 
 .pay_send{
 	margin-top: 46px;
@@ -201,7 +199,7 @@
 
 }
 
-.online_pay{
+#online_pay{
 	margin-bottom: 17px;
 }
 .pay_met a{
@@ -219,6 +217,10 @@
 	font-family: "宋体";
 	line-height: 20px;
 }
+
+.bank{
+	margin-top: 10px;
+}
 .bank,.bank2{
 	margin-left: 55px;
 }
@@ -233,7 +235,7 @@
 	line-height: 40px;
 	height: 40px;
 }
-.send_met{
+#send_met{
 	margin-top: 25px;
 
 }
@@ -311,7 +313,7 @@
 	color:#47a51c;
 	font-size: 24px;
 	font-weight: normal;
-	font-family: "Arial";
+	font-family: Arial, Helvetica, sans-serif;
 
 }
 
@@ -418,7 +420,7 @@
 	float: right;
 }
 .total_fee span{
-	font-family: Arial;
+	font-family: Arial, Helvetica, sans-serif;
 	font-size: 31px;
 	color: #F60;
 }
