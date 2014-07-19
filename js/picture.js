@@ -110,7 +110,10 @@ $(function(){
          }
 
     });
-
+})
+$(function(){
+    var page = 1;
+    var i = 5; //每版放5个图片
     //点击向前按钮
     $("#left-choice").click(function(){
         var $parent = $(this).parents("div.left_banner");
@@ -125,15 +128,12 @@ $(function(){
         if(!$v_show.is(":animated")){
             if (page == 1) {
                 $v_show.animate({left : "0px"},"slow");
-                page = page_count;
-            }else{
-                $v_show.animate({left : '+='+(v_width-wid)},"slow");
+                page = 1;
+            }else if(page>1){
+                $v_show.animate({left : '+='+(v_width+wid)},"slow");
                 page--;
             }
         }
     });
-
 })
-
-
 /***产品详情页中图片预览向左向右轮播部分*****june*********end*****/

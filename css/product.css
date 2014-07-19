@@ -387,14 +387,16 @@ img.o-place {
 .main{
 	margin-top:10px;
 	width:1180px;
+	position: relative;
 }
 .left_list{
 	float:left;
-	height:485px;
+	height:100%;
 	width:210px;
 	margin-bottom: 10px;
 	border:1px solid #dfdfdf;
 	background-color: #fff;
+	clear: both;
 }
 .list_title{
 	background:#f2f2f2;
@@ -413,6 +415,7 @@ img.o-place {
 	top: -10px;
 	background-color: #fff;
 	border:1px solid #dfdfdf;
+	position: absolute;
 }
 .list_content{
 	height:8 0px;
@@ -461,11 +464,11 @@ img.o-place {
 }
 .list_more{
 	height:25px;
+	line-height: 25px;
 	width: 115px;
 	border-radius: 2px;
 	background-color: #e5e5e5;
-	margin-top:15px;
-	margin-left:48px;
+	margin: auto;
 	color:#666;
 
 }	
