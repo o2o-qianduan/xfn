@@ -1067,7 +1067,7 @@ ul, li {
 	margin: 22px 0 0 32px;
 }
 
-.member_div input,.referrerNum input{       /*可利用，输入框样式*/
+.member_div input,.referrerNum input,.findCode_Box input{       /*可利用，输入框样式*/
 	width: 290px;
 	height: 33px;
 	box-shadow: 0 3px 10px #E9E9E9 inset;
@@ -1075,7 +1075,7 @@ ul, li {
 	border-radius: 3px;
 
 }
-.member_div label{      /* 可利用，标签样式*/
+.member_div label,.findCode_Box label{      /* 可利用，标签样式*/
 	display: inline-block;
 	text-align: right;
 	width: 90px;
@@ -2236,4 +2236,76 @@ box-shadow: 2px 2px 5px #C0BBB5;
 
 #hot_veg_label a:hover{
 	color: red;
+}
+
+
+/*找回密码*/
+.leftBanner1{
+	margin-top: 106px;
+	width: 974px;
+	height: 350px;
+
+}
+.findCode_Box{
+	position: absolute;
+	top: 335px;
+	right: 85px;
+	width: 430px;
+	height: 410px;
+	border:1px solid #CCC;
+	background-color: #fff;
+	box-shadow: 0 20px 20px #f6f4f1 inset;
+	font-family: "新宋体";
+	font-size: 14px;
+}
+
+.findCode_Box>p{
+	padding-top: 33px;
+	height: 38px;
+	line-height: 38px;
+	color: #F60;
+	border-bottom: 2px solid #d7d6d6;
+	margin: 0 21px;
+}
+
+.findCode_Box .findcode1{
+	margin-top: 10px;
+}
+.findCode_Box .findcode2{
+	margin-top: 5px;
+}
+.findCode_Box .findcode2 input{
+	width: 85px;
+}
+.findCode_Box .findcode2 a{
+	color: #A0A0A0;
+	text-decoration: underline;
+}
+#findYourCode{
+	margin-top: 15px;
+	font-size: 16px;
+}
+.tipCharity_text{
+	margin: 25px 24px 0 24px;
+}
+
+.tipCharity_text  .triangle_tt{
+	display: block;
+	height: 0;
+	width:0;
+	float: left;
+	border:6px solid #fff;
+	border-left-color: #77BE22;
+}
+.tipCharity_text #triangle_tt1{
+	margin-top: 3px;
+}
+.tipCharity_text #triangle_tt2{
+	margin-top: 13px;
+}
+.tipCharity_text p{
+	margin-top: 10px;
+	color: #939393;
+	font-size: 12px;
+	line-height: 20px;
 }
