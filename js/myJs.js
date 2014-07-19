@@ -9,7 +9,6 @@ $(function(){
 	$(".tabOption span").mouseover(function(){
 		tabOptionIndex1=$(".tabOption span").index(this);
 		tabOptionHover1(tabOptionIndex1);
-
 	});
 });
 function tabOptionHover1(tabOptionIndex){

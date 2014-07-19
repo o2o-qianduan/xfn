@@ -193,7 +193,7 @@ $(function() {
 			stc = setTimeout(function (){			
 				$(".calender").hide();
 				clearTimeout(stc);
-			},100);	
+			},10);	
 		});
 		//当鼠标移到控件上面的时候显示
 		$(".calender").live("mousemove",function(){     
