@@ -120,7 +120,7 @@ var tabOptionIndex2=0;
 $(function(){
 	var banner=$("#banner-left");
 	var imgs=$("#banner-left a");
-	var len=iFmgs.length;
+	var len=imgs.length;
 	var index=0;
 	var adTimer;
 	$(".points").mouseover(function(){
