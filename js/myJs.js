@@ -92,8 +92,7 @@ var tabOptionIndex2=0;
             showBox(index);
         }).mouseout(function(){
             $all = $("#assess_nav").children('li');
-            var index = $all.index('.selected_li');
-            
+            var index = $all.index('.selected_li');         
             $all.removeClass('SmenuTitleOn10');
             $all.eq(index).addClass('SmenuTitleOn10');
             showBox(index);
@@ -109,7 +108,6 @@ var tabOptionIndex2=0;
             showBox(index);
         })
     })
-
     function showBox(idx){
         $("#assess_content").children('.SmenuConnt').hide().eq(idx).show();
     }
@@ -152,7 +150,6 @@ $(function(){
 	$(".newsOption span").mouseover(function(){
 		tabOptionIndex3=$(".newsOption span").index(this);
 		tabOptionHover3(tabOptionIndex3);
-
 	});
 });
 function tabOptionHover3(tabOptionIndex){
@@ -220,8 +217,6 @@ window.onload = function () {
                 tr[i].className = '';
             }
         }
-  
-
         priceTotal.innerHTML = "￥"+price.toFixed(2);
         sum = price;
         count = seleted;
