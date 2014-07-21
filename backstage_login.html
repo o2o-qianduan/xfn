@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><![endif]-->
+<html>
+<head>
+	<title>后台管理登录</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=9,IE=10">
+  <link rel="stylesheet" type="text/css" href="css/backstage.css">
+  <script src="js/jquery-1.8.2.js"></script>
+ <!--[if IE]>
+<style type="text/css">?
+
+#earnPointWay .boxImg i{
+  display: inline-block;
+  height: 100%;
+  vertical-align:middle;
+}
+#earnPointWay .boxImg img{
+  vertical-align: middle;
+}
+</style>
+<![endif]-->
+</head>
+<body>
+  <div class="login_content">
+    <div class="login_main">
+      <form action="">
+        <table>
+          <tr>
+            <td class="item"><label for="">用户名</label></td>
+            <td><input type="text" id="name" placeholder="请输入用户名"></td>
+          </tr>
+          <tr>
+            <td class="item"><label for="">密码</label></td>
+            <td><input type="password" id="password" placeholder="请输入密码"></td>
+          </tr>
+          <tr>
+            <td class="item"><label for="">验证码</label></td>
+            <td>
+              <div>
+                <input type="text" class="iden_code" id="iden_code"><img src="images/bs_iden_code.png">
+              </div>
+            </td>
+          </tr>
+        </table>
+      </form>
+      <a href="javascript:check()"></a>
+    </div>
+  </div>
+  <script type="text/javascript">
+    function check(){
+      var $name = $("#name");
+      var $password = $("#password");
+      var $iden_code = $("#iden_code");
+      if($name.val() == ""){
+        showMsg("请输入您的账号");
+        $name.focus();
+        return false;
+      } else if($password.val() == ""){
+        showMsg("请输入您的密码");
+        $password.focus();
+        return false;
+      } else if($iden_code.val() == ""){
+        showMsg("请输入验证码");
+        $iden_code.focus();
+        return false;
+      }
+      // 提交表单的js
+    }
+    function showMsg(i){
+     if(i){
+      alert(i);
+      return true;
+     }
+     return false;
+    }
+
+    
+    /**
+     * @name placeHolder
+     * @class 跨浏览器placeHolder,对于不支持原生placeHolder的浏览器，通过value或插入span元素两种方案模拟
+     * @param {Object} obj 要应用placeHolder的表单元素对象
+     * @param {Boolean} span 是否采用悬浮的span元素方式来模拟placeHolder，默认值false,默认使用value方式模拟
+     */
+
+    function placeHolder(obj, span) {
+        if (!obj.getAttribute('placeholder')) return;
+        var imitateMode = span === true ? true : false;
+        var supportPlaceholder = 'placeholder' in document.createElement('input');
+        if (!supportPlaceholder) {
+            var defaultValue = obj.getAttribute('placeholder');
+            if (!imitateMode) {
+                obj.onfocus = function() {
+                    (obj.value == defaultValue) && (obj.value = '');
+                    obj.style.color = '';
+                }
+                obj.onblur = function() {
+                    if (obj.value == defaultValue) {
+                        obj.style.color = '';
+                    } else if (obj.value == '') {
+                        obj.value = defaultValue;
+                        obj.style.color = '#ACA899';
+                    }
+                }
+                obj.onblur();
+            } else {
+                var placeHolderCont = document.createTextNode(defaultValue);
+                var oWrapper = document.createElement('span');
+                oWrapper.style.cssText = 'position:absolute; color:#ACA899; display:inline-block; overflow:hidden;';
+                oWrapper.className = 'wrap-placeholder';
+                oWrapper.style.fontFamily = getStyle(obj, 'fontFamily');
+                oWrapper.style.fontSize = getStyle(obj, 'fontSize');
+                oWrapper.style.marginLeft = parseInt(getStyle(obj, 'marginLeft')) ? parseInt(getStyle(obj, 'marginLeft')) + 3 + 'px' : 3 + 'px';
+                oWrapper.style.marginTop = parseInt(getStyle(obj, 'marginTop')) ? getStyle(obj, 'marginTop') : 1 + 'px';
+                oWrapper.style.paddingLeft = getStyle(obj, 'paddingLeft');
+                oWrapper.style.width = obj.offsetWidth - parseInt(getStyle(obj, 'marginLeft')) + 'px';
+                oWrapper.style.height = obj.offsetHeight + 'px';
+                oWrapper.style.lineHeight = obj.nodeName.toLowerCase() == 'textarea' ? '' : obj.offsetHeight + 'px';
+                oWrapper.appendChild(placeHolderCont);
+                obj.parentNode.insertBefore(oWrapper, obj);
+                oWrapper.onclick = function() {
+                    obj.focus();
+                }
+                //绑定input或onpropertychange事件
+                if (typeof(obj.oninput) == 'object') {
+                    obj.addEventListener("input", changeHandler, false);
+                } else {
+                    obj.onpropertychange = changeHandler;
+                }
+
+                function changeHandler() {
+                    oWrapper.style.display = obj.value != '' ? 'none' : 'inline-block';
+                }
+                /**
+                 * @name getStyle
+                 * @class 获取样式
+                 * @param {Object} obj 要获取样式的对象
+                 * @param {String} styleName 要获取的样式名
+                 */
+
+                function getStyle(obj, styleName) {
+                    var oStyle = null;
+                    if (obj.currentStyle) oStyle = obj.currentStyle[styleName];
+                    else if (window.getComputedStyle) oStyle = window.getComputedStyle(obj, null)[styleName];
+                    return oStyle;
+                }
+            }
+        }
+    }
+
+    placeHolder(document.getElementById("name"), true)
+    placeHolder(document.getElementById("password"), true)
+    placeHolder(document.getElementById("iden_code"), true)
+  </script>
+</body>
+</html>
