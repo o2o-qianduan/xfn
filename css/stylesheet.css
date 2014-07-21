@@ -888,20 +888,31 @@ ul, li {
 	width: 917px;
 	margin-top: 10px;
 }
+.right_div_table .tb_title{
+	font-weight: bold;
+	text-align: left;
+	height: 40px;
+	line-height: 40px;
+}
 .right_div_table table{
 	border-spacing:0;
 	text-align: center;
 	border-collapse:collapse; 
 }
-.right_div_table caption{
+.right_div_table .integral_table td,.right_div_table .tb_th th{
+	width:183px;
+}
+.right_div_table .tb_th{
+	margin-bottom: 4px;
+	width:917px;
+}
+/*.right_div_table caption{
 	font-weight: bold;
 	text-align: left;
 	height: 40px;
-}
+}*/
 .right_div_table tr{
 	height: 30px;
-
-
 }
 .right_div_table th{
 	font-weight:normal;
@@ -924,7 +935,79 @@ ul, li {
 	line-height: 40px;
 	font-family: "宋体"；
 }
+/*商品评价*/
+/*未评价*/
+.right_div .assess_table tr,.right_div .assessed_table tr{
+	height: 80px;
+}
+.right_div .assessed_table td{
+	overflow: hidden;
+}
+.right_div .assess_table .first_td,.right_div .assessed_table .first_td{
+	font-weight: normal;
+	font-size: 12px;
+	text-align: left;
+	line-height: 20px; 
+}
+.right_div .assess_table .first_td span,.right_div .assessed_table .first_td span{
+	margin-left: 10px;
+}
+.right_div .assess_table .assess_goods,.right_div .assessed_table .assess_goods{
+	text-align: left;
+	color: #666;
+	font-size: 12px;
+	font-family: "宋体";
+}
+.right_div .assess_table .assess_goods img,.right_div .assessed_table .assess_goods img{
+	margin-left: 10px;
+	border:1px solid #e4e4e4;
+}
+.right_div .assess_table .assess_goods span,.right_div .assessed_table .assess_goods span{
+	margin-left:20px ;
 
+}
+.right_div .assess_table .assess_btn{
+	margin-left: 97.5px;
+	width: 75px;
+	height: 30px;
+	line-height: 30px;
+	background: #77be22;
+	color:#fff;
+	cursor: pointer;
+}
+.right_div_table .assessed_table .assessment{
+	width:365px;
+	height: 78px;
+	margin-top: 2px;
+	text-align: left;
+	overflow-y:scroll; 
+	font-size: 12px;
+	font-family: "宋体";
+	color:#666;
+	display: inline-block;
+}
+.right_div .assessed_table .reply_btn{
+	width: 40px;
+	height: 20px;
+	line-height: 20px;
+	background: #74c022;
+	color:#fff;
+	font-size: 12px;
+	font-family: "宋体";
+	cursor: pointer;
+	display: inline-block;
+	margin-top: -10px;
+	vertical-align: middle;
+
+
+}
+._page_{
+	width:295px;
+	height:30px;
+	border:1px solid #f60;
+	margin:30px auto;
+
+}
 /*我的积分*/
 .right_div .my_integral{
 	background: url(../images/myIntegral.png) no-repeat;
@@ -1204,7 +1287,7 @@ ul, li {
 	font-weight: bold;
 }
 #myDetail span{
-	font-family: Arial;
+	font-family: "Arial";
 	color: #689F31;
 
 }
@@ -1327,7 +1410,7 @@ ul, li {
 }
 .earnWay p span{
 	color: #FF7300;
-	font-family: Arial;
+	font-family: "Arial";
 	font-size: 16px;
 }
 
@@ -1511,6 +1594,10 @@ img{
     background: url('../images/down-triangle.png') no-repeat scroll 0px 23px transparent;
 
 }
+.SmenuTitleOn10,.SmenuTitleOn11{
+    background: url('../images/down-triangle_green.png') no-repeat scroll 0px 23px transparent;
+
+}
 .SmenuTitle ul li a {
     text-decoration: none;
     color: #000;
@@ -1529,6 +1616,10 @@ img{
     display: none;
 }
 .SmenuContentOn0,.SmenuContentOn1,.SmenuContentOn2,.SmenuContentOn3,.SmenuContentOn4{
+    display: block;
+    width: 100%;
+}
+.SmenuContentOn10,.SmenuContentOn11{
     display: block;
     width: 100%;
 }
@@ -2154,10 +2245,10 @@ box-shadow: 2px 2px 5px #C0BBB5;
 	width: 203px !important;
 }
 
-.center_course{
+ .pro_course{
 	float: left;
-}
-/********产品列表页样式*******june******end**************/
+} 
+ /*********产品列表页样式*******june******end**************/
 
 /******资讯页面样式******bing******start*******/
 

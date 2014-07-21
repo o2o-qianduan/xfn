@@ -8,7 +8,8 @@
   <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
   <link rel="stylesheet" href="css/jquery-ui.css">
   <link rel="stylesheet" type="text/css" href="css/manhuaDate.1.0.css">
-  <link rel="stylesheet" href="css/style.css"> 
+  <link rel="stylesheet" href="css/style.css">  
+  <script type="text/javascript" src="js/change.js"></script>
  <!--[if IE]>
 <style type="text/css">?
 
@@ -22,6 +23,18 @@
 }
 </style>
 <![endif]-->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=9,IE=10">
+  <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <script src="js/jquery-1.8.2.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <link rel="stylesheet" href="css/style.css"> 
+  <script type="text/javascript" src="js/myJs.js"></script>
+  <script type="text/javascript" src="js/picture.js"></script>
+  <script type="text/javascript" src="js/yao.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="css/product.css" />
   <script src="js/jquery-1.8.2.js"></script>
   <script src="js/jquery-ui.js"></script>
   <script type="text/javascript" src="js/myJs.js"></script>
@@ -31,7 +44,13 @@
   <script language="javascript" type="text/javascript" src="js/yao.js"></script>
   <script type="text/javascript" src="js/member.js"></script>
   <script type="text/javascript" src="js/manhuaDate.1.0.js"></script>
-
+<script type="text/javascript">
+YAO.YTabs({
+    tabs: YAO.getElByClassName('YM-Tab', 'li', 'YMenu-side'),
+    contents: YAO.getElByClassName('YM-submnu', 'ul', 'YMenu-side'),
+    hideAll: true
+  });
+</script>
   <script type="text/javascript">
   $(function (){
    $("input.mh_date").manhuaDate({                
@@ -131,8 +150,8 @@
 </div><!-- header部分 -->
 
 
- <!-- 内容区域 -->
- <div id="content" class="content">
+<!-- 内容区域 -->
+<div id="content" class="content">
     <!-- 以下"全部商品分类部分，在首页中显示，在其它页中鼠标滑过才显示" -->
       <div id="list_menu" class="no-mainpage">
         <div id="YMenu">
@@ -262,7 +281,7 @@
                              <li><a href="#1">家电服务</a></li>
                              <li><a href="#1">家电下乡</a></li>
                         </ul> 
-                     </li>                                               
+                     </li>                     
                  </ul>     
             </div>   
         </div>
@@ -285,7 +304,7 @@
             <h4><img src="images/boult3.png">&nbsp;我的尚田</h4>
             <div class="current_list">
               <ul>
-                <li><a href="#tab-0-1">我的尚田</a></li>          
+                <li><a href="">我的尚田</a></li>          
               </ul>
             </div>
           </div>
@@ -389,7 +408,7 @@
           </div>
         </div>
         <!-- 我的积分 -->
-        <div class="right_div"  id="tab-2-2" style="display:none;">
+        <div class="right_div"  style="display:none;">
           <p>我的积分</p>
           <span class="right_div_underline"></span>
 
@@ -443,7 +462,7 @@
             <div class="_page_">&nbsp;分页</div>
         </div>
         <!-- 我的评价 -->
-         <div class="right_div">
+         <div class="right_div" id="tab-1-2" style="display:none;">
           <div class="SmenuTitle clearfix">
             <ul id="assess_nav">
                 <li class="selected_li SmenuTitleOn10"><a href="javascript:void(0)">未评价</a></li>

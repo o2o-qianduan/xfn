@@ -1,0 +1,57 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	background: url(../images/bs_login.png) no-repeat center -74px;
+}
+.login_content{
+	width: 980px;
+	margin: 0 auto;
+	min-height: 600px;
+	height: 600px;
+	position: relative;
+}
+.login_main{
+	position: absolute;
+	top: 175px;
+	left: 540px;
+	width: 330px;
+	height: 250px;
+	display: block;
+}
+.login_main tr{
+	height: 40px;
+}
+
+.login_main .item {
+	color: #6F6A6A;
+	font-size: 14px;
+	line-height: 30px;
+	font-family: "Microsoft YaHei";
+
+}
+.login_main input {
+	height: 20px;
+	margin-left: 20px;
+}
+.login_main .iden_code {
+	width: 60px;
+}
+.login_main img {
+	float: right;
+	margin-left: 10px;
+	width:70px;
+	display: inline-block;
+}
+.login_main a {
+	background: url(../images/bs_loginbtn.jpg);
+	width: 180px;
+	height: 60px;
+	display: inline-block;
+	margin-left: 50px;
+	margin-top: 15px;
+}
+.login_main a:hover {
+	background: url(../images/bs_loginbtn_hover.jpg);
+}
