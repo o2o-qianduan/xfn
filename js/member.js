@@ -35,18 +35,15 @@ $(function(){
 		$(this).css("background-color","#B8B8B8");
 	});
 
-
 	//点击左边显示右边信息
 	$(".current_list ul li a").click(function(){
 		var $a_text = $(this).text();
-		var len = $(".center_course>div").length;
-
+		var len = $(".per_center>div").length;
 	 	if($a_text == '我的尚田'){
-	 		$('#MyShangtian').css("display","block");
+	 		$('#tab-0-1').css("display","block");
 	 	}else{
-	 		$('#MyShangtian').css("display","none");
+	 		$('#tab-0-1').css("display","none");
 	 	}
-
 		for( var i = 0 ; i < len; i++){
 			var $p = $(".right_div>p").eq(i);
 			var $p_text = $p.text();
@@ -57,6 +54,4 @@ $(function(){
 			}
 		}			
 	});
-
-
 })
