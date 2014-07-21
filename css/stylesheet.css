@@ -2281,15 +2281,15 @@ box-shadow: 2px 2px 5px #C0BBB5;
 	height: 106px;
 }
 .leftBanner1{
-
+	position: relative;
 	width: 974px;
 	height: 350px;
 
 }
 .findCode_Box{
 	position: absolute;
-	top: 335px;
-	right: 85px;
+	top: -28px;
+	right: -200px;
 	width: 430px;
 	height: 410px;
 	border:1px solid #CCC;
