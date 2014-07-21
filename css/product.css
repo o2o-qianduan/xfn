@@ -409,7 +409,7 @@ img.o-place {
 	padding-bottom: 13px;
 }
 .pro_detail{
-	float:right;
+	/*float:right;*/
 	height:100%;
 	width:960px;
 	top: -10px;

@@ -433,33 +433,17 @@ li {list-style-type: none;}
 
 
 /*****************整合部分布局结束***************冰、升***/
-
-
-
-
-
-
-
-
-
-
-
-
 #container {
     position: relative;
 }
 
 /*主内容区域*/
 #content {
-	min-height: 400px;
+	height: 100%;
 	width: 1180px;
 	margin: 0px auto;
 	margin-bottom: 30px;
 }
-/*#content h2{color:#555;}*/
-
-
-
 /**********************************Smenu部分************************************/
 .Smenu{
 	width: 100%;
@@ -904,20 +888,31 @@ ul, li {
 	width: 917px;
 	margin-top: 10px;
 }
+.right_div_table .tb_title{
+	font-weight: bold;
+	text-align: left;
+	height: 40px;
+	line-height: 40px;
+}
 .right_div_table table{
 	border-spacing:0;
 	text-align: center;
 	border-collapse:collapse; 
 }
-.right_div_table caption{
+.right_div_table .integral_table td,.right_div_table .tb_th th{
+	width:183px;
+}
+.right_div_table .tb_th{
+	margin-bottom: 4px;
+	width:917px;
+}
+/*.right_div_table caption{
 	font-weight: bold;
 	text-align: left;
 	height: 40px;
-}
+}*/
 .right_div_table tr{
 	height: 30px;
-
-
 }
 .right_div_table th{
 	font-weight:normal;
@@ -1293,7 +1288,7 @@ ul, li {
 	font-weight: bold;
 }
 #myDetail span{
-	font-family: Arial;
+	font-family: "Arial";
 	color: #689F31;
 
 }
@@ -1416,7 +1411,7 @@ ul, li {
 }
 .earnWay p span{
 	color: #FF7300;
-	font-family: Arial;
+	font-family: "Arial";
 	font-size: 16px;
 }
 
@@ -1600,6 +1595,10 @@ img{
     background: url('../images/down-triangle.png') no-repeat scroll 0px 23px transparent;
 
 }
+.SmenuTitleOn10,.SmenuTitleOn11{
+    background: url('../images/down-triangle_green.png') no-repeat scroll 0px 23px transparent;
+
+}
 .SmenuTitle ul li a {
     text-decoration: none;
     color: #000;
@@ -1618,6 +1617,10 @@ img{
     display: none;
 }
 .SmenuContentOn0,.SmenuContentOn1,.SmenuContentOn2,.SmenuContentOn3,.SmenuContentOn4{
+    display: block;
+    width: 100%;
+}
+.SmenuContentOn10,.SmenuContentOn11{
     display: block;
     width: 100%;
 }
@@ -2232,10 +2235,10 @@ box-shadow: 2px 2px 5px #C0BBB5;
 	width: 203px !important;
 }
 
-.center_course{
+ .pro_course{
 	float: left;
-}
-/********产品列表页样式*******june******end**************/
+} 
+ /*********产品列表页样式*******june******end**************/
 
 /******资讯页面样式******bing******start*******/
 

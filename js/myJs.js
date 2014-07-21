@@ -92,7 +92,7 @@ var tabOptionIndex2=0;
             showBox(index);
         }).mouseout(function(){
             $all = $("#assess_nav").children('li');
-            var index = $all.index('.selected_li');         
+            var index = $all.index('.selected_li');        
             $all.removeClass('SmenuTitleOn10');
             $all.eq(index).addClass('SmenuTitleOn10');
             showBox(index);
