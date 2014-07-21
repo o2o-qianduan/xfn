@@ -19,7 +19,7 @@ $(function(){
 		___width:"780",
 		___height:"260",
 		___showbg:true,
-		___drag:"___boxTitle"
+		___drag:"__boxTitle"
 
 		})
 	});
