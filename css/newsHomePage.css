@@ -1,0 +1,62 @@
+.home_page_top{
+	margin: 10px auto;
+	height: 526px;
+}
+
+.home_page_top,.home_page_center{
+	font-family: "新宋体";
+	font-size: 14px;
+}
+
+.home_page_top #page_left_0{
+	width: 348px;
+	border: 1px solid #DFDFDF;
+	float: left;
+}
+
+.home_page_top li{
+	margin: 5px 4px 0 4px ;
+	height: 480px;
+}
+
+.home_page_top #img_bottom{
+	background-color: #333;
+	height: 35px;
+	margin: 0 4px 5px;
+}
+
+.home_page_top #page_center_0{
+	margin: 0 10px;
+	width: 562px;
+	float: left;
+}
+
+.home_page_top #pageCenterText1{
+	height: 220px;
+	border-bottom: 1px dashed #CACACA;
+}
+
+.home_page_top #pageCenterText2{
+	height: 101px;
+	border-bottom: 1px dashed #CACACA;
+}
+
+.home_page_top #page_right_0{
+	width: 246px;
+	height: 524px;
+	border: 1px solid #BDE69B;
+	float: right;
+}
+
+.home_page_center h4{
+	width: 100%;
+	background-color: #77BE22;
+	height: 40px;
+	line-height: 40px;
+	color: #fff;
+	text-indent: 15px;
+}
+
+.home_page_center .pageCenterDiv{
+	
+}
