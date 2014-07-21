@@ -261,14 +261,9 @@ input.num-each{
 	color: #4b4b4b;
 	width: 100%;
 }
-/*
-.thzq,.xxsc{
-	text-align: center;
-}*/
 .newsOn0,.newsOn1  {
 	background: repeat-x scroll center top #e0f8c3;
 }
-
 .newsOn-0,.newsOn-1{
 	display: block;
 }
@@ -280,16 +275,13 @@ input.num-each{
 	margin-left: 0px;
 	display: block;
 	height: 35px;
-	line-height: 35px;
-	
+	line-height: 35px;	
 }
 .daBox li {
 	float: left;
 	width: 122px;
 	text-align: center;
 }
-
-
 .da-0,.da-1 {
 	display: none;
 	border:1px solid #bebebe;
@@ -303,7 +295,6 @@ input.num-each{
 	display: block;
 }
 .da-ul li{
-
 	margin-left: 10px;
 }
 .da-ul a{
@@ -320,20 +311,14 @@ input.num-each{
 	color: #4b4b4b;
 	width: 100%;
 }
-/*
-.thzq,.xxsc{
-	text-align: center;
-}*/
 .daOn0,.daOn1  {
 	background:none repeat-x scroll center top #e0f8c3;
 	width: 122px;
-/*	float: left;*/
 }
 
 .daOn-0,.daOn-1{
 	display: block;
 	height: 100%;
-/*	border-bottom: none;*/
 	border-right: none;
 	border-left: none;
 }
@@ -341,7 +326,6 @@ input.num-each{
 	display: block;
 	position: relative;
 }
-
 /*搭配套餐*/
 .combo{
 	margin-top: 10px;
@@ -502,20 +486,14 @@ input.num-each{
 	color: #4b4b4b;
 	width: 100%;
 }
-/*
-.thzq,.xxsc{
-	text-align: center;
-}*/
+
 .proOn0,.proOn1,.proOn2  {
 	background:none repeat-x scroll center top #e0f8c3;
 	width: 122px;
-/*	float: left;*/
 }
-
 .proOn-0,.proOn-1,.proOn-2{
 	display: block;
 	height: 100%;
-/*	border-bottom: none;*/
 	border-right: none;
 	border-left: none;
 }
@@ -523,7 +501,6 @@ input.num-each{
 	display: block;
 	position: relative;
 }
-
 /*搭配套餐*/
 .pro_detail{
 	margin-top: 10px;
@@ -590,5 +567,65 @@ input.num-each{
 	padding: 5px;
 }
 /******************************产品详情页“商品详情、评价、成交记录”部分修改Jquery插件tabs样式结束************june***********end****/
+/*****************资讯列表页“排行榜、问答”部分修改Jquery插件tabs样式*******june********start***********/
+.rankBox {
+	position: relative;
+	margin-left: 0px;
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	background: repeat-x scroll center top #fafafa;
+	color: #999999;
+	border-bottom: 1px solid #e7e6e6;
+	font-size: 14px;
+	font-family: "宋体";
+}
+#rankList .rankBox li {
+	float: left;
+	width: 100px;
+	text-align: center;
+}
+.rank-0,.rank-1 {
+	display: none;
+	border:1px solid #ffffff;
+	margin-left: 20px;
+	width: 90%;
+	top: 0px;
+	position: relative;
 
+}
+.rank-ul{
+	margin: 10px auto;
+	display: block;
+}
+.rank-ul li{
+	margin-left: 10px;
+	list-style: square outside none;
+	 margin-bottom: 6px;
+}
+.rank-ul a{
+	 color: #666666;
+	text-decoration: none;	
+	font-size: 12px;
+	font-family: "宋体";
+}
+.rank-ul a:hover{
+	color: red;
+}
+.rankOption a{
+	text-decoration: none;
+	color: #4b4b4b;
+	width: 100%;
+}
+.rankOn0,.rankOn1  {
+	border:1px solid #e7e6e6;
+	background: repeat-x scroll center top #ffffff;
+	border-bottom: 1px solid #ffffff;
+	font-weight: bold;
+}
+.rankOn-0,.rankOn-1{
+	display: block;
+}
+
+/*****************资讯列表页“排行榜、问答”部分修改Jquery插件tabs样式*******june********end***********/
 

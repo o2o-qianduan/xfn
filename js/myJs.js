@@ -1,8 +1,6 @@
  $(function(){
   $( "#tabs" ).tabs();
 })
-
-
 /*****新品推荐、特惠专区、新鲜蔬菜部分 *************june**---start*/
 var tabOptionIndex1=0;
 $(function(){
@@ -60,16 +58,12 @@ $(function(){
    });
 
 /*******************首页"全部产品分类"部分**************************june*******end********/
-
-
-
 /*****超值抢购、本季热卖、本周推荐、新品上市、限时抢购 *************june**---start*/
 var tabOptionIndex2=0;
  $(function(){
      $(".SmenuTitle ul li").mouseover(function(){
          tabOptionIndex2=$(".SmenuTitle ul li").index(this);
          tabOptionHover2(tabOptionIndex2);
-
      });
      $("#assess_nav").children("li").unbind();
  });
@@ -624,3 +618,24 @@ $(function(){
         
     });
 })
+
+/*************资讯列表页“排行榜、问答”切换*****june*************start******/
+var tabOptionIndex6=0;
+$(function(){
+    $(".rankOption span").mouseover(function(){
+        tabOptionIndex6=$(".rankOption span").index(this);
+        tabOptionHover6(tabOptionIndex6);
+    });
+});
+function tabOptionHover6(tabOptionIndex){
+    for(var i=0;i<2;i++){
+        $(".rankOption").removeClass('rankOn'+i);
+        $(".rank-0").removeClass('rankOn-'+i);
+        }
+    $(".rankOption").eq(tabOptionIndex).addClass('rankOn'+tabOptionIndex);
+    $(".rank-0").eq(tabOptionIndex).addClass('rankOn-'+tabOptionIndex);
+}
+ /*************资讯列表页“排行榜、问答”切换**********june******end*/
+ /***个人中心页面根据左边菜单点击在右边区域显示相应的内容*****june*****start***/
+
+ /***个人中心页面根据左边菜单点击在右边区域显示相应的内容*****june*****end***/

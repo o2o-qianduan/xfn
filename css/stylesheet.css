@@ -433,33 +433,17 @@ li {list-style-type: none;}
 
 
 /*****************整合部分布局结束***************冰、升***/
-
-
-
-
-
-
-
-
-
-
-
-
 #container {
     position: relative;
 }
 
 /*主内容区域*/
 #content {
-	min-height: 400px;
+	height: 100%;
 	width: 1180px;
 	margin: 0px auto;
 	margin-bottom: 30px;
 }
-/*#content h2{color:#555;}*/
-
-
-
 /**********************************Smenu部分************************************/
 .Smenu{
 	width: 100%;
@@ -2140,6 +2124,17 @@ box-shadow: 2px 2px 5px #C0BBB5;
 .pro_list{
 	width: 969px;
 	margin-left: 6px;
+}
+.pro_page{
+	width: 213px;
+	/*height: 701px;*/
+	border:1px solid #EFEFEF;
+	background-color: #FAFAFA;
+	margin:20px 0 0 10px;
+	float: left;
+}
+.pro_course{
+	float: left;
 }
 .pro_left{
 	width: 203px;
