@@ -1044,6 +1044,79 @@ ul, li {
 	background: #fff;
 	font-weight: bold;
 }
+/*商品评价*/
+/*未评价*/
+.right_div .assess_table tr,.right_div .assessed_table tr{
+	height: 80px;
+}
+.right_div .assessed_table td{
+	overflow: hidden;
+}
+.right_div .assess_table .first_td,.right_div .assessed_table .first_td{
+	font-weight: normal;
+	font-size: 12px;
+	text-align: left;
+	line-height: 20px; 
+}
+.right_div .assess_table .first_td span,.right_div .assessed_table .first_td span{
+	margin-left: 10px;
+}
+.right_div .assess_table .assess_goods,.right_div .assessed_table .assess_goods{
+	text-align: left;
+	color: #666;
+	font-size: 12px;
+	font-family: "宋体";
+}
+.right_div .assess_table .assess_goods img,.right_div .assessed_table .assess_goods img{
+	margin-left: 10px;
+	border:1px solid #e4e4e4;
+}
+.right_div .assess_table .assess_goods span,.right_div .assessed_table .assess_goods span{
+	margin-left:20px ;
+
+}
+.right_div .assess_table .assess_btn{
+	margin-left: 97.5px;
+	width: 75px;
+	height: 30px;
+	line-height: 30px;
+	background: #77be22;
+	color:#fff;
+	cursor: pointer;
+}
+.right_div_table .assessed_table .assessment{
+	width:365px;
+	height: 78px;
+	margin-top: 2px;
+	text-align: left;
+	overflow-y:scroll; 
+	font-size: 12px;
+	font-family: "宋体";
+	color:#666;
+	display: inline-block;
+}
+.right_div .assessed_table .reply_btn{
+	width: 40px;
+	height: 20px;
+	line-height: 20px;
+	background: #74c022;
+	color:#fff;
+	font-size: 12px;
+	font-family: "宋体";
+	cursor: pointer;
+	display: inline-block;
+	margin-top: -10px;
+	vertical-align: middle;
+
+
+}
+._page_{
+	width:295px;
+	height:30px;
+	border:1px solid #f60;
+	margin:30px auto;
+
+}
 /*个人中心*/
 .per_center{
 	width: 213px;

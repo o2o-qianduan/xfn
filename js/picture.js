@@ -141,3 +141,39 @@ $(function(){
 
 
 /***产品详情页中图片预览向左向右轮播部分*****june*********end*****/
+
+
+// ***bing***资讯首页图片轮播***start***
+$(function(){
+    var $imgscroll = $('#img_bottom #slideSpan span');
+    var len = $imgscroll.length;
+    var index = 0;
+    var adTimer = null;
+    $imgscroll.mousemove(function(){
+        index = $imgscroll.index(this);
+        showHomePage(index);
+    }).eq(0).mouseover();
+
+    $('#page_left_0').hover(function(){
+        if(adTimer){
+            clearInterval(adTimer);
+          }
+        },function(){
+            adTimer = setInterval(function(){
+                showHomePage(index);
+                index++;
+                if(index == len){
+                    index = 0;
+                }
+            },3000);     
+    }).trigger("mouseleave");
+})
+
+function showHomePage(index){
+    var $rollobj = $('#page_left_0');
+    var $rollList = $rollobj.find("#slideSpan span");
+     $('#page_img').find("img").eq(index).stop(true,true).fadeIn("slow").siblings().fadeOut("slow");
+
+    $rollList.removeClass("newBg").eq(index).addClass("newBg");
+}
+// ***bing***资讯首页图片轮播***end***
