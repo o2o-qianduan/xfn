@@ -6,10 +6,18 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=9,IE=10">
   <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
-  <script type="text/javascript" src="js/change.js"></script>
   <link rel="stylesheet" href="css/jquery-ui.css">
   <link rel="stylesheet" type="text/css" href="css/manhuaDate.1.0.css">
-  <link rel="stylesheet" href="css/style.css">  
+  <link rel="stylesheet" href="css/style.css"> 
+  <link rel="stylesheet" type="text/css" href="css/product.css" />
+  <script src="js/jquery-1.8.2.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script type="text/javascript" src="js/myJs.js"></script>
+  <script type="text/javascript" src="js/picture.js"></script>
+  <script type="text/javascript" src="js/jquery.imagezoom.min.js"></script>
+  <script type="text/javascript" src="js/yao.js"></script>
+  <script type="text/javascript" src="js/member.js"></script>
+  <script type="text/javascript" src="js/manhuaDate.1.0.js"></script> 
  <!--[if IE]>
 <style type="text/css">?
 
@@ -23,16 +31,7 @@
 }
 </style>
 <![endif]-->
-  <script src="js/jquery-1.8.2.js"></script>
-  <script src="js/jquery-ui.js"></script>
-  <script type="text/javascript" src="js/myJs.js"></script>
-  <script type="text/javascript" src="js/picture.js"></script>
-  <script type="text/javascript" src="js/jquery.imagezoom.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="css/product.css" />
-  <script language="javascript" type="text/javascript" src="js/yao.js"></script>
-  <script type="text/javascript" src="js/member.js"></script>
-  <script type="text/javascript" src="js/manhuaDate.1.0.js"></script>
-
+  
   <script type="text/javascript">
   $(function (){
    $("input.mh_date").manhuaDate({                
@@ -43,8 +42,7 @@
      isTime : false,//是否开启时间值默认为false
      beginY : 1949,//年份的开始默认为1949
      endY :2015//年份的结束默认为2049
-   });
-  
+   }); 
 });
 </script>
 </head>
@@ -729,7 +727,7 @@
           </div>
         </div>
         <!-- 我的尚田 -->
-        <div class="right_div" id="tab-0-1" style="display:none;">
+        <div class="right_div" id="tab-0-1">
           <div class="myDetailInfo">
             <img src="images/mem1.png">
             <div id="myDetail">
