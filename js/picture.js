@@ -152,7 +152,8 @@ $(function(){
     $imgscroll.mousemove(function(){
         index = $imgscroll.index(this);
         showHomePage(index);
-    }).eq(0).mouseover();
+    });
+    // eq(0).mouseover()用来初始化，让第一个文字高亮并显示第一张图
 
     $('#page_left_0').hover(function(){
         if(adTimer){
@@ -172,7 +173,7 @@ $(function(){
 function showHomePage(index){
     var $rollobj = $('#page_left_0');
     var $rollList = $rollobj.find("#slideSpan span");
-     $('#page_img').find("img").eq(index).stop(true,true).fadeIn("slow").siblings().fadeOut("slow");
+     $('#page_img').find("img").eq(index).stop(true,true).fadeIn().siblings().fadeOut();
 
     $rollList.removeClass("newBg").eq(index).addClass("newBg");
 }
