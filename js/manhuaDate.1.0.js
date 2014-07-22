@@ -3,6 +3,7 @@
  * 编写时间：2012年7月14号
  * version:manhuaDate.1.0.js
 ***/
+
 $(function() {
 	$.fn.manhuaDate = function(options) {
 		var defaults = {
