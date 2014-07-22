@@ -322,90 +322,50 @@
             </div>
           </div>
         </div>
-
-        <!-- 签到记录 -->
-        <div class="right_div" id="tab-2-1" style="display:none;">
-          <p>签到记录</p>
+        <!-- 我的订单 -->
+        <div class="right_div" id="tab-1-1" style="display:none;">
+          <p>我的订单</p>
           <span class="right_div_underline"></span>
-            <div class="right_div_up">
-              <div class="fl sign_in_left">
-                <span class="green_font">签到奖励<br /></span>
-                <span>每次签到一次可获得10积分</span>
-              </div>
-              <div class="fr sign_in_right">
-                <a href="#"><img src="images/signIn2.png" ></a>
-              </div>
-          </div>
           <div class="right_div_table">
-            <span class="tb_title">签到积分记录</span>
-            <table class="tb_th" style="width: 533px;">
-              <tr>
-                <th style="width:180px;">签到日期</th>
-                <th style="width:350px;">奖励积分</th>
-              </tr>
+            <table class="tb_th">
+                <tr>
+                  <th style="width: 290px;text-align: left;padding-left: 40px;">全部订单</th>
+                  <th style="width: 125px;">总金额</th>
+                  <th style="width: 110px;">收货人</th>
+                  <th style="width: 115px;">下单时间</th>
+                  <th style="width: 125px;">订单状态</th>
+                  <th style="width: 115px;">操作</th>
+                </tr>
             </table>
-            <table >
+            <table class="myorder">
+              <caption>订单编号：<span id="ordernum">2034323434</span></caption>
               <tr>
-                <td class="first_td" style="width:180px;">2014-08-11</td>
-                <td style="width:350px;">1000</td>
+                <td class="order_goods">
+                  <div style="margin: 10px;">
+                    <img src="images/icon55_.png"/>
+                    <img src="images/icon55_.png"/>
+                    <img src="images/icon55_.png"/>
+                  </div>
+                </td>
+                <td class="myorder_total">
+                  <div>￥207.00</div>
+                  在线支付
+                </td>
+                <td class="myorder_receiver">刘先生</td>
+                <td class="myorder_time">2014-07-14<br>12:25:13</td>
+                <td class="myorder_state">
+                  <div>正在出库</div>
+                  <a href="javascript:void(0)">跟踪包裹</a>
+                </td>
+                <td style="width:115px;" class="myorder_op">
+                  <div><a href="javascript:void(0)">查看</a></div>
+                  <a href="javascript:void(0)">取消订单</a>
+                </td>
               </tr>
             </table>
           </div>
-        </div><!-- 我的签到结束 -->
-        <!-- 我的积分 -->
-        <div class="right_div"  id="tab-2-2" style="display:none;">
-          <p>我的积分</p>
-          <span class="right_div_underline"></span>
-            <div class="right_div_up">
-              <div class="my_integral">
-                <div class="recent_inte">您当前的积分是：<span>225</span></div>
-              </div>
-            </div>
-            <div class="right_div_table">
-              <span class="tb_title">积分变动详单</span>
-              <table class="tb_th">
-                <tr>
-                  <th>签到日期</th>
-                  <th>等级积分变动</th>
-                  <th>消费积分变动 </th>
-                  <th>账户余额变动</th>
-                  <th>原因</th>
-                </tr>
-              </table>
-              <table class="integral_table">
-                <tr>
-                  <td class="first_td">2014-08-11</td>
-                  <td>+1000</td>
-                  <td>+1000</td>
-                  <td>0.00</td>
-                  <td class="first_td changeReason">每日签到</td>
-                </tr>
-                <tr>
-                  <td class="first_td">2014-08-11</td>
-                  <td>+1000</td>
-                  <td>+1000</td>
-                  <td>0.00</td>
-                  <td class="first_td changeReason">每日签到</td>
-                </tr>
-                <tr>
-                  <td class="first_td">2014-08-11</td>
-                  <td>+1000</td>
-                  <td>+1000</td>
-                  <td>0.00</td>
-                  <td class="first_td changeReason">每日签到</td>
-                </tr>
-                <tr>
-                  <td class="first_td">2014-08-11</td>
-                  <td>+1000</td>
-                  <td>+1000</td>
-                  <td>0.00</td>
-                  <td class="first_td changeReason">每日签到</td>
-                </tr>
-              </table>
-            </div>
-            <div class="_page_">&nbsp;分页</div>
-        </div><!-- 我的签到结束 -->
-        <!-- 我的评价 -->
+        </div><!-- 我的订单结束 -->
+        <!-- 商品评价 -->
          <div class="right_div" id="tab-1-2" style="display:none">
             <div class="SmenuTitle clearfix">
             <ul id="assess_nav">
@@ -568,7 +528,89 @@
           </div>
           <div class="_page_">&nbsp;分页</div>
          </div>
-         </div>
+         </div><!-- 商品评价结束 -->
+        <!-- 签到记录 -->
+        <div class="right_div" id="tab-2-1" style="display:none;">
+          <p>签到记录</p>
+          <span class="right_div_underline"></span>
+            <div class="right_div_up">
+              <div class="fl sign_in_left">
+                <span class="green_font">签到奖励<br /></span>
+                <span>每次签到一次可获得10积分</span>
+              </div>
+              <div class="fr sign_in_right">
+                <a href="#"><img src="images/signIn2.png" ></a>
+              </div>
+          </div>
+          <div class="right_div_table">
+            <span class="tb_title">签到积分记录</span>
+            <table class="tb_th" style="width: 533px;">
+              <tr>
+                <th style="width:180px;">签到日期</th>
+                <th style="width:350px;">奖励积分</th>
+              </tr>
+            </table>
+            <table >
+              <tr>
+                <td class="first_td" style="width:180px;">2014-08-11</td>
+                <td style="width:350px;">1000</td>
+              </tr>
+            </table>
+          </div>
+        </div><!-- 签到记录结束 -->
+        <!-- 我的积分 -->
+        <div class="right_div"  id="tab-2-2" style="display:none;">
+          <p>我的积分</p>
+          <span class="right_div_underline"></span>
+            <div class="right_div_up">
+              <div class="my_integral">
+                <div class="recent_inte">您当前的积分是：<span>225</span></div>
+              </div>
+            </div>
+            <div class="right_div_table">
+              <span class="tb_title">积分变动详单</span>
+              <table class="tb_th">
+                <tr>
+                  <th>签到日期</th>
+                  <th>等级积分变动</th>
+                  <th>消费积分变动 </th>
+                  <th>账户余额变动</th>
+                  <th>原因</th>
+                </tr>
+              </table>
+              <table class="integral_table">
+                <tr>
+                  <td class="first_td">2014-08-11</td>
+                  <td>+1000</td>
+                  <td>+1000</td>
+                  <td>0.00</td>
+                  <td class="first_td changeReason">每日签到</td>
+                </tr>
+                <tr>
+                  <td class="first_td">2014-08-11</td>
+                  <td>+1000</td>
+                  <td>+1000</td>
+                  <td>0.00</td>
+                  <td class="first_td changeReason">每日签到</td>
+                </tr>
+                <tr>
+                  <td class="first_td">2014-08-11</td>
+                  <td>+1000</td>
+                  <td>+1000</td>
+                  <td>0.00</td>
+                  <td class="first_td changeReason">每日签到</td>
+                </tr>
+                <tr>
+                  <td class="first_td">2014-08-11</td>
+                  <td>+1000</td>
+                  <td>+1000</td>
+                  <td>0.00</td>
+                  <td class="first_td changeReason">每日签到</td>
+                </tr>
+              </table>
+            </div>
+            <div class="_page_">&nbsp;分页</div>
+        </div><!-- 我的积分结束 -->
         <!-- 个人资料 -->
         <div class="right_div"  id="tab-3-1" style="display:none;" >
           <p>我的资料</p>
