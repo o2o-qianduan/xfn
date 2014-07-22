@@ -36,16 +36,4 @@ $(function(){
 	});
 })
 
-$(function(){
-	var alen=$(".per_center ul li").length;
-	$('.per_center ul li a').click(function(){
-	var href=$(this).attr("href").toString();
-	for(var i=0;i<alen;i++){
-		var a_=$(".per_center ul li a").eq(i);
-		var a_text=$(a_).attr("href").toString()
-		if(a_text!=href)
-			$(a_text).css("display","none");//非当前点击对象则隐藏
-	}
-	$(href).css("display","block");     //为当前点击对象则展示
-	}) 
-})
+

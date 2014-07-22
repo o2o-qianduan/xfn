@@ -31,7 +31,9 @@ visibility: hidden;
 }
 * html .clearfix {height: 1%;}
 *+html .clearfix { min-height:1%; }/* ie7 hack*/ 
-
+.no-mainpage{
+	display: none;
+}
 /***************全局设置部分结束*******june*******************/
 
 
