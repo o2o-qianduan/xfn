@@ -34,24 +34,18 @@ $(function(){
 								   .attr("disabled","disabled");
 		$(this).css("background-color","#B8B8B8");
 	});
+})
 
-	//点击左边显示右边信息
-	$(".current_list ul li a").click(function(){
-		var $a_text = $(this).text();
-		var len = $(".per_center>div").length;
-	 	if($a_text == '我的尚田'){
-	 		$('#tab-0-1').css("display","block");
-	 	}else{
-	 		$('#tab-0-1').css("display","none");
-	 	}
-		for( var i = 0 ; i < len; i++){
-			var $p = $(".right_div>p").eq(i);
-			var $p_text = $p.text();
-			if($a_text == $p_text){
-				$p.parent().css("display","block");
-			}else{
-				$p.parent().css("display","none");
-			}
-		}			
-	});
+$(function(){
+	var alen=$(".per_center ul li").length;
+	$('.per_center ul li a').click(function(){
+	var href=$(this).attr("href").toString();
+	for(var i=0;i<alen;i++){
+		var a_=$(".per_center ul li a").eq(i);
+		var a_text=$(a_).attr("href").toString()
+		if(a_text!=href)
+			$(a_text).css("display","none");//非当前点击对象则隐藏
+	}
+	$(href).css("display","block");     //为当前点击对象则展示
+	}) 
 })

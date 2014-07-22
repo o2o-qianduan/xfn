@@ -6,10 +6,10 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=9,IE=10">
   <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+  <script type="text/javascript" src="js/change.js"></script>
   <link rel="stylesheet" href="css/jquery-ui.css">
   <link rel="stylesheet" type="text/css" href="css/manhuaDate.1.0.css">
   <link rel="stylesheet" href="css/style.css">  
-  <script type="text/javascript" src="js/change.js"></script>
  <!--[if IE]>
 <style type="text/css">?
 
@@ -23,18 +23,6 @@
 }
 </style>
 <![endif]-->
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=9,IE=10">
-  <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
-  <link rel="stylesheet" href="css/jquery-ui.css">
-  <script src="js/jquery-1.8.2.js"></script>
-  <script src="js/jquery-ui.js"></script>
-  <link rel="stylesheet" href="css/style.css"> 
-  <script type="text/javascript" src="js/myJs.js"></script>
-  <script type="text/javascript" src="js/picture.js"></script>
-  <script type="text/javascript" src="js/yao.js"></script>
-  <link rel="stylesheet" type="text/css" href="css/layout.css" />
-    <link rel="stylesheet" type="text/css" href="css/product.css" />
   <script src="js/jquery-1.8.2.js"></script>
   <script src="js/jquery-ui.js"></script>
   <script type="text/javascript" src="js/myJs.js"></script>
@@ -44,13 +32,7 @@
   <script language="javascript" type="text/javascript" src="js/yao.js"></script>
   <script type="text/javascript" src="js/member.js"></script>
   <script type="text/javascript" src="js/manhuaDate.1.0.js"></script>
-<script type="text/javascript">
-YAO.YTabs({
-    tabs: YAO.getElByClassName('YM-Tab', 'li', 'YMenu-side'),
-    contents: YAO.getElByClassName('YM-submnu', 'ul', 'YMenu-side'),
-    hideAll: true
-  });
-</script>
+
   <script type="text/javascript">
   $(function (){
    $("input.mh_date").manhuaDate({                
@@ -304,11 +286,10 @@ YAO.YTabs({
             <h4><img src="images/boult3.png">&nbsp;我的尚田</h4>
             <div class="current_list">
               <ul>
-                <li><a href="">我的尚田</a></li>          
+                <li><a href="#tab-0-1">我的尚田</a></li>          
               </ul>
             </div>
           </div>
-
           <div class="current">
             <h4><img src="images/boult3.png">&nbsp;订单管理</h4>
             <div class="current_list">
@@ -318,7 +299,6 @@ YAO.YTabs({
               </ul>
             </div>
           </div>
-
           <div class="current">
             <h4><img src="images/boult3.png">&nbsp;账户中心</h4>
             <div class="current_list">
@@ -331,7 +311,6 @@ YAO.YTabs({
               </ul>
             </div>
           </div>
-
           <div class="current">
             <h4><img src="images/boult3.png">&nbsp;个人信息</h4>
             <div class="current_list">
@@ -343,41 +322,7 @@ YAO.YTabs({
             </div>
           </div>
         </div>
-        <div class="right_div"  style="display:none;">
-          <p>新手教程</p>
-          <span class="right_div_underline"></span>
-          <div class="right_inner_text">
-            <h3>一、积分种类</h3>
-            <p>沱沱工社账户积分分为消费积分和行为积分两种：</p>
-             <p>1、消费积分：通过在沱沱工社网站上购物消费，获得的积分为消费积分。</p>
-             <p>2、行为积分：通过在沱沱工社网站购物后，对所购买的商品进行评论，晒单；或参加相关活动所赠送积分。</p>
-             <p>&nbsp;</p>
-            <h3>二、积分的获取和使用</h3>
-            <p>1、如何获得消费积分</p>
-             <p>1）当您订单完成交易后，相应的消费金额（不包含运费）会成为您的消费积分，在会员的个人中心/我的积分查询相应消费积分。</p>
-             <p>2）人民币1元积1分，积分如计算后出现小数点，将自动取用整数，不满1元的部分将不赠送消费积分。</p>
-             <p>3）购买礼品卡、宅配卡、提货券、采摘券消费金额不计入消费积分。</p>
-            <p>2、如何获得积分</p>
-             <p>1）评论积分：当您成功发表1条商品评论，即赠送10分评论积分。</p>
-             <p>A）所有评价一律由系统自动赠送积分。只能对在180天内购买的商品进行评价，赠品可参与评价并赠送积分。</p>
-             <p>B）根据订单购买商品进行评论，同此购买不同商品分别评论时，分别奖励积分；同张订单购买多个，只能评论一次。</p>
-             <p>2、晒单积分（即将上线）：通过晒单贴向其他网友分享所购商品的购物经历、使用心得、真是照片等，通过审核后可获得50个积分奖励；晒单贴须包含一定的介绍文字及三张以上真实拍摄的原创商品照片；一件商品购买多个只能发表一个晒单贴。</p>
-             <p>3）推荐好友积分：推荐好友成功注册后，且好友完成了第一个有效订单，7个工作日内推荐者即可获赠奖励100积分</p>
 
-             <p>&nbsp;</p>
-            <h3>三、积分使用规则</h3>
-             <p>1）消费积分和评论积分均不得进行任何转让，不同账户积分不可合并使用。</p>
-             <p>2）消费积分和评论积分不能抵运费，不能直接兑换现金。</p>
-             <p>3）消费积分和评论积分可直接兑换沱沱公社优惠券；也可进入兑换平台兑换其他商家提供的各种优惠产品。</p>
-             <p>4）使用积分兑换的优惠券，请切记优惠券的有效期，并在有效期内使用；优惠券每张订单可使用1张，与其他优惠券不能同时使用，优惠券仅限本ID使用，也不能再次兑换积分。</p>
-             <p>5）消费积分和评论积分可参加直接兑换沱沱公社提供的商品。</p>
-             <p>6）您所兑换的商品部支持直接退货；积分商品如因质量问题当场拒收时（需整单拒收），会自动返还所消耗的兑换积分。</p>
-             <p>7）积分政策从2013年9月7日零点生效，会员账户之前的积分也将迁入新的积分账户。</p>
-             <p>8）沱沱公社对积分使用有最终解释权。</p>
-              <p>&nbsp;</p>
-               <p>&nbsp;</p>
-          </div>
-        </div>
         <!-- 签到记录 -->
         <div class="right_div" id="tab-2-1" style="display:none;">
           <p>签到记录</p>
@@ -406,12 +351,11 @@ YAO.YTabs({
               </tr>
             </table>
           </div>
-        </div>
+        </div><!-- 我的签到结束 -->
         <!-- 我的积分 -->
-        <div class="right_div"  style="display:none;">
+        <div class="right_div"  id="tab-2-2" style="display:none;">
           <p>我的积分</p>
           <span class="right_div_underline"></span>
-
             <div class="right_div_up">
               <div class="my_integral">
                 <div class="recent_inte">您当前的积分是：<span>225</span></div>
@@ -460,18 +404,18 @@ YAO.YTabs({
               </table>
             </div>
             <div class="_page_">&nbsp;分页</div>
-        </div>
+        </div><!-- 我的签到结束 -->
         <!-- 我的评价 -->
-         <div class="right_div" id="tab-1-2" style="display:none;">
-          <div class="SmenuTitle clearfix">
+         <div class="right_div" id="tab-1-2" style="display:none">
+            <div class="SmenuTitle clearfix">
             <ul id="assess_nav">
                 <li class="selected_li SmenuTitleOn10"><a href="javascript:void(0)">未评价</a></li>
                 <li><a href="javascript:void(0)">已评价</a></li>
             </ul>
-          </div>
-          <div class="SmenuContent clearfix" id="assess_content">
-            <div class="SmenuConnt SmenuContentOn10" >
-              <div class="right_div_table">
+            </div>
+           <div class="SmenuContent clearfix" id="assess_content">
+          <div class="SmenuConnt SmenuContentOn10" >
+            <div class="right_div_table">
               <table class="tb_th">
                 <tr>
                   <th style="width:220px;">购买时间</th>
@@ -572,9 +516,9 @@ YAO.YTabs({
                 </tr>
               </table>
             </div>
-            </div>
-            <div class="SmenuConnt" style="display:none">
-              <div class="right_div_table">
+          </div>
+          <div class="SmenuConnt" style="display:none">
+            <div class="right_div_table">
                 <table class="tb_th">
                   <tr>
                     <th style="width:220px;">购买时间</th>
@@ -623,14 +567,12 @@ YAO.YTabs({
             </div>
           </div>
           <div class="_page_">&nbsp;分页</div>
-        </div>
-
+         </div>
+         </div>
         <!-- 个人资料 -->
         <div class="right_div"  id="tab-3-1" style="display:none;" >
-
           <p>我的资料</p>
           <span class="right_div_underline"></span>
-
           <div class="member_div">
             <div id="info1" class="every_line_height">
               <label for="nick_name">昵称：</label>
@@ -653,8 +595,6 @@ YAO.YTabs({
               <a id="binding_email" href="#Email_info">绑定邮箱</a>
             </div>
             <button class="btn_info" id="save_myinfo">保存</button>
-          
-
             <div class="mobile_info" style="display:none;"> <!-- 绑定手机号 -->
              <div id="mobilephone_num" class="every_line_height">
                 <label for="phoneNum">手机号：</label>
@@ -667,7 +607,6 @@ YAO.YTabs({
               </div>
               <button class="btn_info" id="confirm_info">确定</button>
             </div>
-
             <div class="Email_info" style="display:none;">  <!-- 绑定电子邮件 -->
               <div id="email_detail" class="every_line_height">
                <label for="emailInfo">电子邮件：</label>
@@ -677,7 +616,6 @@ YAO.YTabs({
             </div>
           </div>
         </div>
-
         <!-- 修改地址 -->
         <div class="right_div"  id="tab-3-2" style="display:none;">
           <p>修改地址</p>
@@ -720,7 +658,6 @@ YAO.YTabs({
             <button class="btn_info" id="addressBtnSave">保存</button>
           </div>
         </div>
-
         <!-- 密码管理 -->
         <div class="right_div"  id="tab-3-3" style="display:none;">
           <p>密码管理</p>
@@ -741,7 +678,6 @@ YAO.YTabs({
             <button class="btn_info" id="savePassword">保存</button>
           </div>
         </div>
-
         <!-- 激活礼品卡 -->
         <div class="right_div"  id="tab-2-4" style="display:none;">
           <p>激活礼品卡</p>
@@ -761,11 +697,9 @@ YAO.YTabs({
             <button class="btn_info" id="activiteBtn">激活</button>
           </div>
         </div>
-
         <!-- 激活优惠券 -->
         <div class="right_div" id="tab-2-3" style="display:none;">
           <p>激活优惠券</p>
-
           <span class="right_div_underline"></span>
           <div class="member_div">
             <div id="discount1" class="every_line_height">
@@ -781,7 +715,6 @@ YAO.YTabs({
             <button class="btn_info" id="activiteBtn">激活</button>
           </div>
         </div>
-
         <!-- 推荐人会员号 -->
         <div class="right_div" id="tab-2-5" style="display:none;">
           <p>推荐人会员号</p>
@@ -795,11 +728,10 @@ YAO.YTabs({
             <button class="btn_info" id="commitBtn">提交</button>
           </div>
         </div>
-
         <!-- 我的尚田 -->
-        <div class="right_div"  id="tab-0-1" style="display:none;">
+        <div class="right_div" id="tab-0-1" style="display:none;">
           <div class="myDetailInfo">
-            <img src="images/mem1.png" />
+            <img src="images/mem1.png">
             <div id="myDetail">
               <div id="myDetail1">
                 <label>欢迎您，<span>fhioldjos@163.com</span></label>
@@ -817,8 +749,7 @@ YAO.YTabs({
                 <span> 验证可获得50积分</span>
               </div>
             </div>
-           </div>  <!-- myDetailInfo结束 -->
-
+          </div>  <!-- myDetailInfo结束 -->
            <div class="all_info">
              <div id="all_info1">
                <p>
@@ -861,7 +792,6 @@ YAO.YTabs({
                 </p>
              </div>  <!-- all_info2结束 -->
            </div>  <!-- all_info结束 -->
-
             <div class="earn_points" >
               <div id="point_tit">
                 <p>赚积分</p>
@@ -907,12 +837,10 @@ YAO.YTabs({
                    <p>商品评论<span> +100</span></p>
                 </div>
               </div>  <!-- earnPointWay结束 -->
-            </div>   <!-- earn_points结束 --> 
+            </div>   <!-- earn_points结束 -->  -->
         </div>   <!-- 我的尚田结束 -->
-     </div>
-  <!-- 会员页面    冰、升 -->
-</div>
-<!-- 内容区域结束 -->
+      </div>   
+      </div><!-- 内容区域结束 -->
 <!-- 页脚部分 -->
 <div id="footer">
   <div class="cwidth h-center teleg">

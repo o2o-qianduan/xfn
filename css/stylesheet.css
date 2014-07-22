@@ -7,7 +7,7 @@ html{
 ul,li{list-style:none;}
 body {
 	color: #333;
-	font-family:'微软雅黑';
+	font-family:"微软雅黑"，serif,"宋体";
 	margin: 0px;
 	padding: 0px;
 }
@@ -269,12 +269,14 @@ li {list-style-type: none;}
 }
 
 .border{
-    height: 20px;
+     float: left;
+    height: 30px;
     left: 113px;
     overflow: hidden;
     position: relative;
-    float: left;
-    top: 10px;/**/
+    top: 8px;
+    width: 1px;
+    margin-left: -1px;
 }
 
 .navitem li:hover{
@@ -829,11 +831,10 @@ ul, li {
 /********************页脚部分结束********june**********************************************/
 
 
-/***************会员页面整理***********bing\sheng***************/
+/***************会员页面整理**************************/
 .breadcrumb{
 	height: 40px;
-	border-bottom: 1px solid #DADADA;
-	
+	border-bottom: 1px solid #DADADA;	
 }
 .breadcrumb img{
 	float: left;
@@ -843,13 +844,16 @@ ul, li {
 .breadcrumb a{
 	line-height: 40px;
 	color: #666;
-	font-family: "新宋体" "MicroSoft YeHei";
+	font-family: "新宋体","MicroSoft YeHei";
 	font-size: 12px;
 	text-decoration: none;
 }
-
 .breadcrumb a:hover{
 	color: red;
+}
+.center_course{
+	display: block;
+	position: relative;
 }
 /*签到记录*/
 .right_div .right_div_up{
@@ -1052,6 +1056,7 @@ ul, li {
 	background-color: #FAFAFA;
 	margin:20px 0 0 10px;
 	float: left;
+	position: relative;
 }
 .per_center h2{
 	text-align: center;
