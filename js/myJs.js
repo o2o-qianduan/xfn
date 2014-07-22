@@ -1,6 +1,14 @@
+ $(function(){
+  YAO.YTabs({
+         tabs: YAO.getElByClassName('YM-Tab', 'li', 'YMenu-side'),
+         contents: YAO.getElByClassName('YM-submnu', 'ul', 'YMenu-side'),
+         hideAll: true
+     });  
+}) 
  $(function() {
      $("#tabs").tabs();
  })
+
  /*****新品推荐、特惠专区、新鲜蔬菜部分 *************june**---start*/
  var tabOptionIndex1 = 0;
  $(function() {
@@ -9,7 +17,6 @@
          tabOptionHover1(tabOptionIndex1);
      });
  });
-
  function tabOptionHover1(tabOptionIndex) {
      for (var i = 0; i < 2; i++) {
          $(".tabOption").removeClass('tabOn' + i);
@@ -31,13 +38,7 @@
 
 
  /*首页"全部产品分类"部分在首页时其菜单固定显示，在其它页面时鼠标一移过才显示***june*******start******/
-
- $(function() {
-     YAO.YTabs({
-         tabs: YAO.getElByClassName('YM-Tab', 'li', 'YMenu-side'),
-         contents: YAO.getElByClassName('YM-submnu', 'ul', 'YMenu-side'),
-         hideAll: true
-     });
+ $(function() {  
      $(".all_classify").mouseover(function() {
          $(".no-mainpage").css({
              "display": "block",
@@ -56,7 +57,7 @@
      } else {
          $('.no-mainpage').show();
      }
- });
+ })
  /*******************首页"全部产品分类"部分**************************june*******end********/
  /*****超值抢购、本季热卖、本周推荐、新品上市、限时抢购 *************june**---start*/
  var tabOptionIndex2 = 0;
@@ -322,7 +323,6 @@
 
  /*******************结算页面1****龚颖*************end*****/
 
-
  /********首页购物车加减***************************june*/
 
  /*$(function(){
@@ -381,10 +381,8 @@ $(this).attr("value","0");
      $(".proOption span").mouseover(function() {
          tabOptionIndex5 = $(".proOption span").index(this);
          tabOptionHover5(tabOptionIndex5);
-
      });
  });
-
  function tabOptionHover5(tabOptionIndex) {
      for (var i = 0; i < 3; i++) {
          $(".proOption").removeClass('proOn' + i);
@@ -631,7 +629,6 @@ $(this).attr("value","0");
 
      });
  })
-
  /*************资讯列表页“排行榜、问答”切换*****june*************start******/
  var tabOptionIndex6 = 0;
  $(function() {
@@ -639,8 +636,7 @@ $(this).attr("value","0");
          tabOptionIndex6 = $(".rankOption span").index(this);
          tabOptionHover6(tabOptionIndex6);
      });
- });
-
+ })
  function tabOptionHover6(tabOptionIndex) {
      for (var i = 0; i < 2; i++) {
          $(".rankOption").removeClass('rankOn' + i);
