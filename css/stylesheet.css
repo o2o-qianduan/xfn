@@ -2328,6 +2328,57 @@ box-shadow: 2px 2px 5px #C0BBB5;
  .pro_course{
 	float: left;
 } 
+
+/*产品列表页底部图片切换****bing****start*****/
+.pro_bottom_pic0{
+	margin-top: 10px;
+}
+.pro_bottom_pic0 p {
+	font-size: 14px;
+	font-family: "新宋体";
+	line-height: 33px;
+	font-weight: 600;
+	border-bottom: 2px solid #CECECE;
+}
+.pro_bottom_pic01{
+	margin: 35px 10px;
+	position: relative;
+}
+.pro_bottom_pic01 .ctrl2{
+	position: absolute;
+	cursor: pointer;
+	width: 51px;
+	height: 51px;
+	top: 65px;
+}
+.pro_bottom_pic01 #bot_prev{
+	background: url(../images/proPrev.png) no-repeat;
+	left: 0;
+}
+
+.pro_bottom_pic01 #bot_Next{
+	background: url(../images/proNext.png) no-repeat;
+	right: 0;
+}
+
+.proBot_slide0{
+	position: relative;
+	width: 1050px;
+	height: 180px;
+	overflow: hidden;
+	margin: 0 4px;
+	left: 51px;
+}
+.proBot_slide0 .proBot_slide01{
+	width: 3000px;
+	height: 180px;
+	position: absolute;
+}
+.proBot_slide0 li{
+	float: left;
+	margin: 0 15px;
+}
+/*产品列表页底部图片切换****bing****end****/
  /*********产品列表页样式*******june******end**************/
 
 /******资讯页面样式******bing******start*******/
