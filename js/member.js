@@ -1,3 +1,6 @@
+
+
+// 会员页效果***bing***start***
 $(function(){
 
 	// 绑定手机
@@ -34,6 +37,20 @@ $(function(){
 								   .attr("disabled","disabled");
 		$(this).css("background-color","#B8B8B8");
 	});
+
+	// 评价弹出框***bing***begin***
+ $(".reply_btn").live('click',function(){
+        $.XYTipsWindow({
+        ___title:"回复",
+        ___content:"iframe:answer.html",
+        ___width:"460",
+        ___height:"200",
+        ___showbg:true,
+        ___drag:"__boxTitle"
+
+        })
+    });
+// 评价弹出框***bing***end***
 })
 
 

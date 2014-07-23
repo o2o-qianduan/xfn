@@ -732,3 +732,18 @@ $(this).attr("value","0");
  placeHolder(document.getElementById("pwd"), true)
  placeHolder(document.getElementById("ass_area"), true)
  /*************输入框默认显示文字***********eles****************end**************************/
+
+
+// 评价弹出框***bing***begin***
+ $(".reply_btn").live('click',function(){
+        $.XYTipsWindow({
+        ___title:"回复",
+        ___content:"iframe:answer.html",
+        ___width:"780",
+        ___height:"260",
+        ___showbg:true,
+        ___drag:"__boxTitle"
+
+        })
+    });
+// 评价弹出框***bing***end***
