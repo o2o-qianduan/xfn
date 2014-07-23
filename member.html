@@ -6,6 +6,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=9,IE=10">
   <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+  <script type="text/javascript" src="js/change.js"></script>
   <link rel="stylesheet" href="css/jquery-ui.css">
   <link rel="stylesheet" type="text/css" href="css/manhuaDate.1.0.css">
   <link rel="stylesheet" href="css/style.css"> 
@@ -31,20 +32,37 @@
 }
 </style>
 <![endif]-->
-  
+
+
   <script type="text/javascript">
-  $(function (){
-   $("input.mh_date").manhuaDate({                
-     Event : "click",//可选               
-     Left : 0,//弹出时间停靠的左边位置
-     Top : -16,//弹出时间停靠的顶部边位置
-     fuhao : "-",//日期连接符默认为-
-     isTime : false,//是否开启时间值默认为false
-     beginY : 1949,//年份的开始默认为1949
-     endY :2015//年份的结束默认为2049
-   }); 
-});
-</script>
+    $(function (){
+     $("input.mh_date").manhuaDate({                
+       Event : "click",//可选               
+       Left : 0,//弹出时间停靠的左边位置
+       Top : -16,//弹出时间停靠的顶部边位置
+       fuhao : "-",//日期连接符默认为-
+       isTime : false,//是否开启时间值默认为false
+       beginY : 1949,//年份的开始默认为1949
+       endY :2015//年份的结束默认为2049
+    }); 
+  });
+  </script>
+
+  <style>
+    .my_tooltip{               /*弹窗样式*/
+       font-size: 12px;
+       color: #666;
+       font-family: "宋体";
+       border: 1px solid #e1e1e1;
+       box-shadow: none;
+       -webkit-box-shadow: none;
+       border-width: 1px;
+    }
+    .my_tooltip li{
+       line-height: 20px;
+       word-break: break-all;
+    } 
+   </style>
 </head>
 <body>
 <!-- 整个容器 -->
@@ -353,7 +371,7 @@
                 <td class="myorder_time">2014-07-14<br>12:25:13</td>
                 <td class="myorder_state">
                   <div>正在出库</div>
-                  <a href="javascript:void(0)">跟踪包裹<span style="margin-left: 2px;background: url(images/icondown.png) ;">&nbsp&nbsp;</span></a>
+                  <a href="javascript:void(0)" title="">跟踪包裹<span style="margin-left: 2px;background: url(images/icondown.png) ;">&nbsp&nbsp;</span></a>
                 </td>
                 <td style="width:115px;" class="myorder_op">
                   <div><a href="javascript:void(0)">查看</a></div>
@@ -361,6 +379,121 @@
                 </td>
               </tr>
             </table>
+            <table class="myorder">
+              <caption>订单编号：<span id="ordernum">2034323434</span></caption>
+              <tr>
+                <td class="order_goods">
+                  <div style="margin: 10px;">
+                    <img src="images/icon55_.png"/>
+                    <img src="images/icon55_.png"/>
+                    <img src="images/icon55_.png"/>
+                  </div>
+                </td>
+                <td class="myorder_total">
+                  <div>￥207.00</div>
+                  在线支付
+                </td>
+                <td class="myorder_receiver">刘先生</td>
+                <td class="myorder_time">2014-07-14<br>12:25:13</td>
+                <td class="myorder_state">
+                  <div>正在出库</div>
+                  <a href="javascript:void(0)" title="">跟踪包裹<span style="margin-left: 2px;background: url(images/icondown.png) ;">&nbsp&nbsp;</span></a>
+                </td>
+                <td style="width:115px;" class="myorder_op">
+                  <div><a href="javascript:void(0)">查看</a></div>
+                  <a href="javascript:void(0)">取消订单</a>
+                </td>
+              </tr>
+            </table>
+            <table class="myorder">
+              <caption>订单编号：<span id="ordernum">2034323434</span></caption>
+              <tr>
+                <td class="order_goods">
+                  <div style="margin: 10px;">
+                    <img src="images/icon55_.png"/>
+                    <img src="images/icon55_.png"/>
+                    <img src="images/icon55_.png"/>
+                  </div>
+                </td>
+                <td class="myorder_total">
+                  <div>￥207.00</div>
+                  在线支付
+                </td>
+                <td class="myorder_receiver">刘先生</td>
+                <td class="myorder_time">2014-07-14<br>12:25:13</td>
+                <td class="myorder_state">
+                  <div>正在出库</div>
+                  <a href="javascript:void(0)" title="">跟踪包裹<span style="margin-left: 2px;background: url(images/icondown.png) ;">&nbsp&nbsp;</span></a>
+                </td>
+                <td style="width:115px;" class="myorder_op">
+                  <div><a href="javascript:void(0)">查看</a></div>
+                  <a href="javascript:void(0)">取消订单</a>
+                </td>
+              </tr>
+            </table>
+            <table class="myorder">
+              <caption>订单编号：<span id="ordernum">2034323434</span></caption>
+              <tr>
+                <td class="order_goods">
+                  <div style="margin: 10px;">
+                    <img src="images/icon55_.png"/>
+                    <img src="images/icon55_.png"/>
+                    <img src="images/icon55_.png"/>
+                  </div>
+                </td>
+                <td class="myorder_total">
+                  <div>￥207.00</div>
+                  在线支付
+                </td>
+                <td class="myorder_receiver">刘先生</td>
+                <td class="myorder_time">2014-07-14<br>12:25:13</td>
+                <td class="myorder_state">
+                  <div>正在出库</div>
+                  <a href="javascript:void(0)" title="">跟踪包裹<span style="margin-left: 2px;background: url(images/icondown.png) ;">&nbsp&nbsp;</span></a>
+                </td>
+                <td style="width:115px;" class="myorder_op">
+                  <div><a href="javascript:void(0)">查看</a></div>
+                  <a href="javascript:void(0)">取消订单</a>
+                </td>
+              </tr>
+            </table>
+            <table class="myorder">
+              <caption>订单编号：<span id="ordernum">2034323434</span></caption>
+              <tr>
+                <td class="order_goods">
+                  <div style="margin: 10px;">
+                    <img src="images/icon55_.png"/>
+                    <img src="images/icon55_.png"/>
+                    <img src="images/icon55_.png"/>
+                  </div>
+                </td>
+                <td class="myorder_total">
+                  <div>￥207.00</div>
+                  在线支付
+                </td>
+                <td class="myorder_receiver">刘先生</td>
+                <td class="myorder_time">2014-07-14<br>12:25:13</td>
+                <td class="myorder_state">
+                  <div>正在出库</div>
+                  <a href="javascript:void(0)" title="">跟踪包裹<span style="margin-left: 2px;background: url(images/icondown.png) ;">&nbsp&nbsp;</span></a>
+                </td>
+                <td style="width:115px;" class="myorder_op">
+                  <div><a href="javascript:void(0)">查看</a></div>
+                  <a href="javascript:void(0)">取消订单</a>
+                </td>
+              </tr>
+            </table>
+            <div class="_page_">
+              <ul>
+                <li class="up_page"><a><img src="images/PgUp.png">上一页</a></li>
+                <li><a>1</a></li>
+                <li class="current_page"><a>2</a></li>
+                <li><a>3</a></li>
+                <li><a>4</a></li>
+                <li><a>5</a></li>
+                <li class="down_page"><a>下一页<img src="images/PgDn.png"></a></li>
+              </ul>
+            </div>
           </div>
         </div><!-- 我的订单结束 -->
         <!-- 商品评价 -->
@@ -524,7 +657,17 @@
                 </table>
             </div>
           </div>
-          <div class="_page_">&nbsp;分页</div>
+          <div class="_page_">
+              <ul>
+                <li class="up_page"><a><img src="images/PgUp.png">上一页</a></li>
+                <li><a>1</a></li>
+                <li class="current_page"><a>2</a></li>
+                <li><a>3</a></li>
+                <li><a>4</a></li>
+                <li><a>5</a></li>
+                <li class="down_page"><a>下一页<img src="images/PgDn.png"></a></li>
+              </ul>
+            </div>
          </div>
          </div><!-- 商品评价结束 -->
         <!-- 签到记录 -->
@@ -607,7 +750,17 @@
                 </tr>
               </table>
             </div>
-            <div class="_page_">&nbsp;分页</div>
+            <div class="_page_">
+              <ul>
+                <li class="up_page"><a><img src="images/PgUp.png">上一页</a></li>
+                <li><a>1</a></li>
+                <li class="current_page"><a>2</a></li>
+                <li><a>3</a></li>
+                <li><a>4</a></li>
+                <li><a>5</a></li>
+                <li class="down_page"><a>下一页<img src="images/PgDn.png"></a></li>
+              </ul>
+            </div>
         </div><!-- 我的积分结束 -->
         <!-- 个人资料 -->
         <div class="right_div"  id="tab-3-1" style="display:none;" >

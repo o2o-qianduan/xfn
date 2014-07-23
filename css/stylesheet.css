@@ -1013,7 +1013,6 @@ ul, li {
 .right_div_table .myorder .myorder_op a:hover{
 	color: #f60;
 }
-
 /*我的积分*/
 .right_div .my_integral{
 	background: url(../images/myIntegral.png) no-repeat;
@@ -1114,13 +1113,6 @@ ul, li {
 	margin-top: -10px;
 	vertical-align: middle;
 
-
-}
-._page_{
-	width:295px;
-	height:30px;
-	border:1px solid #f60;
-	margin:30px auto;
 
 }
 /*个人中心*/
@@ -2762,3 +2754,38 @@ box-shadow: 2px 2px 5px #C0BBB5;
 	margin-left: 9px;
 }
 /*********咨询文章页***********************eles**end*******/
+/*分页样式*/
+._page_{
+	width:300px;
+	height:30px;
+	margin:30px auto;
+
+}
+._page_ ul li{
+	width: 28px;
+	height: 28px;
+	color: #717171;
+	font-size: 14px;
+	border: 1px solid #ccc;
+	text-align: center;
+	line-height: 28px;
+	margin-right: 2px;
+	float: left;
+	cursor: pointer;
+}
+._page_ .up_page,
+._page_ .down_page{
+	width: 65px;
+}
+._page_ .up_page img,
+._page_ .down_page img{
+	vertical-align: text-bottom;
+}
+._page_ .current_page{
+	border: 0;
+	color: #149d0e;
+	font-size: 15px;
+	font-family: "Arial";
+	font-weight: bold;
+	margin-top: 2px;
+}
