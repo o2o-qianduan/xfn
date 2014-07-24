@@ -283,11 +283,15 @@ li {list-style-type: none;}
 
 .navitem li:hover{
 	background-color:#77BE22;
+	z-index: 999;
+/*	border-right: 1px solid #77BE22;*/
+	width: 112px;
 }
 .navitem-first{
 	background-color:#77BE22;
+	width: 112px!important;
 }
-}
+
 /*中部商品分类，图片轮播，选项卡等*/
 #content{
 	width: 1180px;

@@ -656,8 +656,9 @@ $(this).attr("value","0");
              var a_text = $(a_).attr("href").toString()
              if (a_text != href)
                  $(a_text).css("display", "none"); //非当前点击对象则隐藏
-         }
-         $(href).css("display", "block"); //为当前点击对象则展示
+         } 
+      /*   $('body,html').animate({scrollTop:0},1000); */  
+          $(href).css("display", "block"); //为当前点击对象则展示 var hLen=$(href).offset().top;         
      })
  })
  /***个人中心页面根据左边菜单点击在右边区域显示相应的内容*****june*****end***/
