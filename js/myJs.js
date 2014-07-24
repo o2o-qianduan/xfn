@@ -48,7 +48,7 @@
          });
      })
  })
- $('.no-mainpage').live("mouseleave", function() {
+ $('.no-mainpage,.all_classify').live("mouseleave", function() {
      if ($('.no-mainpage').is(":visible")) {
          stc = setTimeout(function() {
              $(".no-mainpage").hide();
