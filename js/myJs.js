@@ -658,7 +658,17 @@ $(this).attr("value","0");
                  $(a_text).css("display", "none"); //非当前点击对象则隐藏
          } 
       /*   $('body,html').animate({scrollTop:0},1000); */  
-          $(href).css("display", "block"); //为当前点击对象则展示 var hLen=$(href).offset().top;         
+          //$(href).css("display", "block"); //为当前点击对象则展示 var hLen=$(href).offset().top;         
+          var page = href.substr(5,href.length);
+                $.ajax({
+                            url:'http://localhost/TShop/index.php/Admin/customers',
+                            dataType:'html',
+                            type:'get',
+                             data:'page='+page,
+                             success:function(html){
+                                $("#response").html(html);
+                            }
+                });
      })
  })
  /***个人中心页面根据左边菜单点击在右边区域显示相应的内容*****june*****end***/
