@@ -1,0 +1,189 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <title>BUI+bootstrap风格后台管理系统模板-www.daimajiayuan.com</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <link href="assets/css/dpl-min.css" rel="stylesheet" type="text/css" />
+  <link href="assets/css/bui-min.css" rel="stylesheet" type="text/css" />
+   <link href="assets/css/main-min.css" rel="stylesheet" type="text/css" />
+ </head>
+ <body>
+
+  <div class="header">
+    
+      <div class="dl-title">
+        <a href="http://www.builive.com" title="文档库地址" target="_blank"><!-- 仅仅为了提供文档的快速入口，项目中请删除链接 -->
+          <span class="lp-title-port">BUI</span><span class="dl-title-text">前端框架</span>
+        </a>
+      </div>
+
+    <div class="dl-log">欢迎您，<span class="dl-log-user">**.**@alibaba-inc.com</span><a href="###" title="退出系统" class="dl-log-quit">[退出]</a><a href="http://http://www.builive.com/" title="文档库" class="dl-log-quit">文档库</a>
+    </div>
+  </div>
+   <div class="content">
+    <div class="dl-main-nav">
+      <div class="dl-inform"><div class="dl-inform-title">贴心小秘书<s class="dl-inform-icon dl-up"></s></div></div>
+      <ul id="J_Nav"  class="nav-list ks-clear">
+        <li class="nav-item dl-selected"><div class="nav-item-inner nav-home">首页</div></li>
+        <!-- <li class="nav-item"><div class="nav-item-inner">管理首页</div></li> -->
+        <li class="nav-item"><div class="nav-item-inner">商品管理</div></li>
+        <li class="nav-item"><div class="nav-item-inner">订单管理</div></li>
+        <li class="nav-item"><div class="nav-item-inner">营销推广</div></li>
+        <li class="nav-item"><div class="nav-item-inner">统计报表</div></li>
+        <li class="nav-item"><div class="nav-item-inner">内容管理</div></li>
+        <li class="nav-item"><div class="nav-item-inner">网站配置</div></li>
+        <li class="nav-item"><div class="nav-item-inner">系统管理</div></li>
+      </ul>
+    </div>
+    <ul id="J_NavContent" class="dl-tab-conten">
+
+    </ul>
+   </div>
+  <script type="text/javascript" src="assets/js/jquery-1.8.1.min.js"></script>
+  <script type="text/javascript" src="./assets/js/bui.js"></script>
+  <script type="text/javascript" src="./assets/js/config.js"></script>
+
+  <script>
+    BUI.use('common/main',function(){
+      var config = [{
+          id:'menu', 
+          homePage : 'code',
+          menu:[{
+              text:'首页内容',
+              items:[
+                {id:'code',text:'首页代码',href:'main/code.html',closeable : false},
+                {id:'main-menu',text:'顶部导航',href:'main/menu.html'},
+                {id:'second-menu',text:'右边菜单',href:'main/second-menu.html'},
+                {id:'dyna-menu',text:'动态菜单',href:'main/dyna-menu.html'}
+              ]
+            },{
+              text:'页面操作',
+              items:[
+                {id:'operation',text:'页面常见操作',href:'main/operation.html'},
+                {id:'quick',text:'页面操作快捷方式',href:'main/quick.html'}  
+              ]
+            },{
+              text:'文件结构',
+              items:[
+                {id:'resource',text:'资源文件结构',href:'main/resource.html'},
+                {id:'loader',text:'引入JS方式',href:'main/loader.html'}  
+              ]
+            }]
+          },{
+            id:'goods_manage',
+            menu:[{
+                text:'商品管理',
+                items:[
+                  {id:'goodsList1',text:'商品列表',href:'form/code.html'},
+                  {id:'goodsList2',text:'下架商品列表',href:'form/example.html'},
+                  {id:'newgoods',text:'添加新商品',href:'form/introduce.html'},
+                  {id:'goodsSort',text:'商品分类',href:'form/basicValid.html'},
+                  {id:'userComment',text:'用户评论',href:'form/advalid.html'},
+                  {id:'goodsBrand',text:'商品品牌',href:'form/remote.html'},
+                  {id:'goodsType',text:'商品类型',href:'form/group.html'},
+                  {id:'goodsRecycle',text:'商品回收站',href:'form/depends.html'},
+                  {id:'picDispose',text:'图片批量处理',href:'form/basicValid.html'},
+                  {id:'goodsUploading',text:'商品批量上传',href:'form/advalid.html'},
+                  {id:'goodsExport',text:'商品批量导出',href:'form/remote.html'},
+                  {id:'goodsModify',text:'商品批量修改',href:'form/group.html'},
+                  {id:'userQueAns',text:'用户问答',href:'form/depends.html'}
+                ]
+              }]
+          },{
+            id:'indent_manage',
+            menu:[{
+                text:'订单管理',
+                items:[
+                  {id:'indentList',text:'订单列表',href:'search/code.html'},
+                  {id:'indentCheck',text:'订单查询',href:'search/example.html'},
+                  {id:'indentExport',text:'订单导出',href:'search/example-dialog.html'},
+                  {id:'mergeIndent',text:'合并订单',href:'search/introduce.html'}, 
+                  {id:'stockout',text:'缺货登记',href:'search/config.html'},
+                   {id:'addIndent',text:'添加订单',href:'search/example.html'},
+                  {id:'deliverList',text:'发货单列表',href:'search/example-dialog.html'},
+                  {id:'returnList',text:'系统退货单列表',href:'search/introduce.html'}, 
+                  {id:'userReturn',text:'用户退换货',href:'search/config.html'}
+                ]
+              }]
+          },{
+            id:'market_extend',
+            menu:[{
+                text:'营销推广',
+                items:[
+                  {id:'packetType',text:'红包类型',href:'detail/code.html'},
+                  {id:'groupActivity',text:'团购活动',href:'detail/example.html'},
+                  {id:'specialManage',text:'专题管理',href:'detail/code.html'},
+                  {id:'cheapActivity',text:'优惠活动',href:'detail/example.html'},
+                  {id:'integralGoods',text:'积分商城商品',href:'detail/code.html'},
+                  {id:'clubCard',text:'会员卡管理',href:'detail/example.html'},
+                  {id:'integralManage',text:'积分卡管理',href:'detail/introduce.html'},
+                  {id:'goodsSeckill',text:'商品秒杀',href:'detail/introduce.html'}
+                ]
+              }]
+          },{
+            id:'report_forms',
+            menu:[{
+                text:'统计报表',
+                items:[
+                  {id:'report1',text:'收藏排行',href:'detail/code.html'},
+                  {id:'report2',text:'咨询排行',href:'detail/example.html'},
+                  {id:'report3',text:'客户统计',href:'detail/introduce.html'},
+                  {id:'report4',text:'销售概况',href:'detail/code.html'},
+                  {id:'report5',text:'会员排行',href:'detail/example.html'},
+                  {id:'report6',text:'会员首次订单',href:'detail/code.html'},
+                  {id:'report7',text:'销售明细',href:'detail/example.html'},
+                  {id:'report8',text:'退换统计',href:'detail/code.html'},
+                  {id:'report9',text:'销售排行',href:'detail/example.html'},
+                  {id:'report10',text:'访问购买率',href:'detail/introduce.html'},
+                  {id:'reportreport11',text:'浏览排行',href:'detail/introduce.html'}
+                ]
+              }]
+          },{
+            id:'content_manage',
+            menu:[{
+                text:'广告管理',
+                items:[
+                  {id:'advertList',text:'广告列表',href:'detail/code.html'}
+                ]
+              },{
+                text:'文章管理',
+                items:[
+                  {id:'articleClassify',text:'文章分类',href:'detail/code.html'},
+                  {id:'articleList',text:'文章列表',href:'detail/example.html'},
+                  {id:'userHttp',text:'用户服务协议',href:'detail/introduce.html'}
+                ]
+              },{
+                text:'数据包下载管理',
+                items:[
+                  {id:'dataList',text:'数据包列表',href:'detail/code.html'},
+                  {id:'loadManage',text:'下载页面管理',href:'detail/example.html'}
+                ]
+              }]
+          },{
+            id:'web_deploy',
+            menu:[{
+                text:'网站配置',
+                items:[
+                  {id:'code',text:'详情页面代码',href:'detail/code.html'},
+                  {id:'example',text:'详情页面示例',href:'detail/example.html'},
+                  {id:'introduce',text:'详情页面简介',href:'detail/introduce.html'}
+                ]
+              }]
+          },{
+            id:'system_manage',
+            menu:[{
+                text:'权限管理',
+                items:[
+                  {id:'adminList',text:'管理员列表',href:'detail/code.html'},
+                  {id:'adminLog',text:'管理员日志',href:'detail/example.html'},
+                  {id:'roleManage',text:'角色管理',href:'detail/introduce.html'}
+                ]
+              }]
+          }];
+      new PageUtil.MainPage({
+        modulesConfig : config
+      });
+    });
+  </script>
+ </body>
+</html>
