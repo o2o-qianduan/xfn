@@ -626,7 +626,6 @@ $(this).attr("value","0");
          var $dips = $parent.find('.current_list');
          $dips.css("display", "block");
          $parent.find('img').attr("src", "images/boult3.png");
-
      });
  })
  /*************资讯列表页“排行榜、问答”切换*****june*************start******/

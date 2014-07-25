@@ -72,11 +72,11 @@ iframe {
 	padding: none;
 }
 .header, .dl-main-nav {
-	background: url('../img/main-nav-bg.png') repeat-x 0 0 #204077;
+	/*background: url('../img/main-nav-bg.png') repeat-x 0 0 #ffffff;*/
 }
 .header {
-	background-color: #1B3160;
-	height: 30px;
+	background-color: #ffffff;
+	height: 73px;
 	width: 100%;
 	overflow: hidden;
 }
@@ -92,7 +92,7 @@ iframe {
 	color: #c1d5ec;
 }
 .dl-log {
-	color: #C1D5EC;
+	 color: #009100;
 	float: right;
 	padding: 10px 16px 0 0;
 }
@@ -100,7 +100,7 @@ iframe {
 	font-style: bold;
 }
 .dl-log-quit {
-	color: #c1d5ec;
+	color: #666666;
 	padding-left: 8px;
 }
 .content {
@@ -218,7 +218,7 @@ iframe {
 	border-radius: 2px 2px 0 0;
 	border: 1px solid #FFF;
 	background-color: #E8E9EE;
-	color: #43478e;
+	color: #007500;
 	font-weight: bold;
 	height: 30px;
 }
@@ -446,3 +446,19 @@ iframe {
 .dl-inner-tab .tab-content-container {
 	background-color: #fff;
 }
+/********header导航栏部分logo修改********************june*************start***/
+.header .logo{
+	float: left;
+    margin-left: 6px;
+    position: relative;
+    top: -4px;
+    width: 193px;
+} 
+.header{
+	background: #ffffff;
+	height: 73px;
+}
+.dl-main-nav {
+	background: #00873b;
+}
+/********header导航栏部分logo修改********************june*************end**/
