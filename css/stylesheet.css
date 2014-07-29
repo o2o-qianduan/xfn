@@ -1140,7 +1140,7 @@ ul, li {
 	/*text-shadow:1px 1px 1px #73C05C;*/
 	background: url(../images/layer1.png) no-repeat -8px -3px;
 }
-.current h4{
+ .center_course .current h4{
 	cursor: pointer;
 	font-family: "新宋体", "MicroSoft YeHei";
 	font-size: 14px;
@@ -1149,7 +1149,7 @@ ul, li {
 	color: #333333;
 	background: url(../images/layer.png) no-repeat scroll -8px -3px;
 }
-.current ul li{
+.center_course .current ul li{
 	line-height: 35px;
 	/*background: url(../images/triangle.png) no-repeat scroll 12px 16px transparent;*/
 	padding-left: 26px;
@@ -1158,13 +1158,13 @@ ul, li {
 
 }
 
-.current ul li a{
+.center_course .current ul li a{
 	font-size: 12px;
 	color: #333;
 	font-family: "新宋体","MicroSoft YeHei";
 	text-decoration: none;
 }
-.current ul li a:hover{
+.center_course .current ul li a:hover{
 	color: red;
 }
 
@@ -2792,4 +2792,46 @@ box-shadow: 2px 2px 5px #C0BBB5;
 	font-family: "Arial";
 	font-weight: bold;
 	margin-top: 2px;
+}
+/*************产品列表页*****左边栏样式***********************************/
+.list_left_list{
+	background: #fff;
+	border: 0;
+}
+.pro_course .current2 h4{
+	cursor: pointer;
+	font-family: "新宋体", "MicroSoft YeHei";
+	font-size: 14px;
+	line-height: 33px;
+	padding-left: 15px;
+	color: #333333;
+	background: url(../images/listdown.png);
+	/*background-size: 100%;*/
+	border-bottom: 1px solid #e4e4e4;
+	
+}
+.pro_course .current_list{
+	background: #f0fae3;
+	width: 183px;
+	position: relative;
+}
+.pro_course .current2 ul li{
+	line-height: 25px;
+	/*background: url(../images/triangle.png) no-repeat scroll 12px 16px transparent;*/
+	/*padding-left: 10px;*/
+	height: 25px;
+	width: 50%;
+	text-align: left;
+	float: left;
+	background: #f0fae3;
+}
+
+.pro_course .current2 ul li a{
+	font-size: 12px;
+	color: #333;
+	font-family: "新宋体","MicroSoft YeHei";
+	text-decoration: none;
+}
+.pro_course .current2 ul li a:hover{
+	color: red;
 }

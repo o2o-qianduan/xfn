@@ -614,7 +614,7 @@ $(this).attr("value","0");
      account();
  })
  /*************************************************************************************************/
- // 收缩
+ // 收缩--个人中心
  $(function() {
      $('.current').find('h4').toggle(function() {
          var $parent = $(this).parents('.current');
@@ -626,6 +626,20 @@ $(this).attr("value","0");
          var $dips = $parent.find('.current_list');
          $dips.css("display", "block");
          $parent.find('img').attr("src", "images/boult3.png");
+     });
+ })
+ // 收缩--产品列表
+ $(function() {
+     $('.current2').find('h4').toggle(function() {
+         var $parent = $(this).parents('.current2');
+         var $dips = $parent.find('.current_list');
+         $dips.css("display", "none");
+         $parent.find('h4').css("background", "url(./images/listup.png)");
+     }, function() {
+         var $parent = $(this).parents('.current2');
+         var $dips = $parent.find('.current_list');
+         $dips.css("display", "block");
+         $parent.find('h4').css("background", "url(./images/listdown.png)");
      });
  })
  /*************资讯列表页“排行榜、问答”切换*****june*************start******/
