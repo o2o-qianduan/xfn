@@ -73,21 +73,7 @@
 *:before, *:after {
     box-sizing: border-box;
 }
-*:before, *:after {
-    box-sizing: border-box;
-}
-#content {
-    transition: width 0.4s ease 0s;
-}
-#content {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    transition: all 0.3s ease-in-out 0s;
-    white-space: nowrap;
-}
-* {
-    box-sizing: border-box;
-}
+
 .bui-menu {
     left: -250px;
     position: absolute;
@@ -97,3 +83,16 @@
     width: 250px;
     z-index: 999;
 }
+/*#J_NavContent{
+    width: 100%;
+    position: relative;
+ 
+}*/
+/*.dl-second-nav{
+     height: 100%;
+    position: fixed;
+    left: 0;
+    top: 90px;
+    bottom: 30px;
+    z-index: -1;
+}*/
