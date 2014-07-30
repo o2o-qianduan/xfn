@@ -32,9 +32,13 @@
 .bui-side-menu {
 	height: 100%;
 	text-align: left;
-	overflow-y: auto;
+	overflow-y: scroll;
 	overflow-x: hidden;
 	padding: 0 3px;
+/*	position: fixed;
+	bottom: 30px;
+	left: 0;
+	top: 0;*/
 }
 .bui-side-menu .bui-menu-title, .bui-side-menu .bui-menu-title s, .bui-side-menu .menu-leaf a, .bui-side-menu .menu-leaf em {
 	background: url("../img/menu-500-188.png") -9999px -9999px no-repeat;
@@ -795,6 +799,8 @@
 }
 .bui-grid, .bui-simple-grid {
 	background-color: #fff;
+	margin-bottom: 90px;
+    width: 1120px;
 }
 .bui-grid th.left, .bui-simple-grid th.left, .bui-grid td.left, .bui-simple-grid td.left {
 	text-align: left;

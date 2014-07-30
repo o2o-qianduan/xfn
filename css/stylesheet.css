@@ -1491,9 +1491,6 @@ ul, li {
 }
 
 /*******************会员页面整理结束*******************************/
-
-
-
 /*********layout************bing**********/
 
 #list_menu {
@@ -1515,8 +1512,9 @@ ul, li {
 
 .YM-Tab {
 	width: 198px;
+	border-bottom: 1px solid #F0F0F0;
 }
-.YM-Tab  a{
+.YM-Tab a{
 	font-size: 14px;
 	font-family: "宋体","新宋体", "MicroSoft Yehei ";
 	width: 90%;
@@ -1527,10 +1525,8 @@ ul, li {
 	text-align: left;
 	line-height: 30px;
 	height: 30px;
-	padding-left: 0px;
-	border-bottom: 1px solid #F0F0F0;
+	padding-left: 0px;	
 	text-decoration: none;
-
 }
 .YM-Tab  a:last{
 	border-bottom: 0;  /*没反应！！*/
@@ -1543,42 +1539,12 @@ ul, li {
 }
 .YM-Tab a:link, a:visited {
 	color: #369;
-	/*text-decoration: underline;*/
 }
 .YM-Tab a:hover {
 	color: #FF6600 !important;
 	text-decoration: none;
 }
 
-
-/*#YMenu {
-	margin: 30px auto;
-	width: 590px;
-	height: 450px;
-	overflow: hidden;
-	border: 3px solid #B0BEC7;
-	padding: 4px;
-}*/
-/*#YMenu-side {
-	position: relative;
-	z-index: 2;
-	float: left;
-	width: 200px;
-	height: 450px;
-	border-right: 3px solid #B0BEC7;
-}*/
-/*#YMenu-side h3 {
-	float: left;
-	width: 196px;
-	clear: both;
-	line-height: 28px;
-	font-size: 14px;
-	text-indent: 10px;
-	color: #369;
-	background-color: #EAEFF5;
-	overflow: hidden;
-	clear: both;
-}*/
 .YM-mainmnu {
 	float: left;
 	width: 100%;
@@ -1589,7 +1555,7 @@ ul, li {
 	z-index: 2;
 	cursor: pointer;
 	float: left;
-	width: 200px;
+	width: 199px;
 	clear: both;
 	min-height: 29px;
 	line-height: 29px;
@@ -1597,15 +1563,10 @@ ul, li {
 	color: #999;
 }
 .YM-mainmnu li.current {
-/*	border-top: 1px solid #B0BEC7;*/
-	border-left: 1px solid #B0BEC7;
-/*	border-bottom: 2px solid #B0BEC7;*/
-/*	border-right: 1px solid #EAEFF5;*/
-	background-color: #fff;
+	width: 199px;
 }
 .YM-mainmnu li.current a {
 	font-size: 14px;
-/*S*/
 	color: #C80000;
 }
 .YM-mainmnu li.current span {
@@ -1614,14 +1575,17 @@ ul, li {
 .YM-mainmnu li .YM-submnu {
 	position: absolute;
 	z-index: 5;
-	left: 200px;
-	top: -1px;
+	left: 202px;
+	top: 0px;
 	display: none;
-	width: 200px;
+	width: 198px;
 	overflow: hidden;
-	border: solid #B0BEC7;
-	border-width: 1px 2px 2px 0;
-	background:  #fff url(../images/mnu-bg.gif) 0 0 no-repeat;
+	background: #ffffff;
+}
+.YM-submnu li{
+	line-height: 30px !important;
+	height: 30px !important;
+	border-bottom: 1px solid #eeeeee!important;
 }
 
 img{
