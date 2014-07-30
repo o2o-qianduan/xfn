@@ -2,12 +2,97 @@
 .container {
   margin-left: 0px;
   margin-top: 0px;
-  width: auto;
+  width: 100%;
   padding: 20px 20px 0px 20px;
+  height: 100%;
+  margin-bottom: 30px;
+  overflow: scroll;
 }
 
 .detail-page,.form-page,.search-page{
 	padding:0;
 }
+/**********所有页面加入页脚footer*******june********start***/
+.footer{
+	background:#548C00;
+	height: 20px;
+	width: 100%;
+	position: relative;
+	bottom: 0;
+	text-align: center;
+	clear: both;
+	margin-top: 30px;
+}
+.footer p{
+	padding-bottom: 0;
+	font-size: 12px;
+	line-height: 4px;
+}
+.bui-grid-header-container{
+	width: 100%;
+	height: 100%;
+}
+.dl-second-nav{
+	height: 100%;
+}
+.bui-grid-body{
+	width: 100%!important;
+}
+/**********所有页面加入页脚footer*******june********end***/
 
 
+.dl-inner-tab {
+	display: block;
+    margin-right: 0;
+    margin-top: 0;
+    min-height: 100%;
+    padding: 0;
+    position: relative;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+.bui-menu {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #f2f2f2;
+    border-color: #ccc;
+    border-image: none;
+    border-style: solid;
+    border-width: 0 1px 0 0;
+    float: left;
+    position: relative;
+    width: 190px;
+}
+*:before, *:after {
+    box-sizing: border-box;
+}
+
+.bui-menu {
+    left: -250px;
+    position: absolute;
+}
+.bui-menu {
+    transition: all 0.3s ease-in-out 0s;
+    width: 250px;
+    z-index: 999;
+}
+/*#J_NavContent{
+    width: 100%;
+    position: relative;
+ 
+}*/
+/*.dl-second-nav{
+     height: 100%;
+    position: fixed;
+    left: 0;
+    top: 90px;
+    bottom: 30px;
+    z-index: -1;
+}*/

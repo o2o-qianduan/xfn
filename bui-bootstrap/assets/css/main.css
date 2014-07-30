@@ -80,6 +80,7 @@ iframe {
 }
 .header,.dl-main-nav{
   background: url('../img/main-nav-bg.png') repeat-x 0 0 #204077;
+  height: 100%;
 }
 .header {
   background-color: #1B3160;
@@ -151,9 +152,10 @@ iframe {
 
 .nav-item-inner{
   padding: 4px 0 0 31px;
-  height: 30px;
+  height: 30px;  
   border:1px solid transparent;
   _border:none;
+
 }
 
 .nav-item-mask {
