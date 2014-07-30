@@ -628,15 +628,23 @@ li {list-style-type: none;}
 }
 .report-right{
 	float: left;
-	position: absolute;
-	margin-left: 10px;
-	top:0px;
-	left:120px; 
-	margin-top: 20px;
+    left: 120px;
+    margin-left: 12px;
+    margin-top: 20px;
+    position: absolute;
+    top: 0;
+    width: 51%;
+}
+.report-content{
+	display: block;
+	float: left;
+	margin-top: 10px;
+	height: 80px;
 }
 .report-content p{
 	height: 20px;
-	line-height: 20px;
+	line-height:20px; 
+	
 }
 .report-list{
 	clear: both;
@@ -1512,7 +1520,7 @@ ul, li {
 
 .YM-Tab {
 	width: 198px;
-	border-bottom: 1px solid #F0F0F0;
+	border-bottom: 1px dashed #F0F0F0;
 }
 .YM-Tab a{
 	font-size: 14px;
@@ -1585,7 +1593,8 @@ ul, li {
 .YM-submnu li{
 	line-height: 30px !important;
 	height: 30px !important;
-	border-bottom: 1px solid #eeeeee!important;
+	border-bottom: 1px dashed #eeeeee!important;
+	border-width: 80%;
 }
 
 img{
@@ -1631,7 +1640,7 @@ img{
     padding-bottom: 8px;
 }
 .SmenuTitleOn0,.SmenuTitleOn1,.SmenuTitleOn2,.SmenuTitleOn3,.SmenuTitleOn4{
-    background: url('../images/down-triangle.png') no-repeat scroll 0px 23px transparent;
+    background: url('../images/down-triangle.png') no-repeat scroll 0px 21px transparent;
 
 }
 .SmenuTitleOn10,.SmenuTitleOn11{
@@ -1677,6 +1686,12 @@ img{
 }
 .imgTitle{
     font-size: 14px !important;
+    float: left;
+    height: 30px;
+    width: 100%;
+}
+.imgPrice{
+	margin-top: 5px;
 }
 .imgPrice span{
     color: #ff0000;
@@ -1684,6 +1699,11 @@ img{
 }
 .SmenuImg{
     position: relative;
+}
+.SmenuCont p{
+	float: left;
+	display: block;
+	width: 100%;
 }
 .tip{
     position: absolute;
@@ -2277,7 +2297,7 @@ box-shadow: 2px 2px 5px #C0BBB5;
 	border:none !important;
 }
 .pbox .s0-01-price{
-	margin-top: -10px;
+	margin-top: 5px;
 	font-size: 16px;
 }
 .pro_clear{
@@ -2757,7 +2777,7 @@ box-shadow: 2px 2px 5px #C0BBB5;
 	font-weight: bold;
 	margin-top: 2px;
 }
-/*************产品列表页*****左边栏样式***********************************/
+/*************产品列表页*****左边栏样式*************june***************start*******/
 .list_left_list{
 	background: #fff;
 	border: 0;
@@ -2781,8 +2801,6 @@ box-shadow: 2px 2px 5px #C0BBB5;
 }
 .pro_course .current2 ul li{
 	line-height: 25px;
-	/*background: url(../images/triangle.png) no-repeat scroll 12px 16px transparent;*/
-	/*padding-left: 10px;*/
 	height: 25px;
 	width: 50%;
 	text-align: left;
@@ -2799,3 +2817,18 @@ box-shadow: 2px 2px 5px #C0BBB5;
 .pro_course .current2 ul li a:hover{
 	color: red;
 }
+.list-buy-cart a{
+	font-size: 12px !important;
+}
+.s0-01-title{
+	height: 30px;
+	line-height: 30px;
+	float: left;
+	width: 100%;
+	overflow: hidden;
+}
+.s0-01-detail,.s0-01-price,.s0-buy,.s0-buyNum{
+	float: left;
+}
+
+/*************产品列表页*****左边栏样式*************june***************end*******/
