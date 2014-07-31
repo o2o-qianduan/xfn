@@ -22,7 +22,7 @@
 .ui-widget-header a { color: #ffffff/*{fcHeader}*/; }
 .tabs-list{
 	background: repeat-x scroll center top #60b800;
-	font-family: "新宋体";
+	font-family: 'NSimSun','新宋体';
     font-size: 14px;
     font-weight: bold;
     padding-left: 5px ;
@@ -35,7 +35,7 @@
 .ui-tabs .ui-tabs-nav li a {
     float: left;
     text-decoration: none;
-    font-family: "新宋体";
+    font-family: 'NSimSun','新宋体';
     font-size: 14px;
     font-weight: bold;
     color: #ffffff;
@@ -68,7 +68,7 @@
 /******************************特惠专区、新鲜蔬菜部分修改Jquery插件tabs样式**************june******start*********/
 .shelf-02-right{
 	background: none;
-	font-family: "微软雅黑";
+	font-family: 'Microsoft YaHei','微软雅黑';
     font-size: 16px;
     padding-left: 5px ; 
     width: 975px;
@@ -130,7 +130,7 @@
 	color: red;
 }
 .s0-01-detail{
-	font-family: "宋体";
+	font-family: 'SimSun','宋体';
 	font-size: 12px;
 	height: 40px;
 	line-height: 50px;
@@ -256,7 +256,7 @@ input.num-each{
 	color: #000000;
 	text-decoration: none;	
 	font-size: 12px;
-	font-family: "宋体";
+	font-family: 'SimSun','宋体';
 }
 .news-ul a:hover{
 	color: red;
@@ -306,7 +306,7 @@ input.num-each{
 	color: #000000;
 	text-decoration: none;	
 	font-size: 12px;
-	font-family: "宋体";
+	font-family: 'SimSun','宋体';
 }
 .da-ul a:hover{
 	color: red;
@@ -359,7 +359,7 @@ input.num-each{
 .da-0-title{
 	float: left;
 	font-size: 12px;
-	font-family: "宋体";
+	font-family: 'SimSun','宋体';
 	margin-top: 10px;
 	height: 30px;
 }
@@ -481,7 +481,7 @@ input.num-each{
 	color: #000000;
 	text-decoration: none;	
 	font-size: 12px;
-	font-family: "宋体";
+	font-family: 'SimSun','宋体';
 }
 .pro-ul a:hover{
 	color: red;
@@ -534,7 +534,7 @@ input.num-each{
 .pro-0-title{
 	float: left;
 	font-size: 12px;
-	font-family: "宋体";
+	font-family: 'SimSun','宋体';
 	margin-top: 10px;
 	height: 30px;
 }
@@ -583,7 +583,7 @@ input.num-each{
 	color: #999999;
 	border-bottom: 1px solid #e7e6e6;
 	font-size: 14px;
-	font-family: "宋体";
+	font-family: 'SimSun','宋体';
 }
 #rankList .rankBox li {
 	float: left;
@@ -612,7 +612,7 @@ input.num-each{
 	 color: #666666;
 	text-decoration: none;	
 	font-size: 12px;
-	font-family: "宋体";
+	font-family: 'SimSun','宋体';
 }
 .rank-ul a:hover{
 	color: red;

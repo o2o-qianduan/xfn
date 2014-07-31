@@ -94,7 +94,7 @@ img#left_picture {
 .bottom_link a{
 	text-decoration: none;
 	color: #000;
-	font-family: "宋体" "MicroSoft YeHei";	
+	font-family: 'SimSun','宋体' "MicroSoft YeHei";	
 }
 .center_state{
 	float: right;
@@ -108,7 +108,7 @@ img#left_picture {
 .center_state p{
 	padding-left: 14px;
 	line-height: 20px;
-	font-family: "宋体" "MicroSoft YeHei";
+	font-family: 'SimSun','宋体' "MicroSoft YeHei";
 	font-size: 12px;
 	color: #666; 
 }
@@ -178,7 +178,7 @@ img.o-place {
 	margin-right: 2px;
 }
 .myfont{
-	font-family: "宋体" "MicroSoft Yahei";
+	font-family: 'SimSun','宋体', "MicroSoft Yahei";
 	font-size: 12px;
 }
 .weight{
@@ -454,7 +454,7 @@ img.o-place {
 .list_saled{
 	font-size: 12px;
 	color: #999;
-	font-family: "宋体";
+	font-family: 'SimSun','宋体';
 
 }
 .saled_num{
@@ -660,7 +660,7 @@ div.zoomMask {
 .cart{
 	width:390px;
 	border:1px solid #a3d36a;
-	font-family:"新宋体";
+	font-family:'NSimSun','新宋体';
 	height: 423px;
 	position: fixed;
 	right: 0;
@@ -810,7 +810,7 @@ div.zoomMask {
 .cart_icon span{
 	font-size: 13px;
 	color: #f00;
-	font-family: "宋体";
+	font-family: 'SimSun','宋体';
 	margin-left: 17px;
 	width: 20px;
 	display: inline-block;
@@ -851,7 +851,7 @@ div.zoomMask {
 	color: #999;
 	font-size: 12px;
 	text-align: center;
-	font-family: "黑体";
+	font-family: 'Microsoft YaHei','微软雅黑';
 	margin: 20px;
 	float: left;
 }
