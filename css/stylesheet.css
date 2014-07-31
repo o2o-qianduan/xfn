@@ -7,7 +7,7 @@ html{
 ul,li{list-style:none;}
 body {
 	color: #333;
-	font-family:"微软雅黑"，serif,"宋体";
+	font-family:'Microsoft YaHei','微软雅黑','SimSun',serif,"宋体";
 	margin: 0px;
 	padding: 0px;
 }
@@ -190,13 +190,13 @@ li {list-style-type: none;}
 	text-align: center;
 	font-size: 14px;
 	color: #ffffff;
-	font-family: "宋体";
+	font-family: 'SimSun','宋体';
 	font-weight: bold;
 	cursor: pointer;
 }
 .searchdiv #hot_search{
 	height: 22px;
-	font-family: "新宋体";
+	font-family: 'NSimSun','新宋体';
 	font-size: 12px;
 	color: #636363;
 	padding-top: 5px;
@@ -242,7 +242,7 @@ li {list-style-type: none;}
 	line-height: 35px;
 	font-size: 16px;
 	font-weight: bold;
-	font-family: "微软雅黑" "MicroSoft Yehei";
+	font-family:  'MicroSoft Yehei','微软雅黑';
 	text-decoration: none;
 }
 .all_classify a:hover{
@@ -267,7 +267,7 @@ li {list-style-type: none;}
 	text-decoration: none;
 	color: #fff;
 	font-size: 16px;
-	font-family: "微软雅黑" "MicroSoft Yehei";
+	font-family: "微软雅黑" ,"MicroSoft Yehei";
 }
 
 .border{
@@ -468,7 +468,7 @@ li {list-style-type: none;}
 .shelf-02-left{
 	width: 205px;
 	float: left;
-	font-family: "微软雅黑";
+	font-family: 'Microsoft YaHei',"微软雅黑";
 	font-size: 20px;
 }
 .shelf-02-left-title{
@@ -514,7 +514,7 @@ li {list-style-type: none;}
 .mwsp-content-detail{
 	font-size: 14px;
 	color: #5b5d59;
-	font-family: "新宋体";
+	font-family: 'NSimSun',"新宋体";
 	height: 25px;
 	line-height: 25px;
 }
@@ -550,7 +550,7 @@ li {list-style-type: none;}
 }
 .rpsp-01-title,.rpsp-02-title,.rpsp-03-title,.rpsp-04-title{
 	font-size: 14px;
-	font-family: "新宋体";
+	font-family:'NSimSun',"新宋体";
 	display: block;
 	padding-bottom: 4px;
 	color: #000000;
@@ -568,7 +568,7 @@ li {list-style-type: none;}
 }
 .rpsp-01-date,.rpsp-01-appraisal,.rpsp-02-date,.rpsp-02-appraisal,
 .rpsp-03-date,.rpsp-03-appraisal,.rpsp-04-date,.rpsp-04-appraisal{
-	font-family: "新宋体";
+	font-family: 'NSimSun',"新宋体";
 	font-size: 12px;
 	color: #777777;
 	height: 20px;
@@ -598,7 +598,7 @@ li {list-style-type: none;}
 }
 .report-title{
 	font-size: 14px;
-	font-family: "新宋体";
+	font-family: 'NSimSun',"新宋体";
 	font-weight: bold;
 	display: block;
 	padding: 5px;
@@ -608,7 +608,7 @@ li {list-style-type: none;}
 	width: 300px;
 	border: 1px solid #64b800;	
 	font-size: 12px;
-	font-family: "宋体";
+	font-family: 'SimSun',"宋体";
 	color: #666666;
 	float: left;
 	margin-top: 20px;
@@ -684,7 +684,7 @@ li {list-style-type: none;}
 .tabs-left-news{
 	float: left;
 	font-size: 14px;
-	font-family: "宋体";
+	font-family: 'SimSun',"宋体";
 	padding: 7px 0px;
 	color: #666666;
 	font-weight: 600;
@@ -693,7 +693,7 @@ li {list-style-type: none;}
 	float: left;
 	position: absolute;
 	width: 640px;
-	font-family: "宋体";
+	font-family: 'SimSun',"宋体";
 	margin-left: 220px;
 }
 .tabs-right-up{
@@ -709,7 +709,7 @@ li {list-style-type: none;}
 	text-align: center;
 }
 .tabs-right-up-content{
-	font-family: "新宋体" !important;
+	font-family: 'NSimSun',"新宋体" !important;
 	color: #666666 !important;
 	font-size: 14px  !important;
 	margin-bottom: 20px;
@@ -731,7 +731,7 @@ li {list-style-type: none;}
 	width: 100%;
 }
 .tabs-right-down a{
-	font-family: "新宋体"  !important;
+	font-family: 'NSimSun',"新宋体"  !important;
 	color: #666666 !important;
 	font-size: 14px  !important;
 	padding-right: 5px;
@@ -785,7 +785,7 @@ li {list-style-type: none;}
 }
 #footer h3 {
     color: #333;
-    font-family: '微软雅黑';
+    font-family: 'Microsoft YaHei','微软雅黑';
     font-size: 20px;
     font-weight: normal;
     margin-bottom: 8px;
@@ -858,7 +858,7 @@ ul, li {
 .breadcrumb a{
 	line-height: 40px;
 	color: #666;
-	font-family: "新宋体","MicroSoft YeHei";
+	font-family: 'SimSun',"新宋体","MicroSoft YeHei";
 	font-size: 12px;
 	text-decoration: none;
 }
@@ -902,7 +902,7 @@ ul, li {
 .right_div_table{
 	color:#666;
 	font-size: 14px;
-	font-family: "宋体";
+	font-family: 'SimSun',"宋体";
 	width: 917px;
 	margin-top: 10px;
 }
@@ -924,11 +924,7 @@ ul, li {
 	margin-bottom: 4px;
 	width:917px;
 }
-/*.right_div_table caption{
-	font-weight: bold;
-	text-align: left;
-	height: 40px;
-}*/
+
 .right_div_table tr{
 	height: 30px;
 }
@@ -951,7 +947,7 @@ ul, li {
 	font-size:14px;
 	color:#666;
 	line-height: 40px;
-	font-family: "宋体"；
+	font-family: 'SimSun',"宋体"；
 }
 /*我的订单*/
 #tab-1-1 .tb_th th{
@@ -962,7 +958,7 @@ ul, li {
 	line-height: 30px;
 	text-align: left;
 	font-size: 12px;
-	font-family: "宋体";
+	font-family: 'SimSun',"宋体";
 	color: #666;
 	background: #f5f5f5;
 	padding-left: 20px;
@@ -1004,7 +1000,7 @@ ul, li {
 	color: #999;
 	font-size: 12px;
 	font-weight: bold;
-	font-family: "宋体";
+	font-family:'SimSun', "宋体";
 
 }
 .right_div_table .myorder .myorder_state{
@@ -1019,7 +1015,7 @@ ul, li {
 .right_div_table .myorder .myorder_state a,
 .right_div_table .myorder .myorder_op a{
 	font-size: 12px;
-	font-family: "宋体";
+	font-family: 'SimSun',"宋体";
 	color: #005ea7;
 }
 .right_div_table .myorder .myorder_op a:hover{
@@ -1038,7 +1034,7 @@ ul, li {
 	height:65px;
 	line-height: 65px;
 	color:#000;
-	font-family: "宋体";
+	font-family: 'SimSun',"宋体";
 	font-size:14px;
 	font-weight: bold;
 }
@@ -1082,7 +1078,7 @@ ul, li {
 	text-align: left;
 	color: #666;
 	font-size: 12px;
-	font-family: "宋体";
+	font-family: 'SimSun',"宋体";
 }
 .right_div .assess_table .assess_goods img,.right_div .assessed_table .assess_goods img{
 	margin-left: 10px;
@@ -1108,7 +1104,7 @@ ul, li {
 	text-align: left;
 	overflow-y:scroll; 
 	font-size: 12px;
-	font-family: "宋体";
+	font-family: 'SimSun',"宋体";
 	color:#666;
 	display: inline-block;
 }
@@ -1119,7 +1115,7 @@ ul, li {
 	background: #74c022;
 	color:#fff;
 	font-size: 12px;
-	font-family: "宋体";
+	font-family: 'SimSun',"宋体";
 	cursor: pointer;
 	display: inline-block;
 	margin-top: -10px;
@@ -1140,7 +1136,7 @@ ul, li {
 .per_center h2{
 	text-align: center;
 	color: #3DAE0B;
-	font-family: "微软雅黑";
+	font-family: 'Microsoft YaHei',"微软雅黑";
 	font-size: 16px;
 	border-bottom: 1px solid #3DAE0B;
 	line-height:33px;
@@ -1150,7 +1146,7 @@ ul, li {
 }
  .center_course .current h4{
 	cursor: pointer;
-	font-family: "新宋体", "MicroSoft YeHei";
+	font-family: 'SimSun',"新宋体", "MicroSoft YeHei";
 	font-size: 14px;
 	line-height: 33px;
 	padding-left: 10px;
@@ -1169,7 +1165,7 @@ ul, li {
 .center_course .current ul li a{
 	font-size: 12px;
 	color: #333;
-	font-family: "新宋体","MicroSoft YeHei";
+	font-family: 'SimSun',"新宋体","MicroSoft YeHei";
 	text-decoration: none;
 }
 .center_course .current ul li a:hover{
@@ -1182,7 +1178,7 @@ ul, li {
 	float: right;
 	margin-top: 23px;
 	position: relative;
-	font-family: "MicroSoft YaHei" "宋体";
+	font-family: "MicroSoft YaHei" ,'SimSun',"宋体";
 	font-size: 14px;
 }
 .right_div_underline{    /*可重用，绿色下划线*/
@@ -1221,7 +1217,7 @@ ul, li {
 
 .right_inner_text p{
 	font-size: 12px;
-	font-family: "新宋体" "MicroSoft YeHei";
+	font-family: 'NSimSun',"新宋体" "MicroSoft YeHei";
 	line-height: 24px;
 }
 
@@ -1364,7 +1360,7 @@ ul, li {
 	margin-top: 20px;
 	text-align: center;
 	float: left;
-	font-family: "新宋体";
+	font-family: 'NSimSun',"新宋体";
 }
 
 #myDetail label,#myDetail p{
@@ -1420,7 +1416,7 @@ ul, li {
 	line-height: 50px;
 	margin: 5px 10px 5px 0;
 	background-color: #77BE22;
-	font-family: "新宋体";
+	font-family: 'NSimSun',"新宋体";
 	font-weight: 600;
 	color: #fff;
 	float: left;
@@ -1455,7 +1451,7 @@ ul, li {
 	top: 11px;
 	left: 20px;
 	padding-left: 20px;
-	font-family: "新宋体";
+	font-family: 'NSimSun',"新宋体";
 }
 
 #point_tit span{
@@ -1524,7 +1520,7 @@ ul, li {
 }
 .YM-Tab a{
 	font-size: 14px;
-	font-family: "宋体","新宋体", "MicroSoft Yehei ";
+	font-family: 'SimSun',"宋体",'NSimSun',"新宋体", "MicroSoft Yehei ";
 	width: 90%;
 	margin: 0px 5px;
 	color: #000000 !important;     /*没反应！！*/
@@ -1807,7 +1803,7 @@ img{
 	line-height: 35px;
 	border-bottom:1px solid #51ab58; 
 	color:#666;
-	font-family: Microsoft YaHei;
+	font-family: 'Microsoft YaHei';
 	font-size: 20px;
 }/*标题*/
 /*下面是结算表格*/
@@ -1912,7 +1908,7 @@ img{
 	margin:auto; 
 	line-height: 30px;
 	font-size: 14px;
-	font-family: "新宋体";
+	font-family: 'NSimSun',"新宋体";
 	color:#464646;
 	cursor: pointer;
 }
@@ -2120,7 +2116,7 @@ img{
 }
 .pay_menthod span{
 	color: #666;
-	font-family: "新宋体";
+	font-family: 'NSimSun',"新宋体";
 	font-size: 14px;
 }
 .bank_icon{
@@ -2315,7 +2311,7 @@ box-shadow: 2px 2px 5px #C0BBB5;
 }
 .pro_bottom_pic0 p {
 	font-size: 14px;
-	font-family: "新宋体";
+	font-family:'NSimSun',"新宋体";
 	line-height: 33px;
 	font-weight: 600;
 	border-bottom: 2px solid #CECECE;
@@ -2368,7 +2364,7 @@ box-shadow: 2px 2px 5px #C0BBB5;
 	height: 775px;
 	margin: 10px 10px 0 0;
 	border: 1px solid #C7E6BD;
-	font-family: "宋体";
+	font-family: 'SimSun',"宋体";
 	font-size: 14px;
 	float: left;
 }
@@ -2414,7 +2410,7 @@ box-shadow: 2px 2px 5px #C0BBB5;
 .newsList_right_top{
 	width: 298px;
 	height: 294px;
-	font-family: "宋体";
+	font-family: 'SimSun',"宋体";
 	font-size: 14px;
 	border:1px solid #D5D5D5;
 	float: left;
@@ -2448,7 +2444,7 @@ box-shadow: 2px 2px 5px #C0BBB5;
 	height: 274px;
 	border:1px solid #D5D5D5;
 	float: left;
-	font-family: "宋体";
+	font-family: 'SimSun',"宋体";
 	font-size: 14px;
 }
 
@@ -2492,7 +2488,7 @@ box-shadow: 2px 2px 5px #C0BBB5;
 	border:1px solid #CCC;
 	background-color: #fff;
 	box-shadow: 0 20px 20px #f6f4f1 inset;
-	font-family: "新宋体";
+	font-family: 'NSimSun',"新宋体";
 	font-size: 14px;
 }
 
@@ -2560,7 +2556,7 @@ box-shadow: 2px 2px 5px #C0BBB5;
 	margin: 0 10px 0 0;
 	border: 1px solid #C7E6BD;
 	border-top: 2px solid #77be22;
-	font-family: "宋体";
+	font-family:'SimSun',"宋体";
 	font-size: 14px;
 	color: #444;float: left;
 }
@@ -2652,7 +2648,7 @@ box-shadow: 2px 2px 5px #C0BBB5;
 	margin: 10px 10px 0 0;
 	border: 1px solid #c7e6bd;
 	background: #f5f9f3;
-	font-family: "宋体";
+	font-family:'SimSun',"宋体";
 	font-size: 14px;
 	color: #444;
 	float: left;
@@ -2784,7 +2780,7 @@ box-shadow: 2px 2px 5px #C0BBB5;
 }
 .pro_course .current2 h4{
 	cursor: pointer;
-	font-family: "新宋体", "MicroSoft YeHei";
+	font-family:'NSimSun',"新宋体", "MicroSoft YeHei";
 	font-size: 14px;
 	line-height: 33px;
 	padding-left: 15px;
@@ -2811,7 +2807,7 @@ box-shadow: 2px 2px 5px #C0BBB5;
 .pro_course .current2 ul li a{
 	font-size: 12px;
 	color: #333;
-	font-family: "新宋体","MicroSoft YeHei";
+	font-family:'NSimSun',"新宋体", "MicroSoft YeHei";
 	text-decoration: none;
 }
 .pro_course .current2 ul li a:hover{
