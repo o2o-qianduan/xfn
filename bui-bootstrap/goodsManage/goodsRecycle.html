@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
  <head>
-  <title> 搜索表单</title>
+  <title> 商品回收站</title>
    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
        <link href="../assets/css/dpl-min.css" rel="stylesheet" type="text/css" />
     <link href="../assets/css/bui-min.css" rel="stylesheet" type="text/css" />
@@ -10,43 +10,7 @@
  <body>
   
   <div class="container">
-    <div class="row">
-      <form id="searchForm" class="form-horizontal span24">
-        <div class="row">
-          <div class="control-group span8">
-            <label class="control-label">所有分类：</label>
-            <div class="controls">
-              <input type="text" class="control-text" name="id">
-            </div>
-          </div>
-          <div class="control-group span8">
-            <label class="control-label">所有品牌：</label>
-            <div class="controls">
-              <input type="text" class="control-text" name="stuName">
-            </div>
-          </div>
-          
-        </div>
-
-        <div class="row">
-        <!--   <div class="control-group span9">
-            <label class="control-label">入学时间：</label>
-            <div class="controls">
-              <input type="text" class=" calendar" name="startDate"><span> - </span><input name="endDate" type="text" class=" calendar">
-            </div>
-          </div> -->
-          <div class="control-group span8">
-            <label class="control-label">商品分类：</label>
-            <div class="controls">
-              <input type="text" class="control-text" name="stuName">
-            </div>
-          </div>
-          <div class="span3 offset2">
-            <button  type="button" id="btnSearch" class="button button-primary">搜索</button>
-          </div>
-        </div>
-      </form>
-    </div>
+  
     <div class="search-grid-container">
       <div id="grid"></div>
     </div>
@@ -109,13 +73,9 @@
 <script type="text/javascript">
   BUI.use('common/search',function (Search) {
    
-      editing = new BUI.Grid.Plugins.DialogEditing({
-        contentId : 'content', //设置隐藏的Dialog内容
-        autoSave : true, //添加数据或者修改数据时，自动保存
-        triggerCls : 'btn-edit'
-      }),
+      var editing = new BUI.Grid.Plugins.DialogEditing(),
       columns = [
-          {title:'编号',dataIndex:'id',width:50,renderer:function(v){
+          {title:'编号',dataIndex:'goodsRecycle-0-0',width:50,renderer:function(v){
             return Search.createLink({
               id : 'detail' + v,
               title : '商品信息',
@@ -123,26 +83,14 @@
               href : 'detail/example.html'
             });
           }},
-          {title:'商品图片',dataIndex:'goodsM-0-0',width:100},
-          {title:'商品名称',dataIndex:'goodsM-0-1',width:100},
-          {title:'商品分类',dataIndex:'goodsM-0-2',width:100},
-          {title:'货号',dataIndex:'goodsM-0-3',width:100},
-          {title:'采购货号',dataIndex:'goodsM-0-4',width:100},
-          {title:'成本价',dataIndex:'goodsM-0-5',width:60},
-          {title:'重量',dataIndex:'goodsM-0-6',width:60},
-          {title:'上架',dataIndex:'goodsM-0-7',width:60},
-          {title:'库存',dataIndex:'goodsM-0-8',width:100},
-          {title:'排序',dataIndex:'goodsM-0-9',width:100},
+          {title:'商品名称',dataIndex:'goodsRecycle-0-1',width:200},
+          {title:'货号',dataIndex:'goodsRecycle-0-2',width:100},
+          {title:'价格',dataIndex:'goodsRecycle-0-3',width:100},
           {title:'操作',dataIndex:'',width:200,renderer : function(value,obj){
-            var editStr =  Search.createLink({ //链接使用 此方式
-                id : 'edit' + obj.id,
-                title : '编辑商品信息',
-                text : '打开编辑',
-                href : 'goodsManage/newgoods.html'
-              }),
-              editStr1 = '<span class="grid-command btn-edit" title="编辑商品信息">弹出编辑</span>',
+             
+            var  editStr1 = '<span class="grid-command" >还原</span>',
               delStr = '<span class="grid-command btn-del" title="删除商品信息">删除</span>';//页面操作不需要使用Search.createLink
-            return editStr +  editStr1 + delStr;
+            return  editStr1 + delStr;
           }}
         ],
       store = Search.createStore('../data/goods01.json',{

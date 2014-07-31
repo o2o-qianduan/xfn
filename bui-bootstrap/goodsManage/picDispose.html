@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>图片处理</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="../assets/css/dpl-min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/bui-min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/page-min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<div class="container" >
+		<form action="">
+			<div class="row">
+				<p class="span10">图片批量处理允许您重新生成商品的缩略图以及重新添加水印。
+				该处理过程可能会比较慢，请您耐心等候。</p>
+			</div>
+			
+		 	<div class="row">
+				<div class="span3 control-group">
+					<input type="checkbox" />
+					<label for="pic-0-1">处理商品图片</label>
+				</div>
+				<div class="span3 control-group">
+					<input type="checkbox" />
+					<label for="pic-0-2">处理商品相册</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span8 control-group">
+					<input type="checkbox" />
+					<label for="pic-0-3">重新生成缩略图</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span8 control-group">
+					<input type="checkbox" />
+					<label for="pic-0-4">重新生成商品详情图</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span8 control-group">
+					<input type="radio" name="newPic01" />
+					<label for="pic-1-1">新生成图片使用名称，并删除旧图片</label>
+				</div>
+				<div class="span8 control-group">
+					<input type="radio" name="newPic01" />
+					<label for="pic-1-2">新生成图片覆盖旧图片</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span8 control-group">
+					<input type="radio" name="newPic02" />
+					<label for="pic-2-1">出错时忽略错误，继续执行程序</label>
+				</div>
+				<div class="span8 control-group">
+					<input type="radio" name="newPic02" />
+					<label for="pic-2-2">出错时立即提示，并中止程序</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="offset2">
+            		<button  id="btnEnsure" type="button" class="button button-primary">确定</button>
+         		 </div>
+			</div>
+			<hr>
+		</form>
+	</div>
+</body>
+</html>

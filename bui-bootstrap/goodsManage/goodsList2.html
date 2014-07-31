@@ -109,7 +109,7 @@
 <script type="text/javascript">
   BUI.use('common/search',function (Search) {
     
-    var enumObj = {"1":"男","0":"女"},
+   
       editing = new BUI.Grid.Plugins.DialogEditing({
         contentId : 'content', //设置隐藏的Dialog内容
         autoSave : true, //添加数据或者修改数据时，自动保存
@@ -124,24 +124,25 @@
               href : 'detail/example.html'
             });
           }},
-          {title:'商品名称',dataIndex:'name',width:100},
-          {title:'商品分类',dataIndex:'birthday',width:100,renderer:BUI.Grid.Format.dateRenderer},
-          {title:'货号',dataIndex:'sex',width:60,renderer:BUI.Grid.Format.enumRenderer(enumObj)},
-          {title:'采购货号',dataIndex:'grade',width:100},
-          {title:'成本价',dataIndex:'address',width:100},
-          {title:'重量',dataIndex:'grade',width:100},
-          {title:'上架',dataIndex:'address',width:100},
-          {title:'库存',dataIndex:'grade',width:100},
-          {title:'排序',dataIndex:'grade',width:100},
+          {title:'商品图片',dataIndex:'goodsM-0-0',width:100},
+          {title:'商品名称',dataIndex:'goodsM-0-1',width:100},
+          {title:'商品分类',dataIndex:'goodsM-0-2',width:100},
+          {title:'货号',dataIndex:'goodsM-0-3',width:100},
+          {title:'采购货号',dataIndex:'goodsM-0-4',width:100},
+          {title:'成本价',dataIndex:'goodsM-0-5',width:60},
+          {title:'重量',dataIndex:'goodsM-0-6',width:60},
+          {title:'上架',dataIndex:'goodsM-0-7',width:60},
+          {title:'库存',dataIndex:'goodsM-0-8',width:100},
+          {title:'排序',dataIndex:'goodsM-0-9',width:100},
           {title:'操作',dataIndex:'',width:200,renderer : function(value,obj){
             var editStr =  Search.createLink({ //链接使用 此方式
                 id : 'edit' + obj.id,
-                title : '编辑学生信息',
+                title : '编辑商品信息',
                 text : '打开编辑',
                 href : 'form/example.html'
               }),
               editStr1 = '<span class="grid-command btn-edit" title="编辑学生信息">弹出编辑</span>',
-              delStr = '<span class="grid-command btn-del" title="删除学生信息">删除</span>';//页面操作不需要使用Search.createLink
+              delStr = '<span class="grid-command btn-del" title="删除商品信息">删除</span>';//页面操作不需要使用Search.createLink
             return editStr +  editStr1 + delStr;
           }}
         ],
