@@ -468,7 +468,7 @@ img.o-place {
 	width: 115px;
 	border-radius: 2px;
 	background-color: #e5e5e5;
-	margin: auto;
+	margin: 10px auto;
 	color:#666;
 
 }	
@@ -815,4 +815,186 @@ div.zoomMask {
 	width: 20px;
 	display: inline-block;
 	text-align: center;
+}
+/******商品评价*********/
+#pro-1 .proBox{
+	display: block;
+	height: 25px;
+	line-height: 25px;	
+}
+#pro-1 .proBox li {
+	float: left;
+	width: 60px;
+	text-align: center;
+	font-size: 12px;
+	background: #f2f2f2;
+	color: #666;
+	margin-right: 10px;
+	border: 1px solid #e9e9e9;
+	z-index: -1;
+}
+#pro-1 .proBox .pro_ass_selected{
+	background: #ecf6e8;
+	color: #379b04;
+	border: 1px solid #cbe2c3;
+}
+#pro-1 .ass_detail{
+	height: 100px;
+	width: 930px;
+	background: url(../images/acc_bg.png);
+	border-top: 1px solid #58af2b;
+	border-bottom: 1px solid #ccc;
+	margin-top: 1px;
+	z-index: 1;
+}
+#pro-1 .show_PR{
+	color: #999;
+	font-size: 12px;
+	text-align: center;
+	font-family: "黑体";
+	margin: 20px;
+	float: left;
+}
+#pro-1 .show_PR span{
+	color: #58af2b;
+	font-size: 50px;
+
+}
+#pro-1 .classify_ass{
+	width: 280px;
+	height: 70px;
+	margin-top: 15px;
+	margin-left: 50px;
+	border: 1px solid #ccc; 
+	float: left;
+}
+#pro-1 .want_ass{
+	float: left;
+	margin-left: 70px;
+	margin-top: 15px;
+	color: #333;
+	font-size: 12px;
+}
+#pro-1 .want_ass_btn{
+	background: #64b800;
+	border-radius: 2px;
+	color: #fff;
+	height: 25px;
+	line-height: 25px;
+	font-size: 12px;
+	text-align: center;
+	width: 75px;
+	margin-top: 35px;
+	margin-left: 338px;
+	cursor: pointer;
+}
+#pro-1 .ass_contt{
+	width: 930px;
+}
+#pro-1 .ass_user{
+	color: #555;
+	font-size: 12px;
+	height: 15px;
+	margin-top: 10px; 
+	width: 180px;
+}
+#pro-1 .ass_user img{
+	vertical-align: bottom;
+}
+#pro-1 .ass_user span{
+	color: #529600;
+}
+#pro-1 .ass_time{
+	font-size: 12px;
+	margin-top: 10px; 
+	color: #777;
+}
+#pro-1 .ass_says{
+	color: #666;
+	font-size: 12px;
+	margin-top: 20px;
+	padding: 10px;
+	clear: both;
+}
+#pro-1 .lineout{
+	overflow: hidden;
+	border-top: 2px dotted #f3f3f3;
+	width: 930px;
+}
+#pro-1 .re_ass_user{
+	width: 100px;
+	padding: 10px;
+	color: #b7b7b7;
+	font-size: 12px;
+}
+#pro-1 .re_ass_user span{
+	font-weight: bold;
+}
+#pro-1 .re_ass_says{
+	color: #666;
+	font-size: 12px;
+	padding: 10px;
+}
+#pro-1 .re_ass_btn{
+	/*clear: both;*/
+	height: 25px;
+	width: 70px;
+	background: #f8f8f8;
+	border: 1px solid #e9e9e9; 
+	color: #666;
+	font-size: 12px;
+	margin-right: 5px;
+	display: inline-block;
+	text-align: center;
+	line-height: 25px;
+	cursor: pointer;
+}
+#pro-1 .re_ass_bell{
+	width: 845px;
+	height: 27px;
+	display: inline-block;
+	background: #f4f4f4;
+}
+#pro-1 .re_ass_sys{
+	color: #f60;
+	font-size: 12px;
+	padding: 10px;
+	width: 790px;
+}
+/*******成交记录*******/
+#pro-2 .tb_th{
+	width: 930px;
+}
+#pro-2 .tb_th th{
+font-weight: bold;
+color: #777;
+}
+#pro-2 .deal_table{
+	width: 930px;
+}
+#pro-2 .deal_table td{
+	text-align: center;
+	line-height: 40px;
+	font-size: 14px;
+	color: #666;
+}
+#pro-2 .deal_table tr{
+	height: 40px;
+}
+#pro-2 .buyer{
+	width: 120px;
+}
+#pro-2 .deal_table .deal_price {
+	width: 160px;
+	color: #58af2b;
+	font-weight: bold;
+}
+#pro-2 .deal_num{
+	width: 110px;
+}
+#pro-2 .deal_time{
+	width: 285px;
+}
+#pro-2 .deal_pro{
+	width: 230px;
 }

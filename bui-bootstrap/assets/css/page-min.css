@@ -6,6 +6,7 @@
 }
 .detail-page, .form-page, .search-page {
 	padding: 0;
+<<<<<<< HEAD
 }
 
 
@@ -14,4 +15,6 @@
 .offset2 #btnEnsure{
 	margin-top: 20px;
 	margin-left: 350px;
+=======
+>>>>>>> 20f8da23da9117954d8dd21a53d58affc6b1dc85
 }

@@ -2,26 +2,27 @@
 <html>
  <head>
   <title>新富农后台管理中心</title>
-   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="fragment" content="!">
    <link href="assets/css/dpl-min.css" rel="stylesheet" type="text/css" />
   <link href="assets/css/bui-min.css" rel="stylesheet" type="text/css" />
    <link href="assets/css/main-min.css" rel="stylesheet" type="text/css" />
+   <link href="assets/css/page.css" rel="stylesheet" type="text/css" />
  </head>
  <body>
-
-  <div class="header">
-        <img class="logo" src="assets/img/logo.png" alt="华大尚田logo">
-      <div class="dl-title">
-       
-      </div>
-
-    <div class="dl-log">欢迎您，<span class="dl-log-user">**.**@alibaba-inc.com</span><a href="###" title="退出系统" class="dl-log-quit">[退出]</a>
-    </div>
+<div style="overflow:scroll;height:900px;">
+<div class="header">
+  <img class="logo" src="assets/img/logo.png" alt="华大尚田logo">
+  <div class="dl-title">  
   </div>
-   <div class="content">
+  <div class="dl-log">欢迎您，<span class="dl-log-user">**.**@alibaba-inc.com</span><a href="###" title="退出系统" class="dl-log-quit">[退出]</a>
+  </div>
+</div>
+<div class="content">
     <div class="dl-main-nav">
       <div class="dl-inform"><div class="dl-inform-title">贴心小秘书<s class="dl-inform-icon dl-up"></s></div></div>
-      <ul id="J_Nav"  class="nav-list ks-clear">
+      <ul id="J_Nav"  class="nav-list ks-clear ">
         <li class="nav-item dl-selected"><div class="nav-item-inner nav-home">首页</div></li>
         <!-- <li class="nav-item"><div class="nav-item-inner">管理首页</div></li> -->
         <li class="nav-item"><div class="nav-item-inner">商品管理</div></li>
@@ -36,10 +37,16 @@
     <ul id="J_NavContent" class="dl-tab-conten">
 
     </ul>
-   </div>
+</div>
+<div class="footer clear"  id='footer-content'>
+  <p>Copyright © 广州新富农农业科技有限公司</p>
+</div>
+  
+</div>
   <script type="text/javascript" src="assets/js/jquery-1.8.1.min.js"></script>
   <script type="text/javascript" src="./assets/js/bui.js"></script>
   <script type="text/javascript" src="./assets/js/config.js"></script>
+  <script type="text/javascript" src="./assets/js/myjs.js"></script>
 
   <script>
     BUI.use('common/main',function(){
@@ -103,22 +110,43 @@
                   {id:'userReturn',text:'用户退换货',href:'search/config.html'}
                 ]
               }]
-          },{
+          },
+
+          {/*营销管理修改 ----june------start---*/
             id:'market_extend',
             menu:[{
                 text:'营销推广',
                 items:[
-                  {id:'packetType',text:'红包类型',href:'detail/code.html'},
-                  {id:'groupActivity',text:'团购活动',href:'detail/example.html'},
-                  {id:'specialManage',text:'专题管理',href:'detail/code.html'},
-                  {id:'cheapActivity',text:'优惠活动',href:'detail/example.html'},
-                  {id:'integralGoods',text:'积分商城商品',href:'detail/code.html'},
-                  {id:'clubCard',text:'会员卡管理',href:'detail/example.html'},
-                  {id:'integralManage',text:'积分卡管理',href:'detail/introduce.html'},
-                  {id:'goodsSeckill',text:'商品秒杀',href:'detail/introduce.html'}
+                  {id:'me-1-1',text:'红包类型',href:'marketExtend/me-1-1.html'},
+                  {id:'me-1-2',text:'团购活动',href:'marketExtend/me-1-2.html'},
+                  {id:'me-1-3',text:'专题管理',href:'marketExtend/me-1-3.html'},
+                  {id:'me-1-4',text:'优惠活动',href:'marketExtend/me-1-4.html'},
+                  {id:'me-1-5',text:'积分商城商品',href:'marketExtend/me-1-5.html'},
+                  {id:'me-1-6',text:'会员卡管理',href:'marketExtend/me-1-6.html'},
+                  {id:'me-1-7',text:'积分卡管理',href:'marketExtend/me-1-7.html'},
+                  {id:'me-1-8',text:'商品秒杀',href:'marketExtend/me-1-8.html'}
                 ]
-              }]
-          },{
+              },
+              {
+                text:'会员推荐管理',
+                items:[
+                  {id:'me-2-1',text:'推荐设置',href:'marketExtend/me-2-1.html'},
+                  {id:'me-2-2',text:'推荐分成设置',href:'marketExtend/me-2-1.html'},
+                  {id:'me-2-3',text:'优惠折扣卡分成管理',href:'marketExtend/me-2-1.html'},
+                  {id:'me-2-4',text:'优惠折扣卡',href:'marketExtend/me-2-1.html'},
+                ]
+              },
+               {
+                text:'邮件管理',
+                items:[
+                  {id:'me-3-1',text:'电子目录订阅管理',href:'marketExtend/me-3-1.html'},
+                  {id:'me-3-2',text:'群发邮件管理',href:'marketExtend/me-3-2.html'},
+                  {id:'me-3-3',text:'邮件队列管理',href:'marketExtend/me-3-3.html'},
+                ]
+              }
+              ]
+          /*营销管理修改 ----june------end---*/},
+          {
             id:'report_forms',
             menu:[{
                 text:'统计报表',
