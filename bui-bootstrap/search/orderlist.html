@@ -1,0 +1,213 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <title> 搜索表单</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+       <link href="../assets/css/dpl-min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/bui-min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/page-min.css" rel="stylesheet" type="text/css" /> 
+ </head>
+ <body>
+  
+  <div class="container">
+    <div class="row">
+      <form id="searchForm" class="form-horizontal span24">
+        <div class="row">
+          <div class="control-group span8">
+            <div class="controls">
+              <select  data-rules="{required:true}"  name="type" class="input-normal"> 
+                <option value="">订单号</option>
+                <option value="">下单会员名</option>
+                <option value="">商品名称</option>
+                <option value="">收货人</option>
+                <option value="">发货单号</option>
+                <option value="">联系人</option>
+              </select>
+            </div>
+            <input name="" type="text" data-rules="{required:true}" class="input-normal control-text" style="margin-left: 10px;">
+          </div>
+          <div class="control-group span8">
+            <label class="control-label">订单状态</label>
+            <div class="controls">
+              <select  data-rules="{required:true}"  name="type" class="input-normal"> 
+                <option value="">请选择</option>
+                <option value="">等待付款</option>
+                <option value="">已付款未配货</option>
+                <option value="">已付款配货中</option>
+                <option value="">已付款已配货</option>
+                <option value="">已发货</option>
+                <option value="">已完成</option>
+                <option value="">已退款</option>
+                <option value="">已作废</option>
+                <option value="">有退换</option>
+              </select>
+            </div>
+          </div>
+          <div class="span3 offset2">
+            <button  type="button" id="btnSearch" class="button button-primary">搜索</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="search-grid-container">
+      <div id="grid"></div>
+    </div>
+  </div>
+
+    <div id="content" class="hide">
+      <form id="J_Form" class="form-horizontal" action="../data/edit.php?a=1">
+        <input type="hidden" name="a" value="3">
+        <div class="row">
+          <div class="control-group span8">
+            <label class="control-label"><s>*</s>学生姓名</label>
+            <div class="controls">
+              <input name="name" type="text" data-rules="{required:true}" class="input-normal control-text">
+            </div>
+          </div>
+          <div class="control-group span8">
+            <label class="control-label"><s>*</s>学生性别</label>
+            <div class="controls">
+              <select  data-rules="{required:true}"  name="sex" class="input-normal"> 
+                <option value="">请选择</option>
+                <option value="1">男</option>
+                <option value="0">女</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="control-group span8">
+            <label class="control-label"><s>*</s>学生班级</label>
+            <div class="controls">
+              <input name="grad" type="grade" data-rules="{required:true}" class="input-normal control-text">
+            </div>
+          </div>
+          <div class="control-group span8">
+            <label class="control-label"><s>*</s>生日</label>
+            <div class="controls">
+              <input name="birthday" type="text" data-rules="{required:true}" class="calendar">
+            </div>
+          </div>
+          
+        </div>
+        <div class="row">
+          <div class="control-group span15">
+            <label class="control-label">学生家庭住址</label>
+            <div class="controls control-row4">
+              <textarea name="address" class="input-large" type="text"></textarea>
+            </div>
+          </div>
+        </div>
+      </form>
+
+    </div>
+
+
+  <script type="text/javascript" src="../assets/js/jquery-1.8.1.min.js"></script>
+  <script type="text/javascript" src="../assets/js/bui-min.js"></script>
+  <script type="text/javascript" src="../assets/js/config-min.js"></script>
+  <script type="text/javascript" src="../assets/js/myjs.js"></script> 
+  <script type="text/javascript">
+    BUI.use('common/page');
+  </script>
+
+<script type="text/javascript">
+  BUI.use('common/search',function (Search) {
+   
+      editing = new BUI.Grid.Plugins.DialogEditing({
+        contentId : 'content', //设置隐藏的Dialog内容
+        autoSave : true, //添加数据或者修改数据时，自动保存
+        triggerCls : 'btn-edit'
+      }),
+      columns = [
+          {title:'订单号',dataIndex:'id',width:135,renderer:function(v){
+            return Search.createLink({
+              id : 'detail' + v,
+              title : '订单信息',
+              text : v,
+              href : 'detail/example.html'
+            });
+          }},
+          {title:'下单时间',dataIndex:'orderM-0-0',width:90},
+          {title:'下单会员',dataIndex:'orderM-0-1',width:70},
+          {title:'商品分类',dataIndex:'orderM-0-2',width:70},
+          {title:'消费积分',dataIndex:'orderM-0-3',width:70},
+          {title:'等级积分',dataIndex:'orderM-0-4',width:70},
+          {title:'联系人',dataIndex:'orderM-0-5',width:50},
+          {title:'收货人',dataIndex:'orderM-0-6',width:70},
+          {title:'总金额',dataIndex:'orderM-0-7',width:70},
+          {title:'付款状态',dataIndex:'orderM-0-8',width:70},
+          {title:'支付方式',dataIndex:'orderM-0-9',width:135},
+          {title:'配送方式',dataIndex:'orderM-0-10',width:70},
+          {title:'发货状态',dataIndex:'orderM-0-11',width:70},
+          {title:'操作',dataIndex:'',width:50,renderer : function(value,obj){
+            var delStr = '<span class="grid-command btn-del" title="删除订单信息">删除</span>';//页面操作不需要使用Search.createLink
+            return editStr +  editStr1 + delStr;
+          }}
+        ],
+      store = Search.createStore('../data/order01.json',{
+        proxy : {
+          save : { //也可以是一个字符串，那么增删改，都会往那么路径提交数据，同时附加参数saveType
+            addUrl : '../data/add.json',
+            updateUrl : '../data/edit.json',
+            removeUrl : '../data/del.php'
+          }/*,
+          method : 'POST'*/
+        },
+        autoSync : true //保存数据后，自动更新
+      }),
+      gridCfg = Search.createGridCfg(columns,{
+        tbar : {
+          items : [
+            {text : '<i class="icon-plus"></i>新建',btnCls : 'button button-small',handler:addFunction},
+            {text : '<i class="icon-edit"></i>编辑',btnCls : 'button button-small',handler:function(){alert('编辑');}},
+            {text : '<i class="icon-remove"></i>删除',btnCls : 'button button-small',handler : delFunction}
+          ]
+        },
+        plugins : [editing,BUI.Grid.Plugins.CheckSelection,BUI.Grid.Plugins.AutoFit] // 插件形式引入多选表格
+      });
+
+    var  search = new Search({
+        store : store,
+        gridCfg : gridCfg
+      }),
+      grid = search.get('grid');
+
+    function addFunction(){
+      var newData = {isNew : true}; //标志是新增加的记录
+      editing.add(newData,'name'); //添加记录后，直接编辑
+    }
+
+    //删除操作
+    function delFunction(){
+      var selections = grid.getSelection();
+      delItems(selections);
+    }
+
+    function delItems(items){
+      var ids = [];
+      BUI.each(items,function(item){
+        ids.push(item.id);
+      });
+
+      if(ids.length){
+        BUI.Message.Confirm('确认要删除选中的记录么？',function(){
+          store.save('remove',{ids : ids});
+        },'question');
+      }
+    }
+
+    //监听事件，删除一条记录
+    grid.on('cellclick',function(ev){
+      var sender = $(ev.domTarget); //点击的Dom
+      if(sender.hasClass('btn-del')){
+        var record = ev.record;
+        delItems([record]);
+      }
+    });
+  });
+
+</script>
+
+<body>
+</html>  
