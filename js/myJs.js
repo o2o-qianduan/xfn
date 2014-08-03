@@ -1,3 +1,5 @@
+
+
  $(function(){
   YAO.YTabs({
          tabs: YAO.getElByClassName('YM-Tab', 'li', 'YMenu-side'),
@@ -752,9 +754,9 @@ $(this).attr("value","0");
      }
  }
 
- placeHolder(document.getElementById("loginname"), true)
- placeHolder(document.getElementById("pwd"), true)
- placeHolder(document.getElementById("ass_area"), true)
+ placeHolder(document.getElementById("loginname"), true);
+ placeHolder(document.getElementById("pwd"), true);
+ placeHolder(document.getElementById("ass_area"), true);
  /*************输入框默认显示文字***********eles****************end**************************/
 
 
@@ -768,7 +770,13 @@ $(this).attr("value","0");
         ___showbg:true,
         ___drag:"__boxTitle"
 
-        })
-    });
+        })});
 // 评价弹出框***bing***end***
+/***********产品列表页排序*********june*******start****/
+/*    $('.sort-item').toggle(function() {
+         $(this).find('img').attr("src", "images/up1.png");
+     }, function() {
+         $(this).find('img').attr("src", "images/down1.png");
+     });*/
+/***********产品列表页排序*********june*******end****/
 

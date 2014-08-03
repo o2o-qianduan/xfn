@@ -2300,11 +2300,33 @@ box-shadow: 2px 2px 5px #C0BBB5;
 	clear: both;
 	width: 203px !important;
 }
-
  .pro_course{
 	float: left;
 } 
-
+.pro_sort{
+	position: absolute;
+	float: right;
+	right: 0;
+	top: 0;
+	display: block;
+}
+.pro_sort span{
+	float: left;
+}
+.pro_sort .sort-item{
+	width: 70px;
+	border:1px solid #e6e6e6;
+	background: #ffffff;
+	text-align: center;
+	margin-left: 10px;
+	cursor: pointer;
+}
+.sort-item img{
+	position: relative;
+	float: right;
+	right: 2px;
+	top: 5px;
+}
 /*产品列表页底部图片切换****bing****start*****/
 .pro_bottom_pic0{
 	margin-top: 10px;

@@ -49,31 +49,6 @@
     padding: 0;
     position: relative;
 }
-
-*, *:before, *:after {
-    box-sizing: border-box;
-}
-*, *:before, *:after {
-    box-sizing: border-box;
-}
-.bui-menu {
-    -moz-border-bottom-colors: none;
-    -moz-border-left-colors: none;
-    -moz-border-right-colors: none;
-    -moz-border-top-colors: none;
-    background-color: #f2f2f2;
-    border-color: #ccc;
-    border-image: none;
-    border-style: solid;
-    border-width: 0 1px 0 0;
-    float: left;
-    position: relative;
-    width: 190px;
-}
-*:before, *:after {
-    box-sizing: border-box;
-}
-
 .bui-menu {
     left: -250px;
     position: absolute;
