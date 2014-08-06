@@ -16,12 +16,12 @@
           <div class="control-group span8">
             <div class="controls">
               <select  data-rules="{required:true}"  name="type" class="input-normal"> 
-                <option value="">订单号</option>
                 <option value="">下单会员名</option>
                 <option value="">商品名称</option>
                 <option value="">收货人</option>
                 <option value="">发货单号</option>
                 <option value="">联系人</option>
+                <option value="">订单号</option>
               </select>
             </div>
             <input name="" type="text" data-rules="{required:true}" class="input-normal control-text" style="margin-left: 10px;">
@@ -30,7 +30,6 @@
             <label class="control-label">订单状态</label>
             <div class="controls">
               <select  data-rules="{required:true}"  name="type" class="input-normal"> 
-                <option value="">请选择</option>
                 <option value="">等待付款</option>
                 <option value="">已付款未配货</option>
                 <option value="">已付款配货中</option>
@@ -40,6 +39,7 @@
                 <option value="">已退款</option>
                 <option value="">已作废</option>
                 <option value="">有退换</option>
+                <option value="">请选择</option>
               </select>
             </div>
           </div>
@@ -53,56 +53,6 @@
       <div id="grid"></div>
     </div>
   </div>
-
-    <div id="content" class="hide">
-      <form id="J_Form" class="form-horizontal" action="../data/edit.php?a=1">
-        <input type="hidden" name="a" value="3">
-        <div class="row">
-          <div class="control-group span8">
-            <label class="control-label"><s>*</s>学生姓名</label>
-            <div class="controls">
-              <input name="name" type="text" data-rules="{required:true}" class="input-normal control-text">
-            </div>
-          </div>
-          <div class="control-group span8">
-            <label class="control-label"><s>*</s>学生性别</label>
-            <div class="controls">
-              <select  data-rules="{required:true}"  name="sex" class="input-normal"> 
-                <option value="">请选择</option>
-                <option value="1">男</option>
-                <option value="0">女</option>
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="control-group span8">
-            <label class="control-label"><s>*</s>学生班级</label>
-            <div class="controls">
-              <input name="grad" type="grade" data-rules="{required:true}" class="input-normal control-text">
-            </div>
-          </div>
-          <div class="control-group span8">
-            <label class="control-label"><s>*</s>生日</label>
-            <div class="controls">
-              <input name="birthday" type="text" data-rules="{required:true}" class="calendar">
-            </div>
-          </div>
-          
-        </div>
-        <div class="row">
-          <div class="control-group span15">
-            <label class="control-label">学生家庭住址</label>
-            <div class="controls control-row4">
-              <textarea name="address" class="input-large" type="text"></textarea>
-            </div>
-          </div>
-        </div>
-      </form>
-
-    </div>
-
-
   <script type="text/javascript" src="../assets/js/jquery-1.8.1.min.js"></script>
   <script type="text/javascript" src="../assets/js/bui-min.js"></script>
   <script type="text/javascript" src="../assets/js/config-min.js"></script>
@@ -137,10 +87,26 @@
           {title:'收货人',dataIndex:'orderM-0-6',width:70},
           {title:'总金额',dataIndex:'orderM-0-7',width:70},
           {title:'付款状态',dataIndex:'orderM-0-8',width:70},
-          {title:'支付方式',dataIndex:'orderM-0-9',width:135},
-          {title:'配送方式',dataIndex:'orderM-0-10',width:70},
+          {title:'支付方式',dataIndex:'orderM-0-9',width:80},
+          {title:'配送方式',dataIndex:'orderM-0-10',width:85},
           {title:'发货状态',dataIndex:'orderM-0-11',width:70},
-          {title:'操作',dataIndex:'',width:50,renderer : function(value,obj){
+          {title:'打印',dataIndex:'',width:50, renderer: function(bv){
+            var printorder = Search.createLink({
+              id : 'detail' + bv,
+              title : '订单',
+              text : '订',
+              href : 'detail/example.html'
+            });
+            var printpost = Search.createLink({
+              id : 'detaildd' + bv,
+              title : '发货单',
+              text : '递',
+              href : 'detail/example.html'
+            });
+            return printorder+printpost;
+          }
+        },
+          {title:'操作',dataIndex:'',width:50 ,renderer: function(value,obj){
             var delStr = '<span class="grid-command btn-del" title="删除订单信息">删除</span>';//页面操作不需要使用Search.createLink
             return delStr;
           }}
@@ -159,8 +125,8 @@
       gridCfg = Search.createGridCfg(columns,{
         tbar : {
           items : [
-            {text : '<i class="icon-plus"></i>新建',btnCls : 'button button-small',handler:addFunction},
-            {text : '<i class="icon-edit"></i>编辑',btnCls : 'button button-small',handler:function(){alert('编辑');}},
+            // {text : '<i class="icon-plus"></i>新建',btnCls : 'button button-small',handler:addFunction},
+            // {text : '<i class="icon-edit"></i>编辑',btnCls : 'button button-small',handler:function(){alert('编辑');}},
             {text : '<i class="icon-remove"></i>删除',btnCls : 'button button-small',handler : delFunction}
           ]
         },
@@ -173,10 +139,10 @@
       }),
       grid = search.get('grid');
 
-    function addFunction(){
-      var newData = {isNew : true}; //标志是新增加的记录
-      editing.add(newData,'name'); //添加记录后，直接编辑
-    }
+    // function addFunction(){
+    //   var newData = {isNew : true}; //标志是新增加的记录
+    //   editing.add(newData,'name'); //添加记录后，直接编辑
+    // }
 
     //删除操作
     function delFunction(){
