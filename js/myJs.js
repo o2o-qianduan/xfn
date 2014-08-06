@@ -1,3 +1,5 @@
+
+ 
  $(function() {
      $("#tabs").tabs();
  })
@@ -529,3 +531,10 @@ $(function(){
 /***********产品列表页排序*********june*******end***/
 
 
+ $(function(){
+    YAO.YTabs({
+    tabs: YAO.getElByClassName('YM-Tab', 'li', 'YMenu-side'),
+    contents: YAO.getElByClassName('YM-submnu', 'ul', 'YMenu-side'),
+    hideAll: true
+  });
+ })

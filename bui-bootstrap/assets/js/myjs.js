@@ -5,4 +5,4 @@ $('.selectlist2 #shift_1').live('click',function(){
               var $optionvalue = myoption;
               var $appendop = $('#multiple2 option:last').append($optionvalue);      
               $('#multiple1 option:selected').remove();
-})
+})                                                                                
