@@ -1,5 +1,3 @@
-
-
 // 会员页效果***bing***start***
 $(function(){
 

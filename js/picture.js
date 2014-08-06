@@ -1,13 +1,3 @@
-/***********产品列表页排序*********june*******start****/
-$(function(){
-    $('.sort-item').toggle(function() {
-         $(this).find('img').attr("src", "images/up1.png");
-     }, function() {
-         $(this).find('img').attr("src", "images/down1.png");
-    });
-})   
-/***********产品列表页排序*********june*******end****/
-
 /***********首页最顶端图片向左向右切换**********bing********start************/
 $(function(){
     var page = 1;

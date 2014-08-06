@@ -2316,16 +2316,17 @@ box-shadow: 2px 2px 5px #C0BBB5;
 .pro_sort .sort-item{
 	width: 70px;
 	border:1px solid #e6e6e6;
-	background: #ffffff;
 	text-align: center;
 	margin-left: 10px;
 	cursor: pointer;
 }
-.sort-item img{
-	position: relative;
-	float: right;
-	right: 2px;
-	top: 5px;
+.sort-up{
+	background: url(../images/up1.png) no-repeat right 5px #ffffff;
+	right: 0;
+}
+.sort-down{
+	background: url(../images/down1.png) no-repeat right 5px #ffffff;
+	right: 0;
 }
 /*产品列表页底部图片切换****bing****start*****/
 .pro_bottom_pic0{
@@ -2848,5 +2849,4 @@ box-shadow: 2px 2px 5px #C0BBB5;
 .s0-01-detail,.s0-01-price,.s0-buy,.s0-buyNum{
 	float: left;
 }
-
 /*************产品列表页*****左边栏样式*************june***************end*******/

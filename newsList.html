@@ -12,6 +12,13 @@
   <script src="js/jquery-ui.js"></script>
   <script type="text/javascript" src="js/myJs.js"></script>
   <script type="text/javascript" src="js/yao.js"></script>
+  <script type="text/javascript">
+YAO.YTabs({
+    tabs: YAO.getElByClassName('YM-Tab', 'li', 'YMenu-side'),
+    contents: YAO.getElByClassName('YM-submnu', 'ul', 'YMenu-side'),
+    hideAll: true
+  });
+</script>
 </head>
 <body>
   <!-- 整个容器 -->
@@ -348,7 +355,7 @@
             <li class="rankOption rankOn0"><span id="ranklist" class="ranklist"><a href="#rank-0">排行榜</a></span></li>
           <li class="rankOption"><span id="ask_answer" class="ask_answer"><a href="#rank-1">问答</a></span></li>
           </ul>
-        </div
+        </div>
         <div id="rank-area">
           <div id="rank-0" class="rank-0 rankOn-0" >
             <ul class="rank-ul">
@@ -471,11 +478,5 @@ Copyright © 广州新富农农业科技有限公司
 
 </div>
 </body>
-<script type="text/javascript">
-YAO.YTabs({
-    tabs: YAO.getElByClassName('YM-Tab', 'li', 'YMenu-side'),
-    contents: YAO.getElByClassName('YM-submnu', 'ul', 'YMenu-side'),
-    hideAll: true
-  });
-</script>
+
 </html>
