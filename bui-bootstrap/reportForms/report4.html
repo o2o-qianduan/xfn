@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <title>销售概况</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+       <link href="../assets/css/dpl-min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/bui-min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/page-min.css" rel="stylesheet" type="text/css" /> 
+    <script type="text/javascript" src="../assets/js/jquery-1.8.1.min.js"></script>
+    <script type="text/javascript" >
+//<![CDATA[
+  $(function(){
+      var $div_li =$("div.tab_menu ul li");
+      $div_li.click(function(){
+      $(this).addClass("selected")            //当前<li>元素高亮
+           .siblings().removeClass("selected");  //去掉其它同辈<li>元素的高亮
+            var index =  $div_li.index(this);  // 获取当前点击的<li>元素 在 全部li元素中的索引。
+      $("div.tab_box > div")    //选取子节点。不选取子节点的话，会引起错误。如果里面还有div 
+          .eq(index).show()   //显示 <li>元素对应的<div>元素
+          .siblings().hide(); //隐藏其它几个同辈的<div>元素
+    }).hover(function(){
+      $(this).addClass("hover");
+    },function(){
+      $(this).removeClass("hover");
+    })
+  })
+//]]>
+</script>
+ </head>
+ <body>
+  
+  <div class="container">
+
+    <div class="row header">
+      <p>销售概况</p>
+    </div>
+    <div class="row">
+      <form id="searchForm" class="form-horizontal span24">
+       
+        <div class="row">
+          <div class="control-group">
+            <label class="control-label">年走势：</label>
+            <div class="controls yearoption">
+              <select name="" id="">
+                <option value="">2008</option>
+                <option value="">2009</option>
+                <option value="">2010</option>
+                <option value="">2011</option>
+              </select>
+              <span> - </span>
+              <select name="" id="">
+                <option value="">2009</option>
+                <option value="">2010</option>
+                <option value="">2011</option>
+                <option value="">2012</option>
+              </select>
+            </div>
+            <div class="span3 offset2">
+               <button  type="button" id="btnSearch" class="button button-primary">查询</button>
+            </div>
+          </div>          
+        </div>
+
+        <div class="row">
+          <div class="control-group">
+            <label class="control-label">月走势：</label>
+            <div class="controls yearoption">
+              <select name="" id="">
+                <option value="">2008</option>
+                <option value="">2009</option>
+                <option value="">2010</option>
+                <option value="">2011</option>
+              </select>
+              <select name="" id="">
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+                <option value="">4</option>
+              </select>
+              <span> - </span>
+              <select name="" id="">
+                <option value="">2009</option>
+                <option value="">2010</option>
+                <option value="">2011</option>
+                <option value="">2012</option>
+              </select>
+              <select name="" id="">
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+                <option value="">4</option>
+              </select>
+            </div>
+            <div class="span3 offset2">
+               <button  type="button" id="btnSearch" class="button button-primary">查询</button>
+            </div>
+          </div>          
+        </div>
+      </form>
+    </div>
+
+    <div class="row">   
+      <div class="tab">
+        <div class="tab_menu">
+           <ul>
+               <li class="selected">订单走势</li>
+               <li>销售额走势</li>
+               
+           </ul>
+        </div>
+        <div class="tab_box"> 
+           <div>订单</div>
+           <div class="hide">销售额</div>
+          
+       </div>
+     </div>
+    </div>
+  </div>
+
+ 
+
+</body>
+</html>  
