@@ -1,3 +1,4 @@
+// 会员页效果***bing***start***
 $(function(){
 
 	// 绑定手机
@@ -34,18 +35,61 @@ $(function(){
 								   .attr("disabled","disabled");
 		$(this).css("background-color","#B8B8B8");
 	});
+
+	// 评价弹出框***bing***begin***
+ $(".reply_btn").live('click',function(){
+        $.XYTipsWindow({
+        ___title:"回复",
+        ___content:"iframe:answer.html",
+        ___width:"460",
+        ___height:"200",
+        ___showbg:true,
+        ___drag:"__boxTitle"
+
+        })
+    });
+// 评价弹出框***bing***end***
 })
 
+//跟踪包裹弹出框
+$.ui.tooltip.prototype._create = function() {
+  this._on({
+    click: "open",      //覆盖tooltip的原型使打开由原本的hover变成click
+    focusin: "open"
+  });
+  this.tooltips = {};
+  this.parents = {};
+  if ( this.options.disabled ) {
+    this._disable();
+  }
+}
 $(function(){
-	var alen=$(".per_center ul li").length;
-	$('.per_center ul li a').click(function(){
-	var href=$(this).attr("href").toString();
-	for(var i=0;i<alen;i++){
-		var a_=$(".per_center ul li a").eq(i);
-		var a_text=$(a_).attr("href").toString()
-		if(a_text!=href)
-			$(a_text).css("display","none");//非当前点击对象则隐藏
-	}
-	$(href).css("display","block");     //为当前点击对象则展示
-	}) 
+  var content = renderTooltip();
+  var tooltipCtl = $(".myorder_state a").tooltip({  //初始化tooltip
+    content: content,
+    tooltipClass: "my_tooltip",         //这个框容器的css的class， 内容的css可以自己写在外面那个content
+    position: {                 //定位
+      my: "right top+10",
+      at: "right bottom",
+      collision: "flipfit flip"
+    },
+    open: function() {    //每次显示tooltip的时候触发的函数
+        $(".tooltipClose").unbind("click").bind("click",function() {
+          tooltipCtl.tooltip( "close" );    //绑定关闭按钮  绑定前要先unbind解除绑定
+        })
+     }
+  })
 })
+
+function renderTooltip(){
+  var content = '<div class="fr tooltipClose" style="margin-top: -20px;">\
+					<img src="images/deletebtn.jpg">\
+  				 </div><!-- / -->\
+  				 <div style="margin: 20px 15px auto 7px;">\
+  				 	<ul>\
+  				 	<li>2014-07-09 15:59:12 提交订单</li>\
+                    <li>2014-07-14 03:00:00 用户取消了订单</li>\
+                    </ul>\
+  				 </div><!-- / -->';        //那个框里面要什么内容加在这里
+  return content;
+}

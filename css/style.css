@@ -22,7 +22,7 @@
 .ui-widget-header a { color: #ffffff/*{fcHeader}*/; }
 .tabs-list{
 	background: repeat-x scroll center top #60b800;
-	font-family: "新宋体";
+	font-family: 'NSimSun','新宋体';
     font-size: 14px;
     font-weight: bold;
     padding-left: 5px ;
@@ -35,7 +35,7 @@
 .ui-tabs .ui-tabs-nav li a {
     float: left;
     text-decoration: none;
-    font-family: "新宋体";
+    font-family: 'NSimSun','新宋体';
     font-size: 14px;
     font-weight: bold;
     color: #ffffff;
@@ -68,7 +68,7 @@
 /******************************特惠专区、新鲜蔬菜部分修改Jquery插件tabs样式**************june******start*********/
 .shelf-02-right{
 	background: none;
-	font-family: "微软雅黑";
+	font-family: 'Microsoft YaHei','微软雅黑';
     font-size: 16px;
     padding-left: 5px ; 
     width: 975px;
@@ -130,10 +130,14 @@
 	color: red;
 }
 .s0-01-detail{
-	font-family: "宋体";
+	font-family: 'SimSun','宋体';
 	font-size: 12px;
-	height: 50px;
+	height: 40px;
 	line-height: 50px;
+}
+.s0-01-price{
+	width: 100%;
+	margin-top: 10px;
 }
 .s0-01-price span{
 	color: red;
@@ -160,34 +164,35 @@
 	vertical-align: middle;
 	line-height:28px;
 	color:#6ab312;
-	
+	border-radius: 4px;
+	box-shadow: 2px 11px 5px #ddd inset, 1px 1px 1px #ddd;
 	font-size: 30px;
-
+	font-weight: bold;
 	border:solid 1px #a7a6ab;
 	cursor: pointer;
-
 }
 .num-option:hover{
 	background:url(../image/alick.gif) 0 -28px repeat-x; color:#149d0e;
 }
 input.num-each{
-	vertical-align: middle;
-	width:35px;
-	height: 25px;
-	line-height: 25px;
-	background:#fff;
-	text-align: center;
-	float: left;
-	padding: 0 2px;
-	font-weight: bold;
-	border-radius: 4px;
-	box-shadow: 2px 11px 5px #ddd inset, 1px 1px 1px #ddd;
-	margin: 0 3px;
+	 background: none repeat scroll 0 0 #fff;
+    border-radius: 4px;
+    box-shadow: 2px 11px 5px #ddd inset, 1px 1px 1px #ddd;
+    float: left;
+    font-weight: bold;
+    height: 28px;
+    line-height: 28px;
+    margin: 0 3px;
+    padding: 0 2px;
+    text-align: center;
+    vertical-align: middle;
+    width: 35px;
 }
 .s0-buy{
 	display: block;
-	width: 34px;
+	width: 100%;
 	position: relative;
+	margin-top: 10px;
 }
 .s0-buyNum{
 	margin-left: 6px;
@@ -201,7 +206,7 @@ input.num-each{
 	height: 32px;
 	position: absolute;
 	top: 0px;
-	right: -155px;
+	right: 5px;
 	line-height: 32px;
 	background:repeat scroll top center #64b800;
 	border-radius: 2px;
@@ -251,7 +256,7 @@ input.num-each{
 	color: #000000;
 	text-decoration: none;	
 	font-size: 12px;
-	font-family: "宋体";
+	font-family: 'SimSun','宋体';
 }
 .news-ul a:hover{
 	color: red;
@@ -301,7 +306,7 @@ input.num-each{
 	color: #000000;
 	text-decoration: none;	
 	font-size: 12px;
-	font-family: "宋体";
+	font-family: 'SimSun','宋体';
 }
 .da-ul a:hover{
 	color: red;
@@ -354,7 +359,7 @@ input.num-each{
 .da-0-title{
 	float: left;
 	font-size: 12px;
-	font-family: "宋体";
+	font-family: 'SimSun','宋体';
 	margin-top: 10px;
 	height: 30px;
 }
@@ -476,7 +481,7 @@ input.num-each{
 	color: #000000;
 	text-decoration: none;	
 	font-size: 12px;
-	font-family: "宋体";
+	font-family: 'SimSun','宋体';
 }
 .pro-ul a:hover{
 	color: red;
@@ -529,7 +534,7 @@ input.num-each{
 .pro-0-title{
 	float: left;
 	font-size: 12px;
-	font-family: "宋体";
+	font-family: 'SimSun','宋体';
 	margin-top: 10px;
 	height: 30px;
 }
@@ -578,7 +583,7 @@ input.num-each{
 	color: #999999;
 	border-bottom: 1px solid #e7e6e6;
 	font-size: 14px;
-	font-family: "宋体";
+	font-family: 'SimSun','宋体';
 }
 #rankList .rankBox li {
 	float: left;
@@ -592,7 +597,6 @@ input.num-each{
 	width: 90%;
 	top: 0px;
 	position: relative;
-
 }
 .rank-ul{
 	margin: 10px auto;
@@ -607,7 +611,7 @@ input.num-each{
 	 color: #666666;
 	text-decoration: none;	
 	font-size: 12px;
-	font-family: "宋体";
+	font-family: 'SimSun','宋体';
 }
 .rank-ul a:hover{
 	color: red;
@@ -626,6 +630,86 @@ input.num-each{
 .rankOn-0,.rankOn-1{
 	display: block;
 }
-
 /*****************资讯列表页“排行榜、问答”部分修改Jquery插件tabs样式*******june********end***********/
-
+/*****************激活礼品卡“未用完、已用完、已过期”部分修改Jquery插件tabs样式*******june********start***********/
+.useBox {
+	margin-top: 50px;
+	position: relative;
+	margin-left: 0px;
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	background: repeat-x scroll center top #ffffff;
+	padding-left: 37px;
+	border-bottom: 1px solid #e7e6e6;
+	font-size: 14px;
+	font-family: 'SimSun','宋体';
+}
+#useList .useBox li {
+	float: left;
+	width: 120px;
+	text-align: center;	
+	margin-left: 15px;
+	border-radius: 6px;
+	background: repeat-x scroll center top #fafafa;
+	border:1px solid #e7e6e6;
+}
+.use-0,.use-1,.use-2  {
+	display: none;
+	border:1px solid #ffffff;
+	margin-left: 20px;
+	width: 90%;
+	top: 0px;
+	position: relative;
+}
+.use-ul{
+	display: block;
+	margin-top: 10px;
+	width: 100%;	
+	border-collapse: collapse;
+}
+.use-ul tr{
+	text-align: center;
+	height: 40px;
+	line-height: 40px;
+}
+.use-ul tr:first-child{
+	background: #f5f5f5;
+	height: 35px;
+	line-height: 35px;
+}
+.use-ul td{
+	border:1px solid #e7e6e6;
+}
+.use-ul td:first-child{
+	width: 180px;
+}
+.use-ul td:nth-child(2){
+	width: 150px;
+}
+.use-ul td:nth-child(3){
+	width: 150px;
+}
+.use-ul td:last-child{
+	width: 270px;
+}
+.order_num{
+	width: 185px;
+}
+.useOption a{
+	text-decoration: none;
+	width: 100%;
+	color: #666666;
+}
+.useOn0,.useOn1,.useOn2 {
+	background:#ffffff!important;
+	border-bottom: 1px solid #ffffff;
+	font-weight: bold;	
+}
+.useOn0 a,.useOn1 a,.useOn2 a{
+	color: #77be22;
+}
+.useOn-0,.useOn-1,.useOn-2{
+	display: block;
+}
+/*****************激活礼品卡“未用完、已用完、已过期”部分修改Jquery插件tabs样式*******june********start***********/

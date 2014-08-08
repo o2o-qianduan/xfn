@@ -6,10 +6,19 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=9,IE=10">
   <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
-  <script type="text/javascript" src="js/change.js"></script>
   <link rel="stylesheet" href="css/jquery-ui.css">
   <link rel="stylesheet" type="text/css" href="css/manhuaDate.1.0.css">
-  <link rel="stylesheet" href="css/style.css">  
+  <link rel="stylesheet" href="css/style.css"> 
+  <link rel="stylesheet" type="text/css" href="css/product.css" />
+  <script src="js/jquery-1.8.2.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script type="text/javascript" src="js/myJs.js"></script>
+  <script type="text/javascript" src="js/picture.js"></script>
+  <script type="text/javascript" src="js/jquery.imagezoom.min.js"></script>
+  <script type="text/javascript" src="js/yao.js"></script>
+  <script type="text/javascript" src="js/member.js"></script>
+  <script type="text/javascript" src="js/manhuaDate.1.0.js"></script> 
+  <script type="text/javascript" src="js/jquery.XYTipsWindow.min.2.8.js"></script>
  <!--[if IE]>
 <style type="text/css">?
 
@@ -23,30 +32,37 @@
 }
 </style>
 <![endif]-->
-  <script src="js/jquery-1.8.2.js"></script>
-  <script src="js/jquery-ui.js"></script>
-  <script type="text/javascript" src="js/myJs.js"></script>
-  <script type="text/javascript" src="js/picture.js"></script>
-  <script type="text/javascript" src="js/jquery.imagezoom.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="css/product.css" />
-  <script language="javascript" type="text/javascript" src="js/yao.js"></script>
-  <script type="text/javascript" src="js/member.js"></script>
-  <script type="text/javascript" src="js/manhuaDate.1.0.js"></script>
+
 
   <script type="text/javascript">
-  $(function (){
-   $("input.mh_date").manhuaDate({                
-     Event : "click",//可选               
-     Left : 0,//弹出时间停靠的左边位置
-     Top : -16,//弹出时间停靠的顶部边位置
-     fuhao : "-",//日期连接符默认为-
-     isTime : false,//是否开启时间值默认为false
-     beginY : 1949,//年份的开始默认为1949
-     endY :2015//年份的结束默认为2049
-   });
-  
-});
-</script>
+    $(function (){
+     $("input.mh_date").manhuaDate({                
+       Event : "click",//可选               
+       Left : 0,//弹出时间停靠的左边位置
+       Top : -16,//弹出时间停靠的顶部边位置
+       fuhao : "-",//日期连接符默认为-
+       isTime : false,//是否开启时间值默认为false
+       beginY : 1949,//年份的开始默认为1949
+       endY :2015//年份的结束默认为2049
+    }); 
+  });
+  </script>
+
+  <style>
+    .my_tooltip{               /*弹窗样式*/
+       font-size: 12px;
+       color: #666;
+       font-family: "宋体";
+       border: 1px solid #e1e1e1;
+       box-shadow: none;
+       -webkit-box-shadow: none;
+       border-width: 1px;
+    }
+    .my_tooltip li{
+       line-height: 20px;
+       word-break: break-all;
+    } 
+   </style>
 </head>
 <body>
 <!-- 整个容器 -->
@@ -316,96 +332,42 @@
             <div class="current_list">
               <ul>
                 <li><a href="#tab-3-1">我的资料</a></li>
-                <li><a href="#tab-3-2">修改地址</a></li>
-                <li><a href="#tab-3-2">密码管理</a></li>
+                <li><a href="#tab-3-2">收获地址</a></li>
+                <li><a href="#tab-3-3">密码管理</a></li>
               </ul>
             </div>
           </div>
         </div>
-
-        <!-- 签到记录 -->
-        <div class="right_div" id="tab-2-1" style="display:none;">
-          <p>签到记录</p>
+        <!-- 我的订单 --><!-- myOrder.html -->
+        <div class="right_div" id="tab-1-1" style="display:none;">
+                   <p>我的订单</p>
           <span class="right_div_underline"></span>
-            <div class="right_div_up">
-              <div class="fl sign_in_left">
-                <span class="green_font">签到奖励<br /></span>
-                <span>每次签到一次可获得10积分</span>
-              </div>
-              <div class="fr sign_in_right">
-                <a href="#"><img src="images/signIn2.png" ></a>
-              </div>
-          </div>
           <div class="right_div_table">
-            <span class="tb_title">签到积分记录</span>
-            <table class="tb_th" style="width: 533px;">
-              <tr>
-                <th style="width:180px;">签到日期</th>
-                <th style="width:350px;">奖励积分</th>
-              </tr>
+            <table class="tb_th">
+                <tr>
+                  <th style="width: 290px;text-align: left;padding-left: 40px;">全部订单</th>
+                  <th style="width: 125px;">总金额</th>
+                  <th style="width: 110px;">收货人</th>
+                  <th style="width: 115px;">下单时间</th>
+                  <th style="width: 125px;">订单状态</th>
+                  <th style="width: 115px;">操作</th>
+                </tr>
             </table>
-            <table >
-              <tr>
-                <td class="first_td" style="width:180px;">2014-08-11</td>
-                <td style="width:350px;">1000</td>
-              </tr>
-            </table>
+
+            <div class="_page_">
+              <ul>
+                <li class="up_page"><a><img src="images/PgUp.png">上一页</a></li>
+                <li><a>1</a></li>
+                <li class="current_page"><a>2</a></li>
+                <li><a>3</a></li>
+                <li><a>4</a></li>
+                <li><a>5</a></li>
+                <li class="down_page"><a>下一页<img src="images/PgDn.png"></a></li>
+              </ul>
+            </div>
           </div>
-        </div><!-- 我的签到结束 -->
-        <!-- 我的积分 -->
-        <div class="right_div"  id="tab-2-2" style="display:none;">
-          <p>我的积分</p>
-          <span class="right_div_underline"></span>
-            <div class="right_div_up">
-              <div class="my_integral">
-                <div class="recent_inte">您当前的积分是：<span>225</span></div>
-              </div>
-            </div>
-            <div class="right_div_table">
-              <span class="tb_title">积分变动详单</span>
-              <table class="tb_th">
-                <tr>
-                  <th>签到日期</th>
-                  <th>等级积分变动</th>
-                  <th>消费积分变动 </th>
-                  <th>账户余额变动</th>
-                  <th>原因</th>
-                </tr>
-              </table>
-              <table class="integral_table">
-                <tr>
-                  <td class="first_td">2014-08-11</td>
-                  <td>+1000</td>
-                  <td>+1000</td>
-                  <td>0.00</td>
-                  <td class="first_td changeReason">每日签到</td>
-                </tr>
-                <tr>
-                  <td class="first_td">2014-08-11</td>
-                  <td>+1000</td>
-                  <td>+1000</td>
-                  <td>0.00</td>
-                  <td class="first_td changeReason">每日签到</td>
-                </tr>
-                <tr>
-                  <td class="first_td">2014-08-11</td>
-                  <td>+1000</td>
-                  <td>+1000</td>
-                  <td>0.00</td>
-                  <td class="first_td changeReason">每日签到</td>
-                </tr>
-                <tr>
-                  <td class="first_td">2014-08-11</td>
-                  <td>+1000</td>
-                  <td>+1000</td>
-                  <td>0.00</td>
-                  <td class="first_td changeReason">每日签到</td>
-                </tr>
-              </table>
-            </div>
-            <div class="_page_">&nbsp;分页</div>
-        </div><!-- 我的签到结束 -->
-        <!-- 我的评价 -->
+        </div><!-- 我的订单结束 -->
+        <!-- 商品评价 --><!-- productEvaluation.html -->
          <div class="right_div" id="tab-1-2" style="display:none">
             <div class="SmenuTitle clearfix">
             <ul id="assess_nav">
@@ -424,96 +386,25 @@
                 </tr>
               </table>
               <table class="assess_table">
+
+                <volist name="productList" id="p"> 
                 <tr>
                   <td class="first_td" style="width:220px;">
-                    <span>2014-08-11<br /></span>
-                    <span>订单号：728752426306487</span>
+                    <span><{$p.date}><br /></span>
+                    <span>订单号：<{$p.code}></span>
                   </td>
                   <td class="assess_goods" style="width:560px;">
                     <div>
                       <img src="images/icon55_.png" align="top" />
-                      <span>奶白菜 300g/包</span>
+                      <span><{$p.name}></span>
                     </div>
                   </td>
                   <td style="width:270px;">
                     <div class="assess_btn">评价</div>
                   </td>
                 </tr>
-                <tr>
-                  <td class="first_td">
-                    <span>2014-08-11<br /></span>
-                    <span>订单号：728752426306487</span>
-                  </td>
-                  <td class="assess_goods">
-                    <div>
-                      <img src="images/icon55_.png" align="top" />
-                      <span>奶白菜 300g/包</span>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="assess_btn">评价</div>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="first_td">
-                    <span>2014-08-11<br /></span>
-                    <span>订单号：728752426306487</span>
-                  </td>
-                  <td class="assess_goods">
-                    <div>
-                      <img src="images/icon55_.png" align="top" />
-                      <span>奶白菜 300g/包</span>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="assess_btn">评价</div>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="first_td">
-                    <span>2014-08-11<br /></span>
-                    <span>订单号：728752426306487</span>
-                  </td>
-                  <td class="assess_goods">
-                    <div>
-                      <img src="images/icon55_.png" align="top" />
-                      <span>奶白菜 300g/包</span>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="assess_btn">评价</div>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="first_td">
-                    <span>2014-08-11<br /></span>
-                    <span>订单号：728752426306487</span>
-                  </td>
-                  <td class="assess_goods">
-                    <div>
-                      <img src="images/icon55_.png" align="top" />
-                      <span>奶白菜 300g/包</span>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="assess_btn">评价</div>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="first_td">
-                    <span>2014-08-11<br /></span>
-                    <span>订单号：728752426306487</span>
-                  </td>
-                  <td class="assess_goods">
-                    <div>
-                      <img src="images/icon55_.png" align="top" />
-                      <span>奶白菜 300g/包</span>
-                    </div>
-                  </td>
-                  <td >
-                    <div class="assess_btn">评价</div>
-                  </td>
-                </tr>
+                </volist>
+
               </table>
             </div>
           </div>
@@ -566,12 +457,115 @@
                 </table>
             </div>
           </div>
-          <div class="_page_">&nbsp;分页</div>
+          <div class="_page_">
+              <ul>
+                <li class="up_page"><a><img src="images/PgUp.png">上一页</a></li>
+                <li><a>1</a></li>
+                <li class="current_page"><a>2</a></li>
+                <li><a>3</a></li>
+                <li><a>4</a></li>
+                <li><a>5</a></li>
+                <li class="down_page"><a>下一页<img src="images/PgDn.png"></a></li>
+              </ul>
+            </div>
          </div>
-         </div>
-        <!-- 个人资料 -->
+         </div><!-- 商品评价结束 -->
+        <!-- 签到记录 --><!-- attendanceRecordss.html -->
+        <div class="right_div" id="tab-2-1" style="display:none;">
+                    <p>签到记录</p>
+          <span class="right_div_underline"></span>
+            <div class="right_div_up">
+              <div class="fl sign_in_left">
+                <span class="green_font">签到奖励<br /></span>
+                <span>每次签到一次可获得10积分</span>
+              </div>
+              <div class="fr sign_in_right">
+                <a href="#"><img src="images/signIn2.png" ></a>
+              </div>
+          </div>
+          <div class="right_div_table">
+            <span class="tb_title">签到积分记录</span>
+            <table class="tb_th" style="width: 533px;">
+              <tr>
+                <th style="width:180px;">签到日期</th>
+                <th style="width:350px;">奖励积分</th>
+              </tr>
+            </table>
+            <table >
+              <tr>
+                <td class="first_td" style="width:180px;">2014-08-11</td>
+                <td style="width:350px;">1000</td>
+              </tr>
+            </table>
+          </div>
+        </div><!-- 签到记录结束 -->
+        <!-- 我的积分 --><!-- myPoints.html -->
+        <div class="right_div"  id="tab-2-2" style="display:none;">
+           <p>我的积分</p>
+          <span class="right_div_underline"></span>
+            <div class="right_div_up">
+              <div class="my_integral">
+                <div class="recent_inte">您当前的积分是：<span>225</span></div>
+              </div>
+            </div>
+            <div class="right_div_table">
+              <span class="tb_title">积分变动详单</span>
+              <table class="tb_th">
+                <tr>
+                  <th>签到日期</th>
+                  <th>等级积分变动</th>
+                  <th>消费积分变动 </th>
+                  <th>账户余额变动</th>
+                  <th>原因</th>
+                </tr>
+              </table>
+              <table class="integral_table">
+                <tr>
+                  <td class="first_td">2014-08-11</td>
+                  <td>+1000</td>
+                  <td>+1000</td>
+                  <td>0.00</td>
+                  <td class="first_td changeReason">每日签到</td>
+                </tr>
+                <tr>
+                  <td class="first_td">2014-08-11</td>
+                  <td>+1000</td>
+                  <td>+1000</td>
+                  <td>0.00</td>
+                  <td class="first_td changeReason">每日签到</td>
+                </tr>
+                <tr>
+                  <td class="first_td">2014-08-11</td>
+                  <td>+1000</td>
+                  <td>+1000</td>
+                  <td>0.00</td>
+                  <td class="first_td changeReason">每日签到</td>
+                </tr>
+                <tr>
+                  <td class="first_td">2014-08-11</td>
+                  <td>+1000</td>
+                  <td>+1000</td>
+                  <td>0.00</td>
+                  <td class="first_td changeReason">每日签到</td>
+                </tr>
+              </table>
+            </div>
+            <div class="_page_">
+              <ul>
+                <li class="up_page"><a><img src="images/PgUp.png">上一页</a></li>
+                <li><a>1</a></li>
+                <li class="current_page"><a>2</a></li>
+                <li><a>3</a></li>
+                <li><a>4</a></li>
+                <li><a>5</a></li>
+                <li class="down_page"><a>下一页<img src="images/PgDn.png"></a></li>
+              </ul>
+            </div>
+         
+        </div><!-- 我的积分结束 -->
+        <!-- 个人资料 --><!-- myData.html -->
         <div class="right_div"  id="tab-3-1" style="display:none;" >
-          <p>我的资料</p>
+                    <p>我的资料</p>
           <span class="right_div_underline"></span>
           <div class="member_div">
             <div id="info1" class="every_line_height">
@@ -616,9 +610,59 @@
             </div>
           </div>
         </div>
-        <!-- 修改地址 -->
+        <!-- 收货地址 -->
         <div class="right_div"  id="tab-3-2" style="display:none;">
-          <p>修改地址</p>
+                  <p>收货地址</p>
+          <span class="right_div_underline"></span>
+          
+           <div class="receive_box">
+            <table class="receive_tab">
+            <tr>
+              <th></th>
+              <th>姓名</th>
+              <th>地址</th>
+              <th>电话</th>
+              <th>设为默认</th>
+              <th>操作</th>
+            </tr>
+            <tr>
+              <td><input name="receiver" type="checkbox"></td>
+              <td>刘先生</td>
+              <td>广东省天河区第5达到大街发大幅度</td>
+              <td>18826485402</td>
+              <td><input type="radio" name="r_default"></td>
+              <td><a href="">编辑</a></td>
+            </tr>
+            <tr>
+              <td><input name="receiver" type="checkbox"></td>
+              <td>刘先生</td>
+              <td>广东省天河区第5达到大街发大幅度</td>
+              <td>18826485402</td>
+              <td><input type="radio" name="r_default"></td>
+              <td><a href="">编辑</a></td>
+            </tr>
+          </table>
+          <div class="receive_btn">
+            <span class="receive_del">删除</span>
+            <span class="receive_add">新增</span>
+          </div>
+          </div>   
+          <!-- 此部分是弹出的提示框  june-->
+          <div id="prompt_msg" class="pop_main" style="left: 514px; top: 144px; display: none;">
+          <div id="prompt_title" class="pop_title">提示</div>
+          <div class="pop_content clearfix">
+          <span id="prompt_msg_msg">未选中任何地址</span>
+          </div>
+          <div class="clearfix">
+          <div id="dlg-close" class="btn_style_1 pop_btn">确定</div>
+          <a id="dlg-link" class="pop_link" href="#"></a>
+          </div>
+          </div><!-- 提示框结束 june --> 
+        </div><!-- 收货地址结束 -->
+
+        <!-- 修改地址 --><!-- modifyAddress.html -->
+        <div class="right_div"  id="modifyAdd" style="display:none;">
+                  <p>修改地址</p>
           <span class="right_div_underline"></span>
           <div class="member_div">
              <div id="myAddress1" class="every_line_height">
@@ -636,7 +680,6 @@
                 <option selected="selected">请选择...</option>
                 <option>广州</option>
               </select>
-
               <select name="sel_zoom" id="sel_zoom" >
                 <option selected="selected">请选择...</option>
                 <option>天河区</option>
@@ -657,10 +700,10 @@
             </div>
             <button class="btn_info" id="addressBtnSave">保存</button>
           </div>
-        </div>
-        <!-- 密码管理 -->
+        </div><!-- 修改地址结束 -->
+        <!-- 密码管理 --><!-- passwordManament.html -->
         <div class="right_div"  id="tab-3-3" style="display:none;">
-          <p>密码管理</p>
+                  <p>密码管理</p>
           <span class="right_div_underline"></span>
           <div class="member_div">
             <div id="pass1" class="every_line_height">
@@ -680,7 +723,7 @@
         </div>
         <!-- 激活礼品卡 -->
         <div class="right_div"  id="tab-2-4" style="display:none;">
-          <p>激活礼品卡</p>
+                  <p>激活礼品卡</p>
           <span class="right_div_underline"></span>
           <div class="member_div">
             <div id="giftCard1" class="every_line_height">
@@ -690,16 +733,90 @@
             </div>
             <div id="giftCard2" class="every_line_height same_secCode">
               <label for="security_code">输入验证码：</label>
-              <input type="text" id="security_code" />
+              <input type="text" id="security_code" />  
               <span><img src="images/code.png" /></span>
               <a href="#">换一张</a>
             </div>
             <button class="btn_info" id="activiteBtn">激活</button>
           </div>
+        <div><!-- 未用完、已用完、已过期 june start -->
+           <div id="useList">
+        <!-- 排行榜、问答的切换 june start -->
+          <ul class="useBox">
+            <li class="useOption useOn0"><span><a href="#use-0">未用完</a></span></li>
+            <li class="useOption"><span><a href="#use-1">已用完</a></span></li>
+            <li class="useOption"><span><a href="#use-2">已过期</a></span></li>
+          </ul>
+        </div>
+        <div id="use-area">
+          <div id="use-0" class="use-0 useOn-0" >
+            <table class="use-ul">
+               <tr>
+                 <th>礼品卡号</th>
+                 <th>面值</th>
+                 <th>余额</th>
+                 <th>有效期</th>
+               </tr>
+               <tr>
+                 <td>200030034566</td>
+                 <td>200000元</td>
+                 <td>100000元</td>
+                 <td>2012-4-23到2013-2-22</td>
+               </tr>
+            </table>
+          </div>
+          <div id="use-1" class="use-0" >
+            <table class="use-ul">
+               <tr>
+                 <th>礼品卡号</th>
+                 <th>面值</th>
+                 <th>余额</th>
+                 <th class="order_num">订单号</th>
+                 <th>有效期</th>
+               </tr>
+               <tr>
+                 <td>200030034566</td>
+                 <td>200000元</td>
+                 <td>100000元</td>
+                 <td>2000356466</td>
+                 <td>2012-4-23到2013-2-22</td>
+               </tr>
+            </table>
+          </div>
+          <div id="use-2" class="use-0" >
+            <table class="use-ul">
+               <tr>
+                 <th>礼品卡号</th>
+                 <th>面值</th>
+                 <th>余额</th>
+                 <th>有效期</th>
+               </tr>
+               <tr>
+                 <td>200030034566</td>
+                 <td>200000元</td>
+                 <td>100000元</td>
+                 <td>2012-4-23到2013-2-22</td>
+               </tr>
+            </table>
+          </div>
+        </div>
+        <div class="_page_"><!-- 分页 -->
+              <ul>
+                <li class="up_page"><a><img src="images/PgUp.png">上一页</a></li>
+                <li><a>1</a></li>
+                <li class="current_page"><a>2</a></li>
+                <li><a>3</a></li>
+                <li><a>4</a></li>
+                <li><a>5</a></li>
+                <li class="down_page"><a>下一页<img src="images/PgDn.png"></a></li>
+              </ul>
+            </div>
+        </div><!-- 未用完、已用完、已过期 june end -->
+<!-- activatingGiftCard.html -->
         </div>
         <!-- 激活优惠券 -->
         <div class="right_div" id="tab-2-3" style="display:none;">
-          <p>激活优惠券</p>
+                  <p>激活优惠券</p>
           <span class="right_div_underline"></span>
           <div class="member_div">
             <div id="discount1" class="every_line_height">
@@ -714,10 +831,11 @@
             </div>
             <button class="btn_info" id="activiteBtn">激活</button>
           </div>
+<!-- activatingCoupon.html -->
         </div>
         <!-- 推荐人会员号 -->
         <div class="right_div" id="tab-2-5" style="display:none;">
-          <p>推荐人会员号</p>
+                  <p>推荐人会员号</p>
           <span class="right_div_underline"></span>
           <div class="referrerNum">
              <div id="memNum1" class="every_line_height">
@@ -727,10 +845,11 @@
             </div>
             <button class="btn_info" id="commitBtn">提交</button>
           </div>
+<!-- RecommendedMembershipNumber.html -->
         </div>
         <!-- 我的尚田 -->
-        <div class="right_div" id="tab-0-1" style="display:none;">
-          <div class="myDetailInfo">
+        <div class="right_div" id="tab-0-1">
+        <div class="myDetailInfo">
             <img src="images/mem1.png">
             <div id="myDetail">
               <div id="myDetail1">
@@ -738,7 +857,7 @@
                 <a href="#">完善个人资料获得积分</a>
               </div>
               <div id="myDetail2">
-                <p id="deti1">您成为尚田会员已经<span>  127  </span>天     消费记录<span>￥69483</span></p>
+                <p id="deti1">您成为尚田会员已经<span>  <{$data.data_added}> </span>天     消费记录<span>￥69483</span></p>
                 <p id="deti2">账户余额：<span>  ￥2000000.00</span></p>
               </div>
               <div id="myDetail3">
@@ -837,7 +956,8 @@
                    <p>商品评论<span> +100</span></p>
                 </div>
               </div>  <!-- earnPointWay结束 -->
-            </div>   <!-- earn_points结束 -->  -->
+            </div>   <!-- earn_points结束 -->  
+          <!-- myShangtian.html -->
         </div>   <!-- 我的尚田结束 -->
       </div>   
       </div><!-- 内容区域结束 -->

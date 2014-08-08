@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <title> 搜索表单</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="../assets/css/dpl-min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/bui-min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/page-min.css" rel="stylesheet" type="text/css" /> 
+    <script src="../assets/js/jquery-1.8.1.min.js"></script>
+    <script src="../assets/js/myjs.js"></script>
+ </head>
+ <body>
+  
+   
+  <div class="container">
+  
+      <form id="searchForm" class="form-horizontal span24">
+
+        <div class="row row2">
+
+          <div class="span3 control-group">
+             <label class="control-label" for="pic-0-1">选择商品方式：</label>
+          </div>
+          <div class="span5 control-group">
+            <input type="radio" name="goodsmod" />
+            <label>根据商品分类，品牌</label>
+          </div>
+          <div class="span4 control-group">
+            <input type="radio" name="goodsmod" />
+            <label>根据商品货号</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="control-group span8">
+            <label class="control-label">选择商品分类：</label>
+            <div class="controls" >
+              <select name="" id="" name="mode">
+                <option value=""></option>
+                <option value=""></option>
+              </select>
+            </div>
+          </div>                
+        </div>
+
+        <div class="row">
+          <div class="control-group span8">
+            <label class="control-label">选择商品品牌：</label>
+            <div class="controls" >
+              <select name="" id="" name="type">
+                <option value=""></option>
+                <option value=""></option>
+              </select>
+            </div>
+          </div>  
+        </div>
+
+        <div class="row">
+          <div class="control-group">
+            <label class="control-label">商品列表：</label>
+            <div class="selectlist" >
+              <label for="">待选列表：</label>
+              <div class="clear"></div>
+              <select id="multiple1" multiple="multiple" style="height:120px;width: 300px;">
+                  <option>选择1号</option>
+                  <option>选择2号</option>
+                  <option>选择3号</option>
+                  <option>选择4号</option>
+                  <option>选择5号</option>
+              </select>
+            </div>
+            <div class="selectlist2">
+              <span><button id="shift_1">&gt;&gt;</button></span>
+              <span><button id="shift_2">&gt;</button></span>
+              <span><button id="shift_3">&lt;&lt;</button></span>             
+              <span><button id="shift_4">&lt;</button></span>
+            </div>
+             <div class="selectlist" >
+              <label for="">待选列表：</label>
+              <div class="clear"></div>
+              <select id="multiple2" multiple="multiple" style="height:120px;width: 300px;">
+                  <option>选择1号</option>
+                  <option>选择2号</option>
+                  <option>选择3号</option>
+                  <option>选择4号</option>
+                  <option>选择5号</option>
+              </select>
+            </div>
+          </div>  
+        </div>
+
+        <div class="row row2">
+          <div class="span3 control-group">
+             <label class="control-label" for="pic-0-1">编辑方式：</label>
+          </div>
+          <div class="span3 control-group">
+            <input type="radio" name="complime01" />
+            <label for="complime-0-1">逐个编辑</label>
+          </div>
+          <div class="span4 control-group">
+            <input type="radio" name="complime01" />
+            <label for="complime-0-1">统一编辑</label>
+          </div>
+        </div>
+        <div class="row">
+           <div class="offset2">
+              <button  type="button" id="btnConfirm" class="button button-primary">进入编辑</button>
+           </div>
+        </div>
+      </form>
+ 
+  </div>
+
+</body>
+</html>  

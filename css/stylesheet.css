@@ -7,7 +7,7 @@ html{
 ul,li{list-style:none;}
 body {
 	color: #333;
-	font-family:"微软雅黑"，serif,"宋体";
+	font-family:'Microsoft YaHei','微软雅黑','SimSun',serif,"宋体";
 	margin: 0px;
 	padding: 0px;
 }
@@ -31,7 +31,9 @@ visibility: hidden;
 }
 * html .clearfix {height: 1%;}
 *+html .clearfix { min-height:1%; }/* ie7 hack*/ 
-
+.no-mainpage{
+	display: none;
+}
 /***************全局设置部分结束*******june*******************/
 
 
@@ -188,13 +190,13 @@ li {list-style-type: none;}
 	text-align: center;
 	font-size: 14px;
 	color: #ffffff;
-	font-family: "宋体";
+	font-family: 'SimSun','宋体';
 	font-weight: bold;
 	cursor: pointer;
 }
 .searchdiv #hot_search{
 	height: 22px;
-	font-family: "新宋体";
+	font-family: 'NSimSun','新宋体';
 	font-size: 12px;
 	color: #636363;
 	padding-top: 5px;
@@ -240,7 +242,7 @@ li {list-style-type: none;}
 	line-height: 35px;
 	font-size: 16px;
 	font-weight: bold;
-	font-family: "微软雅黑" "MicroSoft Yehei";
+	font-family:  'MicroSoft Yehei','微软雅黑';
 	text-decoration: none;
 }
 .all_classify a:hover{
@@ -265,7 +267,7 @@ li {list-style-type: none;}
 	text-decoration: none;
 	color: #fff;
 	font-size: 16px;
-	font-family: "微软雅黑" "MicroSoft Yehei";
+	font-family: "微软雅黑" ,"MicroSoft Yehei";
 }
 
 .border{
@@ -281,11 +283,15 @@ li {list-style-type: none;}
 
 .navitem li:hover{
 	background-color:#77BE22;
+	z-index: 999;
+/*	border-right: 1px solid #77BE22;*/
+	width: 112px;
 }
 .navitem-first{
 	background-color:#77BE22;
+	width: 112px!important;
 }
-}
+
 /*中部商品分类，图片轮播，选项卡等*/
 #content{
 	width: 1180px;
@@ -462,7 +468,7 @@ li {list-style-type: none;}
 .shelf-02-left{
 	width: 205px;
 	float: left;
-	font-family: "微软雅黑";
+	font-family: 'Microsoft YaHei',"微软雅黑";
 	font-size: 20px;
 }
 .shelf-02-left-title{
@@ -508,7 +514,7 @@ li {list-style-type: none;}
 .mwsp-content-detail{
 	font-size: 14px;
 	color: #5b5d59;
-	font-family: "新宋体";
+	font-family: 'NSimSun',"新宋体";
 	height: 25px;
 	line-height: 25px;
 }
@@ -544,7 +550,7 @@ li {list-style-type: none;}
 }
 .rpsp-01-title,.rpsp-02-title,.rpsp-03-title,.rpsp-04-title{
 	font-size: 14px;
-	font-family: "新宋体";
+	font-family:'NSimSun',"新宋体";
 	display: block;
 	padding-bottom: 4px;
 	color: #000000;
@@ -562,7 +568,7 @@ li {list-style-type: none;}
 }
 .rpsp-01-date,.rpsp-01-appraisal,.rpsp-02-date,.rpsp-02-appraisal,
 .rpsp-03-date,.rpsp-03-appraisal,.rpsp-04-date,.rpsp-04-appraisal{
-	font-family: "新宋体";
+	font-family: 'NSimSun',"新宋体";
 	font-size: 12px;
 	color: #777777;
 	height: 20px;
@@ -592,7 +598,7 @@ li {list-style-type: none;}
 }
 .report-title{
 	font-size: 14px;
-	font-family: "新宋体";
+	font-family: 'NSimSun',"新宋体";
 	font-weight: bold;
 	display: block;
 	padding: 5px;
@@ -602,7 +608,7 @@ li {list-style-type: none;}
 	width: 300px;
 	border: 1px solid #64b800;	
 	font-size: 12px;
-	font-family: "宋体";
+	font-family: 'SimSun',"宋体";
 	color: #666666;
 	float: left;
 	margin-top: 20px;
@@ -622,15 +628,23 @@ li {list-style-type: none;}
 }
 .report-right{
 	float: left;
-	position: absolute;
-	margin-left: 10px;
-	top:0px;
-	left:120px; 
-	margin-top: 20px;
+    left: 120px;
+    margin-left: 12px;
+    margin-top: 20px;
+    position: absolute;
+    top: 0;
+    width: 51%;
+}
+.report-content{
+	display: block;
+	float: left;
+	margin-top: 10px;
+	height: 80px;
 }
 .report-content p{
 	height: 20px;
-	line-height: 20px;
+	line-height:20px; 
+	
 }
 .report-list{
 	clear: both;
@@ -670,7 +684,7 @@ li {list-style-type: none;}
 .tabs-left-news{
 	float: left;
 	font-size: 14px;
-	font-family: "宋体";
+	font-family: 'SimSun',"宋体";
 	padding: 7px 0px;
 	color: #666666;
 	font-weight: 600;
@@ -679,7 +693,7 @@ li {list-style-type: none;}
 	float: left;
 	position: absolute;
 	width: 640px;
-	font-family: "宋体";
+	font-family: 'SimSun',"宋体";
 	margin-left: 220px;
 }
 .tabs-right-up{
@@ -695,7 +709,7 @@ li {list-style-type: none;}
 	text-align: center;
 }
 .tabs-right-up-content{
-	font-family: "新宋体" !important;
+	font-family: 'NSimSun',"新宋体" !important;
 	color: #666666 !important;
 	font-size: 14px  !important;
 	margin-bottom: 20px;
@@ -717,7 +731,7 @@ li {list-style-type: none;}
 	width: 100%;
 }
 .tabs-right-down a{
-	font-family: "新宋体"  !important;
+	font-family: 'NSimSun',"新宋体"  !important;
 	color: #666666 !important;
 	font-size: 14px  !important;
 	padding-right: 5px;
@@ -771,7 +785,7 @@ li {list-style-type: none;}
 }
 #footer h3 {
     color: #333;
-    font-family: '微软雅黑';
+    font-family: 'Microsoft YaHei','微软雅黑';
     font-size: 20px;
     font-weight: normal;
     margin-bottom: 8px;
@@ -844,7 +858,7 @@ ul, li {
 .breadcrumb a{
 	line-height: 40px;
 	color: #666;
-	font-family: "新宋体","MicroSoft YeHei";
+	font-family: 'SimSun',"新宋体","MicroSoft YeHei";
 	font-size: 12px;
 	text-decoration: none;
 }
@@ -888,7 +902,7 @@ ul, li {
 .right_div_table{
 	color:#666;
 	font-size: 14px;
-	font-family: "宋体";
+	font-family: 'SimSun',"宋体";
 	width: 917px;
 	margin-top: 10px;
 }
@@ -910,11 +924,7 @@ ul, li {
 	margin-bottom: 4px;
 	width:917px;
 }
-/*.right_div_table caption{
-	font-weight: bold;
-	text-align: left;
-	height: 40px;
-}*/
+
 .right_div_table tr{
 	height: 30px;
 }
@@ -937,7 +947,115 @@ ul, li {
 	font-size:14px;
 	color:#666;
 	line-height: 40px;
-	font-family: "宋体"；
+	font-family: 'SimSun',"宋体"；
+}
+/*我的订单*/
+#tab-1-1 .tb_th th{
+	font-weight: bold;
+}
+#tab-1-1 caption{
+	height: 30px;
+	line-height: 30px;
+	text-align: left;
+	font-size: 12px;
+	font-family: 'SimSun',"宋体";
+	color: #666;
+	background: #f5f5f5;
+	padding-left: 20px;
+	border:1px solid #e1e1e1;
+	border-bottom: 0;
+}
+.right_div_table #ordernum{
+	/*font-weight: bold;*/
+	color: #f60;
+	font-family: "Arial";
+	font-size: 14px;
+}
+.right_div_table .myorder tr{
+	height: 80px;
+	text-align: center;
+}
+.right_div_table .myorder img{
+	margin-right: 5px;
+}
+.right_div_table .myorder .order_goods{
+	width: 330px;
+	text-align: left;
+}
+.right_div_table .myorder .myorder_total{
+	width:125px;
+	color: #333;
+}
+.right_div_table .myorder .myorder_total div{
+	font-size: 14px;
+	font-family: "Arial";
+}
+.right_div_table .myorder .myorder_receiver{
+	width: 110px;
+	color: #666;
+	font-size: 12px;	
+}
+.right_div_table .myorder .myorder_time{
+	width:115px;
+	color: #999;
+	font-size: 12px;
+	font-weight: bold;
+	font-family:'SimSun', "宋体";
+
+}
+.right_div_table .myorder .myorder_state{
+	width: 125px;
+	background: #ffc;
+	font-size: 12px;
+}
+.right_div_table .myorder .myorder_state div{
+	color: #f60;
+	font-weight: bold;
+}
+.right_div_table .myorder .myorder_state a,
+.right_div_table .myorder .myorder_op a{
+	font-size: 12px;
+	font-family: 'SimSun',"宋体";
+	color: #005ea7;
+}
+.right_div_table .myorder .myorder_op a:hover{
+	color: #f60;
+}
+/*我的积分*/
+.right_div .my_integral{
+	background: url(../images/myIntegral.png) no-repeat;
+	width: 895px;
+	height: 75px;
+	margin-top: 35px;
+	margin-left: 10px;
+}
+.right_div .recent_inte{
+	margin-left: 60px;
+	height:65px;
+	line-height: 65px;
+	color:#000;
+	font-family: 'SimSun',"宋体";
+	font-size:14px;
+	font-weight: bold;
+}
+.right_div .recent_inte span{
+	color: #f60;
+	font-family: "Arial";
+	font-size: 24px;
+	margin-left: 10px;
+}
+.integral_table{
+	width: 917px;
+}
+.integral_table th{
+	width:183px;
+}
+.integral_table .first_td{
+	font-weight: normal;
+}
+.integral_table .changeReason{
+	background: #fff;
+	font-weight: bold;
 }
 /*商品评价*/
 /*未评价*/
@@ -960,7 +1078,7 @@ ul, li {
 	text-align: left;
 	color: #666;
 	font-size: 12px;
-	font-family: "宋体";
+	font-family: 'SimSun',"宋体";
 }
 .right_div .assess_table .assess_goods img,.right_div .assessed_table .assess_goods img{
 	margin-left: 10px;
@@ -986,7 +1104,7 @@ ul, li {
 	text-align: left;
 	overflow-y:scroll; 
 	font-size: 12px;
-	font-family: "宋体";
+	font-family: 'SimSun',"宋体";
 	color:#666;
 	display: inline-block;
 }
@@ -997,56 +1115,13 @@ ul, li {
 	background: #74c022;
 	color:#fff;
 	font-size: 12px;
-	font-family: "宋体";
+	font-family: 'SimSun',"宋体";
 	cursor: pointer;
 	display: inline-block;
 	margin-top: -10px;
 	vertical-align: middle;
 
 
-}
-._page_{
-	width:295px;
-	height:30px;
-	border:1px solid #f60;
-	margin:30px auto;
-
-}
-/*我的积分*/
-.right_div .my_integral{
-	background: url(../images/myIntegral.png) no-repeat;
-	width: 895px;
-	height: 75px;
-	margin-top: 35px;
-	margin-left: 10px;
-}
-.right_div .recent_inte{
-	margin-left: 60px;
-	height:65px;
-	line-height: 65px;
-	color:#000;
-	font-family: "宋体";
-	font-size:14px;
-	font-weight: bold;
-}
-.right_div .recent_inte span{
-	color: #f60;
-	font-family: "Arial";
-	font-size: 24px;
-	margin-left: 10px;
-}
-.integral_table{
-	width: 917px;
-}
-.integral_table th{
-	width:183px;
-}
-.integral_table .first_td{
-	font-weight: normal;
-}
-.integral_table .changeReason{
-	background: #fff;
-	font-weight: bold;
 }
 /*个人中心*/
 .per_center{
@@ -1061,7 +1136,7 @@ ul, li {
 .per_center h2{
 	text-align: center;
 	color: #3DAE0B;
-	font-family: "微软雅黑";
+	font-family: 'Microsoft YaHei',"微软雅黑";
 	font-size: 16px;
 	border-bottom: 1px solid #3DAE0B;
 	line-height:33px;
@@ -1069,41 +1144,38 @@ ul, li {
 	/*text-shadow:1px 1px 1px #73C05C;*/
 	background: url(../images/layer1.png) no-repeat -8px -3px;
 }
-.current h4{
+ .center_course .current h4{
 	cursor: pointer;
-	font-family: "新宋体", "MicroSoft YeHei";
+	font-family: 'SimSun',"新宋体", "MicroSoft YeHei";
 	font-size: 14px;
 	line-height: 33px;
 	padding-left: 10px;
 	color: #333333;
 	background: url(../images/layer.png) no-repeat scroll -8px -3px;
 }
-.current ul li{
+.center_course .current ul li{
 	line-height: 35px;
 	/*background: url(../images/triangle.png) no-repeat scroll 12px 16px transparent;*/
 	padding-left: 26px;
 	height: 35px;
 	border-bottom:1px dashed #E7E6E6;
-
 }
-
-.current ul li a{
+.center_course .current ul li a{
 	font-size: 12px;
 	color: #333;
-	font-family: "新宋体","MicroSoft YeHei";
+	font-family: 'SimSun',"新宋体","MicroSoft YeHei";
 	text-decoration: none;
 }
-.current ul li a:hover{
+.center_course .current ul li a:hover{
 	color: red;
 }
-
 /*右边详细信息*/
 .right_div{          /*可重用，右部div布局*/
 	width: 917px;
 	float: right;
 	margin-top: 23px;
 	position: relative;
-	font-family: "MicroSoft YaHei" "宋体";
+	font-family: "MicroSoft YaHei" ,'SimSun',"宋体";
 	font-size: 14px;
 }
 .right_div_underline{    /*可重用，绿色下划线*/
@@ -1114,7 +1186,6 @@ ul, li {
 	position: absolute;
 	margin-top: -2px;
 }
-
 .right_div>p{       /*可重用，标题字体*/
 	border-bottom: 2px solid #DEDEDE;
 	color: #2d2d2d;
@@ -1123,26 +1194,19 @@ ul, li {
 	font-size: 18px; 
 	padding-bottom: 5px;
 }
-
-
 .right_inner_text{
 	margin-top: 24px;
 	color:grey;
 }
-
 .right_inner_text h3{
 	color: #666;
 	font-size: 12px;
 	line-height: 36px;
 	font-family: "新宋体" "MicroSoft YeHei";
 }
-.right_inner_text h3{
-
-}
-
 .right_inner_text p{
 	font-size: 12px;
-	font-family: "新宋体" "MicroSoft YeHei";
+	font-family: 'NSimSun',"新宋体" "MicroSoft YeHei";
 	line-height: 24px;
 }
 
@@ -1150,14 +1214,12 @@ ul, li {
 .member_div{   /*可重用*/
 	margin: 22px 0 0 32px;
 }
-
 .member_div input,.referrerNum input,.findCode_Box input{       /*可利用，输入框样式*/
 	width: 290px;
 	height: 33px;
 	box-shadow: 0 3px 10px #E9E9E9 inset;
 	border:1px solid #ADADAD;
 	border-radius: 3px;
-
 }
 .member_div label,.findCode_Box label{      /* 可利用，标签样式*/
 	display: inline-block;
@@ -1169,7 +1231,6 @@ ul, li {
 	/*可利用，输入框、标签行高*/
 	height: 52px;
 }
-
 #info3 #lock_img1,#info4 #lock_img2{
 	text-align: left !important;
 	padding-left: 10px;
@@ -1254,7 +1315,6 @@ ul, li {
 #commitBtn{
 	margin-left: 100px;
 }
-
 /*我的尚田*/
 
 .myDetailInfo{
@@ -1285,7 +1345,7 @@ ul, li {
 	margin-top: 20px;
 	text-align: center;
 	float: left;
-	font-family: "新宋体";
+	font-family: 'NSimSun',"新宋体";
 }
 
 #myDetail label,#myDetail p{
@@ -1341,7 +1401,7 @@ ul, li {
 	line-height: 50px;
 	margin: 5px 10px 5px 0;
 	background-color: #77BE22;
-	font-family: "新宋体";
+	font-family: 'NSimSun',"新宋体";
 	font-weight: 600;
 	color: #fff;
 	float: left;
@@ -1376,7 +1436,7 @@ ul, li {
 	top: 11px;
 	left: 20px;
 	padding-left: 20px;
-	font-family: "新宋体";
+	font-family: 'NSimSun',"新宋体";
 }
 
 #point_tit span{
@@ -1418,11 +1478,108 @@ ul, li {
 	font-family: "Arial";
 	font-size: 16px;
 }
+/****“收货地址、修改地址页面”****june****start*/
+.receive_box{
+	display: block;
+	margin-top: 15px;
+}
+.receive_tab{
+	border-collapse: collapse;
+	text-align: center;
+}
+.receive_tab tr{
+	height: 40px;
+	line-height: 40px;
+}
+.receive_tab tr:first-child{
+	background: #f5f5f5;
+	height: 35px;
+	line-height: 35px;
+}
+.receive_tab td{
+	border: 1px solid #e1e1e1;
+}
+.receive_tab td:first-child{
+	width: 35px;
+}
+.receive_tab td:nth-child(2){
+	width: 92px;
+}
+.receive_tab td:nth-child(3){
+	width: 476px;
+}
+.receive_tab td:nth-child(4){
+	width: 136px;
+	color: #77be22;
+}
+.receive_tab td:nth-child(5){
+	width: 92px;
+}
+.receive_tab td:nth-child(6){
+	width: 84px;
+	color: #77be22;
+}
+.receive_tab td:nth-child(6) a{
+	color: #77be22;
+	text-decoration: underline;
+}
+.receive_btn{
+	display: block;
+	margin-top: 15px;
+}
+.receive_btn span{
+	float: left;
+	margin-right: 15px;
+	width: 93px;
+	height: 36px;
+	line-height: 36px;
+	text-align: center;
+	background: #77be22;
+	border-radius: 6px;
+}
+.receive_btn span a{
+	color: #ffffff;
+	font-weight: bold;
+}
+/***提示框样式***/
+.pop_content span {
+    float: right;
+    font-size: 14px;
+    height: 40px;
+    line-height: 24px;
+    padding: 25px 20px;
+    width: 310px;
+}
+.pop_btn {
+    float: right;
+    margin-right: 20px;
+}
+.btn_style_1 {
+    background-color: #77be22;
+    border: 0 none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    text-decoration: none;
+    width: 86px;
+}
 
+.pop_link {
+    color: #adadad;
+    float: right;
+    font-size: 12px;
+    height: 32px;
+    line-height: 50px;
+    padding-right: 10px;
+    text-decoration: none;
+}
+/****“收货地址、修改地址页面”****june****end*/
 /*******************会员页面整理结束*******************************/
-
-
-
 /*********layout************bing**********/
 
 #list_menu {
@@ -1444,10 +1601,11 @@ ul, li {
 
 .YM-Tab {
 	width: 198px;
+	border-bottom: 1px dashed #F0F0F0;
 }
-.YM-Tab  a{
+.YM-Tab a{
 	font-size: 14px;
-	font-family: "宋体","新宋体", "MicroSoft Yehei ";
+	font-family: 'SimSun',"宋体",'NSimSun',"新宋体", "MicroSoft Yehei ";
 	width: 90%;
 	margin: 0px 5px;
 	color: #000000 !important;     /*没反应！！*/
@@ -1456,10 +1614,8 @@ ul, li {
 	text-align: left;
 	line-height: 30px;
 	height: 30px;
-	padding-left: 0px;
-	border-bottom: 1px solid #F0F0F0;
+	padding-left: 0px;	
 	text-decoration: none;
-
 }
 .YM-Tab  a:last{
 	border-bottom: 0;  /*没反应！！*/
@@ -1472,42 +1628,12 @@ ul, li {
 }
 .YM-Tab a:link, a:visited {
 	color: #369;
-	/*text-decoration: underline;*/
 }
 .YM-Tab a:hover {
 	color: #FF6600 !important;
 	text-decoration: none;
 }
 
-
-/*#YMenu {
-	margin: 30px auto;
-	width: 590px;
-	height: 450px;
-	overflow: hidden;
-	border: 3px solid #B0BEC7;
-	padding: 4px;
-}*/
-/*#YMenu-side {
-	position: relative;
-	z-index: 2;
-	float: left;
-	width: 200px;
-	height: 450px;
-	border-right: 3px solid #B0BEC7;
-}*/
-/*#YMenu-side h3 {
-	float: left;
-	width: 196px;
-	clear: both;
-	line-height: 28px;
-	font-size: 14px;
-	text-indent: 10px;
-	color: #369;
-	background-color: #EAEFF5;
-	overflow: hidden;
-	clear: both;
-}*/
 .YM-mainmnu {
 	float: left;
 	width: 100%;
@@ -1518,7 +1644,7 @@ ul, li {
 	z-index: 2;
 	cursor: pointer;
 	float: left;
-	width: 200px;
+	width: 199px;
 	clear: both;
 	min-height: 29px;
 	line-height: 29px;
@@ -1526,15 +1652,10 @@ ul, li {
 	color: #999;
 }
 .YM-mainmnu li.current {
-/*	border-top: 1px solid #B0BEC7;*/
-	border-left: 1px solid #B0BEC7;
-/*	border-bottom: 2px solid #B0BEC7;*/
-/*	border-right: 1px solid #EAEFF5;*/
-	background-color: #fff;
+	width: 199px;
 }
 .YM-mainmnu li.current a {
 	font-size: 14px;
-/*S*/
 	color: #C80000;
 }
 .YM-mainmnu li.current span {
@@ -1543,14 +1664,18 @@ ul, li {
 .YM-mainmnu li .YM-submnu {
 	position: absolute;
 	z-index: 5;
-	left: 200px;
-	top: -1px;
+	left: 202px;
+	top: 0px;
 	display: none;
-	width: 200px;
+	width: 198px;
 	overflow: hidden;
-	border: solid #B0BEC7;
-	border-width: 1px 2px 2px 0;
-	background:  #fff url(../images/mnu-bg.gif) 0 0 no-repeat;
+	background: #ffffff;
+}
+.YM-submnu li{
+	line-height: 30px !important;
+	height: 30px !important;
+	border-bottom: 1px dashed #eeeeee!important;
+	border-width: 80%;
 }
 
 img{
@@ -1596,7 +1721,7 @@ img{
     padding-bottom: 8px;
 }
 .SmenuTitleOn0,.SmenuTitleOn1,.SmenuTitleOn2,.SmenuTitleOn3,.SmenuTitleOn4{
-    background: url('../images/down-triangle.png') no-repeat scroll 0px 23px transparent;
+    background: url('../images/down-triangle.png') no-repeat scroll 0px 21px transparent;
 
 }
 .SmenuTitleOn10,.SmenuTitleOn11{
@@ -1642,6 +1767,12 @@ img{
 }
 .imgTitle{
     font-size: 14px !important;
+    float: left;
+    height: 30px;
+    width: 100%;
+}
+.imgPrice{
+	margin-top: 5px;
 }
 .imgPrice span{
     color: #ff0000;
@@ -1649,6 +1780,11 @@ img{
 }
 .SmenuImg{
     position: relative;
+}
+.SmenuCont p{
+	float: left;
+	display: block;
+	width: 100%;
 }
 .tip{
     position: absolute;
@@ -1690,11 +1826,11 @@ img{
 }
 #banner-point {
 	height: 10px;
-	width: 130px;
+	width: auto;
 	list-style: none;
 	position: absolute;
 	z-index: 99;
-	right: 0px;
+	right: 10px;
 	bottom: 20px;
 }
 .points {
@@ -1752,7 +1888,7 @@ img{
 	line-height: 35px;
 	border-bottom:1px solid #51ab58; 
 	color:#666;
-	font-family: Microsoft YaHei;
+	font-family: 'Microsoft YaHei';
 	font-size: 20px;
 }/*标题*/
 /*下面是结算表格*/
@@ -1857,7 +1993,7 @@ img{
 	margin:auto; 
 	line-height: 30px;
 	font-size: 14px;
-	font-family: "新宋体";
+	font-family: 'NSimSun',"新宋体";
 	color:#464646;
 	cursor: pointer;
 }
@@ -2065,7 +2201,7 @@ img{
 }
 .pay_menthod span{
 	color: #666;
-	font-family: "新宋体";
+	font-family: 'NSimSun',"新宋体";
 	font-size: 14px;
 }
 .bank_icon{
@@ -2242,17 +2378,91 @@ box-shadow: 2px 2px 5px #C0BBB5;
 	border:none !important;
 }
 .pbox .s0-01-price{
-	margin-top: -10px;
+	margin-top: 5px;
 	font-size: 16px;
 }
 .pro_clear{
 	clear: both;
 	width: 203px !important;
 }
-
  .pro_course{
 	float: left;
 } 
+.pro_sort{
+	position: absolute;
+	float: right;
+	right: 0;
+	top: 0;
+	display: block;
+}
+.pro_sort span{
+	float: left;
+}
+.pro_sort .sort-item{
+	width: 70px;
+	border:1px solid #e6e6e6;
+	text-align: center;
+	margin-left: 10px;
+	cursor: pointer;
+}
+.sort-up{
+	background: url(../images/up1.png) no-repeat right 5px #ffffff;
+	right: 0;
+}
+.sort-down{
+	background: url(../images/down1.png) no-repeat right 5px #ffffff;
+	right: 0;
+}
+/*产品列表页底部图片切换****bing****start*****/
+.pro_bottom_pic0{
+	margin-top: 10px;
+}
+.pro_bottom_pic0 p {
+	font-size: 14px;
+	font-family:'NSimSun',"新宋体";
+	line-height: 33px;
+	font-weight: 600;
+	border-bottom: 2px solid #CECECE;
+}
+.pro_bottom_pic01{
+	margin: 35px 10px;
+	position: relative;
+}
+.pro_bottom_pic01 .ctrl2{
+	position: absolute;
+	cursor: pointer;
+	width: 51px;
+	height: 51px;
+	top: 65px;
+}
+.pro_bottom_pic01 #bot_prev{
+	background: url(../images/proPrev.png) no-repeat;
+	left: 0;
+}
+
+.pro_bottom_pic01 #bot_Next{
+	background: url(../images/proNext.png) no-repeat;
+	right: 0;
+}
+
+.proBot_slide0{
+	position: relative;
+	width: 1050px;
+	height: 180px;
+	overflow: hidden;
+	margin: 0 4px;
+	left: 51px;
+}
+.proBot_slide0 .proBot_slide01{
+	width: 3000px;
+	height: 180px;
+	position: absolute;
+}
+.proBot_slide0 li{
+	float: left;
+	margin: 0 15px;
+}
+/*产品列表页底部图片切换****bing****end****/
  /*********产品列表页样式*******june******end**************/
 
 /******资讯页面样式******bing******start*******/
@@ -2262,7 +2472,7 @@ box-shadow: 2px 2px 5px #C0BBB5;
 	height: 775px;
 	margin: 10px 10px 0 0;
 	border: 1px solid #C7E6BD;
-	font-family: "宋体";
+	font-family: 'SimSun',"宋体";
 	font-size: 14px;
 	float: left;
 }
@@ -2308,7 +2518,7 @@ box-shadow: 2px 2px 5px #C0BBB5;
 .newsList_right_top{
 	width: 298px;
 	height: 294px;
-	font-family: "宋体";
+	font-family: 'SimSun',"宋体";
 	font-size: 14px;
 	border:1px solid #D5D5D5;
 	float: left;
@@ -2342,7 +2552,7 @@ box-shadow: 2px 2px 5px #C0BBB5;
 	height: 274px;
 	border:1px solid #D5D5D5;
 	float: left;
-	font-family: "宋体";
+	font-family: 'SimSun',"宋体";
 	font-size: 14px;
 }
 
@@ -2386,7 +2596,7 @@ box-shadow: 2px 2px 5px #C0BBB5;
 	border:1px solid #CCC;
 	background-color: #fff;
 	box-shadow: 0 20px 20px #f6f4f1 inset;
-	font-family: "新宋体";
+	font-family: 'NSimSun',"新宋体";
 	font-size: 14px;
 }
 
@@ -2440,4 +2650,288 @@ box-shadow: 2px 2px 5px #C0BBB5;
 	font-size: 12px;
 	line-height: 20px;
 }
+/*********咨询文章页***********************eles**start*******/
+/*导航文章标题*/
+#articletit_nav{      /*导航栏文章名*/
+	color: #999;
+}
+.article_main{
+	width: 868px;
+	float: left;
+	margin: 10px 10px 0 0;
+}
+.article_body{     /*文章整体*/
+	margin: 0 10px 0 0;
+	border: 1px solid #C7E6BD;
+	border-top: 2px solid #77be22;
+	font-family:'SimSun',"宋体";
+	font-size: 14px;
+	color: #444;float: left;
+}
+#articletit{          /*文章标题*/
+	height: 88px;
+	line-height: 88px;
+	text-align: center;
+	font-family: "Microsoft YaHei";
+	font-size: 28px;
+	font-weight: bold; 
+	color: #666;
+}
+.article_content{     /*文章内容*/
+	margin: 0 25px;
+}
+.output_time{       /*发布时间*/
+	color: #9d9191;
+	font-size: 12px;
+	text-align: left;
+}
+.article_intro{        /*文章简介*/
+	background: #f4f8ee;
+	border: 1px dotted #c0e3b5;
+	margin: 10px 0;
+	padding: 10px;
+	line-height: 25px;
+	width: 798px;
+}
+.article_text{       /*正文*/
+	margin-top: 10px;
+	line-height: 25px;
+	text-align: left;
+}
+.article_figure{         /*配图*/
+	margin: 20px auto;
+	text-align: center;
+}
+.article_body ._page_{      /*分页*/
+	margin: 70px auto;
+}
+.article_last_next{          /*上下篇*/
+	color: #696969;
+	font-weight: bold;
+	line-height:40px;
+}
+.article_last_next a{
+	font-weight: normal;
+	text-decoration: none;
+	color: #696969;
+}
+.article_last_next a:hover{
+	color: #f60;
+	text-decoration: underline;
+}
+.article_last_next>div{
+	width:350px;
+}
+.article_tag_share{           /*标签和分享*/
+	color: #6b6b6b;
+	font-size: 12px;
+	line-height: 15px;
+	padding-top: 15px
+}
+.article_tag_share a{
+	color: #2e92df;
+	text-decoration: none;
+}
+.article_tag_share a:hover{
+	color: #f60;
+}
+.article_share{
+	color: #333;
+}
+.article_share img{
+	vertical-align:middle;
+	margin-top: -4px;
+}
+.article_share .share_count{
+	width: 45px;
+	height: 25px;
+	background: url(../images/sharecount.png) no-repeat;
+	display: inline-block;;
+	text-align: center;
+}
+/*评论区*/
+.article_assess{
+	width: 870px;
+	height: 275px;
+	margin: 10px 10px 0 0;
+	border: 1px solid #c7e6bd;
+	background: #f5f9f3;
+	font-family:'SimSun',"宋体";
+	font-size: 14px;
+	color: #444;
+	float: left;
+}
+.assess_main{
+	margin: 10px 25px 25px 25px;
+}
+.assess_main .assesstit{
+	margin-top: 10px;
+	height: 25px;
+	color: #555;
+	font-weight: bold;
+	font-size: 14px;
+	text-align:left;
+	line-height: 25px;
+}
+.assessdetails{
+	color: #818181;
+	font-weight: normal;
+	line-height: 25px;
+	margin-top: 10px;
+}
+#join_count,
+#assess_count{
+	color: #ae0000;
+	font-family: "Arial";
 
+}
+.assess_area{
+	height: 170px;
+	width: 100%;
+	border:1px solid #d9d9d9;
+}
+.ass_summit{
+	height: 30px;
+	margin-top: 8px;
+	color: #666;
+}
+ input{
+/*	height: 30px;*/
+	border: 1px solid #e1e1e1;
+}
+.ass_summit #rememberlogin{
+	vertical-align: middle;
+}
+.ass_summit a {
+	text-decoration: none;
+	font-size: 12px;
+	color: #666;
+}
+.ass_submit{
+	width: 100px;
+	height: 35px;
+	background: url(../images/submit.png) no-repeat;
+	color: #fff;
+	font-size: 18px;
+	font-family: "Microsoft YaHei";
+	text-align: center;
+	line-height: 35px;
+	cursor: pointer;
+}
+/*尚田推荐*/
+.strecommend{
+	width: 870px;
+	height: 390px;
+	margin: 10px 10px 0 0;
+	border: 1px solid #c7e6bd;	
+	float: left;
+}
+.strecommend_main{
+	margin: 10px 25px 25px 25px;
+}
+.strecommend_tit{
+	width: 100%;
+	height: 20px;
+	padding-bottom: 5px;
+	color: #555;
+	font-size: 14px;
+	font-weight: bold;
+	border-bottom: 1px solid #e3f3de;
+}
+.strecommend_content{
+	margin-top: 10px;
+}
+.strecommend_content .sbox{
+	border:0px;
+	margin-left: 9px;
+}
+/*********咨询文章页***********************eles**end*******/
+/*分页样式*/
+._page_{
+	width:300px;
+	height:30px;
+	margin:30px auto;
+
+}
+._page_ ul li{
+	width: 28px;
+	height: 28px;
+	color: #717171;
+	font-size: 14px;
+	border: 1px solid #ccc;
+	text-align: center;
+	line-height: 28px;
+	margin-right: 2px;
+	float: left;
+	cursor: pointer;
+}
+._page_ .up_page,
+._page_ .down_page{
+	width: 65px;
+}
+._page_ .up_page img,
+._page_ .down_page img{
+	vertical-align: text-bottom;
+}
+._page_ .current_page{
+	border: 0;
+	color: #149d0e;
+	font-size: 15px;
+	font-family: "Arial";
+	font-weight: bold;
+	margin-top: 2px;
+}
+/*************产品列表页*****左边栏样式*************june***************start*******/
+.list_left_list{
+	background: #fff;
+	border: 0;
+}
+.pro_course .current2 h4{
+	cursor: pointer;
+	font-family:'NSimSun',"新宋体", "MicroSoft YeHei";
+	font-size: 14px;
+	line-height: 33px;
+	padding-left: 15px;
+	color: #333333;
+	background: url(../images/listdown.png);
+	/*background-size: 100%;*/
+	border-bottom: 1px solid #e4e4e4;
+	
+}
+.pro_course .current_list{
+	background: #f0fae3;
+	width: 183px;
+	position: relative;
+}
+.pro_course .current2 ul li{
+	line-height: 25px;
+	height: 25px;
+	width: 50%;
+	text-align: left;
+	float: left;
+	background: #f0fae3;
+}
+
+.pro_course .current2 ul li a{
+	font-size: 12px;
+	color: #333;
+	font-family:'NSimSun',"新宋体", "MicroSoft YeHei";
+	text-decoration: none;
+}
+.pro_course .current2 ul li a:hover{
+	color: red;
+}
+.list-buy-cart a{
+	font-size: 12px !important;
+}
+.s0-01-title{
+	height: 30px;
+	line-height: 30px;
+	float: left;
+	width: 100%;
+	overflow: hidden;
+}
+.s0-01-detail,.s0-01-price,.s0-buy,.s0-buyNum{
+	float: left;
+}
+/*************产品列表页*****左边栏样式*************june***************end*******/

@@ -1,0 +1,131 @@
+.container {
+	margin-left: 0;
+	margin-top: 0;
+	width: auto;
+	padding: 20px 20px 0 20px;
+}
+.detail-page, .form-page, .search-page {
+	padding: 0;
+}
+
+
+/*bing***商品管理样式*****start*****/
+.clear{
+	clear: both;
+}
+.header{
+	width: 100%;
+	margin: 10px auto 20px;
+	height: 35px;
+	line-height: 35px;
+	background-color: #D8D8D8;
+}
+.header p{
+	font-weight: bold;
+	text-indent: 10px;
+	font-size: 14px;
+	float: left;
+}
+.header button{
+	float: right;
+	margin-top: 5px;
+	margin-right: 10px;
+	height: 25px;
+	background-color: #90C6CE;
+}
+.row2{
+	margin-top: 10px;
+	height: 30px;
+}
+.offset2 #btnEnsure,.offset2 #btnConfirm{
+	margin-top: 20px;
+	margin-left: 350px;
+
+}
+
+.selectlist{
+	float: left;
+	margin-right: 100px;
+
+}
+.selectlist2{
+	float: left;
+	position: absolute;
+	left: 460px;
+	top: 165px;
+}
+
+.selectlist2 span{
+	display: block;
+}
+.selectlist2 span button{
+	width: 40px;
+	margin-bottom: 6px;
+}
+/*bing***商品管理样式*****end*****/
+/*bing***统计报表样式*****start*****/
+.row table#uesrtable th,.row table#uesrtable td{
+	width: 200px;
+}
+.yearoption select{
+	width: 100px;
+}
+.usertable{
+	margin-left: 10px;
+	margin-bottom: 20px;
+}
+.row  .memtit{
+	background-color: #EEF3F7;
+	border: 1px solid #eee;
+	width: 99.3%;
+	height: 30px;
+	line-height: 30px;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: left;
+	text-indent: 10px;
+}
+.row  .memtit span{
+	font-weight: normal;
+}
+.row .usertable th,.row .usertable td{
+	/*width: 250px;*/
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border: 1px solid #eee;
+}
+
+.tab {
+	width: 1000px;
+	margin: 50px;
+}
+.tab_menu {
+	clear: both;
+}
+.tab_menu li {
+	float: left;
+	text-align: center;
+	cursor: pointer;
+	list-style: none;
+	padding: 1px 6px;
+	margin-right: 4px;
+	background: #F1F1F1;
+	border: 1px solid #898989;
+	border-bottom: none;
+}
+.tab_menu li.hover {
+	background: #DFDFDF;
+}
+.tab_menu li.selected {
+	color: #FFF;
+	background: #6D84B4;
+}
+.tab_box {
+	clear: both;
+	border: 1px solid #898989;
+	height: 300px;
+}
+.hide {
+	display: none;
+}

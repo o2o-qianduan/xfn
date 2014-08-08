@@ -1,4 +1,4 @@
-
+// bing***结算页效果***start***
 $(function(){
 
 	// 删除地址
@@ -70,3 +70,18 @@ $(function(){
 	});
 	
 })
+// bing***结算页效果***end***
+
+// 评价弹出框***bing***begin***
+ $(".reply_btn").live('click',function(){
+        $.XYTipsWindow({
+        ___title:"回复",
+        ___content:"iframe:answer.html",
+        ___width:"780",
+        ___height:"260",
+        ___showbg:true,
+        ___drag:"__boxTitle"
+
+        })
+    });
+// 评价弹出框***bing***end***
