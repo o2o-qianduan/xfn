@@ -37,6 +37,11 @@
 	margin-top: 10px;
 	height: 30px;
 }
+
+.row02{
+	margin-bottom: 20px;
+	margin-left: 20px;
+}
 .offset2 #btnEnsure,.offset2 #btnConfirm{
 	margin-top: 20px;
 	margin-left: 350px;
@@ -128,4 +133,16 @@
 }
 .hide {
 	display: none;
+}
+
+#myoffset{
+	margin-left: 400px;
+	margin-top: 20px;
+}
+
+/*会员管理*/
+.fileborder{
+	border: 1px solid #BDBDBD;
+	margin: 15px;
+	padding: 10px;
 }
