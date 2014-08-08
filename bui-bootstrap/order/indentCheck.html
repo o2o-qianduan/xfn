@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE HTML>
 <html>
  <head>
@@ -160,4 +161,168 @@
 </script>
 
 <body>
+=======
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <title> 商品信息</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+       <link href="../assets/css/dpl-min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/bui-min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/page-min.css" rel="stylesheet" type="text/css" />
+ </head>
+ <body>
+  
+  <div class="container">
+    <div class="row">
+      <form id="J_Form" class="form-horizontal span24">
+        <div class="row">
+          <div class="control-group span8">
+            <label class="control-label">订单号：</label>
+            <div class="controls">
+              <input name="id" type="text" data-rules="{required:true}" class="input-normal control-text">
+            </div>
+          </div>
+          <div class="control-group span8">
+            <label class="control-label">电子邮箱：</label>
+            <div class="controls">
+              <input name="id" type="text" data-rules="{required:true}" class="input-normal control-text">
+            </div>
+          </div>
+          <div class="control-group span8">
+            <label class="control-label">会员名称：</label>
+            <div class="controls">
+              <input name="id" type="text" data-rules="{required:false}" class="input-normal control-text">
+            </div>
+          </div>
+          <div class="control-group span8">
+            <label class="control-label">收货人：</label>
+            <div class="controls">
+              <input name="id" type="text" data-rules="{required:false}" class="input-normal control-text">
+            </div>
+          </div>
+          <div class="control-group span8">
+            <label class="control-label">地址：</label>
+            <div class="controls">
+              <input name="id" type="text" data-rules="{required:false}" class="input-normal control-text">
+            </div>
+          </div>
+          <div class="control-group span8">
+            <label class="control-label">邮编：</label>
+            <div class="controls">
+              <input name="id" type="text" data-rules="{required:false}" class="input-normal control-text">
+            </div>
+          </div>
+          <div class="control-group span8">
+            <label class="control-label">电话：</label>
+            <div class="controls">
+              <input name="id" type="text" data-rules="{required:false}" class="input-normal control-text">
+            </div>
+          </div>
+          <div class="control-group span8">
+            <label class="control-label">手机：</label>
+            <div class="controls">
+              <input name="id" type="text" data-rules="{required:false}" class="input-normal control-text">
+            </div>
+          </div>
+          <div class="control-group span8">
+            <label class="control-label">配送方式：</label>
+            <div class="controls">
+              <select  data-rules="{required:true}"  name="type" class="input-normal"> 
+                <option value="">请选择</option>
+                <option value="saler">顺丰</option>
+                <option value="large">中通</option>
+              </select>
+            </div>
+          </div>
+           <div class="control-group span8">
+            <label class="control-label">支付方式：</label>
+            <div class="controls">
+              <select  data-rules="{required:false}"  name="type" class="input-normal"> 
+                <option value="">请选择</option>
+                <option value="saler">线上</option>
+                <option value="large">货到付款</option>
+              </select>
+            </div>
+          </div>
+           <div class="control-group span8">
+            <label class="control-label">订单状态：</label>
+            <div class="controls">
+              <select  data-rules="{required:true}"  name="type" class="input-normal"> 
+                <option value="">请选择</option>
+                <option value="saler">已付款已配货</option>
+                <option value="large">已发货</option>
+              </select>
+            </div>
+          </div>
+          <div class="control-group span8">
+            <label class="control-label">发货状态：</label>
+            <div class="controls">
+              <select  data-rules="{required:true}"  name="type" class="input-normal"> 
+                <option value="">请选择</option>
+                <option value="saler">已配货</option>
+                <option value="large">已发货</option>
+              </select>
+            </div>
+          </div>
+          <div class="control-group span8">
+            <label class="control-label">付款状态：</label>
+            <div class="controls">
+              <select  data-rules="{required:true}"  name="type" class="input-normal"> 
+                <option value="">请选择</option>
+                <option value="saler">已付款</option>
+                <option value="large">未付款</option>
+              </select>
+            </div>
+          </div>
+          <div class="control-group span16">
+            <div class="bui-form-group-select" data-type="city">
+                <label class="control-label">所在地区：</label>
+                <div class="controls">
+                  <select class="input-small" name="province" value="山东省">
+                    <option>请选择省</option>
+                  </select>
+                  <select class="input-small"  name="city"><option>请选择市</option></select>
+                  <select class="input-small"  name="county"><option>请选择县/区</option></select>
+                </div>
+            </div>
+          </div>
+          <div class="control-group span15 ">
+            <label class="control-label">下单时间：</label>
+            <div id="range" class="controls bui-form-group"  data-rules="{dateRange:true}">
+              <input name="start" class="calendar"   data-rules="{required:true}"  type="text"><label>&nbsp;-&nbsp;</label><input name="end" class="calendar"   data-rules="{required:true}"  type="text">
+            </div>
+          </div>
+        </div>
+        <div class="row form-actions actions-bar">
+            <div class="span13 offset3 ">
+              <button  type="button" id="btnSearch" class="button button-primary">搜索</button>
+              <button type="reset" class="button">重置</button>
+            </div>
+        </div>
+      </form>
+    </div>
+    
+
+  </div>
+  <script type="text/javascript" src="../assets/js/jquery-1.8.1.min.js"></script>
+  <script type="text/javascript" src="../assets/js/bui-min.js"></script>
+  <script type="text/javascript" src="../assets/js/myjs.js"></script> 
+  <script type="text/javascript" src="../assets/js/config-min.js"></script>
+  <script type="text/javascript">
+    BUI.use('common/page');
+  </script>
+
+<script type="text/javascript">
+  BUI.use('bui/form',function (Form) {
+    var form = new Form.HForm({
+      srcNode : '#J_Form'
+    });
+
+    form.render();
+  });
+</script>
+
+<body>
+>>>>>>> dev-jack
 </html> 

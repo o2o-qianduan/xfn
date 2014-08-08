@@ -528,9 +528,43 @@ $(function(){
          }
 });   
 })
+/***个人中心页面根据左边菜单点击在右边区域显示相应的内容*****june*****start***/
+ $(function() {
+     var alen = $(".per_center ul li").length;
+     $('.per_center ul li a').click(function() {
+         var href = $(this).attr("href").toString();
+         for (var i = 0; i < alen; i++) {
+             var a_ = $(".per_center ul li a").eq(i);
+             var a_text = $(a_).attr("href").toString()
+             if (a_text != href)
+                 $(a_text).css("display", "none"); //非当前点击对象则隐藏
+         } 
+       /*   $('body,html').animate({scrollTop:0},1000); */  
+              $(href).css("display", "block"); //为当前点击对象则展示 var hLen=$(href).offset().top;         
+             /* var page = href.substr(href.length-3,3);
+            $.ajax({
+                        url:'http://127.0.0.1/TShop/index.php/Home/customers',
+                        dataType:'html',
+                        type:'get',
+                        data:'customer_page='+page,
+                         success:function(html){
+                            $("#tab-"+page).html(html);
+                        }
+            });*/
+     })
+ })
+/***个人中心页面根据左边菜单点击在右边区域显示相应的内容*****june*****end***/
+/****个人中心【收货地址、修改地址】点击删除****june***************start****/
+//Usercenter用户删除地址
+$(".receive_del").click(function(){
+   $("#prompt_msg").show();
+})
+$("#dlg-close").click(function(){
+    $("#prompt_msg").hide();
+})
+/****个人中心【收货地址、修改地址】****june***************end****/
+ /**************首页顶部广告可关闭部分******************june**************start**************/
 /***********产品列表页排序*********june*******end***/
-
-
  $(function(){
     YAO.YTabs({
     tabs: YAO.getElByClassName('YM-Tab', 'li', 'YMenu-side'),

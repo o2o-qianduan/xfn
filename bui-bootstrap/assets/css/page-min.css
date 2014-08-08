@@ -37,11 +37,14 @@
 	margin-top: 10px;
 	height: 30px;
 }
+<<<<<<< HEAD
 
 .row02{
 	margin-bottom: 20px;
 	margin-left: 20px;
 }
+=======
+>>>>>>> dev-jack
 .offset2 #btnEnsure,.offset2 #btnConfirm{
 	margin-top: 20px;
 	margin-left: 350px;
@@ -133,6 +136,7 @@
 }
 .hide {
 	display: none;
+<<<<<<< HEAD
 }
 
 #myoffset{
@@ -145,4 +149,6 @@
 	border: 1px solid #BDBDBD;
 	margin: 15px;
 	padding: 10px;
+=======
+>>>>>>> dev-jack
 }
