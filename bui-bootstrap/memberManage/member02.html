@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <title> 会员列表</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="../assets/css/dpl-min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/bui-min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/page-min.css" rel="stylesheet" type="text/css" /> 
+ </head>
+ <body>
+  
+  <div class="container">
+
+    <div class="row header">
+      <p>会员列表</p>
+      <button>添加会员</button>
+    </div>
+    <fieldset>
+        <div class="row fileborder">
+          <form id="searchForm" class="form-horizontal span24">           
+            <div class="row">
+              <div class="control-group span8">
+                <label class="control-label">标签名称：</label>
+                <div class="controls" >
+                  <select name="" id="" name="mode">
+                    <option value=""></option>
+                    <option value=""></option>
+                  </select>
+                </div>
+              </div>   
+              <div class="control-group span8">
+                <label class="control-label">会员名称：</label>
+                <div class="controls" >
+                  <select name="" id="" name="mode">
+                    <option value=""></option>
+                    <option value=""></option>
+                  </select>
+                </div>
+              </div>    
+              <div class="control-group span8">
+                <label class="control-label">会员等级：</label>
+                <div class="controls" >
+                  <select name="" id="" name="mode">
+                    <option value=""></option>
+                    <option value=""></option>
+                  </select>
+                </div>
+              </div>                 
+            </div>
+
+            <div class="row">
+              <div class="control-group span8">
+                <label class="control-label">交易额：</label>
+                <div class="controls">
+                  <input type="text" class="control-text" name="">
+                </div>
+              </div>
+              <div class="control-group span8">
+                <label class="control-label">交易次数：</label>
+                <div class="controls">
+                  <input type="text" class="control-text" name="">
+                </div>
+              </div>
+              <div class="control-group span8">
+                <label class="control-label">上次交易时间：</label>
+                <div class="controls">
+                  <input type="text" class=" calendar" name="startDate">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="span3 offset2">
+                  <button  type="button" id="btnSearch" class="button button-primary">搜索</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="row fileborder">
+          <div class="ontrol-group span3" >
+              <button>发红包</button>
+          </div>
+          <div class="ontrol-group span3" >
+                <button>发优惠券</button>
+          </div>
+          <div class="ontrol-group span5" >
+              <select name="" id="" name="mode">
+                <option value="" selected="selected">所有分类</option>
+                <option value=""></option>
+              </select>
+          </div>
+          <div class="ontrol-group span3" >
+              <button>批量充值</button>
+          </div>
+          <div class="ontrol-group span3" >
+                <button>批量修改</button>
+          </div>
+        </div>
+        
+
+    </fieldset>
+  </div>
+
+ <script type="text/javascript" src="../assets/js/jquery-1.8.1.min.js"></script>
+  <script type="text/javascript" src="../assets/js/bui-min.js"></script>
+  <script type="text/javascript" src="../assets/js/config-min.js"></script>
+  <script type="text/javascript" src="../assets/js/myjs.js"></script> 
+  <script type="text/javascript">
+    BUI.use('common/page');
+  </script>
+
+<script type="text/javascript">
+  BUI.use('common/search',function (Search) {
+    
+   
+     var editing = new BUI.Grid.Plugins.DialogEditing({
+        contentId : 'content', //设置隐藏的Dialog内容
+        autoSave : true, //添加数据或者修改数据时，自动保存
+        triggerCls : 'btn-edit'
+      }),
+      columns = [
+    
+         
+        ],
+      store = Search.createStore('../data/goods03.json',{
+        proxy : {
+          save : { //也可以是一个字符串，那么增删改，都会往那么路径提交数据，同时附加参数saveType
+            addUrl : '../data/add.json',
+            updateUrl : '../data/edit.json',
+            removeUrl : '../data/del.php'
+          }/*,
+          method : 'POST'*/
+        },
+        autoSync : true //保存数据后，自动更新
+      }),
+      gridCfg = Search.createGridCfg(columns,{
+        // tbar : {
+        //   items : [
+        //     {text : '<i class="icon-plus"></i>新建',btnCls : 'button button-small',handler:addFunction},
+        //     {text : '<i class="icon-edit"></i>编辑',btnCls : 'button button-small',handler:function(){alert('编辑');}},
+        //     {text : '<i class="icon-remove"></i>删除',btnCls : 'button button-small',handler : delFunction}
+        //   ]
+        // },
+        plugins : [editing,BUI.Grid.Plugins.CheckSelection,BUI.Grid.Plugins.AutoFit] // 插件形式引入多选表格
+      });
+
+    var  search = new Search({
+        store : store,
+        gridCfg : gridCfg
+      }),
+      grid = search.get('grid');
+
+  });
+</script>
+
+</body>
+</html>  
