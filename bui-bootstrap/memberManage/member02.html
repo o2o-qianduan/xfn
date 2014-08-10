@@ -52,23 +52,29 @@
               <div class="control-group span8">
                 <label class="control-label">交易额：</label>
                 <div class="controls">
-                  <input type="text" class="control-text" name="">
+                  <input type="text" class="myinput" name="">
+                  <span> - </span>
+                  <input type="text" class="myinput" name="">
                 </div>
               </div>
               <div class="control-group span8">
                 <label class="control-label">交易次数：</label>
                 <div class="controls">
-                  <input type="text" class="control-text" name="">
+                  <input type="text" class="myinput" name="">
+                  <span> - </span>
+                  <input type="text" class="myinput" name="">
                 </div>
               </div>
-              <div class="control-group span8">
-                <label class="control-label">上次交易时间：</label>
-                <div class="controls">
-                  <input type="text" class=" calendar" name="startDate">
-                </div>
-              </div>
+              
             </div>
             <div class="row">
+
+              <div class="control-group span9">
+                <label class="control-label">上次交易时间：</label>
+                <div class="controls">
+                   <input type="text" class=" calendar" name="startDate"><span> - </span><input name="endDate" type="text" class=" calendar">
+                </div>
+              </div>
               <div class="span3 offset2">
                   <button  type="button" id="btnSearch" class="button button-primary">搜索</button>
               </div>
@@ -77,29 +83,36 @@
         </div>
         <div class="row fileborder">
           <div class="ontrol-group span3" >
-              <button>发红包</button>
+              <button  type="button" id="" class="button button-primary">发红包</button>
           </div>
           <div class="ontrol-group span3" >
-                <button>发优惠券</button>
+                <button  type="button" id="" class="button button-primary">发优惠券</button>
           </div>
           <div class="ontrol-group span5" >
               <select name="" id="" name="mode">
-                <option value="" selected="selected">所有分类</option>
+                <option value="" selected="selected">批量添加标签</option>
                 <option value=""></option>
               </select>
           </div>
           <div class="ontrol-group span3" >
-              <button>批量充值</button>
+              <button  type="button" id="" class="button button-primary">批量充值</button>
           </div>
-          <div class="ontrol-group span3" >
-                <button>批量修改</button>
+          <div class="ontrol-group span8" >
+                <button  type="button" id="" class="button button-primary">批量修改</button>
           </div>
+           <div class="span3 offset2">
+                  <button  type="button" id="" class="button button-primary">移除</button>
+              </div>
         </div>
-        
+
+        <div class="search-grid-container">
+           <div id="grid"></div>
+       </div>
 
     </fieldset>
   </div>
 
+  
  <script type="text/javascript" src="../assets/js/jquery-1.8.1.min.js"></script>
   <script type="text/javascript" src="../assets/js/bui-min.js"></script>
   <script type="text/javascript" src="../assets/js/config-min.js"></script>
@@ -118,8 +131,24 @@
         triggerCls : 'btn-edit'
       }),
       columns = [
-    
+          {title:'会员编号',dataIndex:'member-2-0',width:100},
+          {title:'会员名称',dataIndex:'member-2-1',width:100},
          
+          {title:'等级',dataIndex:'member-2-2',width:100},
+         
+          {title:'交易额',dataIndex:'member-2-3',width:100},
+          {title:'交易次数',dataIndex:'member-2-4',width:100},
+          {title:'平均订单金额',dataIndex:'member-2-5',width:100},
+         
+          {title:'上次订单时间',dataIndex:'member-2-6',width:100},
+         
+          {title:'操作',dataIndex:'',width:200,renderer : function(value,obj){
+             
+            var  editStr1 = '<span class="grid-command" >添加标签</span>',
+                 editStr2 = '<span class="grid-command" ><a  href="member08.html">查看</a></span>',
+              delStr = '<span class="grid-command">交易记录</span>';//页面操作不需要使用Search.createLink
+            return  editStr1 + editStr2 + delStr;
+          }}
         ],
       store = Search.createStore('../data/goods03.json',{
         proxy : {

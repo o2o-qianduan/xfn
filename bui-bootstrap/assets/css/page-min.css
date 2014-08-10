@@ -47,17 +47,19 @@
 	margin-left: 350px;
 
 }
-
+.selectrow{
+	position: relative;
+}
 .selectlist{
 	float: left;
 	margin-right: 100px;
-
+	margin-left: 20px;
 }
 .selectlist2{
 	float: left;
 	position: absolute;
-	left: 460px;
-	top: 165px;
+	left: 470px;
+	top: 20px;
 }
 
 .selectlist2 span{
@@ -77,7 +79,6 @@
 }
 .usertable{
 	margin-left: 10px;
-	margin-bottom: 20px;
 }
 .row  .memtit{
 	background-color: #EEF3F7;
@@ -136,13 +137,39 @@
 }
 
 #myoffset{
-	margin-left: 400px;
+	margin-left: 420px;
 	margin-top: 20px;
 }
 
 /*会员管理*/
+
 .fileborder{
-	border: 1px solid #BDBDBD;
+	border: 1px solid #e5e5e5;
 	margin: 15px;
 	padding: 10px;
+}
+.myinput{
+	width: 50px !important;
+}
+
+.tablerow .usertable01 .memtit2{
+	text-align: center  !important;
+	margin: 0 auto;
+	width: 800px;
+}
+
+.tablerow .usertable01 td{
+	width: 50%;
+}
+.tablerow .usertable01 td input{
+	height: 35px;
+	border:none;
+	text-align: center;
+	width: 95%;
+}
+.tablerow #usertable02 td{
+	width: 20%;
+}
+.tablerow #usertable02 th{
+	font-weight: normal;
 }
