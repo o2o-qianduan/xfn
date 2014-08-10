@@ -21,17 +21,18 @@ $('#2_right').live('click',function(){
 		        var opt1="";
 				 $('#opt_1 option:selected').each(function(){		
 				 	opt1+='<option>'+ $(this).val()+'</option>';
+				 	$(this).remove();
 				 })   
-				 $('#opt_1 option:selected').remove();
-				$('#opt_2 option:last').append(opt1);      
+				 
+				$('#opt_2').append(opt1);      
  })
 $('#2_left').live('click',function(){
 		        var opt1="";
 				 $('#opt_2 option:selected').each(function(){		
 				 	opt1+='<option>'+ $(this).val()+'</option>';
+				 	$(this).remove();
 				 })   
-				 $('#opt_2 option:selected').remove();
-				$('#opt_1 option:last').append(opt1);      
+				$('#opt_1').append(opt1);      
  })
 /****可选商品-跟该商品关联的商品****end***/        
 /******添加新商品-编辑商品************june**********end*******************/                                                                     
