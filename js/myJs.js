@@ -556,11 +556,31 @@ $(function(){
 /***个人中心页面根据左边菜单点击在右边区域显示相应的内容*****june*****end***/
 /****个人中心【收货地址、修改地址】点击删除****june***************start****/
 //Usercenter用户删除地址
-$(".receive_del").click(function(){
-   $("#prompt_msg").show();
+$(".receive_del").live('click',function(){
+    var k=0;
+    $("input[name='receiver']").each(function(){
+        if ($(this).attr("checked")){
+            alert("后台在此实现删除功能");
+            k=1;     
+        }
+    })
+    if(k==0){
+        $("#prompt_msg").show();
+    } 
 })
-$("#dlg-close").click(function(){
+$("#dlg-close").live('click',function(){
     $("#prompt_msg").hide();
+})
+/*点击编辑时，切换页面到【修改地址】*/
+$(".modifyAdd").live('click',function(){
+    $("#tab-3-2").hide();
+    $("#modifyAdd").show();
+})
+/*点击保存时，切换页面到【收货地址】*/
+$("#addressBtnSave").live('click',function(){
+    alert("此处与后台交互保存数据");//纯提醒效果，删除
+    $("#modifyAdd").hide();
+    $("#tab-3-2").show();
 })
 /****个人中心【收货地址、修改地址】****june***************end****/
  /**************首页顶部广告可关闭部分******************june**************start**************/

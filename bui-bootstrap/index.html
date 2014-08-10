@@ -57,7 +57,7 @@
           menu:[{
               text:'首页内容',
               items:[
-                {id:'code',text:'首页代码',href:'main/code.html',closeable : false},
+                {id:'code',text:'首页代码',href:'http://www.baidu.com',closeable : false},
                 {id:'main-menu',text:'顶部导航',href:'main/menu.html'},
                 {id:'second-menu',text:'右边菜单',href:'main/second-menu.html'},
                 {id:'dyna-menu',text:'动态菜单',href:'main/dyna-menu.html'}
@@ -77,12 +77,13 @@
             }]
           },{
             id:'goods_manage',
+            homePage : 'goodsList1',
             menu:[{
                 text:'商品管理',
                 items:[
                   {id:'goodsList1',text:'商品列表',href:'goodsManage/goodsList1.html'},
                   {id:'goodsList2',text:'下架商品列表',href:'goodsManage/goodsList2.html'},
-                  {id:'newgoods',text:'添加新商品',href:'goodsManage/newgoods.html'},
+                  {id:'newgoods',text:'添加新商品',href:'goodsManage/addGoods.html'},
                   {id:'goodsSort',text:'商品分类',href:'goodsManage/goodsSort.html'},
                   {id:'userComment',text:'用户评论',href:'goodsManage/userComment.html'},
                   {id:'goodsBrand',text:'商品品牌',href:'goodsManage/goodsBrand.html'},
@@ -97,6 +98,7 @@
               }]
           },{
             id:'indent_manage',
+            homePage : 'indentList',
             menu:[{
                 text:'订单管理',
                 items:[
@@ -112,7 +114,8 @@
                 ]
               }]
           },{
-            id:'member_manage',
+            id:'member01',
+            homePage : 'code',
             menu:[{
                 text:'会员管理',
                 items:[
@@ -131,7 +134,8 @@
           },
 
           {/*营销管理修改 ----june------start---*/
-            id:'market_extend',
+            id:'me-1-1',
+            homePage : 'me-1-1',
             menu:[{
                 text:'营销推广',
                 items:[
@@ -166,6 +170,7 @@
           /*营销管理修改 ----june------end---*/},
           {
             id:'report_forms',
+            homePage : 'report1',
             menu:[{
                 text:'统计报表',
                 items:[
@@ -184,6 +189,7 @@
               }]
           },{
             id:'content_manage',
+            homePage : 'advertList',
             menu:[{
                 text:'广告管理',
                 items:[
@@ -205,6 +211,7 @@
               }]
           },{
             id:'web_deploy',
+            homePage : 'code',
             menu:[{
                 text:'网站配置',
                 items:[
@@ -215,6 +222,7 @@
               }]
           },{
             id:'system_manage',
+            homePage : 'adminList',
             menu:[{
                 text:'权限管理',
                 items:[

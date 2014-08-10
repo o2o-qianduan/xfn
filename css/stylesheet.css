@@ -1502,6 +1502,7 @@ ul, li {
 }
 .receive_tab td:first-child{
 	width: 35px;
+	background: #f5f5f5;
 }
 .receive_tab td:nth-child(2){
 	width: 92px;
@@ -1537,19 +1538,22 @@ ul, li {
 	text-align: center;
 	background: #77be22;
 	border-radius: 6px;
+	color: #ffffff;
+	font-weight: bold;
+	cursor: pointer;
 }
 .receive_btn span a{
 	color: #ffffff;
-	font-weight: bold;
 }
+
 /***提示框样式***/
 .pop_content span {
-    float: right;
+    float: left;
     font-size: 14px;
     height: 40px;
     line-height: 24px;
     padding: 25px 20px;
-    width: 310px;
+    width: 210px;
 }
 .pop_btn {
     float: right;
@@ -1569,7 +1573,26 @@ ul, li {
     text-decoration: none;
     width: 86px;
 }
+.pop_main {
+    background-color: #fff;
+    border-radius: 5px;
+    height: 185px;
+    position: fixed;
+    width: 295px;
+    z-index: 300;
+    border:1px solid #77be22;
+}
 
+.pop_title {
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ebebeb;
+    border-radius: 5px 5px 0 0;
+    font-size: 16px;
+    font-weight: bold;
+    height: 37px;
+    line-height: 37px;
+    text-indent: 20px;
+}
 .pop_link {
     color: #adadad;
     float: right;
