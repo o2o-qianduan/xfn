@@ -12,65 +12,50 @@
   <div class="container">
 
     <div class="row header">
-      <p>活动列表</p>
-      <span class="headBtn"><a  href="#">创建活动</a></span>
+      <p>专题管理</p>
+      <span class="headBtn"><a id="subject_1" href="#">创建专题</a></span> 
     </div>
+
+        <!-- 此部分是批量生成弹出的提示框 -->
+     <div id="prompt_msg" class="pop_main" style="left: 314px; top: 100px; display: none;">
+       <div id="prompt_title" class="pop_title">创建/编辑专题</div>
+          <div  class="pop_content popCon01 clearfix">
+              <div class="pop_content01">
+                <label for="">专题名称：</label>
+                <input type="text">
+              </div>
+              <div class="pop_content01">
+                <label for="">开始时间：</label>
+                <input type="text">
+              </div>
+              <div class="pop_content01">
+                <label for="">结束时间：</label>
+                <input type="text">
+              </div>
+              <div class="pop_content01">
+                <label for="">专题模板：</label>
+                <input type="text">
+              </div>
+          </div>
+       <div class="clearfix">
+       <div id="dlg-sure" class="btn_style_1 pop_btn">确定</div>
+       <div id="dlg-close" class="btn_style_1 pop_btn">取消</div>
+          <a id="dlg-link" class="pop_link" href="#"></a>
+       </div>
+    </div><!-- 提示框结束 --> 
+
+
     <div class="row fileborder">
           <form id="searchForm" class="form-horizontal span24">           
+           
             <div class="row">
-              <div class="control-group span7">
-                <label class="control-label">活动名称：</label>
-                <div class="controls" >
-                  <input type="text">
-                </div>
-              </div>   
-              <div class="control-group span7">
-                <label class="control-label">活动类型：</label>
-                <div class="controls" >
-                  <select name="" id="" name="mode">
-                    <option value="">折扣</option>
-                    <option value=""></option>
-                  </select>
-                </div>
-              </div>  
-               <div class="control-group span10">
-                <label class="control-label">活动时间：</label>
-                <div class="controls">
-                   <input type="text" class=" calendar" name="startDate"><span> - </span><input name="endDate" type="text" class=" calendar">
-                </div>
-              </div>  
-                         
-            </div>
-
-            <div class="row">
-             
-              <div class="control-group span7">
-                <label class="control-label">订单数：</label>
-                <div class="controls">
-                  <input type="text" class="myinput" name="">
-                  <span> - </span>
-                  <input type="text" class="myinput" name="">
-                </div>
-              </div>
-              <div class="control-group span9">
-                <label class="control-label">订单总额：</label>
-                <div class="controls">
-                  <input type="text" class="myinput" name="">
-                  <span> - </span>
-                  <input type="text" class="myinput" name="">
-                </div>
-              </div>      
-              <div class="span3">
-                 <span class="myspanBtn">搜索</span>
-              </div>
+              
               <div class="span3">
                  <span class="myspanBtn">删除</span>
               </div>
             </div>
           </form>
     </div>
-       
-
      <div class="search-grid-container">
          <div id="grid"></div>
      </div>
@@ -95,17 +80,14 @@
         triggerCls : 'btn-edit'
       }),
       columns = [
-          {title:'活动名称',dataIndex:'market-3-0',width:100},
-          {title:'活动类型',dataIndex:'market-3-1',width:100},
-          {title:'开始时间',dataIndex:'market-3-2',width:100},
-          {title:'结束时间',dataIndex:'market-3-3',width:100},
-         
-          {title:'订单数',dataIndex:'market-3-4',width:100},
-          {title:'订单总额',dataIndex:'market-3-5',width:100},
+          {title:'编号',dataIndex:'market-5-0',width:100},
+          {title:'专题名称',dataIndex:'market-5-1',width:100},
+          {title:'开始时间',dataIndex:'market-5-2',width:100},
+          {title:'结束时间',dataIndex:'market-5-3',width:100},
           {title:'操作',dataIndex:'',width:200,renderer : function(value,obj){
-            var  editStr1 = '<span class="grid-command">查看</span>',
-              delStr = '<span class="grid-command">订单列表</span>';//页面操作不需要使用Search.createLink
-            return  editStr1 + delStr;
+            var  editStr1 = '<span class="grid-command">[编辑]</span>'
+              
+            return  editStr1 ;
           }}
         
         ],

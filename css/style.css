@@ -597,7 +597,6 @@ input.num-each{
 	width: 90%;
 	top: 0px;
 	position: relative;
-
 }
 .rank-ul{
 	margin: 10px auto;
@@ -631,6 +630,86 @@ input.num-each{
 .rankOn-0,.rankOn-1{
 	display: block;
 }
-
 /*****************资讯列表页“排行榜、问答”部分修改Jquery插件tabs样式*******june********end***********/
-
+/*****************激活礼品卡“未用完、已用完、已过期”部分修改Jquery插件tabs样式*******june********start***********/
+.useBox {
+	margin-top: 50px;
+	position: relative;
+	margin-left: 0px;
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	background: repeat-x scroll center top #ffffff;
+	padding-left: 37px;
+	border-bottom: 1px solid #e7e6e6;
+	font-size: 14px;
+	font-family: 'SimSun','宋体';
+}
+#useList .useBox li {
+	float: left;
+	width: 120px;
+	text-align: center;	
+	margin-left: 15px;
+	border-radius: 6px;
+	background: repeat-x scroll center top #fafafa;
+	border:1px solid #e7e6e6;
+}
+.use-0,.use-1,.use-2  {
+	display: none;
+	border:1px solid #ffffff;
+	margin-left: 20px;
+	width: 90%;
+	top: 0px;
+	position: relative;
+}
+.use-ul{
+	display: block;
+	margin-top: 10px;
+	width: 100%;	
+	border-collapse: collapse;
+}
+.use-ul tr{
+	text-align: center;
+	height: 40px;
+	line-height: 40px;
+}
+.use-ul tr:first-child{
+	background: #f5f5f5;
+	height: 35px;
+	line-height: 35px;
+}
+.use-ul td{
+	border:1px solid #e7e6e6;
+}
+.use-ul td:first-child{
+	width: 180px;
+}
+.use-ul td:nth-child(2){
+	width: 150px;
+}
+.use-ul td:nth-child(3){
+	width: 150px;
+}
+.use-ul td:last-child{
+	width: 270px;
+}
+.order_num{
+	width: 185px;
+}
+.useOption a{
+	text-decoration: none;
+	width: 100%;
+	color: #666666;
+}
+.useOn0,.useOn1,.useOn2 {
+	background:#ffffff!important;
+	border-bottom: 1px solid #ffffff;
+	font-weight: bold;	
+}
+.useOn0 a,.useOn1 a,.useOn2 a{
+	color: #77be22;
+}
+.useOn-0,.useOn-1,.useOn-2{
+	display: block;
+}
+/*****************激活礼品卡“未用完、已用完、已过期”部分修改Jquery插件tabs样式*******june********start***********/

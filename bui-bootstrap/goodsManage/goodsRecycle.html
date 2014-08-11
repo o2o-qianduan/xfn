@@ -10,11 +10,48 @@
  <body>
   
   <div class="container">
-  
-    <div class="search-grid-container">
-      <div id="grid"></div>
+    <div class="row header">
+      <p>商品回收站</p>
+      <button>商品列表</button>
     </div>
-  </div>
+    <div class="row fileborder">
+         
+            <div class="ontrol-group span4" >
+              <select name="" id="" name="mode">
+                <option value="" selected="selected">所有分类</option>
+                <option value=""></option>
+              </select>
+            </div>
+
+            <div class="ontrol-group span4" >
+              <select name="" id="" name="type">
+                <option value="" selected="selected">所有商品</option>
+                <option value=""></option>
+              </select>
+            </div>
+
+            <div class="ontrol-group span7" >
+              <input type="text" value="商品编号" />
+            </div>
+                    
+            <div class="span3">
+                 <span class="myspanBtn">搜索</span>
+             </div>   
+              <div class="clear"></div>
+             <div class="row" style="margin: 5px;">
+               <div class="span3">
+                   <span class="myspanBtn">还原</span>
+               </div>  
+               <div class="span3">
+                <span class="myspanBtn">删除</span>
+              </div>  
+            </div>
+            
+        </div>
+          <div class="search-grid-container">
+            <div id="grid"></div>
+          </div>
+     </div>
 
     <div id="content" class="hide">
       <form id="J_Form" class="form-horizontal" action="../data/edit.php?a=1">

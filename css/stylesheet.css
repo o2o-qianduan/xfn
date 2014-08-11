@@ -1159,7 +1159,6 @@ ul, li {
 	padding-left: 26px;
 	height: 35px;
 	border-bottom:1px dashed #E7E6E6;
-
 }
 
 .center_course .current ul li a{
@@ -1171,7 +1170,6 @@ ul, li {
 .center_course .current ul li a:hover{
 	color: red;
 }
-
 /*右边详细信息*/
 .right_div{          /*可重用，右部div布局*/
 	width: 917px;
@@ -1189,7 +1187,6 @@ ul, li {
 	position: absolute;
 	margin-top: -2px;
 }
-
 .right_div>p{       /*可重用，标题字体*/
 	border-bottom: 2px solid #DEDEDE;
 	color: #2d2d2d;
@@ -1198,23 +1195,16 @@ ul, li {
 	font-size: 18px; 
 	padding-bottom: 5px;
 }
-
-
 .right_inner_text{
 	margin-top: 24px;
 	color:grey;
 }
-
 .right_inner_text h3{
 	color: #666;
 	font-size: 12px;
 	line-height: 36px;
 	font-family: "新宋体" "MicroSoft YeHei";
 }
-.right_inner_text h3{
-
-}
-
 .right_inner_text p{
 	font-size: 12px;
 	font-family: 'NSimSun',"新宋体" "MicroSoft YeHei";
@@ -1225,14 +1215,12 @@ ul, li {
 .member_div{   /*可重用*/
 	margin: 22px 0 0 32px;
 }
-
 .member_div input,.referrerNum input,.findCode_Box input{       /*可利用，输入框样式*/
 	width: 290px;
 	height: 33px;
 	box-shadow: 0 3px 10px #E9E9E9 inset;
 	border:1px solid #ADADAD;
 	border-radius: 3px;
-
 }
 .member_div label,.findCode_Box label{      /* 可利用，标签样式*/
 	display: inline-block;
@@ -1244,7 +1232,6 @@ ul, li {
 	/*可利用，输入框、标签行高*/
 	height: 52px;
 }
-
 #info3 #lock_img1,#info4 #lock_img2{
 	text-align: left !important;
 	padding-left: 10px;
@@ -1329,7 +1316,6 @@ ul, li {
 #commitBtn{
 	margin-left: 100px;
 }
-
 /*我的尚田*/
 
 .myDetailInfo{
@@ -1493,7 +1479,130 @@ ul, li {
 	font-family: "Arial";
 	font-size: 16px;
 }
+/****“收货地址、修改地址页面”****june****start*/
+.receive_box{
+	display: block;
+	margin-top: 15px;
+}
+.receive_tab{
+	border-collapse: collapse;
+	text-align: center;
+}
+.receive_tab tr{
+	height: 40px;
+	line-height: 40px;
+}
+.receive_tab tr:first-child{
+	background: #f5f5f5;
+	height: 35px;
+	line-height: 35px;
+}
+.receive_tab td{
+	border: 1px solid #e1e1e1;
+}
+.receive_tab td:first-child{
+	width: 35px;
+	background: #f5f5f5;
+}
+.receive_tab td:nth-child(2){
+	width: 92px;
+}
+.receive_tab td:nth-child(3){
+	width: 476px;
+}
+.receive_tab td:nth-child(4){
+	width: 136px;
+	color: #77be22;
+}
+.receive_tab td:nth-child(5){
+	width: 92px;
+}
+.receive_tab td:nth-child(6){
+	width: 84px;
+	color: #77be22;
+}
+.receive_tab td:nth-child(6) a{
+	color: #77be22;
+	text-decoration: underline;
+}
+.receive_btn{
+	display: block;
+	margin-top: 15px;
+}
+.receive_btn span{
+	float: left;
+	margin-right: 15px;
+	width: 93px;
+	height: 36px;
+	line-height: 36px;
+	text-align: center;
+	background: #77be22;
+	border-radius: 6px;
+	color: #ffffff;
+	font-weight: bold;
+	cursor: pointer;
+}
+.receive_btn span a{
+	color: #ffffff;
+}
 
+/***提示框样式***/
+.pop_content span {
+    float: left;
+    font-size: 14px;
+    height: 40px;
+    line-height: 24px;
+    padding: 25px 20px;
+    width: 210px;
+}
+.pop_btn {
+    float: right;
+    margin-right: 20px;
+}
+.btn_style_1 {
+    background-color: #77be22;
+    border: 0 none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    text-decoration: none;
+    width: 86px;
+}
+.pop_main {
+    background-color: #fff;
+    border-radius: 5px;
+    height: 185px;
+    position: fixed;
+    width: 295px;
+    z-index: 300;
+    border:1px solid #77be22;
+}
+
+.pop_title {
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ebebeb;
+    border-radius: 5px 5px 0 0;
+    font-size: 16px;
+    font-weight: bold;
+    height: 37px;
+    line-height: 37px;
+    text-indent: 20px;
+}
+.pop_link {
+    color: #adadad;
+    float: right;
+    font-size: 12px;
+    height: 32px;
+    line-height: 50px;
+    padding-right: 10px;
+    text-decoration: none;
+}
+/****“收货地址、修改地址页面”****june****end*/
 /*******************会员页面整理结束*******************************/
 /*********layout************bing**********/
 
@@ -1741,11 +1850,11 @@ img{
 }
 #banner-point {
 	height: 10px;
-	width: 130px;
+	width: auto;
 	list-style: none;
 	position: absolute;
 	z-index: 99;
-	right: 0px;
+	right: 10px;
 	bottom: 20px;
 }
 .points {
@@ -2300,11 +2409,34 @@ box-shadow: 2px 2px 5px #C0BBB5;
 	clear: both;
 	width: 203px !important;
 }
-
  .pro_course{
 	float: left;
 } 
-
+.pro_sort{
+	position: absolute;
+	float: right;
+	right: 0;
+	top: 0;
+	display: block;
+}
+.pro_sort span{
+	float: left;
+}
+.pro_sort .sort-item{
+	width: 70px;
+	border:1px solid #e6e6e6;
+	text-align: center;
+	margin-left: 10px;
+	cursor: pointer;
+}
+.sort-up{
+	background: url(../images/up1.png) no-repeat right 5px #ffffff;
+	right: 0;
+}
+.sort-down{
+	background: url(../images/down1.png) no-repeat right 5px #ffffff;
+	right: 0;
+}
 /*产品列表页底部图片切换****bing****start*****/
 .pro_bottom_pic0{
 	margin-top: 10px;
@@ -2688,7 +2820,7 @@ box-shadow: 2px 2px 5px #C0BBB5;
 	color: #666;
 }
  input{
-	height: 30px;
+/*	height: 30px;*/
 	border: 1px solid #e1e1e1;
 }
 .ass_summit #rememberlogin{
@@ -2826,5 +2958,4 @@ box-shadow: 2px 2px 5px #C0BBB5;
 .s0-01-detail,.s0-01-price,.s0-buy,.s0-buyNum{
 	float: left;
 }
-
 /*************产品列表页*****左边栏样式*************june***************end*******/

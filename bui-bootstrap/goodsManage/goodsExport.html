@@ -7,59 +7,19 @@
     <link href="../assets/css/bui-min.css" rel="stylesheet" type="text/css" />
     <link href="../assets/css/page-min.css" rel="stylesheet" type="text/css" /> 
     <script type="text/javascript" src="../assets/js/jquery-1.8.1.min.js"></script>
-    <script type="text/javascript">
-      $(function(){
-         
-          //向右移动
-           $("#right").click(function (){
-              var left = $("#select1")[0].options;
-              $(left).each(function (index,domEle){
-                   if(domEle.selected){               
-                       $("#select2")[0].appendChild(domEle);    
-                    }     
-                });
-           });
-
-          //全部向右
-          $("#allright").click(function (){
-                var left = $("#select1")[0].options;      
-                $(left).each(function (index,domEle){              
-                    $("#select2")[0].appendChild(domEle);           
-                });     
-          });
-               
-          //向左移动
-         $("#left").click(function (){
-              var right = $("#select2")[0].options;
-          
-              $(right).each(function (index,domEle){         
-                 if(domEle.selected){            
-                    $("#select1")[0].appendChild(domEle);
-                  }
-              });   
-           });
-
-         //全部向左
-         $("#allleft").click(function (){
-             var right = $("#select2")[0].options;
-             $(right).each(function (index,domEle){
-                   $("#select1")[0].appendChild(domEle);
-              }); 
-         });
-    })
-  </script>
+    <script type="text/javascript" src="../assets/js/myjs.js"></script>
+ 
  </head>
  <body>
   
    
   <div class="container">
-  
-
-      <div class="row header">
-         <p>商品批量导出</p>    
-      </div>
+     <div class="row header">
+      <p>标签管理</p>
+      <button>新增标签</button>
+    </div>
       <form id="searchForm" class="form-horizontal span24">
-        <div class="row row02">
+        <div class="row row02 fileborder">
          
             <div class="ontrol-group span4" >
               <select name="" id="" name="mode">
@@ -85,13 +45,13 @@
         </div>
 
        
-        <div class="row selectrow">
+        <div class="row selectrow fileborder">
           <div class="control-group">
             <label class="control-label">商品列表：</label>
             <div class="selectlist" >
               <label for="">待选列表：</label>
               <div class="clear"></div>
-              <select id="select1" multiple="multiple" style="height:120px;width: 300px;">
+              <select id="select1" multiple="multiple">
                   <option>选择1号</option>
                   <option>选择2号</option>
                   <option>选择3号</option>
@@ -100,15 +60,15 @@
               </select>
             </div>
             <div class="selectlist2">
-              <span><button id="allright">&gt;&gt;</button></span>
-              <span><button id="right">&gt;</button></span>
-              <span><button id="allleft">&lt;&lt;</button></span>             
-              <span><button id="left">&lt;</button></span>
+              <span class="dir_2" id="allright">&gt;&gt;</span>
+              <span class="dir_2" id="right">&gt;</span>
+              <span class="dir_2" id="allleft">&lt;&lt;</span>             
+              <span class="dir_2" id="left">&lt;</span>
             </div>
              <div class="selectlist" >
               <label for="">待选列表：</label>
               <div class="clear"></div>
-              <select id="select2" multiple="multiple" style="height:120px;width: 300px;">
+              <select id="select2" multiple="multiple" >
                   <option>选择1号</option>
                   <option>选择2号</option>
                   <option>选择3号</option>
@@ -119,15 +79,13 @@
           </div>  
         </div>
 
-        <div class="row">
+        <div class="row fileborder">
            <div class="offset2" id="myoffset">
               <button  type="button"  class="button button-primary">确定</button>
               <button  type="button" class="button button-primary">重置</button>
-           </div>
-          
+           </div>       
         </div>
       </form>
- 
   </div>
 
 </body>

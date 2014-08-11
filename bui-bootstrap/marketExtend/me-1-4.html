@@ -7,131 +7,101 @@
     <link href="../assets/css/bui-min.css" rel="stylesheet" type="text/css" />
     <link href="../assets/css/page-min.css" rel="stylesheet" type="text/css" /> 
     <script type="text/javascript" src="../assets/js/jquery-1.8.1.min.js"></script>
-    <script type="text/javascript">
-      $(function(){
-         
-          //向右移动
-           $("#right").click(function (){
-              var left = $("#select1")[0].options;
-              $(left).each(function (index,domEle){
-                   if(domEle.selected){               
-                       $("#select2")[0].appendChild(domEle);    
-                    }     
-                });
-           });
-
-          //全部向右
-          $("#allright").click(function (){
-                var left = $("#select1")[0].options;      
-                $(left).each(function (index,domEle){              
-                    $("#select2")[0].appendChild(domEle);           
-                });     
-          });
-               
-          //向左移动
-         $("#left").click(function (){
-              var right = $("#select2")[0].options;
-          
-              $(right).each(function (index,domEle){         
-                 if(domEle.selected){            
-                    $("#select1")[0].appendChild(domEle);
-                  }
-              });   
-           });
-
-         //全部向左
-         $("#allleft").click(function (){
-             var right = $("#select2")[0].options;
-             $(right).each(function (index,domEle){
-                   $("#select1")[0].appendChild(domEle);
-              }); 
-         });
-    })
-  </script>
+    <script type="text/javascript" src="../assets/js/myjs.js"></script>
+ 
  </head>
  <body>
   
    
   <div class="container">
-  
+     <div class="row header">
+      <p>创建活动</p>
+      <span class="headBtn"><a  href="#">活动列表</a></span>
+     </div>
+      <form id="searchForm" class="form-horizontal span24">    	
+        <div class="row fileborder"> 
+        	<div class="row myheader01">
+				     <p>活动对象</p>
+		    	</div>
+            <div class="control-group span12"> 
+	            <label class="control-label">会员等级：</label>
+	            <div class="controls">
+	              <select class="input-normal"> 
+	                <option value="">全店</option>
+	                <option value="1"></option>
+	                <option value="0"></option>
+	              </select>
+	            </div>
+	            <div class="controls">
+	              <select class="input-normal"> 
+	                <option value="">所有等级</option>
+	                <option value="1"></option>
+	                <option value="0"></option>
+	              </select>
+	            </div>
+  			</div>
+	        <div class="span3">
+	            <span class="myspanBtn">添加</span>
+	        </div>  
+	       
 
-      <div class="row header">
-         <p>创建活动</p>    
-         <button>活动列表</button>
-      </div>
-      <form id="searchForm" class="form-horizontal span24">
-        <div class="span24 fileborder">
-           <div class="row">
-              <div class="control-group span8">
-                <label class="control-label">标签名称：</label>
-                <div class="controls" >
-                  <select name="" id="" name="mode">
-                    <option value=""></option>
-                    <option value=""></option>
-                  </select>
-                </div>
-              </div>   
-              <div class="control-group span8">
-                <label class="control-label">会员名称：</label>
-                <div class="controls" >
-                  <select name="" id="" name="mode">
-                    <option value=""></option>
-                    <option value=""></option>
-                  </select>
-                </div>
-              </div>    
-              <div class="control-group span8">
-                <label class="control-label">会员等级：</label>
-                <div class="controls" >
-                  <select name="" id="" name="mode">
-                    <option value=""></option>
-                    <option value=""></option>
-                  </select>
-                </div>
-              </div>                 
-            </div>
+            <div class="control-group span12">
+	            <label class="control-label">会员标签：</label>
+	            <div class="controls">
+	              <select class="input-normal"> 
+	                <option value="">所有标签</option>
+	                <option value="1"></option>
+	                <option value="0"></option>
+	              </select>
+	            </div>
+	         </div>     
+	         <div class="span3">
+	            <span class="myspanBtn">添加</span>
+	        </div>  
 
-             <div class="row">
-              <div class="control-group span8">
-                <label class="control-label">交易额：</label>
-                <div class="controls">
-                  <input type="text" class="myinput" name="">
-                  <span> - </span>
-                  <input type="text" class="myinput" name="">
-                </div>
-              </div>
-              <div class="control-group span8">
-                <label class="control-label">交易次数：</label>
-                <div class="controls">
-                  <input type="text" class="myinput" name="">
-                  <span> - </span>
-                  <input type="text" class="myinput" name="">
-                </div>
-              </div>            
-            </div>
+	        <div class="clear"></div>
+	        <hr/>
+ 		    	<div class="search-grid-container">
+	      		<div id="grid"></div>
+	  	  	 </div>
 
-            <div class="row">
-              <div class="control-group span9">
-                <label class="control-label">上次交易时间：</label>
-                <div class="controls">
-                   <input type="text" class=" calendar" name="startDate"><span> - </span><input name="endDate" type="text" class=" calendar">
-                </div>
-              </div>
-              <div class="span3 offset2">
-                  <button  type="button" id="btnSearch" class="button button-primary">搜索</button>
-              </div>
-           </div>
         </div>
 
-        <div class="clear"></div>
+      <div class="row selectrow fileborder">
+        <div class="row myheader01">
+			    <p>活动商品</p>
+		    </div>
+	  	  <div class="row row02" > 
+            <div class="control-group span4" >
+              <select name="" id="" name="mode">
+                <option value="" selected="selected">所有分类</option>
+                <option value=""></option>
+              </select>
+            </div>
 
-        <div class="row selectrow">
-          <div class="control-group">
-            <label class="control-label">会员：</label>
+            <div class="ontrol-group span4" >
+              <select name="" id="" name="type">
+                <option value="">所有商品</option>
+                <option value=""></option>
+              </select>
+            </div>
+
+            <div class="ontrol-group span4" >
+              <input type="text" value="商品编号" />
+            </div>
+                    
+           <div class="span3">
+	            <span class="myspanBtn">添加</span>
+	        </div>  
+        </div>
+
+		    <hr/>
+        <div class="control-group">
+            <label class="control-label">商品列表：</label>
             <div class="selectlist" >
-              <label for="">可选会员</label>
+              <label for="">待选列表：</label>
               <div class="clear"></div>
-              <select id="select1" multiple="multiple" style="height:120px;width: 300px;">
+              <select id="select1" multiple="multiple" style="height:120px;width: 250px;">
                   <option>选择1号</option>
                   <option>选择2号</option>
                   <option>选择3号</option>
@@ -139,16 +109,16 @@
                   <option>选择5号</option>
               </select>
             </div>
-            <div class="selectlist2">
-              <span><button id="allright">&gt;&gt;</button></span>
-              <span><button id="right">&gt;</button></span>
-              <span><button id="allleft">&lt;&lt;</button></span>             
-              <span><button id="left">&lt;</button></span>
+            <div class="selectlist2" id="act0-1">
+              <span class="dir_2" id="allright">&gt;&gt;</span>
+              <span class="dir_2" id="right">&gt;</span>
+              <span class="dir_2" id="allleft">&lt;&lt;</span>             
+              <span class="dir_2" id="left">&lt;</span>
             </div>
              <div class="selectlist" >
-              <label for="">导出会员</label>
+              <label for="">待选列表：</label>
               <div class="clear"></div>
-              <select id="select2" multiple="multiple" style="height:120px;width: 300px;">
+              <select id="select2" multiple="multiple" style="height:120px;width: 250px;">
                   <option>选择1号</option>
                   <option>选择2号</option>
                   <option>选择3号</option>
@@ -158,16 +128,129 @@
             </div>
           </div>  
         </div>
+		
+		<div class="row fileborder" style="padding-bottom: 0">
+			 <div class="row myheader01" style="margin-bottom: 0">
+				<p>活动条件</p>
+		 	 </div>
+			 <div class="row tablerow">
+			     <table class="usertable usertable01" width="918px">      
+			        <tbody>
+			          <tr>
+			            <td>订单总额满（元）</td>
+			            <td><input type="text" value="1000"></td>   
+			          </tr>
+			          <tr>
+			            <td>开始时间</td>
+			            <td><input type="text" value=""></td>   
+			          </tr>
+			          <tr>
+			            <td>结束时间</td>
+			            <td><input type="text" value=""></td>   
+			          </tr>
+			        </tbody>
+			      </table>
+			 </div>
+		</div>
 
-        <div class="row">
-           <div class="offset2" id="myoffset">
-              <button  type="button"  class="button button-primary">确定</button>
-              <button  type="button" class="button button-primary">重置</button>
-           </div>
-          
+		<div class="row fileborder" style="padding-bottom: 0">
+			 <div class="row myheader01" style="margin-bottom: 0">
+				<p>活动类型</p>
+		 	 </div>
+			 <div class="row tablerow">
+			     <table class="usertable usertable01" width="918px">      
+			        <tbody>
+			          <tr>
+			            <td><input type="radio"/>  折扣</td>
+			            <td><input type="text" value="1000"></td>   
+			          </tr>
+			          <tr>
+			            <td><input type="radio" name="actType"/>   满减</td>
+			            <td><input type="text" value=""></td>   
+			          </tr>
+			          <tr>
+			            <td><input type="radio" name="actType"/>   包邮</td>
+			            <td><input type="text" value=""></td>   
+			          </tr>
+			          <tr>
+			            <td><input type="radio" name="actType"/>   团购（单个商品）</td>
+			            <td><a href="#">[设置]</a></td>   
+			          </tr>
+			          <tr>
+			            <td><input type="radio" name="actType"/>   秒杀（单个商品）</td>
+			            <td><a href="#">[设置]</a></td>   
+			          </tr>
+			        </tbody>
+			      </table>
+			 </div>
+		</div>
+
+        <div class="row fileborder">
+          <div class="span3" style="margin-left: 400px">
+                 <span class="myspanBtn">搜索</span>
+              </div>
+              <div class="span3">
+                 <span class="myspanBtn">重置</span>
+              </div>   
         </div>
       </form>
   </div>
+   <script type="text/javascript" src="../assets/js/jquery-1.8.1.min.js"></script>
+  <script type="text/javascript" src="../assets/js/bui-min.js"></script>
+  <script type="text/javascript" src="../assets/js/config-min.js"></script>
+  <script type="text/javascript" src="../assets/js/myjs.js"></script> 
+  <script type="text/javascript">
+    BUI.use('common/page');
+  </script>
 
+<script type="text/javascript">
+  BUI.use('common/search',function (Search) {
+    
+   
+     var editing = new BUI.Grid.Plugins.DialogEditing({
+        contentId : 'content', //设置隐藏的Dialog内容
+        autoSave : true, //添加数据或者修改数据时，自动保存
+        triggerCls : 'btn-edit'
+      }),
+      columns = [
+         
+          {title:'排行',dataIndex:'market-4-0',width:200},
+          {title:'商品名称',dataIndex:'market-4-1',width:200},
+         
+          {title:'货号',dataIndex:'market-4-2',width:200},
+         
+          {title:'收藏量',dataIndex:'market-4-3',width:200}
+         
+        ],
+      store = Search.createStore('../data/goods03.json',{
+        proxy : {
+          save : { //也可以是一个字符串，那么增删改，都会往那么路径提交数据，同时附加参数saveType
+            addUrl : '../data/add.json',
+            updateUrl : '../data/edit.json',
+            removeUrl : '../data/del.php'
+          }/*,
+          method : 'POST'*/
+        },
+        autoSync : true //保存数据后，自动更新
+      }),
+      gridCfg = Search.createGridCfg(columns,{
+        // tbar : {
+        //   items : [
+        //     {text : '<i class="icon-plus"></i>新建',btnCls : 'button button-small',handler:addFunction},
+        //     {text : '<i class="icon-edit"></i>编辑',btnCls : 'button button-small',handler:function(){alert('编辑');}},
+        //     {text : '<i class="icon-remove"></i>删除',btnCls : 'button button-small',handler : delFunction}
+        //   ]
+        // },
+        plugins : [editing,BUI.Grid.Plugins.CheckSelection,BUI.Grid.Plugins.AutoFit] // 插件形式引入多选表格
+      });
+
+    var  search = new Search({
+        store : store,
+        gridCfg : gridCfg
+      }),
+      grid = search.get('grid');
+
+  });
+</script>
 </body>
 </html>  

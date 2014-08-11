@@ -56,7 +56,7 @@
           menu:[{
               text:'首页内容',
               items:[
-                {id:'code',text:'首页代码',href:'main/code.html',closeable : false},
+                {id:'code',text:'首页代码',href:'http://www.baidu.com',closeable : false},
                 {id:'main-menu',text:'顶部导航',href:'main/menu.html'},
                 {id:'second-menu',text:'右边菜单',href:'main/second-menu.html'},
                 {id:'dyna-menu',text:'动态菜单',href:'main/dyna-menu.html'}
@@ -82,17 +82,24 @@
                 items:[
                   {id:'goodsList1',text:'商品列表',href:'goodsManage/goodsList1.html',closeable : false},
                   {id:'goodsList2',text:'下架商品列表',href:'goodsManage/goodsList2.html'},
-                  {id:'newgoods',text:'添加新商品',href:'goodsManage/newgoods.html'},
+                  {id:'newgoods',text:'添加新商品',href:'goodsManage/addGoods.html'},
+                   {id:'goodsRecycle',text:'商品回收站',href:'goodsManage/goodsRecycle.html'},
+                  {id:'userComment',text:'用户评论',href:'goodsManage/userComment.html'}      
+                ]
+              },{
+                text:'商品分类',
+                items:[
                   {id:'goodsSort',text:'商品分类',href:'goodsManage/goodsSort.html'},
-                  {id:'userComment',text:'用户评论',href:'goodsManage/userComment.html'},
+                 
                   {id:'goodsBrand',text:'商品品牌',href:'goodsManage/goodsBrand.html'},
-                  {id:'goodsType',text:'商品类型',href:'goodsManage/goodsType.html'},
-                  {id:'goodsRecycle',text:'商品回收站',href:'goodsManage/goodsRecycle.html'},
-                  {id:'picDispose',text:'图片批量处理',href:'goodsManage/picDispose.html'},
-                  {id:'goodsUploading',text:'商品批量上传',href:'goodsManage/goodsUploading.html'},
+                  {id:'goodsType',text:'商品类型',href:'goodsManage/goodsType.html'}
+                ]
+              },{
+                text:'批量操作',
+                items:[
+                   {id:'goodsUploading',text:'商品批量上传',href:'goodsManage/goodsUploading.html'},
                   {id:'goodsExport',text:'商品批量导出',href:'goodsManage/goodsExport.html'},
-                  {id:'goodsModify',text:'商品批量修改',href:'goodsManage/goodsModify.html'},
-                  {id:'userQueAns',text:'用户问答',href:'goodsManage/userQueAns.html'}
+                  {id:'goodsModify',text:'商品批量修改',href:'goodsManage/goodsModify.html'}
                 ]
               }]
           },{
@@ -113,6 +120,7 @@
                 ]
               }]
           },{
+
             id:'member_manage',
             homePage : 'member01',
             menu:[{
@@ -149,7 +157,7 @@
                 text:'会员推荐管理',
                 items:[
                   {id:'me-2-1',text:'推荐设置',href:'marketExtend/me-2-1.html'},
-                  {id:'me-2-2',text:'推荐分成设置',href:'marketExtend/me-2-2.html'}                  
+                  {id:'me-2-2',text:'推荐分成管理',href:'marketExtend/me-2-2.html'}                  
                 ]
               },
                {
@@ -205,13 +213,17 @@
               }]
           },{
             id:'web_deploy',
-            homePage : 'code',
+            homePage : 'web01',
             menu:[{
                 text:'网站配置',
                 items:[
-                  {id:'code',text:'详情页面代码',href:'detail/code.html',closeable : false},
-                  {id:'example',text:'详情页面示例',href:'detail/example.html'},
-                  {id:'introduce',text:'详情页面简介',href:'detail/introduce.html'}
+                  {id:'web01',text:'商店设置',href:'webDeploy/web01.html',closeable : false},
+                  {id:'web02',text:'支付方式',href:'webDeploy/web02.html'},
+                  {id:'web03',text:'配送方式',href:'webDeploy/web03.html'},
+                  {id:'web04',text:'邮件服务器设置',href:'webDeploy/web04.html'},
+                  {id:'web05',text:'配送发货人设置',href:'webDeploy/web05.html'},
+                  {id:'web06',text:'友情链接',href:'webDeploy/web06.html'},
+                  {id:'web07',text:'自定义导航栏',href:'webDeploy/web07.html'}
                 ]
               }]
           },{
@@ -220,9 +232,10 @@
             menu:[{
                 text:'权限管理',
                 items:[
-                  {id:'adminList',text:'管理员列表',href:'detail/code.html',closeable : false},
-                  {id:'adminLog',text:'管理员日志',href:'detail/example.html'},
-                  {id:'roleManage',text:'角色管理',href:'detail/introduce.html'}
+                  {id:'adminList',text:'管理员列表',href:'systemManage/adminList.html',closeable : false},
+                  {id:'adminLog',text:'管理员日志',href:'systemManage/adminLog.html'},
+                  {id:'roleManage',text:'角色管理',href:'systemManage/roleManage.html'},
+                  {id:'group',text:'权限组合',href:'systemManage/group.html'}
                 ]
               }]
           }];

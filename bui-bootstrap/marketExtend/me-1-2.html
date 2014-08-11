@@ -6,6 +6,8 @@
     <link href="../assets/css/dpl-min.css" rel="stylesheet" type="text/css" />
     <link href="../assets/css/bui-min.css" rel="stylesheet" type="text/css" />
     <link href="../assets/css/page-min.css" rel="stylesheet" type="text/css" /> 
+    <script type="text/javascript" src="../assets/js/jquery-1.8.1.min.js"></script>
+    <script type="text/javascript" src="../assets/js/myjs.js"></script>
  </head>
  <body>
   
@@ -13,10 +15,48 @@
 
     <div class="row header">
       <p>优惠券</p>
-      <button>批量生成</button>
-      <button>发放优惠券</button>
-      
+       <span class="headBtn"><a id="batch01" href="#">批量生成</a></span>
+       <span class="headBtn"><a  href="../memberManage/member02.html">发放优惠券</a></span>  
     </div>
+
+    <!-- 此部分是批量生成弹出的提示框 -->
+     <div id="prompt_msg" class="pop_main" style="left: 314px; top: 100px; display: none;">
+       <div id="prompt_title" class="pop_title">批量生成</div>
+          <div class="pop_content clearfix">
+
+
+              <div class="pop_content01">
+                <label for="">优惠券名称：</label>
+                <input type="text">
+              </div>
+              <div class="pop_content01">
+                <label for="">生成数量：</label>
+                <input type="text">
+              </div>
+              <div class="pop_content01">
+                <label for="">优惠金额：</label>
+                <span class="btn_style_1">5元</span>
+                <span class="btn_style_1">10元</span>
+                <span class="btn_style_1">15元</span>
+              </div>
+              <div class="pop_content01 controls">
+                <label for="">有效期：</label>
+                 <input type="text" class=" calendar" name="startDate"><span> - </span><input name="endDate" type="text" class=" calendar">
+              </div>
+              <div class="pop_content01">
+                <label for="">使用条件：</label>
+                <span>满</span>
+                <input type="text">
+                <span>元起使用</span>
+              </div>
+          </div>
+       <div class="clearfix">
+       <div id="dlg-sure" class="btn_style_1 pop_btn">确定</div>
+       <div id="dlg-close" class="btn_style_1 pop_btn">取消</div>
+          <a id="dlg-link" class="pop_link" href="#"></a>
+       </div>
+    </div><!-- 提示框结束 --> 
+
     <fieldset>
         <div class="row fileborder">
           <form id="searchForm" class="form-horizontal span24">           
@@ -61,16 +101,15 @@
                 </div>
               </div>
               <div class="span3">
-                  <button  type="button" id="btnSearch" class="button button-primary">搜索</button>
+                 <span class="myspanBtn">搜索</span>
               </div>
               <div class="span3">
-                  <button  type="button" id="btnSearch" class="button button-primary">删除</button>
+                 <span class="myspanBtn">删除</span>
               </div>
             </div>
           </form>
         </div>
-       
-
+ 
         <div class="search-grid-container">
            <div id="grid"></div>
        </div>
