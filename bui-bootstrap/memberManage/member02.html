@@ -13,7 +13,7 @@
 
     <div class="row header">
       <p>会员列表</p>
-      <button>添加会员</button>
+       <span class="headBtn"><a  href="#">添加会员</a></span>
     </div>
     <fieldset>
         <div class="row fileborder">
@@ -74,18 +74,18 @@
                    <input type="text" class=" calendar" name="startDate"><span> - </span><input name="endDate" type="text" class=" calendar">
                 </div>
               </div>
-              <div class="span3 offset2">
-                  <button  type="button" id="btnSearch" class="button button-primary">搜索</button>
+              <div class="span3">
+                 <span class="myspanBtn">搜索</span>
               </div>
             </div>
           </form>
         </div>
         <div class="row fileborder">
           <div class="ontrol-group span3" >
-              <button  type="button" id="" class="button button-primary">发红包</button>
+              <span id="issuePacket" class="myspanBtn">发红包</span>
           </div>
           <div class="ontrol-group span3" >
-                <button  type="button" id="" class="button button-primary">发优惠券</button>
+            <span id="issueCoupon" class="myspanBtn">发优惠券</span>
           </div>
           <div class="ontrol-group span5" >
               <select name="" id="" name="mode">
@@ -94,20 +94,108 @@
               </select>
           </div>
           <div class="ontrol-group span3" >
-              <button  type="button" id="" class="button button-primary">批量充值</button>
+              <span id="batchRecharge" class="myspanBtn">批量充值</span>
           </div>
           <div class="ontrol-group span8" >
-                <button  type="button" id="" class="button button-primary">批量修改</button>
+              <span class="myspanBtn">批量修改</span>
           </div>
-           <div class="span3 offset2">
-                  <button  type="button" id="" class="button button-primary">移除</button>
-              </div>
         </div>
 
         <div class="search-grid-container">
            <div id="grid"></div>
        </div>
+       
+     <!-- 此部分是发放优惠券弹出的提示框 -->
+    <div class="bgg" style="display: none"></div>
+     <div id="prompt_msg7" class="pop_main" style="display: none;">
+         <div id="prompt_title" class="pop_title">发放优惠券</div>
+          <div class="pop_content clearfix">
+              <div class="pop_content01">
+                <label for="">优惠券名称：</label>
+                <input type="text">
+              </div>
+              <div class="pop_content01">
+                <label for="">生成数量：</label>
+                <input type="text">
+              </div>
+              <div class="pop_content01">
+                <label for="">优惠金额：</label>
+                <span class="btn_style_1">5元</span>
+                <span class="btn_style_1">10元</span>
+                <span class="btn_style_1">15元</span>
+              </div>
+              <div class="pop_content010">
+                <label for="">有效期：</label>
+                <input type="text" class=" calendar" name="startDate"><span> - </span><input name="endDate" type="text" class=" calendar">
+              </div>
+              <div class="pop_content01">
+                <label for="">使用条件：</label>
+                <span>满</span>
+                <input type="text">
+                <span>元起使用</span>
+              </div>
+          </div>
+       <div class="clearfix twoBtn">
+           <div id="dlg-sure7" class="btn_style_1 pop_btn1">确定</div>
+           <div id="dlg-close7" class="btn_style_1 pop_btn2">取消</div>
+       </div>
+    </div><!-- 提示框结束 --> 
 
+      <!-- 此部分是发放红包弹出的提示框 -->
+     <div id="prompt_msg8" class="pop_main" style="display: none;">
+          <div id="prompt_title" class="pop_title">发红包</div>
+          <div class="pop_content clearfix">
+              <div class="pop_content01">
+                <label for="">红包名称：</label>
+                <input type="text">
+              </div>
+              <div class="pop_content01">
+                <label for="">发放人数：</label>
+                <input type="text">
+              </div>
+              <div class="pop_content01">
+                <label for="">红包金额：</label>
+                <input type="text">
+              </div>
+              <div class="pop_content010">
+                <label for="">有效期：</label>
+                <input type="text" class=" calendar" name="startDate"><span> - </span><input name="endDate" type="text" class=" calendar">
+              </div>
+              <div class="pop_content01">
+                <label for="">使用条件：</label>
+                <span>满</span>
+                <input type="text">
+                <span>元起使用</span>
+              </div>
+          </div>
+         <div class="clearfix twoBtn">
+             <div id="dlg-sure8" class="btn_style_1 pop_btn1">确定</div>
+             <div id="dlg-close8" class="btn_style_1 pop_btn2">取消</div>
+         </div>
+    </div><!-- 提示框结束 -->
+
+      <!-- 此部分是批量充值弹出的提示框 -->
+      <div id="prompt_msg10" class="pop_main" style="height:220px;display: none;">
+         <div id="prompt_title" class="pop_title">批量充值</div>
+          <div class="pop_content clearfix">
+              <div class="pop_content01">
+                <label for=""><input type="radio" name="recharge" />选定充值：</label>
+                <input type="text">
+              </div>
+              <div class="pop_content01">
+                <label for=""><input type="radio" name="recharge" />范围充值：</label>
+                <input type="text"><span> - </span><input type="text">
+              </div>
+              <div class="pop_content01">
+                <label for="">充值金额：</label>
+                <input type="text">
+              </div>
+          </div>
+           <div class="clearfix twoBtn">
+               <div id="dlg-sure10" class="btn_style_1 pop_btn1">确定</div>
+               <div id="dlg-close10" class="btn_style_1 pop_btn2">取消</div>
+           </div>
+        </div><!-- 提示框结束 -->
     </fieldset>
   </div>
 
@@ -144,7 +232,7 @@
           {title:'操作',dataIndex:'',width:200,renderer : function(value,obj){
              
             var  editStr1 = '<span class="grid-command" >添加标签</span>',
-                 editStr2 = '<span class="grid-command" ><a  href="member08.html">查看</a></span>',
+                 editStr2 = '<span class="grid-command" ><a  href="memDetails.html">查看</a></span>',
               delStr = '<span class="grid-command">交易记录</span>';//页面操作不需要使用Search.createLink
             return  editStr1 + editStr2 + delStr;
           }}
@@ -161,13 +249,13 @@
         autoSync : true //保存数据后，自动更新
       }),
       gridCfg = Search.createGridCfg(columns,{
-        // tbar : {
-        //   items : [
-        //     {text : '<i class="icon-plus"></i>新建',btnCls : 'button button-small',handler:addFunction},
-        //     {text : '<i class="icon-edit"></i>编辑',btnCls : 'button button-small',handler:function(){alert('编辑');}},
-        //     {text : '<i class="icon-remove"></i>删除',btnCls : 'button button-small',handler : delFunction}
-        //   ]
-        // },
+        tbar : {
+          items : [
+            // {text : '<i class="icon-plus"></i>新建',btnCls : 'button button-small',handler:addFunction},
+            // {text : '<i class="icon-edit"></i>编辑',btnCls : 'button button-small',handler:function(){alert('编辑');}},
+            {text : '<i class="icon-remove"></i>删除',btnCls : 'button button-small',handler : delFunction}
+          ]
+        },
         plugins : [editing,BUI.Grid.Plugins.CheckSelection,BUI.Grid.Plugins.AutoFit] // 插件形式引入多选表格
       });
 
@@ -177,7 +265,40 @@
       }),
       grid = search.get('grid');
 
+    // function addFunction(){
+    //   var newData = {isNew : true}; //标志是新增加的记录
+    //   editing.add(newData,'name'); //添加记录后，直接编辑
+    // }
+
+    //删除操作
+    function delFunction(){
+      var selections = grid.getSelection();
+      delItems(selections);
+    }
+
+    function delItems(items){
+      var ids = [];
+      BUI.each(items,function(item){
+        ids.push(item.id);
+      });
+
+      if(ids.length){
+        BUI.Message.Confirm('确认要删除选中的记录么？',function(){
+          store.save('remove',{ids : ids});
+        },'question');
+      }
+    }
+
+    //监听事件，删除一条记录
+    grid.on('cellclick',function(ev){
+      var sender = $(ev.domTarget); //点击的Dom
+      if(sender.hasClass('btn-del')){
+        var record = ev.record;
+        delItems([record]);
+      }
+    });
   });
+
 </script>
 
 </body>

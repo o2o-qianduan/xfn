@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
  <head>
-  <title>商品类型</title>
+  <title>属性列表</title>
    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
        <link href="../assets/css/dpl-min.css" rel="stylesheet" type="text/css" />
     <link href="../assets/css/bui-min.css" rel="stylesheet" type="text/css" />
@@ -11,9 +11,20 @@
   
   <div class="container">
      <div class="row header">
-      <p>商品类型</p>
-      <span class="headBtn"><a id="addtype01" href="#">添加类型</a></span>
+      <p>商品类型-属性列表</p>
+        <span class="headBtn"><a id="" href="addAttribute.html">添加属性</a></span>
+      <span class="headBtn"><a id="" href="#">类型列表</a></span>
      </div>
+      <div class="row fileborder">
+         <div class="control-group span8">
+              <label class="control-label">按商品类型显示：</label>
+                <select name="" id="" name="mode">
+                   <option value="" selected="selected">所有类型</option>
+                   <option value=""></option>
+                </select>
+         </div> 
+    </div>  
+    <div class="clear"></div>
     <div class="search-grid-container">
       <div id="grid"></div>
     </div>
@@ -52,7 +63,7 @@
         triggerCls : 'btn-edit'
       }),
       columns = [
-          {title:'编号',dataIndex:'goodsType-0-0',width:100,renderer:function(v){
+          {title:'编号',dataIndex:'goodsType-1-0',width:100,renderer:function(v){
             return Search.createLink({
               id : 'detail' + v,
               title : '商品信息',
@@ -60,10 +71,11 @@
               href : 'detail/example.html'
             });
           }},
-          {title:'商品类型名称',dataIndex:'goodsType-0-1',width:200},
+          {title:'属性名称',dataIndex:'goodsType-1-1',width:200},
         
-          {title:'属性数',dataIndex:'goodsType-0-2',width:200},
-          {title:'状态',dataIndex:'goodsType-0-3',width:200},
+          {title:'商品类型',dataIndex:'goodsType-1-2',width:200},
+          {title:'可选值列表',dataIndex:'goodsType-1-3',width:200},
+          {title:'排序',dataIndex:'goodsType-1-4',width:200},
           {title:'操作',dataIndex:'',width:200,renderer : function(value,obj){
             var editStr =  Search.createLink({ //链接使用 此方式
                 id : 'edit' + obj.id,
@@ -71,9 +83,9 @@
                 text : '编辑',
                 href : 'goodsManage/newgoods.html'
               }),
-              editStr2 = '<span class="grid-command"><a href="attributeList.html">[属性列表]</a></span>';
+             
               delStr = '<span class="grid-command btn-del" title="删除商品信息">移除</span>';//页面操作不需要使用Search.createLink
-            return  editStr2 + editStr +delStr;
+            return  editStr +delStr;
           }}
         ],
       store = Search.createStore('../data/goods01.json',{

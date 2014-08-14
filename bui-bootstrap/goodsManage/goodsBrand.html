@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
  <head>
-  <title>商品类型</title>
+  <title>商品品牌</title>
    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
        <link href="../assets/css/dpl-min.css" rel="stylesheet" type="text/css" />
     <link href="../assets/css/bui-min.css" rel="stylesheet" type="text/css" />
@@ -10,35 +10,31 @@
  <body>
   
   <div class="container">
-     <div class="row header">
-      <p>商品类型</p>
-      <span class="headBtn"><a id="addtype01" href="#">添加类型</a></span>
-     </div>
+
+    <div class="row header">
+      <p>商品品牌</p>
+       <span class="headBtn"><a  href="addBrand.html">添加品牌</a></span>
+    </div>
+    <div class="row fileborder">
+      <form id="searchForm" class="form-horizontal span24">
+          <div class="control-group span7">
+            <div class="controls">
+              <input type="text" class="control-text" placeholder="品牌名称">
+            </div>
+          </div>
+          
+      </form>
+    </div>
+
     <div class="search-grid-container">
       <div id="grid"></div>
     </div>
+    
   </div>
-  
-       <!-- 此部分是添加类型弹出的提示框 -->
-    <div id="prompt_msg6" class="pop_main" style="width:280px;height:150px;display: none">
-       <div id="prompt_title" class="pop_title">添加类型</div>
-          <div class="pop_content clearfix" style="margin-left: 20px;">
-              <div class="pop_content01">
-                <label for="">类型名称：</label>
-                <input type="text">
-              </div>
-             
-          </div>
-       <div class="clearfix twoBtn">
-          <div id="dlg-sure6" class="btn_style_1 pop_btn1">确定</div>
-          <div id="dlg-close6" class="btn_style_1 pop_btn2">取消</div>
-          <a id="dlg-link" class="pop_link" href="#"></a>
-       </div>
-    </div><!-- 提示框结束 --> 
   <script type="text/javascript" src="../assets/js/jquery-1.8.1.min.js"></script>
-   <script type="text/javascript" src="../assets/js/myjs.js"></script>
   <script type="text/javascript" src="../assets/js/bui-min.js"></script>
   <script type="text/javascript" src="../assets/js/config-min.js"></script>
+
   <script type="text/javascript">
     BUI.use('common/page');
   </script>
@@ -46,24 +42,20 @@
 <script type="text/javascript">
   BUI.use('common/search',function (Search) {
    
-     var editing = new BUI.Grid.Plugins.DialogEditing({
+    var  editing = new BUI.Grid.Plugins.DialogEditing({
         contentId : 'content', //设置隐藏的Dialog内容
         autoSave : true, //添加数据或者修改数据时，自动保存
         triggerCls : 'btn-edit'
       }),
       columns = [
-          {title:'编号',dataIndex:'goodsType-0-0',width:100,renderer:function(v){
-            return Search.createLink({
-              id : 'detail' + v,
-              title : '商品信息',
-              text : v,
-              href : 'detail/example.html'
-            });
-          }},
-          {title:'商品类型名称',dataIndex:'goodsType-0-1',width:200},
-        
-          {title:'属性数',dataIndex:'goodsType-0-2',width:200},
-          {title:'状态',dataIndex:'goodsType-0-3',width:200},
+          
+          {title:'品牌名称',dataIndex:'brand-0-0',width:150},
+          {title:'品牌logo',dataIndex:'brand-0-1',width:150},
+          {title:'品牌网址',dataIndex:'brand-0-2',width:200},
+          {title:'品牌描述',dataIndex:'brand-0-3',width:200},
+          {title:'是否显示',dataIndex:'brand-0-4',width:100},
+          {title:'排序',dataIndex:'brand-0-5',width:100},
+         
           {title:'操作',dataIndex:'',width:200,renderer : function(value,obj){
             var editStr =  Search.createLink({ //链接使用 此方式
                 id : 'edit' + obj.id,
@@ -71,9 +63,9 @@
                 text : '编辑',
                 href : 'goodsManage/newgoods.html'
               }),
-              editStr2 = '<span class="grid-command"><a href="attributeList.html">[属性列表]</a></span>';
+             
               delStr = '<span class="grid-command btn-del" title="删除商品信息">移除</span>';//页面操作不需要使用Search.createLink
-            return  editStr2 + editStr +delStr;
+            return editStr +  delStr;
           }}
         ],
       store = Search.createStore('../data/goods01.json',{
@@ -88,13 +80,6 @@
         autoSync : true //保存数据后，自动更新
       }),
       gridCfg = Search.createGridCfg(columns,{
-        // tbar : {
-        //   items : [
-        //     {text : '<i class="icon-plus"></i>新建',btnCls : 'button button-small',handler:addFunction},
-        //     {text : '<i class="icon-edit"></i>编辑',btnCls : 'button button-small',handler:function(){alert('编辑');}},
-        //     {text : '<i class="icon-remove"></i>删除',btnCls : 'button button-small',handler : delFunction}
-        //   ]
-        // },
         plugins : [editing,BUI.Grid.Plugins.CheckSelection,BUI.Grid.Plugins.AutoFit] // 插件形式引入多选表格
       });
 

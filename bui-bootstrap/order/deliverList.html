@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-  <title>搜索表单</title>
+  <title>订单列表</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <link href="../assets/css/dpl-min.css" rel="stylesheet" type="text/css" />
   <link href="../assets/css/bui-min.css" rel="stylesheet" type="text/css" />
@@ -10,36 +10,38 @@
 <body>
 
   <div class="container">
-    <div class="row">
-      <form id="searchForm" class="form-horizontal span24">
-        <div class="row">
-          <div class="control-group span8">
-            <label class="control-label">发货单流水号</label>
-            <input name="" type="text" data-rules="{required:true}" class="input-normal control-text" style="margin-left: 10px;"></div>
-          <div class="control-group span8">
-            <label class="control-label">订单号</label>
-            <input name="" type="text" data-rules="{required:true}" class="input-normal control-text" style="margin-left: 10px;"></div>
-          <div class="control-group span8">
-            <label class="control-label">收货人</label>
-            <input name="" type="text" data-rules="{required:true}" class="input-normal control-text" style="margin-left: 10px;"></div>
-        </div>
-        <div class="row" style="margin-top: 20px;">
-          <div class="control-group span8">
-            <label class="control-label">订单状态</label>
-            <div class="controls">
-              <select  data-rules="{required:true}"  name="type" class="input-normal">
-                <option value="">正常</option>
-                <option value="">退货</option>
-                <option value="">已发货</option>
-                <option value="">请选择</option>
+
+    <div class="row header">
+      <p>发货单列表</p>
+    </div>
+    <div class="row fileborder">
+        <form id="searchForm" class="form-horizontal span26">
+            <div class="ontrol-group span4" >
+              <input type="text" placeholder="发货单编号" />
+            </div>
+            <div class="ontrol-group span4" >
+              <input type="text" placeholder="订单编号" />
+            </div>
+            <div class="ontrol-group span4" >
+              <input type="text" placeholder="收货人" />
+            </div>
+            <div class="ontrol-group span4" >
+              <select name="" id="" name="mode">
+                <option value="" selected="selected">发货单状态</option>
+                <option value=""></option>
               </select>
             </div>
-          </div>
-          <div class="span3 offset2">
-            <button  type="button" id="btnSearch" class="button button-primary">搜索</button>
-          </div>
-        </div>
-      </form>
+            
+            <div class="span3">
+                 <span class="myspanBtn">搜索</span>
+             </div>   
+            <div class="clear"></div>
+            <div class="row" style="margin: 5px;">
+               <div class="span3">
+                   <span class="myspanBtn">发货</span>
+               </div>  
+            </div>
+          </form>
     </div>
     <div class="search-grid-container">
       <div id="grid"></div>
@@ -60,7 +62,7 @@
         triggerCls : 'btn-edit'
       }),
       columns = [
-      {title:'发货单流水号',dataIndex:'id',width:205,renderer:function(v){
+      {title:'发货单流水号',dataIndex:'id',width:200,renderer:function(v){
             return Search.createLink({
               id : 'detail' + v,
               title : '发货单信息',
@@ -69,14 +71,13 @@
             });
           }},
           {title:'订单号',dataIndex:'deliverList-0-1',width:150},
-          {title:'下单时间',dataIndex:'deliverList-0-2',width:190},
-          {title:'收货人',dataIndex:'deliverList-0-3',width:70},
-          {title:'发货时间',dataIndex:'deliverList-0-4',width:190},
-          {title:'供应商',dataIndex:'deliverList-0-5',width:70},
-          {title:'发货单状态',dataIndex:'deliverList-0-6',width:105},
-          {title:'操作人',dataIndex:'deliverList-0-7',width:70},
-          {title:'操作',dataIndex:'',width:40 ,renderer: function(value,obj){
-            var delStr = '<span class="grid-command btn-del" title="删除订单信息">删除</span>';//页面操作不需要使用Search.createLink
+          {title:'下单时间',dataIndex:'deliverList-0-2',width:150},
+          {title:'收货人',dataIndex:'deliverList-0-3',width:150},
+          {title:'发货单状态',dataIndex:'deliverList-0-4',width:100},
+          {title:'发货日期',dataIndex:'deliverList-0-5',width:150},
+          {title:'操作者',dataIndex:'deliverList-0-6',width:150},
+          {title:'操作',dataIndex:'',width:100 ,renderer: function(value,obj){
+            var delStr = '<span class="grid-command" title="">【查看】</span>';//页面操作不需要使用Search.createLink
             return delStr;
           }}
         ],

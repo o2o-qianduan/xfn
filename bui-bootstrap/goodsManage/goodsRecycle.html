@@ -12,10 +12,9 @@
   <div class="container">
     <div class="row header">
       <p>商品回收站</p>
-      <button>商品列表</button>
+      <span class="headBtn"><a  href="#">商品列表</a></span> 
     </div>
     <div class="row fileborder">
-         
             <div class="ontrol-group span4" >
               <select name="" id="" name="mode">
                 <option value="" selected="selected">所有分类</option>
@@ -31,7 +30,7 @@
             </div>
 
             <div class="ontrol-group span7" >
-              <input type="text" value="商品编号" />
+              <input type="text" placeholder="商品编号" />
             </div>
                     
             <div class="span3">
@@ -42,11 +41,10 @@
                <div class="span3">
                    <span class="myspanBtn">还原</span>
                </div>  
-               <div class="span3">
+              <!--  <div class="span3">
                 <span class="myspanBtn">删除</span>
-              </div>  
-            </div>
-            
+              </div>   -->
+            </div>       
         </div>
           <div class="search-grid-container">
             <div id="grid"></div>
@@ -112,23 +110,22 @@
    
       var editing = new BUI.Grid.Plugins.DialogEditing(),
       columns = [
-          {title:'编号',dataIndex:'goodsRecycle-0-0',width:50,renderer:function(v){
-            return Search.createLink({
-              id : 'detail' + v,
-              title : '商品信息',
-              text : v,
-              href : 'detail/example.html'
-            });
-          }},
-          {title:'商品名称',dataIndex:'goodsRecycle-0-1',width:200},
-          {title:'货号',dataIndex:'goodsRecycle-0-2',width:100},
-          {title:'价格',dataIndex:'goodsRecycle-0-3',width:100},
-          {title:'操作',dataIndex:'',width:200,renderer : function(value,obj){
-             
-            var  editStr1 = '<span class="grid-command" >还原</span>',
-              delStr = '<span class="grid-command btn-del" title="删除商品信息">删除</span>';//页面操作不需要使用Search.createLink
-            return  editStr1 + delStr;
-          }}
+          // {title:'编号',dataIndex:'goodsRecycle-0-0',width:100,renderer:function(v){
+          //   return Search.createLink({
+          //     id : 'detail' + v,
+          //     title : '商品信息',
+          //     text : v,
+          //     href : 'detail/example.html'
+          //   });
+          // }},
+          {title:'编号',dataIndex:'goodsRecycle-0-0',width:100},
+          {title:'图片',dataIndex:'goodsRecycle-0-1',width:200},
+          {title:'商品名称',dataIndex:'goodsRecycle-0-2',width:150},
+          {title:'分类',dataIndex:'goodsRecycle-0-3',width:150},
+          {title:'价格',dataIndex:'goodsRecycle-0-4',width:150},
+          {title:'重量',dataIndex:'goodsRecycle-0-5',width:150},
+          {title:'排序',dataIndex:'goodsRecycle-0-6',width:150},
+          {title:'库存',dataIndex:'goodsRecycle-0-7',width:150}
         ],
       store = Search.createStore('../data/goods01.json',{
         proxy : {
