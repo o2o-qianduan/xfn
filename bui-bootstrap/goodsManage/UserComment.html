@@ -16,8 +16,9 @@
       <span class="headBtn"><a id="gift_1" href="#">评论有礼</a></span> 
     </div>
 
-        <!-- 此部分是批量生成弹出的提示框 -->
-     <div id="prompt_msg" class="pop_main" style="left: 314px; top: 100px; display: none;">
+        <!-- 此部分是创建专题弹出的提示框 -->
+     <div class="bgg" style="display: none"></div>
+     <div id="prompt_msg3" class="pop_main" style="display: none;">
        <div id="prompt_title" class="pop_title">创建/编辑专题</div>
           <div class="pop_content popCon01 clearfix">
               <div class="pop_content01">
@@ -38,10 +39,10 @@
                 <input type="text">
               </div>
           </div>
-       <div class="clearfix">
-       <div id="dlg-sure" class="btn_style_1 pop_btn">确定</div>
-       <div id="dlg-close" class="btn_style_1 pop_btn">取消</div>
-          <a id="dlg-link" class="pop_link" href="#"></a>
+       <div class="clearfix twoBtn">
+         <div id="dlg-sure3" class="btn_style_1 pop_btn1">确定</div>
+         <div id="dlg-close3" class="btn_style_1 pop_btn2">取消</div>
+            <a id="dlg-link3" class="pop_link" href="#"></a>
        </div>
     </div><!-- 提示框结束 --> 
 
@@ -56,14 +57,14 @@
               </select>
           </div>
           <div class="control-group span8">
-              <input type="text" class="control-text" value="评论内容">
+              <input type="text" class="control-text" placeholder="评论内容">
           </div>
           <div class="span3 offset2">
             <span class="myspanBtn">搜索</span>
           </div>
-          <div class="span3 offset2">
+         <!--  <div class="span3 offset2">
             <span class="myspanBtn">删除</span>
-          </div>
+          </div> -->
     </div>
     <div class="search-grid-container">
       <div id="grid"></div>
@@ -134,7 +135,7 @@
         triggerCls : 'btn-edit'
       }),
       columns = [
-          {title:'编号',dataIndex:'userCom-0-0',width:50,renderer:function(v){
+          {title:'编号',dataIndex:'userCom-0-0',width:100,renderer:function(v){
             return Search.createLink({
               id : 'detail' + v,
               title : '商品详细信息',
@@ -143,16 +144,16 @@
             });
           }},
           {title:'用户名',dataIndex:'userCom-0-1',width:100},
-          {title:'类型',dataIndex:'userCom-0-2',width:100},
-          {title:'评论对象',dataIndex:'userCom-0-3',width:100},
-          {title:'IP地址',dataIndex:'userCom-0-4',width:100},
-          {title:'评论时间',dataIndex:'userCom-0-5',width:100},
-          {title:'状态',dataIndex:'userCom-0-6',width:100},
+          {title:'类型',dataIndex:'userCom-0-2',width:150},
+          {title:'评论对象',dataIndex:'userCom-0-3',width:150},
+          {title:'IP地址',dataIndex:'userCom-0-4',width:150},
+          {title:'评论时间',dataIndex:'userCom-0-5',width:150},
+          {title:'状态',dataIndex:'userCom-0-6',width:150},
          
-          {title:'操作',dataIndex:'',width:100,renderer : function(value,obj){
+          {title:'操作',dataIndex:'',renderer : function(value,obj){
              
               
-              var editStr1 = '<span class="grid-command btn-edit" title="编辑评论">编辑</span>',
+              var editStr1 = '<span class="grid-command btn-edit" title="">审核</span>',
               delStr = '<span class="grid-command btn-del" title="删除评论">删除</span>';//页面操作不需要使用Search.createLink
             return   editStr1 + delStr;
           }}

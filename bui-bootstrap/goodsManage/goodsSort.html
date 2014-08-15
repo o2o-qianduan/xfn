@@ -12,7 +12,7 @@
 
     <div class="row header">
          <p>商品分类</p>  
-         <span class="headBtn"><a href="#">添加分类</a></span>  
+         <span class="headBtn"><a href="addSort.html">添加分类</a></span>  
     </div>  
     <div id="grid"></div>
   </div>
@@ -80,11 +80,11 @@
 <script type="text/javascript">
   BUI.use(['bui/grid','bui/data'],function (Grid,Data) {
 
-  var  editing = new Grid.Plugins.DialogEditing({
-        contentId : 'content',
-        triggerCls : 'btn-edit'
-      }),
-  editing = new Grid.Plugins.CellEditing(),
+  // var  editing = new Grid.Plugins.DialogEditing({
+  //       contentId : 'content',
+  //       triggerCls : 'btn-edit'
+  //     }),
+ var editing = new Grid.Plugins.CellEditing(),
   columns = [{
         title: '分类名称',
         dataIndex: 'sortName',
@@ -142,9 +142,9 @@
       },{
         title:'操作',width:250,
         renderer : function(value,obj){
-            var editStr = '<span class="grid-command" >[转移商品]</span>',
-              editStr1 = '<span class="grid-command" >编辑</span>',
-              delStr = '<span class="grid-command btn-del">移除</span>';//页面操作不需要使用Search.createLink
+            var editStr = '<span class="grid-command" ><a href="transfergoods.html">[转移商品]</a></span>',
+              editStr1 = '<span class="grid-command" >[编辑]</span>',
+              delStr = '<span class="grid-command btn-del">[移除]</span>';//页面操作不需要使用Search.createLink
             return editStr +  editStr1 + delStr;
           }
     }

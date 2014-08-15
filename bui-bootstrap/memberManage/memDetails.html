@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
  <head>
-  <title> 添加会员</title>
+  <title>会员详情</title>
    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
        <link href="../assets/css/dpl-min.css" rel="stylesheet" type="text/css" />
     <link href="../assets/css/bui-min.css" rel="stylesheet" type="text/css" />
@@ -13,11 +13,12 @@
   <div class="container">
 
     <div class="row header">
-      <p>添加会员</p>    
+      <p>会员详情</p>
+      <span class="headBtn"><a  href="addBrand.html">会员列表</a></span>    
     </div>
     <div class="row tablerow">
      <table class="usertable usertable01" width="802px">     
-        <caption class="memtit memtit2">基本信息</caption>
+        <caption class="memtit memtit2">基本信息<span class="headBtn"><a id="complime_01" href="#complime_01">编辑</a></span></caption>
         <tbody>
             <tr>
               <td>会员编号：</td>
@@ -66,16 +67,39 @@
         </tbody>
       </table>
     </div>
-
+    <div id="messBtn01" class="messBtn" style="display: none">
+      <span class="myspanBtn">确定</span>
+      <span class="myspanBtn">重置</span>
+    </div>
     <div class="row tablerow">
      <table class="usertable usertable01" width="802px">     
-        <caption class="memtit memtit2">安全信息</caption>
+        <caption class="memtit memtit2">安全信息<span class="headBtn"><a id="complime_02" href="#complime_02">编辑</a></span></caption>
         <tr>
           <td>密码：</td>
           <td><input type="text"></td>   
         </tr>
       </table>
     </div>
+
+     <!-- 此部分是密码修改弹出的提示框 -->
+     <div class="bgg" style="display: none"></div>
+     <div id="prompt_msg11" class="pop_main" style="width:280px;height:180px; display: none;">
+       <div id="prompt_title" class="pop_title">密码修改</div>
+          <div class="pop_content clearfix" style="margin-left: 20px;">
+              <div class="pop_content01">
+                <label for="">限购数量：</label>
+                <input type="text">
+              </div>
+              <div class="pop_content01">
+                <label for="">秒杀价格：</label>
+                <input type="text">
+              </div>
+          </div>
+       <div class="clearfix twoBtn">
+          <div id="dlg-sure11" class="btn_style_1 pop_btn1">确定</div>
+          <div id="dlg-close11" class="btn_style_1 pop_btn2">取消</div>
+       </div>
+    </div><!-- 提示框结束 --> 
 
     <div class="row tablerow">
      <table class="usertable usertable01" id="usertable02" width="802px">     
@@ -93,7 +117,7 @@
               <td><input type="text"></td>   
               <td><input type="text"></td>
               <td><input type="text"></td>
-              <td><a href="#">[添加]</a></td>
+              <td>[添加]</td>
             </tr>
         </tbody>
       </table>
@@ -101,7 +125,7 @@
 
    <div class="row tablerow">
      <table class="usertable usertable01" width="802px">     
-        <caption class="memtit memtit2">交易信息</caption>
+        <caption class="memtit memtit2">交易信息<span class="headBtn"><a id="" href="#">交易记录</a></span></caption>
         <tbody>
           <tr>
             <td>会员初始等级</td>
@@ -121,7 +145,7 @@
 
     <div class="row tablerow">
      <table class="usertable usertable01" width="802px">     
-        <caption class="memtit memtit2">其他信息</caption>
+        <caption class="memtit memtit2">其他信息<span class="headBtn"><a id="complime_03" href="#complime_03">编辑</a></span></caption>
         <tbody>
           <tr>
             <td>备注：</td>
@@ -130,9 +154,14 @@
         </tbody>
       </table>
     </div>
-
+    
+    <div id="messBtn02" class="messBtn"  style="display: none">
+      <span class="myspanBtn">确定</span>
+      <span class="myspanBtn">重置</span>
+    </div>
   </div>
-
+  <script type="text/javascript" src="../assets/js/jquery-1.8.1.min.js"></script>
+  <script type="text/javascript" src="../assets/js/myjs.js"></script> 
 
 
 </body>

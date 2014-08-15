@@ -61,9 +61,9 @@
               <div class="span3">
                  <span class="myspanBtn">搜索</span>
               </div>
-              <div class="span3">
+             <!--  <div class="span3">
                  <span class="myspanBtn">删除</span>
-              </div>
+              </div> -->
             </div>
           </form>
         </div>
@@ -120,13 +120,13 @@
         autoSync : true //保存数据后，自动更新
       }),
       gridCfg = Search.createGridCfg(columns,{
-        // tbar : {
-        //   items : [
-        //     {text : '<i class="icon-plus"></i>新建',btnCls : 'button button-small',handler:addFunction},
-        //     {text : '<i class="icon-edit"></i>编辑',btnCls : 'button button-small',handler:function(){alert('编辑');}},
-        //     {text : '<i class="icon-remove"></i>删除',btnCls : 'button button-small',handler : delFunction}
-        //   ]
-        // },
+        tbar : {
+          items : [
+            {text : '<i class="icon-plus"></i>新建',btnCls : 'button button-small',handler:addFunction},
+            {text : '<i class="icon-edit"></i>编辑',btnCls : 'button button-small',handler:function(){alert('编辑');}},
+            {text : '<i class="icon-remove"></i>删除',btnCls : 'button button-small',handler : delFunction}
+          ]
+        },
         plugins : [editing,BUI.Grid.Plugins.CheckSelection,BUI.Grid.Plugins.AutoFit] // 插件形式引入多选表格
       });
 
@@ -136,6 +136,38 @@
       }),
       grid = search.get('grid');
 
+    function addFunction(){
+      var newData = {isNew : true}; //标志是新增加的记录
+      editing.add(newData,'name'); //添加记录后，直接编辑
+    }
+
+    //删除操作
+    function delFunction(){
+      var selections = grid.getSelection();
+      delItems(selections);
+    }
+
+    function delItems(items){
+      var ids = [];
+      BUI.each(items,function(item){
+        ids.push(item.id);
+      });
+
+      if(ids.length){
+        BUI.Message.Confirm('确认要删除选中的记录么？',function(){
+          store.save('remove',{ids : ids});
+        },'question');
+      }
+    }
+
+    //监听事件，删除一条记录
+    grid.on('cellclick',function(ev){
+      var sender = $(ev.domTarget); //点击的Dom
+      if(sender.hasClass('btn-del')){
+        var record = ev.record;
+        delItems([record]);
+      }
+    });
   });
 </script>
 

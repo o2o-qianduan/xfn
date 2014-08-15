@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-  <title>商品信息</title>
+  <title>合并订单</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <link href="../assets/css/dpl-min.css" rel="stylesheet" type="text/css" />
   <link href="../assets/css/bui-min.css" rel="stylesheet" type="text/css" />
@@ -10,9 +10,13 @@
 <body>
 
   <div class="container">
+
+    <div class="row header">
+       <p>合并订单</p>
+    </div>
     <div class="row">
       <form id="J_Form" class="form-horizontal span24">
-        <div class="row">
+        <div class="row ">
           <label class="control-label">主订单：</label>
           <div class="control-group span10">
             <input name="" type="text" data-rules="{required:true}" class="input-normal control-text">
@@ -38,11 +42,12 @@
           <div style="margin-left: 120px;color:#a0a0a0;">当两个订单不一致时，合并后的订单信息（如：支付方式、配送方式、包装、贺卡、红包等）以主订单为准。
           </div>
         </div>
-        <div class="row form-actions actions-bar">
-          <div class="span13 offset3 ">
-            <button  type="button" id="ordermerge" class="button button-primary">合并</button>
-          </div>
-        </div>
+        <div class="row fileborder" >
+             <div class="span3 spanBtn01">
+               <span class="myspanBtn">合并</span>
+             </div>
+               
+         </div>
       </form>
     </div>
 

@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <title>添加品牌</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="../assets/css/dpl-min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/bui-min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/page-min.css" rel="stylesheet" type="text/css" /> 
+ </head>
+ <body>
+  
+   
+  <div class="container">
+     <div class="row header">
+      <p>添加属性（编辑类型）</p>
+      <span class="headBtn"><a  href="sortList.html">类型列表</a></span>
+     </div>
+  	
+     <div class="row tablerow">
+    	<table class="usertable usertable01" width="948px">      
+    		 <tbody id="textareaBody">
+    			 <tr>
+    			    <td>属性名称：</td>
+    			    <td><input type="text" value=""></td>   
+    			 </tr>
+    			 <tr>
+    			    <td>所属商品类型：</td>
+    			    <td>
+                <select name="" id="">
+                     <option value=""></option>
+                     <option value=""></option>
+                   </select>   
+              </td>   
+    			 </tr>
+    			
+    			 <tr>
+                <td>能否进行检索：</td>
+                 <td><input type="checkbox" /></td>   
+             </tr>
+		         <tr>
+		            <td>相同属性值是否关联：</td>
+		             <td><input type="checkbox" /></td>   
+		         </tr>
+              <tr>
+                <td>属性类型：</td>
+                 <td>
+                   <input type="radio" name="oneMultiple" />
+                   <label for="single">单值属性</label>
+                    <input type="radio" name="oneMultiple" />
+                   <label for="single">单选</label>
+                    <input type="radio" name="oneMultiple" />
+                   <label for="single">多选</label>
+                 </td>  
+             </tr>
+             <tr>
+               <td>可选值列表：</td>
+               <td><textarea name="" id="" cols="30" rows="10"></textarea></td>
+             </tr>
+    		</tbody>
+    	 </table>
+    </div>
+
+	 <div class="row fileborder" style="width: 948px">
+	     <div class="span3 spanBtn01">
+	       <span class="myspanBtn">确定</span>
+	     </div>
+	      <div class="span3">
+	         <span class="myspanBtn">重置</span>
+	     </div>   
+	 </div>
+ </div>
+</body>
+</html>  

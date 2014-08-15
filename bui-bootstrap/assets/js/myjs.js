@@ -81,56 +81,132 @@ $('#2_left').live('click',function(){
 // 优惠券弹出框****bing****start***
 $(function(){
 	$("#batch01").live('click',function(){
-	    var k=0;
-	    $("input[name='receiver']").each(function(){
-	        if ($(this).attr("checked")){
-	            alert("后台在此实现删除功能");
-	            k=1;     
-	        }
-	    })
-	    if(k==0){
-	        $("#prompt_msg").show();
-	    } 
-	})
-	$("#dlg-close").live('click',function(){
-	    $("#prompt_msg").hide();
-	})
-})
 
-// 创建专题弹出框****bing****
-$(function(){
+	     $("#prompt_msg1").show();
+	     $('.bgg').show();
+	});
+	$("#dlg-close1").live('click',function(){
+	    $("#prompt_msg1").hide();
+	    $('.bgg').hide();
+	});
+
+
+   // 创建专题弹出框****bing****
 	$("#subject_1").live('click',function(){
-	    var k=0;
-	    $("input[name='receiver']").each(function(){
-	        if ($(this).attr("checked")){
-	            alert("后台在此实现删除功能");
-	            k=1;     
-	        }
-	    })
-	    if(k==0){
-	        $("#prompt_msg").show();
-	    } 
-	})
-	$("#dlg-close").live('click',function(){
-	    $("#prompt_msg").hide();
-	})
+		   
+		    $("#prompt_msg2").show();
+		    $('.bgg').show();
+		   
+		})
+		$("#dlg-close2").live('click',function(){
+		    $("#prompt_msg2").hide();
+		    $('.bgg').hide();
+		});
+
+
+		// 评论有礼弹出框***bing***
+		$("#gift_1").live('click',function(){
+	
+		     $("#prompt_msg3").show();
+		     $('.bgg').show();
+		})
+		$("#dlg-close3").live('click',function(){
+		    $("#prompt_msg3").hide();
+		    $('.bgg').hide();
+		});	
+
+		// 团购设置弹出框
+		$("#groupPurchase").live('click',function(){
+	   
+		     $("#prompt_msg4").show();
+		     $('.bgg').show();
+	   
+		})
+		$("#dlg-close4").live('click',function(){
+		    $("#prompt_msg4").hide();
+		    $('.bgg').hide();
+		});
+
+		// 秒杀设置弹出框
+		$("#sniping").live('click',function(){
+		   
+		     $("#prompt_msg5").show();
+		     $('.bgg').show();
+		})
+		$("#dlg-close5").live('click',function(){
+		    $("#prompt_msg5").hide();
+		    $('.bgg').hide();
+		});	
+
+		// 添加类型弹出框
+
+		$("#addtype01").live('click',function(){
+	   
+		     $("#prompt_msg6").show();
+		     $('.bgg').show();
+		})
+		$("#dlg-close6").live('click',function(){
+		    $("#prompt_msg6").hide();
+		    $('.bgg').hide();
+		});
+
+		// 发放优惠券弹出框
+		$("#issueCoupon").live('click',function(){
+	   
+		     $("#prompt_msg7").show();
+		     $('.bgg').show();
+		})
+		$("#dlg-close7").live('click',function(){
+		    $("#prompt_msg7").hide();
+		    $('.bgg').hide();
+		});
+
+		// 发红包弹出框
+		$("#issuePacket").live('click',function(){
+	   
+		     $("#prompt_msg8").show();
+		     $('.bgg').show();
+		})
+		$("#dlg-close8").live('click',function(){
+		    $("#prompt_msg8").hide();
+		    $('.bgg').hide();
+		});
+
+		// 批量充值弹出框
+		$("#batchRecharge").live('click',function(){
+	   
+		     $("#prompt_msg10").show();
+		     $('.bgg').show();
+		})
+		$("#dlg-close10").live('click',function(){
+		    $("#prompt_msg10").hide();
+		    $('.bgg').hide();
+		});
+
+		// 密码修改弹出框
+		$("#complime_02").live('click',function(){
+	   
+		     $("#prompt_msg11").show();
+		     $('.bgg').show();
+		})
+		$("#dlg-close11").live('click',function(){
+		    $("#prompt_msg11").hide();
+		    $('.bgg').hide();
+		});
+
+
+		// 会员详情点击编辑显示按钮
+		$('#complime_01').click(function(){
+			$('#messBtn01').show();
+		});
+		$('#complime_03').click(function(){
+			$('#messBtn02').show();
+		});
+		
 })
 
-// 评论有礼弹出框***bing***
-$(function(){
-	$("#gift_1").live('click',function(){
-	    var k=0;
-	    $("input[name='receiver']").each(function(){
-	        if ($(this).attr("checked")){
-	            alert("后台在此实现删除功能");
-	            k=1;     
-	        }
-	    })
-	    if(k==0){
-	        $("#prompt_msg").show();
-	    } 
-	})
-	$("#dlg-close").live('click',function(){
-	    $("#prompt_msg").hide();
-	})
-})
+
+
+
+
+

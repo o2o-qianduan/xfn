@@ -13,7 +13,7 @@
 
     <div class="row header">
       <p>下架商品列表</p>
-      <button>添加商品</button>
+      <span class="headBtn"><a  href="addGoods.html">添加商品</a></span>
     </div>
 
      <div class="row fileborder">
@@ -33,7 +33,7 @@
             </div>
 
             <div class="ontrol-group span7" >
-              <input type="text" value="商品编号" />
+              <input type="text" placeholder="商品编号" />
             </div>
                     
             <div class="span3">
@@ -44,9 +44,9 @@
              <div class="span3">
                  <span class="myspanBtn">上架</span>
              </div>  
-             <div class="span3">
+            <!--  <div class="span3">
               <span class="myspanBtn">删除</span>
-            </div>  
+            </div>   -->
           </div>
     </div>
    
@@ -140,13 +140,12 @@
           {title:'操作',dataIndex:'',width:200,renderer : function(value,obj){
             var editStr =  Search.createLink({ //链接使用 此方式
                 id : 'edit' + obj.id,
-                title : '编辑商品信息',
-                text : '打开编辑',
+                title : '查看商品信息',
+                text : '查看',
                 href : 'form/example.html'
               }),
-              editStr1 = '<span class="grid-command btn-edit" title="编辑学生信息">弹出编辑</span>',
-              delStr = '<span class="grid-command btn-del" title="删除商品信息">删除</span>';//页面操作不需要使用Search.createLink
-            return editStr +  editStr1 + delStr;
+              editStr1 = '<span class="grid-command btn-edit" title="编辑信息">编辑</span>';
+            return editStr +  editStr1 ;
           }}
         ],
       store = Search.createStore('../data/student1.json',{
