@@ -2959,3 +2959,57 @@ box-shadow: 2px 2px 5px #C0BBB5;
 	float: left;
 }
 /*************产品列表页*****左边栏样式*************june***************end*******/
+/***全部分类页****eles****start***/
+.allkinds_body{
+	height: 100%;
+	width: 1180px;
+	background: #f6faed;
+	border: 2px solid #bcd486;
+	margin-top: 10px;
+}
+.kind_block{
+	/*height: 240px;*/
+	width: 542px;
+	display: inline-block;
+	margin-top: 10px;
+	margin-left: 30px;
+}
+.kind_block>p{       /*可重用，标题字体*/
+	border-bottom: 2px solid #DEDEDE;
+	color: #666;
+	/*text-shadow:1px 1px 1px #959595;*/
+	font-family: "MicroSoft YaHei";
+	font-size: 14px;
+	font-weight: bold; 
+	padding-bottom: 5px;
+	padding-right: 10px;
+}
+.kind_title{
+	width: 95px;
+	display: inline-block;
+}
+.kind_title>span{
+	color: #fff;
+	background: #77be22;
+	font-size: 12px;
+	font-family:'SimSun',"宋体";
+	padding: 3px 10px;
+	cursor: pointer;
+	margin-top: 10px;
+}
+.kind_item{
+	display: inline-block;
+	width: 417px;
+	padding: 10px 15px 10px 10px;
+	border-bottom: 1px dotted #dadada; 
+	font-size: 12px;
+}
+.kind_item a{
+	color: #666;
+	text-decoration: none;
+	margin-right: 10px;
+}
+.kind_item a:hover{
+	color: #f60;
+}
+/***全部分类页****eles****end***/
