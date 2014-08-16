@@ -194,16 +194,86 @@ $(function(){
 		    $('.bgg').hide();
 		});
 
+		// 添加等级组弹出框
+		$("#grade_1").live('click',function(){
+	   
+		     $("#prompt_msg12").show();
+		     $('.bgg').show();
+		})
+		$("#dlg-close12").live('click',function(){
+		    $("#prompt_msg12").hide();
+		    $('.bgg').hide();
+		});
+
+		// 添加等级弹出框
+		$("#grade_2").live('click',function(){
+	   
+		     $("#prompt_msg13").show();
+		     $('.bgg').show();
+		})
+		$("#dlg-close13").live('click',function(){
+		    $("#prompt_msg13").hide();
+		    $('.bgg').hide();
+		});
+
+		// 新增标签弹出框
+		$("#label_1").live('click',function(){
+	   
+		     $("#prompt_msg14").show();
+		     $('.bgg').show();
+		})
+		$("#dlg-close14").live('click',function(){
+		    $("#prompt_msg14").hide();
+		    $('.bgg').hide();
+		});
+
+		// 新增标签弹出框
+		$("#setUpActi").live('click',function(){
+	   
+		     $("#prompt_msg15").show();
+		     $('.bgg').show();
+		})
+		$("#dlg-close15").live('click',function(){
+		    $("#prompt_msg15").hide();
+		    $('.bgg').hide();
+		});
+
+		// 复制弹出框
+		$("#copy_1").live('click',function(){
+	   
+		     $("#prompt_msg16").show();
+		     $('.bgg').show();
+		})
+		$("#dlg-close16").live('click',function(){
+		    $("#prompt_msg16").hide();
+		    $('.bgg').hide();
+		});
+
+		// 移动弹出框
+		$("#move_1").live('click',function(){
+	   
+		     $("#prompt_msg17").show();
+		     $('.bgg').show();
+		})
+		$("#dlg-close17").live('click',function(){
+		    $("#prompt_msg17").hide();
+		    $('.bgg').hide();
+		});
 
 		// 会员详情点击编辑显示按钮
 		$('#complime_01').click(function(){
 			$('#messBtn01').show();
+			var $table = $(this).parents('.usertable');
+			var $input = $table.find('input');
+			$input.removeAttr("disabled");
+	
 		});
 		$('#complime_03').click(function(){
 			$('#messBtn02').show();
 		});
 		
 })
+
 
 
 

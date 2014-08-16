@@ -340,7 +340,7 @@
 	margin: 10px auto 20px;
 	height: 35px;
 	line-height: 35px;
-	background-color: #eee;
+	background-color: #e8e9ee;
 }
 .header p{
 	font-weight: bold;
@@ -418,9 +418,9 @@
 	margin-left: 10px;
 	margin-bottom: 10px;
 }
-.row  .memtit{
-	background-color: #EEE;
-	border: 1px solid #EEE;
+.memtit{
+	background-color: #e8e9ee;
+	border: 1px solid #e8e9ee;
 	border-bottom: none;
 	width: 99.3%;
 	height: 35px;
@@ -430,15 +430,15 @@
 	text-align: left;
 	text-indent: 10px;
 }
-.row  .memtit span{
+.memtit span{
 	font-weight: normal;
 }
-.row .usertable th,.row .usertable td{
+.usertable th,.usertable td{
 	/*width: 250px;*/
 	height: 30px;
 	line-height: 30px;
 	text-align: center;
-	border: 1px solid #EEE;
+	border: 1px solid #e8e9ee;
 }
 
 .tab {
@@ -485,25 +485,26 @@
 	width: 50px !important;
 }
 
-.tablerow .usertable01 .memtit2{
+.usertable01 .memtit2{
 	text-align: center  !important;
 	margin: 0 auto;
-	width: 800px;
+	width:800px;
 }
 
-.tablerow .usertable01 td{
+.usertable01 td{
 	width: 50%;
 }
-.tablerow .usertable01 td input[type="text"]{
+.usertable01 td input[type="text"]{
 	height: 35px;
 	text-align: center;
 	border:none;
 	width: 92%;
+	background-color: #fff;
 }
-.tablerow #usertable02 td{
+#usertable02 td{
 	width: 20%;
 }
-.tablerow #usertable02 th{
+#usertable02 th{
 	font-weight: normal;
 }
 #memtit3,#memtit4,#memtit5,#memtit6{
@@ -523,7 +524,7 @@
 	margin-left: 20px;
 }
 .borderBody{
-	border:1px solid #EEE;
+	border:1px solid #e8e9ee;
 	height:345px !important;
 	width: 400px !important;
 }
@@ -552,9 +553,6 @@
 	 
 }
 
-#readOnlyInput input[type="text"]{
-	readOnly:readOnly;
-}
 /*bing***会员管理样式*****end*****/
 /*bing***营销推广样式*****start*****/
 
@@ -576,13 +574,13 @@ visibility: hidden;
 .pop_main {
     background-color: #fff;
     border-radius: 5px;
-    height: 280px;
+    /*height: 100%;*/
     position: fixed;
     width: 380px;
     z-index: 300;
     border:1px solid #693;
     left: 400px;
-    top: 150px;
+    top: 120px;
 }
 .pop_title {
     background-color: #f5f5f5;
@@ -605,17 +603,29 @@ visibility: hidden;
 	width: 220px;
 	margin:0 auto;
 }
+.popContent02 label{
+	width: 40px !important;
+	text-align: right !important;
+}
 .pop_content .pop_content01 label{
 	text-align: left;
 	width: 80px;
 	display: inline-block;
 }
-.pop_content .pop_content01 input[type="text"]{
+.pop_content .pop_content01 input[type="text"]
+{
 	width: 100px;
 }
-.pop_content .pop_content01 input[type="radio"]{
+.pop_content .pop_content01 select{
+	width: 110px;
+}
+input[type="radio"],input[type="checkbox"]{
 	/*margin-left: 30px;*/
 	width: 20px;
+}
+#pop_content02 label{
+	width: 110px;
+	padding-left: 50px;
 }
 .pop_btn1{
     float: left;
@@ -624,7 +634,7 @@ visibility: hidden;
 }
 .twoBtn{
 	width: 170px;
-	margin: 10px auto 0;
+	margin: 10px auto 20px;
 }
 .btn_style_1 {
     background-color: #693;
@@ -665,10 +675,22 @@ visibility: hidden;
     text-align: center;
     width: 80px;
 }
+.myspanBtn a{
+	color: #77be22;
+	display: block;
+	height: 25px;
+}
+.myspanBtn a:hover{
+	text-decoration: none;
+}
 .myheader01{
 	border: 1px solid #e5e5e5;
-	background-color: #eee;
-	margin: -10px 0 20px;
+	background-color: #e8e9ee;
+	margin: -10px 0 0;
+}
+.bottom02{
+	margin-bottom: 20px;
+	height: 0;
 }
 .myheader01 p{
 	text-align: center;
@@ -701,6 +723,9 @@ visibility: hidden;
  textarea{
  	border: none;
  }
+#addTextarea{
+	border: 1px solid #c3c3d6 !important;
+}
 .memtit02{
 	width: 946px !important;
 }
@@ -718,3 +743,12 @@ visibility: hidden;
 /*确定重置按钮位置*/
 
 /*bing***营销推广样式*****end*****/
+.setUp01{
+	height: 35px;
+	line-height: 35px;
+	font-size: 14px;
+	font-weight: bold;
+}
+#usertable01_1{
+	margin: 0;
+}
