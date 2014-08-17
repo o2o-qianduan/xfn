@@ -456,7 +456,7 @@
 	padding: 1px 6px;
 	margin-right: 4px;
 	background: #F1F1F1;
-	border: 1px solid #898989;
+	border: 1px solid #693;
 	border-bottom: none;
 }
 .tab_menu li.hover {
@@ -464,11 +464,11 @@
 }
 .tab_menu li.selected {
 	color: #FFF;
-	background: #6D84B4;
+	background: #693;
 }
 .tab_box {
 	clear: both;
-	border: 1px solid #898989;
+	border: 1px solid #693;
 	height: 300px;
 }
 .hide {
@@ -494,7 +494,7 @@
 .usertable01 td{
 	width: 50%;
 }
-.usertable01 td input[type="text"]{
+.usertable td input[type="text"]{
 	height: 35px;
 	text-align: center;
 	border:none;

@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
  <head>
-  <title>会员排行</title>
+  <title>销售明细</title>
    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
        <link href="../assets/css/dpl-min.css" rel="stylesheet" type="text/css" />
     <link href="../assets/css/bui-min.css" rel="stylesheet" type="text/css" />
@@ -12,25 +12,29 @@
   <div class="container">
 
     <div class="row header">
-      <p>会员排行</p>
-      <button>下载会员排行</button>
+      <p>销售明细</p>
+      <span class="headBtn"><a  href="#">下载销售明细</a></span>
     </div>
-    <div class="row">
+    <div class="row fileborder">
       <form id="searchForm" class="form-horizontal span24">
-       
-        <div class="row">
           <div class="control-group span9">
             <label class="control-label">日期：</label>
             <div class="controls">
               <input type="text" class=" calendar" name="startDate"><span> - </span><input name="endDate" type="text" class=" calendar">
             </div>
           </div>
-          <div class="span3 offset2">
-            <button  type="button" id="btnSearch" class="button button-primary">查询</button>
+          <div class="span8">
+            <label class="control-label">商品名称：</label>
+            <div class="controls">
+              <input type="text" />
+            </div>
           </div>
-        </div>
+          <div class="span3">
+             <span class="myspanBtn">查询</span>
+          </div>
       </form>
     </div>
+
     <div class="search-grid-container">
       <div id="grid"></div>
     </div>
@@ -55,12 +59,13 @@
       }),
       columns = [
          
-          {title:'排行',dataIndex:'report-5-0',width:200},
-          {title:'会员名',dataIndex:'report-5-1',width:200},
+          {title:'商品名称',dataIndex:'report-7-0',width:200},
+          {title:'订单号',dataIndex:'report-7-1',width:200},
          
-          {title:'订单数',dataIndex:'report-5-2',width:200},
+          {title:'数量',dataIndex:'report-7-2',width:200},
          
-          {title:'购买金额',dataIndex:'report-5-3',width:200}
+          {title:'售价',dataIndex:'report-7-3',width:200},
+          {title:'售出日期',dataIndex:'report-7-4',width:200}
          
         ],
       store = Search.createStore('../data/goods03.json',{

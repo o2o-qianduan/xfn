@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
  <head>
-  <title>退换统计</title>
+  <title>销售排行</title>
    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
        <link href="../assets/css/dpl-min.css" rel="stylesheet" type="text/css" />
     <link href="../assets/css/bui-min.css" rel="stylesheet" type="text/css" />
@@ -12,13 +12,10 @@
   <div class="container">
 
     <div class="row header">
-      <p>退换统计</p>
-      <button>下载退换统计</button>
+      <p>销售排行</p>
     </div>
-    <div class="row">
+    <div class="row fileborder">
       <form id="searchForm" class="form-horizontal span24">
-       
-        <div class="row">
           <div class="control-group span9">
             <label class="control-label">日期：</label>
             <div class="controls">
@@ -31,13 +28,12 @@
               <input type="text" />
             </div>
           </div>
-          <div class="span3 offset2">
-            <button  type="button" id="btnSearch" class="button button-primary">查询</button>
-          </div>
-        </div>
+           <div class="span3">
+             <span class="myspanBtn">查询</span>
+           </div>
       </form>
     </div>
-
+    <hr>
     <div class="search-grid-container">
       <div id="grid"></div>
     </div>
@@ -55,19 +51,19 @@
   BUI.use('common/search',function (Search) {
     
    
-    var  editing = new BUI.Grid.Plugins.DialogEditing({
+     var editing = new BUI.Grid.Plugins.DialogEditing({
         contentId : 'content', //设置隐藏的Dialog内容
         autoSave : true, //添加数据或者修改数据时，自动保存
         triggerCls : 'btn-edit'
       }),
       columns = [
          
-          {title:'排行',dataIndex:'report-8-0',width:200},
-          {title:'商品名称',dataIndex:'report-8-1',width:200},
+          {title:'排行',dataIndex:'report-0-0',width:200},
+          {title:'商品名称',dataIndex:'report-0-1',width:200},
          
-          {title:'上架时间',dataIndex:'report-8-2',width:200},
+          {title:'货号',dataIndex:'report-0-2',width:200},
          
-          {title:'退货数量',dataIndex:'report-8-3',width:200}
+          {title:'收藏量',dataIndex:'report-0-3',width:200}
          
         ],
       store = Search.createStore('../data/goods03.json',{

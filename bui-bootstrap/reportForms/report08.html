@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
  <head>
-  <title>销售明细</title>
+  <title>退换统计</title>
    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
        <link href="../assets/css/dpl-min.css" rel="stylesheet" type="text/css" />
     <link href="../assets/css/bui-min.css" rel="stylesheet" type="text/css" />
@@ -12,13 +12,11 @@
   <div class="container">
 
     <div class="row header">
-      <p>销售明细</p>
-      <button>下载销售明细</button>
+      <p>退换统计</p>
+      <span class="headBtn"><a  href="#">下载退换统计</a></span>
     </div>
-    <div class="row">
+    <div class="row fileborder">
       <form id="searchForm" class="form-horizontal span24">
-       
-        <div class="row">
           <div class="control-group span9">
             <label class="control-label">日期：</label>
             <div class="controls">
@@ -31,10 +29,9 @@
               <input type="text" />
             </div>
           </div>
-          <div class="span3 offset2">
-            <button  type="button" id="btnSearch" class="button button-primary">查询</button>
-          </div>
-        </div>
+           <div class="span3">
+             <span class="myspanBtn">查询</span>
+           </div>
       </form>
     </div>
 
@@ -62,13 +59,12 @@
       }),
       columns = [
          
-          {title:'商品名称',dataIndex:'report-7-0',width:200},
-          {title:'订单号',dataIndex:'report-7-1',width:200},
+          {title:'排行',dataIndex:'report-8-0',width:200},
+          {title:'商品名称',dataIndex:'report-8-1',width:200},
          
-          {title:'数量',dataIndex:'report-7-2',width:200},
+          {title:'上架时间',dataIndex:'report-8-2',width:200},
          
-          {title:'售价',dataIndex:'report-7-3',width:200},
-          {title:'售出日期',dataIndex:'report-7-4',width:200}
+          {title:'退货数量',dataIndex:'report-8-3',width:200}
          
         ],
       store = Search.createStore('../data/goods03.json',{
