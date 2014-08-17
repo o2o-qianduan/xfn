@@ -78,9 +78,6 @@
 .t_1 td select{
   width: 40%;
 }
-.left_pic{
-  width: 100%;
-}
 .t_2{
   margin-top: 15px;
   display: block;
@@ -92,7 +89,7 @@
 .t_2_pic{
   border: 1px solid #cbd8c8;
   float: left;
-  width: 869px;
+  width: 892px;
   display:block;
 }
 .t_2_pic img{
@@ -105,24 +102,48 @@
   float: left;
   display: block;
   position: relative;
-  width: 235px;
+  width: 225px;
+  overflow: hidden;
+}
+.left_pic span:nth-child(2){
+  position:relative;
+  margin-left: 4px;
+  border: 1px solid #eeeeee;
 }
 ._top{
-  border: 1px solid #77be22;
-  height: 196px;
-    margin-left: 10px;
+    border: 1px solid #77be22;
+    height: 196px;
+    margin-left: 15px;
     margin-top: 10px;
     width: 196px;
 }
+._downP{
+  width: 2800px!important;
+  position: relative;
+  top: 10px;
+  left: 5px;
+}
+.i-list{
+  float: left;
+  width: 227px;
+  height: 259px;
+  position: relative;
+  overflow: hidden;
+}
 .left_ul,.right_ul{
   display: block;
-  margin-left: 10px;
+/*  margin-left: 10px;*/
+  overflow: hidden;
+}
+.left_ul{
+  height: 35px;
+  margin: 0 10px;
 }
 .left_ul li{
   float: left;
   margin-right: 5px;
-  height: 34px;
-  width: 34px;
+  height: 33px;
+  width: 33px;
   border: 1px solid #77be22;
   list-style-type: none;
   cursor: pointer;
@@ -130,8 +151,15 @@
 .right_pic{
   display: block;
   float: left;
-  width: auto;
+  width: 652px;
   margin-top: 55px;
+  position: relative;
+  border: 1px solid #eeeeee;
+  height: 150px;
+}
+.right_ul{
+  margin-left: 23px;
+  height: 150px;
 }
 .right_ul li{
   width: 115px;
@@ -161,6 +189,17 @@
     -webkit-box-shadow:inset 0 0 10px #9eb6aa;  
     -moz-box-shadow:inset 0 0 10px #9eb6aa;  
     box-shadow:inset 0 0 10px #9eb6aa; 
+}
+.r-list {
+    float: left;
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+    width: 652px;
+}
+._rightP{
+    position: relative;
+    width: 3800px !important;
 }
 ._bottom{
   float: left;
@@ -327,6 +366,43 @@
   width: 175px !important;
   height: 35px !important;
   border: none !important;
+}
+.ctrl-1{
+  display: block;
+  position: absolute;
+  top: 217px;
+  width: 11px;
+  margin-right: 2px;
+  border: 1px solid #eeeeee;
+  height: 35px;
+  line-height: 35px;
+  cursor: pointer;
+  z-index: 30;
+  background: #ffffff;
+}
+#left-1{
+  left: 0px;
+}
+#right-1{
+  right: 0px;
+}
+.ctrl-2{
+  display: block;
+  position: absolute;
+  top: 0px;
+  width: 18px;
+  border: 1px solid #eeeeee;
+  height: 150px;
+  line-height: 150px;
+  cursor: pointer;
+  background: #ffffff;
+  z-index: 100;
+}
+#left-2{
+  left: 0;
+}
+#right-2{
+  right: 0;
 }
 /********添加新商品-编辑商品***********june*********end********/
 

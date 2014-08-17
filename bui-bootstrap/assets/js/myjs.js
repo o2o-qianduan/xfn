@@ -1,11 +1,3 @@
-/*$('.selectlist2 #shift_1').live('click',function(){
-              var myoption =  $('#multiple1 option:selected').text();     
-              var $newoption = $('#multiple2').append('<option></option>');
-              var $lastoption = $('#multiple2 option:last');
-              var $optionvalue = myoption;
-              var $appendop = $('#multiple2 option:last').append($optionvalue);      
-              $('#multiple1 option:selected').remove();
-})*/
 /******添加新商品-编辑商品************june**********start*******************/
 /****宝贝图片部分****start**/ 
 $(function(){
@@ -34,7 +26,97 @@ $('#2_left').live('click',function(){
 				 })   
 				$('#opt_1').append(opt1);      
  })
-/****可选商品-跟该商品关联的商品****end***/        
+/****可选商品-跟该商品关联的商品****end***/   
+/***宝贝图片左边切换部分*****june*******start****/
+$(function(){
+    var page = 1;
+    var i = 5; //每版放5个图片
+    // 点击向后按钮
+    $("#right-1").click(function(){
+        var $parent = $(this).parents("div.left_pic");//寻找当前元素的父元素
+        var $v_out = $parent.find("div.i-list");//视频外围
+        var $v_show = $parent.find("div._downP");//视频播放区域
+        var v_width = $v_out.width();//外围宽度
+        var len = $v_show.find("li").length; //图片数量
+        var page_count = Math.ceil(len / i) ; //页面数目
+        var yushu=parseInt(i/5);//每5个li为一组，判断出现的组数，觉得空余宽度
+         if( !$v_show.is(":animated") ){    //判断“视频内容展示区域”是否正在处于动画
+             if( page == page_count ){  //已经到最后一个版面了,如果再向后，必须跳转到第一个版面。
+                $v_show.animate({ left : '5px'}, "slow"); //通过改变left值，跳转到第一个版面
+                page = 1;
+              }else{
+                $v_show.animate({ left : '-='+(v_width-28) }, "slow");  //通过改变left值，达到每次换一个版面
+                page++;
+             }
+         }
+    });
+
+    //点击向前按钮
+    $("#left-1").click(function(){
+       var $parent = $(this).parents("div.left_pic");//寻找当前元素的父元素
+        var $v_out = $parent.find("div.i-list");//视频外围
+        var $v_show = $parent.find("div._downP");//视频播放区域
+        var v_width = $v_out.width();
+        var len = $v_show.find("li").length;
+        var page_count = Math.ceil(len / i);
+/*        page=page_count;*/
+        if(!$v_show.is(":animated")){
+            if (page == 1) {
+                /*$v_show.animate({left : "5px"},"slow");*/
+                $v_show.animate({left : "-="+((v_width-28)*(page_count-1))},"slow");
+                page = page_count;
+            }else{
+                 $v_show.animate({left : '+='+(v_width-28)},"slow");
+                page--;
+            }
+        }
+    });
+})
+/***宝贝图片左边切换部分*****june*********end*****/     
+/***宝贝图片右边切换部分*****june*******start****/
+$(function(){
+    var page = 1;
+    var i = 5; //每版放5个图片
+    // 点击向后按钮
+    $("#right-2").click(function(){
+        var $parent = $(this).parents("div.right_pic");//寻找当前元素的父元素
+        var $v_out = $parent.find("div.r-list");//视频外围
+        var $v_show = $parent.find("div._rightP");//视频播放区域
+        var v_width = $v_out.width();//外围宽度
+        var len = $v_show.find("li").length; //图片数量
+        var page_count = Math.ceil(len / i) ; //页面数目
+        var yushu=parseInt(i/5);//每5个li为一组，判断出现的组数，觉得空余宽度
+         if( !$v_show.is(":animated") ){    //判断“视频内容展示区域”是否正在处于动画
+             if( page == page_count ){  //已经到最后一个版面了,如果再向后，必须跳转到第一个版面。
+                $v_show.animate({ left : '3px'}, "slow"); //通过改变left值，跳转到第一个版面
+                page = 1;
+              }else{
+                $v_show.animate({ left : '-='+(v_width-38) }, "slow");  //通过改变left值，达到每次换一个版面
+                page++;
+             }
+         }
+    });
+    //点击向前按钮
+    $("#left-2").click(function(){
+       var $parent = $(this).parents("div.right_pic");//寻找当前元素的父元素
+        var $v_out = $parent.find("div.r-list");//视频外围
+        var $v_show = $parent.find("div._rightP");//视频播放区域
+        var v_width = $v_out.width();
+        var len = $v_show.find("li").length;
+        var page_count = Math.ceil(len / i);
+        if(!$v_show.is(":animated")){
+            if (page == 1) {
+                /*$v_show.animate({left : "5px"},"slow");*/
+                $v_show.animate({left : "-="+((v_width-38)*(page_count-1))},"slow");
+                page = page_count;
+            }else{
+                 $v_show.animate({left : '+='+(v_width-38)},"slow");
+                page--;
+            }
+        }
+    });
+})
+/***宝贝图片右边切换部分*****june*********end*****/     
 // /******添加新商品-编辑商品************june**********end*******************/                                                                   bing****商品批量导出**start***
  $(function(){
          

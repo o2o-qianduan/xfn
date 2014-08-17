@@ -260,10 +260,7 @@
 
 <!-- 左边大图 -->
 <div class="left_banner">
-
-
 <div id="image-choice" class="i-list">
-
 <div class="tb-booth tb-pic tb-s310">
 <a href="./images//pro_01.png" target="_blank"><img  src="./images/pro_01_mid.png" alt="蔬菜" rel="./images//pro_01.png" class="jqzoom"></a>
 </div>
@@ -318,36 +315,25 @@
 </ul>
 </div> 
 
-<div id="right-choice" class="ctrl"><img src="images/next.png" alt="右切换"></div></div>
-
-
-
-
-
+<div id="right-choice" class="ctrl"><img src="images/next.png" alt="右切换"></div>
+</div>
 
 <script type="text/javascript">
 $(document).ready(function(){
-
   $(".jqzoom").imagezoom();
-
   $("#thumblist li a").mouseover(function () {
       $(this).parents("li").addClass("tb-selected").siblings().removeClass("tb-selected");
     $(".jqzoom").attr('src',$(this).find("img").attr("mid"));
     $(".jqzoom").attr('rel',$(this).find("img").attr("big"));
   });
-
-
-
-
 });
-
 </script>
-   <div class="bottom_link">
+<div class="bottom_link">
               <img src="images/share.png" />
               <a href="#">分享</a>
               <img src="images/collect.png" />
               <a href="#">收藏</a>
-            </div>
+</div>
    </div>
 
          
