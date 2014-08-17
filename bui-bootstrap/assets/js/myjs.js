@@ -276,10 +276,79 @@ $(function(){
 		    $('.bgg').hide();
 		});
 
+		// 添加等级组弹出框
+		$("#grade_1").live('click',function(){
+	   
+		     $("#prompt_msg12").show();
+		     $('.bgg').show();
+		})
+		$("#dlg-close12").live('click',function(){
+		    $("#prompt_msg12").hide();
+		    $('.bgg').hide();
+		});
+
+		// 添加等级弹出框
+		$("#grade_2").live('click',function(){
+	   
+		     $("#prompt_msg13").show();
+		     $('.bgg').show();
+		})
+		$("#dlg-close13").live('click',function(){
+		    $("#prompt_msg13").hide();
+		    $('.bgg').hide();
+		});
+
+		// 新增标签弹出框
+		$("#label_1").live('click',function(){
+	   
+		     $("#prompt_msg14").show();
+		     $('.bgg').show();
+		})
+		$("#dlg-close14").live('click',function(){
+		    $("#prompt_msg14").hide();
+		    $('.bgg').hide();
+		});
+
+		// 新增标签弹出框
+		$("#setUpActi").live('click',function(){
+	   
+		     $("#prompt_msg15").show();
+		     $('.bgg').show();
+		})
+		$("#dlg-close15").live('click',function(){
+		    $("#prompt_msg15").hide();
+		    $('.bgg').hide();
+		});
+
+		// 复制弹出框
+		$("#copy_1").live('click',function(){
+	   
+		     $("#prompt_msg16").show();
+		     $('.bgg').show();
+		})
+		$("#dlg-close16").live('click',function(){
+		    $("#prompt_msg16").hide();
+		    $('.bgg').hide();
+		});
+
+		// 移动弹出框
+		$("#move_1").live('click',function(){
+	   
+		     $("#prompt_msg17").show();
+		     $('.bgg').show();
+		})
+		$("#dlg-close17").live('click',function(){
+		    $("#prompt_msg17").hide();
+		    $('.bgg').hide();
+		});
 
 		// 会员详情点击编辑显示按钮
 		$('#complime_01').click(function(){
 			$('#messBtn01').show();
+			var $table = $(this).parents('.usertable');
+			var $input = $table.find('input');
+			$input.removeAttr("disabled");
+	
 		});
 		$('#complime_03').click(function(){
 			$('#messBtn02').show();
@@ -288,6 +357,23 @@ $(function(){
 })
 
 
+//<![CDATA[订单走势选项卡
+  $(function(){
+      var $div_li =$("div.tab_menu ul li");
+      $div_li.click(function(){
+      $(this).addClass("selected")            //当前<li>元素高亮
+           .siblings().removeClass("selected");  //去掉其它同辈<li>元素的高亮
+            var index =  $div_li.index(this);  // 获取当前点击的<li>元素 在 全部li元素中的索引。
+      $("div.tab_box > div")    //选取子节点。不选取子节点的话，会引起错误。如果里面还有div 
+          .eq(index).show()   //显示 <li>元素对应的<div>元素
+          .siblings().hide(); //隐藏其它几个同辈的<div>元素
+    }).hover(function(){
+      $(this).addClass("hover");
+    },function(){
+      $(this).removeClass("hover");
+    })
+  })
+//]]>
 
 
 

@@ -97,7 +97,7 @@
               <span id="batchRecharge" class="myspanBtn">批量充值</span>
           </div>
           <div class="ontrol-group span8" >
-              <span class="myspanBtn">批量修改</span>
+              <span class="myspanBtn"><a href="batchModify.html">批量修改</a></span>
           </div>
         </div>
 
@@ -124,7 +124,7 @@
                 <span class="btn_style_1">10元</span>
                 <span class="btn_style_1">15元</span>
               </div>
-              <div class="pop_content010">
+              <div class="pop_content01">
                 <label for="">有效期：</label>
                 <input type="text" class=" calendar" name="startDate"><span> - </span><input name="endDate" type="text" class=" calendar">
               </div>
@@ -157,7 +157,7 @@
                 <label for="">红包金额：</label>
                 <input type="text">
               </div>
-              <div class="pop_content010">
+              <div class="pop_content01">
                 <label for="">有效期：</label>
                 <input type="text" class=" calendar" name="startDate"><span> - </span><input name="endDate" type="text" class=" calendar">
               </div>
@@ -231,10 +231,10 @@
          
           {title:'操作',dataIndex:'',width:200,renderer : function(value,obj){
              
-            var  editStr1 = '<span class="grid-command" >添加标签</span>',
-                 editStr2 = '<span class="grid-command" ><a  href="memDetails.html">查看</a></span>',
-              delStr = '<span class="grid-command">交易记录</span>';//页面操作不需要使用Search.createLink
-            return  editStr1 + editStr2 + delStr;
+            var  editStr1 = '<span class="grid-command" >[添加标签]</span>',
+                 editStr2 = '<span class="grid-command" ><a  href="memDetails.html">[查看]</a></span>',
+              editStr3 = '<span class="grid-command"><a  href="tradeRecord.html">[交易记录]</a></span>';
+            return  editStr1 + editStr2 + editStr3;
           }}
         ],
       store = Search.createStore('../data/goods03.json',{

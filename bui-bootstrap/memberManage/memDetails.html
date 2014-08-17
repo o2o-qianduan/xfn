@@ -14,7 +14,7 @@
 
     <div class="row header">
       <p>会员详情</p>
-      <span class="headBtn"><a  href="addBrand.html">会员列表</a></span>    
+      <span class="headBtn"><a  href="member02.html">会员列表</a></span>    
     </div>
     <div class="row tablerow">
      <table class="usertable usertable01" width="802px">     
@@ -22,47 +22,47 @@
         <tbody>
             <tr>
               <td>会员编号：</td>
-              <td><input type="text"></td>
+              <td><input type="text" disabled="disabled"></td>
             </tr>
             <tr>
               <td>会员名称：</td>
-              <td><input type="text"></td>
+              <td><input type="text" disabled="disabled"></td>
             </tr>
             <tr>
               <td>会员编号：</td>
-              <td><input type="text"></td>
+              <td><input type="text" disabled="disabled"></td>
             </tr>
             <tr>
               <td>性别：</td>
-              <td><input type="text"></td>
+              <td><input type="text" disabled="disabled"></td>
             </tr>
             <tr>
               <td>生日：</td>
-              <td><input type="text"></td>
+              <td><input type="text" disabled="disabled"></td>
             </tr>
             <tr>
               <td>地区：</td>
-              <td><input type="text"></td>
+              <td><input type="text" disabled="disabled"></td>
             </tr>
             <tr>
               <td>地址：</td>
-              <td><input type="text"></td>
+              <td><input type="text" disabled="disabled"></td>
             </tr>
             <tr>
               <td>手机：</td>
-              <td><input type="text"></td>
+              <td><input type="text" disabled="disabled"></td>
             </tr>
             <tr>
               <td>电话：</td>
-              <td><input type="text"></td>
+              <td><input type="text" disabled="disabled"></td>
             </tr>
             <tr>
               <td>电子邮件：</td>
-              <td><input type="text"></td>
+              <td><input type="text" disabled="disabled"></td>
             </tr>
             <tr>
               <td>邮编：</td>
-              <td><input type="text"></td>
+              <td><input type="text" disabled="disabled"></td>
             </tr>
         </tbody>
       </table>
@@ -87,11 +87,11 @@
        <div id="prompt_title" class="pop_title">密码修改</div>
           <div class="pop_content clearfix" style="margin-left: 20px;">
               <div class="pop_content01">
-                <label for="">限购数量：</label>
+                <label for="">新的密码：</label>
                 <input type="text">
               </div>
               <div class="pop_content01">
-                <label for="">秒杀价格：</label>
+                <label for="">再次输入：</label>
                 <input type="text">
               </div>
           </div>
@@ -100,6 +100,7 @@
           <div id="dlg-close11" class="btn_style_1 pop_btn2">取消</div>
        </div>
     </div><!-- 提示框结束 --> 
+
 
     <div class="row tablerow">
      <table class="usertable usertable01" id="usertable02" width="802px">     
@@ -117,15 +118,55 @@
               <td><input type="text"></td>   
               <td><input type="text"></td>
               <td><input type="text"></td>
-              <td>[添加]</td>
+              <td>
+                <a href="#">[编辑]</a>
+                <a href="#">[移除]</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="text"></td>
+              <td><input type="text"></td>   
+              <td><input type="text"></td>
+              <td><input type="text"></td>
+              <td>
+                <a href="#">[添加]</a>  
+              </td>
             </tr>
         </tbody>
       </table>
     </div>
 
-   <div class="row tablerow">
-     <table class="usertable usertable01" width="802px">     
+  <div class="row tablerow">
+     <table class="usertable usertable01"  id="usertable02" width="802px" style="margin-bottom: -1px">     
         <caption class="memtit memtit2">交易信息<span class="headBtn"><a id="" href="#">交易记录</a></span></caption>
+        <tbody>
+            <tr>
+              <td>交易金额</td>
+              <td><input type="text"></td>   
+              <td>交易次数</td>
+              <td><input type="text"></td>
+            </tr>
+            <tr>
+              <td>平均订单金额</td>
+              <td><input type="text"></td>   
+              <td>交易关闭数</td>
+              <td><input type="text"></td>
+            </tr>
+            <tr>
+              <td>购买商品数</td>
+              <td><input type="text"></td>   
+              <td>上次交易时间</td>
+              <td><input type="text"></td>
+            </tr>
+            <tr>
+              <td>消费积分</td>
+              <td><input type="text"></td>   
+              <td>等级积分</td>
+              <td><input type="text"></td>
+            </tr>
+        </tbody>
+      </table>
+      <table class="usertable usertable01" width="802px">     
         <tbody>
           <tr>
             <td>会员初始等级</td>
