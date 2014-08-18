@@ -213,6 +213,9 @@
 ._bottom p:first-child{
   color: #f77245;
 }
+.t_3{
+  width: 960px;
+}
 .t_3 td:first-child{
   height: 150px;
   background:  #f5f5f5;
