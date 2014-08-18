@@ -76,7 +76,7 @@
 	overflow: hidden;
 	height: 19px;
 	line-height: 22px;
-	_line-height: 20px;
+	line-height: 20px;
 }
 .bui-side-menu .bui-menu-item-selected a {
 	color: #fff;
