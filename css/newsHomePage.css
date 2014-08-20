@@ -107,6 +107,8 @@
 .home_page_top .pageImg_1{
 	float: left;
 	margin-left: 25px;
+	width: 158px;
+	height: 176px;
 
 }
 
@@ -195,6 +197,10 @@
 .home_page_center .pageCenterDiv a{
 	color: #666;
 	font-size: 12px;
+}
+.home_page_center .pagePassage img{
+	width: 150px;
+	height: 150px;
 }
 .home_page_center #pagePassage_0{
 	float: right;

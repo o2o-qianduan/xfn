@@ -1,4 +1,4 @@
-/**************全局设置部分*******june******************************/*/
+/*************全局设置部分*******june******************************/
 html{
 	overflow-y: scroll;
 	margin: 0; 
@@ -7,7 +7,7 @@ html{
 ul,li{list-style:none;}
 body {
 	color: #333;
-	font-family:'Microsoft YaHei','微软雅黑','SimSun',serif,"宋体";
+	font-family:'Microsoft YaHei','微软雅黑','SimSun',"宋体",serif;
 	margin: 0px;
 	padding: 0px;
 }
@@ -1215,7 +1215,8 @@ ul, li {
 .member_div{   /*可重用*/
 	margin: 22px 0 0 32px;
 }
-.member_div input,.referrerNum input,.findCode_Box input{       /*可利用，输入框样式*/
+.member_div input,.referrerNum input,
+.findCode_Box input{  /*可利用，输入框样式*/
 	width: 290px;
 	height: 33px;
 	box-shadow: 0 3px 10px #E9E9E9 inset;
@@ -1223,10 +1224,11 @@ ul, li {
 	border-radius: 3px;
 }
 .member_div label,.findCode_Box label{      /* 可利用，标签样式*/
+	margin: 15px 10px 0 0;
 	display: inline-block;
 	text-align: right;
 	width: 90px;
-	margin-top: 15px;
+	
 }
 .every_line_height{  
 	/*可利用，输入框、标签行高*/
@@ -1238,13 +1240,12 @@ ul, li {
 }
 .btn_info{   /*可重用，绿色保存按钮*/
 	background-color: #77BE22;
-	width: 95px;
-	height: 35px;
+	padding: 11px 33px;
 	cursor: pointer;
 	color: #fff;
 	border-radius: 7px;
 	font-weight: bold;
-	margin-left: 95px;
+	margin-left: 105px;
 	border:0;
 }
 
@@ -1632,7 +1633,7 @@ ul, li {
 	font-family: 'SimSun',"宋体",'NSimSun',"新宋体", "MicroSoft Yehei ";
 	width: 90%;
 	margin: 0px 5px;
-	color: #000000 !important;     /*没反应！！*/
+	color: #000000 !important;    
 	display: block;
 	float: left;
 	text-align: left;
@@ -1642,7 +1643,7 @@ ul, li {
 	text-decoration: none;
 }
 .YM-Tab  a:last{
-	border-bottom: 0;  /*没反应！！*/
+	border-bottom: 0; 
 }
 .YM-Tab span img{
 	position: absolute;
@@ -1752,6 +1753,7 @@ img{
     background: url('../images/down-triangle_green.png') no-repeat scroll 0px 23px transparent;
 
 }
+
 .SmenuTitle ul li a {
     text-decoration: none;
     color: #000;
@@ -1761,10 +1763,6 @@ img{
     width: 100%;
     display: inline-block;
     margin-top: 10px;
-}
-.SmenuContent ul{
-/*    margin-left: -40px;*/
-/*    margin-top: -5px;*/
 }
 .SmenuCont{
     display: none;
@@ -2601,7 +2599,7 @@ box-shadow: 2px 2px 5px #C0BBB5;
 	color: red;
 }
 
-/*找回密码*/
+/*找回密码******bing*****start*******/
 .nothing{
 	height: 106px;
 }
@@ -2620,7 +2618,7 @@ box-shadow: 2px 2px 5px #C0BBB5;
 	border:1px solid #CCC;
 	background-color: #fff;
 	box-shadow: 0 20px 20px #f6f4f1 inset;
-	font-family: 'NSimSun',"新宋体";
+	font-family: "新宋体";
 	font-size: 14px;
 }
 
@@ -2630,24 +2628,28 @@ box-shadow: 2px 2px 5px #C0BBB5;
 	line-height: 38px;
 	color: #F60;
 	border-bottom: 2px solid #d7d6d6;
-	margin: 0 21px;
+	margin: 0 21px 20px;
 }
 
-.findCode_Box .findcode1{
-	margin-top: 10px;
+.findcode1,.findcode2{
+	height: 52px;
 }
-.findCode_Box .findcode2{
-	margin-top: 5px;
-}
+
 .findCode_Box .findcode2 input{
-	width: 85px;
+	width: 155px;
+}
+.findCode_Box .findcode2 span{
+	padding: 0 6px;
+	font-size: 21px;
+	font-family: Arial;
+	color: #a3ce6f;
 }
 .findCode_Box .findcode2 a{
 	color: #A0A0A0;
 	text-decoration: underline;
 }
 #findYourCode{
-	margin-top: 15px;
+	margin-top: 10px;
 	font-size: 16px;
 }
 .tipCharity_text{
@@ -2673,6 +2675,119 @@ box-shadow: 2px 2px 5px #C0BBB5;
 	color: #939393;
 	font-size: 12px;
 	line-height: 20px;
+}
+/*找回密码*******bing*****end*/
+
+/*登录框架******bing****start******/
+
+/*选项卡样式*/
+.TmenuTitle{
+    border-bottom: 2px solid #bebebe;
+    height: 28px;
+    position: relative;
+}
+.TmenuTitle ul{
+    margin-left: 0;
+    padding-left: 0;
+}
+.TmenuTitle ul li{
+    float:left;
+    width: 114px;
+    text-align: center;
+    padding-bottom: 8px;
+}
+
+.TmenuTitleOn0,.TmenuTitleOn1{
+    background: url('../images/down-triangle_green.png') no-repeat scroll 0px 21px transparent;
+
+}
+
+.TmenuTitle ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+}
+.TmenuContent{
+    width: 100%;
+    display: inline-block;
+    margin-top: 10px;
+}
+.TmenuCont{
+    display: none;
+}
+
+.TmenuContentOn0,.TmenuContentOn1{
+    display: block;
+    width: 100%;
+}
+.TmenuContent ul li{
+    width: 192px;
+    float: left;
+    margin-right: 3px;
+}
+.TmenuContent ul li:last-child{
+    margin-right: 0;
+}
+.TmenuContent ul li p{
+    text-indent: 0;
+    font-size: 12px;
+}
+
+.fontcolor a{
+	color: #77BE22 !important;
+}
+.findCode_Box .SmenuTitle01{
+	margin: 35px 10px;
+}
+.findCode_Box .SmenuTitle01 ul li{
+	margin: 0 45px;
+}
+.loginBtn a{
+	margin-left: 30px;
+}
+.protocol{
+	font-size: 12px;
+	margin: 5px 0 15px;
+}
+.protocol input{
+	height: 0;
+    margin-left: 105px;
+    margin-top: 10px;
+    width: 20px !important;
+}
+.protocol span{
+	display: block;
+	float: right;
+	margin: 9px 140px 0 0;
+}
+.protocol span a{
+	color: #569d00;
+}
+.boxBottom{
+	margin: 45px 12px 0;
+	padding: 20px 6px;
+	border-top: 1px dashed #cbc2c2;
+}
+.boxBottom span{
+	float: left;
+	font-size: 12px;
+}
+.boxBottom .loginimg{
+	margin: -4px 0 0 15px;
+	display: block;
+	float: left;
+	width: 22px;
+	height: 22px;
+}
+
+.boxBottom .freelogin{
+	float: right;
+	color: #61b200;
+	font-size: 12px;
+	text-decoration: underline;
+}
+.newlabel{
+	margin-left: 10px;
 }
 /*********咨询文章页***********************eles**start*******/
 /*导航文章标题*/
@@ -3012,4 +3127,4 @@ box-shadow: 2px 2px 5px #C0BBB5;
 .kind_item a:hover{
 	color: #f60;
 }
-/***全部分类页****eles****end***/
+/***全部分类页****eles****end**

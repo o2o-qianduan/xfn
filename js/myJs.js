@@ -28,6 +28,7 @@
          tabOptionHover2(tabOptionIndex2);
      });
      $("#assess_nav").children("li").unbind();
+      $("#assess_nav01").children("li").unbind();    
  });
  function tabOptionHover2(tabOptionIndex) {
      for (var i = 0; i < 5; i++) {
@@ -189,6 +190,28 @@ $(".all_classify").live("mouseenter",function() {
      }
  })
 
+// *****登录、注册选项卡*****bing****start****
+ 
+  var tabOptionIndex8 = 0;
+ $(function() {
+     $(".TmenuTitle ul li").mouseover(function() {
+         tabOptionIndex8 = $(".TmenuTitle ul li").index(this);
+         tabOptionHover8(tabOptionIndex8);
+     });
+
+ });
+ function tabOptionHover8(tabOptionIndex) {
+     for (var i = 0; i < 2; i++) {
+         $(".TmenuTitle ul li").removeClass('TmenuTitleOn' + i);
+         $(".TmenuCont").removeClass('TmenuContentOn' + i);
+         $(".TmenuTitle ul li").removeClass('fontcolor');
+     }
+     $(".TmenuTitle ul li").eq(tabOptionIndex).addClass('TmenuTitleOn' + tabOptionIndex);
+     $(".TmenuTitle ul li").eq(tabOptionIndex).addClass('fontcolor');
+     $(".TmenuCont").eq(tabOptionIndex).addClass('TmenuContentOn' + tabOptionIndex);
+ }
+
+// *****登录、注册选项卡*****bing****end****
  /***********************首页最顶部轮播******june******start*/
  $(function() {
      var banner = $("#banner-left");
