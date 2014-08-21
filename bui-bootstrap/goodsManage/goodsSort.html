@@ -78,148 +78,94 @@
   </script>
  
 <script type="text/javascript">
-  BUI.use(['bui/grid','bui/data'],function (Grid,Data) {
-
-  // var  editing = new Grid.Plugins.DialogEditing({
-  //       contentId : 'content',
-  //       triggerCls : 'btn-edit'
-  //     }),
- var editing = new Grid.Plugins.CellEditing(),
-  columns = [{
-        title: '分类名称',
-        dataIndex: 'sortName',
-        editor: {
-          xtype: 'text',
-          rules: {
-            required: true
-          }
-        }
-      }, {
-        title: '商品数量',
-        dataIndex: 'goodsQuan',
-        editor: {
-          xtype: 'text',
-          rules: {
-            required: false
-          }
-        }
-      },{
-        title: '商品单位',
-        dataIndex: 'goodsUnit',
-        editor: {
-          xtype: 'text',
-          rules: {
-            required: false
-          }
-        }
-      },{
-        title: '是否显示',
-        dataIndex: 'showOrNot',
-        editor: {
-          xtype: 'text',
-          rules: {
-            required: false
-          }
-        }      
-      }, {
-        title: '显示首页',
-        dataIndex: 'showhomepage',
-        editor: {
-          xtype: 'text',
-          rules: {
-            required: false
-          }
-        }
-      },{
-        title: '排序',
-        dataIndex: 'order',
-        editor: {
-          xtype: 'text',
-          rules: {
-            required: false
-          }
-        }
-      },{
-        title:'操作',width:250,
-        renderer : function(value,obj){
+  BUI.use('common/search',function (Search) {
+   
+    var  editing = new BUI.Grid.Plugins.DialogEditing({
+        contentId : 'content', //设置隐藏的Dialog内容
+        autoSave : true, //添加数据或者修改数据时，自动保存
+        triggerCls : 'btn-edit'
+      }),
+      columns = [
+          {title:'分类名称',dataIndex:'id',width:150,renderer:function(v){
+            return Search.createLink({
+              id : 'detail' + v,
+              title : '商品信息',
+              text : v,
+              href : 'detail/example.html'
+            });
+          }},
+          {title:'商品数量',dataIndex:'goodsS-0-0',width:200},
+          {title:'是否显示',dataIndex:'goodsS-0-1',width:200},
+          {title:'显示首页',dataIndex:'goodsS-0-2',width:200},
+          {title:'排序',dataIndex:'goodsS0-3',width:150},
+         
+          {title:'操作',dataIndex:'',width:200,renderer : function(value,obj){
             var editStr = '<span class="grid-command" ><a href="transfergoods.html">[转移商品]</a></span>',
-              editStr1 = '<span class="grid-command" >[编辑]</span>',
-              delStr = '<span class="grid-command btn-del">[移除]</span>';//页面操作不需要使用Search.createLink
+              editStr1 = '<span class="grid-command btn-edit" title="编辑商品信息">[编辑]</span>',
+              delStr = '<span class="grid-command btn-del" title="删除商品信息">[移除]</span>';//页面操作不需要使用Search.createLink
             return editStr +  editStr1 + delStr;
-          }
+          }}
+        ],
+      store = Search.createStore('../data/goods01.json',{
+        proxy : {
+          save : { //也可以是一个字符串，那么增删改，都会往那么路径提交数据，同时附加参数saveType
+            addUrl : '../data/add.json',
+            updateUrl : '../data/edit.json',
+            removeUrl : '../data/del.php'
+          }/*,
+          method : 'POST'*/
+        },
+        autoSync : true //保存数据后，自动更新
+      }),
+      gridCfg = Search.createGridCfg(columns,{
+        tbar : {
+          items : [
+            {text : '<i class="icon-plus"></i>新建',btnCls : 'button button-small',handler:addFunction},
+            {text : '<i class="icon-remove"></i>删除',btnCls : 'button button-small',handler : delFunction}
+          ]
+        },
+        plugins : [editing,BUI.Grid.Plugins.CheckSelection,BUI.Grid.Plugins.AutoFit] // 插件形式引入多选表格
+      });
+
+    var  search = new Search({
+        store : store,
+        gridCfg : gridCfg
+      }),
+      grid = search.get('grid');
+
+    function addFunction(){
+      var newData = {isNew : true}; //标志是新增加的记录
+      editing.add(newData,'name'); //添加记录后，直接编辑
     }
-      
-    ],
-    //默认的数据
-    data = [{
-      id: '1',
-      sortName: '番茄',
-      goodsQuan: 0,
-      goodsUnit: '',
-      navigation:'是',
-      showOrNot:'是',
-      priceGrade:'0',
-      order:'100'
-    }, {
-      id: '2',
-      sortName: '番茄',
-      goodsQuan: 0,
-      goodsUnit: '',
-      navigation:'是',
-      showOrNot:'是',
-      priceGrade:'0',
-      order:'100'
-    }],
-    store = new Data.Store({
-      data: data
-    }),
-    
-    grid = new Grid.Grid({
-      render: '#grid',
-      columns: columns,
-      width: 900,
-      forceFit: true,
-      store: store,
-      plugins: [Grid.Plugins.CheckSelection, editing],
-      tbar: {
-        items: [{
-          btnCls: 'button button-small',
-          text: '<i class="icon-plus"></i>添加',
-          listeners: {
-            'click': addFunction
-          }
-        }, {
-          btnCls: 'button button-small',
-          text: '<i class="icon-remove"></i>删除',
-          listeners: {
-            'click': delFunction
-          }
-        }]
+
+    //删除操作
+    function delFunction(){
+      var selections = grid.getSelection();
+      delItems(selections);
+    }
+
+    function delItems(items){
+      var ids = [];
+      BUI.each(items,function(item){
+        ids.push(item.id);
+      });
+
+      if(ids.length){
+        BUI.Message.Confirm('确认要删除选中的记录么？',function(){
+          store.save('remove',{ids : ids});
+        },'question');
       }
-
-    });
-  grid.render();
-
-  function addFunction() {
-    var newData = {
-      sortName: '请输入商品名称'
-    };
-    store.add(newData);
-    editing.edit(newData, 'sortName'); //添加记录后，直接编辑
-  }
-
-  function delFunction() {
-    var selections = grid.getSelection();
-    store.remove(selections);
-  }
-  var logEl = $('#log');
-  $('#btnSave').on('click', function() {
-    if (editing.isValid()) {
-      var records = store.getResult();
-      logEl.text(BUI.JSON.stringify(records));
     }
+
+    //监听事件，删除一条记录
+    grid.on('cellclick',function(ev){
+      var sender = $(ev.domTarget); //点击的Dom
+      if(sender.hasClass('btn-del')){
+        var record = ev.record;
+        delItems([record]);
+      }
+    });
   });
-});
 </script>
 
 </body>
