@@ -374,7 +374,11 @@ $(function(){
     })
   })
 //]]>
-
+/******商品分类*****june****start*/
+/*$(".btn-edit").live('click',function(){
+      $("#c1").show();
+     })*/
+/******商品分类*****june****end*/
 
 
 
