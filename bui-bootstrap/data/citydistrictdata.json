@@ -1,0 +1,54 @@
+{
+	"success": true,
+	"message": "ok",
+	"nodes": [{
+		"id": "11",
+		"value": "11",
+		"parent": "1",
+		"children": [{
+			"id": "1101",
+			"value": "1101",
+			"parent": "11",
+			"children": [{
+				"id": "1110",
+				"value": "1110",
+				"parent": "11",
+				"children": [],
+				"isleaf": true
+			}, {
+				"id": "1111",
+				"value": "1111",
+				"parent": "11",
+				"children": [],
+				"isleaf": true
+			}],
+			"isleaf": false
+		}],
+		"isleaf": false
+	}, {
+		"id": "22",
+		"value": "22",
+		"parent": "1",
+		"children": [{
+			"id": "2201",
+			"value": "2201",
+			"parent": "22",
+			"children": [{
+				"id": "2210",
+				"value": "2210",
+				"parent": "22",
+				"children": [],
+				"isleaf": true
+			},  {
+				"id": "2210",
+				"value": "2210",
+				"parent": "22",
+				"children": [],
+				"isleaf": true
+			}],
+			"isleaf": false
+		}],
+		"isleaf": false
+	}]
+
+}

@@ -267,6 +267,8 @@
 .goods_list img{
 	border:1px solid #fff;
 	margin-top: 12px;
+	width: 80px;
+	height: 80px;
 }
 .goods_list .goods_name span{
 	width: 300px;

@@ -478,9 +478,9 @@ li {list-style-type: none;}
 	line-height: 30px;
 	text-align: center;
 }
-
-
-
+.shelf-02-left-up img,.shelf-02-left-down img{
+	width: 206px;
+}
 /****新品推荐、特惠专区、新鲜蔬菜部分结束 *********june**/
 
 /***********美味食谱部分**june********************/
@@ -511,6 +511,9 @@ li {list-style-type: none;}
 .mwsp-content-img{
 	margin: 0px 5px;
 }
+.mwsp-content-img img{
+	width: 335px;
+}
 .mwsp-content-detail{
 	font-size: 14px;
 	color: #5b5d59;
@@ -540,6 +543,10 @@ li {list-style-type: none;}
 }
 .rpsp-01-img,.rpsp-02-img,.rpsp-03-img,.rpsp-04-img{
 	float: left;
+}
+.rpsp-01-img img,.rpsp-02-img img,.rpsp-03-img img,.rpsp-04-img img{
+	width: 110px;
+	height: 110px;
 }
 .rpsp-01-detail,.rpsp-02-detail,.rpsp-03-detail,.rpsp-04-detail{
 	float: left;
@@ -1767,6 +1774,10 @@ img{
 .SmenuCont{
     display: none;
 }
+.SmenuCont .SmenuImg img{
+    width: 181px;
+    height: 181px;
+}
 .SmenuContentOn0,.SmenuContentOn1,.SmenuContentOn2,.SmenuContentOn3,.SmenuContentOn4{
     display: block;
     width: 100%;
@@ -1930,9 +1941,7 @@ img{
     height: 35px;
     color:#3c3c3c;
     font-family: "Microsoft Yahei";
-
 }
-
 #cartTable  td {
     padding: 10px;
     color: #5e5e5e;
@@ -1940,6 +1949,10 @@ img{
     font-size: 14px; 
     vertical-align : middle;
     text-align:center;
+}
+#cartTable  td img{
+	width: 80px;
+	height: 80px;
 }
 /*tbody tr:hover {
     background: RGB(238,246,255);
