@@ -44,9 +44,9 @@
    -->
 </div>
   <script type="text/javascript" src="assets/js/jquery-1.8.1.min.js"></script>
-  <script type="text/javascript" src="./assets/js/bui.js"></script>
-  <script type="text/javascript" src="./assets/js/config.js"></script>
-  <script type="text/javascript" src="./assets/js/myjs.js"></script>
+  <script type="text/javascript" src="assets/js/bui.js"></script>
+  <script type="text/javascript" src="assets/js/config.js"></script>
+  <script type="text/javascript" src="assets/js/myjs.js"></script>
 
   <script>
     BUI.use('common/main',function(){
@@ -179,22 +179,16 @@
             id:'content_manage',
             homePage : 'advertList',
             menu:[{
-                text:'广告管理',
+                text:'内容管理',
                 items:[
-                  {id:'advertList',text:'广告列表',href:'detail/code.html',closeable : false}
+                  {id:'adverList',text:'内容列表',href:'articleManage/adverList.html',closeable : false}
                 ]
               },{
                 text:'文章管理',
                 items:[
-                  {id:'articleClassify',text:'文章分类',href:'detail/code.html'},
-                  {id:'articleList',text:'文章列表',href:'detail/example.html'},
-                  {id:'userHttp',text:'用户服务协议',href:'detail/introduce.html'}
-                ]
-              },{
-                text:'数据包下载管理',
-                items:[
-                  {id:'dataList',text:'数据包列表',href:'detail/code.html'},
-                  {id:'loadManage',text:'下载页面管理',href:'detail/example.html'}
+                  {id:'articleClassify',text:'文章分类',href:'articleManage/articleClassify.html'},
+                  {id:'articleList',text:'文章列表',href:'articleManage/articleList.html'},
+                  {id:'userHttp',text:'用户服务协议',href:'articleManage/userHttp.html'}
                 ]
               }]
           },{

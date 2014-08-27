@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <title>文章分类</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="../assets/css/dpl-min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/bui-min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/page-min.css" rel="stylesheet" type="text/css" /> 
+ </head>
+ <body>
+  
+  <div class="container">
+
+    <div class="row header">
+      <p>文章分类</p>
+      <span class="headBtn"><a  href="addClassify.html">添加分类</a></span>
+    </div>
+     <div class="search-grid-container">
+         <div id="grid"></div>
+     </div>
+  </div>
+ 
+  <div id="content" class="hide">
+  </div>
+  
+ <script type="text/javascript" src="../assets/js/jquery-1.8.1.min.js"></script>
+  <script type="text/javascript" src="../assets/js/bui-min.js"></script>
+  <script type="text/javascript" src="../assets/js/config-min.js"></script>
+  <script type="text/javascript" src="../assets/js/myjs.js"></script> 
+  <script type="text/javascript">
+    BUI.use('common/page');
+  </script>
+
+<script type="text/javascript">
+  BUI.use('common/search',function (Search) {
+    
+   
+     var editing = new BUI.Grid.Plugins.DialogEditing({
+        contentId : 'content', //设置隐藏的Dialog内容
+        autoSave : true, //添加数据或者修改数据时，自动保存
+        triggerCls : 'btn-edit'
+      }),
+      columns = [
+          {title:'文章分类',dataIndex:'article-1-0',width:120},
+          {title:'分类类型',dataIndex:'article-1-1',width:120},
+          {title:'描述',dataIndex:'article-1-2',width:380},
+          {title:'显示首页',dataIndex:'article-1-3',width:120},
+         
+          {title:'排序',dataIndex:'article-1-4',width:120},
+          {title:'操作',dataIndex:'',width:200,renderer : function(value,obj){
+            var  editStr1 = '<span class="grid-command btn-edit">[编辑]</span>',
+              delStr = '<span class="grid-command btn-del">[移除]</span>';//页面操作不需要使用Search.createLink
+            return  editStr1 + delStr;
+          }}
+        
+        ],
+      store = Search.createStore('../data/goods03.json',{
+        proxy : {
+          save : { //也可以是一个字符串，那么增删改，都会往那么路径提交数据，同时附加参数saveType
+            addUrl : '../data/add.json',
+            updateUrl : '../data/edit.json',
+            removeUrl : '../data/del.php'
+          }/*,
+          method : 'POST'*/
+        },
+        autoSync : true //保存数据后，自动更新
+      }),
+      gridCfg = Search.createGridCfg(columns,{
+        tbar : {
+          items : [
+            {text : '<i class="icon-plus"></i>新建',btnCls : 'button button-small',handler:addFunction},
+            {text : '<i class="icon-edit"></i>编辑',btnCls : 'button button-small',handler:function(){alert('编辑');}},
+            {text : '<i class="icon-remove"></i>删除',btnCls : 'button button-small',handler : delFunction}
+          ]
+        },
+        plugins : [editing,BUI.Grid.Plugins.CheckSelection,BUI.Grid.Plugins.AutoFit] // 插件形式引入多选表格
+      });
+
+    var  search = new Search({
+        store : store,
+        gridCfg : gridCfg
+      }),
+      grid = search.get('grid');
+
+    function addFunction(){
+      var newData = {isNew : true}; //标志是新增加的记录
+      editing.add(newData,'name'); //添加记录后，直接编辑
+    }
+
+    //删除操作
+    function delFunction(){
+      var selections = grid.getSelection();
+      delItems(selections);
+    }
+
+    function delItems(items){
+      var ids = [];
+      BUI.each(items,function(item){
+        ids.push(item.id);
+      });
+
+      if(ids.length){
+        BUI.Message.Confirm('确认要删除选中的记录么？',function(){
+          store.save('remove',{ids : ids});
+        },'question');
+      }
+    }
+
+    //监听事件，删除一条记录
+    grid.on('cellclick',function(ev){
+      var sender = $(ev.domTarget); //点击的Dom
+      if(sender.hasClass('btn-del')){
+        var record = ev.record;
+        delItems([record]);
+      }
+    });
+  });
+</script>
+
+</body>
+</html>  

@@ -195,8 +195,8 @@ $(function(){
 		$("#dlg-close3").live('click',function(){
 		    $("#prompt_msg3").hide();
 		    $('.bgg').hide();
-		});	
-
+		});
+		 
 		// 团购设置弹出框
 		$("#groupPurchase").live('click',function(){
 	   
