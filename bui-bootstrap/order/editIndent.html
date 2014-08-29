@@ -1,0 +1,238 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <title>订单信息</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+       <link href="../assets/css/dpl-min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/bui-min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/page-min.css" rel="stylesheet" type="text/css" /> 
+    <link rel="stylesheet" href="../assets/css/page.css">
+ </head>
+ <body>
+  
+  <div class="container">
+
+    <div class="row header">
+      <p>订单信息</p>
+      <span class="headBtn"><a  href="indentList.html">订单列表</a></span>    
+    </div>
+    <div class="row tablerow">
+     <table class="usertable usertable01" width="802px">     
+        <caption class="memtit memtit2">基本信息</caption>
+        <tbody>
+            <tr>
+              <td>订单号：</td>
+              <td><input type="text" disabled="disabled"></td>
+            </tr>
+            <tr>
+              <td>订单状态：</td>
+              <td><input type="text" disabled="disabled"></td>
+            </tr>
+            <tr>
+              <td>会员名称：</td>
+              <td><input type="text" disabled="disabled"></td>
+            </tr>
+            <tr>
+              <td>下单时间：</td>
+              <td><input type="text" disabled="disabled"></td>
+            </tr>
+            <tr>
+              <td>支付方式：</td>
+              <td><input type="text" disabled="disabled"></td>
+            </tr>
+            <tr>
+              <td>付款时间：</td>
+              <td><input type="text" disabled="disabled"></td>
+            </tr>
+            <tr>
+              <td>配送方式：</td>
+              <td><input type="text" disabled="disabled"></td>
+            </tr>
+            <tr>
+              <td>发货时间：</td>
+              <td><input type="text" disabled="disabled"></td>
+            </tr>
+            <tr>
+              <td>发货单号：</td>
+              <td><input type="text" disabled="disabled"></td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="row tablerow">
+     <table class="usertable usertable01" width="802px">     
+        <caption class="memtit memtit2">其他信息<span class="headBtn"><a id="complime_02" href="#complime_02">编辑</a></span></caption>
+        <tr>
+          <td>给商家的留言：</td>
+          <td><input type="text"></td>   
+        </tr>
+      </table>
+    </div>
+
+    <div class="row tablerow">
+       <table class="usertable usertable01" width="802px">     
+          <caption class="memtit memtit2">收货人信息<span class="headBtn"><a id="complime_01" href="#complime_01">编辑</a></span></caption>
+          <tbody>
+              <tr>
+                <td>收货人：</td>
+                <td><input type="text" disabled="disabled"></td>
+              </tr>
+              <tr>
+                <td>地区：</td>
+                <td><input type="text" disabled="disabled"></td>
+              </tr>
+              <tr>
+                <td>地址：</td>
+                <td><input type="text" disabled="disabled"></td>
+              </tr>
+              <tr>
+                <td>手机：</td>
+                <td><input type="text" disabled="disabled"></td>
+              </tr>
+              <tr>
+                <td>电话：</td>
+                <td><input type="text" disabled="disabled"></td>
+              </tr>
+              <tr>
+                <td>电子邮件：</td>
+                <td><input type="text" disabled="disabled"></td>
+              </tr>
+              <tr>
+                <td>邮编：</td>
+                <td><input type="text" disabled="disabled"></td>
+              </tr>
+          </tbody>
+        </table>
+    </div>
+
+    <div class="row tablerow">
+     <table class="usertable usertable01" id="usertable03" width="802px">     
+        <caption class="memtit memtit2">商品信息<span class="headBtn"><a id="complime_01" href="editGoods.html">编辑</a></span></caption>  
+        <tbody>
+            <tr>
+              <th>商品图片</th>
+              <th>商品名称</th>   
+              <th>属性</th>
+              <th>价格</th>
+              <th>数量</th>
+              <th>库存</th>
+              <th>小计</th>
+            </tr>
+            <tr>
+              <td><input type="text"></td>
+              <td><input type="text"></td>
+              <td><input type="text"></td>
+              <td><input type="text"></td>                         
+              <td><input type="text"></td>
+              <td><input type="text"></td>
+              <td><input type="text"></td>    
+            </tr>
+            <tr>
+              <td><input type="text"></td>
+              <td><input type="text"></td>
+              <td><input type="text"></td>
+              <td><input type="text"></td>
+              <td><input type="text"></td>
+              <td><input type="text"></td>
+              <td><input type="text"></td>   
+            </tr>
+        </tbody>
+      </table>
+    </div> 
+    <div class="row tablerow">
+         <table class="usertable usertable01" width="802px">     
+          <caption class="memtit memtit2">费用信息<span class="headBtn"><a id="complime_01" href="editCost.html">编辑</a></span></caption>   
+            <tbody>
+                <tr>
+                  <th>结算项</th>
+                  <th>费用</th>               
+                </tr>
+                <tr>
+                  <td>商品总费用</td>
+                  <td><input type="text" value="100" disabled="disabled"></td>                   
+                </tr>
+                <tr>
+                  <td>配送费用</td>
+                  <td><input type="text" value="5"></td>            
+                </tr>
+                <tr>
+                  <td>(活动)满减</td>
+                  <td><input type="text" value="-5" disabled="disabled"></td>                      
+                </tr>
+                <tr>
+                  <td>(活动)折扣</td>
+                  <td><input type="text" value="*0.7" disabled="disabled"></td>               
+                </tr>
+                <tr>
+                  <td>改动费用</td>
+                  <td><input type="text" value="-10"></td>              
+                </tr>
+                <tr>
+                  <td>合计</td>
+                  <td><input type="text" value="90"></td>             
+                </tr> 
+              </tbody>            
+          </table>
+    </div>
+    <div class="row tablerow">
+     <table class="usertable usertable01" id="usertable03" width="802px">     
+        <caption class="memtit memtit2">操作信息<span class="headBtn"><a id="complime_01" href="#complime_01">编辑</a></span></caption>  
+        <tbody>
+            <tr>
+              <th>操作人</th>
+              <th>操作时间</th>   
+              <th>订单状态</th>
+              <th>付款状态</th>
+              <th>发货状态</th>
+              <th>备注</th>
+ 
+            </tr>
+            <tr>
+              <td><input type="text"></td>
+              <td><input type="text"></td>
+              <td><input type="text"></td> 
+              <td><input type="text"></td>
+              <td><input type="text"></td>
+              <td><input type="text"></td>    
+            </tr>
+            <tr>
+              <td><input type="text"></td>
+              <td><input type="text"></td>
+              <td><input type="text"></td>
+              <td><input type="text"></td>
+              <td><input type="text"></td>
+              <td><input type="text"></td>   
+            </tr>
+        </tbody>
+      </table>
+    </div> 
+
+    <div class="row fileborder" style="width: 802px">
+        <label style="float: left;margin-left: 20px;">当前可执行操作：</label>
+        <div class="myspan">
+           <span class="myspanBtn">确认</span>
+        </div>
+        <div class="myspan">
+            <span class="myspanBtn">付款</span>
+        </div>
+        <div class="myspan">
+            <span class="myspanBtn">发货</span>
+        </div>     
+        <div class="myspan">
+           <span class="myspanBtn">完成</span>
+        </div>
+        <div class="myspan">
+            <span class="myspanBtn">售后</span>
+        </div>
+        <div class="myspan">
+            <span class="myspanBtn">无效</span>
+         </div>                                
+    </div>
+  </div>
+  <script type="text/javascript" src="../assets/js/jquery-1.8.1.min.js"></script>
+  <script type="text/javascript" src="../assets/js/myjs.js"></script> 
+
+
+</body>
+</html>  

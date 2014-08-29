@@ -12,31 +12,29 @@
      });
  });
  function tabOptionHover1(tabOptionIndex) {
-     for (var i = 0; i < 2; i++) {
-         $(".tabOption").removeClass('tabOn' + i);
-         $(".tab-0").removeClass('tabOn-' + i);
+    var $li_1 = $(".tabOption");
+     for (var i = 0; i < $li_1.length; i++) {
+         $li_1.eq(tabOptionIndex).addClass('tabOn0').siblings().removeClass('tabOn0');
+         $(".tab-0").eq(tabOptionIndex).addClass('tabOn-0').siblings().removeClass('tabOn-0');
      }
-     $(".tabOption").eq(tabOptionIndex).addClass('tabOn' + tabOptionIndex);
-     $(".tab-0").eq(tabOptionIndex).addClass('tabOn-' + tabOptionIndex);
  }
  /*****新品推荐、特惠专区、新鲜蔬菜部分 *************june**---end*/ 
  /*****超值抢购、本季热卖、本周推荐、新品上市、限时抢购 *************june**---start*/
- var tabOptionIndex2 = 0;
- $(function() {
-     $(".SmenuTitle ul li").mouseover(function() {
-         tabOptionIndex2 = $(".SmenuTitle ul li").index(this);
+ var tabOptionIndex2 = 0; 
+ $(function() {  
+     var $li_2 = $(".SmenuTitle ul li");
+     $li_2.mouseover(function() {
+         tabOptionIndex2 = $li_2.index(this);
          tabOptionHover2(tabOptionIndex2);
      });
      $("#assess_nav").children("li").unbind();
-      $("#assess_nav01").children("li").unbind();    
  });
  function tabOptionHover2(tabOptionIndex) {
-     for (var i = 0; i < 5; i++) {
-         $(".SmenuTitle ul li").removeClass('SmenuTitleOn' + i);
-         $(".SmenuCont").removeClass('SmenuContentOn' + i);
+    var $li_2 = $(".SmenuTitle ul li");
+    for (var i = 0; i < $li_2.length; i++) {
+         $li_2.eq(tabOptionIndex).addClass('SmenuTitleOn0').siblings().removeClass('SmenuTitleOn0');
+         $(".SmenuCont").eq(tabOptionIndex).addClass('SmenuContentOn0').siblings().removeClass('SmenuContentOn0');
      }
-     $(".SmenuTitle ul li").eq(tabOptionIndex).addClass('SmenuTitleOn' + tabOptionIndex);
-     $(".SmenuCont").eq(tabOptionIndex).addClass('SmenuContentOn' + tabOptionIndex);
  }
  /*****超值抢购、本季热卖、本周推荐、新品上市、限时抢购 *************june**---end*/ 
  /***********************首页【最新活动、最新资讯】切换******june******start*/
@@ -48,12 +46,11 @@
      });
  });
  function tabOptionHover3(tabOptionIndex) {
-     for (var i = 0; i < 2; i++) {
-         $(".newsOption").removeClass('newsOn' + i);
-         $(".news-0").removeClass('newsOn-' + i);
+    var $li_3 = $(".newsOption")
+     for (var i = 0; i < $li_3.length; i++) {
+         $li_3.eq(tabOptionIndex).addClass('newsOn0').siblings().removeClass('newsOn0');
+         $(".news-0").eq(tabOptionIndex).addClass('newsOn-0').siblings().removeClass('newsOn-0');
      }
-     $(".newsOption").eq(tabOptionIndex).addClass('newsOn' + tabOptionIndex);
-     $(".news-0").eq(tabOptionIndex).addClass('newsOn-' + tabOptionIndex);
  }
  /***********************首页【最新活动、最新资讯】切换******june******end*/
 /*********************** 产品详情页“搭配、套餐”的切换******june******start*/
@@ -65,12 +62,11 @@
      });
  });
  function tabOptionHover4(tabOptionIndex) {
-     for (var i = 0; i < 2; i++) {
-         $(".daOption").removeClass('daOn' + i);
-         $(".da-0").removeClass('daOn-' + i);
+     var  $li_4 = $(".daOption");
+     for (var i = 0; i < $li_4.length; i++) {
+         $li_4.eq(tabOptionIndex).addClass('daOn0').siblings().removeClass('daOn0');
+         $(".da-0").eq(tabOptionIndex).addClass('daOn-0').siblings().removeClass('daOn-0');
      }
-     $(".daOption").eq(tabOptionIndex).addClass('daOn' + tabOptionIndex);
-     $(".da-0").eq(tabOptionIndex).addClass('daOn-' + tabOptionIndex);
  }
  /*********************** 产品详情页“搭配、套餐”的切换******june******end*/
  /*********************** 产品详情页“商品详情、评价、成交记录”的切换******june******start*/
@@ -82,12 +78,11 @@
      });
  });
  function tabOptionHover5(tabOptionIndex) {
-     for (var i = 0; i < 3; i++) {
-         $(".proOption").removeClass('proOn' + i);
-         $(".pro-0").removeClass('proOn-' + i);
+     var $li_5 = $(".proOption");
+     for (var i = 0; i < $li_5.length; i++) {
+         $li_5.eq(tabOptionIndex).addClass('proOn0').siblings().removeClass('proOn0');
+         $(".pro-0").eq(tabOptionIndex).addClass('proOn-0').siblings().removeClass('proOn-0');
      }
-     $(".proOption").eq(tabOptionIndex).addClass('proOn' + tabOptionIndex);
-     $(".pro-0").eq(tabOptionIndex).addClass('proOn-' + tabOptionIndex);
  }
  /*********************** 产品详情页“商品详情、评价、成交记录”的切换******june******end*/ 
  /*************资讯列表页“排行榜、问答”切换*****june*************start******/
@@ -99,12 +94,13 @@
      });
  })
  function tabOptionHover6(tabOptionIndex) {
-     for (var i = 0; i < 2; i++) {
-         $(".rankOption").removeClass('rankOn' + i);
-         $(".rank-0").removeClass('rankOn-' + i);
+
+     var $li_6 = $(".rankOption");
+     for (var i = 0; i < $li_6.length; i++) {
+         $li_6.eq(tabOptionIndex).addClass('rankOn0').siblings().removeClass('rankOn0');
+         $(".rank-0").eq(tabOptionIndex).addClass('rankOn-0').siblings().removeClass('rankOn-0');
      }
-     $(".rankOption").eq(tabOptionIndex).addClass('rankOn' + tabOptionIndex);
-     $(".rank-0").eq(tabOptionIndex).addClass('rankOn-' + tabOptionIndex);
+ 
  }
  /*************资讯列表页“排行榜、问答”切换**********june******end*/
 /*************"激活礼品卡"页“未用完、已用完、已过期”切换*****june******start******/
@@ -116,12 +112,11 @@
      });
  })
  function tabOptionHover7(tabOptionIndex) {
-     for (var i = 0; i < 3; i++) {
-         $(".useOption").removeClass('useOn' + i);
-         $(".use-0").removeClass('useOn-' + i);
+     var $li_7 = $(".useOption");
+     for (var i = 0; i < $li_7.length; i++) {
+         $li_7.eq(tabOptionIndex).addClass('useOn0').siblings().removeClass('useOn0');
+         $(".use-0").eq(tabOptionIndex).addClass('useOn-0' ).siblings().removeClass('useOn-0');
      }
-     $(".useOption").eq(tabOptionIndex).addClass('useOn' + tabOptionIndex);
-    $(".use-0").eq(tabOptionIndex).addClass('useOn-' + tabOptionIndex);
  }
 /*************"激活礼品卡"页“未用完、已用完、已过期”切换*****june******end******/
 
@@ -201,14 +196,11 @@ $(".all_classify").live("mouseenter",function() {
 
  });
  function tabOptionHover8(tabOptionIndex) {
-     for (var i = 0; i < 2; i++) {
-         $(".TmenuTitle ul li").removeClass('TmenuTitleOn' + i);
-         $(".TmenuCont").removeClass('TmenuContentOn' + i);
-         $(".TmenuTitle ul li").removeClass('fontcolor');
+     var $li_8 = $(".TmenuTitle ul li");
+     for (var i = 0; i < $li_8.length; i++) {
+         $li_8.eq(tabOptionIndex).addClass('TmenuTitleOn0 fontcolor').siblings().removeClass('TmenuTitleOn0 fontcolor');
+         $(".TmenuCont").eq(tabOptionIndex).addClass('TmenuContentOn0').siblings().removeClass('TmenuContentOn0');
      }
-     $(".TmenuTitle ul li").eq(tabOptionIndex).addClass('TmenuTitleOn' + tabOptionIndex);
-     $(".TmenuTitle ul li").eq(tabOptionIndex).addClass('fontcolor');
-     $(".TmenuCont").eq(tabOptionIndex).addClass('TmenuContentOn' + tabOptionIndex);
  }
 
 // *****登录、注册选项卡*****bing****end****

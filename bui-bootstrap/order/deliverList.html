@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-  <title>订单列表</title>
+  <title>发货单列表</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <link href="../assets/css/dpl-min.css" rel="stylesheet" type="text/css" />
   <link href="../assets/css/bui-min.css" rel="stylesheet" type="text/css" />
@@ -95,8 +95,6 @@
       gridCfg = Search.createGridCfg(columns,{
         tbar : {
           items : [
-            // {text : '<i class="icon-plus"></i>新建',btnCls : 'button button-small',handler:addFunction},
-            // {text : '<i class="icon-edit"></i>编辑',btnCls : 'button button-small',handler:function(){alert('编辑');}},
             {text : '<i class="icon-remove"></i>删除',btnCls : 'button button-small',handler : delFunction}
           ]
         },
@@ -108,11 +106,6 @@
         gridCfg : gridCfg
       }),
       grid = search.get('grid');
-
-    // function addFunction(){
-    //   var newData = {isNew : true}; //标志是新增加的记录
-    //   editing.add(newData,'name'); //添加记录后，直接编辑
-    // }
 
     //删除操作
     function delFunction(){

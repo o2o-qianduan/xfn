@@ -640,7 +640,12 @@
 	margin-top: -11px;
 	 
 }
-
+#usertable03 th,#usertable03 td{
+  width: 14%;
+  font-weight: normal;
+}
+.myspan{width: 100px;}
+.spanBtn02{margin-left: 420px;}
 /*bing***会员管理样式*****end*****/
 /*bing***营销推广样式*****start*****/
 

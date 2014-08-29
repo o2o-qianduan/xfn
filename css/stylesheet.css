@@ -1752,7 +1752,7 @@ img{
     text-align: center;
     padding-bottom: 8px;
 }
-.SmenuTitleOn0,.SmenuTitleOn1,.SmenuTitleOn2,.SmenuTitleOn3,.SmenuTitleOn4{
+.SmenuTitleOn0{
     background: url('../images/down-triangle.png') no-repeat scroll 0px 21px transparent;
 
 }
@@ -1778,7 +1778,7 @@ img{
     width: 181px;
     height: 181px;
 }
-.SmenuContentOn0,.SmenuContentOn1,.SmenuContentOn2,.SmenuContentOn3,.SmenuContentOn4{
+.SmenuContentOn0{
     display: block;
     width: 100%;
 }
@@ -2695,6 +2695,7 @@ box-shadow: 2px 2px 5px #C0BBB5;
 
 /*选项卡样式*/
 .TmenuTitle{
+	margin: 30px 0;
     border-bottom: 2px solid #bebebe;
     height: 28px;
     position: relative;
@@ -2704,15 +2705,12 @@ box-shadow: 2px 2px 5px #C0BBB5;
     padding-left: 0;
 }
 .TmenuTitle ul li{
+	margin: 0 45px;
+	padding-bottom: 8px;
     float:left;
     width: 114px;
     text-align: center;
-    padding-bottom: 8px;
-}
-
-.TmenuTitleOn0,.TmenuTitleOn1{
-    background: url('../images/down-triangle_green.png') no-repeat scroll 0px 21px transparent;
-
+    
 }
 
 .TmenuTitle ul li a {
@@ -2729,10 +2727,11 @@ box-shadow: 2px 2px 5px #C0BBB5;
     display: none;
 }
 
-.TmenuContentOn0,.TmenuContentOn1{
+.TmenuContentOn0{
     display: block;
     width: 100%;
 }
+
 .TmenuContent ul li{
     width: 192px;
     float: left;
@@ -2745,14 +2744,17 @@ box-shadow: 2px 2px 5px #C0BBB5;
     text-indent: 0;
     font-size: 12px;
 }
+.TmenuTitleOn0{
+    background: url('../images/down-triangle_green.png') no-repeat scroll 0px 21px transparent;
+}
 
 .fontcolor a{
 	color: #77BE22 !important;
 }
-.findCode_Box .SmenuTitle01{
+.findCode_Box .TmenuTitle01{
 	margin: 35px 10px;
 }
-.findCode_Box .SmenuTitle01 ul li{
+.findCode_Box .TmenuTitle01 ul li{
 	margin: 0 45px;
 }
 .loginBtn a{
