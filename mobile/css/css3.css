@@ -37,17 +37,18 @@
  background:  url(../img/icon/m_4.png) 50% 50% no-repeat;
  background-size: 27px 25px;
 }
-.ui-header{
-	height: 40px !important;
+/*.ui-header{
+	height: 48px !important;
 }
 .ui-btn-inner{
 	height: 17px !important;
-}
+}*/
 .ui-navbar{
 	position: fixed;
 	left: 0;
 	top:0;
 	right: 0;
+	z-index: 1000!important;
 }
 .search_area{
 	width: 100%;

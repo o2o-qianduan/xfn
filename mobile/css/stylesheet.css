@@ -1,0 +1,66 @@
+/******首页图片轮播***june***start***/
+.wrapper_one{
+	float: left;
+    height: 296px;
+    position: relative;
+    top: 33px;
+    width: 100%;
+    border-bottom: 1px solid #afd491;
+}
+.slide {
+	width: 100%;
+	height:285px;
+	margin:0 auto;
+	position: relative;
+}
+.slide_main{
+	width: 100%;
+	height:auto;
+	position: relative;
+	left:0;
+	top:0;
+}
+.slide_main li a img {
+	display:block;
+	width: 100%;
+	height:245px;
+	position: absolute;
+	left:0;
+	top:0;
+}
+.slide_span {
+	width: 100%;
+	height:35px;
+	position: absolute;
+	left:0;
+	bottom:0;
+	zoom:1;
+}
+.slide_span span {
+	width:15px;
+	height:15px;
+	display:block;
+	float:left;
+	margin-left:10px;
+	background: url(../img/icon/dot.png) no-repeat left bottom;
+}
+.slide_span p {
+	width:185px;
+	height:25px;
+	margin:10px auto;
+}
+.slide_span .slide_span_one{
+	background: url(../img/icon/dot.png) no-repeat left top;
+}
+/***********首页图片轮播***june***end********/
+.logo_area{
+	width: 100%;
+	position: relative;
+	height: 90px;
+	top: 14px;
+}
+.logo_area img{
+	position: absolute;
+	left: 100px;
+	top: 10px;
+}
