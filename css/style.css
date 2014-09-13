@@ -488,7 +488,7 @@ input.num-each{
 .pro-ul a:hover{
 	color: red;
 }
-.proOption a{
+.proOption a, .proOption-ass a{
 	text-decoration: none;
 	color: #4b4b4b;
 	width: 100%;

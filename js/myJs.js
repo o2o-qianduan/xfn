@@ -82,8 +82,25 @@
      for (var i = 0; i < $li_5.length; i++) {
          $li_5.eq(tabOptionIndex).addClass('proOn0').siblings().removeClass('proOn0');
          $(".pro-0").eq(tabOptionIndex).addClass('proOn-0').siblings().removeClass('proOn-0');
+         $(".pro-ass-0").eq(tabOptionIndex).addClass('proOn-0').siblings().removeClass('proOn-0');
      }
  }
+ var tabOptionIndex50 = 0;
+ $(function() {
+     $(".proOption-ass span").mouseover(function() {
+         tabOptionIndex50 = $(".proOption-ass span").index(this);
+         tabOptionHover50(tabOptionIndex50);
+     });
+ });
+ function tabOptionHover50(tabOptionIndex) {
+     var $li_5 = $(".proOption-ass");
+     for (var i = 0; i < $li_5.length; i++) {
+         $li_5.eq(tabOptionIndex).addClass('pro_ass_selected').siblings().removeClass('pro_ass_selected');
+         // $(".pro-0").eq(tabOptionIndex).addClass('proOn-0').siblings().removeClass('proOn-0');
+         $(".pro-ass-0").eq(tabOptionIndex).addClass('proOn-ass-0').siblings().removeClass('proOn-ass-0');
+     }
+ }
+
  /*********************** 产品详情页“商品详情、评价、成交记录”的切换******june******end*/ 
  /*************资讯列表页“排行榜、问答”切换*****june*************start******/
  var tabOptionIndex6 = 0;
