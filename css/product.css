@@ -822,12 +822,13 @@ div.zoomMask {
 	border-bottom: 1px solid #ccc;
 	margin-top: 1px;
 	z-index: 1;
+	position: absolute;
 }
 #pro-1 .show_PR{
 	color: #999;
 	font-size: 12px;
 	text-align: center;
-	font-family: 'Microsoft YaHei','微软雅黑';
+	font-family: '黑体';
 	margin: 20px;
 	float: left;
 }
@@ -846,7 +847,7 @@ div.zoomMask {
 }
 #pro-1 .want_ass{
 	float: left;
-	margin-left: 70px;
+	margin-left: 50px;
 	margin-top: 15px;
 	color: #333;
 	font-size: 12px;
@@ -938,6 +939,12 @@ div.zoomMask {
 	font-size: 12px;
 	padding: 10px;
 	width: 790px;
+}
+.pro-ass-0{
+	display: none;
+}
+.proOn-ass-0{
+	display: block;
 }
 /*******成交记录*******/
 #pro-2 .tb_th{

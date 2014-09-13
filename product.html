@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/jquery-ui.css">
   <script src="js/jquery-1.8.2.js"></script>
   <script src="js/jquery-ui.js"></script>
-  <link rel="stylesheet" href="css/style.css"> 
+  <link rel="stylesheet" href="css/style.css">
   <script type="text/javascript" src="js/myJs.js"></script>
   <script type="text/javascript" src="js/picture.js"></script>
   <script type="text/javascript" src="js/jquery.imagezoom.min.js"></script>
@@ -18,304 +18,531 @@
   <script language="javascript" type="text/javascript" src="js/yao.js"></script>
 </head>
 <body>
-     <!-- 商标，搜索栏，购物车，电话 -->
-<div class="header">
+  <!-- 商标，搜索栏，购物车，电话 -->
+  <div class="header">
 
-  <div class="topbor"><!-- 最顶部导航 -->
-    <div class="top">
-      <p>欢迎光临华大尚田[<a href="#">登录</a>/<a href="#">免费注册</a>]</p>
-      <ul>
-        <li><a href="#">首页</a></li>
-        <li><a href="#">收藏</a></li>
-        <li><a href="#">会员专区</a></li>
-      </ul>
+    <div class="topbor">
+      <!-- 最顶部导航 -->
+      <div class="top">
+        <p>
+          欢迎光临华大尚田[
+          <a href="#">登录</a>
+          /
+          <a href="#">免费注册</a>
+          ]
+        </p>
+        <ul>
+          <li>
+            <a href="#">首页</a>
+          </li>
+          <li>
+            <a href="#">收藏</a>
+          </li>
+          <li>
+            <a href="#">会员专区</a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div> <!-- 最顶部导航结束 -->
+    <!-- 最顶部导航结束 -->
 
     <!-- 页面头部背景 -->
     <div class="bg">
-     <img src="images/head.png" alt="顶部背景宣传图">
+      <img src="images/head.png" alt="顶部背景宣传图">
       <button class="bg_button"></button>
     </div>
 
     <div class="head_one">
-        <div class="brand"></div>
-        <!-- 搜索栏 -->
-        <div class="searchdiv">
-          <form class="searchform" method="get"> 
+      <div class="brand"></div>
+      <!-- 搜索栏 -->
+      <div class="searchdiv">
+        <form class="searchform" method="get">
           <input class="search-submit" type="submit" value=""/>
           <input id="search-input" class="search-input" type="text" name="" size="30px">
-          <input class="search-button" id="search-button" value="搜 索">
-          </form>
-          <div id="hot_search">
-             <span>热门搜索：</span>
-            <span><a href="">小龙虾</a> <a href="">蓝莓</a> <a href="">虾</a>  <a href="">进口奶</a> <a href="">进口肉</a> <a href="">大枣</a></span>
-          </div>
+          <input class="search-button" id="search-button" value="搜 索"></form>
+        <div id="hot_search">
+          <span>热门搜索：</span>
+          <span>
+            <a href="">小龙虾</a>
+            <a href="">蓝莓</a>
+            <a href="">虾</a>
+            <a href="">进口奶</a>
+            <a href="">进口肉</a>
+            <a href="">大枣</a>
+          </span>
         </div>
-          <div class="tel"></div>
+      </div>
+      <div class="tel"></div>
     </div>
 
-   
-
-
-      <div class="clear"></div>
-      <!-- 导航栏 -->
-      <div class="nav">
-        <div class="all_classify">
-          <a href="#">全部商品分类</a>
-          <img class="boult" src="images/boult.png"/>
-       </div>
-
-        <div class="navitem">
-          <ul >
-            <li class="navitem-first">
-              <a href="#">首页</a>
-          <span class="border"><img src="images/border.png" /></span>              
-            </li>
-            <li><a href="#">菜品选购</a>
-          <span class="border"><img src="images/border.png" /></span>
-            </li>
-
-            <li><a href="#">华农特产</a>
-          <span class="border"><img src="images/border.png" /></span>            
-            </li>
-
-            <li><a href="#">礼品专区</a>
-          <span class="border"><img src="images/border.png" /></span>
-            </li>
-
-            <li><a href="#">会员专区</a>
-          <span class="border"><img src="images/border.png" /></span>
-            </li>
-           
-            <li><a href="#">生产基地</a>
-          <span class="border"><img src="images/border.png" /></span>
-            </li>
-
-            <li><a href="#">公司介绍</a>
-          <span class="border"><img src="images/border.png" /></span>
-            </li>
-
-            <li><a href="#">蔬菜百科</a>
-          <span class="border"><img src="images/border.png" /></span>
-            </li>
-          </ul>
-        </div>
-      </div>    <!-- end nav   --> 
-</div><!-- header部分 -->
-     <!-- 主内容区域 -->
-    <div id="content" class="content">
-      <!-- 商品分类-->       
-<!-- 以下"全部商品分类部分，在首页中显示，在其它页中鼠标滑过才显示" -->
-      <div id="list_menu"  class="no-mainpage">
-        <div id="YMenu">
-             <div id="YMenu-side">       
-                  <ul class="YM-mainmnu">
-                      <li class="YM-Tab">               
-                      <a href="#">大家电</a>
-                        <span><img src="images/expand.png"/></span>
-                        <ul class="YM-submnu">
-                             <li><a href="#1">洗衣机</a></li>
-                             <li><a href="#1">平板电视</a></li>
-                             <li><a href="#1">电热水器</a></li>
-                             <li><a href="#1">家庭音响</a></li>
-                             <li><a href="#1">燃气热水器</a></li>
-                             <li><a href="#1">空调</a></li>
-                             <li><a href="#1">冰箱冷柜</a></li>
-                             <li><a href="#1">DVD播放器</a></li>
-                             <li><a href="#1">电视附件</a></li>
-                             <li><a href="#1">家电服务</a></li>
-                             <li><a href="#1">家电下乡</a></li>
-                        </ul> 
-                       </li>
-
-                      <li class="YM-Tab">               
-                      <a href="#">大家电</a>
-                        <span><img src="images/expand.png"/></span>
-                        <ul class="YM-submnu">
-                             <li><a href="#1">洗衣机</a></li>
-                             <li><a href="#1">平板电视</a></li>
-                             <li><a href="#1">电热水器</a></li>
-                             <li><a href="#1">家庭音响</a></li>
-                             <li><a href="#1">燃气热水器</a></li>
-                               <li><a href="#1">空调</a></li>
-                             <li><a href="#1">冰箱冷柜</a></li>
-                             <li><a href="#1">DVD播放器</a></li>
-                             <li><a href="#1">电视附件</a></li>
-                             <li><a href="#1">家电服务</a></li>
-                             <li><a href="#1">家电下乡</a></li>
-                        </ul> 
-                     </li>
-
-                       <li class="YM-Tab">               
-                      <a href="#">大家电</a>
-                        <span><img src="images/expand.png"/></span>
-                        <ul class="YM-submnu">
-                             <li><a href="#1">洗衣机</a></li>
-                             <li><a href="#1">平板电视</a></li>
-                             <li><a href="#1">电热水器</a></li>
-                             <li><a href="#1">家庭音响</a></li>
-                             <li><a href="#1">燃气热水器</a></li>
-                               <li><a href="#1">空调</a></li>
-                             <li><a href="#1">冰箱冷柜</a></li>
-                             <li><a href="#1">DVD播放器</a></li>
-                             <li><a href="#1">电视附件</a></li>
-                             <li><a href="#1">家电服务</a></li>
-                             <li><a href="#1">家电下乡</a></li>
-                        </ul> 
-                     </li>
-
-                      <li class="YM-Tab">               
-                      <a href="#">大家电</a>
-                        <span><img src="images/expand.png"/></span>
-                        <ul class="YM-submnu">
-                             <li><a href="#1">洗衣机</a></li>
-                             <li><a href="#1">平板电视</a></li>
-                             <li><a href="#1">电热水器</a></li>
-                             <li><a href="#1">家庭音响</a></li>
-                             <li><a href="#1">燃气热水器</a></li>
-                               <li><a href="#1">空调</a></li>
-                             <li><a href="#1">冰箱冷柜</a></li>
-                             <li><a href="#1">DVD播放器</a></li>
-                             <li><a href="#1">电视附件</a></li>
-                             <li><a href="#1">家电服务</a></li>
-                             <li><a href="#1">家电下乡</a></li>
-                        </ul> 
-                     </li> 
-
-                       <li class="YM-Tab">               
-                      <a href="#">大家电</a>
-                        <span><img src="images/expand.png"/></span>
-                        <ul class="YM-submnu">
-                             <li><a href="#1">洗衣机</a></li>
-                             <li><a href="#1">平板电视</a></li>
-                             <li><a href="#1">电热水器</a></li>
-                             <li><a href="#1">家庭音响</a></li>
-                             <li><a href="#1">燃气热水器</a></li>
-                               <li><a href="#1">空调</a></li>
-                             <li><a href="#1">冰箱冷柜</a></li>
-                             <li><a href="#1">DVD播放器</a></li>
-                             <li><a href="#1">电视附件</a></li>
-                             <li><a href="#1">家电服务</a></li>
-                             <li><a href="#1">家电下乡</a></li>
-                        </ul> 
-                     </li> 
-
-                       <li class="YM-Tab">               
-                      <a href="#">大家电</a>
-                        <span><img src="images/expand.png"/></span>
-                        <ul class="YM-submnu">
-                             <li><a href="#1">洗衣机</a></li>
-                             <li><a href="#1">平板电视</a></li>
-                             <li><a href="#1">电热水器</a></li>
-                             <li><a href="#1">家庭音响</a></li>
-                             <li><a href="#1">燃气热水器</a></li>
-                               <li><a href="#1">空调</a></li>
-                             <li><a href="#1">冰箱冷柜</a></li>
-                             <li><a href="#1">DVD播放器</a></li>
-                             <li><a href="#1">电视附件</a></li>
-                             <li><a href="#1">家电服务</a></li>
-                             <li><a href="#1">家电下乡</a></li>
-                        </ul> 
-                     </li> 
-
-                      <li class="YM-Tab">               
-                      <a href="#">大家电</a>
-                        <span><img src="images/expand.png"/></span>
-                        <ul class="YM-submnu">
-                             <li><a href="#1">洗衣机</a></li>
-                             <li><a href="#1">平板电视</a></li>
-                             <li><a href="#1">电热水器</a></li>
-                             <li><a href="#1">家庭音响</a></li>
-                             <li><a href="#1">燃气热水器</a></li>
-                               <li><a href="#1">空调</a></li>
-                             <li><a href="#1">冰箱冷柜</a></li>
-                             <li><a href="#1">DVD播放器</a></li>
-                             <li><a href="#1">电视附件</a></li>
-                             <li><a href="#1">家电服务</a></li>
-                             <li><a href="#1">家电下乡</a></li>
-                        </ul> 
-                     </li>      
-                                              
-                  </ul>     
-            </div>   
-        </div>
-      </div>  <!-- end .list_menu --><!-- 此部分在首页固定，在其它页面鼠标滑过时出现 -->
-
-
-      <div class="breadcrumb">
-        <div><img src="images/house.png" /></div>
-        <a href="#">首页</a>
-        &gt;
-        <a href="#">会员专区</a>
-        &gt;
-        <a href="#">新手教程</a>
+    <div class="clear"></div>
+    <!-- 导航栏 -->
+    <div class="nav">
+      <div class="all_classify">
+        <a href="#">全部商品分类</a>
+        <img class="boult" src="images/boult.png"/>
       </div>
 
-      <div class="product">
-        <div class="left_product"> <!-- 左中 -->
+      <div class="navitem">
+        <ul >
+          <li class="navitem-first">
+            <a href="#">首页</a>
+            <span class="border">
+              <img src="images/border.png" />
+            </span>
+          </li>
+          <li>
+            <a href="#">菜品选购</a>
+            <span class="border">
+              <img src="images/border.png" />
+            </span>
+          </li>
 
-<!-- 左边大图 -->
-<div class="left_banner">
-<div id="image-choice" class="i-list">
-<div class="tb-booth tb-pic tb-s310">
-<a href="./images//pro_01.png" target="_blank"><img  src="./images/pro_01_mid.png" alt="蔬菜" rel="./images//pro_01.png" class="jqzoom"></a>
-</div>
- <div id="left-choice" class="ctrl"><img src="images/prev.png" alt="左切换"></div>
- <div class="i-bot-list">
-<ul class="tb-thumb" id="thumblist">
-<li class="tb-selected">  <!-- 第一个li -->
- <div class="tb-pic tb-s40">
-<a href="#"><img  class="small-img" src="./images/pro_01_small.png" mid="./images/pro_01_mid.png" big="./images//pro_01.png"></a>
-</div>
-</li>
+          <li>
+            <a href="#">华农特产</a>
+            <span class="border">
+              <img src="images/border.png" />
+            </span>
+          </li>
 
-<li><!-- 第二个li -->
- <div class="tb-pic tb-s40">
-<a href="#"><img  class="small-img"  class="small-img"  src="./images/pro_02_small.jpg" mid="./images/pro_02_mid.jpg" big="./images//pro_02.jpg"></a>
-</div>
-</li>
+          <li>
+            <a href="#">礼品专区</a>
+            <span class="border">
+              <img src="images/border.png" />
+            </span>
+          </li>
 
-<li ><!-- 第三个li -->
- <div class="tb-pic tb-s40">
-<a href="#"><img  class="small-img" src="./images/pro_03_small.png" mid="./images/pro_03_mid.png" big="./images//pro_03.png"></a>
-</div>
-</li>
+          <li>
+            <a href="#">会员专区</a>
+            <span class="border">
+              <img src="images/border.png" />
+            </span>
+          </li>
 
-<li><!-- 第四个li -->
- <div class="tb-pic tb-s40">
-<a href="#"><img  class="small-img" src="./images/pro_04_small.png" mid="./images/pro_04_mid.png" big="./images//pro_04.png"></a>
-</div>
-</li>
+          <li>
+            <a href="#">生产基地</a>
+            <span class="border">
+              <img src="images/border.png" />
+            </span>
+          </li>
 
-<li><!-- 第五个li -->
- <div class="tb-pic tb-s40">
-<a href="#"><img class="small-img" src="./images//pro_05_small.png" mid="./images/pro_05_mid.png" big="./images//pro_05.png"></a>
-</div>
-</li>
+          <li>
+            <a href="#">公司介绍</a>
+            <span class="border">
+              <img src="images/border.png" />
+            </span>
+          </li>
 
-<li><!-- 第六个li -->
- <div class="tb-pic tb-s40">
-<a href="#"><img  class="small-img" src="./images/pro_03_small.png" mid="./images/pro_03_mid.png" big="./images//pro_03.png"></a>
-</div>
-</li>
+          <li>
+            <a href="#">蔬菜百科</a>
+            <span class="border">
+              <img src="images/border.png" />
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- end nav   --> </div>
+  <!-- header部分 -->
+  <!-- 主内容区域 -->
+  <div id="content" class="content">
+    <!-- 商品分类-->
+    <!-- 以下"全部商品分类部分，在首页中显示，在其它页中鼠标滑过才显示" -->
+    <div id="list_menu"  class="no-mainpage">
+      <div id="YMenu">
+        <div id="YMenu-side">
+          <ul class="YM-mainmnu">
+            <li class="YM-Tab">
+              <a href="#">大家电</a>
+              <span>
+                <img src="images/expand.png"/>
+              </span>
+              <ul class="YM-submnu">
+                <li>
+                  <a href="#1">洗衣机</a>
+                </li>
+                <li>
+                  <a href="#1">平板电视</a>
+                </li>
+                <li>
+                  <a href="#1">电热水器</a>
+                </li>
+                <li>
+                  <a href="#1">家庭音响</a>
+                </li>
+                <li>
+                  <a href="#1">燃气热水器</a>
+                </li>
+                <li>
+                  <a href="#1">空调</a>
+                </li>
+                <li>
+                  <a href="#1">冰箱冷柜</a>
+                </li>
+                <li>
+                  <a href="#1">DVD播放器</a>
+                </li>
+                <li>
+                  <a href="#1">电视附件</a>
+                </li>
+                <li>
+                  <a href="#1">家电服务</a>
+                </li>
+                <li>
+                  <a href="#1">家电下乡</a>
+                </li>
+              </ul>
+            </li>
 
+            <li class="YM-Tab">
+              <a href="#">大家电</a>
+              <span>
+                <img src="images/expand.png"/>
+              </span>
+              <ul class="YM-submnu">
+                <li>
+                  <a href="#1">洗衣机</a>
+                </li>
+                <li>
+                  <a href="#1">平板电视</a>
+                </li>
+                <li>
+                  <a href="#1">电热水器</a>
+                </li>
+                <li>
+                  <a href="#1">家庭音响</a>
+                </li>
+                <li>
+                  <a href="#1">燃气热水器</a>
+                </li>
+                <li>
+                  <a href="#1">空调</a>
+                </li>
+                <li>
+                  <a href="#1">冰箱冷柜</a>
+                </li>
+                <li>
+                  <a href="#1">DVD播放器</a>
+                </li>
+                <li>
+                  <a href="#1">电视附件</a>
+                </li>
+                <li>
+                  <a href="#1">家电服务</a>
+                </li>
+                <li>
+                  <a href="#1">家电下乡</a>
+                </li>
+              </ul>
+            </li>
 
-<li><!-- 第七个li -->
- <div class="tb-pic tb-s40">
-<a href="#"><img  class="small-img" src="./images/pro_05_small.png" mid="./images/pro_05_mid.png" big="./images//pro_05.png"></a>
-</div>
-</li>
+            <li class="YM-Tab">
+              <a href="#">大家电</a>
+              <span>
+                <img src="images/expand.png"/>
+              </span>
+              <ul class="YM-submnu">
+                <li>
+                  <a href="#1">洗衣机</a>
+                </li>
+                <li>
+                  <a href="#1">平板电视</a>
+                </li>
+                <li>
+                  <a href="#1">电热水器</a>
+                </li>
+                <li>
+                  <a href="#1">家庭音响</a>
+                </li>
+                <li>
+                  <a href="#1">燃气热水器</a>
+                </li>
+                <li>
+                  <a href="#1">空调</a>
+                </li>
+                <li>
+                  <a href="#1">冰箱冷柜</a>
+                </li>
+                <li>
+                  <a href="#1">DVD播放器</a>
+                </li>
+                <li>
+                  <a href="#1">电视附件</a>
+                </li>
+                <li>
+                  <a href="#1">家电服务</a>
+                </li>
+                <li>
+                  <a href="#1">家电下乡</a>
+                </li>
+              </ul>
+            </li>
 
+            <li class="YM-Tab">
+              <a href="#">大家电</a>
+              <span>
+                <img src="images/expand.png"/>
+              </span>
+              <ul class="YM-submnu">
+                <li>
+                  <a href="#1">洗衣机</a>
+                </li>
+                <li>
+                  <a href="#1">平板电视</a>
+                </li>
+                <li>
+                  <a href="#1">电热水器</a>
+                </li>
+                <li>
+                  <a href="#1">家庭音响</a>
+                </li>
+                <li>
+                  <a href="#1">燃气热水器</a>
+                </li>
+                <li>
+                  <a href="#1">空调</a>
+                </li>
+                <li>
+                  <a href="#1">冰箱冷柜</a>
+                </li>
+                <li>
+                  <a href="#1">DVD播放器</a>
+                </li>
+                <li>
+                  <a href="#1">电视附件</a>
+                </li>
+                <li>
+                  <a href="#1">家电服务</a>
+                </li>
+                <li>
+                  <a href="#1">家电下乡</a>
+                </li>
+              </ul>
+            </li>
 
+            <li class="YM-Tab">
+              <a href="#">大家电</a>
+              <span>
+                <img src="images/expand.png"/>
+              </span>
+              <ul class="YM-submnu">
+                <li>
+                  <a href="#1">洗衣机</a>
+                </li>
+                <li>
+                  <a href="#1">平板电视</a>
+                </li>
+                <li>
+                  <a href="#1">电热水器</a>
+                </li>
+                <li>
+                  <a href="#1">家庭音响</a>
+                </li>
+                <li>
+                  <a href="#1">燃气热水器</a>
+                </li>
+                <li>
+                  <a href="#1">空调</a>
+                </li>
+                <li>
+                  <a href="#1">冰箱冷柜</a>
+                </li>
+                <li>
+                  <a href="#1">DVD播放器</a>
+                </li>
+                <li>
+                  <a href="#1">电视附件</a>
+                </li>
+                <li>
+                  <a href="#1">家电服务</a>
+                </li>
+                <li>
+                  <a href="#1">家电下乡</a>
+                </li>
+              </ul>
+            </li>
 
-</ul>
-</div> 
+            <li class="YM-Tab">
+              <a href="#">大家电</a>
+              <span>
+                <img src="images/expand.png"/>
+              </span>
+              <ul class="YM-submnu">
+                <li>
+                  <a href="#1">洗衣机</a>
+                </li>
+                <li>
+                  <a href="#1">平板电视</a>
+                </li>
+                <li>
+                  <a href="#1">电热水器</a>
+                </li>
+                <li>
+                  <a href="#1">家庭音响</a>
+                </li>
+                <li>
+                  <a href="#1">燃气热水器</a>
+                </li>
+                <li>
+                  <a href="#1">空调</a>
+                </li>
+                <li>
+                  <a href="#1">冰箱冷柜</a>
+                </li>
+                <li>
+                  <a href="#1">DVD播放器</a>
+                </li>
+                <li>
+                  <a href="#1">电视附件</a>
+                </li>
+                <li>
+                  <a href="#1">家电服务</a>
+                </li>
+                <li>
+                  <a href="#1">家电下乡</a>
+                </li>
+              </ul>
+            </li>
 
-<div id="right-choice" class="ctrl"><img src="images/next.png" alt="右切换"></div>
-</div>
+            <li class="YM-Tab">
+              <a href="#">大家电</a>
+              <span>
+                <img src="images/expand.png"/>
+              </span>
+              <ul class="YM-submnu">
+                <li>
+                  <a href="#1">洗衣机</a>
+                </li>
+                <li>
+                  <a href="#1">平板电视</a>
+                </li>
+                <li>
+                  <a href="#1">电热水器</a>
+                </li>
+                <li>
+                  <a href="#1">家庭音响</a>
+                </li>
+                <li>
+                  <a href="#1">燃气热水器</a>
+                </li>
+                <li>
+                  <a href="#1">空调</a>
+                </li>
+                <li>
+                  <a href="#1">冰箱冷柜</a>
+                </li>
+                <li>
+                  <a href="#1">DVD播放器</a>
+                </li>
+                <li>
+                  <a href="#1">电视附件</a>
+                </li>
+                <li>
+                  <a href="#1">家电服务</a>
+                </li>
+                <li>
+                  <a href="#1">家电下乡</a>
+                </li>
+              </ul>
+            </li>
 
-<script type="text/javascript">
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- end .list_menu -->
+    <!-- 此部分在首页固定，在其它页面鼠标滑过时出现 -->
+
+    <div class="breadcrumb">
+      <div>
+        <img src="images/house.png" />
+      </div>
+      <a href="#">首页</a>
+      &gt;
+      <a href="#">会员专区</a>
+      &gt;
+      <a href="#">新手教程</a>
+    </div>
+
+    <div class="product">
+      <div class="left_product">
+        <!-- 左中 -->
+
+        <!-- 左边大图 -->
+        <div class="left_banner">
+          <div id="image-choice" class="i-list">
+            <div class="tb-booth tb-pic tb-s310">
+              <a href="./images//pro_01.png" target="_blank">
+                <img  src="./images/pro_01_mid.png" alt="蔬菜" rel="./images//pro_01.png" class="jqzoom"></a>
+            </div>
+            <div id="left-choice" class="ctrl">
+              <img src="images/prev.png" alt="左切换"></div>
+            <div class="i-bot-list">
+              <ul class="tb-thumb" id="thumblist">
+                <li class="tb-selected">
+                  <!-- 第一个li -->
+                  <div class="tb-pic tb-s40">
+                    <a href="#">
+                      <img  class="small-img" src="./images/pro_01_small.png" mid="./images/pro_01_mid.png" big="./images//pro_01.png"></a>
+                  </div>
+                </li>
+
+                <li>
+                  <!-- 第二个li -->
+                  <div class="tb-pic tb-s40">
+                    <a href="#">
+                      <img  class="small-img"  class="small-img"  src="./images/pro_02_small.jpg" mid="./images/pro_02_mid.jpg" big="./images//pro_02.jpg"></a>
+                  </div>
+                </li>
+
+                <li >
+                  <!-- 第三个li -->
+                  <div class="tb-pic tb-s40">
+                    <a href="#">
+                      <img  class="small-img" src="./images/pro_03_small.png" mid="./images/pro_03_mid.png" big="./images//pro_03.png"></a>
+                  </div>
+                </li>
+
+                <li>
+                  <!-- 第四个li -->
+                  <div class="tb-pic tb-s40">
+                    <a href="#">
+                      <img  class="small-img" src="./images/pro_04_small.png" mid="./images/pro_04_mid.png" big="./images//pro_04.png"></a>
+                  </div>
+                </li>
+
+                <li>
+                  <!-- 第五个li -->
+                  <div class="tb-pic tb-s40">
+                    <a href="#">
+                      <img class="small-img" src="./images//pro_05_small.png" mid="./images/pro_05_mid.png" big="./images//pro_05.png"></a>
+                  </div>
+                </li>
+
+                <li>
+                  <!-- 第六个li -->
+                  <div class="tb-pic tb-s40">
+                    <a href="#">
+                      <img  class="small-img" src="./images/pro_03_small.png" mid="./images/pro_03_mid.png" big="./images//pro_03.png"></a>
+                  </div>
+                </li>
+
+                <li>
+                  <!-- 第七个li -->
+                  <div class="tb-pic tb-s40">
+                    <a href="#">
+                      <img  class="small-img" src="./images/pro_05_small.png" mid="./images/pro_05_mid.png" big="./images//pro_05.png"></a>
+                  </div>
+                </li>
+
+              </ul>
+            </div>
+
+            <div id="right-choice" class="ctrl">
+              <img src="images/next.png" alt="右切换"></div>
+          </div>
+
+          <script type="text/javascript">
 $(document).ready(function(){
   $(".jqzoom").imagezoom();
   $("#thumblist li a").mouseover(function () {
@@ -325,415 +552,614 @@ $(document).ready(function(){
   });
 });
 </script>
-<div class="bottom_link">
-              <img src="images/share.png" />
-              <a href="#">分享</a>
-              <img src="images/collect.png" />
-              <a href="#">收藏</a>
-</div>
-   </div>
-          <!-- 中间说明块 -->
-          <div class="center_state">   
-            <h3>色阳光奇异果(超大金果)22个装 沪苏杭京津300g/包</h3>
-            <p>菲力，2片沙朗，2片黑椒Zespri奇异果（普通绿果Zespri奇异果（普通绿果Zespri奇异果</p>
-            <p>（普通绿果vZespri奇异果 通绿果Zespri奇异果</p>
-            <div class="price_place">
-              <div class="price">
-                <div class="p-price">
-                  <p id="cuxiao">促销价</p>
-                  <p id="price2">¥ 46.00</p>
-                  <span id="activity_price"><h5>活动价</h5></span>
-                </div>
-                <p id="one_price">一口价 ¥ 56.0023.33元/500g</p>
+          <div class="bottom_link">
+            <img src="images/share.png" />
+            <a href="#">分享</a>
+            <img src="images/collect.png" />
+            <a href="#">收藏</a>
+          </div>
+        </div>
+        <!-- 中间说明块 -->
+        <div class="center_state">
+          <h3>色阳光奇异果(超大金果)22个装 沪苏杭京津300g/包</h3>
+          <p>菲力，2片沙朗，2片黑椒Zespri奇异果（普通绿果Zespri奇异果（普通绿果Zespri奇异果</p>
+          <p>（普通绿果vZespri奇异果 通绿果Zespri奇异果</p>
+          <div class="price_place">
+            <div class="price">
+              <div class="p-price">
+                <p id="cuxiao">促销价</p>
+                <p id="price2">¥ 46.00</p>
+                <span id="activity_price">
+                  <h5>活动价</h5>
+                </span>
               </div>
-              <div class="place">
-                <p>上海 至 广州<img class="o-place" src="images/place.png"/> 荔湾区<img class="o-place" src="images/place.png"/>     确认收货地以确保在商家销售区域</p>
-              </div>
+              <p id="one_price">一口价 ¥ 56.0023.33元/500g</p>
             </div>
-            
-            <div class="detail">
-              <div class="weight">
-                <p class="myfont" style="float:left;">净含量</p>
-                <p style="float:left;
-                margin-left:30px;">1000g</p>
-              </div>
-              <div class="detail_info">
-                <div class="info1">
-                  <p class="num1">2880</p>
-                  <p class="myfont">月销量</p>
-                </div>
-                <div class="info2">
-                  <p class="num2">2880</p>
-                  <p class="myfont">累计评价</p>
-                </div>
-                <div class="info3">
-                  <p class="num3">2880</p>
-                  <p class="myfont">赠送积分</p>
-                </div>
-              </div>
-              <div class="account">
-                <p class="myfont">数量</p>
-                <div class="s0-buyNum account-num">
-                      <span class="num-option minus">-</span>
-                      <input type="text" class="num-each" value="0">
-                      <span class="num-option num-add">+</span>
-                </div>
-                <p>库存34123件</p>
-              </div>
-              <div class="shopping_button">
-                <a class="buy_btn"href="#">立即购买</a>
-                <a class="cart_btn" href="#">加入购物车</a>
-              </div>
-              <div class="promise">
-                <p class="myfont">服务承诺</p>
-                <p class="afford_way"><a href="#"  class="pay-way">支付方式<img src="images/down.png"></a></p>
-              </div>
-             
-              <div class="pay-how"> <!-- 此处加入具体支付方式 默认隐藏june-->
-              <span class="cashCart"><img src="images/cashCart.png" alt="支付方式图标"></span>
-                <ul  class="pay-list">
-                  <li><a href="#">信用卡分期</a></li>
-                  <li><a href="#">快捷支付</a></li>
-                  <li><a href="#">网银支付</a></li>
-                  <li><a href="#">找人支付</a></li>
-                  <li><a href="#">消费卡</a></li>
-                  <li><a href="#">网点支付</a></li>
-                  <li><a href="#">支付宝余额</a></li>
-                </ul>
-              </div><!-- 此处加入具体支付方式 默认隐藏june-->
+            <div class="place">
+              <p>
+                上海 至 广州
+                <img class="o-place" src="images/place.png"/>
+                荔湾区
+                <img class="o-place" src="images/place.png"/>
+                确认收货地以确保在商家销售区域
+              </p>
             </div>
           </div>
-        </div><!-- 左中结束 -->
 
-        <!-- 右边小图 -->
-        <div class="right_product">
-          <div class="recommend">
-            <p>华大尚田推荐</p>           
-          </div>
-          <div class="pro">
-            <div class="pro2">
-              <ul>
-               <li>
-                 <a href="#">
-                   <img src="images/pro2.png" />
-                   <span class="price_p"><span>￥46.00</span></span>
-                 </a>
-               </li>
-               <li>
-                  <a href="#"><img src="images/pro2.png" /></a>
-                 <span class="price_p"><span>￥46.00</span></span>
+          <div class="detail">
+            <div class="weight">
+              <p class="myfont" style="float:left;">净含量</p>
+              <p style="float:left;
+                margin-left:30px;">1000g</p>
+            </div>
+            <div class="detail_info">
+              <div class="info1">
+                <p class="num1">2880</p>
+                <p class="myfont">月销量</p>
+              </div>
+              <div class="info2">
+                <p class="num2">2880</p>
+                <p class="myfont">累计评价</p>
+              </div>
+              <div class="info3">
+                <p class="num3">2880</p>
+                <p class="myfont">赠送积分</p>
+              </div>
+            </div>
+            <div class="account">
+              <p class="myfont">数量</p>
+              <div class="s0-buyNum account-num">
+                <span class="num-option minus">-</span>
+                <input type="text" class="num-each" value="0">
+                <span class="num-option num-add">+</span>
+              </div>
+              <p>库存34123件</p>
+            </div>
+            <div class="shopping_button">
+              <a class="buy_btn"href="#">立即购买</a>
+              <a class="cart_btn" href="#">加入购物车</a>
+            </div>
+            <div class="promise">
+              <p class="myfont">服务承诺</p>
+              <p class="afford_way">
+                <a href="#"  class="pay-way">
+                  支付方式
+                  <img src="images/down.png"></a>
+              </p>
+            </div>
+
+            <div class="pay-how">
+              <!-- 此处加入具体支付方式 默认隐藏june-->
+              <span class="cashCart">
+                <img src="images/cashCart.png" alt="支付方式图标"></span>
+              <ul  class="pay-list">
+                <li>
+                  <a href="#">信用卡分期</a>
                 </li>
                 <li>
-                  <a href="#"><img src="images/pro1.png" /></a>
-                 <span class="price_p"><span>￥46.00</span></span>
+                  <a href="#">快捷支付</a>
                 </li>
                 <li>
-                  <a href="#">
-                  <img src="images/pro1.png" />
-                  <span class="price_p"><span>￥46.00</span></span>
-                  </a>
+                  <a href="#">网银支付</a>
                 </li>
                 <li>
-                  <a href="#"><img src="images/pro1.png" /></a>
-                  <span class="price_p"><span>￥46.00</span></span>
+                  <a href="#">找人支付</a>
                 </li>
                 <li>
-                  <a href="#"><img src="images/pro2.png" /></a>
-                  <span class="price_p"><span>￥46.00</span></span>
-                </li>
-                 <li>
-                  <a href="#">
-                  <img src="images/pro2.png" />
-                  <span class="price_p"><span>￥46.00</span></span>
-                  </a>
+                  <a href="#">消费卡</a>
                 </li>
                 <li>
-                  <a href="#"><img src="images/pro1.png" /></a>
-                  <span class="price_p"><span>￥46.00</span></span>
+                  <a href="#">网点支付</a>
                 </li>
                 <li>
-                  <a href="#"><img src="images/pro2.png" /></a>
-                  <span class="price_p"><span>￥46.00</span></span>
+                  <a href="#">支付宝余额</a>
                 </li>
               </ul>
             </div>
-          </div>
-
-          <div class="btn">
-            <div><img id="img1" src="images/bottom.png"/></div>
-             <div><img id="img2" src="images/top.png"/></div>
-          </div>      
-       
-
-          <!-- 更多商品 -->
-          <div class="more_pro"><a href="#">更多商品</a></div>
+            <!-- 此处加入具体支付方式 默认隐藏june--> </div>
         </div>
       </div>
+      <!-- 左中结束 -->
 
+      <!-- 右边小图 -->
+      <div class="right_product">
+        <div class="recommend">
+          <p>华大尚田推荐</p>
+        </div>
+        <div class="pro">
+          <div class="pro2">
+            <ul>
+              <li>
+                <a href="#">
+                  <img src="images/pro2.png" />
+                  <span class="price_p">
+                    <span>￥46.00</span>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="images/pro2.png" />
+                </a>
+                <span class="price_p">
+                  <span>￥46.00</span>
+                </span>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="images/pro1.png" />
+                </a>
+                <span class="price_p">
+                  <span>￥46.00</span>
+                </span>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="images/pro1.png" />
+                  <span class="price_p">
+                    <span>￥46.00</span>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="images/pro1.png" />
+                </a>
+                <span class="price_p">
+                  <span>￥46.00</span>
+                </span>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="images/pro2.png" />
+                </a>
+                <span class="price_p">
+                  <span>￥46.00</span>
+                </span>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="images/pro2.png" />
+                  <span class="price_p">
+                    <span>￥46.00</span>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="images/pro1.png" />
+                </a>
+                <span class="price_p">
+                  <span>￥46.00</span>
+                </span>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="images/pro2.png" />
+                </a>
+                <span class="price_p">
+                  <span>￥46.00</span>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
 
+        <div class="btn">
+          <div>
+            <img id="img1" src="images/bottom.png"/>
+          </div>
+          <div>
+            <img id="img2" src="images/top.png"/>
+          </div>
+        </div>
 
-    <!-- 搭配套餐 --> <!-- 产品详情页“搭配、套餐”的切换  june -->
-    <div class="combo">     
-      
-          <ul class="daBox">
-          <li class="daOption daOn0"><span id="dapei" class="dapei"><a href="#da-0">搭配</a></span></li>
-          <li class="daOption"><span id="taocan" class="taocan"><a href="#da-1">套餐</a></span></li>
-          </ul>
-          <div class="da-area">
-            <div id="da-0" class="da-0 daOn-0" >
-             <div class="da-0-pro">
-               <span class="da-0-img"><img src="images/s1-01.png"></span>
-               <p class="da-0-title">樱桃番茄 300g/包</p>
-               <p class="da-0-price">￥<span>46.00</span>元</p>
-               <p class="da-0-ad">搭配省140.00元</p>
-             </div>
-             
-             <div class="da-0-add">+</div><!-- 第一项产品后面会跟个“+” -->
+        <!-- 更多商品 -->
+        <div class="more_pro">
+          <a href="#">更多商品</a>
+        </div>
+      </div>
+    </div>
 
-             <div class="da-0-pro">
-               <span class="da-0-img"><img src="images/s1-01.png"></span>
-               <p class="da-0-title">樱桃番茄 300g/包</p>
-               <p class="da-0-price">￥<span>46.00</span>元</p>
-               <p class="da-0-ad">搭配省140.00元</p>
-             </div>
-             <div class="da-0-pro">
-               <span class="da-0-img"><img src="images/s1-01.png"></span>
-               <p class="da-0-title">樱桃番茄 300g/包</p>
-               <p class="da-0-price">￥<span>46.00</span>元</p>
-               <p class="da-0-ad">搭配省140.00元</p>
-             </div>
-             <div class="da-0-pro">
-               <span class="da-0-img"><img src="images/s1-01.png"></span>
-               <p class="da-0-title">樱桃番茄 300g/包</p>
-               <p class="da-0-price">￥<span>46.00</span>元</p>
-               <p class="da-0-ad">搭配省140.00元</p>
-             </div>
-             <div class="da-0-pro">
-               <span class="da-0-img"><img src="images/s1-01.png"></span>
-               <p class="da-0-title">樱桃番茄 300g/包</p>
-               <p class="da-0-price">￥<span>46.00</span>元</p>
-               <p class="da-0-ad">搭配省140.00元</p>
-             </div>
+    <!-- 搭配套餐 -->
+    <!-- 产品详情页“搭配、套餐”的切换  june -->
+    <div class="combo">
 
-             <!-- 价格、立即购买 -->
-             <div class="da-all">
-               <p class="da-why">搭配买共省140.00元</p>
-               <p class="da-money">套餐价：￥<span class="da-price">268.00</span>X</p>
-               <input type="text" value="1" class="da-num">
-               <span class="da-buy"><a href="#">立即购买套餐</a></span>
-               <span class="da-cart"><a href="#">加入购物车</a></span>
-             </div>
-            </div>
-            <div id="da-1" class="da-0">
-               aaa
-              
-            </div>
-          </div>       
-    </div>  <!-- 产品详情页“搭配、套餐”的切换结束  june -->
-<!-- 产品详情页广告位 june-->
-        <div class="product-ad">广告位</div>
-        <!-- 产品详情页广告位 june-->
+      <ul class="daBox">
+        <li class="daOption daOn0">
+          <span id="dapei" class="dapei">
+            <a href="#da-0">搭配</a>
+          </span>
+        </li>
+        <li class="daOption">
+          <span id="taocan" class="taocan">
+            <a href="#da-1">套餐</a>
+          </span>
+        </li>
+      </ul>
+      <div class="da-area">
+        <div id="da-0" class="da-0 daOn-0" >
+          <div class="da-0-pro">
+            <span class="da-0-img">
+              <img src="images/s1-01.png"></span>
+            <p class="da-0-title">樱桃番茄 300g/包</p>
+            <p class="da-0-price">
+              ￥
+              <span>46.00</span>
+              元
+            </p>
+            <p class="da-0-ad">搭配省140.00元</p>
+          </div>
+
+          <div class="da-0-add">+</div>
+          <!-- 第一项产品后面会跟个“+” -->
+
+          <div class="da-0-pro">
+            <span class="da-0-img">
+              <img src="images/s1-01.png"></span>
+            <p class="da-0-title">樱桃番茄 300g/包</p>
+            <p class="da-0-price">
+              ￥
+              <span>46.00</span>
+              元
+            </p>
+            <p class="da-0-ad">搭配省140.00元</p>
+          </div>
+          <div class="da-0-pro">
+            <span class="da-0-img">
+              <img src="images/s1-01.png"></span>
+            <p class="da-0-title">樱桃番茄 300g/包</p>
+            <p class="da-0-price">
+              ￥
+              <span>46.00</span>
+              元
+            </p>
+            <p class="da-0-ad">搭配省140.00元</p>
+          </div>
+          <div class="da-0-pro">
+            <span class="da-0-img">
+              <img src="images/s1-01.png"></span>
+            <p class="da-0-title">樱桃番茄 300g/包</p>
+            <p class="da-0-price">
+              ￥
+              <span>46.00</span>
+              元
+            </p>
+            <p class="da-0-ad">搭配省140.00元</p>
+          </div>
+          <div class="da-0-pro">
+            <span class="da-0-img">
+              <img src="images/s1-01.png"></span>
+            <p class="da-0-title">樱桃番茄 300g/包</p>
+            <p class="da-0-price">
+              ￥
+              <span>46.00</span>
+              元
+            </p>
+            <p class="da-0-ad">搭配省140.00元</p>
+          </div>
+
+          <!-- 价格、立即购买 -->
+          <div class="da-all">
+            <p class="da-why">搭配买共省140.00元</p>
+            <p class="da-money">
+              套餐价：￥
+              <span class="da-price">268.00</span>
+              X
+            </p>
+            <input type="text" value="1" class="da-num">
+            <span class="da-buy">
+              <a href="#">立即购买套餐</a>
+            </span>
+            <span class="da-cart">
+              <a href="#">加入购物车</a>
+            </span>
+          </div>
+        </div>
+        <div id="da-1" class="da-0">aaa</div>
+      </div>
+    </div>
+    <!-- 产品详情页“搭配、套餐”的切换结束  june -->
+    <!-- 产品详情页广告位 june-->
+    <div class="product-ad">广告位</div>
+    <!-- 产品详情页广告位 june-->
     <!-- 产品详情+下左侧栏 -->
     <div class="main">
       <!-- 左侧栏 -->
       <div class="left_list">
-          <div class="list_title">热销榜</div>
-          <div class="list_content">
-            <div class="content_icon">
-              <img src="images/littleIcon.jpg">
-            </div>
-            <div class="pro_click">
-              <a href="">2斤59元 顺丰包 海南</a>
-              <div class="list_price">¥ 46.00</div>
-              <div class="list_saled">已售出<span class="saled_num">7719</span>件</div>
-            </div>
-            </div>
+        <div class="list_title">热销榜</div>
         <div class="list_content">
           <div class="content_icon">
-              <img src="images/littleIcon.jpg">
-          </div>
+            <img src="images/littleIcon.jpg"></div>
           <div class="pro_click">
             <a href="">2斤59元 顺丰包 海南</a>
             <div class="list_price">¥ 46.00</div>
-            <div class="list_saled">已售出<span class="saled_num">7719</span>件</div>
+            <div class="list_saled">
+              已售出
+              <span class="saled_num">7719</span>
+              件
+            </div>
           </div>
         </div>
         <div class="list_content">
           <div class="content_icon">
-              <img src="images/littleIcon.jpg">
-          </div>
+            <img src="images/littleIcon.jpg"></div>
           <div class="pro_click">
             <a href="">2斤59元 顺丰包 海南</a>
             <div class="list_price">¥ 46.00</div>
-            <div class="list_saled">已售出<span class="saled_num">7719</span>件</div>
+            <div class="list_saled">
+              已售出
+              <span class="saled_num">7719</span>
+              件
+            </div>
           </div>
         </div>
         <div class="list_content">
           <div class="content_icon">
-            <img src="images/littleIcon.jpg">
-          </div>
+            <img src="images/littleIcon.jpg"></div>
           <div class="pro_click">
             <a href="">2斤59元 顺丰包 海南</a>
             <div class="list_price">¥ 46.00</div>
-            <div class="list_saled">已售出<span class="saled_num">7719</span>件</div>
+            <div class="list_saled">
+              已售出
+              <span class="saled_num">7719</span>
+              件
+            </div>
           </div>
         </div>
         <div class="list_content">
           <div class="content_icon">
-              <img src="images/littleIcon.jpg">
-          </div>
+            <img src="images/littleIcon.jpg"></div>
           <div class="pro_click">
             <a href="">2斤59元 顺丰包 海南</a>
             <div class="list_price">¥ 46.00</div>
-            <div class="list_saled">已售出<span class="saled_num">7719</span>件</div>
+            <div class="list_saled">
+              已售出
+              <span class="saled_num">7719</span>
+              件
+            </div>
+          </div>
+        </div>
+        <div class="list_content">
+          <div class="content_icon">
+            <img src="images/littleIcon.jpg"></div>
+          <div class="pro_click">
+            <a href="">2斤59元 顺丰包 海南</a>
+            <div class="list_price">¥ 46.00</div>
+            <div class="list_saled">
+              已售出
+              <span class="saled_num">7719</span>
+              件
+            </div>
           </div>
         </div>
         <div class="list_more">
-          <a href=""><span class="list_text">&nbsp;&nbsp;查看更多宝贝</span>
-          <img src="images/checkMore.jpg" alt="" /></a>
+          <a href="">
+            <span class="list_text">&nbsp;&nbsp;查看更多宝贝</span>
+            <img src="images/checkMore.jpg" alt="" />
+          </a>
         </div>
       </div>
       <div class="left_list" >
         <div class="list_title">尚田推荐</div>
-          <div class="list_content">
-            <div class="content_icon">
-              <a href=""><img src="images/littleIcon.jpg"></a>
+        <div class="list_content">
+          <div class="content_icon">
+            <a href="">
+              <img src="images/littleIcon.jpg"></a>
+          </div>
+          <div class="pro_click">
+            <a href="">2斤59元 顺丰包 海南</a>
+            <div class="list_price">¥ 46.00</div>
+            <div class="list_saled">
+              已售出
+              <span class="saled_num">7719</span>
+              件
             </div>
-            <div class="pro_click">
-              <a href="">2斤59元 顺丰包 海南</a>
-              <div class="list_price">¥ 46.00</div>
-              <div class="list_saled">已售出<span class="saled_num">7719</span>件</div>
+          </div>
+        </div>
+        <div class="list_content">
+          <div class="content_icon">
+            <a href="">
+              <img src="images/littleIcon.jpg"></a>
+          </div>
+          <div class="pro_click">
+            <a href="">2斤59元 顺丰包 海南</a>
+            <div class="list_price">¥ 46.00</div>
+            <div class="list_saled">
+              已售出
+              <span class="saled_num">7719</span>
+              件
             </div>
-        </div>
-        <div class="list_content">
-          <div class="content_icon">
-              <a href=""><img src="images/littleIcon.jpg"></a>
-          </div>
-          <div class="pro_click">
-            <a href="">2斤59元 顺丰包 海南</a>
-            <div class="list_price">¥ 46.00</div>
-            <div class="list_saled">已售出<span class="saled_num">7719</span>件</div>
           </div>
         </div>
         <div class="list_content">
           <div class="content_icon">
-              <a href=""><img src="images/littleIcon.jpg"></a>
+            <a href="">
+              <img src="images/littleIcon.jpg"></a>
           </div>
           <div class="pro_click">
             <a href="">2斤59元 顺丰包 海南</a>
             <div class="list_price">¥ 46.00</div>
-            <div class="list_saled">已售出<span class="saled_num">7719</span>件</div>
+            <div class="list_saled">
+              已售出
+              <span class="saled_num">7719</span>
+              件
+            </div>
           </div>
         </div>
         <div class="list_content">
           <div class="content_icon">
-            <a href=""><img src="images/littleIcon.jpg"></a>
+            <a href="">
+              <img src="images/littleIcon.jpg"></a>
           </div>
           <div class="pro_click">
             <a href="">2斤59元 顺丰包 海南</a>
             <div class="list_price">¥ 46.00</div>
-            <div class="list_saled">已售出<span class="saled_num">7719</span>件</div>
+            <div class="list_saled">
+              已售出
+              <span class="saled_num">7719</span>
+              件
+            </div>
           </div>
         </div>
         <div class="list_content">
           <div class="content_icon">
-              <a href=""><img src="images/littleIcon.jpg"></a>
+            <a href="">
+              <img src="images/littleIcon.jpg"></a>
           </div>
           <div class="pro_click">
             <a href="">2斤59元 顺丰包 海南</a>
             <div class="list_price">¥ 46.00</div>
-            <div class="list_saled">已售出<span class="saled_num">7719</span>件</div>
+            <div class="list_saled">
+              已售出
+              <span class="saled_num">7719</span>
+              件
+            </div>
           </div>
         </div>
         <div class="list_more">
-          <a href=""><span class="list_text">&nbsp;&nbsp;查看更多宝贝</span>
-          <img src="images/checkMore.jpg" alt="" /></a>
+          <a href="">
+            <span class="list_text">&nbsp;&nbsp;查看更多宝贝</span>
+            <img src="images/checkMore.jpg" alt="" />
+          </a>
         </div>
       </div>
       <div class="left_list">
         <div class="list_title">浏览过的商品</div>
-          <div class="list_content">
-            <div class="content_icon">
-              <img src="images/littleIcon.jpg">
+        <div class="list_content">
+          <div class="content_icon">
+            <img src="images/littleIcon.jpg"></div>
+          <div class="pro_click">
+            <a href="">2斤59元 顺丰包 海南</a>
+            <div class="list_price">¥ 46.00</div>
+            <div class="list_saled">
+              已售出
+              <span class="saled_num">7719</span>
+              件
             </div>
-            <div class="pro_click">
-              <a href="">2斤59元 顺丰包 海南</a>
-              <div class="list_price">¥ 46.00</div>
-              <div class="list_saled">已售出<span class="saled_num">7719</span>件</div>
+          </div>
+        </div>
+        <div class="list_content">
+          <div class="content_icon">
+            <a href="">
+              <img src="images/littleIcon.jpg"></a>
+          </div>
+          <div class="pro_click">
+            <a href="">2斤59元 顺丰包 海南</a>
+            <div class="list_price">¥ 46.00</div>
+            <div class="list_saled">
+              已售出
+              <span class="saled_num">7719</span>
+              件
             </div>
-        </div>
-        <div class="list_content">
-          <div class="content_icon">
-              <a href=""><img src="images/littleIcon.jpg"></a>
-          </div>
-          <div class="pro_click">
-            <a href="">2斤59元 顺丰包 海南</a>
-            <div class="list_price">¥ 46.00</div>
-            <div class="list_saled">已售出<span class="saled_num">7719</span>件</div>
           </div>
         </div>
         <div class="list_content">
           <div class="content_icon">
-              <a href=""><img src="images/littleIcon.jpg"></a>
+            <a href="">
+              <img src="images/littleIcon.jpg"></a>
           </div>
           <div class="pro_click">
             <a href="">2斤59元 顺丰包 海南</a>
             <div class="list_price">¥ 46.00</div>
-            <div class="list_saled">已售出<span class="saled_num">7719</span>件</div>
+            <div class="list_saled">
+              已售出
+              <span class="saled_num">7719</span>
+              件
+            </div>
           </div>
         </div>
         <div class="list_content">
           <div class="content_icon">
-            <a href=""><img src="images/littleIcon.jpg"></a>
+            <a href="">
+              <img src="images/littleIcon.jpg"></a>
           </div>
           <div class="pro_click">
             <a href="">2斤59元 顺丰包 海南</a>
             <div class="list_price">¥ 46.00</div>
-            <div class="list_saled">已售出<span class="saled_num">7719</span>件</div>
+            <div class="list_saled">
+              已售出
+              <span class="saled_num">7719</span>
+              件
+            </div>
           </div>
         </div>
         <div class="list_content">
           <div class="content_icon">
-              <a href=""><img src="images/littleIcon.jpg"></a>
+            <a href="">
+              <img src="images/littleIcon.jpg"></a>
           </div>
           <div class="pro_click">
             <a href="">2斤59元 顺丰包 海南</a>
             <div class="list_price">¥ 46.00</div>
-            <div class="list_saled">已售出<span class="saled_num">7719</span>件</div>
+            <div class="list_saled">
+              已售出
+              <span class="saled_num">7719</span>
+              件
+            </div>
           </div>
         </div>
         <div class="list_more">
-          <a href=""><span class="list_text">&nbsp;&nbsp;查看更多宝贝</span>
-          <img src="images/checkMore.jpg" alt="" /></a>
+          <a href="">
+            <span class="list_text">&nbsp;&nbsp;查看更多宝贝</span>
+            <img src="images/checkMore.jpg" alt="" />
+          </a>
         </div>
       </div>
 
       <!-- 产品详情页“商品详情、评价、成交记录”的切换 june-->
       <div class="pro_detail">
-        
-         <ul class="proBox">
-          <li class="proOption proOn0"><span id="spxq" class="spxq"><a href="#pro-0">商品详情</a></span></li>
-          <li class="proOption"><span id="pj" class="pj"><a href="#pro-1">评价</a></span></li>
-          <li class="proOption"><span id="cjjl" class="cjjl"><a href="#pro-2">成交记录</a></span></li>
-          </ul>
-          <div class="pro-area">
-            <div id="pro-0" class="pro-0 proOn-0" >
-             <img src="images/hdst.png" alt="华大尚田" class="hdst">
-            </div>
-            <div id="pro-1" class="pro-0" style="border:0;">
-              <div style="margin: 20px;">
-                <ul class="proBox">
-                  <li class="proOption proOn0 pro_ass_selected"><span><a href="#pro-0">全部评论</a></span></li>
-                  <li class="proOption"><span ><a href="#pro-1">好评</a></span></li>
-                  <li class="proOption"><span ><a href="#pro-2">中评</a></span></li>
-                  <li class="proOption"><span><a href="#pro-3">差评</a></span></li>
-                </ul>
-                <div class="ass_detail">
+
+        <ul class="proBox">
+          <li class="proOption proOn0">
+            <span id="spxq" class="spxq">
+              <a href="#pro-0">商品详情</a>
+            </span>
+          </li>
+          <li class="proOption">
+            <span id="pj" class="pj">
+              <a href="#pro-1">评价</a>
+            </span>
+          </li>
+          <li class="proOption">
+            <span id="cjjl" class="cjjl">
+              <a href="#pro-2">成交记录</a>
+            </span>
+          </li>
+        </ul>
+        <div class="pro-area">
+          <div id="pro-0" class="pro-0 proOn-0" >
+            <img src="images/hdst.png" alt="华大尚田" class="hdst"></div>
+          <div id="pro-1" class="pro-0" style="border:0;">
+            <div style="margin: 20px;">
+              <ul class="proBox">
+                <li class="proOption-ass proOn0 pro_ass_selected">
+                  <span>
+                    <a href="#ass-0">全部评论</a>
+                  </span>
+                </li>
+                <li class="proOption-ass">
+                  <span >
+                    <a href="#ass-1">好评</a>
+                  </span>
+                </li>
+                <li class="proOption-ass">
+                  <span >
+                    <a href="#ass-2">中评</a>
+                  </span>
+                </li>
+                <li class="proOption-ass">
+                  <span>
+                    <a href="#ass-3">差评</a>
+                  </span>
+                </li>
+              </ul>
+              <div class="ass_detail">
+                <div id="ass-0" class="pro-ass-0 proOn-ass-0">
                   <div style="overflow: hidden;">
-                   <div class="show_PR">
-                    <span>84%</span><br>
-                    好评率
-                    </div>
+                    <div class="show_PR">
+                      <span>84%</span>
+                      <br>好评率</div>
                     <div class="classify_ass">lalalal</div>
                     <div class="want_ass">
                       购买此商品，订单签收后即可发表评论，成功发表一条评论，即获10积分！
@@ -742,21 +1168,23 @@ $(document).ready(function(){
                   </div>
                   <div class="ass_contt">
                     <div style="overflow: hidden;">
-                      <div class="fl ass_user"><img src="images/ass_user.png">酒暖回忆思念<span class="fr">说</span></div>
-                      <div class="fr ass_time">
-                        2013-07-28 10:59:21
+                      <div class="fl ass_user">
+                        <img src="images/ass_user.png">
+                        酒暖回忆思念
+                        <span class="fr">说</span>
                       </div>
-                      <div class="ass_says">&nbsp;&nbsp;打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，
+                      <div class="fr ass_time">2013-07-28 10:59:21</div>
+                      <div class="ass_says">
+                        &nbsp;&nbsp;打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，
                       </div>
                     </div>
                   </div>
                   <div class="lineout" >
-                      <div class="fl re_ass_user"><span>1楼</span><br>秋秋</div>
-                    <div class="fr ass_time">
-                        2013-07-28 10:59:21
-                    </div>
-                    <div class="re_ass_says">&nbsp;非常的不错.我也买过.挺好的推荐
-                    </div>
+                    <div class="fl re_ass_user">
+                      <span>1楼</span>
+                      <br>秋秋</div>
+                    <div class="fr ass_time">2013-07-28 10:59:21</div>
+                    <div class="re_ass_says">&nbsp;非常的不错.我也买过.挺好的推荐</div>
                   </div>
                   <div style="clear:both;margin-top: 10px;">
                     <div class="re_ass_btn">回复评论</div>
@@ -764,21 +1192,23 @@ $(document).ready(function(){
                   </div>
                   <div class="ass_contt">
                     <div style="overflow: hidden;">
-                      <div class="fl ass_user"><img src="images/ass_user.png">酒暖回忆思念<span class="fr">说</span></div>
-                      <div class="fr ass_time">
-                        2013-07-28 10:59:21
+                      <div class="fl ass_user">
+                        <img src="images/ass_user.png">
+                        酒暖回忆思念
+                        <span class="fr">说</span>
                       </div>
-                      <div class="ass_says">&nbsp;&nbsp;打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，
+                      <div class="fr ass_time">2013-07-28 10:59:21</div>
+                      <div class="ass_says">
+                        &nbsp;&nbsp;打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，
                       </div>
                     </div>
                   </div>
                   <div class="lineout">
-                      <div class="fl re_ass_user"><span>1楼</span><br>秋秋</div>
-                    <div class="fr ass_time">
-                        2013-07-28 10:59:21
-                    </div>
-                    <div class="re_ass_says">&nbsp;非常的不错.我也买过.挺好的推荐
-                    </div>
+                    <div class="fl re_ass_user">
+                      <span>1楼</span>
+                      <br>秋秋</div>
+                    <div class="fr ass_time">2013-07-28 10:59:21</div>
+                    <div class="re_ass_says">&nbsp;非常的不错.我也买过.挺好的推荐</div>
                   </div>
                   <div style="clear:both;margin-top: 10px;">
                     <div class="re_ass_btn">回复评论</div>
@@ -786,29 +1216,30 @@ $(document).ready(function(){
                   </div>
                   <div class="ass_contt">
                     <div style="overflow: hidden;">
-                      <div class="fl ass_user"><img src="images/ass_user.png">酒暖回忆思念<span class="fr">说</span></div>
-                      <div class="fr ass_time">
-                        2013-07-28 10:59:21
+                      <div class="fl ass_user">
+                        <img src="images/ass_user.png">
+                        酒暖回忆思念
+                        <span class="fr">说</span>
                       </div>
-                      <div class="ass_says">&nbsp;&nbsp;打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，
+                      <div class="fr ass_time">2013-07-28 10:59:21</div>
+                      <div class="ass_says">
+                        &nbsp;&nbsp;打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，
                       </div>
                     </div>
                   </div>
                   <div class="lineout">
-                      <div class="fl re_ass_user"><span>1楼</span><br>秋秋</div>
-                    <div class="fr ass_time">
-                        2013-07-28 10:59:21
-                    </div>
-                    <div class="re_ass_says">&nbsp;非常的不错.我也买过.挺好的推荐
-                    </div>
+                    <div class="fl re_ass_user">
+                      <span>1楼</span>
+                      <br>秋秋</div>
+                    <div class="fr ass_time">2013-07-28 10:59:21</div>
+                    <div class="re_ass_says">&nbsp;非常的不错.我也买过.挺好的推荐</div>
                   </div>
                   <div class="lineout">
-                      <div class="fl re_ass_user"><span>2楼</span><br>秋秋</div>
-                    <div class="fr ass_time">
-                        2013-07-28 10:59:21
-                    </div>
-                    <div class="re_ass_says">&nbsp;非常的不错.我也买过.挺好的推荐
-                    </div>
+                    <div class="fl re_ass_user">
+                      <span>2楼</span>
+                      <br>秋秋</div>
+                    <div class="fr ass_time">2013-07-28 10:59:21</div>
+                    <div class="re_ass_says">&nbsp;非常的不错.我也买过.挺好的推荐</div>
                   </div>
                   <div style="clear:both;margin-top: 10px;">
                     <div class="re_ass_btn">回复评论</div>
@@ -816,21 +1247,23 @@ $(document).ready(function(){
                   </div>
                   <div class="ass_contt">
                     <div style="overflow: hidden;" >
-                      <div class="fl ass_user"><img src="images/ass_user.png">酒暖回忆思念<span class="fr">说</span></div>
-                      <div class="fr ass_time">
-                        2013-07-28 10:59:21
+                      <div class="fl ass_user">
+                        <img src="images/ass_user.png">
+                        酒暖回忆思念
+                        <span class="fr">说</span>
                       </div>
-                      <div class="ass_says">&nbsp;&nbsp;打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，
+                      <div class="fr ass_time">2013-07-28 10:59:21</div>
+                      <div class="ass_says">
+                        &nbsp;&nbsp;打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，
                       </div>
                     </div>
                   </div>
                   <div  class="lineout">
-                      <div class="fl re_ass_user"><span>1楼</span><br>秋秋</div>
-                    <div class="fr ass_time">
-                        2013-07-28 10:59:21
-                    </div>
-                    <div class="re_ass_says">&nbsp;非常的不错.我也买过.挺好的推荐
-                    </div>
+                    <div class="fl re_ass_user">
+                      <span>1楼</span>
+                      <br>秋秋</div>
+                    <div class="fr ass_time">2013-07-28 10:59:21</div>
+                    <div class="re_ass_says">&nbsp;非常的不错.我也买过.挺好的推荐</div>
                   </div>
                   <div style="clear:both;margin-top: 10px;">
                     <div class="re_ass_btn">回复评论</div>
@@ -838,19 +1271,22 @@ $(document).ready(function(){
                   </div>
                   <div class="ass_contt">
                     <div style="overflow: hidden;">
-                      <div class="fl ass_user"><img src="images/ass_user.png">酒暖回忆思念<span class="fr">说</span></div>
-                      <div class="fr ass_time">
-                        2013-07-28 10:59:21
+                      <div class="fl ass_user">
+                        <img src="images/ass_user.png">
+                        酒暖回忆思念
+                        <span class="fr">说</span>
                       </div>
-                      <div class="ass_says">&nbsp;&nbsp;打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，
+                      <div class="fr ass_time">2013-07-28 10:59:21</div>
+                      <div class="ass_says">
+                        &nbsp;&nbsp;打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，
                       </div>
                     </div>
                   </div>
                   <div class="lineout">
-                      <div class="fl re_ass_sys">亲爱的用户您好，诚挚感谢反馈！对于您未能体验满意商品而深表歉意。由于受夏季高温影响，带有生命力的蔬果商品，因为时间、温度等方面所带来的衰变有时确实无法控制，我们会将信息改感谢您的理解与支持！</div>
-                    <div class="fr ass_time">
-                        2013-07-28 10:59:21
+                    <div class="fl re_ass_sys">
+                      亲爱的用户您好，诚挚感谢反馈！对于您未能体验满意商品而深表歉意。由于受夏季高温影响，带有生命力的蔬果商品，因为时间、温度等方面所带来的衰变有时确实无法控制，我们会将信息改感谢您的理解与支持！
                     </div>
+                    <div class="fr ass_time">2013-07-28 10:59:21</div>
                   </div>
                   <div style="clear:both;margin-top: 10px;">
                     <div class="re_ass_btn">回复评论</div>
@@ -858,576 +1294,1090 @@ $(document).ready(function(){
                   </div>
                   <div class="_page_">
                     <ul>
-                      <li class="up_page"><a><img src="images/PgUp.png">上一页</a></li>
-                      <li><a>1</a></li>
-                      <li class="current_page"><a>2</a></li>
-                      <li><a>3</a></li>
-                      <li><a>4</a></li>
-                      <li><a>5</a></li>
-                      <li class="down_page"><a>下一页<img src="images/PgDn.png"></a></li>
+                      <li class="up_page">
+                        <a>
+                          <img src="images/PgUp.png">上一页</a>
+                      </li>
+                      <li>
+                        <a>1</a>
+                      </li>
+                      <li class="current_page">
+                        <a>2</a>
+                      </li>
+                      <li>
+                        <a>3</a>
+                      </li>
+                      <li>
+                        <a>4</a>
+                      </li>
+                      <li>
+                        <a>5</a>
+                      </li>
+                      <li class="down_page">
+                        <a>
+                          下一页
+                          <img src="images/PgDn.png"></a>
+                      </li>
                     </ul>
-                 </div>
+                  </div>
+                </div>
+                <div id="ass-1" class="pro-ass-0">
+                  <div style="overflow: hidden;">
+                    <div class="show_PR">
+                      <span>84%</span>
+                      <br>好评率</div>
+                    <div class="classify_ass">lalalal</div>
+                    <div class="want_ass">
+                      购买此商品，订单签收后即可发表评论，成功发表一条评论，即获10积分！
+                      <div class="want_ass_btn">我要评价</div>
+                    </div>
+                  </div>
+                  <div class="ass_contt">
+                    <div style="overflow: hidden;">
+                      <div class="fl ass_user">
+                        <img src="images/ass_user.png">
+                        酒暖回忆思念
+                        <span class="fr">说</span>
+                      </div>
+                      <div class="fr ass_time">2013-07-28 10:59:21</div>
+                      <div class="ass_says">
+                        &nbsp;&nbsp;打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，
+                      </div>
+                    </div>
+                  </div>
+                  <div class="lineout">
+                    <div class="fl re_ass_user">
+                      <span>1楼</span>
+                      <br>秋秋</div>
+                    <div class="fr ass_time">2013-07-28 10:59:21</div>
+                    <div class="re_ass_says">&nbsp;非常的不错.我也买过.挺好的推荐</div>
+                  </div>
+                  <div style="clear:both;margin-top: 10px;">
+                    <div class="re_ass_btn">回复评论</div>
+                    <div class="re_ass_bell">&nbsp;</div>
+                  </div>
+                  <div class="ass_contt">
+                    <div style="overflow: hidden;">
+                      <div class="fl ass_user">
+                        <img src="images/ass_user.png">
+                        酒暖回忆思念
+                        <span class="fr">说</span>
+                      </div>
+                      <div class="fr ass_time">2013-07-28 10:59:21</div>
+                      <div class="ass_says">
+                        &nbsp;&nbsp;打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，
+                      </div>
+                    </div>
+                  </div>
+                  <div class="lineout">
+                    <div class="fl re_ass_user">
+                      <span>1楼</span>
+                      <br>秋秋</div>
+                    <div class="fr ass_time">2013-07-28 10:59:21</div>
+                    <div class="re_ass_says">&nbsp;非常的不错.我也买过.挺好的推荐</div>
+                  </div>
+                  <div class="lineout">
+                    <div class="fl re_ass_user">
+                      <span>2楼</span>
+                      <br>秋秋</div>
+                    <div class="fr ass_time">2013-07-28 10:59:21</div>
+                    <div class="re_ass_says">&nbsp;非常的不错.我也买过.挺好的推荐</div>
+                  </div>
+                  <div style="clear:both;margin-top: 10px;">
+                    <div class="re_ass_btn">回复评论</div>
+                    <div class="re_ass_bell">&nbsp;</div>
+                  </div>
+                  <div class="ass_contt">
+                    <div style="overflow: hidden;" >
+                      <div class="fl ass_user">
+                        <img src="images/ass_user.png">
+                        酒暖回忆思念
+                        <span class="fr">说</span>
+                      </div>
+                      <div class="fr ass_time">2013-07-28 10:59:21</div>
+                      <div class="ass_says">
+                        &nbsp;&nbsp;打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，
+                      </div>
+                    </div>
+                  </div>
+                  <div  class="lineout">
+                    <div class="fl re_ass_user">
+                      <span>1楼</span>
+                      <br>秋秋</div>
+                    <div class="fr ass_time">2013-07-28 10:59:21</div>
+                    <div class="re_ass_says">&nbsp;非常的不错.我也买过.挺好的推荐</div>
+                  </div>
+                  <div style="clear:both;margin-top: 10px;">
+                    <div class="re_ass_btn">回复评论</div>
+                    <div class="re_ass_bell">&nbsp;</div>
+                  </div>
+                  <div class="ass_contt">
+                    <div style="overflow: hidden;">
+                      <div class="fl ass_user">
+                        <img src="images/ass_user.png">
+                        酒暖回忆思念
+                        <span class="fr">说</span>
+                      </div>
+                      <div class="fr ass_time">2013-07-28 10:59:21</div>
+                      <div class="ass_says">
+                        &nbsp;&nbsp;打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，
+                      </div>
+                    </div>
+                  </div>
+                  <div class="lineout">
+                    <div class="fl re_ass_sys">
+                      亲爱的用户您好，诚挚感谢反馈！对于您未能体验满意商品而深表歉意。由于受夏季高温影响，带有生命力的蔬果商品，因为时间、温度等方面所带来的衰变有时确实无法控制，我们会将信息改感谢您的理解与支持！
+                    </div>
+                    <div class="fr ass_time">2013-07-28 10:59:21</div>
+                  </div>
+                  <div style="clear:both;margin-top: 10px;">
+                    <div class="re_ass_btn">回复评论</div>
+                    <div class="re_ass_bell">&nbsp;</div>
+                  </div>
+                  <div class="_page_">
+                    <ul>
+                      <li class="up_page">
+                        <a>
+                          <img src="images/PgUp.png">上一页</a>
+                      </li>
+                      <li>
+                        <a>1</a>
+                      </li>
+                      <li class="current_page">
+                        <a>2</a>
+                      </li>
+                      <li>
+                        <a>3</a>
+                      </li>
+                      <li>
+                        <a>4</a>
+                      </li>
+                      <li>
+                        <a>5</a>
+                      </li>
+                      <li class="down_page">
+                        <a>
+                          下一页
+                          <img src="images/PgDn.png"></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div id="ass-2" class="pro-ass-0">
+                  <div style="overflow: hidden;">
+                    <div class="show_PR">
+                      <span>84%</span>
+                      <br>好评率</div>
+                    <div class="classify_ass">lalalal</div>
+                    <div class="want_ass">
+                      购买此商品，订单签收后即可发表评论，成功发表一条评论，即获10积分！
+                      <div class="want_ass_btn">我要评价</div>
+                    </div>
+                  </div>
+                  <div class="ass_contt">
+                    <div style="overflow: hidden;">
+                      <div class="fl ass_user">
+                        <img src="images/ass_user.png">
+                        酒暖回忆思念
+                        <span class="fr">说</span>
+                      </div>
+                      <div class="fr ass_time">2013-07-28 10:59:21</div>
+                      <div class="ass_says">
+                        &nbsp;&nbsp;打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，
+                      </div>
+                    </div>
+                  </div>
+                  <div class="lineout">
+                    <div class="fl re_ass_user">
+                      <span>1楼</span>
+                      <br>秋秋</div>
+                    <div class="fr ass_time">2013-07-28 10:59:21</div>
+                    <div class="re_ass_says">&nbsp;非常的不错.我也买过.挺好的推荐</div>
+                  </div>
+                  <div class="lineout">
+                    <div class="fl re_ass_user">
+                      <span>2楼</span>
+                      <br>秋秋</div>
+                    <div class="fr ass_time">2013-07-28 10:59:21</div>
+                    <div class="re_ass_says">&nbsp;非常的不错.我也买过.挺好的推荐</div>
+                  </div>
+                  <div style="clear:both;margin-top: 10px;">
+                    <div class="re_ass_btn">回复评论</div>
+                    <div class="re_ass_bell">&nbsp;</div>
+                  </div>
+                  <div class="ass_contt">
+                    <div style="overflow: hidden;" >
+                      <div class="fl ass_user">
+                        <img src="images/ass_user.png">
+                        酒暖回忆思念
+                        <span class="fr">说</span>
+                      </div>
+                      <div class="fr ass_time">2013-07-28 10:59:21</div>
+                      <div class="ass_says">
+                        &nbsp;&nbsp;打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，
+                      </div>
+                    </div>
+                  </div>
+                  <div  class="lineout">
+                    <div class="fl re_ass_user">
+                      <span>1楼</span>
+                      <br>秋秋</div>
+                    <div class="fr ass_time">2013-07-28 10:59:21</div>
+                    <div class="re_ass_says">&nbsp;非常的不错.我也买过.挺好的推荐</div>
+                  </div>
+                  <div style="clear:both;margin-top: 10px;">
+                    <div class="re_ass_btn">回复评论</div>
+                    <div class="re_ass_bell">&nbsp;</div>
+                  </div>
+                  <div class="ass_contt">
+                    <div style="overflow: hidden;">
+                      <div class="fl ass_user">
+                        <img src="images/ass_user.png">
+                        酒暖回忆思念
+                        <span class="fr">说</span>
+                      </div>
+                      <div class="fr ass_time">2013-07-28 10:59:21</div>
+                      <div class="ass_says">
+                        &nbsp;&nbsp;打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，
+                      </div>
+                    </div>
+                  </div>
+                  <div class="lineout">
+                    <div class="fl re_ass_sys">
+                      亲爱的用户您好，诚挚感谢反馈！对于您未能体验满意商品而深表歉意。由于受夏季高温影响，带有生命力的蔬果商品，因为时间、温度等方面所带来的衰变有时确实无法控制，我们会将信息改感谢您的理解与支持！
+                    </div>
+                    <div class="fr ass_time">2013-07-28 10:59:21</div>
+                  </div>
+                  <div style="clear:both;margin-top: 10px;">
+                    <div class="re_ass_btn">回复评论</div>
+                    <div class="re_ass_bell">&nbsp;</div>
+                  </div>
+                  <div class="_page_">
+                    <ul>
+                      <li class="up_page">
+                        <a>
+                          <img src="images/PgUp.png">上一页</a>
+                      </li>
+                      <li>
+                        <a>1</a>
+                      </li>
+                      <li class="current_page">
+                        <a>2</a>
+                      </li>
+                      <li>
+                        <a>3</a>
+                      </li>
+                      <li>
+                        <a>4</a>
+                      </li>
+                      <li>
+                        <a>5</a>
+                      </li>
+                      <li class="down_page">
+                        <a>
+                          下一页
+                          <img src="images/PgDn.png"></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div id="ass-3" class="pro-ass-0">
+                  <div style="overflow: hidden;">
+                    <div class="show_PR">
+                      <span>84%</span>
+                      <br>好评率</div>
+                    <div class="classify_ass">lalalal</div>
+                    <div class="want_ass">
+                      购买此商品，订单签收后即可发表评论，成功发表一条评论，即获10积分！
+                      <div class="want_ass_btn">我要评价</div>
+                    </div>
+                  </div>
+                  <div class="ass_contt">
+                    <div style="overflow: hidden;">
+                      <div class="fl ass_user">
+                        <img src="images/ass_user.png">
+                        酒暖回忆思念
+                        <span class="fr">说</span>
+                      </div>
+                      <div class="fr ass_time">2013-07-28 10:59:21</div>
+                      <div class="ass_says">
+                        &nbsp;&nbsp;打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，
+                      </div>
+                    </div>
+                  </div>
+                  <div class="lineout" >
+                    <div class="fl re_ass_user">
+                      <span>1楼</span>
+                      <br>秋秋</div>
+                    <div class="fr ass_time">2013-07-28 10:59:21</div>
+                    <div class="re_ass_says">&nbsp;非常的不错.我也买过.挺好的推荐</div>
+                  </div>
+                  <div style="clear:both;margin-top: 10px;">
+                    <div class="re_ass_btn">回复评论</div>
+                    <div class="re_ass_bell">&nbsp;</div>
+                  </div>
+                  <div class="ass_contt">
+                    <div style="overflow: hidden;">
+                      <div class="fl ass_user">
+                        <img src="images/ass_user.png">
+                        酒暖回忆思念
+                        <span class="fr">说</span>
+                      </div>
+                      <div class="fr ass_time">2013-07-28 10:59:21</div>
+                      <div class="ass_says">
+                        &nbsp;&nbsp;打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，
+                      </div>
+                    </div>
+                  </div>
+                  <div class="lineout">
+                    <div class="fl re_ass_user">
+                      <span>1楼</span>
+                      <br>秋秋</div>
+                    <div class="fr ass_time">2013-07-28 10:59:21</div>
+                    <div class="re_ass_says">&nbsp;非常的不错.我也买过.挺好的推荐</div>
+                  </div>
+                  <div style="clear:both;margin-top: 10px;">
+                    <div class="re_ass_btn">回复评论</div>
+                    <div class="re_ass_bell">&nbsp;</div>
+                  </div>
+                  <div class="ass_contt">
+                    <div style="overflow: hidden;">
+                      <div class="fl ass_user">
+                        <img src="images/ass_user.png">
+                        酒暖回忆思念
+                        <span class="fr">说</span>
+                      </div>
+                      <div class="fr ass_time">2013-07-28 10:59:21</div>
+                      <div class="ass_says">
+                        &nbsp;&nbsp;打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，
+                      </div>
+                    </div>
+                  </div>
+                  <div class="lineout">
+                    <div class="fl re_ass_user">
+                      <span>1楼</span>
+                      <br>秋秋</div>
+                    <div class="fr ass_time">2013-07-28 10:59:21</div>
+                    <div class="re_ass_says">&nbsp;非常的不错.我也买过.挺好的推荐</div>
+                  </div>
+                  <div class="lineout">
+                    <div class="fl re_ass_user">
+                      <span>2楼</span>
+                      <br>秋秋</div>
+                    <div class="fr ass_time">2013-07-28 10:59:21</div>
+                    <div class="re_ass_says">&nbsp;非常的不错.我也买过.挺好的推荐</div>
+                  </div>
+                  <div style="clear:both;margin-top: 10px;">
+                    <div class="re_ass_btn">回复评论</div>
+                    <div class="re_ass_bell">&nbsp;</div>
+                  </div>
+                  <div class="ass_contt">
+                    <div style="overflow: hidden;" >
+                      <div class="fl ass_user">
+                        <img src="images/ass_user.png">
+                        酒暖回忆思念
+                        <span class="fr">说</span>
+                      </div>
+                      <div class="fr ass_time">2013-07-28 10:59:21</div>
+                      <div class="ass_says">
+                        &nbsp;&nbsp;打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，
+                      </div>
+                    </div>
+                  </div>
+                  <div  class="lineout">
+                    <div class="fl re_ass_user">
+                      <span>1楼</span>
+                      <br>秋秋</div>
+                    <div class="fr ass_time">2013-07-28 10:59:21</div>
+                    <div class="re_ass_says">&nbsp;非常的不错.我也买过.挺好的推荐</div>
+                  </div>
+                  <div style="clear:both;margin-top: 10px;">
+                    <div class="re_ass_btn">回复评论</div>
+                    <div class="re_ass_bell">&nbsp;</div>
+                  </div>
+                  <div class="ass_contt">
+                    <div style="overflow: hidden;">
+                      <div class="fl ass_user">
+                        <img src="images/ass_user.png">
+                        酒暖回忆思念
+                        <span class="fr">说</span>
+                      </div>
+                      <div class="fr ass_time">2013-07-28 10:59:21</div>
+                      <div class="ass_says">
+                        &nbsp;&nbsp;打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，打开包装，满屋子的香味啊，吃着口感也非常好，
+                      </div>
+                    </div>
+                  </div>
+                  <div class="lineout">
+                    <div class="fl re_ass_sys">
+                      亲爱的用户您好，诚挚感谢反馈！对于您未能体验满意商品而深表歉意。由于受夏季高温影响，带有生命力的蔬果商品，因为时间、温度等方面所带来的衰变有时确实无法控制，我们会将信息改感谢您的理解与支持！
+                    </div>
+                    <div class="fr ass_time">2013-07-28 10:59:21</div>
+                  </div>
+                  <div style="clear:both;margin-top: 10px;">
+                    <div class="re_ass_btn">回复评论</div>
+                    <div class="re_ass_bell">&nbsp;</div>
+                  </div>
+                  <div class="_page_">
+                    <ul>
+                      <li class="up_page">
+                        <a>
+                          <img src="images/PgUp.png">上一页</a>
+                      </li>
+                      <li>
+                        <a>1</a>
+                      </li>
+                      <li class="current_page">
+                        <a>2</a>
+                      </li>
+                      <li>
+                        <a>3</a>
+                      </li>
+                      <li>
+                        <a>4</a>
+                      </li>
+                      <li>
+                        <a>5</a>
+                      </li>
+                      <li class="down_page">
+                        <a>
+                          下一页
+                          <img src="images/PgDn.png"></a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
-            <div id="pro-2" class="pro-0">
-              <div class="right_div_table" style="margin: 30px;">
-                <table class="tb_th">
-                  <tr>
-                    <th style="width: 120px;">买家</th>
-                    <th style="width: 160px;">拍下价格</th>
-                    <th style="width: 110px;">数量</th>
-                    <th style="width: 285px;">付款时间</th>
-                    <th style="width: 230px;">菜品和型号</th>
-                  </tr>
-                </table>
-                <table class="deal_table">
-                  <tr>
-                    <td class="buyer">刘先生</td>
-                    <td class="deal_price">12050元</td>
-                    <td class="deal_num">5</td>
-                    <td class="deal_time">2014-07-29 13:37:06</td>
-                    <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
-                  </tr>
-                  <tr>
-                    <td class="buyer">刘先生</td>
-                    <td class="deal_price">12050元</td>
-                    <td class="deal_num">5</td>
-                    <td class="deal_time">2014-07-29 13:37:06</td>
-                    <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
-                  </tr>
-                  <tr>
-                    <td class="buyer">刘先生</td>
-                    <td class="deal_price">12050元</td>
-                    <td class="deal_num">5</td>
-                    <td class="deal_time">2014-07-29 13:37:06</td>
-                    <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
-                  </tr>
-                  <tr>
-                    <td class="buyer">刘先生</td>
-                    <td class="deal_price">12050元</td>
-                    <td class="deal_num">5</td>
-                    <td class="deal_time">2014-07-29 13:37:06</td>
-                    <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
-                  </tr>
-                  <tr>
-                    <td class="buyer">刘先生</td>
-                    <td class="deal_price">12050元</td>
-                    <td class="deal_num">5</td>
-                    <td class="deal_time">2014-07-29 13:37:06</td>
-                    <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
-                  </tr>
-                  <tr>
-                    <td class="buyer">刘先生</td>
-                    <td class="deal_price">12050元</td>
-                    <td class="deal_num">5</td>
-                    <td class="deal_time">2014-07-29 13:37:06</td>
-                    <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
-                  </tr>
-                  <tr>
-                    <td class="buyer">刘先生</td>
-                    <td class="deal_price">12050元</td>
-                    <td class="deal_num">5</td>
-                    <td class="deal_time">2014-07-29 13:37:06</td>
-                    <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
-                  </tr>
-                  <tr>
-                    <td class="buyer">刘先生</td>
-                    <td class="deal_price">12050元</td>
-                    <td class="deal_num">5</td>
-                    <td class="deal_time">2014-07-29 13:37:06</td>
-                    <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
-                  </tr>
-                  <tr>
-                    <td class="buyer">刘先生</td>
-                    <td class="deal_price">12050元</td>
-                    <td class="deal_num">5</td>
-                    <td class="deal_time">2014-07-29 13:37:06</td>
-                    <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
-                  </tr>
-                  <tr>
-                    <td class="buyer">刘先生</td>
-                    <td class="deal_price">12050元</td>
-                    <td class="deal_num">5</td>
-                    <td class="deal_time">2014-07-29 13:37:06</td>
-                    <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
-                  </tr>
-                  <tr>
-                    <td class="buyer">刘先生</td>
-                    <td class="deal_price">12050元</td>
-                    <td class="deal_num">5</td>
-                    <td class="deal_time">2014-07-29 13:37:06</td>
-                    <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
-                  </tr>
-                  <tr>
-                    <td class="buyer">刘先生</td>
-                    <td class="deal_price">12050元</td>
-                    <td class="deal_num">5</td>
-                    <td class="deal_time">2014-07-29 13:37:06</td>
-                    <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
-                  </tr>
-                  <tr>
-                    <td class="buyer">刘先生</td>
-                    <td class="deal_price">12050元</td>
-                    <td class="deal_num">5</td>
-                    <td class="deal_time">2014-07-29 13:37:06</td>
-                    <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
-                  </tr>
-                  <tr>
-                    <td class="buyer">刘先生</td>
-                    <td class="deal_price">12050元</td>
-                    <td class="deal_num">5</td>
-                    <td class="deal_time">2014-07-29 13:37:06</td>
-                    <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
-                  </tr>
-                  <tr>
-                    <td class="buyer">刘先生</td>
-                    <td class="deal_price">12050元</td>
-                    <td class="deal_num">5</td>
-                    <td class="deal_time">2014-07-29 13:37:06</td>
-                    <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
-                  </tr>
-                  <tr>
-                    <td class="buyer">刘先生</td>
-                    <td class="deal_price">12050元</td>
-                    <td class="deal_num">5</td>
-                    <td class="deal_time">2014-07-29 13:37:06</td>
-                    <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
-                  </tr>
-                  <tr>
-                    <td class="buyer">刘先生</td>
-                    <td class="deal_price">12050元</td>
-                    <td class="deal_num">5</td>
-                    <td class="deal_time">2014-07-29 13:37:06</td>
-                    <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
-                  </tr>
-                  <tr>
-                    <td class="buyer">刘先生</td>
-                    <td class="deal_price">12050元</td>
-                    <td class="deal_num">5</td>
-                    <td class="deal_time">2014-07-29 13:37:06</td>
-                    <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
-                  </tr>
-                  <tr>
-                    <td class="buyer">刘先生</td>
-                    <td class="deal_price">12050元</td>
-                    <td class="deal_num">5</td>
-                    <td class="deal_time">2014-07-29 13:37:06</td>
-                    <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
-                  </tr>
-                  <tr>
-                    <td class="buyer">刘先生</td>
-                    <td class="deal_price">12050元</td>
-                    <td class="deal_num">5</td>
-                    <td class="deal_time">2014-07-29 13:37:06</td>
-                    <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
-                  </tr>
-                  <tr>
-                    <td class="buyer">刘先生</td>
-                    <td class="deal_price">12050元</td>
-                    <td class="deal_num">5</td>
-                    <td class="deal_time">2014-07-29 13:37:06</td>
-                    <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
-                  </tr>
-                  <tr>
-                    <td class="buyer">刘先生</td>
-                    <td class="deal_price">12050元</td>
-                    <td class="deal_num">5</td>
-                    <td class="deal_time">2014-07-29 13:37:06</td>
-                    <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
-                  </tr>
-                  <tr>
-                    <td class="buyer">刘先生</td>
-                    <td class="deal_price">12050元</td>
-                    <td class="deal_num">5</td>
-                    <td class="deal_time">2014-07-29 13:37:06</td>
-                    <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
-                  </tr>
-                  <tr>
-                    <td class="buyer">刘先生</td>
-                    <td class="deal_price">12050元</td>
-                    <td class="deal_num">5</td>
-                    <td class="deal_time">2014-07-29 13:37:06</td>
-                    <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
-                  </tr>
-                  <tr>
-                    <td class="buyer">刘先生</td>
-                    <td class="deal_price">12050元</td>
-                    <td class="deal_num">5</td>
-                    <td class="deal_time">2014-07-29 13:37:06</td>
-                    <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
-                  </tr>
-                  <tr>
-                    <td class="buyer">刘先生</td>
-                    <td class="deal_price">12050元</td>
-                    <td class="deal_num">5</td>
-                    <td class="deal_time">2014-07-29 13:37:06</td>
-                    <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
-                  </tr>
-                  <tr>
-                    <td class="buyer">刘先生</td>
-                    <td class="deal_price">12050元</td>
-                    <td class="deal_num">5</td>
-                    <td class="deal_time">2014-07-29 13:37:06</td>
-                    <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
-                  </tr>
-                  <tr>
-                    <td class="buyer">刘先生</td>
-                    <td class="deal_price">12050元</td>
-                    <td class="deal_num">5</td>
-                    <td class="deal_time">2014-07-29 13:37:06</td>
-                    <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
-                  </tr>
-                  <tr>
-                    <td class="buyer">刘先生</td>
-                    <td class="deal_price">12050元</td>
-                    <td class="deal_num">5</td>
-                    <td class="deal_time">2014-07-29 13:37:06</td>
-                    <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
-                  </tr>
-                  <tr>
-                    <td class="buyer">刘先生</td>
-                    <td class="deal_price">12050元</td>
-                    <td class="deal_num">5</td>
-                    <td class="deal_time">2014-07-29 13:37:06</td>
-                    <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
-                  </tr>
-                </table>
-              </div>
+          </div>
+          <div id="pro-2" class="pro-0">
+            <div class="right_div_table" style="margin: 30px;">
+              <table class="tb_th">
+                <tr>
+                  <th style="width: 120px;">买家</th>
+                  <th style="width: 160px;">拍下价格</th>
+                  <th style="width: 110px;">数量</th>
+                  <th style="width: 285px;">付款时间</th>
+                  <th style="width: 230px;">菜品和型号</th>
+                </tr>
+              </table>
+              <table class="deal_table">
+                <tr>
+                  <td class="buyer">刘先生</td>
+                  <td class="deal_price">12050元</td>
+                  <td class="deal_num">5</td>
+                  <td class="deal_time">2014-07-29 13:37:06</td>
+                  <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
+                </tr>
+                <tr>
+                  <td class="buyer">刘先生</td>
+                  <td class="deal_price">12050元</td>
+                  <td class="deal_num">5</td>
+                  <td class="deal_time">2014-07-29 13:37:06</td>
+                  <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
+                </tr>
+                <tr>
+                  <td class="buyer">刘先生</td>
+                  <td class="deal_price">12050元</td>
+                  <td class="deal_num">5</td>
+                  <td class="deal_time">2014-07-29 13:37:06</td>
+                  <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
+                </tr>
+                <tr>
+                  <td class="buyer">刘先生</td>
+                  <td class="deal_price">12050元</td>
+                  <td class="deal_num">5</td>
+                  <td class="deal_time">2014-07-29 13:37:06</td>
+                  <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
+                </tr>
+                <tr>
+                  <td class="buyer">刘先生</td>
+                  <td class="deal_price">12050元</td>
+                  <td class="deal_num">5</td>
+                  <td class="deal_time">2014-07-29 13:37:06</td>
+                  <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
+                </tr>
+                <tr>
+                  <td class="buyer">刘先生</td>
+                  <td class="deal_price">12050元</td>
+                  <td class="deal_num">5</td>
+                  <td class="deal_time">2014-07-29 13:37:06</td>
+                  <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
+                </tr>
+                <tr>
+                  <td class="buyer">刘先生</td>
+                  <td class="deal_price">12050元</td>
+                  <td class="deal_num">5</td>
+                  <td class="deal_time">2014-07-29 13:37:06</td>
+                  <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
+                </tr>
+                <tr>
+                  <td class="buyer">刘先生</td>
+                  <td class="deal_price">12050元</td>
+                  <td class="deal_num">5</td>
+                  <td class="deal_time">2014-07-29 13:37:06</td>
+                  <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
+                </tr>
+                <tr>
+                  <td class="buyer">刘先生</td>
+                  <td class="deal_price">12050元</td>
+                  <td class="deal_num">5</td>
+                  <td class="deal_time">2014-07-29 13:37:06</td>
+                  <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
+                </tr>
+                <tr>
+                  <td class="buyer">刘先生</td>
+                  <td class="deal_price">12050元</td>
+                  <td class="deal_num">5</td>
+                  <td class="deal_time">2014-07-29 13:37:06</td>
+                  <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
+                </tr>
+                <tr>
+                  <td class="buyer">刘先生</td>
+                  <td class="deal_price">12050元</td>
+                  <td class="deal_num">5</td>
+                  <td class="deal_time">2014-07-29 13:37:06</td>
+                  <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
+                </tr>
+                <tr>
+                  <td class="buyer">刘先生</td>
+                  <td class="deal_price">12050元</td>
+                  <td class="deal_num">5</td>
+                  <td class="deal_time">2014-07-29 13:37:06</td>
+                  <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
+                </tr>
+                <tr>
+                  <td class="buyer">刘先生</td>
+                  <td class="deal_price">12050元</td>
+                  <td class="deal_num">5</td>
+                  <td class="deal_time">2014-07-29 13:37:06</td>
+                  <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
+                </tr>
+                <tr>
+                  <td class="buyer">刘先生</td>
+                  <td class="deal_price">12050元</td>
+                  <td class="deal_num">5</td>
+                  <td class="deal_time">2014-07-29 13:37:06</td>
+                  <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
+                </tr>
+                <tr>
+                  <td class="buyer">刘先生</td>
+                  <td class="deal_price">12050元</td>
+                  <td class="deal_num">5</td>
+                  <td class="deal_time">2014-07-29 13:37:06</td>
+                  <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
+                </tr>
+                <tr>
+                  <td class="buyer">刘先生</td>
+                  <td class="deal_price">12050元</td>
+                  <td class="deal_num">5</td>
+                  <td class="deal_time">2014-07-29 13:37:06</td>
+                  <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
+                </tr>
+                <tr>
+                  <td class="buyer">刘先生</td>
+                  <td class="deal_price">12050元</td>
+                  <td class="deal_num">5</td>
+                  <td class="deal_time">2014-07-29 13:37:06</td>
+                  <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
+                </tr>
+                <tr>
+                  <td class="buyer">刘先生</td>
+                  <td class="deal_price">12050元</td>
+                  <td class="deal_num">5</td>
+                  <td class="deal_time">2014-07-29 13:37:06</td>
+                  <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
+                </tr>
+                <tr>
+                  <td class="buyer">刘先生</td>
+                  <td class="deal_price">12050元</td>
+                  <td class="deal_num">5</td>
+                  <td class="deal_time">2014-07-29 13:37:06</td>
+                  <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
+                </tr>
+                <tr>
+                  <td class="buyer">刘先生</td>
+                  <td class="deal_price">12050元</td>
+                  <td class="deal_num">5</td>
+                  <td class="deal_time">2014-07-29 13:37:06</td>
+                  <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
+                </tr>
+                <tr>
+                  <td class="buyer">刘先生</td>
+                  <td class="deal_price">12050元</td>
+                  <td class="deal_num">5</td>
+                  <td class="deal_time">2014-07-29 13:37:06</td>
+                  <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
+                </tr>
+                <tr>
+                  <td class="buyer">刘先生</td>
+                  <td class="deal_price">12050元</td>
+                  <td class="deal_num">5</td>
+                  <td class="deal_time">2014-07-29 13:37:06</td>
+                  <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
+                </tr>
+                <tr>
+                  <td class="buyer">刘先生</td>
+                  <td class="deal_price">12050元</td>
+                  <td class="deal_num">5</td>
+                  <td class="deal_time">2014-07-29 13:37:06</td>
+                  <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
+                </tr>
+                <tr>
+                  <td class="buyer">刘先生</td>
+                  <td class="deal_price">12050元</td>
+                  <td class="deal_num">5</td>
+                  <td class="deal_time">2014-07-29 13:37:06</td>
+                  <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
+                </tr>
+                <tr>
+                  <td class="buyer">刘先生</td>
+                  <td class="deal_price">12050元</td>
+                  <td class="deal_num">5</td>
+                  <td class="deal_time">2014-07-29 13:37:06</td>
+                  <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
+                </tr>
+                <tr>
+                  <td class="buyer">刘先生</td>
+                  <td class="deal_price">12050元</td>
+                  <td class="deal_num">5</td>
+                  <td class="deal_time">2014-07-29 13:37:06</td>
+                  <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
+                </tr>
+                <tr>
+                  <td class="buyer">刘先生</td>
+                  <td class="deal_price">12050元</td>
+                  <td class="deal_num">5</td>
+                  <td class="deal_time">2014-07-29 13:37:06</td>
+                  <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
+                </tr>
+                <tr>
+                  <td class="buyer">刘先生</td>
+                  <td class="deal_price">12050元</td>
+                  <td class="deal_num">5</td>
+                  <td class="deal_time">2014-07-29 13:37:06</td>
+                  <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
+                </tr>
+                <tr>
+                  <td class="buyer">刘先生</td>
+                  <td class="deal_price">12050元</td>
+                  <td class="deal_num">5</td>
+                  <td class="deal_time">2014-07-29 13:37:06</td>
+                  <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
+                </tr>
+                <tr>
+                  <td class="buyer">刘先生</td>
+                  <td class="deal_price">12050元</td>
+                  <td class="deal_num">5</td>
+                  <td class="deal_time">2014-07-29 13:37:06</td>
+                  <td class="deal_pro">奶白菜 300g/包&nbsp;&nbsp;套装</td>
+                </tr>
+              </table>
+            </div>
             <div class="_page_">
-                    <ul>
-                      <li class="up_page"><a><img src="images/PgUp.png">上一页</a></li>
-                      <li><a>1</a></li>
-                      <li class="current_page"><a>2</a></li>
-                      <li><a>3</a></li>
-                      <li><a>4</a></li>
-                      <li><a>5</a></li>
-                      <li class="down_page"><a>下一页<img src="images/PgDn.png"></a></li>
-                    </ul>
-                 </div>
-              
+              <ul>
+                <li class="up_page">
+                  <a>
+                    <img src="images/PgUp.png">上一页</a>
+                </li>
+                <li>
+                  <a>1</a>
+                </li>
+                <li class="current_page">
+                  <a>2</a>
+                </li>
+                <li>
+                  <a>3</a>
+                </li>
+                <li>
+                  <a>4</a>
+                </li>
+                <li>
+                  <a>5</a>
+                </li>
+                <li class="down_page">
+                  <a>
+                    下一页
+                    <img src="images/PgDn.png"></a>
+                </li>
+              </ul>
             </div>
-          </div>       
+
+          </div>
+        </div>
 
       </div>
-      <!-- 产品详情页“商品详情、评价、成交记录”的切换 june-->
+      <!-- 产品详情页“商品详情、评价、成交记录”的切换 june--> </div>
 
-    </div>
+  </div>
 
-</div>
-
-    <!-- 页脚部分 -->
-<div id="footer">
-  <div class="cwidth h-center teleg">
-    <div class="column icon_g1">
-    <h3>关于我们</h3>
-    <ul>
-      <li><a href="#">关于华大尚田</a></li>
-    <li><a href="#">公司架构</a></li>
-    <li><a href="#">生产基地</a></li>
-    <li><a href="#">招贤纳士</a></li>
-    </ul>
-  </div>
-    <div class="column icon_g2">
-    <h3>新手教程</h3>
-    <ul>
-      <li><a href="#">新手教程</a></li>
-      <li><a href="#">购物流程</a></li>
-      <li><a href="#">注册登录</a></li>
-      <li><a href="#">账户充值</a></li>
-      <li><a href="#">如何提货</a></li>
-      <li><a href="#">会员政策</a></li>
-    </ul>
-  </div>
-  <div class="column icon_g3">
-    <h3>配送方式</h3>
-    <ul>
-      <li><a href="#">自营全程冷链配送</a></li>
-      <li><a href="#">配送范围</a></li>
-      <li><a href="#">运送标准</a></li>      
-    </ul>
-  </div>
-  <div class="column icon_g4">
-    <h3>支付方式</h3>
-    <ul>
-      <li><a href="#">货到付款</a></li>
-      <li><a href="#">在线支付</a></li>
-      <li><a href="#">账户余额支付</a></li>
-      <li><a href="#">雅高E卡</a></li>
-      <li><a href="#">多种福利卡</a></li>
-    </ul>
-  </div>
-  <div class="column icon_g5">
-    <h3>售后服务</h3>
-    <ul>
-      <li><a href="#">退换货政策</a></li>
-      <li><a href="#">退换货流程</a></li>
-      <li><a href="#">退款</a></li>
-      <li><a href="#">投诉建议</a></li>
-    </ul>
-  </div>
-   <div class="column icon_g6">
-    <h3>帮助信息</h3>
-    <ul>
-      <li><a href="#">安全食品购物指南</a></li>
-      <li><a href="#">常见问题</a></li>
-      <li><a href="#">电子优惠券的使用</a></li>
-      <li><a href="#">礼品卡</a></li>
-    </ul>
-  </div>
-</div>
-
-<div id="powered">
-Copyright © 广州新富农农业科技有限公司
-<br>
-地址：广州市天河区五山华南农业大学信息学院936室 邮编：510642 联系方式：85280321 粤ICP备13088624号-2
-</div>
-
-<!-- 页脚部分结束 -->
-
-<!-- 内容区域结束 -->
-  <div class="cart_icon" id="cart_icon">
-    <span id="pro_count">0</span>
-  </div>
-  <div class="cart" id="cart">
-    <div class="go_acc">
-      <div class="cart_close">
-        <a href="javascript:closeCart()">
-          <img src="images/cart_close.jpg" />
-        </a>
+  <!-- 页脚部分 -->
+  <div id="footer">
+    <div class="cwidth h-center teleg">
+      <div class="column icon_g1">
+        <h3>关于我们</h3>
+        <ul>
+          <li>
+            <a href="#">关于华大尚田</a>
+          </li>
+          <li>
+            <a href="#">公司架构</a>
+          </li>
+          <li>
+            <a href="#">生产基地</a>
+          </li>
+          <li>
+            <a href="#">招贤纳士</a>
+          </li>
+        </ul>
       </div>
-      <div class="acc">去结算</div>
-    </div>
-    <div class="cart_title">
-      <div style="float:left;">
-        <span class="tit_black">&nbsp;预估金额</span>
-        (
-        <span class="tit_red" id="priceAll">￥0</span>
-        )
+      <div class="column icon_g2">
+        <h3>新手教程</h3>
+        <ul>
+          <li>
+            <a href="#">新手教程</a>
+          </li>
+          <li>
+            <a href="#">购物流程</a>
+          </li>
+          <li>
+            <a href="#">注册登录</a>
+          </li>
+          <li>
+            <a href="#">账户充值</a>
+          </li>
+          <li>
+            <a href="#">如何提货</a>
+          </li>
+          <li>
+            <a href="#">会员政策</a>
+          </li>
+        </ul>
       </div>
-      <div style="float:right;">
-        <span class="tit_black" >商品数量</span>
-        (
-        <span class="tit_red" id="pro_num">0</span>
-        )&nbsp;
+      <div class="column icon_g3">
+        <h3>配送方式</h3>
+        <ul>
+          <li>
+            <a href="#">自营全程冷链配送</a>
+          </li>
+          <li>
+            <a href="#">配送范围</a>
+          </li>
+          <li>
+            <a href="#">运送标准</a>
+          </li>
+        </ul>
+      </div>
+      <div class="column icon_g4">
+        <h3>支付方式</h3>
+        <ul>
+          <li>
+            <a href="#">货到付款</a>
+          </li>
+          <li>
+            <a href="#">在线支付</a>
+          </li>
+          <li>
+            <a href="#">账户余额支付</a>
+          </li>
+          <li>
+            <a href="#">雅高E卡</a>
+          </li>
+          <li>
+            <a href="#">多种福利卡</a>
+          </li>
+        </ul>
+      </div>
+      <div class="column icon_g5">
+        <h3>售后服务</h3>
+        <ul>
+          <li>
+            <a href="#">退换货政策</a>
+          </li>
+          <li>
+            <a href="#">退换货流程</a>
+          </li>
+          <li>
+            <a href="#">退款</a>
+          </li>
+          <li>
+            <a href="#">投诉建议</a>
+          </li>
+        </ul>
+      </div>
+      <div class="column icon_g6">
+        <h3>帮助信息</h3>
+        <ul>
+          <li>
+            <a href="#">安全食品购物指南</a>
+          </li>
+          <li>
+            <a href="#">常见问题</a>
+          </li>
+          <li>
+            <a href="#">电子优惠券的使用</a>
+          </li>
+          <li>
+            <a href="#">礼品卡</a>
+          </li>
+        </ul>
       </div>
     </div>
-    <div class="cart_content" id="fullcart">
-      <table id="cart_table">
-        <tr>
-          <td class="cart_count count">
-            <span class="cart_reduce reduce"></span>
-            <input class="count_input" type="text" value="1"/>
-            <span class="cart_add add"></span>
-          </td>
-          <td >
-            <div class="pro_icon">
-              <img src="images/icon55.jpg"></div>
-          </td>
-          <td>
-            <div class="cart_click">
-              <a href="#">
-                春盛达】生态大态态态大态态
-态大态态约500g/份
-              </a>
-              <div style="margin-top:10px;">
-                促销价：
-                <span>
-                  ￥ <em>9.90</em>
-                </span>
-                /份
-              </div>
-            </div>
-          </td>
-          <td class="cart_delete">
-            <img src="images/deletebtn.jpg"  />
-          </td>
-        </tr>
-        <tr>
-          <td class="cart_count count">
-            <span class="cart_reduce reduce"></span>
-            <input class="count_input" type="text" value="1"/>
-            <span class="cart_add add"></span>
-          </td>
-          <td >
-            <div class="pro_icon">
-              <img src="images/icon55.jpg"></div>
-          </td>
-          <td>
-            <div class="cart_click">
-              <a href="#">
-                春盛达】生态大态态态大态态
-态大态态约500g/份
-              </a>
-              <div style="margin-top:10px;">
-                促销价：
-                <span>
-                  ￥ <em>9.90</em>
-                </span>
-                /份
-              </div>
-            </div>
-          </td>
-          <td class="cart_delete">
-            <img src="images/deletebtn.jpg"  />
-          </td>
-        </tr>
-        <tr>
-          <td class="cart_count count">
-            <span class="cart_reduce reduce"></span>
-            <input class="count_input" type="text" value="1"/>
-            <span class="cart_add add"></span>
-          </td>
-          <td >
-            <div class="pro_icon">
-              <img src="images/icon55.jpg"></div>
-          </td>
-          <td>
-            <div class="cart_click">
-              <a href="#">
-                春盛达】生态大态态态大态态
-态大态态约500g/份
-              </a>
-              <div style="margin-top:10px;">
-                促销价：
-                <span>
-                  ￥ <em>9.90</em>
-                </span>
-                /份
-              </div>
-            </div>
-          </td>
-          <td class="cart_delete">
-            <img src="images/deletebtn.jpg"  />
-          </td>
-        </tr>
-        <tr>
-          <td class="cart_count count">
-            <span class="cart_reduce reduce"></span>
-            <input class="count_input" type="text" value="1"/>
-            <span class="cart_add add"></span>
-          </td>
-          <td >
-            <div class="pro_icon">
-              <img src="images/icon55.jpg"></div>
-          </td>
-          <td>
-            <div class="cart_click">
-              <a href="#">
-                春盛达】生态大态态态大态态
-态大态态约500g/份
-              </a>
-              <div style="margin-top:10px;">
-                促销价：
-                <span>
-                  ￥ <em>9.90</em>
-                </span>
-                /份
-              </div>
-            </div>
-          </td>
-          <td class="cart_delete">
-            <img src="images/deletebtn.jpg"  />
-          </td>
-        </tr>
-        <tr>
-          <td class="cart_count count">
-            <span class="cart_reduce reduce"></span>
-            <input class="count_input" type="text" value="1"/>
-            <span class="cart_add add"></span>
-          </td>
-          <td >
-            <div class="pro_icon">
-              <img src="images/icon55.jpg"></div>
-          </td>
-          <td>
-            <div class="cart_click">
-              <a href="#">
-                春盛达】生态大态态态大态态
-态大态态约500g/份
-              </a>
-              <div style="margin-top:10px;">
-                促销价：
-                <span>
-                  ￥ <em>9.90</em>
-                </span>
-                /份
-              </div>
-            </div>
-          </td>
-          <td class="cart_delete">
-            <img src="images/deletebtn.jpg"  />
-          </td>
-        </tr>
-        <tr>
-          <td class="cart_count count">
-            <span class="cart_reduce reduce"></span>
-            <input class="count_input" type="text" value="1"/>
-            <span class="cart_add add"></span>
-          </td>
-          <td >
-            <div class="pro_icon">
-              <img src="images/icon55.jpg"></div>
-          </td>
-          <td>
-            <div class="cart_click">
-              <a href="#">
-                春盛达】生态大态态态大态态
-态大态态约500g/份
-              </a>
-              <div style="margin-top:10px;">
-                促销价：
-                <span>
-                  ￥ <em>9.90</em>
-                </span>
-                /份
-              </div>
-            </div>
-          </td>
-          <td class="cart_delete">
-            <img src="images/deletebtn.jpg"  />
-          </td>
-        </tr>
-        <tr>
-          <td class="cart_count count">
-            <span class="cart_reduce reduce"></span>
-            <input class="count_input" type="text" value="1"/>
-            <span class="cart_add add"></span>
-          </td>
-          <td >
-            <div class="pro_icon">
-              <img src="images/icon55.jpg"></div>
-          </td>
-          <td>
-            <div class="cart_click">
-              <a href="#">
-                春盛达】生态大态态态大态态
-态大态态约500g/份
-              </a>
-              <div style="margin-top:10px;">
-                促销价：
-                <span>
-                  ￥ <em>9.90</em>
-                </span>
-                /份
-              </div>
-            </div>
-          </td>
-          <td class="cart_delete">
-            <img src="images/deletebtn.jpg"  />
-          </td>
-        </tr>
-      </table>
+
+    <div id="powered">
+      Copyright © 广州新富农农业科技有限公司
+      <br>
+      地址：广州市天河区五山华南农业大学信息学院936室 邮编：510642 联系方式：85280321 粤ICP备13088624号-2
     </div>
-    <div class="cart_content" id="emptycart">
-      <span class="empty">
-        <img src="images/emptycart.png" />
-      </span>
+
+    <!-- 页脚部分结束 -->
+
+    <!-- 内容区域结束 -->
+    <div class="cart_icon" id="cart_icon">
+      <span id="pro_count">0</span>
+    </div>
+    <div class="cart" id="cart">
+      <div class="go_acc">
+        <div class="cart_close">
+          <a href="javascript:closeCart()">
+            <img src="images/cart_close.jpg" />
+          </a>
+        </div>
+        <div class="acc">去结算</div>
+      </div>
+      <div class="cart_title">
+        <div style="float:left;">
+          <span class="tit_black">&nbsp;预估金额</span>
+          (
+          <span class="tit_red" id="priceAll">￥0</span>
+          )
+        </div>
+        <div style="float:right;">
+          <span class="tit_black" >商品数量</span>
+          (
+          <span class="tit_red" id="pro_num">0</span>
+          )&nbsp;
+        </div>
+      </div>
+      <div class="cart_content" id="fullcart">
+        <table id="cart_table">
+          <tr>
+            <td class="cart_count count">
+              <span class="cart_reduce reduce"></span>
+              <input class="count_input" type="text" value="1"/>
+              <span class="cart_add add"></span>
+            </td>
+            <td >
+              <div class="pro_icon">
+                <img src="images/icon55.jpg"></div>
+            </td>
+            <td>
+              <div class="cart_click">
+                <a href="#">
+                  春盛达】生态大态态态大态态
+态大态态约500g/份
+                </a>
+                <div style="margin-top:10px;">
+                  促销价：
+                  <span>
+                    ￥ <em>9.90</em>
+                  </span>
+                  /份
+                </div>
+              </div>
+            </td>
+            <td class="cart_delete">
+              <img src="images/deletebtn.jpg"  />
+            </td>
+          </tr>
+          <tr>
+            <td class="cart_count count">
+              <span class="cart_reduce reduce"></span>
+              <input class="count_input" type="text" value="1"/>
+              <span class="cart_add add"></span>
+            </td>
+            <td >
+              <div class="pro_icon">
+                <img src="images/icon55.jpg"></div>
+            </td>
+            <td>
+              <div class="cart_click">
+                <a href="#">
+                  春盛达】生态大态态态大态态
+态大态态约500g/份
+                </a>
+                <div style="margin-top:10px;">
+                  促销价：
+                  <span>
+                    ￥ <em>9.90</em>
+                  </span>
+                  /份
+                </div>
+              </div>
+            </td>
+            <td class="cart_delete">
+              <img src="images/deletebtn.jpg"  />
+            </td>
+          </tr>
+          <tr>
+            <td class="cart_count count">
+              <span class="cart_reduce reduce"></span>
+              <input class="count_input" type="text" value="1"/>
+              <span class="cart_add add"></span>
+            </td>
+            <td >
+              <div class="pro_icon">
+                <img src="images/icon55.jpg"></div>
+            </td>
+            <td>
+              <div class="cart_click">
+                <a href="#">
+                  春盛达】生态大态态态大态态
+态大态态约500g/份
+                </a>
+                <div style="margin-top:10px;">
+                  促销价：
+                  <span>
+                    ￥
+                    <em>9.90</em>
+                  </span>
+                  /份
+                </div>
+              </div>
+            </td>
+            <td class="cart_delete">
+              <img src="images/deletebtn.jpg"  />
+            </td>
+          </tr>
+          <tr>
+            <td class="cart_count count">
+              <span class="cart_reduce reduce"></span>
+              <input class="count_input" type="text" value="1"/>
+              <span class="cart_add add"></span>
+            </td>
+            <td >
+              <div class="pro_icon">
+                <img src="images/icon55.jpg"></div>
+            </td>
+            <td>
+              <div class="cart_click">
+                <a href="#">
+                  春盛达】生态大态态态大态态
+态大态态约500g/份
+                </a>
+                <div style="margin-top:10px;">
+                  促销价：
+                  <span>
+                    ￥
+                    <em>9.90</em>
+                  </span>
+                  /份
+                </div>
+              </div>
+            </td>
+            <td class="cart_delete">
+              <img src="images/deletebtn.jpg"  />
+            </td>
+          </tr>
+          <tr>
+            <td class="cart_count count">
+              <span class="cart_reduce reduce"></span>
+              <input class="count_input" type="text" value="1"/>
+              <span class="cart_add add"></span>
+            </td>
+            <td >
+              <div class="pro_icon">
+                <img src="images/icon55.jpg"></div>
+            </td>
+            <td>
+              <div class="cart_click">
+                <a href="#">
+                  春盛达】生态大态态态大态态
+态大态态约500g/份
+                </a>
+                <div style="margin-top:10px;">
+                  促销价：
+                  <span>
+                    ￥
+                    <em>9.90</em>
+                  </span>
+                  /份
+                </div>
+              </div>
+            </td>
+            <td class="cart_delete">
+              <img src="images/deletebtn.jpg"  />
+            </td>
+          </tr>
+          <tr>
+            <td class="cart_count count">
+              <span class="cart_reduce reduce"></span>
+              <input class="count_input" type="text" value="1"/>
+              <span class="cart_add add"></span>
+            </td>
+            <td >
+              <div class="pro_icon">
+                <img src="images/icon55.jpg"></div>
+            </td>
+            <td>
+              <div class="cart_click">
+                <a href="#">
+                  春盛达】生态大态态态大态态
+态大态态约500g/份
+                </a>
+                <div style="margin-top:10px;">
+                  促销价：
+                  <span>
+                    ￥
+                    <em>9.90</em>
+                  </span>
+                  /份
+                </div>
+              </div>
+            </td>
+            <td class="cart_delete">
+              <img src="images/deletebtn.jpg"  />
+            </td>
+          </tr>
+          <tr>
+            <td class="cart_count count">
+              <span class="cart_reduce reduce"></span>
+              <input class="count_input" type="text" value="1"/>
+              <span class="cart_add add"></span>
+            </td>
+            <td >
+              <div class="pro_icon">
+                <img src="images/icon55.jpg"></div>
+            </td>
+            <td>
+              <div class="cart_click">
+                <a href="#">
+                  春盛达】生态大态态态大态态
+态大态态约500g/份
+                </a>
+                <div style="margin-top:10px;">
+                  促销价：
+                  <span>
+                    ￥
+                    <em>9.90</em>
+                  </span>
+                  /份
+                </div>
+              </div>
+            </td>
+            <td class="cart_delete">
+              <img src="images/deletebtn.jpg"  />
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="cart_content" id="emptycart">
+        <span class="empty">
+          <img src="images/emptycart.png" />
+        </span>
+      </div>
     </div>
   </div>
-</div>
 
-<!-- 整个容器部分结束 -->
+  <!-- 整个容器部分结束 -->
 </html>
-
-
