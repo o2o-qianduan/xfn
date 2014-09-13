@@ -66,3 +66,11 @@ $(document).ready(function(){
         }
 })
 /****june***首页图片轮播***end***/
+
+// bing***价格，销售量，时间选择项****
+$(function(){
+    $('.choice li').click(function(){
+        $(this).find('a').addClass('active-chioce').end().siblings().find('a').removeClass('active-chioce');
+        $(this).find('span').removeClass('current').end().siblings().find('span').addClass('current');
+    })
+})

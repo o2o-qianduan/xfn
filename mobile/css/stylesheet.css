@@ -1,4 +1,6 @@
 /******首页图片轮播***june***start***/
+.bg{background-color: #f5fbf0}
+.clear{clear: both;}
 .wrapper_one{
 	float: left;
     height: 296px;
@@ -53,14 +55,122 @@
 	background: url(../img/icon/dot.png) no-repeat left top;
 }
 /***********首页图片轮播***june***end********/
+
 .logo_area{
-	width: 100%;
+	margin: 30px auto 10px;
+	width: 150px;
+	height: 60px;
+}
+.nav_col,.nav_col ul{margin: 0 auto;padding:0;width: 100%;}
+.nav_col li{
 	position: relative;
-	height: 90px;
-	top: 14px;
+	list-style: none;
+	text-align: center;
+	float: left;
+	width: 25%;
+	margin: 0 auto
 }
-.logo_area img{
+.nav_col li:hover{
+	background-color: #D8D8D8;
+}
+.nav_col li img{display: block;margin: 0 auto}
+.nav_col li a{
+	display: block;
+	padding-top: 12px;
+	width: 65px;
+	height: 53px;
+	margin: 0 auto 5px;
+	text-align: center;
+	border-radius: 88px;
+	background-color: #3ead0c;
+}
+
+.nav_col li span{
+	display: block;
+	font-size: 12px;
+}
+.choice ul{padding: 0;margin: 20px auto}
+.choice li{
+	position: relative;
+	list-style: none;
+	border:1px solid #afd49e;
+	float: left;
+	width: 32%;
+	height: 30px;
+ }
+ .choice li+li{border-left: none;}
+ .choice li a{
+ 	display: block;
+ 	height: 30px;
+ 	line-height: 30px;
+ 	text-align: center;
+ 	text-decoration: none;
+ }
+.choice span{
+ 	display: inline-block;
+	margin-left: 5px;
+	width: 6px;
+	height: 13px;
+ }
+.choice .current{
+	background: url(../img/icon/up.png) no-repeat;
+}
+.active-chioce{
+	background-color: #f60;
+	color: #fff !important;
+}
+.active-chioce span{
+	background: url(../img/icon/up-white.png) no-repeat;
+}
+/*bing****分类页面开始******/
+.search{
+	position: relative;
+	margin: 15px;
+}
+.search span{
 	position: absolute;
-	left: 100px;
-	top: 10px;
+	right: 0;
+	top: 1px;
+	width: 40px;
+	background-color: #3eae0c;
+	height: 35px;
+	
 }
+.search span a{
+	background: url(../img/icon/search.png) no-repeat;
+	width: 24px;
+	position: absolute;
+	height: 24px;
+	top: 50%;
+	left: 50%;
+	margin: -12px 0 0 -12px;
+}
+.list{background-color: #eff6ea}
+.list .listdiv{width: 100%}
+.list .listdiv a{
+	display: inline-block;
+	margin-bottom: 10px;
+	height: 25px;
+	width: 48%;
+	text-align: center;
+	text-decoration: none;
+	color: #6d6d6d;
+}
+
+.list .listdiv a+a{
+	border-left: 1px solid #d0d0d0;
+}
+.login,.backtop{margin: 10px}
+.login{float: left}
+.backtop{float: right}
+.login a,.backtop a{
+	padding: 0 10px;
+	text-decoration: none;
+	color: #6d6d6d !important;
+}
+.login a:hover,.backtop a:hover{
+	color: #f00 !important;
+}
+.foot h6{font-size: 12px !important;}
+/*bing****分类页面结束******/
+
