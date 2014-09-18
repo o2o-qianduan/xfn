@@ -842,8 +842,41 @@ div.zoomMask {
 	height: 70px;
 	margin-top: 15px;
 	margin-left: 50px;
-	border: 1px solid #ccc; 
 	float: left;
+	font-size: 12px;
+	color: #333;
+	line-height: 12px;
+}
+#pro-1 .classify_ass>div{
+	margin-top: 10px;
+}
+#pro-1 .classify_ass .ass_rate_border{
+	height: 10px;
+	border: 1px solid #64b800;
+	width: 205px;
+	display: inline-block;
+	margin: -1px 8px;
+}
+#pro-1 .classify_ass .good_ass_rate{
+	margin: 0 0;
+	margin-bottom: 2px;
+	height: 10px;
+	background: #64b800;
+	width: 150px;
+}
+#pro-1 .classify_ass .mid_ass_rate{
+	margin: 0 0;
+	margin-bottom: 2px;
+	height: 10px;
+	background: #64b800;
+	width: 10%;
+}
+#pro-1 .classify_ass .bad_ass_rate{
+	margin: 0 0;
+	margin-bottom: 2px;
+	height: 10px;
+	background: #64b800;
+	width: 6%;
 }
 #pro-1 .want_ass{
 	float: left;

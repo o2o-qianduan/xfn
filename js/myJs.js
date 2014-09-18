@@ -624,4 +624,11 @@ $("#addressBtnSave").live('click',function(){
     hideAll: true
   });
  })
-
+/*************产品页评论柱形图******eles*****************start*******************/ 
+$(function() {
+     $(".ass_rate_border").each(function(){
+        var ratewidth = $(this).next("span").text();
+        $(this).children('div').css("width", ratewidth);
+     })
+ })
+/*************产品页评论柱形图******eles*************end***********************/ 
