@@ -17,6 +17,7 @@
  .navli{
  	border: none !important;
  }
+
 .main .ui-icon 
 {
  background:  url(../img/icon/m_1.png) 50% 50% no-repeat;
@@ -49,60 +50,4 @@
 	top:0;
 	right: 0;
 	z-index: 1000!important;
-}
-.search_area{
-	width: 100%;
-	height: 55px;
-	background: #ffffff;
-	display: block;
-	margin-top: 50px;
-	position: relative;
-}
-.searchform{
-	width: 90%;
-	border:1px solid #3DAE0B;
-	height: 35px;
-	background-color: #fff;
-	display: block;
-	float: left;
-	margin: 15px;
-	margin-top: 8px;
-}
-.search-submit{
-	float:left;
-	cursor:pointer;
-	height: 34px;
-	width: 34px;
-	border: none;
-	border-right: 1px solid #cccccc;
-}
-/*.search-input{
-	background: none repeat scroll 0 0 #ffffff;
-	width: 85%;
-	height: 40px;
-	float: left;
-	border: none;
-	font-size: 100%;
-	padding-left: 10px;
-	outline: none;
-}*/
-.search_button{
-	float: left;
-	right: 0;
-	width: 45px;
-	border:none;
-	height: 35px;
-	line-height: 35px;
-/*	background: repeat scroll 0 0 #3dae0b;*/
-	text-align: center;
-	font-size: 14px !important;
-	color: #ffffff;
-	font-family: 'SimSun','宋体';
-	font-weight: bold;
-	cursor: pointer;
-	top: -7px;
-}
-.search_button .ui-btn-text{
-	 position: relative;
-    top: -7px;
 }

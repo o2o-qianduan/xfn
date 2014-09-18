@@ -503,6 +503,23 @@ $(this).attr("value","0");
      }
      account();
  })
+
+  /****结算2结算信息************************/
+  $(function(){
+    function account2(){
+        var $item2 = $('.settle').find('.pri_b');
+        var len2 = $item2.length;
+        var total2 = 0,temp=0;
+        for(var j = 0; j<len2; j++){
+            temp = $item2.eq(j).text();
+            total2 += parseFloat(temp);
+        }
+        $('.pri_r').text(total2.toFixed(2));
+        return total2;
+    }
+    account2();
+  })
+
  /*************************************************************************************************/
  // 收缩--个人中心
  $(function() {
@@ -546,17 +563,19 @@ $(this).attr("value","0");
         })
     });
 // 评价弹出框***bing***end***
+
 /**********产品列表页排序*********june*******start***/
 $(function(){
  $('.sort-item').live('click',function() {
-         if ($(this).hasClass("sort-up")){
-            $(this).removeClass("sort-up");
-            $(this).addClass("sort-down");
+        var $span = $(this).find('span');
+         if ($span.hasClass("sort-up")){
+            $span.removeClass("sort-up");
+            $span.addClass("sort-down");
          }
          else
          {
-            $(this).removeClass("sort-down");
-            $(this).addClass("sort-up");
+            $span.removeClass("sort-down");
+            $span.addClass("sort-up");
          }
 });   
 })

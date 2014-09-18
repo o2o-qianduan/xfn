@@ -209,7 +209,6 @@ li {list-style-type: none;}
 	color: red;
 }
 /*我的尚田*/
-
 .tel{
 	float: right;
 	overflow: hidden;
@@ -226,11 +225,9 @@ li {list-style-type: none;}
 	height: 35px;
 	position: relative;
 }
-
 .all_classify{
 	float: left;
 	width: 205px;
-
 }
 .all_classify img#boult{
 	width: 10px;
@@ -1148,7 +1145,6 @@ ul, li {
 	border-bottom: 1px solid #3DAE0B;
 	line-height:33px;
 	height: 33px;
-	/*text-shadow:1px 1px 1px #73C05C;*/
 	background: url(../images/layer1.png) no-repeat -8px -3px;
 }
  .center_course .current h4{
@@ -2408,10 +2404,17 @@ box-shadow: 2px 2px 5px #C0BBB5;
 	margin-left: 0px;
 	margin-bottom: 30px;
 }
+.pro_left_01{
+	border: 1px solid #99cf7f;
+	border-top: 2px solid #99cf7f; 
+	margin-bottom: 10px;
+	padding: 5px 10px;
+}
 .pbox {
 	width: 192px !important;
 	border:none !important;
 }
+.pbox img{width: 180px;height: 180px}
 .pbox .s0-01-price{
 	margin-top: 5px;
 	font-size: 16px;
@@ -2425,28 +2428,38 @@ box-shadow: 2px 2px 5px #C0BBB5;
 } 
 .pro_sort{
 	position: absolute;
-	float: right;
 	right: 0;
 	top: 0;
-	display: block;
 }
-.pro_sort span{
+.pro_sort label{float: left;}
+.pro_sort ul{float: right;}
+.pro_sort li{
 	float: left;
+	list-style: none;
 }
+
 .pro_sort .sort-item{
-	width: 70px;
+	display: block;
+	width: 75px;
 	border:1px solid #e6e6e6;
 	text-align: center;
+	text-decoration: none;
 	margin-left: 10px;
 	cursor: pointer;
 }
 .sort-up{
-	background: url(../images/up1.png) no-repeat right 5px #ffffff;
-	right: 0;
+	display: inline-block;
+	background: url(../images/up1.png) no-repeat #fff;
+	margin-left: 3px;
+	width: 8px;
+	height: 10px;
 }
 .sort-down{
-	background: url(../images/down1.png) no-repeat right 5px #ffffff;
-	right: 0;
+	display: inline-block;
+	background: url(../images/down1.png) no-repeat #fff;
+	margin-left: 3px;
+	width: 8px;
+	height: 10px;
 }
 /*产品列表页底部图片切换****bing****start*****/
 .pro_bottom_pic0{
@@ -2497,6 +2510,7 @@ box-shadow: 2px 2px 5px #C0BBB5;
 	float: left;
 	margin: 0 15px;
 }
+.proBot_slide0 li img{width:180px; height: 181px}
 /*产品列表页底部图片切换****bing****end****/
  /*********产品列表页样式*******june******end**************/
 
@@ -3046,10 +3060,8 @@ box-shadow: 2px 2px 5px #C0BBB5;
 	line-height: 33px;
 	padding-left: 15px;
 	color: #333333;
-	background: url(../images/listdown.png);
-	/*background-size: 100%;*/
-	border-bottom: 1px solid #e4e4e4;
-	
+	background: url(../images/listdown.png) no-repeat;
+	border-bottom: 1px solid #e4e4e4;	
 }
 .pro_course .current_list{
 	background: #f0fae3;

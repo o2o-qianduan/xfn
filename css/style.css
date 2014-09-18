@@ -211,6 +211,7 @@ input.num-each{
 	line-height: 32px;
 	background:repeat scroll top center #64b800;
 	border-radius: 2px;
+	text-align: center;
 }
 
 .buy-cart a{
