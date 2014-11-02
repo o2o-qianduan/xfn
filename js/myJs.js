@@ -644,6 +644,7 @@ $("#addressBtnSave").live('click',function(){
     hideAll: true
   });
  })
+
 // bing***结算页效果***start***
 $(function(){
 
@@ -1031,3 +1032,13 @@ $(function(){
          }
     });
 }) 
+
+/*************产品页评论柱形图******eles*****************start*******************/ 
+$(function() {
+     $(".ass_rate_border").each(function(){
+        var ratewidth = $(this).next("span").text();
+        $(this).children('div').css("width", ratewidth);
+     })
+ })
+/*************产品页评论柱形图******eles*************end***********************/ 
+
