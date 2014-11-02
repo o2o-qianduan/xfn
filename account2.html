@@ -5,22 +5,20 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=9,IE=10">
   <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
-  <link rel="stylesheet" href="css/jquery-ui.css">
-  <script src="js/jquery-1.8.2.js"></script>
-  <script src="js/jquery-ui.js"></script>
-  <link rel="stylesheet" href="css/style.css"> 
-  <script type="text/javascript" src="js/myJs.js"></script>
-  <script type="text/javascript" src="js/picture.js"></script>
- <script type="text/javascript" src="js/jquery.imagezoom.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="css/product.css" />
-    <script type="text/javascript" src="js/yao.js"></script>
-    <script type="text/javascript" src="js/account.js"></script>
-    <script type="text/javascript" src="js/jquery.XYTipsWindow.min.2.8.js"></script>
-  <link rel="stylesheet" href="css/style.css"> 
-  <link rel="stylesheet" href="css/account2.css"> 
-  <link rel="stylesheet" type="text/css" href="css/layout.css" />
-  <link rel="stylesheet" type="text/css" href="css/product.css" />
-
+  <link rel="stylesheet" href="css/jquery-ui.css"> 
+   <!--[if lte IE 6]>
+  <style type="text/css">
+  /* 上面的是除了IE6的主流浏览器通用的方法 */
+  *html,*html body{
+    background-image:url(about:blank);
+    background-attachment:fixed;
+  }
+  *html .topbor{
+    position:absolute;
+    width: expression(offsetParent.clientWidth);
+    top:expression(eval(document.documentElement.scrollTop));}
+  </style>
+  <![endif]-->
 </head>
 <body>
      <!-- 商标，搜索栏，购物车，电话 -->
@@ -590,7 +588,12 @@ Copyright © 广州新富农农业科技有限公司
 </div>
 
 <!-- 整个容器部分结束 -->
-
+  <script src="js/jquery-1.8.2.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script type="text/javascript" src="js/myJs.js"></script>
+  <script type="text/javascript" src="js/jquery.imagezoom.min.js"></script>
+  <script type="text/javascript" src="js/yao.js"></script>
+  <script type="text/javascript" src="js/jquery.XYTipsWindow.min.2.8.js"></script>
 
 </body>
 </html>

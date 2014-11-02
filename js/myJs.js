@@ -18,6 +18,7 @@
          $(".tab-0").eq(tabOptionIndex).addClass('tabOn-0').siblings().removeClass('tabOn-0');
      }
  }
+
  /*****新品推荐、特惠专区、新鲜蔬菜部分 *************june**---end*/ 
  /*****超值抢购、本季热卖、本周推荐、新品上市、限时抢购 *************june**---start*/
  var tabOptionIndex2 = 0; 
@@ -643,4 +644,390 @@ $("#addressBtnSave").live('click',function(){
     hideAll: true
   });
  })
+// bing***结算页效果***start***
+$(function(){
 
+    // 删除地址
+    $(".del_address").live('click',function(){
+        var r = confirm("确定删除吗？");
+        if(r){
+            var $parent = $(this).parent("li");
+            $parent.css("display","none");
+        }
+    })
+
+    // 修改地址
+
+    $(".modify_address").live('click',function(){
+        $.XYTipsWindow({
+        ___title:"修改地址",
+        ___content:"iframe:new_address.html",
+        ___width:"780",
+        ___height:"260",
+        ___showbg:true,
+        ___drag:"__boxTitle"
+
+        })
+    });
+
+
+    // 收缩
+    $(".apimg").toggle(function(){
+        var $parent = $(this).parents(".offset");
+        var $samebg = $parent.find(".same_bg");             
+        $samebg.css("display","none");
+        $(this).attr("src","images/plus.png");
+    },function(){
+        var $parent = $(this).parents(".offset");
+        var $samebg = $parent.find(".same_bg"); 
+        $samebg.css("display","block");
+        $(this).attr("src","images/add.png");
+    });
+
+        
+    // 将新地址添加到收货人地址
+    $(".save_send").click(function(){
+        var $parent = $(this).parent();
+        var $consignee = $parent.find("input#consignee");
+        var $selProvince = $parent.find("#selProvince option:selected");    
+        var $selCity = $parent.find("#selCity option:selected");
+        var $selRegion = $parent.find("#selRegion option:selected");
+        var $detail_address = $parent.find("input#detail_address");
+        var $phone_num = $parent.find("input#phone_num");
+        // 获取收货人地址的值
+        var $name_val = $consignee.val();
+        var $province = $selProvince.val();
+        var $city = $selCity.val();
+        var $region = $selRegion.val();
+        var $detail_val = $detail_address.val();
+        var $phone_val = $phone_num.val();
+/*
+        var $first_li = $(".old_address ul li:eq(0)");  //获取第一个li元素
+        var $append_li = $("<li></li>");
+        var $two_li = $append_li.insertBefore($first_li); //将添加的li元素插入到第一个li元素之前
+*/
+        var  $append_li =  $(".old_address ul").append("<li></li>");
+        var $two_li = $(".old_address ul li:last");   //获取最后一个li元素
+
+        var $append_a1 = $two_li.append( "<a class='modify_address' href='#old_address'>修改</a>");
+        var $append_a2 = $two_li.append( "<a class='del_address' href='#old_address'>删除</a>");
+        var $append_input = $two_li.append("<input name='address' class='ss' type='radio'  />")
+        var $append_label = $two_li.append("<label class='default fontway'>"+$name_val+"  "+$province+$city+$region+$detail_val+"  "+$phone_val+"</label>");     
+    });
+    
+})
+// bing***结算页效果***end***
+
+// 评价弹出框***bing***begin***
+ $(".reply_btn").live('click',function(){
+        $.XYTipsWindow({
+        ___title:"回复",
+        ___content:"iframe:answer.html",
+        ___width:"780",
+        ___height:"260",
+        ___showbg:true,
+        ___drag:"__boxTitle"
+
+        })
+    });
+// 评价弹出框***bing***end***
+// 会员页效果***bing***start***
+$(function(){
+
+    // 绑定手机
+    $("#binding_mobile").click(function(){
+        $(".mobile_info").css("display","block");
+    });
+
+    // 绑定邮箱
+    $("#binding_email").click(function(){
+        $('.Email_info').css("display","block");
+    });
+
+    // 确定绑定手机
+    $("#confirm_info").click(function(){
+        $("#info3 img").attr("src","images/lock.png");
+        $("#lock_img1").text("已绑定");
+        $("#lock_img1").css("color","#A4A4A4");
+        $("#info3 a").css("display","none");
+
+    });
+
+    // 确定绑定邮箱
+    $("#send_email").click(function(){
+        $("#info4 img").attr("src","images/lock.png");
+        $("#lock_img2").text("已绑定");
+        $("#lock_img2").css("color","#A4A4A4");
+        $("#info4 a").css("display","none");
+
+    });
+
+    // 提交推荐人会员号
+    $("#commitBtn").click(function(){
+        $("#memNum1 input#mem_num").css("background-color","#ECECEC")
+                                   .attr("disabled","disabled");
+        $(this).css("background-color","#B8B8B8");
+    });
+
+    // 评价弹出框***bing***begin***
+ $(".reply_btn").live('click',function(){
+        $.XYTipsWindow({
+        ___title:"回复",
+        ___content:"iframe:answer.html",
+        ___width:"460",
+        ___height:"200",
+        ___showbg:true,
+        ___drag:"__boxTitle"
+
+        })
+    });
+// 评价弹出框***bing***end***
+})
+
+//跟踪包裹弹出框
+$.ui.tooltip.prototype._create = function() {
+  this._on({
+    click: "open",      //覆盖tooltip的原型使打开由原本的hover变成click
+    focusin: "open"
+  });
+  this.tooltips = {};
+  this.parents = {};
+  if ( this.options.disabled ) {
+    this._disable();
+  }
+}
+$(function(){
+  var content = renderTooltip();
+  var tooltipCtl = $(".myorder_state a").tooltip({  //初始化tooltip
+    content: content,
+    tooltipClass: "my_tooltip",         //这个框容器的css的class， 内容的css可以自己写在外面那个content
+    position: {                 //定位
+      my: "right top+10",
+      at: "right bottom",
+      collision: "flipfit flip"
+    },
+    open: function() {    //每次显示tooltip的时候触发的函数
+        $(".tooltipClose").unbind("click").bind("click",function() {
+          tooltipCtl.tooltip( "close" );    //绑定关闭按钮  绑定前要先unbind解除绑定
+        })
+     }
+  })
+})
+
+function renderTooltip(){
+  var content = '<div class="fr tooltipClose" style="margin-top: -20px;">\
+                    <img src="images/deletebtn.jpg">\
+                 </div><!-- / -->\
+                 <div style="margin: 20px 15px auto 7px;">\
+                    <ul>\
+                    <li>2014-07-09 15:59:12 提交订单</li>\
+                    <li>2014-07-14 03:00:00 用户取消了订单</li>\
+                    </ul>\
+                 </div><!-- / -->';        //那个框里面要什么内容加在这里
+  return content;
+}
+/***********首页最顶端图片向左向右切换**********bing********start************/
+$(function(){
+    var page = 1;
+    var i = 3; //每版放3个图片
+
+    // 点击向后按钮
+    $("#next_pic").click(function(){
+        var $parent = $(this).parents("div.jscroll");//寻找当前元素的父元素
+        var $v_out = $parent.find("div.o-list");//视频外围
+        var $v_show = $parent.find("div.v-bot-list");//视频播放区域
+        var v_width = $v_out.width();//外围宽度
+        var len = $v_show.find("li").length; //图片数量
+        var page_count = Math.ceil(len / i) ; //页面数目
+         if( !$v_show.is(":animated") ){    //判断“视频内容展示区域”是否正在处于动画
+              if( page == page_count ){  //已经到最后一个版面了,如果再向后，必须跳转到第一个版面。
+                $v_show.animate({ left : '0px'}, "slow"); //通过改变left值，跳转到第一个版面
+                page = 1;
+              }else{
+                $v_show.animate({ left : '-='+v_width }, "slow");  //通过改变left值，达到每次换一个版面
+                page++;
+             }
+         }
+
+    });
+
+    //点击向前按钮
+    $("#prev_pic").click(function(){
+        var $parent = $(this).parents("div.jscroll");
+        var $v_out = $parent.find("div.o-list");
+        var $v_show = $parent.find("div.v-bot-list");
+        var v_width = $v_out.width();
+        var len = $v_show.find("li").length;
+        var page_count = Math.ceil(len / i);
+        if(!$v_show.is(":animated")){
+            if (page == 1) {
+                $v_show.animate({left : "-="+v_width*(page_count-1)},"slow");
+                page = page_count;
+            }else{
+                $v_show.animate({left : '+='+v_width},"slow");
+                page--;
+            }
+        }
+    });
+
+    $("#img1").click(function(){
+
+        var $parent = $(this).parents("div.right_product");
+        var $v_out = $parent.find("div.pro");
+        var $v_show = $parent.find("div.pro2");
+        var v_height = $v_out.height();
+        var len = $v_show.find("li").length;
+        var page_count = Math.ceil(len / i);
+        if(!$v_show.is(":animated")){
+            if(page==page_count){
+                 $v_show.animate({top : '0px'},"slow");
+                page=1;
+            }else{
+                 $v_show.animate({top : '-='+v_height},"slow");
+                page++;
+            }
+        }
+    });
+
+      $("#img2").click(function(){
+        var $parent = $(this).parents("div.right_product");
+        var $v_out = $parent.find("div.pro");
+        var $v_show = $parent.find("div.pro2");
+        var v_height = $v_out.height();
+        var len = $v_show.find("li").length;
+        var page_count = Math.ceil(len / i);
+        if(!$v_show.is(":animated")){
+            if(page==1){
+                 $v_show.animate({top :  "-="+v_height*(page_count-1)},"slow");
+                page=page_count;
+            }else{
+                 $v_show.animate({top : '+='+v_height},"slow");
+                page--;
+            }
+        }
+    });
+
+})
+/***********首页最顶端图片向左向右切换**********bing********end************/
+ /***产品详情页中图片预览向左向右轮播部分*****june*******start****/
+$(function(){
+    var page = 1;
+    var i = 5; //每版放5个图片
+    // 点击向后按钮
+    $("#right-choice").click(function(){
+        var $parent = $(this).parents("div.left_banner");//寻找当前元素的父元素
+        var $v_out = $parent.find("div.i-list");//视频外围
+        var $v_show = $parent.find("div.i-bot-list");//视频播放区域
+        var v_width = $v_out.width();//外围宽度
+        var len = $v_show.find("li").length; //图片数量
+        var page_count = Math.ceil(len / i) ; //页面数目
+         if( !$v_show.is(":animated") ){    //判断“视频内容展示区域”是否正在处于动画
+              if( page == page_count ){  //已经到最后一个版面了,如果再向后，必须跳转到第一个版面。
+                $v_show.animate({ left : '0px'}, "slow"); //通过改变left值，跳转到第一个版面
+                page = 1;
+              }else{
+                $v_show.animate({ left : '-='+(v_width-38)}, "slow");  //通过改变left值，达到每次换一个版面
+                page++;
+             }
+         }
+    });
+    //点击向前按钮
+    $("#left-choice").click(function(){
+        var $parent = $(this).parents("div.left_banner");
+        var $v_out = $parent.find("div.i-list");
+        var $v_show = $parent.find("div.i-bot-list");
+        var v_width = $v_out.width();
+        var len = $v_show.find("li").length;
+        var page_count = Math.ceil(len / i);
+        if(!$v_show.is(":animated")){
+            if (page == 1) {
+                $v_show.animate({left : "-="+(v_width-37)*(page_count-1)},"slow");
+                page = page_count;
+            }else{
+                $v_show.animate({left : '+='+(v_width-36)},"slow");
+                page--;
+            }
+        }
+    });
+})
+/***产品详情页中图片预览向左向右轮播部分*****june*********end*****/
+
+// ***bing***资讯首页图片轮播***start***
+$(function(){
+    var $imgscroll = $('#img_bottom #slideSpan span');
+    var len = $imgscroll.length;
+    var index = 0;
+    var adTimer = null;
+    $imgscroll.mousemove(function(){
+        index = $imgscroll.index(this);
+        showHomePage(index);
+    });
+    // eq(0).mouseover()用来初始化，让第一个文字高亮并显示第一张图
+
+    $('#page_left_0').hover(function(){
+        if(adTimer){
+            clearInterval(adTimer);
+          }
+        },function(){
+            adTimer = setInterval(function(){
+                showHomePage(index);
+                index++;
+                if(index == len){
+                    index = 0;
+                }
+            },3000);     
+    }).trigger("mouseleave");
+})
+
+function showHomePage(index){
+    var $rollobj = $('#page_left_0');
+    var $rollList = $rollobj.find("#slideSpan span");
+     $('#page_img').find("img").eq(index).stop(true,true).fadeIn().siblings().fadeOut();
+
+    $rollList.removeClass("newBg").eq(index).addClass("newBg");
+}
+// ***bing***资讯首页图片轮播***end***
+
+// bing***产品列表页底部图片切换***start****
+$(function(){
+
+    var page = 1;
+    var i = 5; //每版放5个图片
+
+    $('#bot_prev').click(function(){
+        var $parent = $(this).parents("div.pro_bottom_pic01");
+        var $v_out = $parent.find("div.proBot_slide0");
+        var $v_show = $parent.find("div.proBot_slide01");
+        var v_width = $v_out.width();
+        var len = $v_show.find("li").length;
+        var page_count = Math.ceil(len / i);
+        if(!$v_show.is(":animated")){
+            if (page == 1) {
+                $v_show.animate({left : "-="+v_width*(page_count-1)},"slow");
+                page = page_count;
+            }else{
+                $v_show.animate({left : '+='+v_width},"slow");
+                page--;
+            }
+        }
+    });
+
+
+    $('#bot_Next').click(function(){
+        var $parent = $(this).parents("div.pro_bottom_pic01");//寻找当前元素的父元素
+        var $v_out = $parent.find("div.proBot_slide0");//视频外围
+        var $v_show = $parent.find("div.proBot_slide01");//视频播放区域
+        var v_width = $v_out.width();//外围宽度
+        var len = $v_show.find("li").length; //图片数量
+        var page_count = Math.ceil(len / i) ; //页面数目
+         if( !$v_show.is(":animated") ){    //判断“视频内容展示区域”是否正在处于动画
+              if( page == page_count ){  //已经到最后一个版面了,s如果再向后，必须跳转到第一个版面。
+                $v_show.animate({ left : '0px'}, "slow"); //通过改变left值，跳转到第一个版面
+                page = 1;
+              }else{
+                $v_show.animate({ left : '-='+v_width }, "slow");  //通过改变left值，达到每次换一个版面
+                page++;
+             }
+         }
+    });
+}) 

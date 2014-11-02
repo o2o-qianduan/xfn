@@ -7,10 +7,25 @@
   <meta http-equiv="X-UA-Compatible" content="IE=9,IE=10">
   <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
   <link rel="stylesheet" href="css/jquery-ui.css">
-  <script src="js/jquery-1.8.2.js"></script>
-  <script src="js/jquery-ui.js"></script>
-  <script type="text/javascript" src="js/myJs.js"></script>
-   <script type="text/javascript" src="js/yao.js"></script>
+   <!--[if lte IE 6]>
+<style type="text/css">
+html {
+    /*这个可以让IE6下滚动时无抖动*/
+    background: url(about:black) no-repeat fixed
+}
+ .topbor{
+      position: absolute;
+  }
+  .topbor{
+      /*这个解决body有padding时，IE6下100%不能铺满的问题*/
+      width: expression(offsetParent.clientWidth);
+  }
+  /*下面规则用于IE6下top计算*/ 
+  .topbor {
+      top: expression(offsetParent.scrollTop);
+  } 
+</style>
+<![endif]--> 
 </head>
 <body>
      <!-- 商标，搜索栏，购物车，电话 -->
@@ -369,7 +384,10 @@ Copyright © 广州新富农农业科技有限公司
 
 <!-- 页脚部分结束 -->
 
-</div>
 
-<!-- 整个容器部分结束 -->
+<script src="js/jquery-1.8.2.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script type="text/javascript" src="js/myJs.js"></script>
+   <script type="text/javascript" src="js/yao.js"></script>
+
 </html>
